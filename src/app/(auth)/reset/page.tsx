@@ -15,7 +15,7 @@ async function resetAction(
     return { error: "Email is required." };
   }
 
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
   const redirectTo = `${siteUrl.replace(/\/$/, "")}/auth/callback`;
 
@@ -31,7 +31,7 @@ async function resetAction(
 }
 
 export default async function ResetPage() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();

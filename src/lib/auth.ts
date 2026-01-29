@@ -23,7 +23,7 @@ export function createSupabaseAdminClient() {
 }
 
 export async function requireAuthenticatedUser() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) {
@@ -67,7 +67,7 @@ export async function requireAdminUser() {
 }
 
 export async function assertAdminForAction() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) {

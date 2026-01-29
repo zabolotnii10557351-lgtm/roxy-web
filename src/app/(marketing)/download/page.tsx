@@ -15,7 +15,7 @@ interface ReleaseRow {
 }
 
 export default async function DownloadPage() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();

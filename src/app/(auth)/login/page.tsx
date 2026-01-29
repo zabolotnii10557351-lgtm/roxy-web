@@ -16,7 +16,7 @@ async function loginAction(
     return { error: "Email and password are required." };
   }
 
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const { error } = await supabase.auth.signInWithPassword({
     email,
     password,
@@ -30,7 +30,7 @@ async function loginAction(
 }
 
 export default async function LoginPage() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
