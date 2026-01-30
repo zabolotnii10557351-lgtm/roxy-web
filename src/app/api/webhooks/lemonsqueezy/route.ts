@@ -10,13 +10,17 @@ import {
 } from "@/lib/billing/variants";
 
 function planFromVariant(variantId: string) {
-  if ([VARIANTS.basic.monthly, VARIANTS.basic.yearly].includes(variantId)) {
+  const basicVariants = [VARIANTS.basic.monthly, VARIANTS.basic.yearly] as string[];
+  const proVariants = [VARIANTS.pro.monthly, VARIANTS.pro.yearly] as string[];
+  const studioVariants = [VARIANTS.studio.monthly, VARIANTS.studio.yearly] as string[];
+
+  if (basicVariants.includes(variantId)) {
     return "basic";
   }
-  if ([VARIANTS.pro.monthly, VARIANTS.pro.yearly].includes(variantId)) {
+  if (proVariants.includes(variantId)) {
     return "pro";
   }
-  if ([VARIANTS.studio.monthly, VARIANTS.studio.yearly].includes(variantId)) {
+  if (studioVariants.includes(variantId)) {
     return "studio";
   }
   return null;
