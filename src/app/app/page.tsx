@@ -4,30 +4,40 @@ import Button from "@/components/Button";
 import StatCard from "@/components/StatCard";
 import ToastList from "@/components/ToastList";
 import Badge from "@/components/Badge";
-import { usePlanStore } from "@/store/plan-store";
+import { usePlan } from "@/providers/PlanProvider";
+import { useTranslations } from "@/i18n/client";
 
 export default function OverviewPage() {
-  const currentPlan = usePlanStore((state) => state.currentPlan);
+  const {
+    planId,
+    isAccessBlocked,
+    hoursRemaining,
+    hoursLimit,
+    isTrialExpired,
+  } = usePlan();
+  const t = useTranslations();
 
   return (
     <div className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Overview</h2>
+          <h2 className="text-2xl font-semibold text-white">{t.app.overview}</h2>
           <p className="text-sm text-white/60">
-            Live status, limits, and quick actions.
+            {t.app.overviewSubtitle}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <Badge>{currentPlan.toUpperCase()} plan</Badge>
-          <Button variant="secondary">Start Session</Button>
+          <Badge>{planId.toUpperCase()} plan</Badge>
+          <Button variant="secondary" disabled={isAccessBlocked}>
+            {isTrialExpired ? t.app.upgradeRequired : t.app.startSession}
+          </Button>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
         <StatCard
-          label="Current plan"
-          value={currentPlan.toUpperCase()}
+          label={t.app.currentPlan}
+          value={planId.toUpperCase()}
           helper="Plan billing cycle: monthly"
         />
         <StatCard label="Connected accounts" value="2" helper="TikTok live" />
@@ -38,14 +48,28 @@ export default function OverviewPage() {
         />
       </div>
 
+      {hoursLimit !== null ? (
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
+          {t.app.remainingHours}: {hoursRemaining?.toFixed(1)}h / {hoursLimit}h
+        </div>
+      ) : null}
+
       <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
         <div className="glass-card rounded-3xl p-6">
           <h3 className="text-lg font-semibold text-white">Quick actions</h3>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
-            <Button variant="secondary">Create Character</Button>
-            <Button variant="secondary">Setup Dono Rules</Button>
-            <Button variant="secondary">Deploy</Button>
-            <Button variant="secondary">Generate Share Link</Button>
+            <Button variant="secondary" href="/app/characters/new" disabled={isAccessBlocked}>
+              {t.app.createCharacter}
+            </Button>
+            <Button variant="secondary" href="/app/dono-engine" disabled={isAccessBlocked}>
+              {t.app.setupDonoRules}
+            </Button>
+            <Button variant="secondary" href="/app/deploy" disabled={isAccessBlocked}>
+              {t.app.deploy}
+            </Button>
+            <Button variant="secondary" href="/app/deploy" disabled={isAccessBlocked}>
+              {t.app.generateShareLink}
+            </Button>
           </div>
         </div>
         <div className="glass-card rounded-3xl p-6">

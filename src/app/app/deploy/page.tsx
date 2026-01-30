@@ -1,4 +1,7 @@
+"use client";
+
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 const steps = [
   "Choose OBS scene",
@@ -8,12 +11,14 @@ const steps = [
 ];
 
 export default function DeployPage() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">Deploy</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.deploy}</h2>
         <p className="text-sm text-white/60">
-          Publish your session and go live in OBS.
+          {t.app.deploySubtitle}
         </p>
       </div>
 

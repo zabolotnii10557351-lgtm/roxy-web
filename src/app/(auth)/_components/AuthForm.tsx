@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import Button from "@/components/Button";
 
 interface AuthField {
@@ -18,6 +19,7 @@ interface AuthFormProps {
   submitLabel: string;
   fields: AuthField[];
   footer?: React.ReactNode;
+  extraContent?: React.ReactNode;
 }
 
 function SubmitButton({ label }: { label: string }) {
@@ -37,8 +39,9 @@ export default function AuthForm({
   submitLabel,
   fields,
   footer,
+  extraContent,
 }: AuthFormProps) {
-  const [state, formAction] = useFormState(action, {});
+  const [state, formAction] = useActionState(action, {});
 
   return (
     <div className="mx-auto w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg backdrop-blur">
@@ -62,6 +65,7 @@ export default function AuthForm({
             />
           </div>
         ))}
+        {extraContent}
         {state?.error ? (
           <p className="rounded-2xl border border-rose-500/40 bg-rose-500/10 px-4 py-3 text-sm text-rose-200">
             {state.error}

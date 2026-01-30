@@ -1,4 +1,7 @@
+"use client";
+
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 interface FeatureLockProps {
   title: string;
@@ -13,6 +16,8 @@ export default function FeatureLock({
   locked,
   children,
 }: FeatureLockProps) {
+  const t = useTranslations();
+
   if (!locked) {
     return <div className="glass-card rounded-2xl p-6">{children}</div>;
   }
@@ -23,7 +28,9 @@ export default function FeatureLock({
       <div className="relative space-y-3">
         <p className="text-sm font-semibold text-white">{title}</p>
         <p className="text-xs text-white/60">{description}</p>
-        <Button variant="outline">Plan upgrade required</Button>
+        <Button variant="outline" href="/app/billing">
+          {t.common.planUpgradeRequired}
+        </Button>
       </div>
     </div>
   );

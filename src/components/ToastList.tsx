@@ -1,12 +1,17 @@
-const toasts = [
-  "Saved",
-  "Draft updated",
-  "Published",
-  "Plan upgrade required",
-  "Credits limit reached. Buy more hours.",
-];
+"use client";
+
+import { useTranslations } from "@/i18n/client";
 
 export default function ToastList() {
+  const t = useTranslations();
+  const toasts = [
+    t.common.saved,
+    t.common.draftUpdated,
+    t.common.published,
+    t.common.planUpgradeRequired,
+    t.common.creditsLimitReached,
+  ];
+
   return (
     <div className="space-y-2">
       {toasts.map((toast) => (

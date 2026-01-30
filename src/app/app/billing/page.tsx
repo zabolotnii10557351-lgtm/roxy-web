@@ -3,31 +3,34 @@
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
 import ProgressBar from "@/components/ProgressBar";
-import { planCards } from "@/lib/roxy-data";
-import { isPlanAtLeast, usePlanStore } from "@/store/plan-store";
-
-const planHours: Record<string, number> = {
-  trial: 1,
-  basic: 0,
-  pro: 10,
-  studio: 40,
-};
+import { getPlanCards } from "@/lib/roxy-data";
+import { isPlanAtLeast } from "@/lib/plans";
+import { usePlan } from "@/providers/PlanProvider";
+import { useTranslations } from "@/i18n/client";
+import { useLocale } from "@/i18n/client";
+import { getContent } from "@/i18n/content";
 
 export default function BillingPage() {
-  const currentPlan = usePlanStore((state) => state.currentPlan);
-  const setPlan = usePlanStore((state) => state.setPlan);
-  const hoursIncluded = planHours[currentPlan];
-  const hoursUsed = currentPlan === "basic" ? 0 : Math.max(0.6, hoursIncluded * 0.35);
-  const hoursRemaining = Math.max(0, hoursIncluded - hoursUsed);
-  const showHours = currentPlan !== "basic";
-  const canUseUnreal = isPlanAtLeast(currentPlan, "pro");
+  const {
+    planId,
+    hoursLimit,
+    hoursRemaining,
+    activeHoursUsed,
+    isTrialExpired,
+  } = usePlan();
+  const t = useTranslations();
+  const { locale } = useLocale();
+  const planCards = getPlanCards(locale);
+  const content = getContent(locale);
+  const showHours = hoursLimit !== null;
+  const canUseUnreal = isPlanAtLeast(planId, "pro");
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">Billing</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.billing}</h2>
         <p className="text-sm text-white/60">
-          Manage your plan, credits, and add-ons.
+          {t.app.billingSubtitle}
         </p>
       </div>
 
@@ -35,42 +38,51 @@ export default function BillingPage() {
         <div className="glass-card rounded-3xl p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-semibold text-white">Current plan</h3>
+              <h3 className="text-lg font-semibold text-white">
+                {t.app.currentPlan}
+              </h3>
               <p className="text-sm text-white/60">
-                Switch plans to preview locked features.
+                {t.app.managePlan}
               </p>
             </div>
-            <Badge>{currentPlan.toUpperCase()}</Badge>
+            <Badge>{planId.toUpperCase()}</Badge>
           </div>
 
           {showHours ? (
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
               <div className="flex items-center justify-between text-sm text-white">
-                <span>Remaining active speech hours</span>
+                <span>{t.app.remainingHours}</span>
                 <span>
-                  {hoursRemaining.toFixed(1)}h / {hoursIncluded}h
+                  {hoursRemaining?.toFixed(1)}h / {hoursLimit}h
                 </span>
               </div>
-              <ProgressBar value={(hoursRemaining / hoursIncluded) * 100} className="mt-3" />
+              <ProgressBar
+                value={
+                  hoursLimit
+                    ? (Math.max(0, hoursLimit - activeHoursUsed) / hoursLimit) *
+                      100
+                    : 0
+                }
+                className="mt-3"
+              />
               <p className="mt-2 text-xs text-white/60">
                 Active speech = minutes when Roxy generates and plays TTS.
               </p>
             </div>
           ) : (
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
-              Unlimited active speech hours (BYOK).
+              {t.app.unlimitedHours}
             </div>
           )}
 
           <div className="mt-6 grid gap-3 md:grid-cols-2">
             {planCards.map((plan) => (
-              <button
+              <div
                 key={plan.id}
-                onClick={() => setPlan(plan.id)}
                 className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${
-                  currentPlan === plan.id
+                  planId === plan.id
                     ? "border-violet-400 bg-violet-500/20"
-                    : "border-white/10 bg-white/5 hover:border-white/30"
+                    : "border-white/10 bg-white/5"
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -80,40 +92,44 @@ export default function BillingPage() {
                 <p className="mt-2 text-xs text-white/60">
                   {plan.includedHours}
                 </p>
-              </button>
+              </div>
             ))}
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button href="/pricing">{t.app.comparePlans}</Button>
+            <Button href="/contact" variant="secondary">
+              {t.app.contactSales}
+            </Button>
           </div>
         </div>
 
         <div className="space-y-6">
           <div className="glass-card rounded-3xl p-6">
-            <h3 className="text-lg font-semibold text-white">Buy extra hours</h3>
+            <h3 className="text-lg font-semibold text-white">
+              {content.pricing.extraCreditsTitle}
+            </h3>
             <div className="mt-4 space-y-3 text-sm text-white/70">
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3">
-                <span>+10 hours</span>
-                <span>€25</span>
-              </div>
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3">
-                <span>+50 hours</span>
-                <span>€99</span>
-              </div>
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3">
-                <span>+200 hours</span>
-                <span>€299</span>
-              </div>
+              {content.pricing.extraCredits.map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3"
+                >
+                  <span>{item.label}</span>
+                  <span>{item.price}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="glass-card rounded-3xl p-6">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold text-white">
-                Unreal Connector Pack
+                {content.pricing.addonTitle}
               </h3>
-              <Badge>Add-on</Badge>
+              <Badge>{content.pricing.addonBadge}</Badge>
             </div>
             <p className="mt-3 text-sm text-white/60">
-              Unreal Live connector, lip-sync triggers, sample UE scenes, and
-              action mapping for Dono Engine.
+              {content.pricing.addonDescription}
             </p>
             <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3 text-sm text-white/70">
               <span>Status</span>
@@ -127,10 +143,12 @@ export default function BillingPage() {
       </div>
 
       <div className="glass-card rounded-3xl p-6">
-        <h3 className="text-lg font-semibold text-white">Billing summary</h3>
+        <h3 className="text-lg font-semibold text-white">
+          {t.app.billingSummary}
+        </h3>
         <div className="mt-4 grid gap-4 text-sm text-white/70 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 px-4 py-3">
-            Next invoice: Feb 26, 2026
+            {isTrialExpired ? t.app.trialEnded : t.app.nextInvoice}
           </div>
           <div className="rounded-2xl border border-white/10 px-4 py-3">
             Payment method: Visa •••• 8842

@@ -1,14 +1,19 @@
+"use client";
+
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
+import { useTranslations } from "@/i18n/client";
 
 export default function AvatarScenePage() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Avatar + Scene</h2>
+          <h2 className="text-2xl font-semibold text-white">{t.app.avatarScene}</h2>
           <p className="text-sm text-white/60">
-            Manage the visual layer for your AI streamer.
+            {t.app.avatarSceneSubtitle}
           </p>
         </div>
         <Button variant="secondary">Open Unreal Preview</Button>

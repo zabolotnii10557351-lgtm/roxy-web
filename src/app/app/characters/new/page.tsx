@@ -1,5 +1,8 @@
+"use client";
+
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
+import { useTranslations } from "@/i18n/client";
 
 const tabs = [
   "Profile",
@@ -12,15 +15,17 @@ const tabs = [
 ];
 
 export default function CharacterBuilderPage() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-semibold text-white">
-            Character Builder
+            {t.app.characterBuilder}
           </h2>
           <p className="text-sm text-white/60">
-            Craft the persona, voice, and behavior of your AI streamer.
+            {t.app.characterBuilderSubtitle}
           </p>
         </div>
         <div className="flex items-center gap-3">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
 async function loginAction(
@@ -11,6 +12,8 @@ async function loginAction(
   "use server";
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString();
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
 
   if (!email || !password) {
     return { error: "Email and password are required." };
@@ -23,6 +26,9 @@ async function loginAction(
   });
 
   if (error) {
+    if (error.message.toLowerCase().includes("captcha")) {
+      return { error: t.auth.captchaError };
+    }
     return { error: error.message };
   }
 
@@ -30,6 +36,8 @@ async function loginAction(
 }
 
 export default async function LoginPage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -43,35 +51,35 @@ export default async function LoginPage() {
     <Container className="py-20">
       <div className="flex justify-center">
         <AuthForm
-          title="Welcome back"
-          description="Sign in to access your dashboard and downloads."
+          title={t.auth.welcomeBack}
+          description={t.auth.signInDescription}
           action={loginAction}
-          submitLabel="Sign in"
+          submitLabel={t.common.signIn}
           fields={[
             {
               name: "email",
-              label: "Email",
+              label: t.auth.email,
               type: "email",
-              placeholder: "you@company.com",
+              placeholder: t.auth.emailPlaceholder,
               autoComplete: "email",
             },
             {
               name: "password",
-              label: "Password",
+              label: t.auth.password,
               type: "password",
-              placeholder: "••••••••",
+              placeholder: t.auth.passwordPlaceholder,
               autoComplete: "current-password",
             },
           ]}
           footer={
             <div className="flex flex-col gap-2">
               <Link className="text-white hover:text-white" href="/reset">
-                Forgot password?
+                {t.auth.forgotPassword}
               </Link>
               <span>
-                New here?{" "}
+                {t.auth.newHere}{" "}
                 <Link className="text-cyan-300 hover:text-cyan-200" href="/register">
-                  Create an account
+                  {t.auth.createAccount}
                 </Link>
               </span>
             </div>

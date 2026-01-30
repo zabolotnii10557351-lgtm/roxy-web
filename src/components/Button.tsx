@@ -32,6 +32,18 @@ export default function Button({
   const classes = cn(base, styles[variant], className);
 
   if (href) {
+    if (props.disabled) {
+      return (
+        <span
+          className={classes}
+          aria-disabled="true"
+          role="link"
+          tabIndex={-1}
+        >
+          {children}
+        </span>
+      );
+    }
     return (
       <Link className={classes} href={href}>
         {children}

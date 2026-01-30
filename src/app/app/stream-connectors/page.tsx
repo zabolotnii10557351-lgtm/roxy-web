@@ -2,18 +2,21 @@
 
 import Badge from "@/components/Badge";
 import FeatureLock from "@/components/FeatureLock";
-import { isPlanAtLeast, usePlanStore } from "@/store/plan-store";
+import { isPlanAtLeast } from "@/lib/plans";
+import { usePlan } from "@/providers/PlanProvider";
+import { useTranslations } from "@/i18n/client";
 
 export default function StreamConnectorsPage() {
-  const currentPlan = usePlanStore((state) => state.currentPlan);
-  const proUnlocked = isPlanAtLeast(currentPlan, "pro");
+  const { planId, isAccessBlocked } = usePlan();
+  const t = useTranslations();
+  const proUnlocked = isPlanAtLeast(planId, "pro") && !isAccessBlocked;
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">Stream Connectors</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.connectors}</h2>
         <p className="text-sm text-white/60">
-          Connect TikTok today. Twitch and YouTube are next in line.
+          {t.app.connectorsSubtitle}
         </p>
       </div>
 
@@ -33,7 +36,7 @@ export default function StreamConnectorsPage() {
         <div className="glass-card rounded-3xl p-6">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-white">Twitch</h3>
-            <Badge variant="outline">Coming soon</Badge>
+            <Badge variant="outline">{t.common.comingSoon}</Badge>
           </div>
           <p className="mt-3 text-sm text-white/70">
             Join the waitlist to get early access.
@@ -42,7 +45,7 @@ export default function StreamConnectorsPage() {
         <div className="glass-card rounded-3xl p-6">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-white">YouTube Live</h3>
-            <Badge variant="outline">Coming soon</Badge>
+            <Badge variant="outline">{t.common.comingSoon}</Badge>
           </div>
           <p className="mt-3 text-sm text-white/70">
             Early access rolling out to Pro and Studio first.

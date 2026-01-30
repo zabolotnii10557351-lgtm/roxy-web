@@ -1,12 +1,17 @@
+"use client";
+
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 export default function SettingsPage() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">Settings</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.settings}</h2>
         <p className="text-sm text-white/60">
-          Control workspace preferences and export tools.
+          {t.app.settingsSubtitle}
         </p>
       </div>
 

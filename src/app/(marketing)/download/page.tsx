@@ -2,6 +2,8 @@ import Container from "@/components/Container";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getContent } from "@/i18n/content";
+import { getLocaleFromRequest } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
 interface ReleaseRow {
@@ -15,6 +17,8 @@ interface ReleaseRow {
 }
 
 export default async function DownloadPage() {
+  const locale = await getLocaleFromRequest();
+  const content = getContent(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -43,9 +47,9 @@ export default async function DownloadPage() {
   return (
     <Container className="py-20 space-y-10">
       <SectionHeading
-        eyebrow="Downloads"
-        title="Grab the latest desktop build"
-        subtitle="Choose your platform. Releases are managed by the admin team."
+        eyebrow={content.download.eyebrow}
+        title={content.download.title}
+        subtitle={content.download.subtitle}
       />
 
       {releases && releases.length > 0 ? (
@@ -60,7 +64,7 @@ export default async function DownloadPage() {
                   {release.platform.toUpperCase()} • v{release.version}
                 </p>
                 <p className="mt-2 text-lg font-semibold text-white">
-                  Latest {release.platform === "win" ? "Windows" : "macOS"} build
+                  {content.download.latestLabel} {release.platform === "win" ? "Windows" : "macOS"} build
                 </p>
                 {release.notes ? (
                   <p className="mt-2 text-sm text-white/70 whitespace-pre-line">
@@ -68,19 +72,18 @@ export default async function DownloadPage() {
                   </p>
                 ) : null}
               </div>
-              <Button href={release.url}>Download</Button>
+              <Button href={release.url}>{content.download.download}</Button>
             </div>
           ))}
         </div>
       ) : (
         <div className="glass-card rounded-2xl p-6 text-white/70">
           <p className="text-sm">
-            No releases yet. Ask an admin to add the first Windows/macOS build in
-            the admin panel.
+            {content.download.noReleases}
           </p>
           <div className="mt-4">
             <Button href="/admin/releases" variant="secondary">
-              Open admin releases
+              {content.download.openAdmin}
             </Button>
           </div>
         </div>
@@ -89,7 +92,7 @@ export default async function DownloadPage() {
       {releases && releases.length > 0 ? (
         <div className="glass-card rounded-2xl p-6">
           <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
-            Release history
+            {content.download.releaseHistory}
           </h3>
           <div className="mt-4 space-y-3 text-sm">
             {releases.map((release) => (
@@ -107,7 +110,7 @@ export default async function DownloadPage() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Download
+                    {content.download.download}
                   </a>
                 </div>
                 {release.notes ? (

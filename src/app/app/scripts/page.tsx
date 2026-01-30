@@ -1,5 +1,8 @@
+"use client";
+
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
+import { useTranslations } from "@/i18n/client";
 
 const scripts = [
   { name: "Intro", interval: "Every session", enabled: true },
@@ -9,13 +12,15 @@ const scripts = [
 ];
 
 export default function ScriptsPage() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Stream Scripts</h2>
+          <h2 className="text-2xl font-semibold text-white">{t.app.scripts}</h2>
           <p className="text-sm text-white/60">
-            Design the show flow with timed scripts and presets.
+            {t.app.scriptsSubtitle}
           </p>
         </div>
         <Button>New Script</Button>

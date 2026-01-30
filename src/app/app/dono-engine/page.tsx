@@ -1,14 +1,19 @@
+"use client";
+
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
+import { useTranslations } from "@/i18n/client";
 
 export default function DonoEnginePage() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Dono Engine</h2>
+          <h2 className="text-2xl font-semibold text-white">{t.app.donoEngine}</h2>
           <p className="text-sm text-white/60">
-            Build rules that react to gifts and donations.
+            {t.app.donoEngineSubtitle}
           </p>
         </div>
         <Button>Simulate Gift</Button>

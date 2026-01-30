@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
 async function resetAction(
@@ -31,6 +32,8 @@ async function resetAction(
 }
 
 export default async function ResetPage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -44,24 +47,24 @@ export default async function ResetPage() {
     <Container className="py-20">
       <div className="flex justify-center">
         <AuthForm
-          title="Reset your password"
-          description="We will send you a secure link to reset your password."
+          title={t.auth.resetPassword}
+          description={t.auth.resetDescription}
           action={resetAction}
-          submitLabel="Send reset link"
+          submitLabel={t.auth.resetPassword}
           fields={[
             {
               name: "email",
-              label: "Email",
+              label: t.auth.email,
               type: "email",
-              placeholder: "you@company.com",
+              placeholder: t.auth.emailPlaceholder,
               autoComplete: "email",
             },
           ]}
           footer={
             <span>
-              Remembered your password?{" "}
+              {t.auth.backToSignIn}{" "}
               <Link className="text-cyan-300 hover:text-cyan-200" href="/login">
-                Back to sign in
+                {t.common.signIn}
               </Link>
             </span>
           }

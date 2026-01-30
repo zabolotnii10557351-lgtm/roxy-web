@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
+import CaptchaField from "@/app/(auth)/_components/CaptchaField";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/auth";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
 async function registerAction(
@@ -11,9 +14,21 @@ async function registerAction(
   "use server";
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString();
+  const captchaToken = formData.get("captchaToken")?.toString();
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
+  const siteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
   if (!email || !password) {
     return { error: "Email and password are required." };
+  }
+
+  if (!siteKey) {
+    return { error: t.auth.captchaMissing };
+  }
+
+  if (!captchaToken) {
+    return { error: t.auth.captchaRequired };
   }
 
   const supabase = await createSupabaseServerClient();
@@ -25,11 +40,27 @@ async function registerAction(
     password,
     options: {
       emailRedirectTo: redirectTo,
+      captchaToken,
     },
   });
 
   if (error) {
     return { error: error.message };
+  }
+
+  if (data.user?.id) {
+    const adminClient = createSupabaseAdminClient();
+    if (adminClient) {
+      const trialEndsAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+      await adminClient
+        .from("profiles")
+        .update({
+          plan_id: "trial",
+          trial_ends_at: trialEndsAt.toISOString(),
+          active_hours_used: 0,
+        })
+        .eq("id", data.user.id);
+    }
   }
 
   if (data.session) {
@@ -40,6 +71,8 @@ async function registerAction(
 }
 
 export default async function RegisterPage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -53,31 +86,32 @@ export default async function RegisterPage() {
     <Container className="py-20">
       <div className="flex justify-center">
         <AuthForm
-          title="Create your account"
-          description="Start with a free trial and download the desktop app."
+          title={t.auth.createAccount}
+          description={t.auth.createAccountDescription}
           action={registerAction}
-          submitLabel="Create account"
+          submitLabel={t.auth.createAccount}
           fields={[
             {
               name: "email",
-              label: "Email",
+              label: t.auth.email,
               type: "email",
-              placeholder: "you@company.com",
+              placeholder: t.auth.emailPlaceholder,
               autoComplete: "email",
             },
             {
               name: "password",
-              label: "Password",
+              label: t.auth.password,
               type: "password",
-              placeholder: "At least 8 characters",
+              placeholder: t.auth.passwordMin,
               autoComplete: "new-password",
             },
           ]}
+          extraContent={<CaptchaField />}
           footer={
             <span>
-              Already have an account?{" "}
+              {t.auth.alreadyHaveAccount}{" "}
               <Link className="text-cyan-300 hover:text-cyan-200" href="/login">
-                Sign in
+                {t.common.signIn}
               </Link>
             </span>
           }

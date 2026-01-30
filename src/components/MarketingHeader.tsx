@@ -2,21 +2,27 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/docs", label: "Docs" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 
 export default async function MarketingHeader() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   const userEmail = user?.email ?? "";
+
+  const links = [
+    { href: "/", label: t.nav.home },
+    { href: "/use-cases", label: t.nav.useCases },
+    { href: "/pricing", label: t.nav.pricing },
+    { href: "/docs", label: t.nav.docs },
+    { href: "/blog", label: t.nav.blog },
+    { href: "/about", label: t.nav.about },
+    { href: "/contact", label: t.nav.contact },
+  ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-[#0A0F1A]/90 backdrop-blur-xl">
@@ -26,8 +32,10 @@ export default async function MarketingHeader() {
             R
           </span>
           <div>
-            <p className="text-sm font-semibold text-white">Roxy AI Streamer</p>
-            <p className="text-xs text-white/60 transition-colors group-hover:text-white/80">Launch an AI streamer</p>
+            <p className="text-sm font-semibold text-white">{t.common.brand}</p>
+            <p className="text-xs text-white/60 transition-colors group-hover:text-white/80">
+              {t.marketing.heroTitle}
+            </p>
           </div>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
@@ -45,24 +53,25 @@ export default async function MarketingHeader() {
               href="/app"
               className="relative text-white/70 transition-colors hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-violet-400 after:to-cyan-400 after:transition-all hover:after:w-full"
             >
-              Dashboard
+              {t.common.dashboard}
             </Link>
           ) : null}
         </nav>
         <div className="flex items-center gap-3">
+          <LanguageSwitcher />
           {user ? (
             <div className="hidden items-center gap-3 md:flex">
               <span className="text-xs text-white/60">{userEmail}</span>
               <Button variant="ghost" href="/app">
-                Open Dashboard
+                {t.common.openDashboard}
               </Button>
             </div>
           ) : (
             <Button variant="ghost" href="/login">
-              Sign in
+              {t.common.signIn}
             </Button>
           )}
-          <Button href="/download">Download Demo</Button>
+          <Button href="/download">{t.common.downloadDemo}</Button>
         </div>
       </Container>
     </header>

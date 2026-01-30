@@ -1,21 +1,28 @@
 import Link from "next/link";
 import Container from "@/components/Container";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 
-const links = [
-  { href: "/pricing", label: "Pricing" },
-  { href: "/docs", label: "Docs" },
-  { href: "/contact", label: "Contact" },
-  { href: "/terms", label: "Terms" },
-  { href: "/privacy", label: "Privacy" },
-];
+export default async function MarketingFooter() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
 
-export default function MarketingFooter() {
+  const links = [
+    { href: "/use-cases", label: t.nav.useCases },
+    { href: "/pricing", label: t.nav.pricing },
+    { href: "/docs", label: t.nav.docs },
+    { href: "/blog", label: t.nav.blog },
+    { href: "/contact", label: t.nav.contact },
+    { href: "/team", label: t.nav.team },
+    { href: "/terms", label: t.nav.terms },
+    { href: "/privacy", label: t.nav.privacy },
+  ];
+
   return (
     <footer className="border-t border-white/5 py-10">
       <Container className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
         <div>
-          <p className="text-sm font-semibold text-white">Roxy AI Streamer</p>
-          <p className="text-xs text-white/60">Automation for 24/7 live formats.</p>
+          <p className="text-sm font-semibold text-white">{t.common.brand}</p>
+          <p className="text-xs text-white/60">{t.marketing.heroSubtitle}</p>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-sm text-white/60">
           {links.map((link) => (

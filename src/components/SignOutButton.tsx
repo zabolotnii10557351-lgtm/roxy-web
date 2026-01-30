@@ -3,6 +3,7 @@
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "@/i18n/client";
 
 interface SignOutButtonProps {
   className?: string;
@@ -10,6 +11,7 @@ interface SignOutButtonProps {
 
 export default function SignOutButton({ className }: SignOutButtonProps) {
   const router = useRouter();
+  const t = useTranslations();
 
   const handleSignOut = async () => {
     const supabase = createSupabaseBrowserClient();
@@ -27,7 +29,7 @@ export default function SignOutButton({ className }: SignOutButtonProps) {
         className
       )}
     >
-      Sign out
+      {t.common.signOut}
     </button>
   );
 }

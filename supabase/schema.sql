@@ -4,6 +4,10 @@ create table if not exists public.profiles (
   email text,
   role text default 'user',
   plan_id text default 'trial',
+  plan_started_at timestamp with time zone default now(),
+  trial_ends_at timestamp with time zone default (now() + interval '7 days'),
+  plan_expires_at timestamp with time zone,
+  active_hours_used numeric default 0,
   created_at timestamp with time zone default now()
 );
 

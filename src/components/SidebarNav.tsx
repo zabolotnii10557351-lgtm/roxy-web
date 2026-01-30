@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   LayoutGrid,
@@ -12,21 +14,29 @@ import {
   CreditCard,
   Settings,
 } from "lucide-react";
-
-const navItems = [
-  { href: "/app", label: "Overview", icon: LayoutGrid },
-  { href: "/app/characters", label: "Characters", icon: Users },
-  { href: "/app/characters/new", label: "Character Builder", icon: UserPlus },
-  { href: "/app/stream-connectors", label: "Connectors", icon: Plug },
-  { href: "/app/dono-engine", label: "Dono Engine", icon: Gift },
-  { href: "/app/scripts", label: "Stream Scripts", icon: ScrollText },
-  { href: "/app/avatar-scene", label: "Avatar + Scene", icon: Sparkles },
-  { href: "/app/deploy", label: "Deploy", icon: Rocket },
-  { href: "/app/billing", label: "Billing", icon: CreditCard },
-  { href: "/app/settings", label: "Settings", icon: Settings },
-];
+import { usePlan } from "@/providers/PlanProvider";
+import { useTranslations } from "@/i18n/client";
 
 export default function SidebarNav() {
+  const { isTrial, isTrialExpired, trialEndsAt } = usePlan();
+  const t = useTranslations();
+  const daysLeft = trialEndsAt
+    ? Math.max(0, Math.ceil((trialEndsAt.getTime() - Date.now()) / 86400000))
+    : null;
+
+  const navItems = [
+    { href: "/app", label: t.app.overview, icon: LayoutGrid },
+    { href: "/app/characters", label: t.app.characters, icon: Users },
+    { href: "/app/characters/new", label: t.app.characterBuilder, icon: UserPlus },
+    { href: "/app/stream-connectors", label: t.app.connectors, icon: Plug },
+    { href: "/app/dono-engine", label: t.app.donoEngine, icon: Gift },
+    { href: "/app/scripts", label: t.app.scripts, icon: ScrollText },
+    { href: "/app/avatar-scene", label: t.app.avatarScene, icon: Sparkles },
+    { href: "/app/deploy", label: t.app.deploy, icon: Rocket },
+    { href: "/app/billing", label: t.app.billing, icon: CreditCard },
+    { href: "/app/settings", label: t.app.settings, icon: Settings },
+  ];
+
   return (
     <aside className="hidden w-64 flex-col border-r border-white/5 bg-[#0C1222] px-5 py-6 lg:flex">
       <div className="mb-8 flex items-center gap-3">
@@ -34,8 +44,8 @@ export default function SidebarNav() {
           R
         </span>
         <div>
-          <p className="text-sm font-semibold text-white">Roxy AI Streamer</p>
-          <p className="text-xs text-white/60">Dashboard</p>
+          <p className="text-sm font-semibold text-white">{t.common.brand}</p>
+          <p className="text-xs text-white/60">{t.common.dashboard}</p>
         </div>
       </div>
       <nav className="flex flex-1 flex-col gap-1 text-sm">
@@ -51,10 +61,16 @@ export default function SidebarNav() {
           </Link>
         ))}
       </nav>
-      <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
-        <p className="font-semibold text-white">Trial ends in 5 days</p>
-        <p className="mt-1">Upgrade to unlock scheduling and extra hours.</p>
-      </div>
+      {isTrial ? (
+        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
+          <p className="font-semibold text-white">
+            {isTrialExpired
+              ? t.app.trialEnded
+              : t.app.trialEndsIn.replace("{days}", String(daysLeft ?? 0))}
+          </p>
+          <p className="mt-1">{t.common.planUpgradeRequired}</p>
+        </div>
+      ) : null}
     </aside>
   );
 }
