@@ -3,7 +3,6 @@ import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import CaptchaField from "@/app/(auth)/_components/CaptchaField";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { createSupabaseAdminClient } from "@/lib/auth";
 import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
@@ -46,21 +45,6 @@ async function registerAction(
 
   if (error) {
     return { error: error.message };
-  }
-
-  if (data.user?.id) {
-    const adminClient = createSupabaseAdminClient();
-    if (adminClient) {
-      const trialEndsAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
-      await adminClient
-        .from("profiles")
-        .update({
-          plan_id: "trial",
-          trial_ends_at: trialEndsAt.toISOString(),
-          active_hours_used: 0,
-        })
-        .eq("id", data.user.id);
-    }
   }
 
   if (data.session) {

@@ -3,13 +3,37 @@ create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   email text,
   role text default 'user',
-  plan_id text default 'trial',
-  plan_started_at timestamp with time zone default now(),
-  trial_ends_at timestamp with time zone default (now() + interval '7 days'),
+  plan text not null default 'trial',
+  plan_id text not null default 'trial',
+  status text not null default 'trialing',
+  trial_ends_at timestamptz,
+  entitlements jsonb not null default '{}'::jsonb,
+  credits_minutes int not null default 0,
+  addons jsonb not null default '{}'::jsonb,
+  customer_id text,
+  subscription_id text,
+  variant_id text,
   plan_expires_at timestamp with time zone,
   active_hours_used numeric default 0,
-  created_at timestamp with time zone default now()
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
 );
+
+alter table public.profiles
+  add column if not exists role text default 'user',
+  add column if not exists plan text not null default 'trial',
+  add column if not exists plan_id text not null default 'trial',
+  add column if not exists status text not null default 'trialing',
+  add column if not exists trial_ends_at timestamptz,
+  add column if not exists entitlements jsonb not null default '{}'::jsonb,
+  add column if not exists credits_minutes int not null default 0,
+  add column if not exists addons jsonb not null default '{}'::jsonb,
+  add column if not exists customer_id text,
+  add column if not exists subscription_id text,
+  add column if not exists variant_id text,
+  add column if not exists plan_expires_at timestamp with time zone,
+  add column if not exists active_hours_used numeric default 0,
+  add column if not exists updated_at timestamptz not null default now();
 
 -- Releases table for desktop downloads
 create table if not exists public.releases (
@@ -26,8 +50,40 @@ create table if not exists public.releases (
 create or replace function public.handle_new_user()
 returns trigger as $$
 begin
-  insert into public.profiles (id, email)
-  values (new.id, new.email);
+  insert into public.profiles (
+    id,
+    email,
+    plan,
+    plan_id,
+    status,
+    trial_ends_at,
+    entitlements
+  )
+  values (
+    new.id,
+    new.email,
+    'trial',
+    'trial',
+    'trialing',
+    now() + interval '7 days',
+    jsonb_build_object(
+      'flags', jsonb_build_object(
+        'export_import', false,
+        'watermark_toggle', false,
+        'auto_language', false,
+        'advanced_scripts', false,
+        'unreal_connector', false
+      ),
+      'limits', jsonb_build_object(
+        'tiktok_accounts', 1,
+        'dono_rules', 10,
+        'scripts', 2,
+        'knowledge_items', 0,
+        'logs_days', 3
+      )
+    )
+  )
+  on conflict (id) do nothing;
   return new;
 end;
 $$ language plpgsql security definer;
@@ -42,7 +98,12 @@ alter table public.profiles enable row level security;
 alter table public.releases enable row level security;
 
 -- Profiles policies
-create policy "Profiles are viewable by owner"
+drop policy if exists "read own profile" on public.profiles;
+drop policy if exists "Profiles are viewable by owner" on public.profiles;
+drop policy if exists "Profiles are updatable by owner" on public.profiles;
+drop policy if exists "Admins can manage profiles" on public.profiles;
+
+create policy "read own profile"
   on public.profiles
   for select
   using (auth.uid() = id);

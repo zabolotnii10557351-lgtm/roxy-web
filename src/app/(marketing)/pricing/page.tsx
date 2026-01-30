@@ -1,8 +1,7 @@
-import Button from "@/components/Button";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
-import Badge from "@/components/Badge";
 import PricingPlans from "@/components/PricingPlans";
+import PricingExtras from "@/components/PricingExtras";
 import { getPlanCards, getFaqs } from "@/lib/roxy-data";
 import { getContent } from "@/i18n/content";
 import { getLocaleFromRequest } from "@/i18n/server";
@@ -35,52 +34,16 @@ export default async function PricingPage() {
       </Container>
 
       <Container>
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="glass-card rounded-3xl p-8">
-            <h3 className="text-xl font-semibold text-white">
-              {content.pricing.extraCreditsTitle}
-            </h3>
-            <p className="mt-2 text-sm text-white/60">
-              {content.pricing.extraCreditsSubtitle}
-            </p>
-            <div className="mt-6 space-y-3 text-sm text-white/70">
-              {content.pricing.extraCredits.map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3"
-                >
-                  <span>{item.label}</span>
-                  <span>{item.price}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="glass-card rounded-3xl p-8">
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold text-white">
-                {content.pricing.addonTitle}
-              </h3>
-              <Badge>{content.pricing.addonBadge}</Badge>
-            </div>
-            <p className="mt-2 text-sm text-white/60">
-              {content.pricing.addonDescription}
-            </p>
-            <div className="mt-6 space-y-3 text-sm text-white/70">
-              {content.pricing.addonPrices.map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3"
-                >
-                  <span>{item.label}</span>
-                  <span>{item.price}</span>
-                </div>
-              ))}
-            </div>
-            <Button className="mt-6 w-full" variant="secondary" href="/app">
-              {content.pricing.addonCta}
-            </Button>
-          </div>
-        </div>
+        <PricingExtras
+          extraCreditsTitle={content.pricing.extraCreditsTitle}
+          extraCreditsSubtitle={content.pricing.extraCreditsSubtitle}
+          extraCredits={content.pricing.extraCredits}
+          addonTitle={content.pricing.addonTitle}
+          addonBadge={content.pricing.addonBadge}
+          addonDescription={content.pricing.addonDescription}
+          addonPrices={content.pricing.addonPrices}
+          addonCta={content.pricing.addonCta}
+        />
       </Container>
 
       <Container>

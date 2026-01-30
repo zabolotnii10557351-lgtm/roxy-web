@@ -5,6 +5,8 @@ import Button from "@/components/Button";
 import Badge from "@/components/Badge";
 import type { Locale } from "@/i18n/locales";
 import type { PlanCardContent } from "@/i18n/content";
+import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { useRouter } from "next/navigation";
 
 type ComparisonRow = { label: string; values: string[] };
 
@@ -131,6 +133,9 @@ export default function PricingPlans({
   comparisonRows,
 }: PricingPlansProps) {
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
+  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
   const labels = billingLabels[locale] ?? billingLabels.en;
 
   const formatter = useMemo(
@@ -151,6 +156,45 @@ export default function PricingPlans({
     const value = billing === "monthly" ? base : base * yearlyMultiplier;
     const suffix = billing === "monthly" ? labels.perMonth : labels.perYear;
     return `${formatter.format(value)} ${suffix}`;
+  };
+
+  const startCheckout = async (planId: PlanCardContent["id"]) => {
+    if (planId === "trial") {
+      router.push("/register");
+      return;
+    }
+
+    setError(null);
+    setLoadingPlan(planId);
+
+    const supabase = createSupabaseBrowserClient();
+    const { data } = await supabase.auth.getSession();
+    const accessToken = data.session?.access_token;
+
+    if (!accessToken) {
+      router.push("/login");
+      return;
+    }
+
+    const response = await fetch("/api/billing/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_token: accessToken,
+        kind: "plan",
+        plan: planId,
+        interval: billing,
+      }),
+    });
+
+    const json = await response.json();
+    if (!response.ok || !json?.url) {
+      setError(json?.error ?? "Checkout failed");
+      setLoadingPlan(null);
+      return;
+    }
+
+    window.location.href = json.url;
   };
 
   return (
@@ -204,12 +248,20 @@ export default function PricingPlans({
                 <li key={feature}>• {feature}</li>
               ))}
             </ul>
-            <Button className="mt-6 w-full" href="/app">
+            <Button
+              className="mt-6 w-full"
+              onClick={() => startCheckout(plan.id)}
+              disabled={loadingPlan === plan.id}
+            >
               {plan.cta}
             </Button>
           </div>
         ))}
       </div>
+
+      {error ? (
+        <p className="text-xs text-rose-200">{error}</p>
+      ) : null}
 
       <div className="glass-card rounded-3xl p-8">
         <h3 className="text-xl font-semibold text-white">{comparisonTitle}</h3>
