@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
+import CaptchaField from "@/app/(auth)/_components/CaptchaField";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
@@ -12,17 +13,30 @@ async function loginAction(
   "use server";
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString();
+  const captchaToken = formData.get("captchaToken")?.toString();
   const locale = await getLocaleFromRequest();
   const t = getTranslations(locale);
+  const siteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
   if (!email || !password) {
     return { error: "Email and password are required." };
+  }
+
+  if (!siteKey) {
+    return { error: t.auth.captchaMissing };
+  }
+
+  if (!captchaToken) {
+    return { error: t.auth.captchaRequired };
   }
 
   const supabase = await createSupabaseServerClient();
   const { error } = await supabase.auth.signInWithPassword({
     email,
     password,
+    options: {
+      captchaToken,
+    },
   });
 
   if (error) {
@@ -71,6 +85,7 @@ export default async function LoginPage() {
               autoComplete: "current-password",
             },
           ]}
+          extraContent={<CaptchaField />}
           footer={
             <div className="flex flex-col gap-2">
               <Link className="text-white hover:text-white" href="/reset">
