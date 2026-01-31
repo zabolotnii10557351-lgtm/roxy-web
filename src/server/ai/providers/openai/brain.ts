@@ -1,5 +1,20 @@
 import type { BrainProvider, BrainGenerateReplyInput, BrainGenerateReplyOutput } from "@/server/ai/types";
 
+type OpenAIResponsesApiJson = {
+  output_text?: string;
+  output?: Array<{
+    content?: Array<{
+      type?: string;
+      text?: string;
+    }>;
+  }>;
+  usage?: {
+    input_tokens?: number;
+    output_tokens?: number;
+    total_tokens?: number;
+  };
+};
+
 export class OpenAIBrainProvider implements BrainProvider {
   public readonly id = "openai" as const;
   private readonly apiKey: string;
@@ -47,10 +62,10 @@ export class OpenAIBrainProvider implements BrainProvider {
       throw new Error(`OpenAI error (${res.status}): ${text.slice(0, 500)}`);
     }
 
-    const json = (await res.json()) as any;
+    const json = (await res.json()) as OpenAIResponsesApiJson;
     const outputText: string | undefined =
       json?.output_text ??
-      json?.output?.[0]?.content?.find?.((c: any) => c?.type === "output_text")?.text;
+      json?.output?.[0]?.content?.find((c) => c?.type === "output_text")?.text;
 
     const usage = json?.usage;
 

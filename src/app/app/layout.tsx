@@ -39,7 +39,8 @@ export default async function AppLayout({
     profile?.role === "admin";
 
   if (!trialEndsAt) {
-    const nextWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    const nextWeek = new Date();
+    nextWeek.setDate(nextWeek.getDate() + 7);
     await supabase
       .from("profiles")
       .update({ trial_ends_at: nextWeek.toISOString() })

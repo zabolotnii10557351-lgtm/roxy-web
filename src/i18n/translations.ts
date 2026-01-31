@@ -28,6 +28,7 @@ export type Translations = {
     team: string;
     terms: string;
     privacy: string;
+    cookies: string;
   };
   auth: {
     welcomeBack: string;
@@ -144,6 +145,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Team",
       terms: "Terms",
       privacy: "Privacy",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Welcome back",
@@ -268,6 +270,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Team",
       terms: "AGB",
       privacy: "Datenschutz",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Willkommen zurück",
@@ -395,6 +398,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Equipo",
       terms: "Términos",
       privacy: "Privacidad",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Bienvenido de nuevo",
@@ -521,6 +525,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Équipe",
       terms: "Conditions",
       privacy: "Confidentialité",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Bon retour",
@@ -646,6 +651,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Team",
       terms: "Termini",
       privacy: "Privacy",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Bentornato",
@@ -771,6 +777,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Equipe",
       terms: "Termos",
       privacy: "Privacidade",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Bem-vindo de volta",
@@ -896,6 +903,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Команда",
       terms: "Условия",
       privacy: "Конфиденциальность",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "С возвращением",
@@ -1021,6 +1029,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Ekip",
       terms: "Şartlar",
       privacy: "Gizlilik",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "Tekrar hoş geldin",
@@ -1146,6 +1155,7 @@ export const translations: Record<Locale, Translations> = {
       team: "チーム",
       terms: "利用規約",
       privacy: "プライバシー",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "おかえりなさい",
@@ -1265,6 +1275,7 @@ export const translations: Record<Locale, Translations> = {
       team: "团队",
       terms: "条款",
       privacy: "隐私",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "欢迎回来",
@@ -1381,6 +1392,7 @@ export const translations: Record<Locale, Translations> = {
       team: "Команда",
       terms: "Умови",
       privacy: "Конфіденційність",
+      cookies: "Cookies",
     },
     auth: {
       welcomeBack: "З поверненням",

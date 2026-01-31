@@ -24,7 +24,7 @@ export async function upsertBillingState(params: {
   workspaceId: string;
   patch: Partial<BillingStateRow>;
 }) {
-  const payload: any = {
+  const payload: Partial<BillingStateRow> & { workspace_id: string } = {
     workspace_id: params.workspaceId,
     ...params.patch,
   };

@@ -43,7 +43,7 @@ export default function ScriptsPage() {
                 Conditions: Gift streak ≥ 3
               </div>
               <div className="rounded-2xl border border-white/10 px-4 py-3">
-                Voice line: "Let's spin the wheel"
+                Voice line: “Let’s spin the wheel”
               </div>
             </div>
             <Button className="mt-4" variant="secondary">

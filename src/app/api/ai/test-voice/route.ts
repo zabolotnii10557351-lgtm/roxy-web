@@ -3,6 +3,19 @@ import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { getVoiceProvider } from "@/server/ai/registry";
 import { getUserSecretsServerOnly } from "@/server/ai/secrets";
 import { rateLimitSlidingWindow } from "@/server/rateLimit";
+import { z } from "zod";
+import type { VoiceProviderId } from "@/server/ai/types";
+
+const BodySchema = z.object({
+  text: z.string().min(1),
+  voiceProvider: z.enum(["openai", "elevenlabs"]).optional(),
+  voiceId: z.string().optional(),
+  language: z.string().optional(),
+});
+
+function coerceVoiceProviderId(value: unknown): VoiceProviderId {
+  return value === "openai" || value === "elevenlabs" ? value : "openai";
+}
 
 export async function POST(req: Request) {
   const { supabase, user, workspaceId } = await requireUserAndWorkspace();
@@ -16,19 +29,25 @@ export async function POST(req: Request) {
   if (!rl.ok) {
     return NextResponse.json(
       { error: "Rate limit exceeded. Please wait and retry." },
-      { status: 429, headers: { "Retry-After": String(Math.ceil((rl.resetAt - Date.now()) / 1000)) } }
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(Math.ceil((rl.resetAt - new Date().getTime()) / 1000)),
+        },
+      }
     );
   }
 
-  const body = (await req.json().catch(() => null)) as any;
-  if (!body) {
-    return NextResponse.json({ error: "Invalid JSON." }, { status: 400 });
+  const json = (await req.json().catch(() => null)) as unknown;
+  const parsedBody = BodySchema.safeParse(json);
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid request.", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
   }
 
-  const text = String(body.text ?? "");
-  if (!text.trim()) {
-    return NextResponse.json({ error: "text is required." }, { status: 400 });
-  }
+  const { text } = parsedBody.data;
 
   const { data: aiSettings, error: aiError } = await supabase
     .from("workspace_ai_settings")
@@ -40,9 +59,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: aiError.message }, { status: 400 });
   }
 
-  const voiceProvider = String(body.voiceProvider ?? aiSettings?.voice_provider ?? "openai");
-  const voiceId = String(body.voiceId ?? aiSettings?.voice_voice_id ?? "alloy");
-  const language = String(body.language ?? "");
+  const voiceProvider = coerceVoiceProviderId(
+    parsedBody.data.voiceProvider ?? aiSettings?.voice_provider,
+  );
+  const voiceId = String(
+    parsedBody.data.voiceId ?? aiSettings?.voice_voice_id ?? "alloy",
+  );
+  const language = parsedBody.data.language ?? "";
 
   const secrets = await getUserSecretsServerOnly(user.id);
 
@@ -75,9 +98,9 @@ export async function POST(req: Request) {
       }
 
       return res;
-    } catch (e: any) {
+    } catch (e: unknown) {
       return NextResponse.json(
-        { error: e?.message ?? "Provider call failed." },
+        { error: e instanceof Error ? e.message : "Provider call failed." },
         { status: 502 }
       );
     }
@@ -112,9 +135,9 @@ export async function POST(req: Request) {
     }
 
     return res;
-  } catch (e: any) {
+  } catch (e: unknown) {
     return NextResponse.json(
-      { error: e?.message ?? "Provider call failed." },
+      { error: e instanceof Error ? e.message : "Provider call failed." },
       { status: 502 }
     );
   }

@@ -5,7 +5,8 @@ export default async function AdminOverviewPage() {
   const { supabase, adminClient } = await requireAdminUserOrNotFound();
   const client = adminClient ?? supabase;
 
-  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const now = new Date();
+  const since = new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString();
 
   const [
     { count: usersCount },

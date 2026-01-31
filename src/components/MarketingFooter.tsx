@@ -15,6 +15,7 @@ export default async function MarketingFooter() {
     { href: "/team", label: t.nav.team },
     { href: "/terms", label: t.nav.terms },
     { href: "/privacy", label: t.nav.privacy },
+    { href: "/cookies", label: t.nav.cookies },
   ];
 
   return (

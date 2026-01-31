@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
+import { Menu } from "lucide-react";
 
 export default async function MarketingHeader() {
   const locale = await getLocaleFromRequest();
@@ -58,29 +59,70 @@ export default async function MarketingHeader() {
           ) : null}
         </nav>
         <div className="flex flex-nowrap items-center gap-2 sm:gap-3">
-          {user ? (
-            <div className="hidden items-center gap-3 md:flex">
-              <span className="text-xs text-white/60">{userEmail}</span>
-              <Button variant="ghost" href="/app">
-                {t.common.openDashboard}
+          <div className="hidden items-center gap-3 md:flex">
+            {user ? (
+              <>
+                <span className="text-xs text-white/60">{userEmail}</span>
+                <Button variant="ghost" href="/app">
+                  {t.common.openDashboard}
+                </Button>
+              </>
+            ) : (
+              <Button variant="ghost" href="/login">
+                {t.common.signIn}
               </Button>
-            </div>
-          ) : (
-            <Button
-              variant="ghost"
-              href="/login"
-              className="px-3 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm"
-            >
-              {t.common.signIn}
-            </Button>
-          )}
-          <Button
-            href="/download"
-            className="px-3 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm"
-          >
-            {t.common.downloadDemo}
-          </Button>
+            )}
+            <Button href="/download">{t.common.downloadDemo}</Button>
+          </div>
+
           <LanguageSwitcher />
+
+          <details className="relative md:hidden">
+            <summary
+              className="list-none rounded-full border border-white/10 bg-white/5 p-2 text-white/80 hover:text-white"
+              aria-label="Menu"
+            >
+              <Menu className="h-5 w-5" />
+            </summary>
+            <div className="absolute right-0 top-12 w-64 rounded-2xl border border-white/10 bg-[#0A0F1A]/95 p-3 shadow-2xl shadow-black/40 backdrop-blur-xl">
+              <nav className="flex flex-col gap-1 text-sm">
+                {links.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+
+                {user ? (
+                  <Link
+                    href="/app"
+                    className="rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                  >
+                    {t.common.dashboard}
+                  </Link>
+                ) : null}
+              </nav>
+
+              <div className="mt-3 flex flex-col gap-2">
+                {user ? (
+                  <Button variant="secondary" href="/app" className="w-full px-4 py-2 text-sm">
+                    {t.common.openDashboard}
+                  </Button>
+                ) : (
+                  <Button variant="secondary" href="/login" className="w-full px-4 py-2 text-sm">
+                    {t.common.signIn}
+                  </Button>
+                )}
+
+                <Button href="/download" className="w-full px-4 py-2 text-sm">
+                  {t.common.downloadDemo}
+                </Button>
+              </div>
+            </div>
+          </details>
         </div>
       </Container>
     </header>

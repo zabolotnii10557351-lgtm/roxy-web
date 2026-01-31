@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 type Kind = "waitlist" | "contact" | "investors";
+
+type LeadRow = Record<string, unknown> & {
+  id?: string | number | null;
+};
 
 function formatError(err: unknown) {
   if (err instanceof Error) return err.message;
@@ -11,7 +15,7 @@ function formatError(err: unknown) {
 
 export default function AdminLeadsClient() {
   const [kind, setKind] = useState<Kind>("waitlist");
-  const [items, setItems] = useState<Record<string, unknown>[]>([]);
+  const [items, setItems] = useState<LeadRow[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -21,7 +25,7 @@ export default function AdminLeadsClient() {
     return url.toString();
   }, [kind]);
 
-  async function load(nextKind: Kind) {
+  const load = useCallback(async (nextKind: Kind) => {
     setBusy(true);
     setError(null);
     try {
@@ -31,19 +35,18 @@ export default function AdminLeadsClient() {
       if (!res.ok) {
         throw new Error(await res.text());
       }
-      const json = (await res.json()) as { items: Record<string, unknown>[] };
+      const json = (await res.json()) as { items: LeadRow[] };
       setItems(json.items ?? []);
     } catch (e) {
       setError(formatError(e));
     } finally {
       setBusy(false);
     }
-  }
+  }, []);
 
   useEffect(() => {
     void load(kind);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kind]);
+  }, [kind, load]);
 
   return (
     <div className="space-y-4">
@@ -108,7 +111,14 @@ export default function AdminLeadsClient() {
             </thead>
             <tbody className="divide-y divide-white/5">
               {items.map((row, idx) => (
-                <tr key={String((row as any).id ?? idx)} className="text-white/80">
+                <tr
+                  key={
+                    typeof row.id === "string" || typeof row.id === "number"
+                      ? String(row.id)
+                      : String(idx)
+                  }
+                  className="text-white/80"
+                >
                   {(Object.keys(items[0] ?? {}) as string[]).slice(0, 8).map((key) => (
                     <td key={key} className="px-4 py-3 align-top">
                       {String(row[key] ?? "")}

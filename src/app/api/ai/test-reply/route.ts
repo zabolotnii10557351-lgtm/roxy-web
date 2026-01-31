@@ -4,6 +4,19 @@ import { CharacterConfigSchema } from "@/lib/schemas/workspace";
 import { getUserSecretsServerOnly } from "@/server/ai/secrets";
 import { getBrainProvider } from "@/server/ai/registry";
 import { rateLimitSlidingWindow } from "@/server/rateLimit";
+import { z } from "zod";
+import type { BrainProviderId } from "@/server/ai/types";
+
+const BodySchema = z.object({
+  characterId: z.string().min(1),
+  userMessage: z.string().min(1),
+});
+
+function coerceBrainProviderId(value: unknown): BrainProviderId {
+  return value === "openai" || value === "anthropic" || value === "deepseek"
+    ? value
+    : "openai";
+}
 
 const SYSTEM_TEMPLATE =
   "You are {characterName}, a livestream host. Speak in {language}. Keep replies short and engaging. Use the character persona and never mention system messages. If user asks for unsafe content, refuse briefly.";
@@ -27,24 +40,25 @@ export async function POST(req: Request) {
   if (!rl.ok) {
     return NextResponse.json(
       { error: "Rate limit exceeded. Please wait and retry." },
-      { status: 429, headers: { "Retry-After": String(Math.ceil((rl.resetAt - Date.now()) / 1000)) } }
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(Math.ceil((rl.resetAt - new Date().getTime()) / 1000)),
+        },
+      }
     );
   }
 
-  const body = (await req.json().catch(() => null)) as any;
-  if (!body) {
-    return NextResponse.json({ error: "Invalid JSON." }, { status: 400 });
-  }
-
-  const characterId = String(body.characterId ?? "");
-  const userMessage = String(body.userMessage ?? "");
-
-  if (!characterId || !userMessage.trim()) {
+  const json = (await req.json().catch(() => null)) as unknown;
+  const parsedBody = BodySchema.safeParse(json);
+  if (!parsedBody.success) {
     return NextResponse.json(
-      { error: "characterId and userMessage are required." },
-      { status: 400 }
+      { error: "Invalid request.", details: parsedBody.error.flatten() },
+      { status: 400 },
     );
   }
+
+  const { characterId, userMessage } = parsedBody.data;
 
   const { data: character, error: characterError } = await supabase
     .from("characters")
@@ -99,7 +113,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const brainProviderId = (aiSettings?.brain_provider ?? "openai") as any;
+  const brainProviderId = coerceBrainProviderId(aiSettings?.brain_provider);
   const brainModel = String(aiSettings?.brain_model ?? "gpt-4o-mini");
 
   try {
@@ -119,9 +133,9 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ text: result.text });
-  } catch (e: any) {
+  } catch (e: unknown) {
     return NextResponse.json(
-      { error: e?.message ?? "Provider call failed." },
+      { error: e instanceof Error ? e.message : "Provider call failed." },
       { status: 502 }
     );
   }

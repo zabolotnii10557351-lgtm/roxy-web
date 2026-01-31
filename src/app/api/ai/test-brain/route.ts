@@ -3,6 +3,18 @@ import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { getUserSecretsServerOnly } from "@/server/ai/secrets";
 import { getBrainProvider } from "@/server/ai/registry";
 import { rateLimitSlidingWindow } from "@/server/rateLimit";
+import { z } from "zod";
+import type { BrainProviderId } from "@/server/ai/types";
+
+const BodySchema = z.object({
+  language: z.string().optional(),
+});
+
+function coerceBrainProviderId(value: unknown): BrainProviderId {
+  return value === "openai" || value === "anthropic" || value === "deepseek"
+    ? value
+    : "openai";
+}
 
 export async function POST(req: Request) {
   const { supabase, user, workspaceId } = await requireUserAndWorkspace();
@@ -16,12 +28,18 @@ export async function POST(req: Request) {
   if (!rl.ok) {
     return NextResponse.json(
       { error: "Rate limit exceeded. Please wait and retry." },
-      { status: 429, headers: { "Retry-After": String(Math.ceil((rl.resetAt - Date.now()) / 1000)) } }
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(Math.ceil((rl.resetAt - new Date().getTime()) / 1000)),
+        },
+      }
     );
   }
 
-  const body = (await req.json().catch(() => null)) as any;
-  const language = String(body?.language ?? "English");
+  const json = (await req.json().catch(() => null)) as unknown;
+  const parsed = BodySchema.safeParse(json ?? {});
+  const language = parsed.success ? parsed.data.language ?? "English" : "English";
 
   const { data: aiSettings } = await supabase
     .from("workspace_ai_settings")
@@ -41,7 +59,7 @@ export async function POST(req: Request) {
 
   try {
     const provider = getBrainProvider({
-      providerId: (aiSettings?.brain_provider ?? "openai") as any,
+      providerId: coerceBrainProviderId(aiSettings?.brain_provider),
       modelId: String(aiSettings?.brain_model ?? "gpt-4o-mini"),
       apiKey: openAiKey,
     });
@@ -55,9 +73,9 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ text: result.text });
-  } catch (e: any) {
+  } catch (e: unknown) {
     return NextResponse.json(
-      { error: e?.message ?? "Provider call failed." },
+      { error: e instanceof Error ? e.message : "Provider call failed." },
       { status: 502 }
     );
   }

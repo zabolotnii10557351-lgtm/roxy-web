@@ -7,6 +7,9 @@ import Badge from "@/components/Badge";
 import ExportForUnrealButton from "@/components/unreal/ExportForUnrealButton";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { CharacterConfigSchema } from "@/lib/schemas/workspace";
+import type { z } from "zod";
+
+type CharacterConfig = z.infer<typeof CharacterConfigSchema>;
 
 type CharacterRow = {
   id: string;
@@ -73,8 +76,16 @@ export default function CharacterBuilderByIdPage() {
     };
   }, [characterId]);
 
-  const updateConfig = (patch: Partial<typeof config>) => {
-    setCharacter((c) => (c ? { ...c, config: { ...(c.config as any), ...patch } } : c));
+  const updateConfig = (patch: Partial<CharacterConfig>) => {
+    setCharacter((c) => {
+      if (!c) return c;
+
+      const parsed = CharacterConfigSchema.safeParse(c.config ?? {});
+      const base = parsed.success ? parsed.data : CharacterConfigSchema.parse({});
+      const next: CharacterConfig = { ...base, ...patch };
+
+      return { ...c, config: next };
+    });
   };
 
   const handleSave = async () => {
@@ -255,7 +266,14 @@ export default function CharacterBuilderByIdPage() {
                 <label className="text-xs text-white/60">Voice provider</label>
                 <select
                   value={config.voice?.provider ?? "openai_included"}
-                  onChange={(e) => updateConfig({ voice: { ...config.voice, provider: e.target.value as any } })}
+                  onChange={(e) =>
+                    updateConfig({
+                      voice: {
+                        ...config.voice,
+                        provider: e.target.value as CharacterConfig["voice"]["provider"],
+                      },
+                    })
+                  }
                   className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
                 >
                   <option value="openai_included">OpenAI (included)</option>

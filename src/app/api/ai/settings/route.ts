@@ -1,8 +1,18 @@
 import { NextResponse } from "next/server";
 import { requireUserAndWorkspace } from "@/lib/workspace/server";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import { z } from "zod";
+import { rateLimitSlidingWindow } from "@/server/rateLimit";
+
+const PostBodySchema = z.object({
+  brain_provider: z.enum(["openai", "anthropic", "deepseek"]).optional(),
+  brain_model: z.string().min(1).optional(),
+  voice_provider: z.enum(["openai", "elevenlabs"]).optional(),
+  voice_voice_id: z.string().min(1).optional(),
+});
 
 async function ensureWorkspaceAiSettings(params: {
-  supabase: any;
+  supabase: SupabaseClient;
   workspaceId: string;
 }) {
   const { supabase, workspaceId } = params;
@@ -30,6 +40,15 @@ async function ensureWorkspaceAiSettings(params: {
 export async function GET() {
   const { supabase, user, workspaceId } = await requireUserAndWorkspace();
 
+  const rl = rateLimitSlidingWindow({
+    key: `ai:settings:get:${user.id}`,
+    limit: 60,
+    windowMs: 60_000,
+  });
+  if (!rl.ok) {
+    return NextResponse.json({ error: "Rate limited" }, { status: 429 });
+  }
+
   const settings = await ensureWorkspaceAiSettings({ supabase, workspaceId });
 
   const { data: flags, error: flagsError } = await supabase.rpc(
@@ -46,27 +65,30 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const { supabase, workspaceId } = await requireUserAndWorkspace();
+  const { supabase, user, workspaceId } = await requireUserAndWorkspace();
 
-  const body = (await req.json().catch(() => null)) as any;
-  if (!body) {
-    return NextResponse.json({ error: "Invalid JSON." }, { status: 400 });
+  const rl = rateLimitSlidingWindow({
+    key: `ai:settings:post:${user.id}`,
+    limit: 30,
+    windowMs: 60_000,
+  });
+  if (!rl.ok) {
+    return NextResponse.json({ error: "Rate limited" }, { status: 429 });
   }
 
-  const allowedBrainProviders = new Set(["openai", "anthropic", "deepseek"]);
-  const allowedVoiceProviders = new Set(["openai", "elevenlabs"]);
-
-  const brain_provider = String(body.brain_provider ?? "openai");
-  const brain_model = String(body.brain_model ?? "gpt-4o-mini");
-  const voice_provider = String(body.voice_provider ?? "openai");
-  const voice_voice_id = String(body.voice_voice_id ?? "alloy");
-
-  if (!allowedBrainProviders.has(brain_provider)) {
-    return NextResponse.json({ error: "Unsupported brain provider." }, { status: 400 });
+  const json = (await req.json().catch(() => null)) as unknown;
+  const parsed = PostBodySchema.safeParse(json);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "Invalid request.", details: parsed.error.flatten() },
+      { status: 400 },
+    );
   }
-  if (!allowedVoiceProviders.has(voice_provider)) {
-    return NextResponse.json({ error: "Unsupported voice provider." }, { status: 400 });
-  }
+
+  const brain_provider = parsed.data.brain_provider ?? "openai";
+  const brain_model = parsed.data.brain_model ?? "gpt-4o-mini";
+  const voice_provider = parsed.data.voice_provider ?? "openai";
+  const voice_voice_id = parsed.data.voice_voice_id ?? "alloy";
 
   const { data, error } = await supabase
     .from("workspace_ai_settings")

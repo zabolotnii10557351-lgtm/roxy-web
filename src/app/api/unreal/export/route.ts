@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { rateLimitSlidingWindow } from "@/server/rateLimit";
 import {
   CharacterConfigSchema,
   CharacterRowSchema,
@@ -35,6 +36,15 @@ export async function POST(req: Request) {
 
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const rl = rateLimitSlidingWindow({
+    key: `unreal:export:${user.id}`,
+    limit: 20,
+    windowMs: 60_000,
+  });
+  if (!rl.ok) {
+    return NextResponse.json({ error: "Rate limited" }, { status: 429 });
   }
 
   const raw = await req.json().catch(() => null);

@@ -1,20 +1,35 @@
 import { NextResponse } from "next/server";
 import { requireUserAndWorkspace } from "@/lib/workspace/server";
+import { z } from "zod";
+import { rateLimitSlidingWindow } from "@/server/rateLimit";
+
+const BodySchema = z.object({
+  provider: z.enum(["openai", "elevenlabs"]),
+  apiKey: z.string().min(1),
+});
 
 export async function POST(req: Request) {
-  const { supabase } = await requireUserAndWorkspace();
+  const { supabase, user } = await requireUserAndWorkspace();
 
-  const body = (await req.json().catch(() => null)) as any;
-  if (!body) {
-    return NextResponse.json({ error: "Invalid JSON." }, { status: 400 });
+  const rl = rateLimitSlidingWindow({
+    key: `ai:secrets:set:${user.id}`,
+    limit: 20,
+    windowMs: 60_000,
+  });
+  if (!rl.ok) {
+    return NextResponse.json({ error: "Rate limited" }, { status: 429 });
   }
 
-  const provider = String(body.provider ?? "");
-  const apiKey = String(body.apiKey ?? "");
-
-  if (provider !== "openai" && provider !== "elevenlabs") {
-    return NextResponse.json({ error: "Unsupported provider." }, { status: 400 });
+  const json = (await req.json().catch(() => null)) as unknown;
+  const parsed = BodySchema.safeParse(json);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "Invalid request.", details: parsed.error.flatten() },
+      { status: 400 },
+    );
   }
+
+  const { provider, apiKey } = parsed.data;
 
   const { data, error } = await supabase.rpc("set_user_secret", {
     p_provider: provider,

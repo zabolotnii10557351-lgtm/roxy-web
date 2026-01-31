@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
   LayoutGrid,
   Users,
@@ -25,9 +26,18 @@ export default function SidebarNav({
 }) {
   const { isTrial, isTrialExpired, trialEndsAt } = usePlan();
   const t = useTranslations();
-  const daysLeft = trialEndsAt
-    ? Math.max(0, Math.ceil((trialEndsAt.getTime() - Date.now()) / 86400000))
-    : null;
+  const [nowMs, setNowMs] = useState<number | null>(null);
+
+  useEffect(() => {
+    setNowMs(Date.now());
+    const id = setInterval(() => setNowMs(Date.now()), 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  const daysLeft =
+    trialEndsAt && nowMs !== null
+      ? Math.max(0, Math.ceil((trialEndsAt.getTime() - nowMs) / 86400000))
+      : null;
 
   const navItems = [
     { href: "/app", label: t.app.overview, icon: LayoutGrid },
