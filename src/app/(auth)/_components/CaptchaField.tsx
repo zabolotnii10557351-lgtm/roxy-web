@@ -34,6 +34,9 @@ export default function CaptchaField() {
           theme="dark"
         />
       </div>
+
+      <p className="text-xs text-white/50">We use hCaptcha to protect the service from abuse.</p>
+
       {hasError ? (
         <p className="text-xs text-rose-200">
           {t.auth.captchaError}

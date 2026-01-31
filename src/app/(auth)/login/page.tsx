@@ -54,6 +54,7 @@ export default async function LoginPage() {
       <div className="flex justify-center">
         <AuthForm
           title="Welcome back"
+          description="Sign in to manage characters, usage, and your desktop connection."
           action={loginAction}
           submitLabel="Sign in"
           fields={[
@@ -68,7 +69,7 @@ export default async function LoginPage() {
               name: "password",
               label: "Password",
               type: "password",
-              placeholder: "Your password",
+              placeholder: "••••••••",
               autoComplete: "current-password",
             },
           ]}

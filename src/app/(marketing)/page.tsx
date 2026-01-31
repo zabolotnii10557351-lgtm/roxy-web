@@ -1,10 +1,11 @@
 import {
   Sparkles,
-  Zap,
-  ShieldCheck,
-  Clock,
   Layers,
-  Gamepad2,
+  Users,
+  Plug,
+  Mic,
+  Monitor,
+  Activity,
 } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/Button";
@@ -15,28 +16,23 @@ import { getFaqs } from "@/lib/roxy-data";
 import { getContent } from "@/i18n/content";
 import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 
-const stepLinks: Record<string, string> = {
-  connect: "/docs#connect",
-  customize: "/docs#customize",
-  "go-live": "/docs#go-live",
-};
 
 const featureIconMap: Record<string, typeof Sparkles> = {
-  "dono-engine": Sparkles,
-  "stream-scripts": Gamepad2,
-  scheduler: Layers,
-  pro: Zap,
-  safety: ShieldCheck,
-  "unreal-connector": Clock,
+  characters: Users,
+  providers: Plug,
+  "active-speech": Mic,
+  concurrency: Layers,
+  "desktop-app": Monitor,
+  diagnostics: Activity,
 };
 
 const featureLinks: Record<string, string> = {
-  "dono-engine": "/docs#dono-engine",
-  "stream-scripts": "/docs#stream-scripts",
-  scheduler: "/docs#scheduler",
-  pro: "/pricing",
-  safety: "/docs#safety",
-  "unreal-connector": "/docs#unreal-connector",
+  characters: "/app/characters",
+  providers: "/app/settings",
+  "active-speech": "/app/billing",
+  concurrency: "/pricing",
+  "desktop-app": "/download",
+  diagnostics: "/app/diagnostics",
 };
 
 export default async function Home() {
@@ -59,8 +55,11 @@ export default async function Home() {
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button href="/download">{t.marketing.demoPrimary}</Button>
-              <Button href="/docs" variant="secondary">
-                {t.marketing.demoSecondary}
+              <Button href="/app" variant="secondary">
+                {t.common.openDashboard}
+              </Button>
+              <Button href="/pricing" variant="ghost">
+                View pricing
               </Button>
             </div>
             <p className="mt-6 text-xs text-white/50 animate-in fade-in duration-1000 delay-500">
@@ -106,7 +105,7 @@ export default async function Home() {
             {content.docs.quickstart.steps.map((step, index) => (
               <Link
                 key={step.title}
-                href={stepLinks[step.id] ?? "/docs"}
+                href={`/docs#${step.id}`}
                 className="glass-card rounded-2xl p-6 group relative overflow-hidden transition-all hover:scale-[1.01]"
               >
                 <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-violet-500/10 to-cyan-500/10 blur-2xl transition-opacity group-hover:opacity-100 opacity-0" />
@@ -205,7 +204,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <Button href="/app">{t.marketing.ctaPrimary}</Button>
+              <Button href="/download">{t.marketing.ctaPrimary}</Button>
               <Button href="/pricing" variant="secondary">
                 {t.marketing.ctaSecondary}
               </Button>

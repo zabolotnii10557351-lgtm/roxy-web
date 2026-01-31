@@ -71,8 +71,8 @@ export default async function RegisterPage() {
     <Container className="py-20">
       <div className="flex justify-center">
         <AuthForm
-          title="Create your RoxStreamAI account"
-          description="Start your 7-day Starter trial and set up your streamer."
+          title="Create your account"
+          description="Start with the Starter plan trial. Upgrade when you need more concurrency or Active Speech."
           action={registerAction}
           submitLabel="Create account"
           fields={[

@@ -168,210 +168,252 @@ export interface MarketingContent {
 const en: MarketingContent = {
   about: {
     eyebrow: "About",
-    title: "RoxStreamAI is built for always-on creators",
-    subtitle:
-      "RoxStreamAI is a streaming automation platform with a safe AI co-host that stays on-brand and keeps audiences engaged—without losing human control.",
+    title: "About RoxStreamAI",
+    subtitle: "What we are building and why",
     missionTitle: "Our mission",
     missionBody:
-      "Give creators and teams a polished AI co-host that can run shows, react to gifts, and maintain consistent live formats across time zones. We blend persona design, scripted structure, and real-time reactions so your stream feels human, premium, and reliable even when you step away.",
-    beliefTitle: "What we believe",
+      "We want creators and small teams to run high-quality streams with less burnout. RoxStreamAI handles repetition: pacing, scheduling, guardrails, and consistent reactions so you can focus on storytelling and community.",
+    beliefTitle: "What RoxStreamAI is",
     beliefBody:
-      "Human creativity leads. RoxStreamAI handles repetition, scheduling, and moderation guardrails so you can focus on storytelling, community, and growth—without sacrificing safety or quality.",
+      "RoxStreamAI is a web dashboard plus a desktop companion app. The dashboard manages characters, provider settings, and usage. The desktop app connects to Unreal, runs diagnostics, and enables real-time avatar workflows.",
   },
   contact: {
     eyebrow: "Contact",
-    title: "Let’s plan your next live format",
-    subtitle:
-      "Tell us about your streaming goals and we will map a custom rollout.",
+    title: "Contact",
+    subtitle: "Questions, partnerships, or sales",
     firstName: "First name",
     lastName: "Last name",
-    email: "Work email",
-    message: "What do you want RoxStreamAI to automate?",
-    sendRequest: "Send request",
+    email: "Email",
+    message: "Message",
+    sendRequest: "Send message",
     directLines: "Direct lines",
     responseTime: "We respond within 1 business day.",
   },
   terms: {
     title: "Terms",
     intro:
-      "These terms govern your use of RoxStreamAI, including the website, desktop app, and related services. By creating an account or using the service, you agree to these terms.",
+      "These Terms govern your use of RoxStreamAI, including the website, the dashboard, and the desktop application. By creating an account or using the service, you agree to these Terms.",
     sections: [
       {
         title: "Accounts",
-        body: "You are responsible for maintaining the confidentiality of your credentials and for all activity under your account.",
+        body: "You are responsible for your account credentials and all activity under your account.",
       },
       {
-        title: "Usage",
-        body: "You agree to use RoxStreamAI in compliance with platform policies, applicable laws, and community guidelines. Abuse, harassment, or unlawful activity is not permitted.",
+        title: "Acceptable use",
+        body: "You agree not to use RoxStreamAI for illegal activity, abuse, harassment, or to violate platform rules.",
       },
       {
-        title: "Content",
-        body: "You retain ownership of your content. You grant us permission to process it solely to provide and improve the service.",
+        title: "Provider usage and BYOK",
+        body: "When you use built-in providers, RoxStreamAI may pass your requests to third-party providers. When you use BYOK, you are responsible for your own provider keys and billing with that provider.",
       },
       {
-        title: "Billing",
-        body: "Paid plans renew automatically unless canceled. Usage-based charges may apply for additional credits or add-ons.",
+        title: "Billing and renewals",
+        body: "Paid plans renew automatically unless canceled. Usage-based charges and add-ons may apply depending on your plan.",
+      },
+      {
+        title: "Content and data",
+        body: "You retain ownership of your content. You grant RoxStreamAI permission to process it only to provide and improve the service.",
+      },
+      {
+        title: "Availability",
+        body: "We aim for high availability but do not guarantee uninterrupted service. Maintenance and outages can occur.",
       },
       {
         title: "Termination",
-        body: "We may suspend or terminate access if terms are violated or if the service is misused. You may cancel anytime in the dashboard.",
+        body: "We may suspend or terminate access if these Terms are violated. You can cancel your plan anytime in the dashboard.",
       },
     ],
   },
   privacy: {
     title: "Privacy",
     intro:
-      "RoxStreamAI collects only the data required to provide streaming automation, analytics, and account management. We do not sell your personal data.",
+      "This policy explains what data we collect, how we use it, and your choices.",
     sections: [
       {
         title: "Data we collect",
-        body: "Account details, usage metrics, and configuration data for your characters, scripts, and integrations.",
+        body: "Account email, usage metrics (Active Speech, sessions), and optional device diagnostics (if you choose to share).",
       },
       {
         title: "How we use data",
-        body: "To authenticate users, run live sessions, provide support, and improve platform reliability and safety.",
+        body: "To provide the service, secure accounts, measure usage, provide support, and improve reliability.",
       },
       {
-        title: "Data retention",
-        body: "Retention periods depend on your plan and can be managed in the dashboard or via support.",
+        title: "Providers",
+        body: "Some features rely on third-party providers (voice and models).",
       },
       {
-        title: "Your controls",
-        body: "You can export or delete your data at any time. Contact us for assistance with account removal or custom requirements.",
+        title: "We do not sell data",
+        body: "We do not sell personal data.",
+      },
+      {
+        title: "Security",
+        body: "We apply access controls and redaction to protect secrets.",
       },
     ],
   },
   useCases: {
     eyebrow: "Use cases",
-    title: "Real outcomes for modern live formats",
-    subtitle:
-      "See how creators, faceless channels, and agencies use RoxStreamAI to run longer, safer, and more engaging streams.",
+    title: "Use cases",
+    subtitle: "Real formats RoxStreamAI is built for",
     items: [
       {
-        id: "creators",
-        title: "Creators",
+        id: "24-7-host",
+        title: "24/7 AI host",
         description:
-          "Scale your stream hours without burning out. RoxStreamAI handles greetings, gift reactions, and scripted intermissions while keeping your voice consistent and your brand on-message.",
+          "Keep a consistent presence with controlled Active Speech. Perfect for always-on channels and international time zones.",
         highlights: [
-          "24/7 pacing with safe breaks",
-          "Instant, on-brand gift reactions",
-          "Clip-ready moments with scripted beats",
+          "Controlled Active Speech",
+          "Predictable cost",
+          "Always-on formats",
         ],
       },
       {
-        id: "faceless",
-        title: "Faceless streaming",
+        id: "battle-formats",
+        title: "Battle and event formats",
         description:
-          "Launch a character-led channel without showing your face. Build lore-driven personas, keep engagement high, and stay completely off-camera while the AI handles chat, gifts, and pacing.",
+          "Run scripted segments, timed reactions, and event triggers. Keep pacing stable under pressure.",
         highlights: [
-          "Persona + knowledge packs",
-          "Voice style controls",
-          "Safe moderation guardrails",
+          "Scripted segments",
+          "Timed reactions",
+          "Event triggers",
         ],
       },
       {
-        id: "agencies",
-        title: "Agencies",
+        id: "multi-language",
+        title: "Multi-language streams",
         description:
-          "Manage multiple creators, logins, and languages from one control room. Coordinate regional channels with centralized analytics and brand-safe guardrails.",
+          "One character, multiple languages. Switch voice and brain providers per language or region.",
         highlights: [
-          "Multi-account scheduler",
-          "Team access + activity logs",
-          "Centralized analytics",
+          "One persona",
+          "Multiple languages",
+          "Provider switching",
+        ],
+      },
+      {
+        id: "unreal-avatar",
+        title: "Unreal avatar streams",
+        description:
+          "Use the Desktop App to connect to Unreal and stream a real-time character.",
+        highlights: [
+          "Desktop App workflow",
+          "Unreal connection",
+          "Real-time avatar",
+        ],
+      },
+      {
+        id: "team-workflows",
+        title: "Team workflows",
+        description:
+          "Manage characters, usage, and access across a team. Admin tools help keep keys and billing safe.",
+        highlights: [
+          "Admin tools",
+          "Key management",
+          "Audit visibility",
         ],
       },
     ],
     outcomes: {
       eyebrow: "Outcomes",
       title: "What teams unlock",
-      subtitle: "Short cycles, clear metrics, and consistent brand control.",
+      subtitle: "Clear limits, predictable cost, and operational visibility.",
       items: [
         {
-          title: "Higher retention",
+          title: "Predictable spend",
           description:
-            "Scripted loops and gift triggers keep viewers engaged across long sessions.",
+            "Control Active Speech and provider selection so usage stays predictable.",
         },
         {
-          title: "Lower operational cost",
+          title: "Faster setup",
           description:
-            "Reduce manual moderation and on-camera time while keeping daily output high.",
+            "Build a character, pick providers, and go live without a complex pipeline.",
         },
         {
-          title: "Faster experimentation",
+          title: "Clear diagnostics",
           description:
-            "Iterate on hooks and formats with rapid scenario testing and A/B scripts.",
+            "Use status indicators to debug backend, audio, tokens, and connectors.",
         },
       ],
     },
     cta: {
-      title: "Ready to map your use case?",
-      subtitle:
-        "Tell us what you want to automate and we will build a rollout plan.",
-      primary: "Talk to us",
+      title: "Ready to get started?",
+      subtitle: "Download the Desktop App or view pricing.",
+      primary: "Download Demo",
       secondary: "View pricing",
     },
   },
   docs: {
     quickstart: {
-      eyebrow: "Docs",
-      title: "Quickstart",
-      subtitle:
-        "Everything you need to launch your first AI streamer session.",
+      eyebrow: "Documentation",
+      title: "Documentation",
+      subtitle: "Everything you need to set up your AI streamer",
       steps: [
         {
-          id: "connect",
-          title: "Connect",
-          description:
-            "Link your TikTok Live account, select region, and choose a default language for the character.",
+          id: "create-character",
+          title: "Create a character",
+          description: "Create your first character to unlock streaming and Unreal export.",
         },
         {
-          id: "customize",
-          title: "Customize",
-          description:
-            "Create the persona, add knowledge packs, choose voice, and define safety rules.",
+          id: "pick-providers",
+          title: "Pick voice and brain providers",
+          description: "Choose providers by budget, latency, and quality. Built-in options plus BYOK.",
+        },
+        {
+          id: "set-limits",
+          title: "Set Active Speech and limits",
+          description: "Control how much the AI speaks and keep usage predictable.",
+        },
+        {
+          id: "connect-unreal",
+          title: "Connect Unreal using the Desktop App",
+          description: "Use the Desktop App for Unreal connection, export, and local diagnostics.",
         },
         {
           id: "go-live",
-          title: "Go Live",
-          description:
-            "Enable Dono Engine + Stream Scripts and launch a test session before going 24/7.",
+          title: "Go live and manage sessions",
+          description: "Start a session and monitor Active Speech and provider usage.",
         },
       ],
     },
     product: {
-      eyebrow: "Product",
-      title: "Feature documentation",
-      subtitle: "Deep dives into the systems that power RoxStreamAI.",
+      eyebrow: "Sections",
+      title: "What you can set up",
+      subtitle: "Core areas of the dashboard and Desktop App.",
       items: [
         {
-          id: "dono-engine",
-          title: "Dono Engine",
+          id: "characters",
+          title: "Characters and presets",
           description:
-            "Map gifts to actions, emotions, and voice lines with priorities, cooldowns, and safety fallbacks.",
+            "Create persona profiles with languages, tone, safety rules, and behavior presets.",
         },
         {
-          id: "stream-scripts",
-          title: "Stream Scripts",
+          id: "providers",
+          title: "Voice and brain providers",
           description:
-            "Schedule intros, loop segments, mini-games, and battle modes with timed triggers.",
+            "Switch LLM and TTS providers by budget, latency, and quality. Built-in options plus BYOK.",
         },
         {
-          id: "scheduler",
-          title: "Multi-account Scheduler",
+          id: "active-speech",
+          title: "Active Speech control",
           description:
-            "Rotate accounts and regions to maintain continuous live coverage with human-safe pacing.",
+            "Set how much the AI speaks per hour. See estimated monthly hours and cost instantly.",
         },
         {
-          id: "safety",
-          title: "Safety Guard",
+          id: "concurrency",
+          title: "Concurrency",
           description:
-            "Add profanity filters, blocked topics, rate limits, and emergency stop phrases.",
+            "Run multiple streams at the same time under one account, based on your plan.",
         },
         {
-          id: "unreal-connector",
-          title: "Unreal Connector",
+          id: "desktop-app",
+          title: "Desktop app for Unreal",
           description:
-            "Connect live reactions to your avatar scene with event-driven hooks and lip-sync cues.",
+            "Connect to Unreal, export characters, test audio and Live Link, and diagnose issues fast.",
+        },
+        {
+          id: "diagnostics",
+          title: "Diagnostics",
+          description:
+            "Clear status indicators for backend, audio devices, tokens, and connectors.",
         },
       ],
     },
@@ -504,35 +546,29 @@ const en: MarketingContent = {
   },
   blog: {
     eyebrow: "Blog",
-    title: "Updates, use cases, and launch notes",
-    subtitle: "Product news, growth playbooks, and real-world streaming formats.",
+    title: "Blog",
+    subtitle: "Updates, guides, and behind-the-scenes",
     backToBlog: "Back to blog",
   },
   team: {
     eyebrow: "Team",
-    title: "The people building RoxStreamAI",
-    subtitle:
-      "A small, focused team combining streaming operations, AI systems, and product design.",
+    title: "Team",
+    subtitle: "Small team, product-first",
     members: [
       {
-        name: "Lia Chen",
-        role: "Product & Growth",
-        focus: "Creator tooling, onboarding, and pricing strategy.",
+        name: "Founder",
+        role: "Product and Engineering",
+        focus: "Owns product direction, integrations, and reliability.",
       },
       {
-        name: "Maks Orlov",
-        role: "Engineering Lead",
-        focus: "Realtime systems, stream scripts, and platform reliability.",
+        name: "3D and Unreal Pipeline",
+        role: "Realtime avatar workflows",
+        focus: "Export, retargeting, and Live Link pipelines.",
       },
       {
-        name: "Sofia Kim",
-        role: "Design Lead",
-        focus: "Brand system, UI kits, and new dashboard flows.",
-      },
-      {
-        name: "Artem Volkov",
-        role: "AI & Voice",
-        focus: "Persona tuning, TTS pipelines, and safety controls.",
+        name: "Community and Growth",
+        role: "Creator feedback loop",
+        focus: "Content, onboarding, and iteration loops.",
       },
     ],
     values: {
@@ -559,15 +595,16 @@ const en: MarketingContent = {
     },
     cta: {
       title: "Want to collaborate?",
-      subtitle: "Partnerships, integrations, or early access requests—let’s talk.",
+      subtitle: "Partnerships, integrations, or early access requests - let’s talk.",
       primary: "Contact us",
       secondary: "Read updates",
     },
   },
   download: {
-    eyebrow: "Downloads",
-    title: "Grab the latest desktop build",
-    subtitle: "Choose your platform. Releases are managed by the admin team.",
+    eyebrow: "Desktop App",
+    title: "Desktop App",
+    subtitle:
+      "The Desktop App connects RoxStreamAI to Unreal and provides local diagnostics. Sign in with the same account as the web dashboard.",
     latestLabel: "Latest",
     noReleases:
       "No releases yet. Ask an admin to add the first Windows/macOS build in the admin panel.",
@@ -653,75 +690,68 @@ const en: MarketingContent = {
   ],
   faqs: [
     {
-      q: "Do I need API keys?",
-      a: "Basic uses BYOK. Pro and Studio include credits and work out of the box. You can still use BYOK on Pro+.",
+      q: "Do I need the Desktop App?",
+      a: "Yes for Unreal connection, export, and local diagnostics. The dashboard works in the browser.",
     },
     {
-      q: "What are ‘active speech hours’?",
-      a: "Only the time when RoxStreamAI speaks. Idle and silence do not consume hours.",
+      q: "What is Active Speech?",
+      a: "It is the time your AI actually speaks on stream. It is the main driver of voice and model cost.",
     },
     {
-      q: "Can I disable the watermark?",
-      a: "Watermark is always on in Basic and Trial. Pro and Studio can disable it.",
+      q: "Can I use my own API keys?",
+      a: "Yes. BYOK is supported for compatible providers.",
     },
     {
-      q: "Does this guarantee income?",
-      a: "No. RoxStreamAI provides automation and retention tools, but results depend on your content and audience.",
-    },
-    {
-      q: "Is Unreal required?",
-      a: "No. Unreal is optional via the Unreal Connector Pack.",
-    },
-    {
-      q: "Can I run 24/7?",
-      a: "Yes. Pro/Studio support scheduling and multi-account rotation.",
+      q: "Is there a trial?",
+      a: "Yes. The Starter plan includes a 7-day trial.",
     },
   ],
   blogPosts: [
     {
-      slug: "introducing-roxstreamai",
-      title: "Introducing RoxStreamAI",
+      slug: "how-active-speech-impacts-cost",
+      title: "How Active Speech impacts cost",
       summary:
-        "A practical AI co-host for live streaming: launch a persona, automate reactions, and keep formats consistent 24/7.",
-      date: "2026-01-08",
-      category: "Product",
-      readingTime: "6 min",
-      content: [
-        "RoxStreamAI is an AI co-host for live streaming. It reads chat, reacts to gifts, and follows your show script so the format stays consistent even when you are not on camera.",
-        "Start by connecting your TikTok Live account, choosing a persona, and loading knowledge packs that teach the character your brand, lore, and FAQs.",
-        "Use Stream Scripts to define a reliable structure: intros, engagement loops, mini‑games, and safe breaks that keep pacing steady across long sessions.",
-        "Dono Engine turns gifts into meaningful moments with priorities, cooldowns, and voice line triggers that feel intentional, not chaotic.",
-        "RoxStreamAI includes moderation guardrails—blocked topics, rate limits, and emergency stop phrases—so the AI stays safe and on‑message.",
-        "For teams, the scheduler keeps multiple accounts and regions running without manual handoffs, while analytics and logs stay centralized.",
-        "Start with the trial, validate your format, and upgrade when you are ready to scale to 24/7 operations.",
-      ],
-    },
-    {
-      slug: "brand-use-cases-ai-characters",
-      title: "Brand use cases for AI characters",
-      summary:
-        "How brands run always-on activations, interactive campaigns, and real-time engagement with AI characters.",
-      date: "2026-01-12",
-      category: "Use Cases",
-      readingTime: "6 min",
-      content: [
-        "AI streamers let brands run live formats without a human host. The character stays on-message, reacts to gifts, and adapts to audience prompts while your team manages the agenda.",
-        "Start with a single hero character and add brand knowledge packs to keep responses aligned. Tie Dono Engine rules to campaign events, then schedule scripts for product drops or seasonal activations.",
-        "For agencies, multi-account scheduling keeps regional channels active around the clock, with moderation and analytics centralized in one dashboard.",
-      ],
-    },
-    {
-      slug: "roadmap-automation-stacks",
-      title: "Automation stacks for 24/7 live",
-      summary:
-        "A layered approach to scripts, moderation, and reaction loops that keep engagement high.",
-      date: "2025-12-20",
+        "Active Speech is the time your AI actually speaks. Here is how it affects spend and how to control it.",
+      date: "2026-01-31",
       category: "Guides",
-      readingTime: "7 min",
+      readingTime: "5 min",
       content: [
-        "A reliable 24/7 format needs three layers: scripted structure, reactive moments, and safety controls. Start with a timeline that alternates between engagement loops and short breaks.",
-        "Next, map donations to reactions with priorities and cooldowns. This creates bursts of novelty without overwhelming the audience.",
-        "Finally, configure safety guardrails and a human override. Your character stays consistent even under heavy chat volume.",
+        "Active Speech is the time your AI actually talks on stream. Silence and idle time do not count.",
+        "Voice and model providers charge by usage. If your AI talks more often, cost goes up.",
+        "In RoxStreamAI you set an Active Speech target and limits. The dashboard converts it into estimated monthly hours before you go live.",
+        "To reduce cost, lower the talk ratio, shorten long monologues, and move some segments to non-speaking interactions.",
+        "BYOK keeps provider billing under your direct control. RoxStreamAI still tracks hours so you can stay within your plan limits.",
+      ],
+    },
+    {
+      slug: "connect-ai-avatar-to-unreal",
+      title: "How to connect an AI avatar to Unreal",
+      summary:
+        "A practical overview of the Desktop App workflow for Unreal connection, export, and Live Link checks.",
+      date: "2026-01-31",
+      category: "Unreal workflows",
+      readingTime: "6 min",
+      content: [
+        "Install the Desktop App and sign in with the same account you use in the web dashboard.",
+        "Create or pick a character in the dashboard, then open the Unreal Connector section in Desktop Mode.",
+        "Export the character configuration and import it into your Unreal project.",
+        "Use the Desktop App diagnostics to verify audio devices, tokens, and connector status before going live.",
+        "If you use Live Link Face or other trackers, validate the pipeline end-to-end while the stream is offline.",
+      ],
+    },
+    {
+      slug: "byok-vs-built-in-providers",
+      title: "BYOK vs built-in providers",
+      summary:
+        "When to use built-in providers for simplicity and when BYOK gives maximum control.",
+      date: "2026-01-31",
+      category: "Provider benchmarks",
+      readingTime: "6 min",
+      content: [
+        "Built-in providers are the fastest way to start. RoxStreamAI covers provider costs up to your plan quota.",
+        "BYOK means you connect your own provider keys. You pay the provider directly and RoxStreamAI tracks hours and limits.",
+        "Use built-in providers when you want speed and fewer moving parts. Use BYOK when you want full control over vendor choice, pricing, and performance.",
+        "You can mix approaches: start with built-in providers, then switch to BYOK when you have stable settings.",
       ],
     },
   ],

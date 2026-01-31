@@ -35,7 +35,7 @@ export default async function MarketingHeader() {
           <div>
             <p className="text-sm font-semibold text-white">{t.common.brand}</p>
             <p className="text-xs text-white/60 transition-colors group-hover:text-white/80">
-              {t.marketing.heroTitle}
+              Web dashboard + desktop companion app for Unreal
             </p>
           </div>
         </Link>
@@ -60,18 +60,10 @@ export default async function MarketingHeader() {
         </nav>
         <div className="flex flex-nowrap items-center gap-2 sm:gap-3">
           <div className="hidden items-center gap-3 md:flex">
-            {user ? (
-              <>
-                <span className="text-xs text-white/60">{userEmail}</span>
-                <Button variant="ghost" href="/app">
-                  {t.common.openDashboard}
-                </Button>
-              </>
-            ) : (
-              <Button variant="ghost" href="/login">
-                {t.common.signIn}
-              </Button>
-            )}
+            {user ? <span className="text-xs text-white/60">{userEmail}</span> : null}
+            <Button variant="ghost" href="/app">
+              {t.common.openDashboard}
+            </Button>
             <Button href="/download">{t.common.downloadDemo}</Button>
           </div>
 
@@ -107,19 +99,18 @@ export default async function MarketingHeader() {
               </nav>
 
               <div className="mt-3 flex flex-col gap-2">
-                {user ? (
-                  <Button variant="secondary" href="/app" className="w-full px-4 py-2 text-sm">
-                    {t.common.openDashboard}
-                  </Button>
-                ) : (
-                  <Button variant="secondary" href="/login" className="w-full px-4 py-2 text-sm">
-                    {t.common.signIn}
-                  </Button>
-                )}
-
+                <Button variant="secondary" href="/app" className="w-full px-4 py-2 text-sm">
+                  {t.common.openDashboard}
+                </Button>
                 <Button href="/download" className="w-full px-4 py-2 text-sm">
                   {t.common.downloadDemo}
                 </Button>
+
+                {!user ? (
+                  <Button variant="ghost" href="/login" className="w-full px-4 py-2 text-sm">
+                    {t.common.signIn}
+                  </Button>
+                ) : null}
               </div>
             </div>
           </details>

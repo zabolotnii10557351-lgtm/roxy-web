@@ -10,9 +10,9 @@ export default function MarketingLayout({
   return (
     <div className="relative min-h-screen bg-[#0A0F1A] text-white">
       <BackgroundGlow />
-      <div className="relative z-10">
+      <div className="relative z-10 flex min-h-screen flex-col">
         <MarketingHeader />
-        <main className="pb-16">{children}</main>
+        <main className="flex-1 pb-16">{children}</main>
         <MarketingFooter />
       </div>
     </div>

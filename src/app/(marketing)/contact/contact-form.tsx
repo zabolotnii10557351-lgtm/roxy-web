@@ -4,8 +4,9 @@ import { useState } from "react";
 import Button from "@/components/Button";
 
 type Labels = {
-  firstName: string;
-  lastName: string;
+  name: string;
+  topic: string;
+  topicOptions: string[];
   email: string;
   message: string;
   sendRequest: string;
@@ -14,8 +15,8 @@ type Labels = {
 export default function ContactForm(props: {
   labels: Labels;
 }) {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [name, setName] = useState("");
+  const [topic, setTopic] = useState(props.labels.topicOptions[0] ?? "Support");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
@@ -35,9 +36,10 @@ export default function ContactForm(props: {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email,
-          first_name: firstName,
-          last_name: lastName,
+          first_name: name,
+          last_name: "",
           message,
+          topic,
           source: "marketing_contact",
         }),
       });
@@ -48,8 +50,7 @@ export default function ContactForm(props: {
       }
 
       setStatus({ type: "ok" });
-      setFirstName("");
-      setLastName("");
+      setName("");
       setEmail("");
       setMessage("");
     } catch (e) {
@@ -61,19 +62,26 @@ export default function ContactForm(props: {
 
   return (
     <div className="glass-card rounded-3xl p-8">
-      <div className="grid gap-4 md:grid-cols-2">
-        <input
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40"
-          placeholder={props.labels.firstName}
-        />
-        <input
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40"
-          placeholder={props.labels.lastName}
-        />
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40"
+        placeholder={props.labels.name}
+      />
+
+      <div className="mt-4">
+        <label className="sr-only">{props.labels.topic}</label>
+        <select
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
+          className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+        >
+          {props.labels.topicOptions.map((opt) => (
+            <option key={opt} value={opt} className="bg-[#0A0F1A]">
+              {opt}
+            </option>
+          ))}
+        </select>
       </div>
       <input
         value={email}
@@ -94,12 +102,12 @@ export default function ContactForm(props: {
         onClick={() => void submit()}
         disabled={busy || !email.trim() || !message.trim()}
       >
-        {busy ? "Sending…" : props.labels.sendRequest}
+        {busy ? "Sending..." : props.labels.sendRequest}
       </Button>
 
       {status.type === "ok" ? (
         <p className="mt-4 text-sm text-emerald-200">
-          Thanks — message received.
+          Thanks. We received your message and will reply by email.
         </p>
       ) : null}
 

@@ -14,6 +14,11 @@ export default async function DocsPage() {
           title={content.docs.quickstart.title}
           subtitle={content.docs.quickstart.subtitle}
         />
+
+        <div className="mt-8 glass-card rounded-2xl p-5 text-sm text-white/70">
+          This doc section is being written. The UI is visible now, but the feature may be in beta.
+        </div>
+
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {content.docs.quickstart.steps.map((step, index) => (
             <div key={step.id} id={step.id} className="glass-card rounded-2xl p-5 scroll-mt-24">

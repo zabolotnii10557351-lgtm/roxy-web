@@ -66,7 +66,7 @@ export default async function UseCasesPage() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <Button href="/contact">{content.useCases.cta.primary}</Button>
+            <Button href="/download">{content.useCases.cta.primary}</Button>
             <Button href="/pricing" variant="secondary">
               {content.useCases.cta.secondary}
             </Button>

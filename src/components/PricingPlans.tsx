@@ -103,10 +103,10 @@ export default function PricingPlans() {
                   : "text-white/60 hover:text-white"
               }`}
             >
-              Yearly (save {discountPct}%) - billed yearly
+              Yearly
             </button>
           </div>
-          <p className="text-xs text-white/60">Save {discountPct}%</p>
+          <p className="text-xs text-white/60">Billed yearly. Save up to {discountPct}%.</p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -139,7 +139,7 @@ export default function PricingPlans() {
                   <h3 className="text-lg font-semibold text-white">
                     {plan.name}
                   </h3>
-                  {isStarter ? <Badge>7-day free trial</Badge> : null}
+                  {isStarter ? <Badge>7-day trial</Badge> : null}
                 </div>
 
                 <div className="mt-6">
@@ -168,6 +168,12 @@ export default function PricingPlans() {
                     </div>
                   ) : null}
                 </div>
+
+                {isStarter ? (
+                  <p className="mt-3 text-xs text-white/60">
+                    7-day trial included. No separate trial plan.
+                  </p>
+                ) : null}
 
                 {includedActiveSpeech !== null ? (
                   <div className="mt-5 space-y-2 text-sm text-white/70">

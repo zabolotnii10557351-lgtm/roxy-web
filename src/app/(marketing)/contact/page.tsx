@@ -23,8 +23,9 @@ export default async function ContactPage() {
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <ContactForm
             labels={{
-              firstName: content.contact.firstName,
-              lastName: content.contact.lastName,
+              name: "Name",
+              topic: "Topic",
+              topicOptions: ["Support", "Partnership", "Sales", "Security"],
               email: content.contact.email,
               message: content.contact.message,
               sendRequest: content.contact.sendRequest,
@@ -36,6 +37,9 @@ export default async function ContactPage() {
             </p>
             <p className="mt-4">hello@roxy.stream</p>
             <p className="mt-2">Partnerships: partners@roxy.stream</p>
+            <p className="mt-4 text-xs text-white/60">
+              For technical issues, include your Diagnostics screenshot and Desktop logs path.
+            </p>
             <p className="mt-6 text-xs text-white/50">
               {content.contact.responseTime}
             </p>
