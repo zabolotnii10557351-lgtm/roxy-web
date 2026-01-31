@@ -11,6 +11,8 @@ import {
   ScrollText,
   Sparkles,
   Box,
+  Monitor,
+  Activity,
   Layers,
   Rocket,
   CreditCard,
@@ -27,11 +29,16 @@ export default function SidebarNav({
   const { isTrial, isTrialExpired, trialEndsAt } = usePlan();
   const t = useTranslations();
   const [nowMs, setNowMs] = useState<number | null>(null);
+  const [isDesktopMode, setIsDesktopMode] = useState(false);
 
   useEffect(() => {
     setNowMs(Date.now());
     const id = setInterval(() => setNowMs(Date.now()), 60_000);
     return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    setIsDesktopMode(Boolean((window as unknown as { __TAURI__?: unknown }).__TAURI__));
   }, []);
 
   const daysLeft =
@@ -47,7 +54,13 @@ export default function SidebarNav({
     { href: "/app/dono-engine", label: t.app.donoEngine, icon: Gift },
     { href: "/app/scripts", label: t.app.scripts, icon: ScrollText },
     { href: "/app/avatar-scene", label: t.app.avatarScene, icon: Sparkles },
-    { href: "/app/unreal", label: "Unreal", icon: Box },
+    ...(isDesktopMode
+      ? [
+          { href: "/app/unreal", label: "Unreal Connector", icon: Box },
+          { href: "/app/local-runtime", label: "Local Runtime", icon: Monitor },
+          { href: "/app/diagnostics", label: "Diagnostics", icon: Activity },
+        ]
+      : []),
     { href: "/app/deploy", label: t.app.deploy, icon: Rocket },
     { href: "/app/billing", label: t.app.billing, icon: CreditCard },
     { href: "/app/settings", label: t.app.settings, icon: Settings },

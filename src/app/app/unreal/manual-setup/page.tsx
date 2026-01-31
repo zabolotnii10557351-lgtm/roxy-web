@@ -1,8 +1,10 @@
 import Button from "@/components/Button";
+import DesktopOnlyGate from "@/components/DesktopOnlyGate";
 
 export default function ManualUnrealSetupPage() {
   return (
-    <div className="space-y-6">
+    <DesktopOnlyGate title="Unreal Connector">
+      <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-semibold text-white">Manual Unreal setup</h2>
         <p className="mt-2 text-sm text-white/60">
@@ -23,6 +25,7 @@ export default function ManualUnrealSetupPage() {
           <Button variant="secondary" href="/app/unreal">Back to Unreal hub</Button>
         </div>
       </div>
-    </div>
+      </div>
+    </DesktopOnlyGate>
   );
 }

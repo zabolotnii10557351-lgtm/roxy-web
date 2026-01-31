@@ -1,8 +1,10 @@
 import Button from "@/components/Button";
+import DesktopOnlyGate from "@/components/DesktopOnlyGate";
 
 export default function UnrealHubPage() {
   return (
-    <div className="space-y-6">
+    <DesktopOnlyGate title="Unreal Connector">
+      <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-semibold text-white">Unreal</h2>
         <p className="mt-2 text-sm text-white/60">
@@ -47,6 +49,7 @@ export default function UnrealHubPage() {
           <Button variant="secondary" href="/app/characters">Go to Characters</Button>
         </div>
       </div>
-    </div>
+      </div>
+    </DesktopOnlyGate>
   );
 }

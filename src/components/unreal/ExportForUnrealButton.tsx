@@ -51,6 +51,24 @@ export default function ExportForUnrealButton(props: {
       return;
     }
 
+    const tauri = (window as unknown as { __TAURI__?: any }).__TAURI__;
+    const invoke = tauri?.invoke ?? tauri?.core?.invoke;
+
+    if (typeof invoke === "function") {
+      const content = await res.text();
+      try {
+        const savedPath = await invoke("save_unreal_manifest", {
+          filename,
+          content,
+        });
+        setMessage(`Saved to: ${String(savedPath)}`);
+        setBusy(false);
+        return;
+      } catch (e) {
+        // Fall back to browser download.
+      }
+    }
+
     const blob = await res.blob();
     const url = URL.createObjectURL(blob);
 
