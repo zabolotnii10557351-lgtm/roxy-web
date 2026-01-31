@@ -9,6 +9,7 @@ import {
   Gift,
   ScrollText,
   Sparkles,
+  Box,
   Layers,
   Rocket,
   CreditCard,
@@ -17,7 +18,11 @@ import {
 import { usePlan } from "@/providers/PlanProvider";
 import { useTranslations } from "@/i18n/client";
 
-export default function SidebarNav() {
+export default function SidebarNav({
+  isAdmin,
+}: {
+  isAdmin: boolean;
+}) {
   const { isTrial, isTrialExpired, trialEndsAt } = usePlan();
   const t = useTranslations();
   const daysLeft = trialEndsAt
@@ -32,9 +37,13 @@ export default function SidebarNav() {
     { href: "/app/dono-engine", label: t.app.donoEngine, icon: Gift },
     { href: "/app/scripts", label: t.app.scripts, icon: ScrollText },
     { href: "/app/avatar-scene", label: t.app.avatarScene, icon: Sparkles },
+    { href: "/app/unreal", label: "Unreal", icon: Box },
     { href: "/app/deploy", label: t.app.deploy, icon: Rocket },
     { href: "/app/billing", label: t.app.billing, icon: CreditCard },
     { href: "/app/settings", label: t.app.settings, icon: Settings },
+    ...(isAdmin
+      ? [{ href: "/admin", label: "Admin", icon: Layers }]
+      : []),
   ];
 
   return (

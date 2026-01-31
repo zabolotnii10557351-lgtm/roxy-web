@@ -57,7 +57,7 @@ export default function PricingExtras({
       return;
     }
 
-    window.location.href = json.url;
+    window.location.assign(String(json.url));
   };
 
   const creditPacks = ["h10", "h50", "h200"] as const;

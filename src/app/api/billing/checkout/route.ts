@@ -1,99 +1,119 @@
 export const runtime = "nodejs";
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { supabaseAdmin } from "@/lib/supabase/admin";
-import { VARIANTS } from "@/lib/billing/variants";
+import { createLemonCheckout } from "@/server/lemon/client";
+import { getPlanVariantMapping, type BillingPlanId, type LemonBillingInterval } from "@/config/lemon";
 
-function lsHeaders() {
-  return {
-    Accept: "application/vnd.api+json",
-    "Content-Type": "application/vnd.api+json",
-    Authorization: `Bearer ${process.env.LEMONSQUEEZY_API_KEY}`,
-  };
+function getBaseUrl(req: Request): string {
+  const envBase = process.env.NEXT_PUBLIC_APP_URL;
+  if (envBase) return envBase;
+  const origin = req.headers.get("origin");
+  if (origin) return origin;
+  return "http://localhost:3000";
 }
 
-export async function POST(req: NextRequest) {
-  const { access_token, kind, plan, interval, pack } = await req.json();
+function normalizeInterval(value: unknown): LemonBillingInterval | null {
+  const v = String(value ?? "").toLowerCase();
+  if (v === "month" || v === "monthly") return "month";
+  if (v === "year" || v === "yearly") return "year";
+  return null;
+}
 
-  const { data: userData, error: userErr } = await supabaseAdmin.auth.getUser(
-    access_token
-  );
+function safeSameOriginUrl(params: { baseUrl: string; input: unknown; fallbackPath: string }): string {
+  const base = new URL(params.baseUrl);
+  const raw = String(params.input ?? "").trim();
 
-  if (userErr || !userData?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const userId = userData.user.id;
-  let variantId: string | null = null;
-
-  if (kind === "plan") {
-    if (plan === "basic") {
-      variantId =
-        interval === "yearly" ? VARIANTS.basic.yearly : VARIANTS.basic.monthly;
+  try {
+    if (raw.startsWith("/")) {
+      return new URL(raw, base).toString();
     }
-    if (plan === "pro") {
-      variantId =
-        interval === "yearly" ? VARIANTS.pro.yearly : VARIANTS.pro.monthly;
+
+    const u = new URL(raw);
+    if (u.origin === base.origin) {
+      return u.toString();
     }
-    if (plan === "studio") {
-      variantId =
-        interval === "yearly" ? VARIANTS.studio.yearly : VARIANTS.studio.monthly;
-    }
+  } catch {
+    // ignore
   }
 
-  if (kind === "credits") {
-    if (pack === "h10") variantId = VARIANTS.extraCredits.h10;
-    if (pack === "h50") variantId = VARIANTS.extraCredits.h50;
-    if (pack === "h200") variantId = VARIANTS.extraCredits.h200;
+  return new URL(params.fallbackPath, base).toString();
+}
+
+function getErrorMessage(e: unknown): string {
+  if (e && typeof e === "object" && "message" in e) {
+    const msg = (e as { message?: unknown }).message;
+    if (typeof msg === "string") return msg;
+  }
+  return "Checkout failed.";
+}
+
+export async function POST(req: Request) {
+  const { supabase, user, workspaceId } = await requireUserAndWorkspace();
+
+  const bodyUnknown = (await req.json().catch(() => null)) as unknown;
+  if (!bodyUnknown || typeof bodyUnknown !== "object") {
+    return NextResponse.json({ error: "Invalid JSON." }, { status: 400 });
   }
 
-  if (kind === "unreal") {
-    if (interval === "monthly") variantId = VARIANTS.unrealConnector.monthly;
-    if (interval === "lifetime") variantId = VARIANTS.unrealConnector.lifetime;
+  const body = bodyUnknown as Record<string, unknown>;
+
+  const planId = String(body.planId ?? "") as BillingPlanId;
+  const interval = normalizeInterval(body.interval);
+
+  if (!(planId === "starter" || planId === "creator" || planId === "pro" || planId === "studio" || planId === "scale")) {
+    return NextResponse.json({ error: "Unsupported planId." }, { status: 400 });
+  }
+  if (!interval) {
+    return NextResponse.json({ error: "interval must be month|year." }, { status: 400 });
   }
 
-  if (!variantId) {
-    return NextResponse.json({ error: "Bad request" }, { status: 400 });
+  const baseUrl = getBaseUrl(req);
+  const successUrl = safeSameOriginUrl({ baseUrl, input: body["successUrl"], fallbackPath: "/app/billing/success" });
+  const cancelUrl = safeSameOriginUrl({ baseUrl, input: body["cancelUrl"], fallbackPath: "/app/billing/cancel" });
+
+  // Ensure billing_state exists.
+  await supabaseAdmin
+    .from("billing_state")
+    .upsert({ workspace_id: workspaceId, plan_id: "starter", status: "trialing" });
+
+  const { data: billingRow, error: billingErr } = await supabase
+    .from("billing_state")
+    .select("lemon_customer_id")
+    .eq("workspace_id", workspaceId)
+    .maybeSingle();
+
+  if (billingErr) {
+    return NextResponse.json({ error: billingErr.message }, { status: 400 });
   }
 
-  const redirectUrl = `${process.env.NEXT_PUBLIC_APP_URL}/app/billing/success`;
+  const mapping = getPlanVariantMapping(planId, interval);
 
-  const body = {
-    data: {
-      type: "checkouts",
-      attributes: {
-        product_options: {
-          redirect_url: redirectUrl,
-        },
-        checkout_data: {
-          custom: {
-            user_id: userId,
-          },
-        },
-      },
-      relationships: {
-        store: {
-          data: { type: "stores", id: process.env.LEMONSQUEEZY_STORE_ID },
-        },
-        variant: {
-          data: { type: "variants", id: variantId },
-        },
-      },
-    },
+  const customData = {
+    workspace_id: workspaceId,
+    workspaceId,
+    kind: "plan",
+    planId,
+    interval,
+    user_id: user.id,
   };
 
-  const response = await fetch("https://api.lemonsqueezy.com/v1/checkouts", {
-    method: "POST",
-    headers: lsHeaders(),
-    body: JSON.stringify(body),
-  });
+  try {
+    const checkout = await createLemonCheckout({
+      variantId: mapping.variantId,
+      successUrl,
+      cancelUrl,
+      customData,
+      customerId: billingRow?.lemon_customer_id ?? null,
+      email: user.email ?? null,
+    });
 
-  const json = await response.json();
-  const url = json?.data?.attributes?.url;
-
-  if (!url) {
-    return NextResponse.json({ error: "No checkout url", json }, { status: 500 });
+    return NextResponse.json({ url: checkout.url });
+  } catch (e: unknown) {
+    return NextResponse.json(
+      { error: getErrorMessage(e) },
+      { status: 400 }
+    );
   }
-
-  return NextResponse.json({ url });
 }

@@ -3,6 +3,10 @@
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
 import { useTranslations } from "@/i18n/client";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { CharacterConfigSchema } from "@/lib/schemas/workspace";
 
 const tabs = [
   "Profile",
@@ -16,6 +20,31 @@ const tabs = [
 
 export default function CharacterBuilderPage() {
   const t = useTranslations();
+  const router = useRouter();
+  const [creating, setCreating] = useState(false);
+  const [createError, setCreateError] = useState<string | null>(null);
+
+  const handleCreateDraft = async () => {
+    setCreating(true);
+    setCreateError(null);
+
+    const supabase = createSupabaseBrowserClient();
+    const defaultConfig = CharacterConfigSchema.parse({});
+
+    const { data, error } = await supabase
+      .from("characters")
+      .insert({ name: "New character", config: defaultConfig })
+      .select("id")
+      .single();
+
+    if (error) {
+      setCreateError(error.message);
+      setCreating(false);
+      return;
+    }
+
+    router.push(`/app/character-builder/${data.id}`);
+  };
 
   return (
     <div className="space-y-6">
@@ -30,10 +59,17 @@ export default function CharacterBuilderPage() {
         </div>
         <div className="flex items-center gap-3">
           <Badge>Draft updated</Badge>
-          <Button variant="secondary">Export Config</Button>
-          <Button>Publish</Button>
+          <Button variant="secondary" onClick={handleCreateDraft} disabled={creating}>
+            {creating ? "Creating…" : "Create draft"}
+          </Button>
         </div>
       </div>
+
+      {createError ? (
+        <p className="rounded-2xl border border-rose-500/40 bg-rose-500/10 px-4 py-3 text-sm text-rose-200">
+          {createError}
+        </p>
+      ) : null}
 
       <div className="flex flex-wrap gap-2">
         {tabs.map((tab) => (

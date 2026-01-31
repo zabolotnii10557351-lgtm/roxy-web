@@ -6,7 +6,7 @@ import SignOutButton from "@/components/SignOutButton";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslations } from "@/i18n/client";
 
-export default function Topbar() {
+export default function Topbar({ displayName }: { displayName: string }) {
   const t = useTranslations();
 
   return (
@@ -16,7 +16,7 @@ export default function Topbar() {
           {t.common.brand}
         </p>
         <h1 className="text-lg font-semibold text-white">
-          {t.auth.welcomeBack}, Lia
+          Welcome back, {displayName}
         </h1>
       </div>
       <div className="flex items-center gap-3">

@@ -2,18 +2,22 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { getContent } from "@/i18n/content";
 import { getLocaleFromRequest } from "@/i18n/server";
+import { getContentBlock } from "@/server/content/getContentBlock";
 
 export default async function AboutPage() {
   const locale = await getLocaleFromRequest();
   const content = getContent(locale);
+
+  const cmsTitle = await getContentBlock({ key: "about.title", locale });
+  const cmsSubtitle = await getContentBlock({ key: "about.subtitle", locale });
 
   return (
     <div className="space-y-20 pb-20 pt-16">
       <Container>
         <SectionHeading
           eyebrow={content.about.eyebrow}
-          title={content.about.title}
-          subtitle={content.about.subtitle}
+          title={cmsTitle || content.about.title}
+          subtitle={cmsSubtitle || content.about.subtitle}
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="glass-card rounded-2xl p-6">

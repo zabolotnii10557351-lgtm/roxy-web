@@ -3,18 +3,22 @@ import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import { getContent } from "@/i18n/content";
 import { getLocaleFromRequest } from "@/i18n/server";
+import { getContentBlock } from "@/server/content/getContentBlock";
 
 export default async function TeamPage() {
   const locale = await getLocaleFromRequest();
   const content = getContent(locale);
+
+  const cmsTitle = await getContentBlock({ key: "team.title", locale });
+  const cmsSubtitle = await getContentBlock({ key: "team.subtitle", locale });
 
   return (
     <div className="space-y-20 pb-20 pt-16">
       <Container>
         <SectionHeading
           eyebrow={content.team.eyebrow}
-          title={content.team.title}
-          subtitle={content.team.subtitle}
+          title={cmsTitle || content.team.title}
+          subtitle={cmsSubtitle || content.team.subtitle}
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {content.team.members.map((member) => (

@@ -1,5 +1,6 @@
 import { revalidatePath } from "next/cache";
-import { assertAdminForAction, requireAdminUser } from "@/lib/auth";
+import { assertAdminForAction, requireAdminUserOrNotFound } from "@/lib/auth";
+import { writeAdminAuditLog } from "@/server/admin/audit";
 
 interface ReleaseRow {
   id: number;
@@ -13,7 +14,7 @@ interface ReleaseRow {
 
 async function createReleaseAction(formData: FormData) {
   "use server";
-  const { adminClient, supabase } = await assertAdminForAction();
+  const { user, adminClient, supabase } = await assertAdminForAction();
   const client = adminClient ?? supabase;
 
   const version = formData.get("version")?.toString().trim();
@@ -45,12 +46,21 @@ async function createReleaseAction(formData: FormData) {
     throw new Error(error.message);
   }
 
+  await writeAdminAuditLog({
+    client,
+    adminUserId: user.id,
+    action: "releases.create",
+    targetType: "release",
+    targetId: `${platform}:${version}`,
+    payload: { version, platform, url, is_latest: isLatest },
+  });
+
   revalidatePath("/admin/releases");
 }
 
 async function updateReleaseAction(formData: FormData) {
   "use server";
-  const { adminClient, supabase } = await assertAdminForAction();
+  const { user, adminClient, supabase } = await assertAdminForAction();
   const client = adminClient ?? supabase;
 
   const id = formData.get("id")?.toString();
@@ -80,12 +90,21 @@ async function updateReleaseAction(formData: FormData) {
     throw new Error(error.message);
   }
 
+  await writeAdminAuditLog({
+    client,
+    adminUserId: user.id,
+    action: "releases.update",
+    targetType: "release",
+    targetId: id,
+    payload: { version, platform, url, is_latest: isLatest },
+  });
+
   revalidatePath("/admin/releases");
 }
 
 async function deleteReleaseAction(formData: FormData) {
   "use server";
-  const { adminClient, supabase } = await assertAdminForAction();
+  const { user, adminClient, supabase } = await assertAdminForAction();
   const client = adminClient ?? supabase;
 
   const id = formData.get("id")?.toString();
@@ -100,11 +119,20 @@ async function deleteReleaseAction(formData: FormData) {
     throw new Error(error.message);
   }
 
+  await writeAdminAuditLog({
+    client,
+    adminUserId: user.id,
+    action: "releases.delete",
+    targetType: "release",
+    targetId: id,
+    payload: { id },
+  });
+
   revalidatePath("/admin/releases");
 }
 
 export default async function AdminReleasesPage() {
-  const { supabase, adminClient } = await requireAdminUser();
+  const { supabase, adminClient } = await requireAdminUserOrNotFound();
   const client = adminClient ?? supabase;
 
   const { data: releases } = await client

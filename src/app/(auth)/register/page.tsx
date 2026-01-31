@@ -3,7 +3,6 @@ import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import CaptchaField from "@/app/(auth)/_components/CaptchaField";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
 async function registerAction(
@@ -13,21 +12,21 @@ async function registerAction(
   "use server";
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString();
+  const displayName = formData.get("display_name")?.toString().trim();
+  const username = formData.get("username")?.toString().trim();
   const captchaToken = formData.get("captchaToken")?.toString();
-  const locale = await getLocaleFromRequest();
-  const t = getTranslations(locale);
   const siteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
+
+  if (!displayName) {
+    return { error: "Display name is required." };
+  }
 
   if (!email || !password) {
     return { error: "Email and password are required." };
   }
 
-  if (!siteKey) {
-    return { error: t.auth.captchaMissing };
-  }
-
-  if (!captchaToken) {
-    return { error: t.auth.captchaRequired };
+  if (siteKey && !captchaToken) {
+    return { error: "Captcha is required." };
   }
 
   const supabase = await createSupabaseServerClient();
@@ -39,7 +38,11 @@ async function registerAction(
     password,
     options: {
       emailRedirectTo: redirectTo,
-      captchaToken,
+      captchaToken: siteKey ? captchaToken : undefined,
+      data: {
+        display_name: displayName,
+        username: username || undefined,
+      },
     },
   });
 
@@ -55,8 +58,6 @@ async function registerAction(
 }
 
 export default async function RegisterPage() {
-  const locale = await getLocaleFromRequest();
-  const t = getTranslations(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -70,32 +71,48 @@ export default async function RegisterPage() {
     <Container className="py-20">
       <div className="flex justify-center">
         <AuthForm
-          title={t.auth.createAccount}
-          description={t.auth.createAccountDescription}
+          title="Create your RoxStreamAI account"
+          description="Start your 7-day Starter trial and set up your streamer."
           action={registerAction}
-          submitLabel={t.auth.createAccount}
+          submitLabel="Create account"
           fields={[
             {
+              name: "display_name",
+              label: "Display name",
+              type: "text",
+              placeholder: "Lia",
+              autoComplete: "nickname",
+              required: true,
+            },
+            {
+              name: "username",
+              label: "Username (optional)",
+              type: "text",
+              placeholder: "lia_streams",
+              autoComplete: "username",
+              required: false,
+            },
+            {
               name: "email",
-              label: t.auth.email,
+              label: "Email",
               type: "email",
-              placeholder: t.auth.emailPlaceholder,
+              placeholder: "you@example.com",
               autoComplete: "email",
             },
             {
               name: "password",
-              label: t.auth.password,
+              label: "Password",
               type: "password",
-              placeholder: t.auth.passwordMin,
+              placeholder: "Minimum 8 characters",
               autoComplete: "new-password",
             },
           ]}
           extraContent={<CaptchaField />}
           footer={
             <span>
-              {t.auth.alreadyHaveAccount}{" "}
+              Already have an account?{" "}
               <Link className="text-cyan-300 hover:text-cyan-200" href="/login">
-                {t.common.signIn}
+                Sign in
               </Link>
             </span>
           }

@@ -3,7 +3,6 @@ import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import CaptchaField from "@/app/(auth)/_components/CaptchaField";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { redirect } from "next/navigation";
 
 async function loginAction(
@@ -14,20 +13,14 @@ async function loginAction(
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString();
   const captchaToken = formData.get("captchaToken")?.toString();
-  const locale = await getLocaleFromRequest();
-  const t = getTranslations(locale);
   const siteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
   if (!email || !password) {
     return { error: "Email and password are required." };
   }
 
-  if (!siteKey) {
-    return { error: t.auth.captchaMissing };
-  }
-
-  if (!captchaToken) {
-    return { error: t.auth.captchaRequired };
+  if (siteKey && !captchaToken) {
+    return { error: "Captcha is required." };
   }
 
   const supabase = await createSupabaseServerClient();
@@ -35,14 +28,11 @@ async function loginAction(
     email,
     password,
     options: {
-      captchaToken,
+      captchaToken: siteKey ? captchaToken : undefined,
     },
   });
 
   if (error) {
-    if (error.message.toLowerCase().includes("captcha")) {
-      return { error: t.auth.captchaError };
-    }
     return { error: error.message };
   }
 
@@ -50,8 +40,6 @@ async function loginAction(
 }
 
 export default async function LoginPage() {
-  const locale = await getLocaleFromRequest();
-  const t = getTranslations(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -65,23 +53,22 @@ export default async function LoginPage() {
     <Container className="py-20">
       <div className="flex justify-center">
         <AuthForm
-          title={t.auth.welcomeBack}
-          description={t.auth.signInDescription}
+          title="Welcome back"
           action={loginAction}
-          submitLabel={t.common.signIn}
+          submitLabel="Sign in"
           fields={[
             {
               name: "email",
-              label: t.auth.email,
+              label: "Email",
               type: "email",
-              placeholder: t.auth.emailPlaceholder,
+              placeholder: "you@example.com",
               autoComplete: "email",
             },
             {
               name: "password",
-              label: t.auth.password,
+              label: "Password",
               type: "password",
-              placeholder: t.auth.passwordPlaceholder,
+              placeholder: "Your password",
               autoComplete: "current-password",
             },
           ]}
@@ -89,12 +76,12 @@ export default async function LoginPage() {
           footer={
             <div className="flex flex-col gap-2">
               <Link className="text-white hover:text-white" href="/reset">
-                {t.auth.forgotPassword}
+                Forgot password?
               </Link>
               <span>
-                {t.auth.newHere}{" "}
+                New here?{" "}
                 <Link className="text-cyan-300 hover:text-cyan-200" href="/register">
-                  {t.auth.createAccount}
+                  Create account
                 </Link>
               </span>
             </div>

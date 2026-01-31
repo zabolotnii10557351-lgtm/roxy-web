@@ -1,5 +1,6 @@
 import { revalidatePath } from "next/cache";
-import { assertAdminForAction, requireAdminUser } from "@/lib/auth";
+import { assertAdminForAction, requireAdminUserOrNotFound } from "@/lib/auth";
+import { writeAdminAuditLog } from "@/server/admin/audit";
 
 interface ProfileRow {
   id: string;
@@ -11,7 +12,7 @@ interface ProfileRow {
 
 async function updateProfileAction(formData: FormData) {
   "use server";
-  const { adminClient, supabase } = await assertAdminForAction();
+  const { user, adminClient, supabase } = await assertAdminForAction();
   const client = adminClient ?? supabase;
 
   const id = formData.get("id")?.toString();
@@ -31,11 +32,20 @@ async function updateProfileAction(formData: FormData) {
     throw new Error(error.message);
   }
 
+  await writeAdminAuditLog({
+    client,
+    adminUserId: user.id,
+    action: "users.update_profile",
+    targetType: "profile",
+    targetId: id,
+    payload: { role, plan_id: planId },
+  });
+
   revalidatePath("/admin/users");
 }
 
 export default async function AdminUsersPage() {
-  const { supabase, adminClient } = await requireAdminUser();
+  const { supabase, adminClient } = await requireAdminUserOrNotFound();
   const client = adminClient ?? supabase;
 
   const { data: profiles } = await client

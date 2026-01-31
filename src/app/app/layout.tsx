@@ -2,6 +2,7 @@ import DashboardShell from "@/components/DashboardShell";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import type { PlanId } from "@/lib/plans";
+import { getAdminEmails } from "@/lib/auth";
 
 export default async function AppLayout({
   children,
@@ -19,14 +20,23 @@ export default async function AppLayout({
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("plan_id, trial_ends_at, plan_expires_at, active_hours_used")
+    .select(
+      "display_name, role, plan_id, trial_ends_at, plan_expires_at, active_hours_used",
+    )
     .eq("id", user.id)
     .maybeSingle();
+
+  const displayName = profile?.display_name ?? "User";
 
   const planId = (profile?.plan_id ?? "trial") as PlanId;
   const trialEndsAt = profile?.trial_ends_at ?? null;
   const planExpiresAt = profile?.plan_expires_at ?? null;
   const activeHoursUsed = profile?.active_hours_used ?? 0;
+
+  const adminEmails = getAdminEmails();
+  const isAdmin =
+    (user.email ? adminEmails.includes(user.email.toLowerCase()) : false) ||
+    profile?.role === "admin";
 
   if (!trialEndsAt) {
     const nextWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
@@ -38,6 +48,8 @@ export default async function AppLayout({
 
   return (
     <DashboardShell
+      displayName={displayName}
+      isAdmin={isAdmin}
       planProfile={{
         planId,
         trialEndsAt: trialEndsAt ?? undefined,

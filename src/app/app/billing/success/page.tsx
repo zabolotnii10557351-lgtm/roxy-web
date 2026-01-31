@@ -3,7 +3,17 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/components/Button";
-import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+
+type BillingStatusResponse = {
+  billing?: {
+    workspace_id: string;
+    plan_id: string;
+    status: string;
+    lemon_customer_id: string | null;
+    lemon_subscription_id: string | null;
+  };
+  error?: string;
+};
 
 export default function BillingSuccessPage() {
   const router = useRouter();
@@ -15,23 +25,22 @@ export default function BillingSuccessPage() {
 
     const poll = async () => {
       attempts += 1;
-      const supabase = createSupabaseBrowserClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const res = await fetch("/api/billing/status", { cache: "no-store" });
 
-      if (!user) {
+      const contentType = res.headers.get("content-type") ?? "";
+      if (!contentType.includes("application/json")) {
         router.push("/login");
         return;
       }
 
-      const { data: profile } = await supabase
-        .from("profiles")
-        .select("plan, status")
-        .eq("id", user.id)
-        .maybeSingle();
+      const json = (await res.json().catch(() => null)) as BillingStatusResponse | null;
+      if (!json || !res.ok) {
+        setStatus(json?.error ?? "We are still processing your payment. Please refresh later.");
+        return;
+      }
 
-      if (profile?.plan && profile?.status === "active") {
+      const billing = json.billing;
+      if (billing?.lemon_subscription_id) {
         setStatus("Payment confirmed. Redirecting...");
         router.push("/app/billing");
         return;

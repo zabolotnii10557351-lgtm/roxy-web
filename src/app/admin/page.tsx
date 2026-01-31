@@ -1,13 +1,30 @@
 import StatCard from "@/components/StatCard";
-import { requireAdminUser } from "@/lib/auth";
+import { requireAdminUserOrNotFound } from "@/lib/auth";
 
 export default async function AdminOverviewPage() {
-  const { supabase, adminClient } = await requireAdminUser();
+  const { supabase, adminClient } = await requireAdminUserOrNotFound();
   const client = adminClient ?? supabase;
 
-  const [{ count: usersCount }, { count: releasesCount }] = await Promise.all([
+  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+
+  const [
+    { count: usersCount },
+    { count: workspacesCount },
+    { count: releasesCount },
+    { count: activeSubsCount },
+    { count: usageEvents24hCount },
+  ] = await Promise.all([
     client.from("profiles").select("id", { count: "exact", head: true }),
+    client.from("workspaces").select("id", { count: "exact", head: true }),
     client.from("releases").select("id", { count: "exact", head: true }),
+    client
+      .from("billing_state")
+      .select("workspace_id", { count: "exact", head: true })
+      .eq("status", "active"),
+    client
+      .from("usage_events")
+      .select("id", { count: "exact", head: true })
+      .gte("created_at", since),
   ]);
 
   return (
@@ -25,6 +42,21 @@ export default async function AdminOverviewPage() {
           label="Total users"
           value={String(usersCount ?? 0)}
           helper="Profiles created in Supabase."
+        />
+        <StatCard
+          label="Workspaces"
+          value={String(workspacesCount ?? 0)}
+          helper="Total workspaces across all users."
+        />
+        <StatCard
+          label="Active subscriptions"
+          value={String(activeSubsCount ?? 0)}
+          helper="billing_state rows with status=active."
+        />
+        <StatCard
+          label="Usage events (24h)"
+          value={String(usageEvents24hCount ?? 0)}
+          helper="Events ingested during last 24 hours."
         />
         <StatCard
           label="Releases"

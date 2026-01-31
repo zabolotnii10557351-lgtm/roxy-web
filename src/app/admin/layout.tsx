@@ -1,11 +1,15 @@
 import Link from "next/link";
 import BackgroundGlow from "@/components/BackgroundGlow";
 import SignOutButton from "@/components/SignOutButton";
-import { requireAdminUser } from "@/lib/auth";
+import { requireAdminUserOrNotFound } from "@/lib/auth";
 
 const navLinks = [
   { href: "/admin", label: "Overview" },
   { href: "/admin/users", label: "Users" },
+  { href: "/admin/pricing", label: "Pricing" },
+  { href: "/admin/content", label: "Content" },
+  { href: "/admin/leads", label: "Leads" },
+  { href: "/admin/audit", label: "Audit" },
   { href: "/admin/releases", label: "Releases" },
 ];
 
@@ -14,7 +18,7 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  await requireAdminUser();
+  await requireAdminUserOrNotFound();
 
   return (
     <div className="relative min-h-screen bg-[#0A0F1A] text-white">
