@@ -3,6 +3,17 @@
 import { useMemo, useState } from "react";
 import Button from "@/components/Button";
 
+type TauriInvoke = (command: string, args?: Record<string, unknown>) => Promise<unknown>;
+
+type TauriGlobal = {
+  __TAURI__?: {
+    invoke?: TauriInvoke;
+    core?: {
+      invoke?: TauriInvoke;
+    };
+  };
+};
+
 function safeFilePart(input: string) {
   return input
     .trim()
@@ -49,6 +60,24 @@ export default function ExportForUnrealButton(props: {
       setMessage(json?.error ?? "Export failed.");
       setBusy(false);
       return;
+    }
+
+    const tauri = (window as unknown as TauriGlobal).__TAURI__;
+    const invoke: TauriInvoke | undefined = tauri?.invoke ?? tauri?.core?.invoke;
+
+    if (typeof invoke === "function") {
+      const content = await res.text();
+      try {
+        const savedPath = await invoke("save_unreal_manifest", {
+          filename,
+          content,
+        });
+        setMessage(`Saved to: ${String(savedPath)}`);
+        setBusy(false);
+        return;
+      } catch {
+        // Fall back to browser download.
+      }
     }
 
     const blob = await res.blob();

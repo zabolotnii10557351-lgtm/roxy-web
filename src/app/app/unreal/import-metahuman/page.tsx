@@ -1,14 +1,16 @@
 import Button from "@/components/Button";
+import DesktopOnlyGate from "@/components/DesktopOnlyGate";
 
 export default function ImportMetaHumanPage() {
   return (
-    <div className="space-y-6">
-      <div>
+    <DesktopOnlyGate title="Unreal Connector">
+      <div className="space-y-6">
+        <div>
         <h2 className="text-2xl font-semibold text-white">How to import MetaHuman</h2>
         <p className="mt-2 text-sm text-white/60">
           This guide is a placeholder. It will be expanded with step-by-step screenshots and project templates.
         </p>
-      </div>
+        </div>
 
       <div className="glass-card rounded-3xl p-6 space-y-3">
         <p className="text-sm text-white/70">
@@ -26,6 +28,7 @@ export default function ImportMetaHumanPage() {
           <Button variant="secondary" href="/app/unreal">Back to Unreal hub</Button>
         </div>
       </div>
-    </div>
+      </div>
+    </DesktopOnlyGate>
   );
 }

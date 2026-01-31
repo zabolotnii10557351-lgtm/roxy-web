@@ -1,9 +1,11 @@
 import Button from "@/components/Button";
 import NotifyMeForm from "@/components/polyphoria/NotifyMeForm";
+import DesktopOnlyGate from "@/components/DesktopOnlyGate";
 
 export default function UnrealRuntimeConnectorPage() {
   return (
-    <div className="space-y-6">
+    <DesktopOnlyGate title="Unreal Runtime Connector">
+      <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-semibold text-white">Unreal Runtime Connector</h2>
         <p className="mt-2 text-sm text-white/60">
@@ -28,6 +30,7 @@ export default function UnrealRuntimeConnectorPage() {
           <Button variant="secondary" href="/app/unreal">Back to Unreal hub</Button>
         </div>
       </div>
-    </div>
+      </div>
+    </DesktopOnlyGate>
   );
 }
