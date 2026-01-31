@@ -3,6 +3,17 @@
 import { useMemo, useState } from "react";
 import Button from "@/components/Button";
 
+type TauriInvoke = (command: string, args?: Record<string, unknown>) => Promise<unknown>;
+
+type TauriGlobal = {
+  __TAURI__?: {
+    invoke?: TauriInvoke;
+    core?: {
+      invoke?: TauriInvoke;
+    };
+  };
+};
+
 function safeFilePart(input: string) {
   return input
     .trim()
@@ -51,8 +62,8 @@ export default function ExportForUnrealButton(props: {
       return;
     }
 
-    const tauri = (window as unknown as { __TAURI__?: any }).__TAURI__;
-    const invoke = tauri?.invoke ?? tauri?.core?.invoke;
+    const tauri = (window as unknown as TauriGlobal).__TAURI__;
+    const invoke: TauriInvoke | undefined = tauri?.invoke ?? tauri?.core?.invoke;
 
     if (typeof invoke === "function") {
       const content = await res.text();
@@ -64,7 +75,7 @@ export default function ExportForUnrealButton(props: {
         setMessage(`Saved to: ${String(savedPath)}`);
         setBusy(false);
         return;
-      } catch (e) {
+      } catch {
         // Fall back to browser download.
       }
     }
