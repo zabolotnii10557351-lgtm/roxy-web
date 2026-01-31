@@ -57,8 +57,7 @@ export default async function MarketingHeader() {
             </Link>
           ) : null}
         </nav>
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher />
+        <div className="flex flex-nowrap items-center gap-2 sm:gap-3">
           {user ? (
             <div className="hidden items-center gap-3 md:flex">
               <span className="text-xs text-white/60">{userEmail}</span>
@@ -67,11 +66,21 @@ export default async function MarketingHeader() {
               </Button>
             </div>
           ) : (
-            <Button variant="ghost" href="/login">
+            <Button
+              variant="ghost"
+              href="/login"
+              className="px-3 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm"
+            >
               {t.common.signIn}
             </Button>
           )}
-          <Button href="/download">{t.common.downloadDemo}</Button>
+          <Button
+            href="/download"
+            className="px-3 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm"
+          >
+            {t.common.downloadDemo}
+          </Button>
+          <LanguageSwitcher />
         </div>
       </Container>
     </header>

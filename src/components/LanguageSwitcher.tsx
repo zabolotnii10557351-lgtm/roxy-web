@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
     <select
       value={locale}
       onChange={(event) => setLocale(event.target.value as typeof locale)}
-      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70 hover:text-white"
+      className="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70 hover:text-white"
       aria-label="Language"
     >
       {localeOptions.map((option) => (
