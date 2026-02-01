@@ -6,8 +6,8 @@ import { useTranslations } from "@/i18n/client";
 const steps = [
   "Choose OBS scene",
   "Add Browser Source",
-  "Paste Roxy overlay URL",
-  "Start session",
+  "Paste your overlay URL",
+  "Start your session",
 ];
 
 export default function DeployPage() {
@@ -38,19 +38,24 @@ export default function DeployPage() {
               </li>
             ))}
           </ol>
-          <Button className="mt-4">Generate Share Link</Button>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Button disabled>{t.app.generateShareLink} ({t.common.comingSoon})</Button>
+            <Button variant="secondary" href="/docs/obs">
+              {t.nav.docs}
+            </Button>
+          </div>
         </div>
         <div className="glass-card rounded-3xl p-6">
           <h3 className="text-lg font-semibold text-white">Session status</h3>
           <div className="mt-4 space-y-3 text-sm text-white/70">
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Overlay URL: https://roxy.stream/demo/overlay
+              Overlay URL: Not generated yet
             </div>
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Status: Ready to go live
+              Status: {t.common.preview}
             </div>
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Last publish: 2 hours ago
+              Last publish: —
             </div>
           </div>
         </div>

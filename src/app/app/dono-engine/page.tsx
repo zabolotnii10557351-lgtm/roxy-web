@@ -1,7 +1,6 @@
 "use client";
 
 import Button from "@/components/Button";
-import Badge from "@/components/Badge";
 import { useTranslations } from "@/i18n/client";
 
 export default function DonoEnginePage() {
@@ -16,80 +15,32 @@ export default function DonoEnginePage() {
             {t.app.donoEngineSubtitle}
           </p>
         </div>
-        <Button>Simulate Gift</Button>
+        <Button disabled>
+          Simulate Gift ({t.common.comingSoon})
+        </Button>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
         <div className="glass-card rounded-3xl p-6">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold text-white">Rule editor</h3>
-            <Badge>Saved</Badge>
+          <h3 className="text-lg font-semibold text-white">Rule editor</h3>
+          <p className="mt-2 text-sm text-white/70">
+            {t.common.preview}. Gift/donation rules will be editable here once the runtime connector is enabled.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Button variant="secondary" disabled>
+              Create rule ({t.common.comingSoon})
+            </Button>
+            <Button variant="ghost" href="/docs/safety">
+              Safety & limits
+            </Button>
           </div>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
-            <div className="space-y-2">
-              <label className="text-xs text-white/60">Trigger</label>
-              <select className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white">
-                <option>Rose (1 coin)</option>
-                <option>Galaxy (1000 coins)</option>
-                <option>Universe (10000 coins)</option>
-              </select>
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs text-white/60">Cooldown</label>
-              <input
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                placeholder="20s"
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs text-white/60">Emotion</label>
-              <select className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white">
-                <option>Excited</option>
-                <option>Grateful</option>
-                <option>Playful</option>
-              </select>
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs text-white/60">Action</label>
-              <input
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                placeholder="Trigger confetti overlay"
-              />
-            </div>
-          </div>
-          <div className="mt-4 space-y-2">
-            <label className="text-xs text-white/60">Response line</label>
-            <textarea
-              className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-              rows={3}
-              placeholder="Thank you for the Galaxy! Let's launch the mini-game."
-            />
-          </div>
-          <Button className="mt-4" variant="secondary">
-            Test Response
-          </Button>
         </div>
         <div className="glass-card rounded-3xl p-6">
           <h3 className="text-lg font-semibold text-white">Active rules</h3>
-          <div className="mt-4 space-y-3 text-sm text-white/70">
-            <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Rose → Quick thank you → 10s cooldown
-            </div>
-            <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Galaxy → Scene change → 45s cooldown
-            </div>
-            <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Universe → Battle mode → 120s cooldown
-            </div>
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/70">
+            No rules yet.
           </div>
-          <Button className="mt-4 w-full">Create rule</Button>
         </div>
-      </div>
-
-      <div className="glass-card rounded-3xl p-6 text-center">
-        <p className="text-sm text-white/70">
-          Create a rule to react to gifts and donations.
-        </p>
       </div>
     </div>
   );

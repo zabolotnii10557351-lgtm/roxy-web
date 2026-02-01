@@ -1,6 +1,7 @@
 "use client";
 
 import Badge from "@/components/Badge";
+import Button from "@/components/Button";
 import FeatureLock from "@/components/FeatureLock";
 import { isPlanAtLeast } from "@/lib/plans";
 import { usePlan } from "@/providers/PlanProvider";
@@ -24,13 +25,19 @@ export default function StreamConnectorsPage() {
         <div className="glass-card rounded-3xl p-6">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-white">TikTok Live</h3>
-            <Badge>Connected</Badge>
+            <Badge variant="outline">{t.common.preview}</Badge>
           </div>
           <p className="mt-3 text-sm text-white/70">
-            1 account linked. Region: EU. Language: EN.
+            Connectors are configured via the Desktop companion. This dashboard will show live status once the connector
+            APIs are enabled.
           </p>
-          <div className="mt-6 text-xs text-white/50">
-            Last sync: 2 minutes ago.
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Button variant="secondary" disabled>
+              Connect TikTok ({t.common.comingSoon})
+            </Button>
+            <Button variant="ghost" href="/docs/tutorials/first-stream">
+              Open setup guide
+            </Button>
           </div>
         </div>
         <div className="glass-card rounded-3xl p-6">
@@ -55,7 +62,7 @@ export default function StreamConnectorsPage() {
 
       <FeatureLock
         title="Multi-account scheduler"
-        description="Available in Pro+. Rotate multiple TikTok accounts with schedules."
+        description="Available in Pro+. Rotate multiple accounts with scheduling rules."
         locked={!proUnlocked}
       >
         <div className="space-y-3">
@@ -63,14 +70,14 @@ export default function StreamConnectorsPage() {
             Multi-account scheduler
           </h3>
           <p className="text-sm text-white/70">
-            Queue up to 5 accounts on Pro or 20 on Studio with rotation rules.
+            This module is a preview. Once enabled, you&apos;ll be able to rotate accounts by schedules and usage limits.
           </p>
           <div className="grid gap-3 text-xs text-white/70 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Primary account: @roxy_live
+              Example: Rotation window: every 4 hours
             </div>
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Rotation: Every 4 hours
+              Example: Max sessions per day: 3
             </div>
           </div>
         </div>
