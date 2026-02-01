@@ -2,9 +2,9 @@ import Container from "@/components/Container";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getIsAdminForCurrentUser } from "@/lib/auth";
 import { getContent } from "@/i18n/content";
 import { getLocaleFromRequest } from "@/i18n/server";
-import { redirect } from "next/navigation";
 
 interface ReleaseRow {
   id: number;
@@ -24,8 +24,42 @@ export default async function DownloadPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
+  const { isAdmin } = await getIsAdminForCurrentUser();
+
+  const isRu = locale === "ru";
+
+  const heading = (
+    <SectionHeading
+      eyebrow={content.download.eyebrow}
+      title={content.download.title}
+      subtitle={content.download.subtitle}
+    />
+  );
+
   if (!user) {
-    redirect("/login");
+    return (
+      <Container className="py-20 space-y-10">
+        {heading}
+        <div className="glass-card rounded-3xl p-8 text-white/70">
+          <p className="text-sm leading-relaxed">
+            {isRu
+              ? "Скачивание Desktop приложения доступно после входа в аккаунт."
+              : "Desktop downloads are available after you sign in."}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Button href="/login">{isRu ? "Войти" : "Sign in"}</Button>
+            <Button href="/contact" variant="secondary">
+              {isRu ? "Связаться" : "Contact"}
+            </Button>
+          </div>
+          <p className="mt-4 text-xs text-white/50">
+            {isRu
+              ? "Если вам нужен демо-доступ для команды — напишите нам, и мы подскажем лучший вариант."
+              : "If you need a team demo access path, reach out and we’ll suggest the best option."}
+          </p>
+        </div>
+      </Container>
+    );
   }
 
   const { data: releases } = await supabase
@@ -46,11 +80,7 @@ export default async function DownloadPage() {
 
   return (
     <Container className="py-20 space-y-10">
-      <SectionHeading
-        eyebrow={content.download.eyebrow}
-        title={content.download.title}
-        subtitle={content.download.subtitle}
-      />
+      {heading}
 
       {releases && releases.length > 0 ? (
         <div className="grid gap-6 lg:grid-cols-2">
@@ -82,9 +112,15 @@ export default async function DownloadPage() {
             {content.download.noReleases}
           </p>
           <div className="mt-4">
-            <Button href="/admin/releases" variant="secondary">
-              {content.download.openAdmin}
-            </Button>
+            {isAdmin ? (
+              <Button href="/admin/releases" variant="secondary">
+                {content.download.openAdmin}
+              </Button>
+            ) : (
+              <Button href="/contact" variant="secondary">
+                {isRu ? "Связаться" : "Contact"}
+              </Button>
+            )}
           </div>
         </div>
       )}

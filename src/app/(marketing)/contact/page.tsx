@@ -24,6 +24,8 @@ export default async function ContactPage(props: {
   const cmsTitle = await getContentBlock({ key: "contact.title", locale });
   const cmsSubtitle = await getContentBlock({ key: "contact.subtitle", locale });
 
+  const isRu = locale === "ru";
+
   return (
     <div className="space-y-20 pb-20 pt-16">
       <Container>
@@ -35,12 +37,18 @@ export default async function ContactPage(props: {
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <ContactForm
             labels={{
-              name: "Name",
-              topic: "Topic",
-              topicOptions: ["Support", "Partnership", "Sales", "Security"],
+              name: isRu ? "Имя" : "Name",
+              topic: isRu ? "Тема" : "Topic",
+              topicOptions: isRu
+                ? ["Поддержка", "Партнёрство", "Sales", "Security"]
+                : ["Support", "Partnership", "Sales", "Security"],
               email: content.contact.email,
               message: content.contact.message,
               sendRequest: content.contact.sendRequest,
+              sending: isRu ? "Отправляем..." : "Sending...",
+              success: isRu
+                ? "Спасибо! Мы получили сообщение и ответим по email."
+                : "Thanks. We received your message and will reply by email.",
             }}
             initialTopic={initialTopic}
             initialMessage={initialMessage}
@@ -53,7 +61,9 @@ export default async function ContactPage(props: {
             <p className="mt-4">hello@roxy.stream</p>
             <p className="mt-2">Partnerships: partners@roxy.stream</p>
             <p className="mt-4 text-xs text-white/60">
-              For technical issues, include your Diagnostics screenshot and Desktop logs path.
+              {isRu
+                ? "Для техподдержки приложите скриншот Diagnostics и путь к логам Desktop приложения."
+                : "For technical issues, include your Diagnostics screenshot and Desktop logs path."}
             </p>
             <p className="mt-6 text-xs text-white/50">
               {content.contact.responseTime}

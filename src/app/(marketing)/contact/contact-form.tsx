@@ -10,6 +10,8 @@ type Labels = {
   email: string;
   message: string;
   sendRequest: string;
+  sending: string;
+  success: string;
 };
 
 export default function ContactForm(props: {
@@ -109,13 +111,11 @@ export default function ContactForm(props: {
         onClick={() => void submit()}
         disabled={busy || !email.trim() || !message.trim()}
       >
-        {busy ? "Sending..." : props.labels.sendRequest}
+        {busy ? props.labels.sending : props.labels.sendRequest}
       </Button>
 
       {status.type === "ok" ? (
-        <p className="mt-4 text-sm text-emerald-200">
-          Thanks. We received your message and will reply by email.
-        </p>
+        <p className="mt-4 text-sm text-emerald-200">{props.labels.success}</p>
       ) : null}
 
       {status.type === "error" ? (

@@ -22,7 +22,7 @@ export default async function PricingPage() {
       </Container>
 
       <Container>
-        <PricingPageClient />
+        <PricingPageClient locale={locale} />
       </Container>
     </div>
   );
