@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { useLocale, useTranslations } from "@/i18n/client";
 
 type ContentRow = {
   id: string;
@@ -14,12 +15,10 @@ type ContentRow = {
   updated_by: string | null;
 };
 
-function formatError(err: unknown) {
-  if (err instanceof Error) return err.message;
-  return "Unknown error";
-}
-
 export default function AdminContentClient() {
+  const { locale: uiLocale } = useLocale();
+  const t = useTranslations();
+
   const [items, setItems] = useState<ContentRow[]>([]);
   const [q, setQ] = useState("");
   const [locale, setLocale] = useState("en");
@@ -28,6 +27,11 @@ export default function AdminContentClient() {
   const [published, setPublished] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  const formatError = (err: unknown) => {
+    if (err instanceof Error) return err.message;
+    return t.admin.errorUnknown;
+  };
 
   async function load() {
     const url = new URL("/api/admin/content", window.location.origin);
@@ -73,7 +77,7 @@ export default function AdminContentClient() {
 
     try {
       if (!selected) {
-        throw new Error("Select a block to edit");
+        throw new Error(t.admin.contentSelectBlockError);
       }
 
       const res = await fetch("/api/admin/content", {
@@ -106,7 +110,7 @@ export default function AdminContentClient() {
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search keys or text…"
+            placeholder={t.admin.contentSearchPlaceholder}
             className="flex-1 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
           />
           <select
@@ -122,7 +126,7 @@ export default function AdminContentClient() {
             disabled={busy}
             className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10 disabled:opacity-50"
           >
-            Refresh
+            {t.admin.buttonRefresh}
           </button>
         </div>
 
@@ -162,11 +166,11 @@ export default function AdminContentClient() {
                               : "bg-white/10 text-white/60"
                           }`}
                         >
-                          {row.is_published ? "Published" : "Draft"}
+                          {row.is_published ? t.admin.statusPublished : t.admin.statusDraft}
                         </span>
                       </div>
                       <p className="mt-1 text-xs text-white/40">
-                        {row.locale} • {row.updated_at ? new Date(row.updated_at).toLocaleString() : "—"}
+                        {row.locale} • {row.updated_at ? new Date(row.updated_at).toLocaleString(uiLocale) : "—"}
                       </p>
                     </button>
                   );
@@ -175,7 +179,7 @@ export default function AdminContentClient() {
             </div>
           ))}
           {!items.length ? (
-            <p className="text-sm text-white/60">No content blocks yet.</p>
+            <p className="text-sm text-white/60">{t.admin.contentNoBlocks}</p>
           ) : null}
         </div>
       </div>
@@ -191,10 +195,10 @@ export default function AdminContentClient() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                Editor
+                {t.admin.pricingEditor}
               </p>
               <p className="text-sm text-white/80">
-                {selected ? `${selected.key} (${selected.locale})` : "Select a block"}
+                {selected ? `${selected.key} (${selected.locale})` : t.admin.contentSelectBlock}
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -205,14 +209,14 @@ export default function AdminContentClient() {
                   onChange={(e) => setPublished(e.target.checked)}
                   className="h-4 w-4 rounded border-white/30 bg-white/5"
                 />
-                Published
+                {t.admin.statusPublished}
               </label>
               <button
                 onClick={() => void save()}
                 disabled={busy || !selected}
                 className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10 disabled:opacity-50"
               >
-                Save
+                {t.admin.buttonSave}
               </button>
             </div>
           </div>
@@ -220,19 +224,19 @@ export default function AdminContentClient() {
           <div className="mt-6 grid gap-4 lg:grid-cols-2">
             <div className="space-y-2">
               <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                Markdown
+                {t.admin.contentMarkdown}
               </p>
               <textarea
                 value={markdown}
                 onChange={(e) => setMarkdown(e.target.value)}
                 rows={18}
                 className="w-full rounded-2xl border border-white/10 bg-[#0A0F1A] p-4 font-mono text-xs text-white/80"
-                placeholder="# Title\n\nYour content…"
+                placeholder={t.admin.contentMarkdownPlaceholder}
               />
             </div>
             <div className="space-y-2">
               <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                Preview
+                {t.admin.contentPreview}
               </p>
               <div className="prose prose-invert max-w-none rounded-2xl border border-white/10 bg-[#0A0F1A] p-4 text-white/80">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>

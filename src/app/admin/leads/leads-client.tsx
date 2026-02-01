@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslations } from "@/i18n/client";
 
 type Kind = "waitlist" | "contact" | "investors";
 
@@ -8,16 +9,21 @@ type LeadRow = Record<string, unknown> & {
   id?: string | number | null;
 };
 
-function formatError(err: unknown) {
-  if (err instanceof Error) return err.message;
-  return "Unknown error";
-}
-
 export default function AdminLeadsClient() {
+  const t = useTranslations();
+
   const [kind, setKind] = useState<Kind>("waitlist");
   const [items, setItems] = useState<LeadRow[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  const formatError = useCallback(
+    (err: unknown) => {
+      if (err instanceof Error) return err.message;
+      return t.admin.errorUnknown;
+    },
+    [t],
+  );
 
   const exportUrl = useMemo(() => {
     const url = new URL("/api/admin/leads/export", window.location.origin);
@@ -42,7 +48,7 @@ export default function AdminLeadsClient() {
     } finally {
       setBusy(false);
     }
-  }, []);
+  }, [formatError]);
 
   useEffect(() => {
     void load(kind);
@@ -59,9 +65,9 @@ export default function AdminLeadsClient() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           {([
-            { id: "waitlist", label: "Waitlist" },
-            { id: "contact", label: "Contact" },
-            { id: "investors", label: "Investors" },
+            { id: "waitlist", label: t.admin.leadsWaitlist },
+            { id: "contact", label: t.admin.leadsContact },
+            { id: "investors", label: t.admin.leadsInvestors },
           ] as const).map((tab) => (
             <button
               key={tab.id}
@@ -82,21 +88,21 @@ export default function AdminLeadsClient() {
             href={exportUrl}
             className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10"
           >
-            Export CSV
+            {t.admin.buttonExportCsv}
           </a>
           <button
             onClick={() => void load(kind)}
             disabled={busy}
             className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10 disabled:opacity-50"
           >
-            Refresh
+            {t.admin.buttonRefresh}
           </button>
         </div>
       </div>
 
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
         <div className="border-b border-white/10 px-4 py-3 text-xs uppercase tracking-[0.2em] text-white/50">
-          Showing {items.length} rows
+          {t.admin.leadsShowingRows.replace("{count}", String(items.length))}
         </div>
         <div className="overflow-auto">
           <table className="min-w-full text-left text-sm">
@@ -128,7 +134,7 @@ export default function AdminLeadsClient() {
               ))}
               {!items.length ? (
                 <tr>
-                  <td className="px-4 py-6 text-white/60">No leads yet.</td>
+                  <td className="px-4 py-6 text-white/60">{t.admin.leadsNoLeads}</td>
                 </tr>
               ) : null}
             </tbody>

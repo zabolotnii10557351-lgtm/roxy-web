@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "@/i18n/client";
 import { PricingConfigSchema, type PricingConfig } from "@/lib/pricing/config";
 
 type PricingRow = {
@@ -12,17 +13,23 @@ type PricingRow = {
   created_by: string | null;
 };
 
-function formatError(err: unknown) {
-  if (err instanceof Error) return err.message;
-  return "Unknown error";
-}
-
 export default function AdminPricingClient() {
+  const { locale } = useLocale();
+  const t = useTranslations();
+
   const [items, setItems] = useState<PricingRow[]>([]);
   const [selectedVersion, setSelectedVersion] = useState<number | null>(null);
   const [draftJson, setDraftJson] = useState<string>("{}");
   const [saveError, setSaveError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  const formatError = useCallback(
+    (err: unknown) => {
+      if (err instanceof Error) return err.message;
+      return t.admin.errorUnknown;
+    },
+    [t],
+  );
 
   const selectedRow = useMemo(() => {
     return items.find((i) => i.version === selectedVersion) ?? null;
@@ -37,7 +44,7 @@ export default function AdminPricingClient() {
     return parsed.success ? parsed.data : null;
   }, [selectedRow]);
 
-  async function load() {
+  const load = useCallback(async () => {
     const res = await fetch("/api/admin/pricing", { cache: "no-store" });
     if (!res.ok) {
       throw new Error(`Failed to load pricing: ${await res.text()}`);
@@ -52,11 +59,11 @@ export default function AdminPricingClient() {
       setSelectedVersion(first.version);
       setDraftJson(JSON.stringify(first.json ?? {}, null, 2));
     }
-  }
+  }, []);
 
   useEffect(() => {
     void load().catch((e) => setSaveError(formatError(e)));
-  }, []);
+  }, [formatError, load]);
 
   async function createVersion() {
     setBusy(true);
@@ -165,14 +172,14 @@ export default function AdminPricingClient() {
       <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
         <div className="flex items-center justify-between">
           <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-            Versions
+            {t.admin.pricingVersions}
           </p>
           <button
             onClick={() => void createVersion()}
             disabled={busy}
             className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10 disabled:opacity-50"
           >
-            New
+            {t.admin.buttonNew}
           </button>
         </div>
 
@@ -195,17 +202,17 @@ export default function AdminPricingClient() {
                 <span className="font-semibold text-white">v{row.version}</span>
                 {row.is_active ? (
                   <span className="rounded-full bg-emerald-500/20 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-200">
-                    Active
+                    {t.admin.statusActive}
                   </span>
                 ) : null}
               </div>
               <p className="mt-1 text-xs text-white/50">
-                {row.created_at ? new Date(row.created_at).toLocaleString() : "—"}
+                {row.created_at ? new Date(row.created_at).toLocaleString(locale) : "—"}
               </p>
             </button>
           ))}
           {!items.length ? (
-            <p className="text-sm text-white/60">No versions yet.</p>
+            <p className="text-sm text-white/60">{t.admin.pricingNoVersions}</p>
           ) : null}
         </div>
       </div>
@@ -221,10 +228,15 @@ export default function AdminPricingClient() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                Editor
+                {t.admin.pricingEditor}
               </p>
               <p className="text-sm text-white/80">
-                {selectedRow ? `Editing v${selectedRow.version}` : "Select a version"}
+                {selectedRow
+                  ? t.admin.pricingEditingVersion.replace(
+                      "{version}",
+                      String(selectedRow.version),
+                    )
+                  : t.admin.pricingSelectVersion}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -234,7 +246,7 @@ export default function AdminPricingClient() {
                   disabled={busy}
                   className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200 hover:bg-emerald-500/20 disabled:opacity-50"
                 >
-                  Publish
+                  {t.admin.buttonPublish}
                 </button>
               ) : null}
               <button
@@ -242,7 +254,7 @@ export default function AdminPricingClient() {
                 disabled={busy || !selectedRow}
                 className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10 disabled:opacity-50"
               >
-                Save
+                {t.admin.buttonSave}
               </button>
             </div>
           </div>
@@ -257,7 +269,7 @@ export default function AdminPricingClient() {
 
           <div className="mt-6 space-y-2">
             <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-              Raw JSON (advanced)
+              {t.admin.pricingRawJsonAdvanced}
             </p>
             <textarea
               value={draftJson}
@@ -277,6 +289,7 @@ function FormEditor(props: {
   onChange: (cfg: PricingConfig) => void;
   disabled: boolean;
 }) {
+  const t = useTranslations();
   const [local, setLocal] = useState<PricingConfig>(props.config);
 
   useEffect(() => {
@@ -292,7 +305,7 @@ function FormEditor(props: {
     <div className="mt-6 space-y-6">
       <div className="grid gap-4 md:grid-cols-3">
         <LabeledInput
-          label="Yearly discount (%)"
+          label={t.admin.pricingYearlyDiscountPct}
           value={String(local.yearly_discount_pct)}
           disabled={props.disabled}
           onChange={(v) =>
@@ -303,26 +316,26 @@ function FormEditor(props: {
           }
         />
         <LabeledInput
-          label="Default talk ratio"
+          label={t.admin.pricingDefaultTalkRatio}
           value={String(local.default_talk_ratio)}
           disabled={props.disabled}
           onChange={(v) => update({ ...local, default_talk_ratio: Number(v) || 0 })}
         />
         <LabeledInput
-          label="Min talk ratio"
+          label={t.admin.pricingMinTalkRatio}
           value={String(local.min_talk_ratio)}
           disabled={props.disabled}
           onChange={(v) => update({ ...local, min_talk_ratio: Number(v) || 0 })}
         />
         <LabeledInput
-          label="Max talk ratio"
+          label={t.admin.pricingMaxTalkRatio}
           value={String(local.max_talk_ratio)}
           disabled={props.disabled}
           onChange={(v) => update({ ...local, max_talk_ratio: Number(v) || 0 })}
         />
         <div className="md:col-span-3">
           <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-            Tooltip text
+            {t.admin.pricingTooltipText}
           </label>
           <textarea
             value={local.tooltip_text}
@@ -335,12 +348,14 @@ function FormEditor(props: {
       </div>
 
       <div className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.2em] text-white/60">Plans</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-white/60">
+          {t.admin.pricingPlans}
+        </p>
         <div className="overflow-hidden rounded-2xl border border-white/10">
           <div className="grid grid-cols-12 gap-3 border-b border-white/10 bg-white/5 px-4 py-3 text-xs uppercase tracking-[0.2em] text-white/50">
-            <span className="col-span-3">Plan</span>
-            <span className="col-span-3">Monthly (€)</span>
-            <span className="col-span-6">Entitlements (JSON)</span>
+            <span className="col-span-3">{t.admin.pricingTablePlan}</span>
+            <span className="col-span-3">{t.admin.pricingTableMonthlyEur}</span>
+            <span className="col-span-6">{t.admin.pricingTableEntitlementsJson}</span>
           </div>
           <div className="divide-y divide-white/5">
             {local.plans.map((plan, idx) => (
@@ -364,7 +379,7 @@ function FormEditor(props: {
                       update({ ...local, plans: nextPlans });
                     }}
                     className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
-                    placeholder="e.g. 19.99"
+                    placeholder={t.admin.pricingPlaceholderMonthlyEur}
                   />
                 </div>
                 <div className="col-span-6">
@@ -391,7 +406,7 @@ function FormEditor(props: {
                     }}
                     rows={6}
                     className="w-full rounded-xl border border-white/10 bg-[#0A0F1A] p-3 font-mono text-xs text-white/80"
-                    placeholder={`{\n  "max_characters": 1,\n  "...": "..."\n}`}
+                    placeholder={t.admin.pricingPlaceholderEntitlementsJson}
                   />
                 </div>
               </div>
@@ -399,7 +414,7 @@ function FormEditor(props: {
           </div>
         </div>
         <p className="text-xs text-white/40">
-          Tip: Save runs schema validation server-side.
+          {t.admin.pricingTipValidation}
         </p>
       </div>
     </div>

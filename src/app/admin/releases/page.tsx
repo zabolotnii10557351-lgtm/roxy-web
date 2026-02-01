@@ -149,47 +149,47 @@ export default async function AdminReleasesPage() {
       >
         <div className="space-y-2">
           <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-            Version
+            {t.admin.releasesVersion}
           </label>
           <input
             name="version"
             required
-            placeholder="1.0.0"
+            placeholder={t.admin.releasesPlaceholderVersion}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
           />
         </div>
         <div className="space-y-2">
           <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-            Platform
+            {t.admin.releasesPlatform}
           </label>
           <select
             name="platform"
             required
             className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
           >
-            <option value="win">Windows</option>
-            <option value="mac">macOS</option>
+            <option value="win">{t.admin.releasesPlatformWindows}</option>
+            <option value="mac">{t.admin.releasesPlatformMac}</option>
           </select>
         </div>
         <div className="space-y-2 md:col-span-2">
           <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-            Download URL
+            {t.admin.releasesDownloadUrl}
           </label>
           <input
             name="url"
             required
-            placeholder="https://..."
+            placeholder={t.admin.releasesPlaceholderUrl}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
           />
         </div>
         <div className="space-y-2 md:col-span-2">
           <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-            Notes
+            {t.admin.releasesNotes}
           </label>
           <textarea
             name="notes"
             rows={3}
-            placeholder="What's new..."
+            placeholder={t.admin.releasesPlaceholderNotes}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
           />
         </div>
@@ -199,14 +199,14 @@ export default async function AdminReleasesPage() {
             name="is_latest"
             className="h-4 w-4 rounded border-white/30 bg-white/5"
           />
-          Mark as latest
+          {t.admin.releasesMarkLatest}
         </label>
         <div className="flex items-center justify-end md:col-span-2">
           <button
             type="submit"
             className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10"
           >
-            Add release
+            {t.admin.releasesAddRelease}
           </button>
         </div>
       </form>
@@ -221,7 +221,7 @@ export default async function AdminReleasesPage() {
               <input type="hidden" name="id" value={release.id} />
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Version
+                  {t.admin.releasesVersion}
                 </label>
                 <input
                   name="version"
@@ -232,7 +232,7 @@ export default async function AdminReleasesPage() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Platform
+                  {t.admin.releasesPlatform}
                 </label>
                 <select
                   name="platform"
@@ -240,13 +240,13 @@ export default async function AdminReleasesPage() {
                   defaultValue={release.platform}
                   className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
                 >
-                  <option value="win">Windows</option>
-                  <option value="mac">macOS</option>
+                  <option value="win">{t.admin.releasesPlatformWindows}</option>
+                  <option value="mac">{t.admin.releasesPlatformMac}</option>
                 </select>
               </div>
               <div className="space-y-2 md:col-span-2">
                 <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Download URL
+                  {t.admin.releasesDownloadUrl}
                 </label>
                 <input
                   name="url"
@@ -257,7 +257,7 @@ export default async function AdminReleasesPage() {
               </div>
               <div className="space-y-2 md:col-span-2">
                 <label className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Notes
+                  {t.admin.releasesNotes}
                 </label>
                 <textarea
                   name="notes"
@@ -273,14 +273,14 @@ export default async function AdminReleasesPage() {
                   defaultChecked={release.is_latest ?? false}
                   className="h-4 w-4 rounded border-white/30 bg-white/5"
                 />
-                Mark as latest
+                  {t.admin.releasesMarkLatest}
               </label>
               <div className="flex items-center justify-end gap-2 md:col-span-2">
                 <button
                   type="submit"
                   className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 hover:bg-white/10"
                 >
-                  Update
+                    {t.admin.releasesUpdate}
                 </button>
               </div>
             </form>
@@ -290,7 +290,7 @@ export default async function AdminReleasesPage() {
                 type="submit"
                 className="text-xs uppercase tracking-[0.2em] text-rose-300 hover:text-rose-200"
               >
-                Delete release
+                  {t.admin.releasesDeleteRelease}
               </button>
             </form>
           </div>
