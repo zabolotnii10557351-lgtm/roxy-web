@@ -1,11 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Button from "@/components/Button";
 import StatCard from "@/components/StatCard";
 import ToastList from "@/components/ToastList";
 import Badge from "@/components/Badge";
 import { usePlan } from "@/providers/PlanProvider";
 import { useTranslations } from "@/i18n/client";
+import { useCurrentWorkspace } from "@/hooks/useCurrentWorkspace";
+import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 
 export default function OverviewPage() {
   const {
@@ -16,6 +19,34 @@ export default function OverviewPage() {
     isTrialExpired,
   } = usePlan();
   const t = useTranslations();
+
+  const { workspaceId, loading: workspaceLoading } = useCurrentWorkspace();
+  const [characterCount, setCharacterCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (workspaceLoading) return;
+    if (!workspaceId) {
+      setCharacterCount(null);
+      return;
+    }
+
+    let cancelled = false;
+
+    (async () => {
+      const supabase = createSupabaseBrowserClient();
+      const { count } = await supabase
+        .from("characters")
+        .select("id", { count: "exact", head: true })
+        .eq("workspace_id", workspaceId);
+
+      if (cancelled) return;
+      setCharacterCount(typeof count === "number" ? count : null);
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [workspaceId, workspaceLoading]);
 
   return (
     <div className="space-y-8">
@@ -38,13 +69,21 @@ export default function OverviewPage() {
         <StatCard
           label={t.app.currentPlan}
           value={planId.toUpperCase()}
-          helper="Plan billing cycle: monthly"
+          helper={t.app.managePlan}
         />
-        <StatCard label="Connected accounts" value="2" helper="TikTok live" />
         <StatCard
-          label="Last session"
-          value="Ended 18m ago"
-          helper="Avg retention: 7m 20s"
+          label={t.app.characters}
+          value={characterCount === null ? "—" : String(characterCount)}
+          helper={t.app.charactersSubtitle}
+        />
+        <StatCard
+          label={t.app.remainingHours}
+          value={
+            hoursLimit === null
+              ? "∞"
+              : `${hoursRemaining?.toFixed(1) ?? "0.0"}h / ${hoursLimit}h`
+          }
+          helper={hoursLimit === null ? t.app.unlimitedHours : undefined}
         />
       </div>
 
@@ -56,7 +95,7 @@ export default function OverviewPage() {
 
       <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
         <div className="glass-card rounded-3xl p-6">
-          <h3 className="text-lg font-semibold text-white">Quick actions</h3>
+          <h3 className="text-lg font-semibold text-white">{t.app.quickActions}</h3>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <Button variant="secondary" href="/app/characters/new" disabled={isAccessBlocked}>
               {t.app.createCharacter}

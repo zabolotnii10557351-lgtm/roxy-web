@@ -7,6 +7,7 @@ import Badge from "@/components/Badge";
 import ExportForUnrealButton from "@/components/unreal/ExportForUnrealButton";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { CharacterConfigSchema } from "@/lib/schemas/workspace";
+import { useCurrentWorkspace } from "@/hooks/useCurrentWorkspace";
 import type { z } from "zod";
 
 type CharacterConfig = z.infer<typeof CharacterConfigSchema>;
@@ -24,6 +25,9 @@ function voiceProviderToApi(provider: string): "openai" | "elevenlabs" {
 export default function CharacterBuilderByIdPage() {
   const params = useParams<{ id: string }>();
   const characterId = params?.id;
+
+  const { workspaceId, loading: workspaceLoading, error: workspaceError } =
+    useCurrentWorkspace();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -48,6 +52,12 @@ export default function CharacterBuilderByIdPage() {
     let cancelled = false;
     (async () => {
       if (!characterId) return;
+      if (workspaceLoading) return;
+      if (!workspaceId) {
+        setError(workspaceError ?? "No workspace configured.");
+        setLoading(false);
+        return;
+      }
 
       setLoading(true);
       setError(null);
@@ -56,6 +66,7 @@ export default function CharacterBuilderByIdPage() {
       const { data, error: fetchError } = await supabase
         .from("characters")
         .select("id, name, config")
+        .eq("workspace_id", workspaceId)
         .eq("id", characterId)
         .single();
 
@@ -74,7 +85,7 @@ export default function CharacterBuilderByIdPage() {
     return () => {
       cancelled = true;
     };
-  }, [characterId]);
+  }, [characterId, workspaceId, workspaceLoading, workspaceError]);
 
   const updateConfig = (patch: Partial<CharacterConfig>) => {
     setCharacter((c) => {
@@ -90,6 +101,7 @@ export default function CharacterBuilderByIdPage() {
 
   const handleSave = async () => {
     if (!character) return;
+    if (!workspaceId) return;
 
     setSaving(true);
     setSaveMessage(null);
@@ -103,6 +115,7 @@ export default function CharacterBuilderByIdPage() {
         name: character.name,
         config: validated,
       })
+      .eq("workspace_id", workspaceId)
       .eq("id", character.id);
 
     if (updateError) {
