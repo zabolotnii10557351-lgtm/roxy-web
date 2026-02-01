@@ -1,7 +1,11 @@
 import StatCard from "@/components/StatCard";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { requireAdminUserOrNotFound } from "@/lib/auth";
 
 export default async function AdminOverviewPage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
+
   const { supabase, adminClient } = await requireAdminUserOrNotFound();
   const client = adminClient ?? supabase;
 
@@ -32,37 +36,38 @@ export default async function AdminOverviewPage() {
     <div className="space-y-6">
       <div>
         <p className="text-xs uppercase tracking-[0.3em] text-white/40">
-          Admin
+          {t.admin.label}
         </p>
         <h1 className="text-2xl font-semibold text-white">
-          Control center overview
+          {t.admin.overviewTitle}
         </h1>
+        <p className="mt-2 text-sm text-white/60">{t.admin.overviewSubtitle}</p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         <StatCard
-          label="Total users"
+          label={t.admin.totalUsers}
           value={String(usersCount ?? 0)}
-          helper="Profiles created in Supabase."
+          helper={t.admin.totalUsersHelp}
         />
         <StatCard
-          label="Workspaces"
+          label={t.admin.workspaces}
           value={String(workspacesCount ?? 0)}
-          helper="Total workspaces across all users."
+          helper={t.admin.workspacesHelp}
         />
         <StatCard
-          label="Active subscriptions"
+          label={t.admin.activeSubscriptions}
           value={String(activeSubsCount ?? 0)}
-          helper="billing_state rows with status=active."
+          helper={t.admin.activeSubscriptionsHelp}
         />
         <StatCard
-          label="Usage events (24h)"
+          label={t.admin.usageEvents24h}
           value={String(usageEvents24hCount ?? 0)}
-          helper="Events ingested during last 24 hours."
+          helper={t.admin.usageEvents24hHelp}
         />
         <StatCard
-          label="Releases"
+          label={t.admin.releasesCount}
           value={String(releasesCount ?? 0)}
-          helper="Desktop builds available for download."
+          helper={t.admin.releasesCountHelp}
         />
       </div>
     </div>

@@ -1,17 +1,8 @@
 import Link from "next/link";
 import BackgroundGlow from "@/components/BackgroundGlow";
 import SignOutButton from "@/components/SignOutButton";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { requireAdminUserOrNotFound } from "@/lib/auth";
-
-const navLinks = [
-  { href: "/admin", label: "Overview" },
-  { href: "/admin/users", label: "Users" },
-  { href: "/admin/pricing", label: "Pricing" },
-  { href: "/admin/content", label: "Content" },
-  { href: "/admin/leads", label: "Leads" },
-  { href: "/admin/audit", label: "Audit" },
-  { href: "/admin/releases", label: "Releases" },
-];
 
 export default async function AdminLayout({
   children,
@@ -19,6 +10,19 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   await requireAdminUserOrNotFound();
+
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
+
+  const navLinks = [
+    { href: "/admin", label: t.admin.navOverview },
+    { href: "/admin/users", label: t.admin.navUsers },
+    { href: "/admin/pricing", label: t.admin.navPricing },
+    { href: "/admin/content", label: t.admin.navContent },
+    { href: "/admin/leads", label: t.admin.navLeads },
+    { href: "/admin/audit", label: t.admin.navAudit },
+    { href: "/admin/releases", label: t.admin.navReleases },
+  ];
 
   return (
     <div className="relative min-h-screen bg-[#0A0F1A] text-white">
@@ -28,7 +32,7 @@ export default async function AdminLayout({
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <div className="flex items-center gap-6">
               <Link href="/" className="text-sm font-semibold text-white">
-                Roxy Admin
+                {t.common.brand} {t.admin.label}
               </Link>
               <nav className="hidden items-center gap-4 text-xs uppercase tracking-[0.2em] text-white/60 md:flex">
                 {navLinks.map((link) => (
@@ -47,7 +51,7 @@ export default async function AdminLayout({
                 href="/app"
                 className="text-xs uppercase tracking-[0.2em] text-white/60 hover:text-white"
               >
-                Dashboard
+                {t.admin.dashboardLink}
               </Link>
               <SignOutButton />
             </div>

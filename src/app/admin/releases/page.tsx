@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { assertAdminForAction, requireAdminUserOrNotFound } from "@/lib/auth";
 import { writeAdminAuditLog } from "@/server/admin/audit";
 
@@ -122,6 +123,9 @@ async function deleteReleaseAction(formData: FormData) {
 }
 
 export default async function AdminReleasesPage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
+
   const { supabase, adminClient } = await requireAdminUserOrNotFound();
   const client = adminClient ?? supabase;
 
@@ -134,9 +138,9 @@ export default async function AdminReleasesPage() {
     <div className="space-y-6">
       <div>
         <p className="text-xs uppercase tracking-[0.3em] text-white/40">
-          Releases
+          {t.admin.navReleases}
         </p>
-        <h1 className="text-2xl font-semibold text-white">Manage builds</h1>
+        <h1 className="text-2xl font-semibold text-white">{t.admin.releasesTitle}</h1>
       </div>
 
       <form
