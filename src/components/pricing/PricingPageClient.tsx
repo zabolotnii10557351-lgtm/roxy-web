@@ -347,7 +347,9 @@ export default function PricingPageClient(props: { locale?: string }) {
           <h2 className="text-2xl font-semibold text-white">
             {isRu ? "FAQ по тарифам" : "Pricing FAQ"}
           </h2>
-          <p className="mt-2 text-sm text-white/60">Common questions, answered.</p>
+          <p className="mt-2 text-sm text-white/60">
+            {isRu ? "Коротко и по делу — про usage и лимиты." : "Common questions, answered."}
+          </p>
         </div>
         <PricingFAQ
           items={[

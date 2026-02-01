@@ -9,3 +9,5 @@
 - Contact form localized (EN/RU) and clarified support guidance.
 - Download page no longer hard-redirects when logged out; admin-only release management link is hidden from non-admins.
 - Cookies policy page localized (EN/RU) and made deterministic.
+- Added locale-aware fallback content for CMS-driven marketing pages (Product, Integrations, How it works, Roadmap, Security, Investors) to avoid empty pages.
+- Character Editor marketing page localized (EN/RU) and aligned with the marketing layout.
