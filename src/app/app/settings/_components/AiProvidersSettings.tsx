@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 type WorkspaceAiSettings = {
   workspace_id: string;
@@ -20,6 +21,8 @@ const OPENAI_MODELS = ["gpt-4o-mini", "gpt-4.1-mini", "gpt-4o"];
 const OPENAI_VOICES = ["alloy", "verse", "aria", "sage", "coral"];
 
 export default function AiProvidersSettings() {
+  const t = useTranslations();
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -56,7 +59,7 @@ export default function AiProvidersSettings() {
       if (cancelled) return;
 
       if (!res.ok) {
-        setError(json?.error ?? "Failed to load AI settings.");
+        setError(json?.error ?? t.app.aiProvidersLoadFailed);
         setLoading(false);
         return;
       }
@@ -69,7 +72,7 @@ export default function AiProvidersSettings() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [t.app.aiProvidersLoadFailed]);
 
   const handleSaveSettings = async () => {
     if (!settings) return;
@@ -91,13 +94,13 @@ export default function AiProvidersSettings() {
     const json = await res.json().catch(() => null);
 
     if (!res.ok) {
-      setSaveMessage(json?.error ?? "Failed to save settings.");
+      setSaveMessage(json?.error ?? t.app.aiProvidersSaveFailed);
       setSaving(false);
       return;
     }
 
     setSettings(json.settings);
-    setSaveMessage("Saved.");
+    setSaveMessage(t.common.saved);
     setSaving(false);
   };
 
@@ -113,13 +116,13 @@ export default function AiProvidersSettings() {
     const json = await res.json().catch(() => null);
 
     if (!res.ok) {
-      setSaveMessage(json?.error ?? "Failed to save key.");
+      setSaveMessage(json?.error ?? t.app.aiProvidersSaveKeyFailed);
       setKeysBusy(false);
       return;
     }
 
     setSecretFlags(json.secretFlags ?? {});
-    setSaveMessage("Key saved.");
+    setSaveMessage(t.app.aiProvidersKeySaved);
     setKeysBusy(false);
   };
 
@@ -135,13 +138,13 @@ export default function AiProvidersSettings() {
     const json = await res.json().catch(() => null);
 
     if (!res.ok) {
-      setSaveMessage(json?.error ?? "Failed to remove key.");
+      setSaveMessage(json?.error ?? t.app.aiProvidersRemoveKeyFailed);
       setKeysBusy(false);
       return;
     }
 
     setSecretFlags(json.secretFlags ?? {});
-    setSaveMessage("Key removed.");
+    setSaveMessage(t.app.aiProvidersKeyRemoved);
     setKeysBusy(false);
   };
 
@@ -159,7 +162,7 @@ export default function AiProvidersSettings() {
     const json = await res.json().catch(() => null);
 
     if (!res.ok) {
-      setSaveMessage(json?.error ?? "Brain test failed.");
+      setSaveMessage(json?.error ?? t.app.aiProvidersBrainTestFailed);
       setTestBrainBusy(false);
       return;
     }
@@ -192,7 +195,7 @@ export default function AiProvidersSettings() {
 
     if (!res.ok) {
       const json = await res.json().catch(() => null);
-      setSaveMessage(json?.error ?? "Voice test failed.");
+      setSaveMessage(json?.error ?? t.app.aiProvidersVoiceTestFailed);
       setTestVoiceBusy(false);
       return;
     }
@@ -215,18 +218,25 @@ export default function AiProvidersSettings() {
   if (loading) {
     return (
       <div className="glass-card rounded-3xl p-6">
-        <h3 className="text-lg font-semibold text-white">AI Providers</h3>
-        <p className="mt-4 text-sm text-white/60">Loading…</p>
+        <h3 className="text-lg font-semibold text-white">{t.app.aiProvidersTitle}</h3>
+        <p className="mt-4 text-sm text-white/60">{t.common.loading}</p>
       </div>
     );
   }
 
+  const costEstimatorTitle = t.app.aiProvidersCostEstimatorTitle.replace(
+    "{comingSoon}",
+    t.common.comingSoon
+  );
+  const keysNotReturnedNote = t.app.aiProvidersKeysNotReturnedNote.replace(
+    "{connected}",
+    t.common.connected
+  );
+
   return (
     <div className="glass-card rounded-3xl p-6">
-      <h3 className="text-lg font-semibold text-white">AI Providers</h3>
-      <p className="mt-2 text-sm text-white/60">
-        Configure brain + voice per workspace. Keys are stored server-side.
-      </p>
+      <h3 className="text-lg font-semibold text-white">{t.app.aiProvidersTitle}</h3>
+      <p className="mt-2 text-sm text-white/60">{t.app.aiProvidersSubtitle}</p>
 
       {error ? (
         <p className="mt-4 rounded-2xl border border-rose-500/40 bg-rose-500/10 px-4 py-3 text-sm text-rose-200">
@@ -239,7 +249,7 @@ export default function AiProvidersSettings() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
               <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                Brain provider
+                {t.app.aiProvidersBrainProviderLabel}
               </label>
               <select
                 value={settings.brain_provider}
@@ -252,21 +262,20 @@ export default function AiProvidersSettings() {
               >
                 <option value="openai">OpenAI</option>
                 <option value="anthropic" disabled>
-                  Anthropic (coming soon)
+                  {`Anthropic (${t.common.comingSoon})`}
                 </option>
                 <option value="deepseek" disabled>
-                  DeepSeek (coming soon)
+                  {`DeepSeek (${t.common.comingSoon})`}
                 </option>
               </select>
               <p className="text-xs text-white/60">
-                Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on
-                OpenAI.
+                {t.app.aiProvidersBrainProviderHelp}
               </p>
             </div>
 
             <div className="space-y-2">
               <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                Brain model
+                {t.app.aiProvidersBrainModelLabel}
               </label>
               <select
                 value={settings.brain_model}
@@ -285,17 +294,16 @@ export default function AiProvidersSettings() {
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-            <h4 className="text-sm font-semibold text-white">Cost estimator (coming soon)</h4>
+            <h4 className="text-sm font-semibold text-white">{costEstimatorTitle}</h4>
             <p className="mt-2 text-sm text-white/70">
-              We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters,
-              and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.
+              {t.app.aiProvidersCostEstimatorBody}
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
               <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                Voice provider
+                {t.app.aiProvidersVoiceProviderLabel}
               </label>
               <select
                 value={settings.voice_provider}
@@ -306,19 +314,19 @@ export default function AiProvidersSettings() {
                 }
                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
               >
-                <option value="openai">OpenAI (included)</option>
-                <option value="elevenlabs">ElevenLabs (BYOK)</option>
+                <option value="openai">{t.app.aiProvidersVoiceProviderOpenAIIncluded}</option>
+                <option value="elevenlabs">{t.app.aiProvidersVoiceProviderElevenLabsByok}</option>
               </select>
               {settings.voice_provider === "elevenlabs" && !secretFlags.elevenlabs_has_key ? (
                 <p className="text-xs text-amber-200/90">
-                  Add your ElevenLabs key below to use this provider.
+                  {t.app.aiProvidersVoiceProviderElevenLabsNeedsKey}
                 </p>
               ) : null}
             </div>
 
             <div className="space-y-2">
               <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                Voice preset / Voice ID
+                {t.app.aiProvidersVoiceIdLabel}
               </label>
               {settings.voice_provider === "openai" ? (
                 <select
@@ -345,7 +353,7 @@ export default function AiProvidersSettings() {
                     )
                   }
                   className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                  placeholder="ElevenLabs Voice ID"
+                  placeholder={t.app.aiProvidersVoiceIdPlaceholderElevenLabs}
                 />
               )}
             </div>
@@ -353,13 +361,13 @@ export default function AiProvidersSettings() {
 
           <div className="flex flex-wrap items-center gap-3">
             <Button variant="secondary" onClick={handleSaveSettings} disabled={saving}>
-              {saving ? "Saving…" : "Save AI settings"}
+              {saving ? t.common.saving : t.app.aiProvidersSaveButton}
             </Button>
             <Button variant="secondary" onClick={handleTestBrain} disabled={testBrainBusy}>
-              {testBrainBusy ? "Testing…" : "Test brain"}
+              {testBrainBusy ? t.common.testing : t.app.aiProvidersTestBrainButton}
             </Button>
             <Button variant="secondary" onClick={handleTestVoice} disabled={testVoiceBusy}>
-              {testVoiceBusy ? "Generating…" : "Test voice"}
+              {testVoiceBusy ? t.common.generating : t.app.aiProvidersTestVoiceButton}
             </Button>
           </div>
 
@@ -372,7 +380,7 @@ export default function AiProvidersSettings() {
           {testBrainText ? (
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
               <p className="text-xs font-semibold uppercase tracking-widest text-white/50">
-                Test brain response
+                {t.app.aiProvidersTestBrainResponseLabel}
               </p>
               <p className="mt-2">{testBrainText}</p>
             </div>
@@ -380,18 +388,18 @@ export default function AiProvidersSettings() {
 
           <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
             <p className="text-xs font-semibold uppercase tracking-widest text-white/50">
-              API keys (BYOK)
+              {t.app.aiProvidersApiKeysTitle}
             </p>
 
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
-                <label className="text-xs text-white/60">OpenAI API key (optional)</label>
+                <label className="text-xs text-white/60">{t.app.aiProvidersOpenAiKeyLabel}</label>
                 <input
                   type="password"
                   value={openaiKey}
                   onChange={(e) => setOpenaiKey(e.target.value)}
                   className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white"
-                  placeholder={secretFlags.openai_has_key ? "Connected" : "sk-..."}
+                  placeholder={secretFlags.openai_has_key ? t.common.connected : "sk-..."}
                 />
                 <div className="flex flex-wrap items-center gap-2">
                   <Button
@@ -399,7 +407,9 @@ export default function AiProvidersSettings() {
                     onClick={() => setSecret("openai", openaiKey)}
                     disabled={keysBusy || openaiKey.trim().length === 0}
                   >
-                    {secretFlags.openai_has_key ? "Replace key" : "Save key"}
+                    {secretFlags.openai_has_key
+                      ? t.app.aiProvidersReplaceKeyButton
+                      : t.app.aiProvidersSaveKeyButton}
                   </Button>
                   {secretFlags.openai_has_key ? (
                     <Button
@@ -407,20 +417,20 @@ export default function AiProvidersSettings() {
                       onClick={() => removeSecret("openai")}
                       disabled={keysBusy}
                     >
-                      Remove key
+                      {t.app.aiProvidersRemoveKeyButton}
                     </Button>
                   ) : null}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs text-white/60">ElevenLabs API key</label>
+                <label className="text-xs text-white/60">{t.app.aiProvidersElevenLabsKeyLabel}</label>
                 <input
                   type="password"
                   value={elevenKey}
                   onChange={(e) => setElevenKey(e.target.value)}
                   className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white"
-                  placeholder={secretFlags.elevenlabs_has_key ? "Connected" : ""}
+                  placeholder={secretFlags.elevenlabs_has_key ? t.common.connected : ""}
                 />
                 <div className="flex flex-wrap items-center gap-2">
                   <Button
@@ -428,7 +438,9 @@ export default function AiProvidersSettings() {
                     onClick={() => setSecret("elevenlabs", elevenKey)}
                     disabled={keysBusy || elevenKey.trim().length === 0}
                   >
-                    {secretFlags.elevenlabs_has_key ? "Replace key" : "Save key"}
+                    {secretFlags.elevenlabs_has_key
+                      ? t.app.aiProvidersReplaceKeyButton
+                      : t.app.aiProvidersSaveKeyButton}
                   </Button>
                   {secretFlags.elevenlabs_has_key ? (
                     <Button
@@ -436,7 +448,7 @@ export default function AiProvidersSettings() {
                       onClick={() => removeSecret("elevenlabs")}
                       disabled={keysBusy}
                     >
-                      Remove key
+                      {t.app.aiProvidersRemoveKeyButton}
                     </Button>
                   ) : null}
                 </div>
@@ -444,7 +456,7 @@ export default function AiProvidersSettings() {
             </div>
 
             <p className="mt-3 text-xs text-white/50">
-              Keys are never returned to the browser. The UI only shows “Connected”.
+              {keysNotReturnedNote}
             </p>
           </div>
 

@@ -28,15 +28,14 @@ export default function StreamConnectorsPage() {
             <Badge variant="outline">{t.common.preview}</Badge>
           </div>
           <p className="mt-3 text-sm text-white/70">
-            Connectors are configured via the Desktop companion. This dashboard will show live status once the connector
-            APIs are enabled.
+            {t.app.connectorsTiktokDescription}
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <Button variant="secondary" disabled>
-              Connect TikTok ({t.common.comingSoon})
+              {t.app.connectorsConnectTiktok} ({t.common.comingSoon})
             </Button>
             <Button variant="ghost" href="/docs/tutorials/first-stream">
-              Open setup guide
+              {t.app.connectorsOpenSetupGuide}
             </Button>
           </div>
         </div>
@@ -46,7 +45,7 @@ export default function StreamConnectorsPage() {
             <Badge variant="outline">{t.common.comingSoon}</Badge>
           </div>
           <p className="mt-3 text-sm text-white/70">
-            Join the waitlist to get early access.
+            {t.app.connectorsJoinWaitlist}
           </p>
         </div>
         <div className="glass-card rounded-3xl p-6">
@@ -55,29 +54,29 @@ export default function StreamConnectorsPage() {
             <Badge variant="outline">{t.common.comingSoon}</Badge>
           </div>
           <p className="mt-3 text-sm text-white/70">
-            Early access rolling out to Pro and Studio first.
+            {t.app.connectorsEarlyAccessNote}
           </p>
         </div>
       </div>
 
       <FeatureLock
-        title="Multi-account scheduler"
-        description="Available in Pro+. Rotate multiple accounts with scheduling rules."
+        title={t.app.connectorsMultiAccountTitle}
+        description={t.app.connectorsMultiAccountDescription}
         locked={!proUnlocked}
       >
         <div className="space-y-3">
           <h3 className="text-lg font-semibold text-white">
-            Multi-account scheduler
+            {t.app.connectorsMultiAccountTitle}
           </h3>
           <p className="text-sm text-white/70">
-            This module is a preview. Once enabled, you&apos;ll be able to rotate accounts by schedules and usage limits.
+            {t.app.connectorsMultiAccountBody}
           </p>
           <div className="grid gap-3 text-xs text-white/70 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Example: Rotation window: every 4 hours
+              {t.app.connectorsExampleRotationWindow}
             </div>
             <div className="rounded-2xl border border-white/10 px-4 py-3">
-              Example: Max sessions per day: 3
+              {t.app.connectorsExampleMaxSessionsPerDay}
             </div>
           </div>
         </div>

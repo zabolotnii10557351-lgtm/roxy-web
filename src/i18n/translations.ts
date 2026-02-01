@@ -12,6 +12,20 @@ export type Translations = {
     comingSoon: string;
     preview: string;
     saved: string;
+    now: string;
+    loading: string;
+    save: string;
+    saving: string;
+    thinking: string;
+    generating: string;
+    testing: string;
+    connected: string;
+    cancel: string;
+    close: string;
+    featureComingSoonDescription: string;
+    proPerks: string;
+    desktopOnlyTitle: string;
+    desktopOnlyMessage: string;
     draftUpdated: string;
     published: string;
     planUpgradeRequired: string;
@@ -74,6 +88,8 @@ export type Translations = {
   app: {
     overview: string;
     overviewSubtitle: string;
+    systemToastsTitle: string;
+    systemToastsSubtitle: string;
     startSession: string;
     upgradeRequired: string;
     quickActions: string;
@@ -95,6 +111,16 @@ export type Translations = {
     trialEndsIn: string;
     connectors: string;
     connectorsSubtitle: string;
+    connectorsTiktokDescription: string;
+    connectorsConnectTiktok: string;
+    connectorsOpenSetupGuide: string;
+    connectorsJoinWaitlist: string;
+    connectorsEarlyAccessNote: string;
+    connectorsMultiAccountTitle: string;
+    connectorsMultiAccountDescription: string;
+    connectorsMultiAccountBody: string;
+    connectorsExampleRotationWindow: string;
+    connectorsExampleMaxSessionsPerDay: string;
     deployTitle: string;
     deploySubtitle: string;
     settings: string;
@@ -104,6 +130,13 @@ export type Translations = {
     noCharacters: string;
     characterBuilder: string;
     characterBuilderSubtitle: string;
+    characterEditorTitle: string;
+    characterEditorEnabledNote: string;
+    characterEditorComingSoonNote: string;
+    characterEditorSectionTitle: string;
+    characterEditorEnabledDescription: string;
+    characterEditorWaitlistDescription: string;
+    polyphoriaModalDescription: string;
     donoEngine: string;
     donoEngineSubtitle: string;
     scripts: string;
@@ -113,6 +146,108 @@ export type Translations = {
     notFoundTitle: string;
     notFoundSubtitle: string;
     backToOverview: string;
+
+    unrealConnector: string;
+    localRuntime: string;
+    diagnostics: string;
+
+    unrealHubSubtitle: string;
+    unrealGettingStartedTitle: string;
+    unrealGettingStartedDescription: string;
+    unrealImportMetahumanTitle: string;
+    unrealLiveLinkFaceTitle: string;
+    unrealManualSetupTitle: string;
+    unrealRuntimeConnectorTitle: string;
+    unrealOpenRuntimeConnectorButton: string;
+    unrealBackToHubButton: string;
+    unrealOpenDocsButton: string;
+
+    billingSuccessTitle: string;
+    billingSuccessVerifying: string;
+    billingSuccessProcessing: string;
+    billingSuccessConfirmedRedirecting: string;
+    billingSuccessGoToDashboard: string;
+
+    characterBuilderLiveNote: string;
+    characterBuilderDraft: string;
+    characterBuilderProfileTitle: string;
+    characterBuilderCharacterNamePlaceholder: string;
+    characterBuilderPrimaryLanguagePlaceholder: string;
+    characterBuilderBioPlaceholder: string;
+    characterBuilderVoiceTitle: string;
+    characterBuilderVoiceProviderLabel: string;
+    characterBuilderVoiceProviderOpenAIIncluded: string;
+    characterBuilderVoiceProviderElevenLabsByok: string;
+    characterBuilderVoiceIdLabel: string;
+    characterBuilderVoiceIdPlaceholderElevenLabs: string;
+    characterBuilderVoiceIdPlaceholderOpenAI: string;
+    characterBuilderTestVoice: string;
+    characterBuilderTestResponseTitle: string;
+    characterBuilderTestResponseDescription: string;
+    characterBuilderTestResponse: string;
+    characterBuilderReplyLabel: string;
+    characterBuilderNotesTitle: string;
+    characterBuilderNotesDescription: string;
+    characterBuilderNoWorkspaceConfigured: string;
+    characterBuilderNotFound: string;
+    characterBuilderTestResponseFailed: string;
+    characterBuilderTestVoiceFailed: string;
+    characterBuilderDefaultUserMessage: string;
+
+    aiProvidersTitle: string;
+    aiProvidersSubtitle: string;
+    aiProvidersLoadFailed: string;
+    aiProvidersSaveFailed: string;
+    aiProvidersSaveKeyFailed: string;
+    aiProvidersRemoveKeyFailed: string;
+    aiProvidersKeySaved: string;
+    aiProvidersKeyRemoved: string;
+    aiProvidersBrainTestFailed: string;
+    aiProvidersVoiceTestFailed: string;
+    aiProvidersBrainProviderLabel: string;
+    aiProvidersBrainProviderHelp: string;
+    aiProvidersBrainModelLabel: string;
+    aiProvidersCostEstimatorTitle: string;
+    aiProvidersCostEstimatorBody: string;
+    aiProvidersVoiceProviderLabel: string;
+    aiProvidersVoiceProviderOpenAIIncluded: string;
+    aiProvidersVoiceProviderElevenLabsByok: string;
+    aiProvidersVoiceProviderElevenLabsNeedsKey: string;
+    aiProvidersVoiceIdLabel: string;
+    aiProvidersVoiceIdPlaceholderElevenLabs: string;
+    aiProvidersSaveButton: string;
+    aiProvidersTestBrainButton: string;
+    aiProvidersTestVoiceButton: string;
+    aiProvidersTestBrainResponseLabel: string;
+    aiProvidersApiKeysTitle: string;
+    aiProvidersOpenAiKeyLabel: string;
+    aiProvidersElevenLabsKeyLabel: string;
+    aiProvidersSaveKeyButton: string;
+    aiProvidersReplaceKeyButton: string;
+    aiProvidersRemoveKeyButton: string;
+    aiProvidersKeysNotReturnedNote: string;
+
+    settingsPageTitle: string;
+    settingsProfileTitle: string;
+    settingsDisplayNameLabel: string;
+    settingsDisplayNameRequired: string;
+    settingsUsernameOptionalLabel: string;
+    settingsNoProfileFound: string;
+    settingsWorkspaceTitle: string;
+    settingsNoWorkspaceFound: string;
+    settingsSignOutTitle: string;
+    settingsSignOutDescription: string;
+
+    unrealExportButton: string;
+    unrealExportTitle: string;
+    unrealExportDescription: string;
+    unrealExportIncludeDonoRules: string;
+    unrealExportIncludeScripts: string;
+    unrealExportIncludeScenes: string;
+    unrealExportFailed: string;
+    unrealExportSavedTo: string;
+    unrealExportGenerateDownload: string;
+    unrealExportFile: string;
   };
   admin: {
     label: string;
@@ -172,7 +307,6 @@ export type Translations = {
     statusActive: string;
     statusDraft: string;
     statusPublished: string;
-
     pricingVersions: string;
     pricingNoVersions: string;
     pricingEditor: string;
@@ -244,6 +378,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Coming soon",
       preview: "Preview",
       saved: "Saved",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Draft updated",
       published: "Published",
       planUpgradeRequired: "Plan upgrade required",
@@ -311,6 +459,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Overview",
       overviewSubtitle: "See your Active Speech and concurrency usage.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Start Session",
       upgradeRequired: "Upgrade required",
       quickActions: "Quick actions",
@@ -332,6 +482,19 @@ export const translations: Record<Locale, Translations> = {
       trialEndsIn: "Trial ends in {days} days",
       connectors: "Stream Connectors",
       connectorsSubtitle: "Connect your channels and set concurrency limits.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Deploy",
       deploySubtitle: "Publish your session and go live in OBS.",
       settings: "Settings",
@@ -341,6 +504,18 @@ export const translations: Record<Locale, Translations> = {
       noCharacters: "No characters yet. Create your first character to unlock streaming and Unreal export.",
       characterBuilder: "Character Builder",
       characterBuilderSubtitle: "Build a persona profile for your stream. You can change settings later.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle:
         "Build rules that react to gifts and donations.",
@@ -351,6 +526,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Page not found",
       notFoundSubtitle: "This dashboard module is still in preview.",
       backToOverview: "Back to overview",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -480,6 +765,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Demnächst",
       preview: "Vorschau",
       saved: "Gespeichert",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Entwurf aktualisiert",
       published: "Veröffentlicht",
       planUpgradeRequired: "Plan-Upgrade erforderlich",
@@ -551,6 +850,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Übersicht",
       overviewSubtitle: "Live-Status, Limits und Schnellaktionen.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Session starten",
       upgradeRequired: "Upgrade erforderlich",
       quickActions: "Schnellaktionen",
@@ -573,6 +874,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Stream-Connectors",
       connectorsSubtitle:
         "Verbinde TikTok heute. Twitch und YouTube als Nächstes.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Bereitstellen",
       deploySubtitle: "Session veröffentlichen und in OBS live gehen.",
       settings: "Einstellungen",
@@ -583,6 +897,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Character Builder",
       characterBuilderSubtitle:
         "Persona, Stimme und Verhalten deines KI-Streamers erstellen.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle:
         "Regeln erstellen, die auf Geschenke reagieren.",
@@ -594,6 +920,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Seite не найдена",
       notFoundSubtitle: "Dieses Modul ist noch im Preview.",
       backToOverview: "Zurück zur Übersicht",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -723,6 +1159,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Próximamente",
       preview: "Vista previa",
       saved: "Guardado",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Borrador actualizado",
       published: "Publicado",
       planUpgradeRequired: "Actualización de plan requerida",
@@ -795,6 +1245,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Resumen",
       overviewSubtitle: "Estado en vivo, límites y acciones rápidas.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Iniciar sesión",
       upgradeRequired: "Se requiere actualización",
       quickActions: "Acciones rápidas",
@@ -817,6 +1269,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Conectores de stream",
       connectorsSubtitle:
         "Conecta TikTok hoy. Twitch y YouTube próximamente.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Implementación",
       deploySubtitle: "Publica tu sesión y ve en vivo en OBS.",
       settings: "Configuración",
@@ -827,6 +1292,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Constructor de персонажи",
       characterBuilderSubtitle:
         "Crea la persona, voz y comportamiento de tu streamer de IA.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Reglas que reaccionan a regalos y donaciones.",
       scripts: "Guiones",
@@ -836,6 +1313,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Página no encontrada",
       notFoundSubtitle: "Este módulo está en vista previa.",
       backToOverview: "Volver al resumen",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -965,6 +1552,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Bientôt",
       preview: "Aperçu",
       saved: "Enregistré",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Brouillon mis à jour",
       published: "Publié",
       planUpgradeRequired: "Mise à niveau requise",
@@ -1036,6 +1637,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Aperçu",
       overviewSubtitle: "Statut live, limites et actions rapides.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Démarrer la session",
       upgradeRequired: "Mise à niveau requise",
       quickActions: "Actions rapides",
@@ -1058,6 +1661,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Connecteurs de stream",
       connectorsSubtitle:
         "Connectez TikTok aujourd'hui. Twitch et YouTube ensuite.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Déploiement",
       deploySubtitle: "Publiez votre session et passez live dans OBS.",
       settings: "Paramètres",
@@ -1068,6 +1684,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Character Builder",
       characterBuilderSubtitle:
         "Créez la persona, la voix et le comportement de votre streamer IA.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Règles qui réagissent aux cadeaux.",
       scripts: "Scripts",
@@ -1077,6 +1705,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Page introuvable",
       notFoundSubtitle: "Ce module est encore en aperçu.",
       backToOverview: "Retour à l'aperçu",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -1206,6 +1944,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "In arrivo",
       preview: "Anteprima",
       saved: "Salvato",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Bozza aggiornata",
       published: "Pubblicato",
       planUpgradeRequired: "Aggiornamento piano richiesto",
@@ -1277,6 +2029,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Panoramica",
       overviewSubtitle: "Stato live, limiti e azioni rapide.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Avvia sessione",
       upgradeRequired: "Aggiornamento richiesto",
       quickActions: "Azioni rapide",
@@ -1299,6 +2053,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Connettori streaming",
       connectorsSubtitle:
         "Connetti TikTok oggi. Twitch e YouTube più avanti.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Deploy",
       deploySubtitle: "Pubblica la sessione e vai live in OBS.",
       settings: "Impostazioni",
@@ -1309,6 +2076,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Character Builder",
       characterBuilderSubtitle:
         "Crea la persona, la voce e il comportamento del tuo streamer AI.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Regole che reagiscono ai regali.",
       scripts: "Script",
@@ -1318,6 +2097,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Pagina non trovata",
       notFoundSubtitle: "Questo modulo è ancora in anteprima.",
       backToOverview: "Torna alla panoramica",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -1447,6 +2336,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Em breve",
       preview: "Prévia",
       saved: "Salvo",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Rascunho atualizado",
       published: "Publicado",
       planUpgradeRequired: "Upgrade de plano necessário",
@@ -1518,6 +2421,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Visão geral",
       overviewSubtitle: "Status ao vivo, limites e ações rápidas.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Iniciar sessão",
       upgradeRequired: "Upgrade necessário",
       quickActions: "Ações rápidas",
@@ -1540,6 +2445,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Conectores de stream",
       connectorsSubtitle:
         "Conecte TikTok hoje. Twitch e YouTube depois.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Deploy",
       deploySubtitle: "Publique sua sessão e faça live no OBS.",
       settings: "Configurações",
@@ -1550,6 +2468,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Character Builder",
       characterBuilderSubtitle:
         "Crie a persona, voz e comportamento do streamer AI.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Regras que reagem a presentes e doações.",
       scripts: "Scripts",
@@ -1559,6 +2489,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Página não encontrada",
       notFoundSubtitle: "Este módulo ainda está em preview.",
       backToOverview: "Voltar ao overview",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -1688,6 +2728,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Скоро",
       preview: "Превью",
       saved: "Сохранено",
+      now: "сейчас",
+      loading: "Загрузка…",
+      save: "Сохранить",
+      saving: "Сохранение…",
+      thinking: "Думаю…",
+      generating: "Генерирую…",
+      testing: "Проверяю…",
+      connected: "Подключено",
+      cancel: "Отмена",
+      close: "Закрыть",
+      featureComingSoonDescription: "Эта функция скоро будет доступна.",
+      proPerks: "Преимущества Pro",
+      desktopOnlyTitle: "Только для Desktop",
+      desktopOnlyMessage: "Этот раздел доступен в приложении RoxStreamAI Desktop.",
       draftUpdated: "Черновик обновлен",
       published: "Опубликовано",
       planUpgradeRequired: "Требуется апгрейд тарифа",
@@ -1758,6 +2812,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Обзор",
       overviewSubtitle: "Статус, лимиты и быстрые действия.",
+      systemToastsTitle: "Системные уведомления",
+      systemToastsSubtitle: "Последние обновления в воркспейсе.",
       startSession: "Начать сессию",
       upgradeRequired: "Требуется апгрейд",
       quickActions: "Быстрые действия",
@@ -1780,6 +2836,20 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Коннекторы",
       connectorsSubtitle:
         "Подключите TikTok сегодня. Twitch и YouTube далее.",
+      connectorsTiktokDescription:
+        "Коннекторы настраиваются через Desktop-компаньон. Этот дашборд будет показывать статус, когда API коннекторов будут включены.",
+      connectorsConnectTiktok: "Подключить TikTok",
+      connectorsOpenSetupGuide: "Открыть гайд по настройке",
+      connectorsJoinWaitlist:
+        "Запишитесь в лист ожидания, чтобы получить ранний доступ.",
+      connectorsEarlyAccessNote: "Ранний доступ сначала для Pro и Studio.",
+      connectorsMultiAccountTitle: "Планировщик мульти-аккаунтов",
+      connectorsMultiAccountDescription:
+        "Доступно в Pro+. Ротация нескольких аккаунтов по правилам расписания.",
+      connectorsMultiAccountBody:
+        "Этот модуль в превью. После включения вы сможете ротировать аккаунты по расписанию и лимитам.",
+      connectorsExampleRotationWindow: "Пример: окно ротации — каждые 4 часа",
+      connectorsExampleMaxSessionsPerDay: "Пример: максимум сессий в день — 3",
       deployTitle: "Deploy",
       deploySubtitle: "Опубликуйте сессию и выходите в эфир в OBS.",
       settings: "Настройки",
@@ -1790,6 +2860,16 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Конструктор персонажа",
       characterBuilderSubtitle:
         "Настройте персону, голос и поведение AI-стримера.",
+      characterEditorTitle: "3D редактор персонажа",
+      characterEditorEnabledNote: "Интеграция Polyphoria включена (в разработке).",
+      characterEditorComingSoonNote: "Скоро: встроенный 3D редактор на базе Polyphoria.",
+      characterEditorSectionTitle: "Редактор",
+      characterEditorEnabledDescription:
+        "Здесь появится встроенный редактор. Пока используйте Character Builder для персоны и голоса.",
+      characterEditorWaitlistDescription:
+        "Запишитесь в лист ожидания, чтобы получить ранний доступ.",
+      polyphoriaModalDescription:
+        "Мы готовим интеграцию встроенного редактора персонажа. Пока можно импортировать MetaHuman или использовать вашу существующую сцену Unreal.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Правила реакции на донаты и подарки.",
       scripts: "Сценарии",
@@ -1799,6 +2879,114 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Страница не найдена",
       notFoundSubtitle: "Этот модуль пока в превью.",
       backToOverview: "Назад к обзору",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Локальный рантайм",
+      diagnostics: "Диагностика",
+
+      unrealHubSubtitle: "Гайды по workflow RoxStreamAI → Unreal. Runtime Connector в превью.",
+      unrealGettingStartedTitle: "Быстрый старт",
+      unrealGettingStartedDescription:
+        "Выберите один из путей настройки ниже. Если проект Unreal уже есть — начните с ручной настройки.",
+      unrealImportMetahumanTitle: "Как импортировать MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (архив)",
+      unrealManualSetupTitle: "Ручная настройка Unreal",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton: "Открыть Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Назад в Unreal-хаб",
+      unrealOpenDocsButton: "Открыть документацию Unreal",
+
+      billingSuccessTitle: "Платеж получен",
+      billingSuccessVerifying: "Проверяем платеж…",
+      billingSuccessProcessing: "Мы всё ещё обрабатываем ваш платеж. Пожалуйста, обновите страницу позже.",
+      billingSuccessConfirmedRedirecting: "Платеж подтвержден. Перенаправляем…",
+      billingSuccessGoToDashboard: "В дашборд",
+
+      characterBuilderLiveNote: "Тестирование Brain + Voice включено.",
+      characterBuilderDraft: "Черновик",
+      characterBuilderProfileTitle: "Профиль",
+      characterBuilderCharacterNamePlaceholder: "Имя персонажа",
+      characterBuilderPrimaryLanguagePlaceholder: "Основной язык (en/ru)",
+      characterBuilderBioPlaceholder: "Персона и рекомендации по тону",
+      characterBuilderVoiceTitle: "Голос",
+      characterBuilderVoiceProviderLabel: "Провайдер голоса",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (включено)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Пресет / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Тест голоса",
+      characterBuilderTestResponseTitle: "Тест ответа",
+      characterBuilderTestResponseDescription: "Вызывает brain-провайдера воркспейса и применяет персону персонажа.",
+      characterBuilderTestResponse: "Тест ответа",
+      characterBuilderReplyLabel: "Ответ",
+      characterBuilderNotesTitle: "Заметки",
+      characterBuilderNotesDescription: "Настройте значения по умолчанию в Настройки → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "Рабочее пространство не настроено.",
+      characterBuilderNotFound: "Персонаж не найден.",
+      characterBuilderTestResponseFailed: "Тест ответа не удался.",
+      characterBuilderTestVoiceFailed: "Тест голоса не удался.",
+      characterBuilderDefaultUserMessage: "Привет! Дай короткое, веселое приветствие.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Настройте brain + voice для воркспейса. Ключи хранятся на сервере.",
+      aiProvidersLoadFailed: "Не удалось загрузить настройки AI.",
+      aiProvidersSaveFailed: "Не удалось сохранить настройки.",
+      aiProvidersSaveKeyFailed: "Не удалось сохранить ключ.",
+      aiProvidersRemoveKeyFailed: "Не удалось удалить ключ.",
+      aiProvidersKeySaved: "Ключ сохранен.",
+      aiProvidersKeyRemoved: "Ключ удален.",
+      aiProvidersBrainTestFailed: "Тест brain не удался.",
+      aiProvidersVoiceTestFailed: "Тест голоса не удался.",
+      aiProvidersBrainProviderLabel: "Провайдер brain",
+      aiProvidersBrainProviderHelp:
+        "Другие провайдеры показаны для наглядности, но пока недоступны. Сейчас приложение работает на OpenAI.",
+      aiProvidersBrainModelLabel: "Модель brain",
+      aiProvidersCostEstimatorTitle: "Оценка стоимости ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "Мы добавим встроенный калькулятор, когда появятся дополнительные провайдеры (токены, символы голоса и прогноз расходов). Сейчас голос OpenAI включен, а BYOK-провайдеры вы оплачиваете напрямую.",
+      aiProvidersVoiceProviderLabel: "Провайдер голоса",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (включено)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Добавьте ключ ElevenLabs ниже, чтобы использовать этого провайдера.",
+      aiProvidersVoiceIdLabel: "Пресет / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Сохранить настройки AI",
+      aiProvidersTestBrainButton: "Тест brain",
+      aiProvidersTestVoiceButton: "Тест голоса",
+      aiProvidersTestBrainResponseLabel: "Ответ brain (тест)",
+      aiProvidersApiKeysTitle: "API-ключи (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (опционально)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Сохранить ключ",
+      aiProvidersReplaceKeyButton: "Заменить ключ",
+      aiProvidersRemoveKeyButton: "Удалить ключ",
+      aiProvidersKeysNotReturnedNote:
+        "Ключи никогда не возвращаются в браузер. В UI показывается только “{connected}”.",
+
+      settingsPageTitle: "Настройки",
+      settingsProfileTitle: "Профиль",
+      settingsDisplayNameLabel: "Отображаемое имя",
+      settingsDisplayNameRequired: "Укажите отображаемое имя.",
+      settingsUsernameOptionalLabel: "Юзернейм (опционально)",
+      settingsNoProfileFound: "Профиль не найден.",
+      settingsWorkspaceTitle: "Воркспейс",
+      settingsNoWorkspaceFound: "Воркспейс не найден.",
+      settingsSignOutTitle: "Выйти",
+      settingsSignOutDescription: "Выйти из аккаунта на этом устройстве.",
+
+      unrealExportButton: "Экспорт для Unreal",
+      unrealExportTitle: "Экспорт для Unreal",
+      unrealExportDescription:
+        "Сгенерируйте JSON-конфиг для ручной настройки Unreal сейчас и для Runtime Connector позже.",
+      unrealExportIncludeDonoRules: "Включить правила Dono",
+      unrealExportIncludeScripts: "Включить скрипты",
+      unrealExportIncludeScenes: "Включить сцены",
+      unrealExportFailed: "Ошибка экспорта.",
+      unrealExportSavedTo: "Сохранено в: {path}",
+      unrealExportGenerateDownload: "Сгенерировать и скачать",
+      unrealExportFile: "Файл: {filename}",
     },
     admin: {
       label: "Админ",
@@ -1932,6 +3120,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Yakında",
       preview: "Önizleme",
       saved: "Kaydedildi",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Taslak güncellendi",
       published: "Yayınlandı",
       planUpgradeRequired: "Plan yükseltme gerekli",
@@ -2003,6 +3205,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Genel bakış",
       overviewSubtitle: "Canlı durum, limitler ve hızlı işlemler.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Oturumu başlat",
       upgradeRequired: "Yükseltme gerekli",
       quickActions: "Hızlı işlemler",
@@ -2025,6 +3229,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Stream bağlayıcıları",
       connectorsSubtitle:
         "TikTok'u bugün bağla. Twitch и YouTube sonra.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Deploy",
       deploySubtitle: "Oturumu yayınla ve OBS'de canlıya geç.",
       settings: "Ayarlar",
@@ -2035,6 +3252,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Character Builder",
       characterBuilderSubtitle:
         "AI streamer personasını, sesini ve davranışını oluştur.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Hediyelere/donasyonlara tepki kuralları.",
       scripts: "Scriptler",
@@ -2044,6 +3273,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Sayfa bulunamadı",
       notFoundSubtitle: "Bu modül önizlemede.",
       backToOverview: "Genel bakışa dön",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -2173,6 +3512,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "近日公開",
       preview: "プレビュー",
       saved: "保存済み",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "下書き更新",
       published: "公開済み",
       planUpgradeRequired: "プランアップグレードが必要",
@@ -2238,6 +3591,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "概要",
       overviewSubtitle: "ライブ状態、制限、クイックアクション。",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "セッション開始",
       upgradeRequired: "アップグレードが必要",
       quickActions: "クイックアクション",
@@ -2260,6 +3615,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "ストリーム接続",
       connectorsSubtitle:
         "TikTokを今接続。TwitchとYouTubeは次に。",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "デプロイ",
       deploySubtitle: "セッションを公開しOBSで配信開始。",
       settings: "設定",
@@ -2270,6 +3638,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "キャラクタービルダー",
       characterBuilderSubtitle:
         "AIストリーマーのペルソナ、声、振る舞いを作成。",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "ギフト/寄付に反応するルールを作成。",
       scripts: "スクリプト",
@@ -2279,6 +3659,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "ページが見つかりません",
       notFoundSubtitle: "このモジュールはプレビュー中です。",
       backToOverview: "概要に戻る",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -2408,6 +3898,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "即将推出",
       preview: "预览",
       saved: "已保存",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "草稿已更新",
       published: "已发布",
       planUpgradeRequired: "需要升级套餐",
@@ -2472,6 +3976,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "概览",
       overviewSubtitle: "直播状态、限制和快捷操作。",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "开始会话",
       upgradeRequired: "需要升级",
       quickActions: "快捷操作",
@@ -2493,6 +3999,19 @@ export const translations: Record<Locale, Translations> = {
       trialEndsIn: "试用将在{days}天后结束",
       connectors: "直播连接",
       connectorsSubtitle: "今日连接TikTok，Twitch与YouTube即将支持。",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "部署",
       deploySubtitle: "发布会话并在OBS中开播。",
       settings: "设置",
@@ -2502,6 +4021,18 @@ export const translations: Record<Locale, Translations> = {
       noCharacters: "暂无角色。创建第一个角色。",
       characterBuilder: "角色构建器",
       characterBuilderSubtitle: "打造AI主播的人设、声音与行为。",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "建立对礼物和打赏的响应规则。",
       scripts: "脚本",
@@ -2511,6 +4042,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "页面未找到",
       notFoundSubtitle: "该模块仍在预览中。",
       backToOverview: "返回概览",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",
@@ -2640,6 +4281,20 @@ export const translations: Record<Locale, Translations> = {
       comingSoon: "Скоро",
       preview: "Превʼю",
       saved: "Збережено",
+      now: "now",
+      loading: "Loading…",
+      save: "Save",
+      saving: "Saving…",
+      thinking: "Thinking…",
+      generating: "Generating…",
+      testing: "Testing…",
+      connected: "Connected",
+      cancel: "Cancel",
+      close: "Close",
+      featureComingSoonDescription: "This feature will be enabled soon.",
+      proPerks: "Pro perks",
+      desktopOnlyTitle: "Desktop-only",
+      desktopOnlyMessage: "This section is available in the RoxStreamAI Desktop app.",
       draftUpdated: "Чернетка оновлена",
       published: "Опубліковано",
       planUpgradeRequired: "Потрібне оновлення тарифу",
@@ -2709,6 +4364,8 @@ export const translations: Record<Locale, Translations> = {
     app: {
       overview: "Огляд",
       overviewSubtitle: "Статус, ліміти й швидкі дії.",
+      systemToastsTitle: "System toasts",
+      systemToastsSubtitle: "Recent updates from the workspace.",
       startSession: "Почати сесію",
       upgradeRequired: "Потрібен апгрейд",
       quickActions: "Швидкі дії",
@@ -2731,6 +4388,19 @@ export const translations: Record<Locale, Translations> = {
       connectors: "Коннектори",
       connectorsSubtitle:
         "Підключіть TikTok сьогодні. Twitch і YouTube далі.",
+      connectorsTiktokDescription:
+        "Connectors are configured via the Desktop companion. This dashboard will show live status once the connector APIs are enabled.",
+      connectorsConnectTiktok: "Connect TikTok",
+      connectorsOpenSetupGuide: "Open setup guide",
+      connectorsJoinWaitlist: "Join the waitlist to get early access.",
+      connectorsEarlyAccessNote: "Early access rolling out to Pro and Studio first.",
+      connectorsMultiAccountTitle: "Multi-account scheduler",
+      connectorsMultiAccountDescription:
+        "Available in Pro+. Rotate multiple accounts with scheduling rules.",
+      connectorsMultiAccountBody:
+        "This module is a preview. Once enabled, you'll be able to rotate accounts by schedules and usage limits.",
+      connectorsExampleRotationWindow: "Example: Rotation window: every 4 hours",
+      connectorsExampleMaxSessionsPerDay: "Example: Max sessions per day: 3",
       deployTitle: "Деплой",
       deploySubtitle: "Опублікуйте сесію і виходьте в ефір у OBS.",
       settings: "Налаштування",
@@ -2741,6 +4411,18 @@ export const translations: Record<Locale, Translations> = {
       characterBuilder: "Конструктор персонажа",
       characterBuilderSubtitle:
         "Налаштуйте персону, голос і поведінку AI-стрімера.",
+      characterEditorTitle: "3D Character Editor",
+      characterEditorEnabledNote:
+        "Polyphoria editor integration is enabled (work in progress).",
+      characterEditorComingSoonNote:
+        "Coming soon: an in-app 3D editor powered by Polyphoria.",
+      characterEditorSectionTitle: "Editor",
+      characterEditorEnabledDescription:
+        "The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.",
+      characterEditorWaitlistDescription:
+        "Join the waitlist to get early access when we roll this out.",
+      polyphoriaModalDescription:
+        "We’re preparing an in-app character editor integration. For now, you can import your MetaHuman or use your existing Unreal scene.",
       donoEngine: "Dono Engine",
       donoEngineSubtitle: "Правила реакцій на донати і подарунки.",
       scripts: "Сценарії",
@@ -2750,6 +4432,116 @@ export const translations: Record<Locale, Translations> = {
       notFoundTitle: "Сторінка не знайдена",
       notFoundSubtitle: "Цей модуль поки в превʼю.",
       backToOverview: "Назад до огляду",
+
+      unrealConnector: "Unreal Connector",
+      localRuntime: "Local Runtime",
+      diagnostics: "Diagnostics",
+
+      unrealHubSubtitle:
+        "Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.",
+      unrealGettingStartedTitle: "Getting started",
+      unrealGettingStartedDescription:
+        "Choose one of the setup paths below. If you already have an Unreal project, start with Manual setup.",
+      unrealImportMetahumanTitle: "How to import MetaHuman",
+      unrealLiveLinkFaceTitle: "Live Link Face (archive)",
+      unrealManualSetupTitle: "Manual Unreal setup",
+      unrealRuntimeConnectorTitle: "Unreal Runtime Connector",
+      unrealOpenRuntimeConnectorButton:
+        "Open Runtime Connector ({comingSoon})",
+      unrealBackToHubButton: "Back to Unreal hub",
+      unrealOpenDocsButton: "Open Unreal docs",
+
+      billingSuccessTitle: "Payment received",
+      billingSuccessVerifying: "Verifying payment...",
+      billingSuccessProcessing: "We are still processing your payment. Please refresh later.",
+      billingSuccessConfirmedRedirecting: "Payment confirmed. Redirecting...",
+      billingSuccessGoToDashboard: "Go to dashboard",
+
+      characterBuilderLiveNote: "Brain + Voice testing is live.",
+      characterBuilderDraft: "Draft",
+      characterBuilderProfileTitle: "Profile",
+      characterBuilderCharacterNamePlaceholder: "Character name",
+      characterBuilderPrimaryLanguagePlaceholder: "Primary language (en/ru)",
+      characterBuilderBioPlaceholder: "Persona and tone guidelines",
+      characterBuilderVoiceTitle: "Voice",
+      characterBuilderVoiceProviderLabel: "Voice provider",
+      characterBuilderVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      characterBuilderVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      characterBuilderVoiceIdLabel: "Voice preset / Voice ID",
+      characterBuilderVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      characterBuilderVoiceIdPlaceholderOpenAI: "alloy",
+      characterBuilderTestVoice: "Test Voice",
+      characterBuilderTestResponseTitle: "Test Response",
+      characterBuilderTestResponseDescription: "Calls the workspace brain provider and applies your character persona.",
+      characterBuilderTestResponse: "Test Response",
+      characterBuilderReplyLabel: "Reply",
+      characterBuilderNotesTitle: "Notes",
+      characterBuilderNotesDescription: "Configure provider defaults in Settings → AI Providers.",
+      characterBuilderNoWorkspaceConfigured: "No workspace configured.",
+      characterBuilderNotFound: "Character not found.",
+      characterBuilderTestResponseFailed: "Test Response failed.",
+      characterBuilderTestVoiceFailed: "Test Voice failed.",
+      characterBuilderDefaultUserMessage: "Hi! Give me a short, fun greeting.",
+
+      aiProvidersTitle: "AI Providers",
+      aiProvidersSubtitle: "Configure brain + voice per workspace. Keys are stored server-side.",
+      aiProvidersLoadFailed: "Failed to load AI settings.",
+      aiProvidersSaveFailed: "Failed to save settings.",
+      aiProvidersSaveKeyFailed: "Failed to save key.",
+      aiProvidersRemoveKeyFailed: "Failed to remove key.",
+      aiProvidersKeySaved: "Key saved.",
+      aiProvidersKeyRemoved: "Key removed.",
+      aiProvidersBrainTestFailed: "Brain test failed.",
+      aiProvidersVoiceTestFailed: "Voice test failed.",
+      aiProvidersBrainProviderLabel: "Brain provider",
+      aiProvidersBrainProviderHelp:
+        "Other brain providers are listed for visibility, but aren’t available yet. Today the app runs on OpenAI.",
+      aiProvidersBrainModelLabel: "Brain model",
+      aiProvidersCostEstimatorTitle: "Cost estimator ({comingSoon})",
+      aiProvidersCostEstimatorBody:
+        "We’ll add an in-app estimator once additional providers are enabled (tokens, voice characters, and projected spend). For now, OpenAI voice is included and BYOK providers bill you directly.",
+      aiProvidersVoiceProviderLabel: "Voice provider",
+      aiProvidersVoiceProviderOpenAIIncluded: "OpenAI (included)",
+      aiProvidersVoiceProviderElevenLabsByok: "ElevenLabs (BYOK)",
+      aiProvidersVoiceProviderElevenLabsNeedsKey:
+        "Add your ElevenLabs key below to use this provider.",
+      aiProvidersVoiceIdLabel: "Voice preset / Voice ID",
+      aiProvidersVoiceIdPlaceholderElevenLabs: "ElevenLabs Voice ID",
+      aiProvidersSaveButton: "Save AI settings",
+      aiProvidersTestBrainButton: "Test brain",
+      aiProvidersTestVoiceButton: "Test voice",
+      aiProvidersTestBrainResponseLabel: "Test brain response",
+      aiProvidersApiKeysTitle: "API keys (BYOK)",
+      aiProvidersOpenAiKeyLabel: "OpenAI API key (optional)",
+      aiProvidersElevenLabsKeyLabel: "ElevenLabs API key",
+      aiProvidersSaveKeyButton: "Save key",
+      aiProvidersReplaceKeyButton: "Replace key",
+      aiProvidersRemoveKeyButton: "Remove key",
+      aiProvidersKeysNotReturnedNote:
+        "Keys are never returned to the browser. The UI only shows “{connected}”.",
+
+      settingsPageTitle: "Settings",
+      settingsProfileTitle: "Profile",
+      settingsDisplayNameLabel: "Display name",
+      settingsDisplayNameRequired: "Display name is required.",
+      settingsUsernameOptionalLabel: "Username (optional)",
+      settingsNoProfileFound: "No profile found.",
+      settingsWorkspaceTitle: "Workspace",
+      settingsNoWorkspaceFound: "No workspace found.",
+      settingsSignOutTitle: "Sign out",
+      settingsSignOutDescription: "Sign out of your account on this device.",
+
+      unrealExportButton: "Export for Unreal",
+      unrealExportTitle: "Export for Unreal",
+      unrealExportDescription:
+        "Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.",
+      unrealExportIncludeDonoRules: "Include Dono rules",
+      unrealExportIncludeScripts: "Include scripts",
+      unrealExportIncludeScenes: "Include scenes",
+      unrealExportFailed: "Export failed.",
+      unrealExportSavedTo: "Saved to: {path}",
+      unrealExportGenerateDownload: "Generate + download",
+      unrealExportFile: "File: {filename}",
     },
     admin: {
       label: "Admin",

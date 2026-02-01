@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 type TauriInvoke = (command: string, args?: Record<string, unknown>) => Promise<unknown>;
 
@@ -28,6 +29,7 @@ export default function ExportForUnrealButton(props: {
   characterName: string;
   variant?: "primary" | "secondary";
 }) {
+  const t = useTranslations();
   const [open, setOpen] = useState(false);
   const [includeDonoRules, setIncludeDonoRules] = useState(true);
   const [includeScripts, setIncludeScripts] = useState(true);
@@ -57,7 +59,7 @@ export default function ExportForUnrealButton(props: {
 
     if (!res.ok) {
       const json = await res.json().catch(() => null);
-      setMessage(json?.error ?? "Export failed.");
+      setMessage(json?.error ?? t.app.unrealExportFailed);
       setBusy(false);
       return;
     }
@@ -72,7 +74,9 @@ export default function ExportForUnrealButton(props: {
           filename,
           content,
         });
-        setMessage(`Saved to: ${String(savedPath)}`);
+        setMessage(
+          t.app.unrealExportSavedTo.replace("{path}", String(savedPath))
+        );
         setBusy(false);
         return;
       } catch {
@@ -102,7 +106,7 @@ export default function ExportForUnrealButton(props: {
         variant={props.variant ?? "secondary"}
         onClick={() => setOpen(true)}
       >
-        Export for Unreal
+        {t.app.unrealExportButton}
       </Button>
 
       {open ? (
@@ -115,9 +119,9 @@ export default function ExportForUnrealButton(props: {
           }}
         >
           <div className="glass-card w-full max-w-lg rounded-3xl p-6">
-            <h3 className="text-lg font-semibold text-white">Export for Unreal</h3>
+            <h3 className="text-lg font-semibold text-white">{t.app.unrealExportTitle}</h3>
             <p className="mt-2 text-sm text-white/70">
-              Generate a JSON config you can use for manual Unreal setup today, and for the Runtime Connector later.
+              {t.app.unrealExportDescription}
             </p>
 
             <div className="mt-5 space-y-2 text-sm text-white/80">
@@ -127,7 +131,7 @@ export default function ExportForUnrealButton(props: {
                   checked={includeDonoRules}
                   onChange={(e) => setIncludeDonoRules(e.target.checked)}
                 />
-                Include Dono rules
+                {t.app.unrealExportIncludeDonoRules}
               </label>
               <label className="flex items-center gap-2">
                 <input
@@ -135,7 +139,7 @@ export default function ExportForUnrealButton(props: {
                   checked={includeScripts}
                   onChange={(e) => setIncludeScripts(e.target.checked)}
                 />
-                Include scripts
+                {t.app.unrealExportIncludeScripts}
               </label>
               <label className="flex items-center gap-2">
                 <input
@@ -143,7 +147,7 @@ export default function ExportForUnrealButton(props: {
                   checked={includeScenes}
                   onChange={(e) => setIncludeScenes(e.target.checked)}
                 />
-                Include scenes
+                {t.app.unrealExportIncludeScenes}
               </label>
             </div>
 
@@ -155,14 +159,16 @@ export default function ExportForUnrealButton(props: {
 
             <div className="mt-6 flex justify-end gap-3">
               <Button variant="secondary" onClick={() => setOpen(false)} disabled={busy}>
-                Cancel
+                {t.common.cancel}
               </Button>
               <Button variant="secondary" onClick={download} disabled={busy}>
-                {busy ? "Generating…" : "Generate + download"}
+                {busy ? t.common.generating : t.app.unrealExportGenerateDownload}
               </Button>
             </div>
 
-            <p className="mt-3 text-xs text-white/50">File: {filename}</p>
+            <p className="mt-3 text-xs text-white/50">
+              {t.app.unrealExportFile.replace("{filename}", filename)}
+            </p>
           </div>
         </div>
       ) : null}

@@ -1,30 +1,25 @@
 import Button from "@/components/Button";
 import DesktopOnlyGate from "@/components/DesktopOnlyGate";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 
-export default function LiveLinkFacePage() {
+export default async function LiveLinkFacePage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
+
   return (
-    <DesktopOnlyGate title="Unreal Connector">
+    <DesktopOnlyGate title={t.app.unrealConnector}>
       <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">Live Link Face (archive)</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.unrealLiveLinkFaceTitle}</h2>
         <p className="mt-2 text-sm text-white/60">
-          Placeholder guide. In the final version you’ll be able to import a Live Link Face archive directly.
+          {t.common.featureComingSoonDescription}
         </p>
       </div>
 
       <div className="glass-card rounded-3xl p-6 space-y-3">
-        <p className="text-sm text-white/70">
-          For now:
-        </p>
-        <ul className="list-disc pl-5 text-sm text-white/70 space-y-2">
-          <li>Record on iPhone using Live Link Face.</li>
-          <li>Export / copy the recording data to your PC.</li>
-          <li>Configure your Unreal project to receive facial animation (Live Link / UDP).</li>
-        </ul>
-
         <div className="pt-3 flex flex-wrap gap-3">
-          <Button variant="secondary" href="/app/unreal/manual-setup">Next: Manual setup</Button>
-          <Button variant="secondary" href="/app/unreal">Back to Unreal hub</Button>
+          <Button variant="secondary" href="/app/unreal">{t.app.unrealBackToHubButton}</Button>
+          <Button variant="secondary" href="/docs/unreal">{t.app.unrealOpenDocsButton}</Button>
         </div>
       </div>
       </div>

@@ -56,16 +56,16 @@ export default function SidebarNav({
     { href: "/app/avatar-scene", label: t.app.avatarScene, icon: Sparkles },
     ...(isDesktopMode
       ? [
-          { href: "/app/unreal", label: "Unreal Connector", icon: Box },
-          { href: "/app/local-runtime", label: "Local Runtime", icon: Monitor },
-          { href: "/app/diagnostics", label: "Diagnostics", icon: Activity },
+          { href: "/app/unreal", label: t.app.unrealConnector, icon: Box },
+          { href: "/app/local-runtime", label: t.app.localRuntime, icon: Monitor },
+          { href: "/app/diagnostics", label: t.app.diagnostics, icon: Activity },
         ]
       : []),
     { href: "/app/deploy", label: t.app.deploy, icon: Rocket },
     { href: "/app/billing", label: t.app.billing, icon: CreditCard },
     { href: "/app/settings", label: t.app.settings, icon: Settings },
     ...(isAdmin
-      ? [{ href: "/admin", label: "Admin", icon: Layers }]
+      ? [{ href: "/admin", label: t.admin.label, icon: Layers }]
       : []),
   ];
 

@@ -58,7 +58,9 @@ export default function OverviewPage() {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <Badge>{planId.toUpperCase()} plan</Badge>
+          <Badge>
+            {t.app.currentPlan}: {planId.toUpperCase()}
+          </Badge>
           <Button variant="secondary" disabled={isAccessBlocked}>
             {isTrialExpired ? t.app.upgradeRequired : t.app.startSession}
           </Button>
@@ -112,9 +114,9 @@ export default function OverviewPage() {
           </div>
         </div>
         <div className="glass-card rounded-3xl p-6">
-          <h3 className="text-lg font-semibold text-white">System toasts</h3>
+          <h3 className="text-lg font-semibold text-white">{t.app.systemToastsTitle}</h3>
           <p className="mt-2 text-xs text-white/60">
-            Recent updates from the workspace.
+            {t.app.systemToastsSubtitle}
           </p>
           <div className="mt-4">
             <ToastList />

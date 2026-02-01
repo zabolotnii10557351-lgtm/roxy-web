@@ -16,7 +16,7 @@ export default function Topbar({ displayName }: { displayName: string }) {
           {t.common.brand}
         </p>
         <h1 className="text-lg font-semibold text-white">
-          Welcome back, {displayName}
+          {t.auth.welcomeBack}, {displayName}
         </h1>
       </div>
       <div className="flex items-center gap-3">
@@ -27,7 +27,7 @@ export default function Topbar({ displayName }: { displayName: string }) {
         </button>
         <button className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white">
           <Sparkles className="h-4 w-4 text-cyan-300" />
-          Pro perks
+          {t.common.proPerks}
         </button>
         <SignOutButton />
       </div>

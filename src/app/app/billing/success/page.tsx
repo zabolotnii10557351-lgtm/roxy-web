@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 type BillingStatusResponse = {
   billing?: {
@@ -17,7 +18,8 @@ type BillingStatusResponse = {
 
 export default function BillingSuccessPage() {
   const router = useRouter();
-  const [status, setStatus] = useState("Verifying payment...");
+  const t = useTranslations();
+  const [status, setStatus] = useState(() => t.app.billingSuccessVerifying);
 
   useEffect(() => {
     let attempts = 0;
@@ -35,19 +37,19 @@ export default function BillingSuccessPage() {
 
       const json = (await res.json().catch(() => null)) as BillingStatusResponse | null;
       if (!json || !res.ok) {
-        setStatus(json?.error ?? "We are still processing your payment. Please refresh later.");
+        setStatus(json?.error ?? t.app.billingSuccessProcessing);
         return;
       }
 
       const billing = json.billing;
       if (billing?.lemon_subscription_id) {
-        setStatus("Payment confirmed. Redirecting...");
+        setStatus(t.app.billingSuccessConfirmedRedirecting);
         router.push("/app/billing");
         return;
       }
 
       if (attempts >= maxAttempts) {
-        setStatus("We are still processing your payment. Please refresh later.");
+        setStatus(t.app.billingSuccessProcessing);
         return;
       }
 
@@ -55,16 +57,16 @@ export default function BillingSuccessPage() {
     };
 
     poll();
-  }, [router]);
+  }, [router, t.app.billingSuccessConfirmedRedirecting, t.app.billingSuccessProcessing]);
 
   return (
     <div className="mx-auto max-w-xl space-y-6 text-center">
-      <h1 className="text-2xl font-semibold text-white">Payment received</h1>
+      <h1 className="text-2xl font-semibold text-white">{t.app.billingSuccessTitle}</h1>
       <p className="text-sm text-white/70">{status}</p>
       <div className="flex items-center justify-center gap-3">
-        <Button href="/app">Go to dashboard</Button>
+        <Button href="/app">{t.app.billingSuccessGoToDashboard}</Button>
         <Button href="/app/billing" variant="secondary">
-          Billing
+          {t.app.billing}
         </Button>
       </div>
     </div>

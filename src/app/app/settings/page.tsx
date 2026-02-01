@@ -7,8 +7,10 @@ import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { useCurrentUserProfile } from "@/hooks/useCurrentUserProfile";
 import { useCurrentWorkspace } from "@/hooks/useCurrentWorkspace";
 import AiProvidersSettings from "@/app/app/settings/_components/AiProvidersSettings";
+import { useTranslations } from "@/i18n/client";
 
 export default function SettingsPage() {
+  const t = useTranslations();
   const { profile, loading: profileLoading, error: profileError } =
     useCurrentUserProfile();
   const { workspace, loading: workspaceLoading, error: workspaceError } =
@@ -31,7 +33,7 @@ export default function SettingsPage() {
   const handleSave = async () => {
     if (!profile) return;
     if (!canSave) {
-      setSaveError("Display name is required.");
+      setSaveError(t.app.settingsDisplayNameRequired);
       return;
     }
 
@@ -54,31 +56,31 @@ export default function SettingsPage() {
       return;
     }
 
-    setSaveSuccess("Saved.");
+    setSaveSuccess(t.common.saved);
     setSaving(false);
   };
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">Settings</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.settingsPageTitle}</h2>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         <AiProvidersSettings />
 
         <div className="glass-card rounded-3xl p-6">
-          <h3 className="text-lg font-semibold text-white">Profile</h3>
+          <h3 className="text-lg font-semibold text-white">{t.app.settingsProfileTitle}</h3>
 
           {profileLoading ? (
-            <p className="mt-4 text-sm text-white/60">Loading…</p>
+            <p className="mt-4 text-sm text-white/60">{t.common.loading}</p>
           ) : profileError ? (
             <p className="mt-4 text-sm text-rose-200">{profileError}</p>
           ) : profile ? (
             <div className="mt-4 space-y-3">
               <div className="space-y-2">
                 <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                  Display name
+                  {t.app.settingsDisplayNameLabel}
                 </label>
                 <input
                   value={displayName}
@@ -89,7 +91,7 @@ export default function SettingsPage() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                  Username (optional)
+                  {t.app.settingsUsernameOptionalLabel}
                 </label>
                 <input
                   value={username}
@@ -116,19 +118,19 @@ export default function SettingsPage() {
                 disabled={!canSave || saving}
                 variant="secondary"
               >
-                {saving ? "Saving…" : "Save"}
+                {saving ? t.common.saving : t.common.save}
               </Button>
             </div>
           ) : (
-            <p className="mt-4 text-sm text-white/60">No profile found.</p>
+            <p className="mt-4 text-sm text-white/60">{t.app.settingsNoProfileFound}</p>
           )}
         </div>
 
         <div className="glass-card rounded-3xl p-6">
-          <h3 className="text-lg font-semibold text-white">Workspace</h3>
+          <h3 className="text-lg font-semibold text-white">{t.app.settingsWorkspaceTitle}</h3>
           <div className="mt-4 space-y-3 text-sm text-white/70">
             {workspaceLoading ? (
-              <p className="text-white/60">Loading…</p>
+              <p className="text-white/60">{t.common.loading}</p>
             ) : workspaceError ? (
               <p className="text-rose-200">{workspaceError}</p>
             ) : workspace ? (
@@ -137,15 +139,15 @@ export default function SettingsPage() {
               </div>
             ) : (
               <div className="rounded-2xl border border-white/10 px-4 py-3">
-                No workspace found.
+                {t.app.settingsNoWorkspaceFound}
               </div>
             )}
           </div>
 
           <div className="mt-8">
-            <h3 className="text-lg font-semibold text-white">Sign out</h3>
+            <h3 className="text-lg font-semibold text-white">{t.app.settingsSignOutTitle}</h3>
             <p className="mt-2 text-sm text-white/60">
-              Sign out of your account on this device.
+              {t.app.settingsSignOutDescription}
             </p>
             <SignOutButton className="mt-4" />
           </div>

@@ -2,11 +2,13 @@
 
 import Button from "@/components/Button";
 import NotifyMeForm from "@/components/polyphoria/NotifyMeForm";
+import { useTranslations } from "@/i18n/client";
 
 export default function PolyphoriaComingSoonModal(props: {
   open: boolean;
   onClose: () => void;
 }) {
+  const t = useTranslations();
   if (!props.open) return null;
 
   return (
@@ -19,10 +21,11 @@ export default function PolyphoriaComingSoonModal(props: {
       }}
     >
       <div className="glass-card w-full max-w-lg rounded-3xl p-6">
-        <h3 className="text-lg font-semibold text-white">3D Editor is coming soon</h3>
+        <h3 className="text-lg font-semibold text-white">
+          {t.app.characterEditorTitle} — {t.common.comingSoon}
+        </h3>
         <p className="mt-2 text-sm text-white/70">
-          We’re preparing an in-app character editor integration. For now, you can import your MetaHuman
-          or use your existing Unreal scene.
+          {t.app.polyphoriaModalDescription}
         </p>
 
         <div className="mt-5">
@@ -31,10 +34,10 @@ export default function PolyphoriaComingSoonModal(props: {
 
         <div className="mt-6 flex flex-wrap justify-end gap-3">
           <Button variant="secondary" href="/app/unreal/import-metahuman" onClick={props.onClose}>
-            How to import MetaHuman
+            {t.app.unrealImportMetahumanTitle}
           </Button>
           <Button variant="secondary" onClick={props.onClose}>
-            Close
+            {t.common.close}
           </Button>
         </div>
       </div>

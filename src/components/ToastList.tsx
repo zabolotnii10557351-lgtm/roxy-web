@@ -21,7 +21,7 @@ export default function ToastList() {
         >
           <span>{toast}</span>
           <span className="rounded-full bg-white/10 px-2 py-1 text-[10px] text-white/60">
-            now
+            {t.common.now}
           </span>
         </div>
       ))}

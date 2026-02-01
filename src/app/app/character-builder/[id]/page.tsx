@@ -8,6 +8,7 @@ import ExportForUnrealButton from "@/components/unreal/ExportForUnrealButton";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { CharacterConfigSchema } from "@/lib/schemas/workspace";
 import { useCurrentWorkspace } from "@/hooks/useCurrentWorkspace";
+import { useTranslations } from "@/i18n/client";
 import type { z } from "zod";
 
 type CharacterConfig = z.infer<typeof CharacterConfigSchema>;
@@ -23,6 +24,7 @@ function voiceProviderToApi(provider: string): "openai" | "elevenlabs" {
 }
 
 export default function CharacterBuilderByIdPage() {
+  const t = useTranslations();
   const params = useParams<{ id: string }>();
   const characterId = params?.id;
 
@@ -36,7 +38,7 @@ export default function CharacterBuilderByIdPage() {
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
 
-  const [userMessage, setUserMessage] = useState("Hi! Give me a short, fun greeting.");
+  const [userMessage, setUserMessage] = useState(() => t.app.characterBuilderDefaultUserMessage);
   const [replyBusy, setReplyBusy] = useState(false);
   const [replyText, setReplyText] = useState<string | null>(null);
 
@@ -54,7 +56,7 @@ export default function CharacterBuilderByIdPage() {
       if (!characterId) return;
       if (workspaceLoading) return;
       if (!workspaceId) {
-        setError(workspaceError ?? "No workspace configured.");
+        setError(workspaceError ?? t.app.characterBuilderNoWorkspaceConfigured);
         setLoading(false);
         return;
       }
@@ -85,7 +87,7 @@ export default function CharacterBuilderByIdPage() {
     return () => {
       cancelled = true;
     };
-  }, [characterId, workspaceId, workspaceLoading, workspaceError]);
+  }, [characterId, workspaceId, workspaceLoading, workspaceError, t.app.characterBuilderNoWorkspaceConfigured]);
 
   const updateConfig = (patch: Partial<CharacterConfig>) => {
     setCharacter((c) => {
@@ -124,7 +126,7 @@ export default function CharacterBuilderByIdPage() {
       return;
     }
 
-    setSaveMessage("Saved.");
+    setSaveMessage(t.common.saved);
     setSaving(false);
   };
 
@@ -147,7 +149,7 @@ export default function CharacterBuilderByIdPage() {
     const json = await res.json().catch(() => null);
 
     if (!res.ok) {
-      setSaveMessage(json?.error ?? "Test Response failed.");
+      setSaveMessage(json?.error ?? t.app.characterBuilderTestResponseFailed);
       setReplyBusy(false);
       return;
     }
@@ -183,7 +185,7 @@ export default function CharacterBuilderByIdPage() {
 
     if (!res.ok) {
       const json = await res.json().catch(() => null);
-      setSaveMessage(json?.error ?? "Test Voice failed.");
+      setSaveMessage(json?.error ?? t.app.characterBuilderTestVoiceFailed);
       setVoiceBusy(false);
       return;
     }
@@ -204,7 +206,7 @@ export default function CharacterBuilderByIdPage() {
   };
 
   if (loading) {
-    return <p className="text-sm text-white/60">Loading…</p>;
+    return <p className="text-sm text-white/60">{t.common.loading}</p>;
   }
 
   if (error) {
@@ -216,25 +218,25 @@ export default function CharacterBuilderByIdPage() {
   }
 
   if (!character) {
-    return <p className="text-sm text-white/60">Character not found.</p>;
+    return <p className="text-sm text-white/60">{t.app.characterBuilderNotFound}</p>;
   }
 
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Character Builder</h2>
-          <p className="text-sm text-white/60">Brain + Voice testing is live.</p>
+          <h2 className="text-2xl font-semibold text-white">{t.app.characterBuilder}</h2>
+          <p className="text-sm text-white/60">{t.app.characterBuilderLiveNote}</p>
         </div>
         <div className="flex items-center gap-3">
-          <Badge>Draft</Badge>
+          <Badge>{t.app.characterBuilderDraft}</Badge>
           <ExportForUnrealButton
             characterId={character.id}
             characterName={character.name}
             variant="secondary"
           />
           <Button variant="secondary" onClick={handleSave} disabled={saving}>
-            {saving ? "Saving…" : "Save"}
+            {saving ? t.common.saving : t.common.save}
           </Button>
         </div>
       </div>
@@ -248,35 +250,35 @@ export default function CharacterBuilderByIdPage() {
       <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
         <div className="space-y-6">
           <div className="glass-card rounded-3xl p-6">
-            <h3 className="text-lg font-semibold text-white">Profile</h3>
+            <h3 className="text-lg font-semibold text-white">{t.app.characterBuilderProfileTitle}</h3>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <input
                 value={character.name}
                 onChange={(e) => setCharacter((c) => (c ? { ...c, name: e.target.value } : c))}
                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                placeholder="Character name"
+                placeholder={t.app.characterBuilderCharacterNamePlaceholder}
               />
               <input
                 value={config.language?.primary ?? "en"}
                 onChange={(e) => updateConfig({ language: { primary: e.target.value } })}
                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                placeholder="Primary language (en/ru)"
+                placeholder={t.app.characterBuilderPrimaryLanguagePlaceholder}
               />
             </div>
             <textarea
               value={config.profile?.bio ?? ""}
               onChange={(e) => updateConfig({ profile: { ...config.profile, bio: e.target.value } })}
               className="mt-4 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-              placeholder="Persona and tone guidelines"
+              placeholder={t.app.characterBuilderBioPlaceholder}
               rows={4}
             />
           </div>
 
           <div className="glass-card rounded-3xl p-6">
-            <h3 className="text-lg font-semibold text-white">Voice</h3>
+            <h3 className="text-lg font-semibold text-white">{t.app.characterBuilderVoiceTitle}</h3>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
-                <label className="text-xs text-white/60">Voice provider</label>
+                <label className="text-xs text-white/60">{t.app.characterBuilderVoiceProviderLabel}</label>
                 <select
                   value={config.voice?.provider ?? "openai_included"}
                   onChange={(e) =>
@@ -289,32 +291,36 @@ export default function CharacterBuilderByIdPage() {
                   }
                   className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
                 >
-                  <option value="openai_included">OpenAI (included)</option>
-                  <option value="elevenlabs_byok">ElevenLabs (BYOK)</option>
+                  <option value="openai_included">{t.app.characterBuilderVoiceProviderOpenAIIncluded}</option>
+                  <option value="elevenlabs_byok">{t.app.characterBuilderVoiceProviderElevenLabsByok}</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs text-white/60">Voice preset / Voice ID</label>
+                <label className="text-xs text-white/60">{t.app.characterBuilderVoiceIdLabel}</label>
                 <input
                   value={config.voice?.voiceId ?? ""}
                   onChange={(e) => updateConfig({ voice: { ...config.voice, voiceId: e.target.value } })}
                   className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                  placeholder={config.voice?.provider === "elevenlabs_byok" ? "ElevenLabs Voice ID" : "alloy"}
+                  placeholder={
+                    config.voice?.provider === "elevenlabs_byok"
+                      ? t.app.characterBuilderVoiceIdPlaceholderElevenLabs
+                      : t.app.characterBuilderVoiceIdPlaceholderOpenAI
+                  }
                 />
               </div>
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <Button variant="secondary" onClick={handleTestVoice} disabled={voiceBusy}>
-                {voiceBusy ? "Generating…" : "Test Voice"}
+                {voiceBusy ? t.common.generating : t.app.characterBuilderTestVoice}
               </Button>
               <audio ref={audioRef} controls />
             </div>
           </div>
 
           <div className="glass-card rounded-3xl p-6">
-            <h3 className="text-lg font-semibold text-white">Test Response</h3>
+            <h3 className="text-lg font-semibold text-white">{t.app.characterBuilderTestResponseTitle}</h3>
             <p className="mt-2 text-sm text-white/60">
-              Calls the workspace brain provider and applies your character persona.
+              {t.app.characterBuilderTestResponseDescription}
             </p>
             <textarea
               value={userMessage}
@@ -324,13 +330,13 @@ export default function CharacterBuilderByIdPage() {
             />
             <div className="mt-4 flex items-center gap-3">
               <Button variant="secondary" onClick={handleTestReply} disabled={replyBusy}>
-                {replyBusy ? "Thinking…" : "Test Response"}
+                {replyBusy ? t.common.thinking : t.app.characterBuilderTestResponse}
               </Button>
             </div>
 
             {replyText ? (
               <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
-                <p className="text-xs font-semibold uppercase tracking-widest text-white/50">Reply</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/50">{t.app.characterBuilderReplyLabel}</p>
                 <p className="mt-2">{replyText}</p>
               </div>
             ) : null}
@@ -338,9 +344,9 @@ export default function CharacterBuilderByIdPage() {
         </div>
 
         <div className="glass-card rounded-3xl p-6">
-          <h3 className="text-lg font-semibold text-white">Notes</h3>
+          <h3 className="text-lg font-semibold text-white">{t.app.characterBuilderNotesTitle}</h3>
           <p className="mt-2 text-sm text-white/60">
-            Configure provider defaults in Settings → AI Providers.
+            {t.app.characterBuilderNotesDescription}
           </p>
         </div>
       </div>

@@ -1,19 +1,24 @@
 "use client";
 
 import Button from "@/components/Button";
+import { useTranslations } from "@/i18n/client";
 
 export default function ComingSoonModal({
   open,
   onClose,
-  title = "Coming soon",
-  description = "Billing checkout will be enabled after LemonSqueezy integration.",
+  title,
+  description,
 }: {
   open: boolean;
   onClose: () => void;
   title?: string;
   description?: string;
 }) {
+  const t = useTranslations();
   if (!open) return null;
+
+  const resolvedTitle = title ?? t.common.comingSoon;
+  const resolvedDescription = description ?? t.common.featureComingSoonDescription;
 
   return (
     <div
@@ -25,11 +30,11 @@ export default function ComingSoonModal({
       }}
     >
       <div className="glass-card w-full max-w-md rounded-3xl p-6">
-        <h3 className="text-lg font-semibold text-white">{title}</h3>
-        <p className="mt-2 text-sm text-white/70">{description}</p>
+        <h3 className="text-lg font-semibold text-white">{resolvedTitle}</h3>
+        <p className="mt-2 text-sm text-white/70">{resolvedDescription}</p>
         <div className="mt-6 flex justify-end">
           <Button variant="secondary" onClick={onClose}>
-            Close
+            {t.common.close}
           </Button>
         </div>
       </div>

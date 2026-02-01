@@ -1,17 +1,21 @@
 import Badge from "@/components/Badge";
 import NotifyMeForm from "@/components/polyphoria/NotifyMeForm";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 
-export default function CharacterEditorPage() {
+export default async function CharacterEditorPage() {
+  const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
+
   const enabled = process.env.POLYPHORIA_ENABLED === "true";
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-semibold text-white">3D Character Editor</h2>
+        <h2 className="text-2xl font-semibold text-white">{t.app.characterEditorTitle}</h2>
         <p className="mt-2 text-sm text-white/60">
           {enabled
-            ? "Polyphoria editor integration is enabled (work in progress)."
-            : "Coming soon: an in-app 3D editor powered by Polyphoria."}
+            ? t.app.characterEditorEnabledNote
+            : t.app.characterEditorComingSoonNote}
         </p>
       </div>
 
@@ -19,17 +23,17 @@ export default function CharacterEditorPage() {
         {enabled ? (
           <>
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <h3 className="text-lg font-semibold text-white">Editor</h3>
-              <Badge variant="outline">Preview</Badge>
+              <h3 className="text-lg font-semibold text-white">{t.app.characterEditorSectionTitle}</h3>
+              <Badge variant="outline">{t.common.preview}</Badge>
             </div>
             <p className="mt-3 text-sm text-white/70">
-              The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.
+              {t.app.characterEditorEnabledDescription}
             </p>
           </>
         ) : (
           <>
             <p className="text-sm text-white/70">
-              Join the waitlist to get early access when we roll this out.
+              {t.app.characterEditorWaitlistDescription}
             </p>
             <div className="mt-5">
               <NotifyMeForm tag="polyphoria" />
