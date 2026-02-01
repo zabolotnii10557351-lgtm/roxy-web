@@ -5,7 +5,19 @@ import { getLocaleFromRequest } from "@/i18n/server";
 import { getContentBlock } from "@/server/content/getContentBlock";
 import ContactForm from "@/app/(marketing)/contact/contact-form";
 
-export default async function ContactPage() {
+function getQueryFirst(value: string | string[] | undefined) {
+  if (!value) return undefined;
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export default async function ContactPage(props: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const searchParams = (await props.searchParams) ?? {};
+  const initialTopic = getQueryFirst(searchParams.topic);
+  const initialMessage = getQueryFirst(searchParams.message);
+  const initialEmail = getQueryFirst(searchParams.email);
+
   const locale = await getLocaleFromRequest();
   const content = getContent(locale);
 
@@ -30,6 +42,9 @@ export default async function ContactPage() {
               message: content.contact.message,
               sendRequest: content.contact.sendRequest,
             }}
+            initialTopic={initialTopic}
+            initialMessage={initialMessage}
+            initialEmail={initialEmail}
           />
           <div className="glass-card rounded-3xl p-8 text-sm text-white/70">
             <p className="text-base font-semibold text-white">

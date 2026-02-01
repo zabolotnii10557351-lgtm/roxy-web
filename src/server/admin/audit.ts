@@ -28,7 +28,6 @@ export async function writeAdminAuditLog(params: {
 
   if (error) {
     // Never block admin actions because audit logging failed.
-    // eslint-disable-next-line no-console
     console.warn("Failed to write admin audit log", error);
   }
 }

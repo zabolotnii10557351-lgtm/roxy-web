@@ -2,16 +2,6 @@ import { revalidatePath } from "next/cache";
 import { assertAdminForAction, requireAdminUserOrNotFound } from "@/lib/auth";
 import { writeAdminAuditLog } from "@/server/admin/audit";
 
-interface ReleaseRow {
-  id: number;
-  version: string;
-  platform: string;
-  url: string;
-  notes: string | null;
-  is_latest: boolean | null;
-  created_at: string | null;
-}
-
 async function createReleaseAction(formData: FormData) {
   "use server";
   const { user, adminClient, supabase } = await assertAdminForAction();

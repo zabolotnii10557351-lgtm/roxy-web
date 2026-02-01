@@ -2,14 +2,6 @@ import { revalidatePath } from "next/cache";
 import { assertAdminForAction, requireAdminUserOrNotFound } from "@/lib/auth";
 import { writeAdminAuditLog } from "@/server/admin/audit";
 
-interface ProfileRow {
-  id: string;
-  email: string | null;
-  role: string | null;
-  plan_id: string | null;
-  created_at: string | null;
-}
-
 async function updateProfileAction(formData: FormData) {
   "use server";
   const { user, adminClient, supabase } = await assertAdminForAction();

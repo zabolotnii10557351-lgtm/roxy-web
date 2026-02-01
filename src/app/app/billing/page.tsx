@@ -41,7 +41,7 @@ export default function BillingPage() {
   const t = useTranslations();
 
   const pricing = usePricingConfig();
-  const pricingPlans = pricing.config?.plans ?? [];
+  const pricingPlans = useMemo(() => pricing.config?.plans ?? [], [pricing.config]);
   const tooltipText = pricing.config?.tooltip_text ?? "";
   const minTalkRatio = pricing.config?.min_talk_ratio ?? 0.1;
   const maxTalkRatio = pricing.config?.max_talk_ratio ?? 0.5;

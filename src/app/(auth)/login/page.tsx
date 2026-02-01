@@ -5,6 +5,14 @@ import CaptchaField from "@/app/(auth)/_components/CaptchaField";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 
+function safeReturnTo(value: unknown): string | null {
+  if (typeof value !== "string") return null;
+  if (!value.startsWith("/")) return null;
+  if (value.startsWith("//")) return null;
+  if (value.includes("\n") || value.includes("\r")) return null;
+  return value;
+}
+
 async function loginAction(
   _: { error?: string; success?: string },
   formData: FormData
@@ -12,6 +20,7 @@ async function loginAction(
   "use server";
   const email = formData.get("email")?.toString().trim();
   const password = formData.get("password")?.toString();
+  const returnTo = safeReturnTo(formData.get("returnTo"));
   const captchaToken = formData.get("captchaToken")?.toString();
   const siteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
@@ -36,10 +45,15 @@ async function loginAction(
     return { error: error.message };
   }
 
-  redirect("/app");
+  redirect(returnTo ?? "/app");
 }
 
-export default async function LoginPage() {
+export default async function LoginPage(props: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const searchParams = (await props.searchParams) ?? {};
+  const returnTo = safeReturnTo(searchParams.returnTo);
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -57,6 +71,7 @@ export default async function LoginPage() {
           description="Sign in to manage characters, usage, and your desktop connection."
           action={loginAction}
           submitLabel="Sign in"
+          hiddenFields={returnTo ? { returnTo } : undefined}
           fields={[
             {
               name: "email",

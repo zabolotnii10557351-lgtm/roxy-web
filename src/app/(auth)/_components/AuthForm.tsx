@@ -19,6 +19,7 @@ interface AuthFormProps {
   action: (state: { error?: string; success?: string }, formData: FormData) => Promise<{ error?: string; success?: string }>;
   submitLabel: string;
   fields: AuthField[];
+  hiddenFields?: Record<string, string>;
   footer?: React.ReactNode;
   extraContent?: React.ReactNode;
 }
@@ -39,6 +40,7 @@ export default function AuthForm({
   action,
   submitLabel,
   fields,
+  hiddenFields,
   footer,
   extraContent,
 }: AuthFormProps) {
@@ -51,6 +53,11 @@ export default function AuthForm({
         <p className="mt-2 text-sm text-white/60">{description}</p>
       ) : null}
       <form action={formAction} className="mt-6 space-y-4">
+        {hiddenFields
+          ? Object.entries(hiddenFields).map(([name, value]) => (
+              <input key={name} type="hidden" name={name} value={value} />
+            ))
+          : null}
         {fields.map((field) => (
           <div key={field.name} className="space-y-2">
             <label className="text-xs font-semibold uppercase tracking-widest text-white/60">

@@ -14,11 +14,18 @@ type Labels = {
 
 export default function ContactForm(props: {
   labels: Labels;
+  initialTopic?: string;
+  initialMessage?: string;
+  initialEmail?: string;
 }) {
   const [name, setName] = useState("");
-  const [topic, setTopic] = useState(props.labels.topicOptions[0] ?? "Support");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [topic, setTopic] = useState(
+    props.initialTopic && props.labels.topicOptions.includes(props.initialTopic)
+      ? props.initialTopic
+      : props.labels.topicOptions[0] ?? "Support"
+  );
+  const [email, setEmail] = useState(props.initialEmail ?? "");
+  const [message, setMessage] = useState(props.initialMessage ?? "");
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState<
     | { type: "idle" }

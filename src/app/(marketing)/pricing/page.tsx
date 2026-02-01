@@ -1,7 +1,7 @@
-import PricingPlans from "@/components/PricingPlans";
 import Container from "@/components/Container";
 import { getLocaleFromRequest } from "@/i18n/server";
 import { getContentBlock } from "@/server/content/getContentBlock";
+import PricingPageClient from "@/components/pricing/PricingPageClient";
 
 export default async function PricingPage() {
   const locale = await getLocaleFromRequest();
@@ -22,17 +22,7 @@ export default async function PricingPage() {
       </Container>
 
       <Container>
-        <PricingPlans />
-      </Container>
-
-      <Container>
-        <div className="glass-card rounded-3xl p-8 md:p-10">
-          <h2 className="text-2xl font-semibold text-white">How usage works</h2>
-          <p className="mt-3 text-sm text-white/70">
-            Active Speech is the time the AI actually talks on stream. The dashboard converts your settings into estimated monthly hours.
-            If you use built-in providers, RoxStreamAI covers provider costs up to your plan quota. If you use BYOK, you pay the provider directly and RoxStreamAI tracks hours only.
-          </p>
-        </div>
+        <PricingPageClient />
       </Container>
     </div>
   );
