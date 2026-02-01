@@ -1,95 +1,123 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
-import { getContent } from "@/i18n/content";
 import { getLocaleFromRequest } from "@/i18n/server";
+import Link from "next/link";
+
 export default async function DocsPage() {
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
+  const isRu = locale === "ru";
+
+  const sections = [
+    {
+      href: "/docs/getting-started",
+      title: isRu ? "Быстрый старт" : "Getting started",
+      body: isRu ? "Аккаунт → скачивание → первая сессия." : "Account → download → first session.",
+    },
+    {
+      href: "/docs/providers",
+      title: isRu ? "Провайдеры и ключи" : "Providers and keys",
+      body: isRu ? "OpenAI voice и BYOK для ElevenLabs." : "OpenAI voice and BYOK for ElevenLabs.",
+    },
+    {
+      href: "/docs/unreal",
+      title: isRu ? "Unreal workflow" : "Unreal workflows",
+      body: isRu ? "Desktop connector mode и Live Link Face режим." : "Desktop connector mode and Live Link Face mode.",
+    },
+    {
+      href: "/docs/obs",
+      title: isRu ? "Настройка OBS" : "OBS setup",
+      body: isRu ? "Подключение и проверка OBS WebSocket." : "Connect and verify OBS WebSocket.",
+    },
+    {
+      href: "/docs/safety",
+      title: isRu ? "Безопасность и модерация" : "Safety and moderation",
+      body: isRu ? "Guardrails, стоп‑фразы и правила поведения." : "Guardrails, stop phrases, and moderation rules.",
+    },
+    {
+      href: "/docs/troubleshooting",
+      title: isRu ? "Траблшутинг" : "Troubleshooting",
+      body: isRu ? "Частые ошибки, лог‑пути и диагностика." : "Common errors, log paths, and diagnostics.",
+    },
+  ];
 
   return (
     <div className="space-y-20 pb-20 pt-16">
       <Container>
         <SectionHeading
-          eyebrow={content.docs.quickstart.eyebrow}
-          title={content.docs.quickstart.title}
-          subtitle={content.docs.quickstart.subtitle}
+          eyebrow={isRu ? "Документация" : "Documentation"}
+          title={isRu ? "Документация" : "Documentation"}
+          subtitle={
+            isRu
+              ? "Гайды по настройке, провайдерам, Unreal‑workflow и диагностике."
+              : "Setup guides, provider configuration, Unreal workflows, and troubleshooting."
+          }
         />
 
-        <div className="mt-8 glass-card rounded-2xl p-5 text-sm text-white/70">
-          This doc section is being written. The UI is visible now, but the feature may be in beta.
-        </div>
+        <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-4 md:grid-cols-2">
+            {sections.map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="glass-card rounded-3xl p-6 transition-all hover:scale-[1.01]"
+              >
+                <h3 className="text-lg font-semibold text-white">{s.title}</h3>
+                <p className="mt-3 text-sm text-white/70 leading-relaxed">{s.body}</p>
+                <p className="mt-5 text-xs text-cyan-200">{isRu ? "Открыть →" : "Open →"}</p>
+              </Link>
+            ))}
+          </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {content.docs.quickstart.steps.map((step, index) => (
-            <div key={step.id} id={step.id} className="glass-card rounded-2xl p-5 scroll-mt-24">
-              <p className="text-xs text-white/50">Step {index + 1}</p>
-              <p className="mt-2 text-sm font-semibold text-white">
-                {step.title}
-              </p>
-              <p className="mt-2 text-xs text-white/70">{step.description}</p>
+          <div className="glass-card rounded-3xl p-8">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
+              {isRu ? "Туториал" : "Tutorial"}
+            </p>
+            <h3 className="mt-3 text-xl font-semibold text-white">
+              {isRu ? "Первая сессия" : "Your first session"}
+            </h3>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed">
+              {isRu
+                ? "Чеклист: аккаунт, ключи, Desktop Mode и проверка перед эфиром."
+                : "A checklist: account, keys, Desktop Mode, and pre-stream validation."}
+            </p>
+            <div className="mt-6">
+              <Link
+                href="/docs/tutorials/first-stream"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90"
+              >
+                {isRu ? "Открыть туториал" : "Open tutorial"}
+              </Link>
             </div>
-          ))}
-        </div>
-      </Container>
-
-      <Container>
-        <SectionHeading
-          eyebrow={content.docs.product.eyebrow}
-          title={content.docs.product.title}
-          subtitle={content.docs.product.subtitle}
-        />
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {content.docs.product.items.map((item) => (
-            <div key={item.id} id={item.id} className="glass-card rounded-2xl p-6 scroll-mt-24">
-              <h3 className="text-base font-semibold text-white">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-sm text-white/70">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </Container>
-
-      <Container>
-        <SectionHeading
-          eyebrow={content.docs.api.eyebrow}
-          title={content.docs.api.title}
-          subtitle={content.docs.api.subtitle}
-        />
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {content.docs.api.sections.map((section) => (
-            <div key={section.title} className="glass-card rounded-2xl p-6">
-              <h3 className="text-base font-semibold text-white">
-                {section.title}
-              </h3>
-              <p className="mt-3 text-sm text-white/70">
-                {section.description}
-              </p>
-              <ul className="mt-4 space-y-2 text-xs text-white/70">
-                {section.items.map((item) => (
-                  <li key={item}>• {item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            <p className="mt-4 text-xs text-white/50">
+              {isRu
+                ? "Часть функций может быть в beta — раздел обновляется." 
+                : "Some features may be in beta — this section evolves quickly."}
+            </p>
+          </div>
         </div>
       </Container>
 
       <Container>
         <SectionHeading
-          eyebrow={content.docs.glossary.eyebrow}
-          title={content.docs.glossary.title}
-          subtitle={content.docs.glossary.subtitle}
+          eyebrow={isRu ? "Дорожная карта" : "Roadmap"}
+          title={isRu ? "Что дальше" : "What is next"}
+          subtitle={isRu ? "Планы и обновления — в одном месте." : "Updates and plans in one place."}
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {content.docs.glossary.items.map((item) => (
-            <div key={item.term} className="glass-card rounded-2xl p-6">
-              <h3 className="text-base font-semibold text-white">
-                {item.term}
-              </h3>
-              <p className="mt-3 text-sm text-white/70">{item.description}</p>
-            </div>
-          ))}
+          <Link href="/roadmap" className="glass-card rounded-3xl p-6 transition-all hover:scale-[1.01]">
+            <h3 className="text-lg font-semibold text-white">{isRu ? "Roadmap" : "Roadmap"}</h3>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed">
+              {isRu ? "Ближайшие 90 дней: docs, туториалы, интеграции." : "Next 90 days: docs, tutorials, integrations."}
+            </p>
+            <p className="mt-5 text-xs text-cyan-200">{isRu ? "Открыть →" : "Open →"}</p>
+          </Link>
+          <Link href="/blog" className="glass-card rounded-3xl p-6 transition-all hover:scale-[1.01]">
+            <h3 className="text-lg font-semibold text-white">{isRu ? "Блог" : "Blog"}</h3>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed">
+              {isRu ? "Короткие гайды и разборы cost math." : "Guides, setup notes, and cost math."}
+            </p>
+            <p className="mt-5 text-xs text-cyan-200">{isRu ? "Открыть →" : "Open →"}</p>
+          </Link>
         </div>
       </Container>
     </div>

@@ -13,10 +13,8 @@ export default async function MarketingHeader() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const userEmail = user?.email ?? "";
 
   const links = [
-    { href: "/", label: t.nav.home },
     { href: "/use-cases", label: t.nav.useCases },
     { href: "/pricing", label: t.nav.pricing },
     { href: "/docs", label: t.nav.docs },
@@ -34,7 +32,7 @@ export default async function MarketingHeader() {
           </span>
           <div>
             <p className="text-sm font-semibold text-white">{t.common.brand}</p>
-            <p className="text-xs text-white/60 transition-colors group-hover:text-white/80">
+            <p className="hidden whitespace-nowrap text-xs text-white/60 transition-colors group-hover:text-white/80 lg:block">
               Web dashboard + desktop companion app for Unreal
             </p>
           </div>
@@ -49,21 +47,18 @@ export default async function MarketingHeader() {
               {item.label}
             </Link>
           ))}
-          {user ? (
-            <Link
-              href="/app"
-              className="relative text-white/70 transition-colors hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-violet-400 after:to-cyan-400 after:transition-all hover:after:w-full"
-            >
-              {t.common.dashboard}
-            </Link>
-          ) : null}
         </nav>
         <div className="flex flex-nowrap items-center gap-2 sm:gap-3">
           <div className="hidden items-center gap-3 md:flex">
-            {user ? <span className="text-xs text-white/60">{userEmail}</span> : null}
-            <Button variant="ghost" href="/app">
-              {t.common.openDashboard}
-            </Button>
+            {user ? (
+              <Button variant="ghost" href="/app">
+                {t.common.openDashboard}
+              </Button>
+            ) : (
+              <Button variant="ghost" href="/login">
+                {t.common.signIn}
+              </Button>
+            )}
             <Button href="/download">{t.common.downloadDemo}</Button>
           </div>
 
@@ -87,30 +82,21 @@ export default async function MarketingHeader() {
                     {item.label}
                   </Link>
                 ))}
-
-                {user ? (
-                  <Link
-                    href="/app"
-                    className="rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
-                  >
-                    {t.common.dashboard}
-                  </Link>
-                ) : null}
               </nav>
 
               <div className="mt-3 flex flex-col gap-2">
-                <Button variant="secondary" href="/app" className="w-full px-4 py-2 text-sm">
-                  {t.common.openDashboard}
-                </Button>
+                {user ? (
+                  <Button variant="secondary" href="/app" className="w-full px-4 py-2 text-sm">
+                    {t.common.openDashboard}
+                  </Button>
+                ) : (
+                  <Button variant="secondary" href="/login" className="w-full px-4 py-2 text-sm">
+                    {t.common.signIn}
+                  </Button>
+                )}
                 <Button href="/download" className="w-full px-4 py-2 text-sm">
                   {t.common.downloadDemo}
                 </Button>
-
-                {!user ? (
-                  <Button variant="ghost" href="/login" className="w-full px-4 py-2 text-sm">
-                    {t.common.signIn}
-                  </Button>
-                ) : null}
               </div>
             </div>
           </details>
