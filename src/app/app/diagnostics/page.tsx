@@ -14,34 +14,22 @@ export default function DiagnosticsPage() {
         <div className="glass-card rounded-3xl p-6">
           <h3 className="text-lg font-semibold text-white">Status</h3>
           <p className="mt-2 text-sm text-white/70">
-            This feature is in development. You can explore the UI now.
+            Preview. Desktop Mode diagnostics will show runtime connectivity, provider status, and connector health here.
           </p>
-
-          <div className="mt-4 space-y-2 text-sm text-white/70">
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-              Backend: not connected. Start the local service or check port settings.
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-              OpenAI key: missing
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-              ElevenLabs key: missing
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-              TikTok token: missing
-            </div>
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/70">
+            Connect the local runtime to populate diagnostics.
           </div>
         </div>
 
         <div className="glass-card rounded-3xl p-6">
           <h3 className="text-lg font-semibold text-white">Logs</h3>
           <p className="mt-2 text-sm text-white/70">
-            This feature is in development. You can explore the UI now.
+            Preview. Runtime logs will be viewable here.
           </p>
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
-          Note: UI only. No native logic is wired yet.
+          Note: Desktop Mode required.
         </div>
       </div>
     </DesktopOnlyGate>

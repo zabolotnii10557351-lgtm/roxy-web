@@ -8,7 +8,7 @@ export default function UnrealHubPage() {
       <div>
         <h2 className="text-2xl font-semibold text-white">Unreal</h2>
         <p className="mt-2 text-sm text-white/60">
-          Guides and placeholders for your RoxStreamAI → Unreal workflow. The Runtime Connector is coming soon.
+          Guides for your RoxStreamAI → Unreal workflow. The Runtime Connector is in preview.
         </p>
       </div>
 
@@ -31,7 +31,9 @@ export default function UnrealHubPage() {
             A native connector that will sync your character config, events, and facial animation in realtime.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <Button variant="secondary" href="/app/unreal/runtime-connector">Open Runtime Connector</Button>
+            <Button variant="secondary" href="/app/unreal/runtime-connector" disabled>
+              Open Runtime Connector (Coming soon)
+            </Button>
           </div>
           <p className="mt-3 text-xs text-white/50">
             Tip: You can already export a character JSON from the Character Builder.

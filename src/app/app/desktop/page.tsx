@@ -27,7 +27,7 @@ export default async function DesktopIntegrationsPage() {
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
-          Note: this is scaffolding only. No native logic is implemented yet.
+          Note: Desktop Mode required.
         </div>
       </div>
     </DesktopOnlyGate>

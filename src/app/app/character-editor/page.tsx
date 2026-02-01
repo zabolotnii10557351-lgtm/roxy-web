@@ -1,3 +1,4 @@
+import Badge from "@/components/Badge";
 import NotifyMeForm from "@/components/polyphoria/NotifyMeForm";
 
 export default function CharacterEditorPage() {
@@ -16,9 +17,15 @@ export default function CharacterEditorPage() {
 
       <div className="glass-card rounded-3xl p-6">
         {enabled ? (
-          <p className="text-sm text-white/70">
-            Placeholder: the embedded editor UI will live here.
-          </p>
+          <>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h3 className="text-lg font-semibold text-white">Editor</h3>
+              <Badge variant="outline">Preview</Badge>
+            </div>
+            <p className="mt-3 text-sm text-white/70">
+              The embedded editor surface will appear here. For now, use the Character Builder to edit persona and voice.
+            </p>
+          </>
         ) : (
           <>
             <p className="text-sm text-white/70">
