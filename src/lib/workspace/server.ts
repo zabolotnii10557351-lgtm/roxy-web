@@ -21,7 +21,21 @@ export async function requireUserAndWorkspace() {
     throw new Error(error.message);
   }
 
-  const workspaceId = settings?.default_workspace_id;
+  let workspaceId = settings?.default_workspace_id ?? null;
+  if (!workspaceId) {
+    const { data: ensuredWorkspaceId, error: ensureError } = await supabase.rpc(
+      "ensure_user_bootstrap"
+    );
+
+    if (ensureError) {
+      throw new Error(ensureError.message);
+    }
+
+    if (typeof ensuredWorkspaceId === "string" && ensuredWorkspaceId.length > 0) {
+      workspaceId = ensuredWorkspaceId;
+    }
+  }
+
   if (!workspaceId) {
     throw new Error("No default workspace configured.");
   }
