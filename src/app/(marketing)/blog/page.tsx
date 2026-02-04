@@ -2,13 +2,13 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { getBlogPosts } from "@/lib/blog-data";
-import { getContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 import { getLocaleFromRequest } from "@/i18n/server";
 
 export default async function BlogPage() {
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
-  const blogPosts = getBlogPosts(locale);
+  const content = await getMarketingContent(locale);
+  const blogPosts = await getBlogPosts(locale);
 
   return (
     <div className="space-y-20 pb-20 pt-16">

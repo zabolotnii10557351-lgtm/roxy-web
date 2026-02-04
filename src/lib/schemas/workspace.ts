@@ -76,11 +76,50 @@ export const ConnectorRowSchema = z.object({
 });
 
 export const DonoRuleConfigSchema = z.object({
-  trigger: z.object({
-    type: z.literal("gift").default("gift"),
-    giftId: z.string().default("rose"),
-    minAmount: z.number().int().min(1).default(1),
-  }),
+  trigger: z.preprocess(
+    (val) => {
+      if (val == null || typeof val !== "object") {
+        return { type: "gift", region: "global", giftId: "rose", minAmount: 1 };
+      }
+
+      const v = val as Record<string, unknown>;
+      const type = typeof v.type === "string" ? v.type : "gift";
+      if (type === "gift") {
+        return {
+          type: "gift",
+          region: typeof v.region === "string" ? v.region : "global",
+          giftId: typeof v.giftId === "string" ? v.giftId : "rose",
+          minAmount: typeof v.minAmount === "number" ? v.minAmount : 1,
+        };
+      }
+
+      return v;
+    },
+    z.discriminatedUnion("type", [
+      z.object({
+        type: z.literal("gift"),
+        region: z.string().default("global"),
+        giftId: z.string().default("rose"),
+        minAmount: z.number().int().min(1).default(1),
+      }),
+      z.object({
+        type: z.literal("likes"),
+        minLikes: z.number().int().min(1).default(50),
+      }),
+      z.object({
+        type: z.literal("reposts"),
+        minReposts: z.number().int().min(1).default(1),
+      }),
+      z.object({
+        type: z.literal("subscribe"),
+        minCount: z.number().int().min(1).default(1),
+      }),
+      z.object({
+        type: z.literal("follow"),
+        minCount: z.number().int().min(1).default(1),
+      }),
+    ]),
+  ),
   cooldownSeconds: z.number().int().min(0).default(10),
   reaction: z.object({
     text: z.string().default(""),
@@ -98,18 +137,52 @@ export const DonoRuleRowSchema = z.object({
   created_at: z.string().optional(),
 });
 
-export const StreamScriptConfigSchema = z.object({
+const StreamScriptMessageSchema = z.object({
+  text: z.string().default(""),
+  emotionTag: z.string().default("neutral"),
+});
+
+const StreamScriptConditionsSchema = z.object({
+  minChatMessagesLast5Min: z.number().int().min(0).default(10),
+});
+
+export const StreamScriptIntervalConfigSchema = z.object({
   type: z.literal("interval").default("interval"),
   intervalSeconds: z.number().int().min(1).default(600),
-  conditions: z.object({
-    minChatMessagesLast5Min: z.number().int().min(0).default(10),
-  }),
-  message: z.object({
-    text: z.string().default(""),
-    emotionTag: z.string().default("neutral"),
-  }),
+  // Planning helpers (UI-only metadata; still stored in config)
+  segmentMinutes: z.number().int().min(1).max(24 * 60).default(60),
+  behaviorPreset: z.string().min(1).default("neutral"),
+  conditions: StreamScriptConditionsSchema,
+  message: StreamScriptMessageSchema,
   enabled: z.boolean().default(true),
 });
+
+export const StreamScriptPlanSegmentSchema = z.object({
+  name: z.string().min(1).default("Segment"),
+  durationMinutes: z.number().int().min(1).max(24 * 60).default(60),
+  intervalSeconds: z.number().int().min(1).default(600),
+  behaviorPreset: z.string().min(1).default("neutral"),
+  conditions: StreamScriptConditionsSchema,
+  message: StreamScriptMessageSchema,
+  enabled: z.boolean().default(true),
+});
+
+export const StreamScriptPlanConfigSchema = z.object({
+  type: z.literal("plan"),
+  totalMinutes: z.number().int().min(1).max(24 * 60).default(240),
+  segments: z.array(StreamScriptPlanSegmentSchema).default([]),
+  enabled: z.boolean().default(true),
+});
+
+export const StreamScriptConfigSchema = z.preprocess(
+  (val) => {
+    if (val == null || typeof val !== "object") {
+      return { type: "interval" };
+    }
+    return val;
+  },
+  z.discriminatedUnion("type", [StreamScriptIntervalConfigSchema, StreamScriptPlanConfigSchema]),
+);
 
 export const StreamScriptRowSchema = z.object({
   id: IdSchema,

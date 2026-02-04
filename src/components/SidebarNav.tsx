@@ -9,12 +9,10 @@ import {
   Plug,
   Gift,
   ScrollText,
-  Sparkles,
   Box,
   Monitor,
   Activity,
   Layers,
-  Rocket,
   CreditCard,
   Settings,
 } from "lucide-react";
@@ -53,7 +51,6 @@ export default function SidebarNav({
     { href: "/app/stream-connectors", label: t.app.connectors, icon: Plug },
     { href: "/app/dono-engine", label: t.app.donoEngine, icon: Gift },
     { href: "/app/scripts", label: t.app.scripts, icon: ScrollText },
-    { href: "/app/avatar-scene", label: t.app.avatarScene, icon: Sparkles },
     ...(isDesktopMode
       ? [
           { href: "/app/unreal", label: t.app.unrealConnector, icon: Box },
@@ -61,7 +58,6 @@ export default function SidebarNav({
           { href: "/app/diagnostics", label: t.app.diagnostics, icon: Activity },
         ]
       : []),
-    { href: "/app/deploy", label: t.app.deploy, icon: Rocket },
     { href: "/app/billing", label: t.app.billing, icon: CreditCard },
     { href: "/app/settings", label: t.app.settings, icon: Settings },
     ...(isAdmin

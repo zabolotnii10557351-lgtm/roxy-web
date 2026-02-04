@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
-import { getContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 import { getLocaleFromRequest } from "@/i18n/server";
 import { getContentBlock } from "@/server/content/getContentBlock";
 import ContactForm from "@/app/(marketing)/contact/contact-form";
@@ -19,7 +19,7 @@ export default async function ContactPage(props: {
   const initialEmail = getQueryFirst(searchParams.email);
 
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
+  const content = await getMarketingContent(locale);
 
   const cmsTitle = await getContentBlock({ key: "contact.title", locale });
   const cmsSubtitle = await getContentBlock({ key: "contact.subtitle", locale });

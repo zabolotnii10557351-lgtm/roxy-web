@@ -38,27 +38,19 @@ function mergeConfig(
     return current;
   }
 
-  const parsedNext = StreamScriptConfigSchema.partial().safeParse(next);
-  const nextConfig = parsedNext.success ? parsedNext.data : {};
-
-  const merged = {
-    ...current,
-    ...nextConfig,
-    conditions: {
-      ...current.conditions,
-      ...(nextConfig as { conditions?: Record<string, unknown> }).conditions,
-    },
-    message: {
-      ...current.message,
-      ...(nextConfig as { message?: Record<string, unknown> }).message,
-    },
-  } as z.infer<typeof StreamScriptConfigSchema>;
-
-  if (typeof enabledOverride === "boolean") {
-    merged.enabled = enabledOverride;
+  const parsedNext = StreamScriptConfigSchema.safeParse(next);
+  if (!parsedNext.success) {
+    if (typeof enabledOverride === "boolean") {
+      return StreamScriptConfigSchema.parse({ ...current, enabled: enabledOverride });
+    }
+    return current;
   }
 
-  return StreamScriptConfigSchema.parse(merged);
+  const replacement = parsedNext.data;
+  if (typeof enabledOverride === "boolean") {
+    return StreamScriptConfigSchema.parse({ ...replacement, enabled: enabledOverride });
+  }
+  return StreamScriptConfigSchema.parse(replacement);
 }
 
 export async function GET() {

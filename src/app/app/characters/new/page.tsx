@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { CharacterConfigSchema } from "@/lib/schemas/workspace";
 import { getUserPlanEntitlements } from "@/lib/pricing/server";
+import { getLocaleFromRequest } from "@/i18n/server";
 
 export default async function NewCharacterPage() {
   const { supabase, workspaceId, user } = await requireUserAndWorkspace();
@@ -34,7 +35,10 @@ export default async function NewCharacterPage() {
     }
   }
 
-  const defaultConfig = CharacterConfigSchema.parse({});
+  const locale = await getLocaleFromRequest();
+  const defaultConfig = CharacterConfigSchema.parse({
+    language: { primary: locale },
+  });
 
   const { data, error } = await supabase
     .from("characters")

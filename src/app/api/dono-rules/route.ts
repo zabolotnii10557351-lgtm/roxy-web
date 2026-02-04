@@ -41,13 +41,20 @@ function mergeConfig(
   const parsedNext = DonoRuleConfigSchema.partial().safeParse(next);
   const nextConfig = parsedNext.success ? parsedNext.data : {};
 
+  const currentTriggerType = (current.trigger as { type?: unknown } | undefined)?.type;
+  const nextTriggerType = (nextConfig.trigger as { type?: unknown } | undefined)?.type;
+  const shouldReplaceTrigger =
+    typeof nextTriggerType === "string" && nextTriggerType !== currentTriggerType;
+
   const merged = {
     ...current,
     ...nextConfig,
-    trigger: {
-      ...current.trigger,
-      ...(nextConfig as { trigger?: Record<string, unknown> }).trigger,
-    },
+    trigger: shouldReplaceTrigger
+      ? (nextConfig.trigger ?? current.trigger)
+      : {
+          ...current.trigger,
+          ...(nextConfig as { trigger?: Record<string, unknown> }).trigger,
+        },
     reaction: {
       ...current.reaction,
       ...(nextConfig as { reaction?: Record<string, unknown> }).reaction,

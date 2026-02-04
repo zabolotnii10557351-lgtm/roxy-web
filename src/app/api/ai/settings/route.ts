@@ -103,9 +103,9 @@ export async function POST(req: Request) {
     }
 
     const brain_provider = parsed.data.brain_provider ?? "openai";
-    const brain_model = parsed.data.brain_model ?? "gpt-4o-mini";
+    const brain_model = parsed.data.brain_model?.trim() || "gpt-4o-mini";
     const voice_provider = parsed.data.voice_provider ?? "openai";
-    const voice_voice_id = parsed.data.voice_voice_id ?? "alloy";
+    const voice_voice_id = parsed.data.voice_voice_id?.trim() || "alloy";
 
     if (voice_provider === "elevenlabs") {
       const { entitlements } = await getUserPlanEntitlements({

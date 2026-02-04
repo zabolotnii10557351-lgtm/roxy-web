@@ -34,12 +34,14 @@ function resolveBrainProviderKey(providerId: BrainProviderId, userOpenAiKey: str
 }
 
 function resolveBrainModel(providerId: BrainProviderId, storedModel: string | null) {
+  const cleaned = storedModel?.trim() || null;
+
   if (providerId === "openai") {
-    return storedModel ?? "gpt-4o-mini";
+    return cleaned ?? "gpt-4o-mini";
   }
 
-  if (storedModel && storedModel.trim().length > 0) {
-    return storedModel;
+  if (cleaned) {
+    return cleaned;
   }
 
   if (providerId === "anthropic") {

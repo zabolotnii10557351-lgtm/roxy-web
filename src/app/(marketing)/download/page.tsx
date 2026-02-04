@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getIsAdminForCurrentUser } from "@/lib/auth";
-import { getContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 import { getLocaleFromRequest } from "@/i18n/server";
 
 interface ReleaseRow {
@@ -18,7 +18,7 @@ interface ReleaseRow {
 
 export default async function DownloadPage() {
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
+  const content = await getMarketingContent(locale);
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

@@ -21,6 +21,36 @@ const PatchSchema = z
   })
   .strict();
 
+type ConnectorRowFull = {
+  id: string;
+  provider: z.infer<typeof ProviderSchema> | string;
+  status: string;
+  config: unknown | null;
+  created_at?: string | null;
+};
+
+type ConnectorRowLegacy = {
+  id: string;
+  provider: z.infer<typeof ProviderSchema> | string;
+  config: unknown | null;
+  created_at?: string | null;
+};
+
+function isMissingColumnError(message: string | undefined, columnName: string) {
+  if (!message) return false;
+  const m = message.toLowerCase();
+  const col = columnName.toLowerCase();
+  return (
+    m.includes(`'${col}'`) && m.includes("schema cache")
+  ) || m.includes(`column connectors.${col} does not exist`);
+}
+
+function isMissingCreatedAtError(message: string | undefined) {
+  if (!message) return false;
+  const m = message.toLowerCase();
+  return m.includes("created_at") && (m.includes("does not exist") || m.includes("schema cache"));
+}
+
 async function setActiveForProvider(params: {
   supabase: Awaited<ReturnType<typeof requireUserAndWorkspace>>["supabase"];
   workspaceId: string;
@@ -57,17 +87,57 @@ async function setActiveForProvider(params: {
 export async function GET() {
   const { supabase, workspaceId } = await requireUserAndWorkspace();
 
-  const { data, error } = await supabase
+  const primary = await supabase
     .from("connectors")
     .select("id, provider, status, config, created_at")
     .eq("workspace_id", workspaceId)
     .order("created_at", { ascending: false });
 
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 400 });
+  if (!primary.error) {
+    return NextResponse.json({ items: primary.data ?? [] });
   }
 
-  return NextResponse.json({ items: data ?? [] });
+  // Backwards-compatible fallback for older schemas.
+  if (isMissingColumnError(primary.error.message, "status") || isMissingCreatedAtError(primary.error.message)) {
+    const fallback = await supabase
+      .from("connectors")
+      .select("id, provider, config, created_at")
+      .eq("workspace_id", workspaceId)
+      .order("created_at", { ascending: false });
+
+    if (fallback.error && isMissingCreatedAtError(fallback.error.message)) {
+      // Oldest schemas might not have created_at.
+      const retryWithoutOrder = await supabase
+        .from("connectors")
+        .select("id, provider, config")
+        .eq("workspace_id", workspaceId);
+
+      if (retryWithoutOrder.error) {
+        return NextResponse.json(
+          { error: retryWithoutOrder.error.message },
+          { status: 400 }
+        );
+      }
+
+      const items = ((retryWithoutOrder.data ?? []) as ConnectorRowLegacy[]).map((row) => ({
+        ...row,
+        status: "connected",
+      }));
+      return NextResponse.json({ items });
+    }
+
+    if (fallback.error) {
+      return NextResponse.json({ error: fallback.error.message }, { status: 400 });
+    }
+
+    const items = ((fallback.data ?? []) as ConnectorRowLegacy[]).map((row) => ({
+      ...row,
+      status: "connected",
+    }));
+    return NextResponse.json({ items });
+  }
+
+  return NextResponse.json({ error: primary.error.message }, { status: 400 });
 }
 
 export async function POST(req: Request) {
@@ -111,19 +181,49 @@ export async function POST(req: Request) {
     is_active: Boolean(parsed.data.setActive),
   };
 
+  const insertPayloadWithStatus: Record<string, unknown> = {
+    workspace_id: workspaceId,
+    provider: parsed.data.provider,
+    status: "connected",
+    config,
+  };
+
   const { data, error } = await supabase
     .from("connectors")
-    .insert({
-      workspace_id: workspaceId,
-      provider: parsed.data.provider,
-      status: "connected",
-      config,
-    })
+    .insert(insertPayloadWithStatus)
     .select("id, provider, status, config, created_at")
     .single();
 
+  let inserted: ConnectorRowFull | null = (data as ConnectorRowFull | null) ?? null;
+
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 400 });
+    // Retry without the status column (older migrations not applied yet).
+    if (isMissingColumnError(error.message, "status")) {
+      const retry = await supabase
+        .from("connectors")
+        .insert({
+          workspace_id: workspaceId,
+          provider: parsed.data.provider,
+          config,
+        })
+        .select("id, provider, config, created_at")
+        .single();
+
+      if (retry.error) {
+        return NextResponse.json({ error: retry.error.message }, { status: 400 });
+      }
+
+      const retryRow = (retry.data as ConnectorRowLegacy | null) ?? null;
+      inserted = retryRow
+        ? { ...retryRow, status: "connected" }
+        : null;
+    } else {
+      return NextResponse.json({ error: error.message }, { status: 400 });
+    }
+  }
+
+  if (!inserted) {
+    return NextResponse.json({ error: "Failed to create connector." }, { status: 500 });
   }
 
   if (parsed.data.setActive) {
@@ -131,11 +231,11 @@ export async function POST(req: Request) {
       supabase,
       workspaceId,
       provider: parsed.data.provider,
-      activeId: data.id,
+      activeId: inserted.id,
     });
   }
 
-  return NextResponse.json({ item: data });
+  return NextResponse.json({ item: inserted });
 }
 
 export async function PATCH(req: Request) {

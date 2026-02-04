@@ -326,22 +326,6 @@ export default function BillingPage() {
         </div>
       </div>
 
-      <div className="glass-card rounded-3xl p-6">
-        <h3 className="text-lg font-semibold text-white">
-          {t.app.billingSummary}
-        </h3>
-        <div className="mt-4 grid gap-4 text-sm text-white/70 md:grid-cols-3">
-          <div className="rounded-2xl border border-white/10 px-4 py-3">
-            {isTrialExpired ? t.app.trialEnded : t.app.nextInvoice}
-          </div>
-          <div className="rounded-2xl border border-white/10 px-4 py-3">
-            Payment method: Visa •••• 8842
-          </div>
-          <div className="rounded-2xl border border-white/10 px-4 py-3">
-            Usage alerts: On
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

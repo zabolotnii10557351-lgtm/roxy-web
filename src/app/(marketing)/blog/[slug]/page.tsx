@@ -3,7 +3,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { getBlogPost } from "@/lib/blog-data";
-import { getContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 import { getLocaleFromRequest } from "@/i18n/server";
 
 export default async function BlogPostPage({
@@ -12,8 +12,8 @@ export default async function BlogPostPage({
   params: { slug: string };
 }) {
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
-  const post = getBlogPost(locale, params.slug);
+  const content = await getMarketingContent(locale);
+  const post = await getBlogPost(locale, params.slug);
 
   if (!post) {
     notFound();

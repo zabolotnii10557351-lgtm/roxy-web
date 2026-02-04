@@ -1,10 +1,10 @@
 import Container from "@/components/Container";
-import { getContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 import { getLocaleFromRequest } from "@/i18n/server";
 
 export default async function PrivacyPage() {
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
+  const content = await getMarketingContent(locale);
 
   return (
     <div className="pb-20 pt-16">

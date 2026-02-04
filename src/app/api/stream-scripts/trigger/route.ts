@@ -40,11 +40,39 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Stream script is disabled." }, { status: 400 });
   }
 
+  const resolved =
+    config.type === "plan"
+      ? (() => {
+          const seg = config.segments.find((s) => s.enabled);
+          if (!seg) return null;
+          return {
+            segmentName: seg.name,
+            message: seg.message,
+            intervalSeconds: seg.intervalSeconds,
+            segmentMinutes: seg.durationMinutes,
+            behaviorPreset: seg.behaviorPreset,
+          };
+        })()
+      : {
+          segmentName: null,
+          message: config.message,
+          intervalSeconds: config.intervalSeconds,
+          segmentMinutes: config.segmentMinutes,
+          behaviorPreset: config.behaviorPreset,
+        };
+
+  if (!resolved) {
+    return NextResponse.json({ error: "Stream script has no enabled segments." }, { status: 400 });
+  }
+
   const payload = {
     scriptId: script.id,
     name: script.name,
-    message: config.message,
-    intervalSeconds: config.intervalSeconds,
+    segmentName: resolved.segmentName,
+    message: resolved.message,
+    intervalSeconds: resolved.intervalSeconds,
+    segmentMinutes: resolved.segmentMinutes,
+    behaviorPreset: resolved.behaviorPreset,
     provider: parsed.data.provider ?? null,
   };
 

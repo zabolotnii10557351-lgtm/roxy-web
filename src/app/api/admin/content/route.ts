@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { assertAdminForAction } from "@/lib/auth";
+import type { Locale } from "@/i18n/locales";
+import { getContent } from "@/i18n/content";
+import { DEFAULT_LOCALE } from "@/lib/content/fallback";
+import { getHomeContentFallback } from "@/lib/content/homeContent";
 import { writeAdminAuditLog } from "@/server/admin/audit";
 import { rateLimitSlidingWindow } from "@/server/rateLimit";
 
@@ -26,7 +30,8 @@ export async function GET(req: Request) {
 
     const url = new URL(req.url);
     const q = url.searchParams.get("q")?.trim() ?? "";
-    const locale = url.searchParams.get("locale")?.trim() ?? "";
+    const localeParam = url.searchParams.get("locale")?.trim() ?? "";
+    const locale = localeParam || DEFAULT_LOCALE;
 
     let query = client
       .from("content_blocks")
@@ -48,7 +53,57 @@ export async function GET(req: Request) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ items: data ?? [] });
+    const items = data ?? [];
+
+    const ensureFallback = (
+      key: string,
+      markdown: string,
+      fallbackLocale: string,
+    ) => {
+      const exists = items.some(
+        (row) => row.key === key && row.locale === fallbackLocale,
+      );
+
+      if (!exists) {
+        const qValue = q.toLowerCase();
+        const shouldInclude =
+          !qValue ||
+          key.toLowerCase().includes(qValue) ||
+          markdown.toLowerCase().includes(qValue);
+
+        if (shouldInclude) {
+          items.push({
+            id: `fallback:${key}:${fallbackLocale}`,
+            key,
+            locale: fallbackLocale,
+            markdown,
+            is_published: true,
+            updated_at: null,
+            updated_by: null,
+          });
+        }
+      }
+    };
+
+    ensureFallback(
+      "home.content",
+      JSON.stringify(getHomeContentFallback(locale as Locale), null, 2),
+      locale,
+    );
+
+    ensureFallback(
+      "marketing.content",
+      JSON.stringify(getContent(locale as Locale), null, 2),
+      locale,
+    );
+
+    items.sort((a, b) => {
+      const keySort = a.key.localeCompare(b.key);
+      if (keySort !== 0) return keySort;
+      return a.locale.localeCompare(b.locale);
+    });
+
+    return NextResponse.json({ items });
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Not authorized" },

@@ -1,12 +1,15 @@
 import type { Locale } from "@/i18n/locales";
-import { getContent, type BlogPostContent } from "@/i18n/content";
+import { type BlogPostContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 
 export type BlogPost = BlogPostContent;
 
-export function getBlogPosts(locale: Locale) {
-  return getContent(locale).blogPosts;
+export async function getBlogPosts(locale: Locale) {
+  const content = await getMarketingContent(locale);
+  return content.blogPosts;
 }
 
-export function getBlogPost(locale: Locale, slug: string) {
-  return getContent(locale).blogPosts.find((post) => post.slug === slug);
+export async function getBlogPost(locale: Locale, slug: string) {
+  const content = await getMarketingContent(locale);
+  return content.blogPosts.find((post) => post.slug === slug);
 }

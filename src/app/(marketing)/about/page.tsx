@@ -1,12 +1,12 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
-import { getContent } from "@/i18n/content";
+import { getMarketingContent } from "@/server/content/getMarketingContent";
 import { getLocaleFromRequest } from "@/i18n/server";
 import { getContentBlock } from "@/server/content/getContentBlock";
 
 export default async function AboutPage() {
   const locale = await getLocaleFromRequest();
-  const content = getContent(locale);
+  const content = await getMarketingContent(locale);
 
   const cmsTitle = await getContentBlock({ key: "about.title", locale });
   const cmsSubtitle = await getContentBlock({ key: "about.subtitle", locale });

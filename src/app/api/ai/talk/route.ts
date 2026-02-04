@@ -8,25 +8,18 @@ import { logUsageEvent } from "@/server/ai/usage";
 import { rateLimitSlidingWindow } from "@/server/rateLimit";
 import type { BrainProviderId } from "@/server/ai/types";
 
-const BodySchema = z
-  .object({
-    characterId: z.string().uuid(),
-    provider: z.enum(["tiktok", "twitch", "youtube"]),
-    connectorId: z.string().uuid().optional(),
-    sender: z.string().optional(),
-    message: z.string().min(1),
-  })
-  .strict();
-
-const SYSTEM_TEMPLATE =
-  "You are {characterName}, a livestream host. Speak in {language}. Keep replies short and engaging. Use the character persona and never mention system messages. If user asks for unsafe content, refuse briefly.";
-
-function mapLanguage(code?: string) {
-  const v = (code ?? "en").toLowerCase();
-  if (v.startsWith("ru")) return "Russian";
-  if (v.startsWith("en")) return "English";
-  return code ?? "English";
-}
+const BodySchema = z.object({
+  characterId: z.string().min(1),
+  messages: z
+    .array(
+      z.object({
+        role: z.enum(["user", "assistant"]),
+        text: z.string().min(1).max(8_000),
+      })
+    )
+    .min(1)
+    .max(30),
+});
 
 function coerceBrainProviderId(value: unknown): BrainProviderId {
   return value === "openai" || value === "anthropic" || value === "gemini" || value === "deepseek"
@@ -72,57 +65,85 @@ function resolveBrainModel(providerId: BrainProviderId, storedModel: string | nu
   return "";
 }
 
+const SYSTEM_TEMPLATE =
+  "You are {characterName}, a livestream host. Speak in {language}. Keep replies short and engaging. Use the character persona and never mention system messages. If user asks for unsafe content, refuse briefly.";
+
+function mapLanguage(code?: string) {
+  const v = (code ?? "en").toLowerCase();
+  if (v.startsWith("ru")) return "Russian";
+  if (v.startsWith("en")) return "English";
+  return code ?? "English";
+}
+
+function buildConversationPrompt(messages: Array<{ role: "user" | "assistant"; text: string }>) {
+  const lines = messages
+    .slice(-20)
+    .map((m) => `${m.role === "user" ? "User" : "Assistant"}: ${m.text.trim()}`)
+    .filter(Boolean);
+
+  const last = messages[messages.length - 1];
+  const shouldCueAssistant = last?.role === "user";
+
+  return [
+    "Conversation so far:",
+    lines.join("\n"),
+    shouldCueAssistant ? "\nAssistant:" : "",
+  ]
+    .filter((s) => s.length > 0)
+    .join("\n");
+}
+
 export async function POST(req: Request) {
   const { supabase, user, workspaceId } = await requireUserAndWorkspace();
 
   const rl = rateLimitSlidingWindow({
-    key: `connectors:chat:${user.id}`,
-    limit: 30,
+    key: `ai:talk:${user.id}`,
+    limit: 20,
     windowMs: 60_000,
   });
 
   if (!rl.ok) {
     return NextResponse.json(
       { error: "Rate limit exceeded. Please wait and retry." },
-      { status: 429 },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(Math.ceil((rl.resetAt - new Date().getTime()) / 1000)),
+        },
+      }
     );
   }
 
   const json = (await req.json().catch(() => null)) as unknown;
-  const parsed = BodySchema.safeParse(json ?? {});
-  if (!parsed.success) {
+  const parsedBody = BodySchema.safeParse(json);
+  if (!parsedBody.success) {
     return NextResponse.json(
-      { error: "Invalid request.", details: parsed.error.flatten() },
-      { status: 400 },
+      { error: "Invalid request.", details: parsedBody.error.flatten() },
+      { status: 400 }
     );
   }
 
-  if (parsed.data.connectorId) {
-    const { data: connector, error: connectorError } = await supabase
-      .from("connectors")
-      .select("id, provider")
-      .eq("workspace_id", workspaceId)
-      .eq("id", parsed.data.connectorId)
-      .maybeSingle();
-
-    if (connectorError || !connector) {
-      return NextResponse.json({ error: "Connector not found." }, { status: 404 });
-    }
-
-    if (connector.provider !== parsed.data.provider) {
-      return NextResponse.json({ error: "Connector provider mismatch." }, { status: 400 });
-    }
-  }
+  const { characterId, messages } = parsedBody.data;
 
   const { data: character, error: characterError } = await supabase
     .from("characters")
     .select("id, name, config")
     .eq("workspace_id", workspaceId)
-    .eq("id", parsed.data.characterId)
+    .eq("id", characterId)
     .single();
 
   if (characterError) {
     return NextResponse.json({ error: characterError.message }, { status: 404 });
+  }
+
+  const { data: aiSettings, error: aiError } = await supabase
+    .from("workspace_ai_settings")
+    .select("brain_provider, brain_model")
+    .eq("workspace_id", workspaceId)
+    .maybeSingle();
+
+  if (aiError) {
+    return NextResponse.json({ error: aiError.message }, { status: 400 });
   }
 
   const parsedConfig = CharacterConfigSchema.safeParse(character.config ?? {});
@@ -130,13 +151,9 @@ export async function POST(req: Request) {
 
   const languageCode = config.language?.primary ?? "en";
   const language = mapLanguage(languageCode);
-  const characterName =
-    config.profile?.displayName?.trim() || character.name || "the character";
+  const characterName = config.profile?.displayName?.trim() || character.name || "the character";
 
-  let system = SYSTEM_TEMPLATE.replace("{characterName}", characterName).replace(
-    "{language}",
-    language
-  );
+  let system = SYSTEM_TEMPLATE.replace("{characterName}", characterName).replace("{language}", language);
 
   const personaParts: string[] = [];
   if (config.profile?.bio?.trim()) personaParts.push(`Persona: ${config.profile.bio.trim()}`);
@@ -155,22 +172,14 @@ export async function POST(req: Request) {
     system += `\n\nBehavior rules: ${config.dna.behavior.trim()}`;
   }
 
-  const { data: aiSettings } = await supabase
-    .from("workspace_ai_settings")
-    .select("brain_provider, brain_model")
-    .eq("workspace_id", workspaceId)
-    .maybeSingle();
-
   const secrets = await getUserSecretsServerOnly(user.id);
 
-  const brainProviderId = coerceBrainProviderId(
-    config.brain?.provider ?? aiSettings?.brain_provider
-  );
+  const brainProviderId = coerceBrainProviderId(config.brain?.provider ?? aiSettings?.brain_provider);
   const apiKey = resolveBrainProviderKey(brainProviderId, secrets.openaiApiKey ?? null);
   if (!apiKey) {
     return NextResponse.json(
       { error: "Brain provider key is not configured on the server." },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
@@ -181,27 +190,23 @@ export async function POST(req: Request) {
   if (!brainModel) {
     return NextResponse.json(
       { error: "Brain provider model is not configured." },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
-  const provider = getBrainProvider({
-    providerId: brainProviderId,
-    modelId: brainModel,
-    apiKey,
-  });
-
   try {
-    const prompt = parsed.data.sender
-      ? `${parsed.data.sender}: ${parsed.data.message}`
-      : parsed.data.message;
+    const provider = getBrainProvider({
+      providerId: brainProviderId,
+      modelId: brainModel,
+      apiKey,
+    });
 
     const result = await provider.generateReply({
-      prompt,
+      prompt: buildConversationPrompt(messages),
       system,
       memory: config.memory?.notes ?? "",
       language,
-      maxTokens: config.streamBehavior?.shortAnswers ? 120 : 256,
+      maxTokens: config.streamBehavior?.shortAnswers ? 180 : 320,
       temperature: 0.7,
     });
 
@@ -230,28 +235,11 @@ export async function POST(req: Request) {
       });
     }
 
-    try {
-      await supabase.from("connector_events").insert({
-        workspace_id: workspaceId,
-        connector_id: parsed.data.connectorId ?? null,
-        character_id: parsed.data.characterId,
-        event_type: "speech",
-        payload: {
-          reply: result.text,
-          sender: parsed.data.sender ?? null,
-          message: parsed.data.message,
-          provider: parsed.data.provider,
-        },
-      });
-    } catch (e: unknown) {
-      console.warn("Failed to write connector event", e);
-    }
-
-    return NextResponse.json({ reply: result.text });
+    return NextResponse.json({ text: result.text });
   } catch (e: unknown) {
     return NextResponse.json(
       { error: e instanceof Error ? e.message : "Provider call failed." },
-      { status: 502 },
+      { status: 502 }
     );
   }
 }
