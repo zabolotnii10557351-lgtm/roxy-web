@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { getVoiceProvider } from "@/server/ai/registry";
 import { getUserSecretsServerOnly } from "@/server/ai/secrets";
+import { logUsageEvent } from "@/server/ai/usage";
 import { rateLimitSlidingWindow } from "@/server/rateLimit";
+import { getUserPlanEntitlements } from "@/lib/pricing/server";
 import { z } from "zod";
 import type { VoiceProviderId } from "@/server/ai/types";
 
@@ -70,6 +72,18 @@ export async function POST(req: Request) {
   const secrets = await getUserSecretsServerOnly(user.id);
 
   if (voiceProvider === "elevenlabs") {
+    const { entitlements } = await getUserPlanEntitlements({
+      supabase,
+      userId: user.id,
+    });
+
+    if (entitlements && entitlements.allow_byok_elevenlabs === false) {
+      return NextResponse.json(
+        { error: "ElevenLabs BYOK is not available on your plan." },
+        { status: 403 }
+      );
+    }
+
     const key = secrets.elevenlabsApiKey;
     if (!key) {
       return NextResponse.json(
@@ -81,6 +95,20 @@ export async function POST(req: Request) {
     try {
       const provider = getVoiceProvider({ providerId: "elevenlabs", apiKey: key });
       const out = await provider.synthesize({ text, voiceId, language });
+
+      if (out.charCount) {
+        await logUsageEvent({
+          supabase,
+          workspaceId,
+          userId: user.id,
+          provider: "elevenlabs",
+          model: null,
+          type: "tts_chars",
+          amount: out.charCount,
+          unit: "chars",
+          isBillable: false,
+        });
+      }
 
       const body = new Uint8Array(out.audioBuffer);
 
@@ -118,6 +146,21 @@ export async function POST(req: Request) {
   try {
     const provider = getVoiceProvider({ providerId: "openai", apiKey: openAiKey });
     const out = await provider.synthesize({ text, voiceId, language });
+
+    if (out.charCount) {
+      const isBillable = secrets.openaiApiKey == null;
+      await logUsageEvent({
+        supabase,
+        workspaceId,
+        userId: user.id,
+        provider: "openai",
+        model: null,
+        type: "tts_chars",
+        amount: out.charCount,
+        unit: "chars",
+        isBillable,
+      });
+    }
 
     const body = new Uint8Array(out.audioBuffer);
 

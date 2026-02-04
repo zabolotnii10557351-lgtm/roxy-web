@@ -123,6 +123,15 @@ export async function POST(req: Request) {
       voiceId: config.voice?.voiceId ?? "",
       style: config.voice?.style ?? {},
     },
+    brain: {
+      provider: config.brain?.provider ?? "openai",
+      model: config.brain?.model ?? "gpt-4o-mini",
+    },
+    dna: {
+      systemPrompt: config.dna?.systemPrompt ?? "",
+      behavior: config.dna?.behavior ?? "",
+      style: config.dna?.style ?? "",
+    },
     donoRules: includeDonoRules
       ? (Array.isArray(donoRules.data) ? donoRules.data.map((r: unknown) => DonoRuleRowSchema.parse(r)) : [])
       : undefined,
@@ -135,7 +144,7 @@ export async function POST(req: Request) {
     createdAt: character.created_at ?? new Date().toISOString(),
     instructions: {
       unreal:
-        "Use this config with RoxStreamAI Unreal Connector (coming soon). For now, map emotions/events manually.",
+        "Use this config with the RoxStreamAI Unreal Runtime Connector. Poll /api/unreal/events for speech/events and map them to your avatar actions.",
     },
   };
 

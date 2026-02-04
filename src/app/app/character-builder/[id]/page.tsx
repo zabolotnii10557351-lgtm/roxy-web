@@ -19,6 +19,8 @@ type CharacterRow = {
   config: unknown;
 };
 
+const OPENAI_VOICES = ["alloy", "verse", "aria", "sage", "coral"];
+
 function voiceProviderToApi(provider: string): "openai" | "elevenlabs" {
   return provider === "elevenlabs_byok" ? "elevenlabs" : "openai";
 }
@@ -42,8 +44,27 @@ export default function CharacterBuilderByIdPage() {
   const [replyBusy, setReplyBusy] = useState(false);
   const [replyText, setReplyText] = useState<string | null>(null);
 
+  const [voiceSampleText, setVoiceSampleText] = useState(
+    () => t.app.characterBuilderDefaultUserMessage
+  );
   const [voiceBusy, setVoiceBusy] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const [fastDnaPrompt, setFastDnaPrompt] = useState("");
+  const [fastDnaBusy, setFastDnaBusy] = useState(false);
+  const [fastDnaResult, setFastDnaResult] = useState<
+    | {
+        persona: string;
+        system_prompt: string;
+        behavior_rules: string;
+        style: string;
+        safety_rules: string[];
+        sample_lines: string[];
+        stream_behavior: { short_answers: boolean; max_response_seconds: number };
+        goals: string;
+      }
+    | null
+  >(null);
 
   const config = useMemo(() => {
     const parsed = CharacterConfigSchema.safeParse(character?.config ?? {});
@@ -165,9 +186,11 @@ export default function CharacterBuilderByIdPage() {
     setSaveMessage(null);
 
     const language = config.language?.primary ?? "en";
-    const text = language.toLowerCase().startsWith("ru")
-      ? "Привет! Это тест голоса RoxStreamAI."
-      : "Hello! This is a RoxStreamAI voice test.";
+    const text = voiceSampleText.trim().length > 0
+      ? voiceSampleText.trim()
+      : language.toLowerCase().startsWith("ru")
+        ? "Привет! Это тест голоса RoxStreamAI."
+        : "Hello! This is a RoxStreamAI voice test.";
 
     const voiceProvider = voiceProviderToApi(config.voice?.provider ?? "openai_included");
     const voiceId = config.voice?.voiceId?.trim() || "alloy";
@@ -203,6 +226,60 @@ export default function CharacterBuilderByIdPage() {
     }
 
     setVoiceBusy(false);
+  };
+
+  const handleFastDna = async () => {
+    if (!character) return;
+
+    setFastDnaBusy(true);
+    setSaveMessage(null);
+
+    const res = await fetch("/api/ai/fast-dna", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        description: fastDnaPrompt,
+        language: config.language?.primary ?? "en",
+        brainProvider: config.brain?.provider ?? "openai",
+        brainModel: config.brain?.model ?? "gpt-4o-mini",
+      }),
+    });
+
+    const json = await res.json().catch(() => null);
+    if (!res.ok) {
+      setSaveMessage(json?.error ?? "Fast DNA generation failed.");
+      setFastDnaBusy(false);
+      return;
+    }
+
+    setFastDnaResult(json?.dna ?? null);
+    setFastDnaBusy(false);
+  };
+
+  const applyFastDna = () => {
+    if (!fastDnaResult) return;
+
+    updateConfig({
+      profile: {
+        ...config.profile,
+        bio: fastDnaResult.persona ?? config.profile?.bio ?? "",
+        goals: fastDnaResult.goals ?? config.profile?.goals ?? "",
+      },
+      dna: {
+        ...config.dna,
+        systemPrompt: fastDnaResult.system_prompt ?? "",
+        behavior: fastDnaResult.behavior_rules ?? "",
+        style: fastDnaResult.style ?? "",
+      },
+      safety: {
+        rules: fastDnaResult.safety_rules ?? [],
+      },
+      streamBehavior: {
+        shortAnswers: fastDnaResult.stream_behavior?.short_answers ?? true,
+        maxResponseSeconds:
+          fastDnaResult.stream_behavior?.max_response_seconds ?? 8,
+      },
+    });
   };
 
   if (loading) {
@@ -272,6 +349,57 @@ export default function CharacterBuilderByIdPage() {
               placeholder={t.app.characterBuilderBioPlaceholder}
               rows={4}
             />
+            <textarea
+              value={config.dna?.systemPrompt ?? ""}
+              onChange={(e) => updateConfig({ dna: { ...config.dna, systemPrompt: e.target.value } })}
+              className="mt-4 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+              placeholder="System prompt"
+              rows={3}
+            />
+            <textarea
+              value={config.dna?.behavior ?? ""}
+              onChange={(e) => updateConfig({ dna: { ...config.dna, behavior: e.target.value } })}
+              className="mt-4 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+              placeholder="Behavior rules and guardrails"
+              rows={3}
+            />
+          </div>
+
+          <div className="glass-card rounded-3xl p-6">
+            <h3 className="text-lg font-semibold text-white">Brain</h3>
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <div className="space-y-2">
+                <label className="text-xs text-white/60">{t.app.aiProvidersBrainProviderLabel}</label>
+                <select
+                  value={config.brain?.provider ?? "openai"}
+                  onChange={(e) =>
+                    updateConfig({
+                      brain: {
+                        ...config.brain,
+                        provider: e.target.value as CharacterConfig["brain"]["provider"],
+                      },
+                    })
+                  }
+                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                >
+                  <option value="openai">OpenAI</option>
+                  <option value="anthropic">Anthropic</option>
+                  <option value="gemini">Google Gemini</option>
+                  <option value="deepseek" disabled>
+                    DeepSeek (coming soon)
+                  </option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <label className="text-xs text-white/60">{t.app.aiProvidersBrainModelLabel}</label>
+                <input
+                  value={config.brain?.model ?? ""}
+                  onChange={(e) => updateConfig({ brain: { ...config.brain, model: e.target.value } })}
+                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                  placeholder={t.app.aiProvidersBrainModelLabel}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="glass-card rounded-3xl p-6">
@@ -297,18 +425,35 @@ export default function CharacterBuilderByIdPage() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs text-white/60">{t.app.characterBuilderVoiceIdLabel}</label>
-                <input
-                  value={config.voice?.voiceId ?? ""}
-                  onChange={(e) => updateConfig({ voice: { ...config.voice, voiceId: e.target.value } })}
-                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-                  placeholder={
-                    config.voice?.provider === "elevenlabs_byok"
-                      ? t.app.characterBuilderVoiceIdPlaceholderElevenLabs
-                      : t.app.characterBuilderVoiceIdPlaceholderOpenAI
-                  }
-                />
+                {config.voice?.provider === "openai_included" ? (
+                  <select
+                    value={config.voice?.voiceId ?? ""}
+                    onChange={(e) => updateConfig({ voice: { ...config.voice, voiceId: e.target.value } })}
+                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                  >
+                    {OPENAI_VOICES.map((voice) => (
+                      <option key={voice} value={voice}>
+                        {voice}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <input
+                    value={config.voice?.voiceId ?? ""}
+                    onChange={(e) => updateConfig({ voice: { ...config.voice, voiceId: e.target.value } })}
+                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                    placeholder={t.app.characterBuilderVoiceIdPlaceholderElevenLabs}
+                  />
+                )}
               </div>
             </div>
+            <textarea
+              value={voiceSampleText}
+              onChange={(e) => setVoiceSampleText(e.target.value)}
+              className="mt-4 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+              rows={2}
+              placeholder={t.app.characterBuilderDefaultUserMessage}
+            />
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <Button variant="secondary" onClick={handleTestVoice} disabled={voiceBusy}>
                 {voiceBusy ? t.common.generating : t.app.characterBuilderTestVoice}
@@ -338,6 +483,55 @@ export default function CharacterBuilderByIdPage() {
               <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
                 <p className="text-xs font-semibold uppercase tracking-widest text-white/50">{t.app.characterBuilderReplyLabel}</p>
                 <p className="mt-2">{replyText}</p>
+              </div>
+            ) : null}
+          </div>
+
+          <div className="glass-card rounded-3xl p-6">
+            <h3 className="text-lg font-semibold text-white">Fast DNA</h3>
+            <p className="mt-2 text-sm text-white/60">
+              Describe the streamer you want. We’ll generate persona, rules, style, safety, examples, and behavior.
+            </p>
+            <textarea
+              value={fastDnaPrompt}
+              onChange={(e) => setFastDnaPrompt(e.target.value)}
+              className="mt-4 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+              rows={3}
+              placeholder="e.g. Energetic tech streamer who loves memes and explains new gadgets in simple language"
+            />
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <Button
+                variant="secondary"
+                onClick={handleFastDna}
+                disabled={fastDnaBusy || fastDnaPrompt.trim().length < 10}
+              >
+                {fastDnaBusy ? t.common.generating : "Generate Fast DNA"}
+              </Button>
+              <Button
+                variant="outline"
+                onClick={applyFastDna}
+                disabled={!fastDnaResult}
+              >
+                Apply to DNA
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={handleSave}
+                disabled={saving}
+              >
+                {saving ? t.common.saving : "Save preset"}
+              </Button>
+            </div>
+
+            {fastDnaResult ? (
+              <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/50">Preview</p>
+                <p className="mt-2"><strong>Persona:</strong> {fastDnaResult.persona}</p>
+                <p className="mt-2"><strong>Behavior:</strong> {fastDnaResult.behavior_rules}</p>
+                <p className="mt-2"><strong>Style:</strong> {fastDnaResult.style}</p>
+                {fastDnaResult.sample_lines?.length ? (
+                  <p className="mt-2"><strong>Examples:</strong> {fastDnaResult.sample_lines.join(" | ")}</p>
+                ) : null}
               </div>
             ) : null}
           </div>

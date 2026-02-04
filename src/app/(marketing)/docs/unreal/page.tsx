@@ -44,6 +44,26 @@ export default async function DocsUnrealPage() {
         },
       ];
 
+  const runtimeProtocol = isRu
+    ? {
+        title: "Runtime connector protocol (HTTP polling)",
+        items: [
+          "GET /api/unreal/events?connectorId=...&after=... — опрос событий по таймлайну.",
+          "POST /api/unreal/events — публикация событий (type + payload).",
+          "Ответы чата публикуются как type: speech с payload {reply, sender, message, provider}.",
+        ],
+        example: `{"type":"speech","payload":{"reply":"Привет!","sender":"viewer","message":"hi","provider":"twitch"}}`,
+      }
+    : {
+        title: "Runtime connector protocol (HTTP polling)",
+        items: [
+          "GET /api/unreal/events?connectorId=...&after=... — poll events in order.",
+          "POST /api/unreal/events — publish events (type + payload).",
+          "Chat replies are emitted as type: speech with payload {reply, sender, message, provider}.",
+        ],
+        example: `{"type":"speech","payload":{"reply":"Hello!","sender":"viewer","message":"hi","provider":"twitch"}}`,
+      };
+
   return (
     <div className="space-y-20 pb-20 pt-16">
       <Container>
@@ -76,6 +96,19 @@ export default async function DocsUnrealPage() {
             <li>• {isRu ? "Разделите аудио‑поток и рендер‑поток по приоритетам CPU/GPU." : "Separate audio and render workloads for stable CPU/GPU scheduling."}</li>
             <li>• {isRu ? "Оставляйте кнопку «panic stop» в зоне доступа." : "Keep a panic-stop path within reach."}</li>
           </ul>
+        </div>
+
+        <div className="mt-10 glass-card rounded-3xl p-6">
+          <h3 className="text-lg font-semibold text-white">{runtimeProtocol.title}</h3>
+          <ul className="mt-4 space-y-2 text-sm text-white/70">
+            {runtimeProtocol.items.map((it) => (
+              <li key={it}>• {it}</li>
+            ))}
+          </ul>
+          <div className="mt-4 rounded-2xl bg-white/5 p-4 text-xs text-white/70">
+            <div className="mb-2 font-semibold text-white">{isRu ? "Пример" : "Example"}</div>
+            <pre className="whitespace-pre-wrap">{runtimeProtocol.example}</pre>
+          </div>
         </div>
       </Container>
     </div>

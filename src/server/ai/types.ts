@@ -1,4 +1,4 @@
-export type BrainProviderId = "openai" | "anthropic" | "deepseek";
+export type BrainProviderId = "openai" | "anthropic" | "gemini" | "deepseek";
 export type VoiceProviderId = "openai" | "elevenlabs";
 
 export type ProviderAvailability = "available" | "coming_soon";
@@ -19,7 +19,12 @@ export const BRAIN_PROVIDER_META: Record<BrainProviderId, BrainProviderMeta> = {
   anthropic: {
     id: "anthropic",
     label: "Anthropic",
-    availability: "coming_soon",
+    availability: "available",
+  },
+  gemini: {
+    id: "gemini",
+    label: "Google Gemini",
+    availability: "available",
   },
   deepseek: {
     id: "deepseek",

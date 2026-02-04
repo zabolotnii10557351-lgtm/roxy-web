@@ -10,11 +10,24 @@ export const CharacterConfigSchema = z.object({
       goals: z.string().default(""),
     })
     .default({ displayName: "", bio: "", goals: "" }),
+  brain: z
+    .object({
+      provider: z.enum(["openai", "anthropic", "gemini", "deepseek"]).default("openai"),
+      model: z.string().default("gpt-4o-mini"),
+    })
+    .default({ provider: "openai", model: "gpt-4o-mini" }),
   language: z
     .object({
       primary: z.string().default("en"),
     })
     .default({ primary: "en" }),
+  dna: z
+    .object({
+      systemPrompt: z.string().default(""),
+      behavior: z.string().default(""),
+      style: z.string().default(""),
+    })
+    .default({ systemPrompt: "", behavior: "", style: "" }),
   voice: z
     .object({
       provider: z

@@ -1,5 +1,7 @@
 import type { BrainProvider, VoiceProvider, BrainProviderId, VoiceProviderId } from "@/server/ai/types";
 import { OpenAIBrainProvider } from "@/server/ai/providers/openai/brain";
+import { AnthropicBrainProvider } from "@/server/ai/providers/anthropic/brain";
+import { GeminiBrainProvider } from "@/server/ai/providers/gemini/brain";
 import { OpenAIVoiceProvider } from "@/server/ai/providers/openai/voice";
 import { ElevenLabsVoiceProvider } from "@/server/ai/providers/elevenlabs/voice";
 
@@ -14,7 +16,15 @@ export function getBrainProvider(params: {
     return new OpenAIBrainProvider({ apiKey, model: modelId });
   }
 
-  if (providerId === "anthropic" || providerId === "deepseek") {
+  if (providerId === "anthropic") {
+    return new AnthropicBrainProvider({ apiKey, model: modelId });
+  }
+
+  if (providerId === "gemini") {
+    return new GeminiBrainProvider({ apiKey, model: modelId });
+  }
+
+  if (providerId === "deepseek") {
     throw new Error(`${providerId} brain provider is coming soon.`);
   }
 

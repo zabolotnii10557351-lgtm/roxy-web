@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Button from "@/components/Button";
 import { useTranslations } from "@/i18n/client";
 
@@ -19,12 +19,15 @@ type SecretFlags = {
 
 const OPENAI_MODELS = ["gpt-4o-mini", "gpt-4.1-mini", "gpt-4o"];
 const OPENAI_VOICES = ["alloy", "verse", "aria", "sage", "coral"];
+const ELEVENLABS_DOCS_URL = "/docs/providers/elevenlabs";
+const ELEVENLABS_YOUTUBE_URL = process.env.NEXT_PUBLIC_ELEVENLABS_YT_URL ?? "";
 
 export default function AiProvidersSettings() {
   const t = useTranslations();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [errorCode, setErrorCode] = useState<string | null>(null);
 
   const [settings, setSettings] = useState<WorkspaceAiSettings | null>(null);
   const [secretFlags, setSecretFlags] = useState<SecretFlags>({});
@@ -47,32 +50,37 @@ export default function AiProvidersSettings() {
     return "en";
   }, []);
 
+  const loadSettings = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    setErrorCode(null);
+
+    const res = await fetch("/api/ai/settings", { method: "GET" });
+    const json = await res.json().catch(() => null);
+
+    if (!res.ok) {
+      setError(json?.error ?? t.app.aiProvidersLoadFailed);
+      setErrorCode(json?.code ?? null);
+      setLoading(false);
+      return;
+    }
+
+    setSettings(json.settings);
+    setSecretFlags(json.secretFlags ?? {});
+    setLoading(false);
+  }, [t.app.aiProvidersLoadFailed]);
+
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      setLoading(true);
-      setError(null);
-
-      const res = await fetch("/api/ai/settings", { method: "GET" });
-      const json = await res.json().catch(() => null);
-
       if (cancelled) return;
-
-      if (!res.ok) {
-        setError(json?.error ?? t.app.aiProvidersLoadFailed);
-        setLoading(false);
-        return;
-      }
-
-      setSettings(json.settings);
-      setSecretFlags(json.secretFlags ?? {});
-      setLoading(false);
+      await loadSettings();
     })();
 
     return () => {
       cancelled = true;
     };
-  }, [t.app.aiProvidersLoadFailed]);
+  }, [loadSettings]);
 
   const handleSaveSettings = async () => {
     if (!settings) return;
@@ -238,7 +246,21 @@ export default function AiProvidersSettings() {
       <h3 className="text-lg font-semibold text-white">{t.app.aiProvidersTitle}</h3>
       <p className="mt-2 text-sm text-white/60">{t.app.aiProvidersSubtitle}</p>
 
-      {error ? (
+      {!settings || errorCode === "AI_SETTINGS_NOT_READY" ? (
+        <div className="mt-6 rounded-2xl border border-amber-500/40 bg-amber-500/10 px-4 py-4 text-sm text-amber-100">
+          <p className="font-semibold">AI settings aren’t ready yet.</p>
+          <p className="mt-2 text-sm text-amber-100/80">
+            Create default settings for this workspace, then refresh.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Button variant="secondary" onClick={loadSettings}>
+              {t.admin.buttonRefresh}
+            </Button>
+          </div>
+        </div>
+      ) : null}
+
+      {error && settings ? (
         <p className="mt-4 rounded-2xl border border-rose-500/40 bg-rose-500/10 px-4 py-3 text-sm text-rose-200">
           {error}
         </p>
@@ -261,9 +283,8 @@ export default function AiProvidersSettings() {
                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
               >
                 <option value="openai">OpenAI</option>
-                <option value="anthropic" disabled>
-                  {`Anthropic (${t.common.comingSoon})`}
-                </option>
+                <option value="anthropic">Anthropic</option>
+                <option value="gemini">Google Gemini</option>
                 <option value="deepseek" disabled>
                   {`DeepSeek (${t.common.comingSoon})`}
                 </option>
@@ -277,19 +298,30 @@ export default function AiProvidersSettings() {
               <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
                 {t.app.aiProvidersBrainModelLabel}
               </label>
-              <select
-                value={settings.brain_model}
-                onChange={(e) =>
-                  setSettings((s) => (s ? { ...s, brain_model: e.target.value } : s))
-                }
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
-              >
-                {OPENAI_MODELS.map((m) => (
-                  <option key={m} value={m}>
-                    {m}
-                  </option>
-                ))}
-              </select>
+              {settings.brain_provider === "openai" ? (
+                <select
+                  value={settings.brain_model}
+                  onChange={(e) =>
+                    setSettings((s) => (s ? { ...s, brain_model: e.target.value } : s))
+                  }
+                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                >
+                  {OPENAI_MODELS.map((m) => (
+                    <option key={m} value={m}>
+                      {m}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  value={settings.brain_model}
+                  onChange={(e) =>
+                    setSettings((s) => (s ? { ...s, brain_model: e.target.value } : s))
+                  }
+                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                  placeholder={t.app.aiProvidersBrainModelLabel}
+                />
+              )}
             </div>
           </div>
 
@@ -321,6 +353,29 @@ export default function AiProvidersSettings() {
                 <p className="text-xs text-amber-200/90">
                   {t.app.aiProvidersVoiceProviderElevenLabsNeedsKey}
                 </p>
+              ) : null}
+              {settings.voice_provider === "elevenlabs" ? (
+                <div className="mt-2 text-xs text-white/60">
+                  <p>Included voices are coming soon. ElevenLabs works via BYOK today.</p>
+                  <div className="mt-2 flex flex-wrap gap-3">
+                    <a
+                      href={ELEVENLABS_DOCS_URL}
+                      className="text-cyan-200 hover:text-cyan-100"
+                    >
+                      Как получить ключ?
+                    </a>
+                    {ELEVENLABS_YOUTUBE_URL ? (
+                      <a
+                        href={ELEVENLABS_YOUTUBE_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-cyan-200 hover:text-cyan-100"
+                      >
+                        YouTube инструкция
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
               ) : null}
             </div>
 

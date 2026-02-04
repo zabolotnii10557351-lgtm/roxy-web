@@ -42,6 +42,10 @@ alter table public.licenses enable row level security;
 alter table public.license_devices enable row level security;
 alter table public.app_policy enable row level security;
 
+drop policy if exists "licenses_select_own" on public.licenses;
+drop policy if exists "license_devices_select_own" on public.license_devices;
+drop policy if exists "app_policy_select_authenticated" on public.app_policy;
+
 -- licenses: allow users to read only their own license
 create policy "licenses_select_own"
   on public.licenses
