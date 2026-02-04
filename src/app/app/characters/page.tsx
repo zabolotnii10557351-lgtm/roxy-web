@@ -294,6 +294,13 @@ export default function CharactersPage() {
                         onChange={(e) =>
                           setDraftNames((prev) => ({ ...prev, [c.id]: e.target.value }))
                         }
+                        onBlur={() => {
+                          const nextName = (draftNames[c.id] ?? (c.name?.trim() ? c.name : "")).trim();
+                          const existingName = c.name?.trim() ?? "";
+                          if (busy) return;
+                          if (nextName === existingName) return;
+                          void handleRename(c.id);
+                        }}
                         onKeyDown={(e) => {
                           if (e.key === "Enter") {
                             e.preventDefault();
@@ -307,7 +314,11 @@ export default function CharactersPage() {
                       <Button
                         variant="ghost"
                         onClick={() => void handleRename(c.id)}
-                        disabled={busy}
+                        disabled={
+                          busy ||
+                          (draftNames[c.id] ?? (c.name?.trim() ? c.name : "")).trim() ===
+                            (c.name?.trim() ?? "")
+                        }
                       >
                         Save
                       </Button>
