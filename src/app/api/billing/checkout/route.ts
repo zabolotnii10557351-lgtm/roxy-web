@@ -3,8 +3,13 @@ export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { supabaseAdmin } from "@/lib/supabase/admin";
-import { createLemonCheckout } from "@/server/lemon/client";
-import { getPlanVariantMapping, type BillingPlanId, type LemonBillingInterval } from "@/config/lemon";
+import { getStripe } from "@/server/stripe/client";
+import { getStripeProductId, type StripeBillingInterval } from "@/config/stripe";
+import {
+  calcYearlyTotal,
+  getPricingPlan,
+  type PricingPlanId,
+} from "@/config/pricingPlans";
 
 function getBaseUrl(req: Request): string {
   const envBase = process.env.NEXT_PUBLIC_APP_URL;
@@ -14,7 +19,7 @@ function getBaseUrl(req: Request): string {
   return "http://localhost:3000";
 }
 
-function normalizeInterval(value: unknown): LemonBillingInterval | null {
+function normalizeInterval(value: unknown): StripeBillingInterval | null {
   const v = String(value ?? "").toLowerCase();
   if (v === "month" || v === "monthly") return "month";
   if (v === "year" || v === "yearly") return "year";
@@ -59,7 +64,7 @@ export async function POST(req: Request) {
 
   const body = bodyUnknown as Record<string, unknown>;
 
-  const planId = String(body.planId ?? "") as BillingPlanId;
+  const planId = String(body.planId ?? "") as PricingPlanId;
   const interval = normalizeInterval(body.interval);
 
   if (!(planId === "starter" || planId === "creator" || planId === "pro" || planId === "studio" || planId === "scale")) {
@@ -80,7 +85,7 @@ export async function POST(req: Request) {
 
   const { data: billingRow, error: billingErr } = await supabase
     .from("billing_state")
-    .select("lemon_customer_id")
+    .select("stripe_customer_id")
     .eq("workspace_id", workspaceId)
     .maybeSingle();
 
@@ -88,28 +93,64 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: billingErr.message }, { status: 400 });
   }
 
-  const mapping = getPlanVariantMapping(planId, interval);
+  const plan = getPricingPlan(planId);
+  if (!plan.monthly_price_eur) {
+    return NextResponse.json({ error: "Plan not purchasable." }, { status: 400 });
+  }
 
-  const customData = {
-    workspace_id: workspaceId,
-    workspaceId,
-    kind: "plan",
-    planId,
-    interval,
-    user_id: user.id,
-  };
+  const productId = getStripeProductId(planId);
+  if (!productId) {
+    return NextResponse.json({ error: "Stripe product not configured." }, { status: 400 });
+  }
+
+  const monthlyPrice = plan.monthly_price_eur;
+  const yearlyTotal = calcYearlyTotal(monthlyPrice);
+  const unitAmountEur = interval === "year" ? yearlyTotal : monthlyPrice;
+  const unitAmount = Math.round(unitAmountEur * 100);
 
   try {
-    const checkout = await createLemonCheckout({
-      variantId: mapping.variantId,
-      successUrl,
-      cancelUrl,
-      customData,
-      customerId: billingRow?.lemon_customer_id ?? null,
-      email: user.email ?? null,
+    const stripe = getStripe();
+    const session = await stripe.checkout.sessions.create({
+      mode: "subscription",
+      success_url: successUrl,
+      cancel_url: cancelUrl,
+      customer: billingRow?.stripe_customer_id ?? undefined,
+      customer_email: user.email ?? undefined,
+      client_reference_id: workspaceId,
+      metadata: {
+        workspaceId,
+        planId,
+        interval,
+        userId: user.id,
+      },
+      subscription_data: {
+        trial_period_days: plan.entitlements?.trial_days ?? undefined,
+        metadata: {
+          workspaceId,
+          planId,
+          interval,
+        },
+      },
+      line_items: [
+        {
+          quantity: 1,
+          price_data: {
+            currency: "eur",
+            unit_amount: unitAmount,
+            product: productId,
+            recurring: {
+              interval,
+            },
+          },
+        },
+      ],
     });
 
-    return NextResponse.json({ url: checkout.url });
+    if (!session.url) {
+      return NextResponse.json({ error: "Checkout URL missing." }, { status: 400 });
+    }
+
+    return NextResponse.json({ url: session.url });
   } catch (e: unknown) {
     return NextResponse.json(
       { error: getErrorMessage(e) },

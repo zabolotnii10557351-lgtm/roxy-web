@@ -17,6 +17,10 @@ export type BillingStateRow = {
   lemon_customer_id: string | null;
   lemon_subscription_id: string | null;
   lemon_variant_id: string | null;
+  stripe_customer_id: string | null;
+  stripe_subscription_id: string | null;
+  stripe_price_id: string | null;
+  stripe_product_id: string | null;
   cancel_at_period_end: boolean;
 };
 
@@ -33,7 +37,7 @@ export async function upsertBillingState(params: {
     .from("billing_state")
     .upsert(payload)
     .select(
-      "workspace_id, plan_id, status, trial_end, current_period_start, current_period_end, lemon_customer_id, lemon_subscription_id, lemon_variant_id, cancel_at_period_end"
+      "workspace_id, plan_id, status, trial_end, current_period_start, current_period_end, lemon_customer_id, lemon_subscription_id, lemon_variant_id, stripe_customer_id, stripe_subscription_id, stripe_price_id, stripe_product_id, cancel_at_period_end"
     )
     .single();
 
@@ -46,6 +50,17 @@ export async function findWorkspaceIdByLemonCustomerId(customerId: string): Prom
     .from("billing_state")
     .select("workspace_id")
     .eq("lemon_customer_id", customerId)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+  return data?.workspace_id ?? null;
+}
+
+export async function findWorkspaceIdByStripeCustomerId(customerId: string): Promise<string | null> {
+  const { data, error } = await supabaseAdmin
+    .from("billing_state")
+    .select("workspace_id")
+    .eq("stripe_customer_id", customerId)
     .maybeSingle();
 
   if (error) throw new Error(error.message);
