@@ -129,7 +129,7 @@ function whatsIncluded(params: {
 export default function PricingPageClient(props: { locale?: string }) {
   const router = useRouter();
   const isRu = props.locale === "ru";
-  const [billing, setBilling] = useState<PricingInterval>("monthly");
+  const [billing, setBilling] = useState<PricingInterval>("yearly");
   const [talkRatio, setTalkRatio] = useState<number>(PRICING_DEFAULT_TALK_RATIO);
   const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
