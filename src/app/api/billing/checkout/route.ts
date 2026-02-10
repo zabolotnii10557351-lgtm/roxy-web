@@ -110,12 +110,14 @@ export async function POST(req: Request) {
 
   try {
     const stripe = getStripe();
+    const customerId = billingRow?.stripe_customer_id ?? undefined;
+    const customerEmail = customerId ? undefined : user.email ?? undefined;
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       success_url: successUrl,
       cancel_url: cancelUrl,
-      customer: billingRow?.stripe_customer_id ?? undefined,
-      customer_email: user.email ?? undefined,
+      customer: customerId,
+      customer_email: customerEmail,
       client_reference_id: workspaceId,
       metadata: {
         workspaceId,
