@@ -67,6 +67,7 @@ export async function POST(req: Request) {
   const planId = String(body.planId ?? "") as PricingPlanId;
   const interval = normalizeInterval(body.interval);
   const consents = (body.consents ?? {}) as Record<string, unknown>;
+  const promoCodeRaw = String(body.promoCode ?? "").trim();
   const acceptImmediate = consents.acceptImmediate === true;
   const acceptTerms = consents.acceptTerms === true;
   const acceptMarketing = consents.acceptMarketing === true;
@@ -82,6 +83,22 @@ export async function POST(req: Request) {
       { error: "Required consents are missing." },
       { status: 400 }
     );
+  }
+
+  let promoCode: string | null = null;
+  if (promoCodeRaw) {
+    const normalized = promoCodeRaw.toLowerCase();
+    const { data: codeRow, error: codeErr } = await supabaseAdmin
+      .from("promo_codes")
+      .select("id, code, is_active")
+      .ilike("code", normalized)
+      .maybeSingle();
+
+    if (codeErr || !codeRow?.id || !codeRow.is_active) {
+      return NextResponse.json({ error: "Invalid promo code." }, { status: 400 });
+    }
+
+    promoCode = codeRow.code;
   }
 
   const baseUrl = getBaseUrl(req);
@@ -134,6 +151,7 @@ export async function POST(req: Request) {
         planId,
         interval,
         userId: user.id,
+        promoCode: promoCode ?? "",
         acceptImmediate: String(acceptImmediate),
         acceptTerms: String(acceptTerms),
         acceptMarketing: String(acceptMarketing),
@@ -144,6 +162,7 @@ export async function POST(req: Request) {
           workspaceId,
           planId,
           interval,
+          promoCode: promoCode ?? "",
           acceptImmediate: String(acceptImmediate),
           acceptTerms: String(acceptTerms),
           acceptMarketing: String(acceptMarketing),

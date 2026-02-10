@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import {
   LayoutGrid,
   Users,
-  UserPlus,
   Plug,
   Gift,
   ScrollText,
@@ -15,6 +14,8 @@ import {
   Layers,
   CreditCard,
   Settings,
+  Bell,
+  Link2,
 } from "lucide-react";
 import { usePlan } from "@/providers/PlanProvider";
 import { useTranslations } from "@/i18n/client";
@@ -47,7 +48,6 @@ export default function SidebarNav({
   const navItems = [
     { href: "/app", label: t.app.overview, icon: LayoutGrid },
     { href: "/app/characters", label: t.app.characters, icon: Users },
-    { href: "/app/characters/new", label: t.app.characterBuilder, icon: UserPlus },
     { href: "/app/stream-connectors", label: t.app.connectors, icon: Plug },
     { href: "/app/dono-engine", label: t.app.donoEngine, icon: Gift },
     { href: "/app/scripts", label: t.app.scripts, icon: ScrollText },
@@ -59,6 +59,8 @@ export default function SidebarNav({
         ]
       : []),
     { href: "/app/billing", label: t.app.billing, icon: CreditCard },
+    { href: "/app/referrals", label: t.app.referrals, icon: Link2 },
+    { href: "/app/notifications", label: t.app.notifications, icon: Bell },
     { href: "/app/settings", label: t.app.settings, icon: Settings },
     ...(isAdmin
       ? [{ href: "/admin", label: t.admin.label, icon: Layers }]

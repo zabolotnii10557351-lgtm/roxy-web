@@ -4,6 +4,7 @@ import { getStripe, getStripeWebhookSecret } from "@/server/stripe/client";
 import { mapStripeProductIdToPlan } from "@/config/stripe";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import { sendOrderConfirmationEmail } from "@/server/email/resend";
+import { applyReferralBonusFromStripe } from "@/server/referrals/bonus";
 import {
   findWorkspaceIdByStripeCustomerId,
   upsertBillingState,
@@ -151,6 +152,12 @@ export async function handleStripeWebhook(req: Request) {
           });
         }
       }
+
+      await applyReferralBonusFromStripe({
+        eventId: event.id,
+        session,
+      });
+
       return NextResponse.json({ ok: true });
     }
 

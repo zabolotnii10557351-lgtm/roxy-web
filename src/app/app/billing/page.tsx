@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Button from "@/components/Button";
 import Badge from "@/components/Badge";
 import ProgressBar from "@/components/ProgressBar";
@@ -12,7 +12,7 @@ import {
   type PricingPlanId,
 } from "@/config/pricing";
 import { usePricingConfig } from "@/lib/pricing/usePricingConfig";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 function formatEur(amount: number) {
@@ -38,6 +38,7 @@ function mapBackendPlanToPricingPlan(planId: string): PricingPlanId {
 
 export default function BillingPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const {
     planId,
     activeHoursUsed,
@@ -81,6 +82,34 @@ export default function BillingPage() {
   const [acceptImmediate, setAcceptImmediate] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptMarketing, setAcceptMarketing] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
+
+  useEffect(() => {
+    const ref = searchParams.get("ref") || searchParams.get("promo");
+    if (ref && !promoCode) {
+      setPromoCode(ref);
+    }
+  }, [promoCode, searchParams]);
+
+  useEffect(() => {
+    if (promoCode) return;
+    let cancelled = false;
+
+    (async () => {
+      const res = await fetch("/api/referrals/active");
+      if (!res.ok) return;
+      const json = (await res.json().catch(() => null)) as
+        | { code?: string | null }
+        | null;
+      if (!cancelled && json?.code) {
+        setPromoCode(String(json.code));
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [promoCode]);
 
   const includedActiveSpeech =
     selectedPlan?.entitlements?.included_active_speech_hours_openai ?? null;
@@ -138,6 +167,7 @@ export default function BillingPage() {
           interval: billingInterval,
           successUrl,
           cancelUrl,
+          promoCode: promoCode.trim(),
           consents: {
             acceptImmediate,
             acceptTerms,
@@ -360,6 +390,21 @@ export default function BillingPage() {
                         <span className="text-white/60">Minimalny czas zobowiązań / Minimum duration:</span> {minDurationLabel}
                       </div>
                     </div>
+                  </div>
+
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
+                    <label className="text-xs font-semibold uppercase tracking-widest text-white/60">
+                      {t.app.promoCodeLabel}
+                    </label>
+                    <input
+                      value={promoCode}
+                      onChange={(e) => setPromoCode(e.target.value)}
+                      placeholder={t.app.promoCodePlaceholder}
+                      className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-cyan-400 focus:outline-none"
+                    />
+                    <p className="mt-2 text-xs text-white/60">
+                      {t.app.promoCodeHelp}
+                    </p>
                   </div>
 
                   <div className="space-y-2 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">

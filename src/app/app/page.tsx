@@ -22,6 +22,10 @@ export default function OverviewPage() {
 
   const { workspaceId, loading: workspaceLoading } = useCurrentWorkspace();
   const [characterCount, setCharacterCount] = useState<number | null>(null);
+  const [referralCode, setReferralCode] = useState("");
+  const [referralLink, setReferralLink] = useState("");
+  const [referralLoading, setReferralLoading] = useState(false);
+  const [referralError, setReferralError] = useState<string | null>(null);
 
   useEffect(() => {
     if (workspaceLoading) return;
@@ -47,6 +51,51 @@ export default function OverviewPage() {
       cancelled = true;
     };
   }, [workspaceId, workspaceLoading]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    (async () => {
+      const res = await fetch("/api/referrals/status");
+      if (!res.ok) return;
+      const json = (await res.json().catch(() => null)) as
+        | { code?: string | null; referralLink?: string }
+        | null;
+      if (cancelled) return;
+      if (json?.code) {
+        setReferralCode(String(json.code));
+        setReferralLink(String(json.referralLink ?? ""));
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const createReferralCode = async () => {
+    if (!referralCode) return;
+    setReferralError(null);
+    setReferralLoading(true);
+    try {
+      const res = await fetch("/api/referrals/code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code: referralCode }),
+      });
+      const json = (await res.json().catch(() => null)) as
+        | { code?: string; referralLink?: string; error?: string }
+        | null;
+      if (!res.ok) {
+        setReferralError(json?.error ?? "Unable to create code.");
+      } else {
+        setReferralCode(String(json?.code ?? referralCode));
+        setReferralLink(String(json?.referralLink ?? ""));
+      }
+    } finally {
+      setReferralLoading(false);
+    }
+  };
 
   return (
     <div className="space-y-8">
@@ -111,6 +160,40 @@ export default function OverviewPage() {
             <Button variant="secondary" href="/app/deploy" disabled={isAccessBlocked}>
               {t.app.generateShareLink}
             </Button>
+          </div>
+          <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
+            <p className="font-semibold text-white">{t.app.referralProgramTitle}</p>
+            <p className="mt-2">
+              {t.app.referralProgramBody}
+            </p>
+            {referralLink ? (
+              <div className="mt-3 space-y-2">
+                <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white">
+                  Code: {referralCode}
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/80">
+                  {referralLink}
+                </div>
+                <Button variant="secondary" href="/app/referrals">
+                  {t.app.referralProgramManage}
+                </Button>
+              </div>
+            ) : (
+              <div className="mt-3 space-y-2">
+                <input
+                  value={referralCode}
+                  onChange={(e) => setReferralCode(e.target.value)}
+                  placeholder={t.app.referralPromoPlaceholder}
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white placeholder:text-white/40 focus:border-cyan-400 focus:outline-none"
+                />
+                <Button variant="secondary" onClick={createReferralCode} disabled={referralLoading}>
+                  {referralLoading ? t.common.saving : t.app.referralPromoCreate}
+                </Button>
+                {referralError ? (
+                  <p className="text-xs text-rose-200">{referralError}</p>
+                ) : null}
+              </div>
+            )}
           </div>
         </div>
         <div className="glass-card rounded-3xl p-6">

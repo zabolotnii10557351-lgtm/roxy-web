@@ -14,6 +14,7 @@ async function registerAction(
   const password = formData.get("password")?.toString();
   const displayName = formData.get("display_name")?.toString().trim();
   const username = formData.get("username")?.toString().trim();
+  const referralCode = formData.get("referral_code")?.toString().trim();
   const captchaToken = formData.get("captchaToken")?.toString();
   const siteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
@@ -42,6 +43,7 @@ async function registerAction(
       data: {
         display_name: displayName,
         username: username || undefined,
+        referral_code: referralCode || undefined,
       },
     },
   });
@@ -57,7 +59,13 @@ async function registerAction(
   return { success: "Check your email to confirm your account." };
 }
 
-export default async function RegisterPage() {
+export default async function RegisterPage(props: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const searchParams = (await props.searchParams) ?? {};
+  const rawRef = searchParams.ref ?? searchParams.referral;
+  const refCode = Array.isArray(rawRef) ? rawRef[0] : rawRef;
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -75,6 +83,7 @@ export default async function RegisterPage() {
           description="Start with the Starter plan trial. Upgrade when you need more concurrency or Active Speech."
           action={registerAction}
           submitLabel="Create account"
+          hiddenFields={refCode ? { referral_code: String(refCode) } : undefined}
           fields={[
             {
               name: "display_name",
