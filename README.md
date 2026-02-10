@@ -39,6 +39,21 @@ Copy `.env.example` to `.env.local` and fill in your Supabase values:
 update public.profiles set role = 'admin' where email = 'you@company.com';
 ```
 
+## Migrations (CLI)
+
+If Supabase CLI is installed and the project is linked, apply migrations from the project root:
+
+```bash
+C:\Tools\supabase\supabase.exe db push
+```
+
+If the CLI is not in PATH, use the full path above. Linking once:
+
+```bash
+C:\Tools\supabase\supabase.exe login
+C:\Tools\supabase\supabase.exe link --project-ref vgpkfezabwotnryohuxn
+```
+
 ## Supabase URL configuration
 
 In Supabase dashboard (Auth → URL Configuration):

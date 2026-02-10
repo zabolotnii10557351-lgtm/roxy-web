@@ -1,0 +1,52 @@
+29.12.2022
+Information about the website and order placement.
+Necessary clauses and checkboxes for the website.
+Immediately before placing the order, as a summary, the customer should receive the following  information:
+a) product (goods or services) chosen and its/their main features;
+b) total price or remuneration for the goods/services including taxes
+c) right to terminate the contract or absence of such right,
+d) duration of contact and the termination methods and possible reasons, if the contract is signed  for an nspecified period or is to be extended automatically;
+e) minimum duration of the Client's contractual obligations.
+Additionally:
+A.
+In case of sale of goods:
+consent requested before placing an order:
+✔️ I accept the Terms and Conditions of the Website operated by Fundacja Rozwoju  Przedsiębiorczości "Twój StartUp" with its registered office in Warsaw.
+ I want to receive commercial and marketing content.
+After placing the order, a distance contract signing confirmation should be sent to the Client by e-mail,  including the Terms and Conditions and the termination form. The Client should also receive an invoice.
+Under the order acceptance button "send", "accept" etc. the following information should be  displayed:
+"The Controller of the data entered into the form is Fundacja Rozwoju Przedsiębiorczości "Twój  StartUp". The data will be processed in order to provide the service and for marketing purposes – in  the case of consent. We would like to inform you about the possibility of withdrawing your consent.  For full information on data processing and your rights, see the privacy policy.”
+For digital content delivery:
+consent requested before placing an order:
+✔️ I want the service to be provided immediately and I acknowledge that as soon as the Fundacja  Rozwoju Przedsiębiorczości "Twój StartUp" provides the service, I will lose the right to terminate  the contract.
+✔️ I accept the Terms and Conditions of the Website operated by Fundacja Rozwoju  Przedsiębiorczości "Twój StartUp" with its registered office in Warsaw.
+ I want to receive commercial and marketing content.
+Z komentarzem [Specjalis1]: Checkbox musi być  domyślnie odznaczony. Jego zaznaczenie nie może być  konieczne do złożenia zamówienia
+Z komentarzem [Specjalis2]: Tutaj należy zamieścić  hiperłącze do polityki prywatności/klauzuli informacyjnej.
+Z komentarzem [Specjalis3]: Checkbox musi być  domyślnie odznaczony. Jego zaznaczenie nie może być  konieczne do złożenia zamówienia
+29.12.2022
+Information about the website and order placement.
+Necessary clauses and checkboxes for the website.
+The title TERMS AND CONDITIONS (above) should contain a link to the document
+Not later than before the commencement of the service, the consumer should be informed of the  consent given by the consumer to the supply of digital content in circumstances causing the loss of the  right of termination. Thus, this information may be provided in an e-mail sent to the consumer after  the conclusion of the contract, but before the service is provided, for example with the following  content:
+Due to the expressed request of the Consumer for the performance of the service by Fundacja Rozwoju  Przedsiębiorczości "Twój StartUp" within 14 days from the conclusion of the contract, the Consumer  does not have the right to terminate the contract.
+The above-mentioned e-mail can be combined in one e-mail with the distance contract signing  confirmation, in which the regulations and the termination form will be sent. The Client should also  receive an invoice.
+Under the order acceptance button "send", "accept" etc. the following information should be  displayed:
+"The Controller of the data entered into the form is Fundacja Rozwoju Przedsiębiorczości "Twój  StartUp". The data will be processed in order to provide the service and for marketing purposes – in  the case of consent. We would like to inform you about the possibility of withdrawing your consent.  For full information on data processing and your rights, see the privacy policy.”
+B.
+In case of contracts for services execpt the supply of digital content:
+consent requested before placing an order:
+✔️ I want the service to be provided immediately and I acknowledge that as soon as the Fundacja  Rozwoju Przedsiębiorczości "Twój StartUp" provides the service, I will lose the right to terminate  the contract.
+✔️ I accept the Terms and Conditions of the Website operated by Fundacja Rozwoju  Przedsiębiorczości "Twój StartUp" with its registered office in Warsaw.
+ I want to receive commercial and marketing content.
+After placing the order, a distance contract signing confirmation should be sent to the Client by e-mail,  including the Terms and Conditions and the termination form. The Client should also receive an invoice.
+Under the order acceptance button "send", "accepts" etc. the following information should be  displayed:
+Z komentarzem [Specjalis4]: Tutaj należy zamieścić  hiperłącze do polityki prywatności/klauzuli informacyjnej.
+Z komentarzem [Specjalis5]: Checkbox musi być  domyślnie odznaczony. Jego zaznaczenie nie może być  konieczne do złożenia zamówienia
+29.12.2022
+Information about the website and order placement.
+Necessary clauses and checkboxes for the website.
+"The Controller of the data entered into the form is Fundacja Rozwoju Przedsiębiorczości "Twój
+StartUp". The data will be processed in order to provide the service and for marketing purposes – in the
+case of consent. We would like to inform you about the possibility of withdrawing your consent. For full
+information on data processing and your rights, see the privacy policy. support@roxstreamai.comZ komentarzem [Specjalis6]: Tutaj należy zamieścić  hiperłącze do polityki prywatności/klauzuli informacyjnej.

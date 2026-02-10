@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 import { getStripe, getStripeWebhookSecret } from "@/server/stripe/client";
 import { mapStripeProductIdToPlan } from "@/config/stripe";
+import { supabaseAdmin } from "@/lib/supabase/admin";
+import { sendOrderConfirmationEmail } from "@/server/email/resend";
 import {
   findWorkspaceIdByStripeCustomerId,
   upsertBillingState,
@@ -34,6 +36,37 @@ function resolvePlanId(subscription: Stripe.Subscription): string {
   }
 
   return "starter";
+}
+
+async function hasBillingEmailEvent(eventId: string): Promise<boolean> {
+  const { data, error } = await supabaseAdmin
+    .from("billing_email_events")
+    .select("event_id")
+    .eq("event_id", eventId)
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return Boolean(data?.event_id);
+}
+
+async function recordBillingEmailEvent(params: {
+  eventId: string;
+  sessionId?: string | null;
+  email?: string | null;
+}) {
+  const { error } = await supabaseAdmin.from("billing_email_events").insert({
+    event_id: params.eventId,
+    provider: "stripe",
+    session_id: params.sessionId ?? null,
+    email: params.email ?? null,
+  });
+
+  if (error) {
+    throw new Error(error.message);
+  }
 }
 
 async function applySubscriptionUpdate(subscription: Stripe.Subscription) {
@@ -96,6 +129,27 @@ export async function handleStripeWebhook(req: Request) {
           String(session.subscription)
         );
         await applySubscriptionUpdate(subscription);
+      }
+
+      const email =
+        session.customer_details?.email ?? session.customer_email ?? null;
+      const planId = session.metadata?.planId ?? "starter";
+      const interval = session.metadata?.interval ?? "month";
+
+      if (email) {
+        const alreadySent = await hasBillingEmailEvent(event.id);
+        if (!alreadySent) {
+          await sendOrderConfirmationEmail({
+            to: email,
+            planId,
+            interval,
+          });
+          await recordBillingEmailEvent({
+            eventId: event.id,
+            sessionId: session.id,
+            email,
+          });
+        }
       }
       return NextResponse.json({ ok: true });
     }

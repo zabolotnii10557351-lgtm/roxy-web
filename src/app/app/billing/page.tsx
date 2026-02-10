@@ -13,6 +13,7 @@ import {
 } from "@/config/pricing";
 import { usePricingConfig } from "@/lib/pricing/usePricingConfig";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function formatEur(amount: number) {
   return `EUR ${amount.toFixed(2)}`;
@@ -21,6 +22,10 @@ function formatEur(amount: number) {
 function formatHours(amount: number) {
   const fixed = amount.toFixed(1);
   return fixed.endsWith(".0") ? fixed.slice(0, -2) : fixed;
+}
+
+function calcYearlyTotalWithDiscount(monthlyPrice: number, discountPct: number) {
+  return monthlyPrice * 12 * (1 - discountPct / 100);
 }
 
 function mapBackendPlanToPricingPlan(planId: string): PricingPlanId {
@@ -73,6 +78,9 @@ export default function BillingPage() {
   const [billingInterval, setBillingInterval] = useState<"month" | "year">("month");
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
+  const [acceptImmediate, setAcceptImmediate] = useState(false);
+  const [acceptTerms, setAcceptTerms] = useState(false);
+  const [acceptMarketing, setAcceptMarketing] = useState(false);
 
   const includedActiveSpeech =
     selectedPlan?.entitlements?.included_active_speech_hours_openai ?? null;
@@ -87,6 +95,32 @@ export default function BillingPage() {
     currentIncludedActiveSpeech && currentIncludedActiveSpeech > 0
       ? Math.min(100, (activeHoursUsed / currentIncludedActiveSpeech) * 100)
       : 0;
+
+  const yearlyDiscountPct = pricing.config?.yearly_discount_pct ?? 0;
+  const selectedMonthlyPrice = selectedPlan?.monthly_price_eur ?? null;
+  const yearlyTotal =
+    selectedMonthlyPrice === null
+      ? null
+      : calcYearlyTotalWithDiscount(selectedMonthlyPrice, yearlyDiscountPct);
+  const priceSummary =
+    selectedMonthlyPrice === null
+      ? "Contact sales / Skontaktuj się z nami"
+      : billingInterval === "month"
+        ? `${formatEur(selectedMonthlyPrice)} / month (incl. VAT) / miesiąc (z VAT)`
+        : `${formatEur(yearlyTotal ?? selectedMonthlyPrice * 12)} / year (incl. VAT) / rok (z VAT)`;
+  const minDurationLabel = billingInterval === "month" ? "1 month / 1 miesiąc" : "1 year / 1 rok";
+  const summaryFeatures = selectedPlan?.entitlements
+    ? [
+        `Included active speech (OpenAI): ${formatHours(
+          selectedPlan.entitlements.included_active_speech_hours_openai
+        )}h`,
+        `Max characters: ${selectedPlan.entitlements.max_characters}`,
+        `Max concurrent streams: ${selectedPlan.entitlements.max_concurrent_streams}`,
+        `Dono rules limit: ${selectedPlan.entitlements.dono_rules_limit}`,
+        `Stream scripts limit: ${selectedPlan.entitlements.stream_scripts_limit}`,
+        `Scenes limit: ${selectedPlan.entitlements.scenes_limit}`,
+      ]
+    : ["Custom limits and onboarding"]; 
 
   const startCheckout = async () => {
     setCheckoutError(null);
@@ -104,6 +138,11 @@ export default function BillingPage() {
           interval: billingInterval,
           successUrl,
           cancelUrl,
+          consents: {
+            acceptImmediate,
+            acceptTerms,
+            acceptMarketing,
+          },
         }),
       });
 
@@ -289,6 +328,82 @@ export default function BillingPage() {
                 </Button>
               ) : (
                 <div className="space-y-3">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
+                    <h4 className="text-sm font-semibold text-white">Order summary</h4>
+                    <div className="mt-3 space-y-2">
+                      <div>
+                        <span className="text-white/60">Produkt / Product:</span> {selectedPlan?.name ?? "Plan"} subscription
+                      </div>
+                      <div>
+                        <span className="text-white/60">Główne cechy / Main features:</span>
+                        <ul className="mt-2 list-disc space-y-1 pl-5 text-white/70">
+                          {summaryFeatures.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <span className="text-white/60">Łączna cena (z podatkami) / Total price (incl. VAT):</span> {priceSummary}
+                      </div>
+                      <div>
+                        <span className="text-white/60">Prawo odstąpienia / Right to withdraw:</span> Brak prawa do
+                        odstąpienia po pełnym wykonaniu usługi. Żądając natychmiastowego wykonania, potwierdzasz
+                        utratę tego prawa. / No right of withdrawal after the service is fully performed. By requesting
+                        immediate performance, you acknowledge this.
+                      </div>
+                      <div>
+                        <span className="text-white/60">Czas trwania umowy / Contract duration:</span> Nieoznaczony,
+                        automatycznie odnawiany co okres rozliczeniowy. Wypowiedzenie w panelu. / Indefinite, auto-renews
+                        each billing period. Cancellation available in the dashboard.
+                      </div>
+                      <div>
+                        <span className="text-white/60">Minimalny czas zobowiązań / Minimum duration:</span> {minDurationLabel}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
+                    <label className="flex items-start gap-2">
+                      <input
+                        type="checkbox"
+                        className="mt-0.5"
+                        checked={acceptImmediate}
+                        onChange={(e) => setAcceptImmediate(e.target.checked)}
+                      />
+                      <span>
+                        Chcę, aby usługa została zrealizowana niezwłocznie i przyjmuję do wiadomości, że z chwilą
+                        spełnienia świadczenia przez Fundację Rozwoju Przedsiębiorczości "Twój StartUp", utracę prawo do
+                        odstąpienia od umowy. / I want the service to be provided immediately and I acknowledge that once
+                        the service is performed, I will lose the right to withdraw from the contract.
+                      </span>
+                    </label>
+                    <label className="flex items-start gap-2">
+                      <input
+                        type="checkbox"
+                        className="mt-0.5"
+                        checked={acceptTerms}
+                        onChange={(e) => setAcceptTerms(e.target.checked)}
+                      />
+                      <span>
+                        Akceptuję <Link className="underline" href="/terms">regulamin</Link> serwisu prowadzonego przez
+                        Fundację Rozwoju Przedsiębiorczości "Twój StartUp" z siedzibą w Warszawie. / I accept the
+                        <Link className="underline" href="/terms">Terms and Conditions</Link>.
+                      </span>
+                    </label>
+                    <label className="flex items-start gap-2">
+                      <input
+                        type="checkbox"
+                        className="mt-0.5"
+                        checked={acceptMarketing}
+                        onChange={(e) => setAcceptMarketing(e.target.checked)}
+                      />
+                      <span>
+                        Chcę otrzymywać informacje handlowe i marketingowe. / I want to receive commercial and marketing
+                        content.
+                      </span>
+                    </label>
+                  </div>
+
                   <div className="inline-flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-1 text-xs text-white/70">
                     <button
                       type="button"
@@ -313,12 +428,24 @@ export default function BillingPage() {
                       Yearly
                     </button>
                   </div>
-                  <Button className="w-full" onClick={startCheckout} disabled={checkoutLoading}>
+                  <Button
+                    className="w-full"
+                    onClick={startCheckout}
+                    disabled={checkoutLoading || !acceptImmediate || !acceptTerms}
+                  >
                     {checkoutLoading ? "Redirecting..." : "Subscribe"}
                   </Button>
                   {checkoutError ? (
                     <p className="text-xs text-rose-200">{checkoutError}</p>
                   ) : null}
+                  <p className="text-[11px] text-white/60">
+                    Administratorem danych wprowadzonych do formularza jest Fundacja Rozwoju Przedsiębiorczości
+                    "Twój StartUp". Dane będą przetwarzane w celu zrealizowania usługi oraz w celach marketingowych –
+                    w przypadku wyrażenia zgody. Informujemy o możliwości wycofania zgody. Pełne informacje o
+                    przetwarzaniu danych i przysługujących prawach znajdują się w
+                    {" "}
+                    <Link className="underline" href="/privacy">polityce prywatności</Link>.
+                  </p>
                 </div>
               )}
             </div>

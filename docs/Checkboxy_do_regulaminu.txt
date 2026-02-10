@@ -1,0 +1,38 @@
+W podsumowaniu, bezpośrednio przed złożeniem zamówienia, klient powinien być poinformowany o:
+a)    produkcie (towar lub usługa), na jaki się zdecydował, i jego głównych cechach;
+b)    łącznej cenie lub wynagrodzeniu za towar / usługę wraz z podatkami
+c)    prawie odstąpienia od umowy lub braku tego prawa,
+d)    czasie trwania umowy lub o sposobie i przesłankach wypowiedzenia umowy - jeżeli umowa jest zawarta na czas nieoznaczony lub jeżeli ma ulegać automatycznemu przedłużeniu;
+e)    minimalnym czasie trwania zobowiązań Klienta wynikających z umowy.
+
+Dodatkowo:
+
+W przypadku sprzedaży towarów:
+Zgoda odbierana przed złożeniem zamówienia:
+✔️Akceptuję regulamin serwisu prowadzonego przez Fundację Rozwoju Przedsiębiorczości „Twój StartUp” z siedzibą w Warszawie.
+Chcę otrzymywać informacje handlowe i marketingowe.
+Po złożeniu zamówienia, należy przesłać klientowi na adres e-mail potwierdzenie zawarcia umowy na odległość, w którym przesłany zostanie regulamin i formularz odstąpienia od umowy. Klientowi należy doręczyć również fakturę.
+Pod guzikiem akceptacji zamówienia „wyślij”, „akceptuje” etc. Powinna znajdować się informacja
+„Administratorem danych wprowadzonych do formularza jest Fundacja Rozwoju Przedsiębiorczości „Twój StartUp”. Dane będą przetwarzane w celu zrealizowania usługi oraz w celach marketingowych – w przypadku wyrażenia zgody. Informujemy o możliwości wycofania zgody. Pełne informacje o przetwarzaniu danych i przysługujących prawach znajduje się w polityce prywatności.”
+W przypadku dostarczania treści cyfrowych:
+Zgoda odbierana przed złożeniem zamówienia:
+✔️Chcę, aby usługa została zrealizowana niezwłocznie i przyjmuję do wiadomości, że z chwilą spełnienia świadczenia przez Fundację Rozwoju Przedsiębiorczości „Twój StartUp”, utracę prawo do odstąpienia od umowy.
+✔️Akceptuję regulamin serwisu prowadzonego przez Fundację Rozwoju Przedsiębiorczości „Twój StartUp” z siedzibą w Warszawie.
+Chcę otrzymywać informacje handlowe i marketingowe.
+
+Słowo REGULAMIN (powyżej) powinno zawierać link do regulaminu
+Najpóźniej przed rozpoczęciem świadczenia usługi, należy przekazać konsumentowi informację o udzielonej przez konsumenta zgodzie na dostarczenie treści cyfrowych w okolicznościach powodujących utratę prawa odstąpienia od umowy. A zatem informacja ta może być przekazana w wiadomości e-mail wysłanej do konsumenta po zawarciu umowy, ale przed rozpoczęciem świadczenia usługi, na przykład o treści:
+Z uwagi na wyrażone żądanie Konsumenta wykonania przez Fundację Rozwoju Przedsiębiorczości „Twój StartUp” usługi przed upływem 14 dni od zawarcia umowy, Konsumentowi nie przysługuje prawo odstąpienia od umowy.
+Ww. wiadomość mailową można połączyć w jednej wiadomości mailowej z potwierdzeniem zawarcia umowy na odległość, w którym przesłany zostanie regulamin i formularz odstąpienia od umowy. Klientowi należy doręczyć również fakturę.
+Pod guzikiem akceptacji zamówienia „wyślij”, „akceptuje” etc. Powinna znajdować się informacja
+„Administratorem danych wprowadzonych do formularza jest Fundacja Rozwoju Przedsiębiorczości „Twój StartUp”. Dane będą przetwarzane w celu zrealizowania usługi oraz w celach marketingowych – w przypadku wyrażenia zgody. Informujemy o możliwości wycofania zgody. Pełne informacje o przetwarzaniu danych i przysługujących prawach znajduje się w polityce prywatności.”
+
+W przypadku umów o świadczenie usług, innych niż dostarczanie treści cyfrowych:
+Zgoda odbierana przed złożeniem zamówienia:
+✔️Chcę, aby usługa została zrealizowana niezwłocznie i przyjmuję do wiadomości, że z chwilą spełnienia świadczenia przez Fundację Rozwoju Przedsiębiorczości „Twój StartUp”, utracę prawo do odstąpienia od umowy.
+✔️Akceptuję regulamin serwisu prowadzonego przez Fundację Rozwoju Przedsiębiorczości „Twój StartUp” z siedzibą w Warszawie.
+Chcę otrzymywać informacje handlowe i marketingowe.
+
+Po złożeniu zamówienia, należy przesłać klientowi na adres e-mail potwierdzenie zawarcia umowy na odległość, w którym przesłany zostanie regulamin i formularz odstąpienia od umowy. Klientowi należy doręczyć również fakturę.
+Pod guzikiem akceptacji zamówienia „wyślij”, „akceptuje” etc. Powinna znajdować się informacja
+„Administratorem danych wprowadzonych do formularza jest Fundacja Rozwoju Przedsiębiorczości „Twój StartUp”. Dane będą przetwarzane w celu zrealizowania usługi oraz w celach marketingowych – w przypadku wyrażenia zgody. Informujemy o możliwości wycofania zgody. Pełne informacje o przetwarzaniu danych i przysługujących prawach znajduje się w polityce prywatności.”

@@ -66,12 +66,22 @@ export async function POST(req: Request) {
 
   const planId = String(body.planId ?? "") as PricingPlanId;
   const interval = normalizeInterval(body.interval);
+  const consents = (body.consents ?? {}) as Record<string, unknown>;
+  const acceptImmediate = consents.acceptImmediate === true;
+  const acceptTerms = consents.acceptTerms === true;
+  const acceptMarketing = consents.acceptMarketing === true;
 
   if (!(planId === "starter" || planId === "creator" || planId === "pro" || planId === "studio" || planId === "scale")) {
     return NextResponse.json({ error: "Unsupported planId." }, { status: 400 });
   }
   if (!interval) {
     return NextResponse.json({ error: "interval must be month|year." }, { status: 400 });
+  }
+  if (!acceptImmediate || !acceptTerms) {
+    return NextResponse.json(
+      { error: "Required consents are missing." },
+      { status: 400 }
+    );
   }
 
   const baseUrl = getBaseUrl(req);
@@ -124,6 +134,9 @@ export async function POST(req: Request) {
         planId,
         interval,
         userId: user.id,
+        acceptImmediate: String(acceptImmediate),
+        acceptTerms: String(acceptTerms),
+        acceptMarketing: String(acceptMarketing),
       },
       subscription_data: {
         trial_period_days: plan.entitlements?.trial_days ?? undefined,
@@ -131,6 +144,9 @@ export async function POST(req: Request) {
           workspaceId,
           planId,
           interval,
+          acceptImmediate: String(acceptImmediate),
+          acceptTerms: String(acceptTerms),
+          acceptMarketing: String(acceptMarketing),
         },
       },
       line_items: [

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/components/Button";
+import Link from "next/link";
 import { useTranslations } from "@/i18n/client";
 
 type BillingStatusResponse = {
@@ -63,6 +64,23 @@ export default function BillingSuccessPage() {
     <div className="mx-auto max-w-xl space-y-6 text-center">
       <h1 className="text-2xl font-semibold text-white">{t.app.billingSuccessTitle}</h1>
       <p className="text-sm text-white/70">{status}</p>
+      <p className="text-xs text-white/60">
+        Regulamin i wzór formularza odstąpienia od umowy znajdziesz w
+        {" "}
+        <Link className="underline" href="/terms">Terms & Conditions</Link>.
+        {" "}
+        Polityka prywatności:
+        {" "}
+        <Link className="underline" href="/privacy">Privacy Policy</Link>.
+        {" "}
+        The Terms and withdrawal form are available in
+        {" "}
+        <Link className="underline" href="/terms">Terms & Conditions</Link>,
+        {" "}
+        and the privacy policy is available in
+        {" "}
+        <Link className="underline" href="/privacy">Privacy Policy</Link>.
+      </p>
       <div className="flex items-center justify-center gap-3">
         <Button href="/app">{t.app.billingSuccessGoToDashboard}</Button>
         <Button href="/app/billing" variant="secondary">

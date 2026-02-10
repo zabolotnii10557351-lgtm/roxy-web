@@ -1,75 +1,91 @@
 import Container from "@/components/Container";
-import { getLocaleFromRequest } from "@/i18n/server";
+import { loadLegalDoc } from "@/lib/legal/loadLegalDoc";
+
+const COOKIES_EN = `Cookie Policy
+Cookies are text files created automatically by web browsers when you visit or use websites. They are sent by
+the website and stored on the user's device. The controller uses them to enable proper website operation,
+ensure security, and improve performance.
+
+Data Controller
+The controller of personal data is FUNDACJA ROZWOJU PRZEDSIEBIORCZOSCI
+"TWOJ STARTUP" with its registered office in Warsaw (registered office address: ul. Zurawia 6/12, lok. 766,
+00-503 Warsaw), entered into the National Court Register by the District Court for the Capital City of Warsaw,
+12th Commercial Division, KRS number 0000442857; NIP: 5213641211; REGON: 146433467, contact
+details: telephone number +48503427781, e-mail address: support@roxstreamai.com in connection with the
+organized part of the enterprise named RoxStreamAI carried out by Veronika Shved.
+
+Types of cookies
+We use the following types of cookies on our websites:
+Essential/Technical: These cookies are necessary for the proper functioning of the website. They are installed
+in particular to remember login sessions or to complete forms, and to remember whether you have been
+informed about the use of cookies.
+Functional: They remember and adjust the platform to your choices, e.g. they allow automatic completion of
+the e-mail address that was last used to log in within the platform.
+Analytics: They allow us to check the number of visits and traffic sources. They help us determine which pages
+are popular and which are not. They are used to analyze statistics and improve the performance of our pages.
+Our websites may use analytical and marketing tools implemented by the Foundation or StartUp (depending on
+the Service configuration).
+Marketing: They allow us to tailor displayed advertising content to the user's interests, not only within our
+portal but also outside it. They may be installed by advertising partners. Based on information from these
+cookies and activity in other services, a user interests profile is built.
+Social media cookies: These cookies are installed by our partners to tailor displayed advertising content on
+social media. They build a profile of the user's interests so that displayed content is adapted to individual needs.
+
+Cookie retention period
+Session cookies - are stored on the device in use until the website is left, e.g. by closing the web browser.
+Persistent cookies - remain until they are manually deleted or until the period specified in the browser expires.
+
+Types of data collected
+These include:
+• IP address of the device used by the user
+• device type
+• time spent on the website
+• actions taken on the website
+• location from which the connection is made
+
+How to withdraw consent
+Some cookies are downloaded by the web browser when you enter the website. To block cookies, use the
+method available for your web browser:
+• Firefox
+• Chrome
+• Microsoft Edge
+• Safari
+Blocking cookies may result in incomplete or incorrect operation of the website, however, the website will still
+be usable.
+
+Contact
+If you have questions about the processing of personal data or wish to exercise your rights, you can contact us
+at the addresses indicated in the "Data Controller" section.
+More information about us and your rights can be found at: https://www.roxstreamai.com/privacy
+If personal data protection regulations are breached, you have the right to lodge a complaint with the President
+of the Personal Data Protection Office at https://uodo.gov.pl/
+`;
 
 export default async function CookiesPage() {
-  const locale = await getLocaleFromRequest();
-  const isRu = locale === "ru";
-
-  const t = isRu
-    ? {
-        title: "Cookie Policy",
-        subtitle: "Как RoxStreamAI использует cookies и похожие технологии.",
-        whatTitle: "Что такое cookies?",
-        whatBody:
-          "Cookies — это небольшие текстовые файлы на вашем устройстве. Они помогают сохранять сессию, помнить настройки и улучшать продукт.",
-        useTitle: "Какие cookies мы используем",
-        uses: [
-          "Обязательные cookies (аутентификация/сессия) — нужны для базовой функциональности.",
-          "Cookies предпочтений (например, язык) — запоминают выбранную локаль.",
-          "Аналитика (опционально) — помогает понять, что улучшать.",
-        ],
-        manageTitle: "Как управлять cookies",
-        manageBody:
-          "Вы можете управлять cookies в настройках браузера. Отключение обязательных cookies может сломать вход в аккаунт и другие основные функции.",
-        updated: "Последнее обновление: 2026-02-01",
-      }
-    : {
-        title: "Cookie Policy",
-        subtitle:
-          "This page explains how RoxStreamAI uses cookies and similar technologies.",
-        whatTitle: "What are cookies?",
-        whatBody:
-          "Cookies are small text files stored on your device. They help us keep you signed in, remember preferences, and improve the product.",
-        useTitle: "Cookies we use",
-        uses: [
-          "Essential cookies (authentication/session) — required for core functionality.",
-          "Preference cookies (e.g. language) — remember settings like your chosen locale.",
-          "Analytics cookies (optional) — help us understand what to improve.",
-        ],
-        manageTitle: "Managing cookies",
-        manageBody:
-          "You can control cookies through your browser settings. Disabling essential cookies may prevent sign-in and other core features from working.",
-        updated: "Last updated: 2026-02-01",
-      };
-
+  const cookiesPl = await loadLegalDoc("Polityka_Cookies_ROXSTREAMAI_PL_filled.txt");
   return (
     <Container className="py-14">
       <div className="mx-auto max-w-3xl space-y-6">
         <div>
-          <h1 className="text-4xl font-semibold text-white">{t.title}</h1>
-          <p className="mt-3 text-sm text-white/60">{t.subtitle}</p>
+          <h1 className="text-4xl font-semibold text-white">Cookie Policy</h1>
+          <p className="mt-3 text-sm text-white/60">
+            Polityka Cookies oraz Cookie Policy w języku polskim i angielskim.
+          </p>
         </div>
 
         <section className="space-y-3 rounded-3xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-lg font-semibold text-white">{t.whatTitle}</h2>
-          <p className="text-sm text-white/70">{t.whatBody}</p>
+          <h2 className="text-lg font-semibold text-white">Polski</h2>
+          <div className="whitespace-pre-wrap text-sm text-white/70">
+            {cookiesPl}
+          </div>
         </section>
 
         <section className="space-y-3 rounded-3xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-lg font-semibold text-white">{t.useTitle}</h2>
-          <ul className="list-disc space-y-2 pl-5 text-sm text-white/70">
-            {t.uses.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
+          <h2 className="text-lg font-semibold text-white">English</h2>
+          <div className="whitespace-pre-wrap text-sm text-white/70">
+            {COOKIES_EN}
+          </div>
         </section>
-
-        <section className="space-y-3 rounded-3xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-lg font-semibold text-white">{t.manageTitle}</h2>
-          <p className="text-sm text-white/70">{t.manageBody}</p>
-        </section>
-
-        <p className="text-xs text-white/50">{t.updated}</p>
       </div>
     </Container>
   );
