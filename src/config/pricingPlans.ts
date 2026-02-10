@@ -71,7 +71,7 @@ export const PRICING_PLANS: readonly PricingPlan[] = [
     monthly_price_eur: 9.99,
     marketing: {
       badge: "7-day trial",
-      blurb: "For getting your first character live with predictable limits.",
+      blurb: "One character plus core scenes and basic triggers.",
     },
     entitlements: {
       trial_days: 7,
@@ -93,7 +93,7 @@ export const PRICING_PLANS: readonly PricingPlan[] = [
     name: "Creator",
     monthly_price_eur: 19.99,
     marketing: {
-      blurb: "More characters and higher throughput for growing channels.",
+      blurb: "More characters, more scenes, higher trigger throughput.",
     },
     entitlements: {
       max_characters: 3,
@@ -115,7 +115,7 @@ export const PRICING_PLANS: readonly PricingPlan[] = [
     monthly_price_eur: 59.99,
     marketing: {
       badge: "Best value",
-      blurb: "Plug-and-play with more concurrency and watermark control.",
+      blurb: "More concurrency, watermark control, automation-ready.",
     },
     entitlements: {
       max_characters: 10,
@@ -136,7 +136,7 @@ export const PRICING_PLANS: readonly PricingPlan[] = [
     name: "Studio",
     monthly_price_eur: 149.99,
     marketing: {
-      blurb: "For teams running multiple characters with larger monthly quotas.",
+      blurb: "Team-ready limits, higher quotas for interactive formats.",
     },
     entitlements: {
       max_characters: 25,
@@ -157,7 +157,7 @@ export const PRICING_PLANS: readonly PricingPlan[] = [
     name: "Scale",
     monthly_price_eur: 299.99,
     marketing: {
-      blurb: "High volume limits for multi-account and always-on streams.",
+      blurb: "Multi-account and always-on operations.",
     },
     entitlements: {
       max_characters: 50,
@@ -179,7 +179,7 @@ export const PRICING_PLANS: readonly PricingPlan[] = [
     monthly_price_eur: null,
     entitlements: null,
     marketing: {
-      blurb: "Custom limits, invoicing, and onboarding for teams.",
+      blurb: "Custom limits, invoicing, onboarding.",
     },
   },
 ];

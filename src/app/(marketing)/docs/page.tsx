@@ -48,8 +48,8 @@ export default async function DocsPage() {
           title={isRu ? "Документация" : "Documentation"}
           subtitle={
             isRu
-              ? "Гайды по настройке, провайдерам, Unreal‑workflow и диагностике."
-              : "Setup guides, provider configuration, Unreal workflows, and troubleshooting."
+              ? "Настройте персонажа, сцены и интерактивные триггеры. AI хостинг подключайте, когда готовы."
+              : "Set up your character, scenes, and interactive triggers. Add AI hosting when you're ready."
           }
         />
 

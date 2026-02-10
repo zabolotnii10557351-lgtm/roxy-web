@@ -43,6 +43,10 @@ export type HomeContent = {
     note: string;
   };
   pillars: HomePillar[];
+  aiHost: {
+    title: string;
+    body: string;
+  };
   howItWorks: {
     eyebrow: string;
     title: string;
@@ -98,13 +102,13 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
     hero: {
       badge: "RoxStreamAI",
       title: isRu
-        ? "Запустите AI‑ведущего для стримов за считанные минуты."
-        : "Launch AI-hosted streams in minutes.",
+        ? "Создайте любого персонажа. Запустите интерактивные 3D аватар стримы за минуты."
+        : "Create any character. Run interactive 3D avatar streams in minutes.",
       subtitle: isRu
-        ? "Создавайте уникальных персонажей под свой формат и выводите стриминг на новый уровень, не теряя контроля."
-        : "Create unique characters for your usage and take streaming to a whole new level without losing control.",
-      primaryCtaLabel: isRu ? "Скачать демо" : "Download demo",
-      secondaryCtaLabel: isRu ? "Смотреть тарифы" : "See pricing",
+        ? "RoxStreamAI - это веб панель и десктопный компаньон, где вы создаете персонажа, выбираете сцены и фоны, и запускаете Unreal действия от подарков. Добавляйте AI co-host когда нужно или отдайте управление 24/7."
+        : "RoxStreamAI is a web dashboard plus a desktop companion that lets you build a character, pick scenes and backgrounds, and trigger Unreal actions from gifts. Add an AI co-host anytime or let it run the show while you rest.",
+      primaryCtaLabel: isRu ? "Начать бесплатный триал" : "Start free trial",
+      secondaryCtaLabel: isRu ? "Скачать десктопное приложение" : "Download desktop app",
       note: isRu
         ? "Понятные лимиты. Предсказуемая стоимость. BYOK поддерживается."
         : "Clear usage limits. Predictable costs. BYOK supported.",
@@ -113,58 +117,66 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
       ? [
           {
             icon: "bot",
-            title: "AI‑ко‑хост, а не чат‑бот",
-            body: "Запускайте эфир с предсказуемым форматом: интро, сегменты, баттлы, Q&A и аудитория‑промпты. Настройте тон, правила и guardrails — чтобы стрим ощущался живым, но под контролем.",
-          },
-          {
-            icon: "activity",
-            title: "Понятные лимиты",
-            body: "Выберите, сколько Active Speech вам нужно в месяц. Слайдер talk ratio помогает заранее прикинуть часы стрима и стоимость под ваш формат.",
+            title: "Конструктор персонажей",
+            body: "Создайте персону с голосом, тоном, правилами и лором. Переиспользуйте ее в разных форматах и аккаунтах.",
           },
           {
             icon: "monitor",
-            title: "Unreal‑готовые workflow",
-            body: "Десктоп‑компаньон помогает подключать стрим к Unreal‑workflow. Экспортируйте и переиспользуйте персонажей или работайте через Live Link Face в своей сцене.",
+            title: "Сцены и фоны",
+            body: "Быстро меняйте локации, оверлеи и пресеты сцен. Освежайте визуал без пересборки пайплайна.",
+          },
+          {
+            icon: "activity",
+            title: "Триггеры Dono Engine",
+            body: "Свяжите подарки с действиями: эмоции, реплики, VFX, смены камеры, смены сцен, cooldowns и приоритеты.",
           },
         ]
       : [
           {
             icon: "bot",
-            title: "AI co-host, not a chatbot",
-            body: "Run a predictable live format: intros, segments, battles, Q&A, and audience prompts. Customize tone, rules, and guardrails so the stream feels human without losing control.",
-          },
-          {
-            icon: "activity",
-            title: "Clear usage limits",
-            body: "Pick how much Active Speech you want per month. Use the talk ratio slider to estimate stream hours and cost before you go live.",
+            title: "Character Builder",
+            body: "Build a persona with voice, tone, rules, and lore. Reuse it across formats and accounts.",
           },
           {
             icon: "monitor",
-            title: "Unreal-ready workflows",
-            body: "Use the desktop companion to connect your stream to Unreal Engine workflows. Export and reuse characters, or integrate via Live Link Face if you prefer your own scene.",
+            title: "Scenes + Backgrounds",
+            body: "Switch locations, overlays, and scene presets fast. Keep visuals fresh without rebuilding your pipeline.",
+          },
+          {
+            icon: "activity",
+            title: "Dono Engine Triggers",
+            body: "Map gifts to actions: emotions, lines, VFX, camera cuts, scene changes, cooldowns, priorities.",
           },
         ],
+    aiHost: {
+      title: isRu
+        ? "AI host - это доп, а не весь продукт."
+        : "AI host is an add-on, not the whole product.",
+      body: isRu
+        ? "Стримьте сами, когда хотите. Включайте AI co-host, чтобы заполнить паузы, следовать скриптам, реагировать на чат и подарки, или полностью вести эфир 24/7."
+        : "Stream yourself when you want. Turn on the AI co-host to fill dead air, follow scripts, react to chat and gifts, or fully take over for 24/7 rotation.",
+    },
     howItWorks: {
       eyebrow: isRu ? "Как это работает" : "How it works",
-      title: isRu ? "Ваш первый эфир за один вечер" : "Go live in one evening",
+      title: isRu ? "Как это работает" : "How it works",
       subtitle: isRu
-        ? "От аккаунта до стабильного live‑цикла за 5 шагов."
-        : "From account to stable live loop in 5 steps.",
+        ? "Пять шагов от персонажа до эфира."
+        : "Five steps from character to live.",
       stepLabel: isRu ? "Шаг" : "Step",
       steps: isRu
         ? [
-            "Создайте аккаунт и скачайте десктоп‑компаньон.",
-            "Подключите каналы и инструменты (TikTok‑first).",
-            "Выберите персону и правила безопасности.",
-            "Запускайте сессию: чат, подарки, скрипты и модерация в одном цикле.",
-            "Отслеживайте usage и настройте talk ratio под формат.",
+            "Создайте персонажа (персона, голос, правила).",
+            "Выберите сцены и фоны (пресеты или ваш Unreal сетап).",
+            "Настройте правила Dono Engine (подарки -> реакции -> действия).",
+            "Подключите Desktop Mode (Unreal коннектор + диагностика).",
+            "Выходите в эфир - с AI co-host или без него.",
           ]
         : [
-            "Create an account and download the desktop companion.",
-            "Connect your streaming channels and tools (TikTok-first).",
-            "Choose a character persona and safety rules.",
-            "Start your session: chat, gifts, scripts, and moderation in one loop.",
-            "Track usage and tune the talk ratio for your format.",
+            "Create a character (persona, voice, rules).",
+            "Choose scenes and backgrounds (presets or your Unreal setup).",
+            "Configure Dono Engine rules (gifts -> reactions -> actions).",
+            "Connect Desktop Mode (Unreal connector + diagnostics).",
+            "Go live with or without AI co-host.",
           ],
     },
     integrations: {
@@ -173,8 +185,8 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
         ? "Подключайте то, чем вы уже пользуетесь"
         : "Works with your existing stack",
       subtitle: isRu
-        ? "TikTok Live сегодня, больше провайдеров скоро."
-        : "TikTok Live today. More providers soon.",
+        ? "TikTok Live сегодня. OBS и Unreal workflow встроены. BYOK для провайдеров - когда нужен полный контроль."
+        : "TikTok Live today. OBS and Unreal workflows built-in. BYOK supported for providers when you want full control.",
       items: [
         {
           label: "TikTok Live",
@@ -210,11 +222,11 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
     characters: {
       eyebrow: isRu ? "Персонажи" : "Characters",
       title: isRu
-        ? "Соберите персону один раз — переиспользуйте везде"
-        : "Build once, reuse everywhere",
+        ? "Соберите библиотеку персонажей для вашего канала"
+        : "Build a character library for your channel.",
       subtitle: isRu
-        ? "Создавайте персонажей в веб‑панели и экспортируйте в Unreal через Desktop Mode. Редактор Polyphoria — скоро."
-        : "Create characters in the web dashboard and export to Unreal via Desktop Mode. Polyphoria editor integration is coming soon.",
+        ? "Создавайте персонажей в панели, экспортируйте в Unreal через Desktop Mode и переиспользуйте их в сценах, форматах и аккаунтах. Интеграция Polyphoria editor скоро."
+        : "Create characters in the dashboard, export to Unreal via Desktop Mode, and reuse them across scenes, formats, and accounts. Polyphoria editor integration is coming soon.",
       cards: isRu
         ? [
             {
@@ -266,11 +278,11 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
     pricing: {
       eyebrow: isRu ? "Тарифы" : "Pricing",
       title: isRu
-        ? "Начните с малого, масштабируйтесь когда готовы"
-        : "Start small, scale when you are ready",
+        ? "Начните с одного персонажа. Масштабируйте сцены, триггеры и concurrency."
+        : "Start with one character. Scale scenes, triggers, and concurrency.",
       subtitle: isRu
-        ? "Три плана для старта — полный калькулятор на странице тарифов."
-        : "A quick teaser — full breakdown on the Pricing page.",
+        ? "Планы строятся вокруг персонажей, сцен и лимитов Dono Engine. Использование AI речи остается предсказуемым за счет Active Speech."
+        : "Plans are built around characters, scenes, and Dono Engine limits. AI speech usage stays predictable with Active Speech tracking.",
       ctaLabel: isRu ? "Смотреть тарифы" : "See pricing",
       customLabel: isRu ? "Индивидуально" : "Custom",
     },
@@ -350,6 +362,10 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
               q: "Как вы измеряете usage?",
               a: "Мы измеряем Active Speech — время, когда AI реально говорит. Сам стрим может идти дольше, чем Active Speech.",
             },
+          {
+            q: "Можно ли стримить без AI host?",
+            a: "Да. Можно вести эфир с 3D аватаром и триггерами, а AI co-host включить позже.",
+          },
             {
               q: "Можно использовать свои ключи?",
               a: "Да. Для поддерживаемых провайдеров можно подключить BYOK и переключаться при необходимости.",
@@ -358,6 +374,10 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
               q: "Нужен ли Unreal Engine?",
               a: "Нет. Unreal‑workflow опциональны. Можно стримить без Unreal и подключить позже.",
             },
+          {
+            q: "Что могут триггерить подарки?",
+            a: "Эмоции, реплики, действия, смены сцен и события Unreal с cooldowns и приоритетами.",
+          },
             {
               q: "Насколько это безопасно для live?",
               a: "Мы поддерживаем guardrails: формат‑скрипты, rate limiting и правила модерации. Вы всегда контролируете поведение.",
@@ -377,12 +397,20 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
               a: "We measure Active Speech time — the time the AI is actually speaking. Your stream can run longer than your Active Speech.",
             },
             {
+              q: "Can I run without the AI host?",
+              a: "Yes. You can stream with a 3D avatar and triggers only, and enable AI co-host later.",
+            },
+            {
               q: "Can I use my own API keys?",
               a: "Yes. You can bring your own keys for supported providers and switch when needed.",
             },
             {
               q: "Do I need Unreal Engine?",
               a: "No. Unreal workflows are optional. You can run the stream without Unreal, or connect later.",
+            },
+            {
+              q: "What can gifts trigger?",
+              a: "Emotions, lines, actions, scene changes, and Unreal events with cooldowns and priorities.",
             },
             {
               q: "Is this safe for live streams?",

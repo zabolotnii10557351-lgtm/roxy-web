@@ -186,8 +186,8 @@ export default async function Home() {
               {homeContent.hero.subtitle}
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-              <Button href="/download">{homeContent.hero.primaryCtaLabel}</Button>
-              <Button href="/pricing" variant="secondary">
+              <Button href="/pricing">{homeContent.hero.primaryCtaLabel}</Button>
+              <Button href="/download" variant="secondary">
                 {homeContent.hero.secondaryCtaLabel}
               </Button>
             </div>
@@ -217,6 +217,19 @@ export default async function Home() {
               </div>
             );
             })}
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <div className="glass-card rounded-3xl p-8 text-center">
+            <h2 className="text-2xl font-semibold text-white md:text-3xl">
+              {homeContent.aiHost.title}
+            </h2>
+            <p className="mt-4 text-sm text-white/70 leading-relaxed md:text-base">
+              {homeContent.aiHost.body}
+            </p>
           </div>
         </Container>
       </section>

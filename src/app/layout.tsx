@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     template: "%s | RoxStreamAI",
   },
   description:
-    "Launch AI streamers in 10 minutes. Web dashboard + desktop companion app for Unreal.",
+    "Create characters, scenes, and interactive triggers in minutes. AI co-host is optional.",
   openGraph: {
     type: "website",
     siteName: "RoxStreamAI",
     title: "RoxStreamAI",
     description:
-      "Launch AI streamers in 10 minutes. Web dashboard + desktop companion app for Unreal.",
+      "Create characters, scenes, and interactive triggers in minutes. AI co-host is optional.",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
     title: "RoxStreamAI",
     description:
-      "Launch AI streamers in 10 minutes. Web dashboard + desktop companion app for Unreal.",
+      "Create characters, scenes, and interactive triggers in minutes. AI co-host is optional.",
   },
   robots: {
     index: true,

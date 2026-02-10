@@ -169,19 +169,20 @@ const en: MarketingContent = {
   about: {
     eyebrow: "Behind the scenes of RoxStreamAI",
     title: "About",
-    subtitle: "How RoxStreamAI was created, our mission, and who is Roxy? (text coming soon)",
-    missionTitle: "Our mission",
+    subtitle: "What we're building and why.",
+    missionTitle: "Mission",
     missionBody:
-      "We want creators and small teams to run high-quality streams with less burnout. RoxStreamAI handles repetition: pacing, scheduling, guardrails, and consistent reactions so you can focus on storytelling and community.",
-    beliefTitle: "What RoxStreamAI is",
+      "Help creators run high-quality avatar streams with less technical overhead and less burnout. RoxStreamAI makes character, scene, and trigger workflows repeatable and adds AI hosting when you want it.",
+    beliefTitle: "What it is",
     beliefBody:
-      "RoxStreamAI is a web dashboard plus a desktop companion app. The dashboard manages characters, provider settings, and usage. The desktop app connects to Unreal, runs diagnostics, and enables real-time avatar workflows.",
+      "A web dashboard plus a desktop companion app. The dashboard manages characters, scenes, triggers, providers, and usage. The desktop app connects to Unreal, runs diagnostics, and enables real-time avatar workflows.",
   },
 
   contact: {
     eyebrow: "Contact",
     title: "Contact",
-    subtitle: "Questions, partnerships, or sales",
+    subtitle:
+      "Tell us what you're building - characters, Unreal scenes, interactive dono formats, or AI co-hosting.",
     firstName: "First name",
     lastName: "Last name",
     email: "Email",
@@ -255,7 +256,8 @@ const en: MarketingContent = {
   useCases: {
     eyebrow: "Use cases",
     title: "Use cases",
-    subtitle: "Real formats RoxStreamAI is built for",
+    subtitle:
+      "Real formats RoxStreamAI is built for - characters, scenes, and interactive triggers. AI hosting is optional.",
     items: [
       {
         id: "24-7-host",
@@ -346,7 +348,7 @@ const en: MarketingContent = {
     quickstart: {
       eyebrow: "Documentation",
       title: "Documentation",
-      subtitle: "Everything you need to set up your AI streamer",
+      subtitle: "Set up your character, scenes, and interactive triggers.",
       steps: [
         {
           id: "create-character",
@@ -360,8 +362,9 @@ const en: MarketingContent = {
         },
         {
           id: "set-limits",
-          title: "Set Active Speech and limits",
-          description: "Control how much the AI speaks and keep usage predictable.",
+          title: "Set limits for AI speech (optional)",
+          description:
+            "Keep usage predictable when AI co-host is enabled.",
         },
         {
           id: "connect-unreal",
@@ -503,8 +506,10 @@ const en: MarketingContent = {
   },
   pricing: {
     eyebrow: "Pricing",
-    title: "Pricing that scales with your streaming",
-    subtitle: "Choose BYOK for maximum control or Pro credits for plug-and-play.",
+    title:
+      "Pick a plan, scale characters, scenes, and Dono Engine limits when you're ready.",
+    subtitle:
+      "Plans are built around characters, scenes, and Dono Engine limits. AI speech usage stays predictable with Active Speech tracking.",
     comparisonTitle: "Plan comparison",
     comparisonHeaders: ["Feature", "Trial", "Basic", "Pro", "Studio"],
     comparisonRows: [
@@ -548,13 +553,14 @@ const en: MarketingContent = {
   blog: {
     eyebrow: "Blog",
     title: "Blog",
-    subtitle: "Updates, guides, and behind-the-scenes",
+    subtitle:
+      "Updates, guides, and behind-the-scenes for avatar streams and interactive triggers.",
     backToBlog: "Back to blog",
   },
   team: {
     eyebrow: "Team",
     title: "Team",
-    subtitle: "Small team, product-first",
+    subtitle: "Meet the people behind RoxStreamAI.",
     members: [
       {
         name: "Founder",
@@ -579,18 +585,15 @@ const en: MarketingContent = {
       items: [
         {
           title: "Creator-first",
-          description:
-            "We build tools that remove friction so creators can focus on formats and storytelling.",
+          description: "Remove friction from character and scene pipelines.",
         },
         {
           title: "Operational clarity",
-          description:
-            "Analytics, workflows, and scripts are designed for quick decisions and repeatable growth.",
+          description: "Predictable limits for interactive streams.",
         },
         {
           title: "Safety by default",
-          description:
-            "Every flow includes moderation rules, rate limits, and guardrails before scale.",
+          description: "Guardrails for live triggers and chat.",
         },
       ],
     },
@@ -763,21 +766,20 @@ const ru: MarketingContent = {
   about: {
     eyebrow: "За кулисами RoxStreamAI",
     title: "О нас",
-    subtitle:
-      "Как был создан RoxStreamAI, наша миссия и кто такая Roxy? (текст скоро)",
-    missionTitle: "Наша миссия",
+    subtitle: "Что мы строим и почему.",
+    missionTitle: "Миссия",
     missionBody:
-      "Мы хотим, чтобы создатели и небольшие команды запускали качественные стримы без выгорания. RoxStreamAI берет на себя рутину: темп, расписание, защитные правила и стабильные реакции, чтобы вы фокусировались на сторителлинге и комьюнити.",
-    beliefTitle: "Что такое RoxStreamAI",
+      "Помогать создателям запускать качественные аватар стримы с меньшим тех оверхедом и меньшим выгоранием. RoxStreamAI делает персонажей, сцены и триггеры повторяемыми и добавляет AI хостинг, когда он нужен.",
+    beliefTitle: "Что это",
     beliefBody:
-      "RoxStreamAI — это веб‑панель и десктопное приложение‑компаньон. В панели вы управляете персонажами, настройками провайдеров и использованием. Десктоп‑приложение подключается к Unreal, запускает диагностику и включает realtime‑пайплайн аватаров.",
+      "Это веб панель и десктопное приложение компаньон. Панель управляет персонажами, сценами, триггерами, провайдерами и использованием. Десктопное приложение подключается к Unreal, запускает диагностику и включает real-time аватар workflow.",
   },
 
   contact: {
     eyebrow: "Контакты",
     title: "Спланируем ваш следующий live‑формат",
     subtitle:
-      "Расскажите о целях стриминга — мы составим кастомный план запуска.",
+      "Расскажите, что вы строите - персонажи, сцены Unreal, интерактивные dono форматы или AI co-hosting.",
     firstName: "Имя",
     lastName: "Фамилия",
     email: "Рабочий email",
@@ -840,7 +842,7 @@ const ru: MarketingContent = {
     eyebrow: "Кейсы",
     title: "Реальные результаты для live‑форматов",
     subtitle:
-      "Смотрите, как создатели, faceless‑каналы и агентства используют RoxStreamAI для длинных, безопасных и вовлекающих стримов.",
+      "Реальные форматы, под которые создан RoxStreamAI - персонажи, сцены и интерактивные триггеры. AI хостинг опционален.",
     items: [
       {
         id: "creators",
@@ -959,8 +961,10 @@ const ru: MarketingContent = {
   },
   pricing: {
     eyebrow: "Тарифы",
-    title: "Тарифы, которые масштабируются",
-    subtitle: "Выберите BYOK для максимального контроля или Pro‑кредиты для запуска в один клик.",
+    title:
+      "Выберите план и масштабируйте персонажей, сцены и лимиты Dono Engine, когда будете готовы.",
+    subtitle:
+      "Планы строятся вокруг персонажей, сцен и лимитов Dono Engine. Использование AI речи остается предсказуемым благодаря Active Speech.",
     comparisonTitle: "Сравнение тарифов",
     comparisonHeaders: ["Функция", "Тест", "Basic", "Pro", "Studio"],
     comparisonRows: [
@@ -997,13 +1001,14 @@ const ru: MarketingContent = {
   blog: {
     eyebrow: "Блог",
     title: "Обновления, кейсы и анонсы",
-    subtitle: "Новости продукта, рост и реальные форматы стриминга.",
+    subtitle:
+      "Обновления, гайды и закулисье аватар стримов и интерактивных триггеров.",
     backToBlog: "Назад в блог",
   },
   team: {
     eyebrow: "Команда",
     title: "Люди, которые строят RoxStreamAI",
-    subtitle: "Небольшая команда на стыке стриминга, AI и продукт‑дизайна.",
+    subtitle: "Знакомьтесь с командой RoxStreamAI.",
     members: [
       { name: "Lia Chen", role: "Продукт и рост", focus: "Инструменты для создателей, онбординг и стратегия цен." },
       { name: "Maks Orlov", role: "Лид инженерии", focus: "Realtime‑системы, stream‑scripts и надежность платформы." },
@@ -1015,9 +1020,9 @@ const ru: MarketingContent = {
       title: "Как мы работаем",
       subtitle: "Принципы, по которым строим продукт.",
       items: [
-        { title: "Creator‑first", description: "Мы устраняем трение, чтобы создатели фокусировались на форматах и сторителлинге." },
-        { title: "Операционная ясность", description: "Аналитика, процессы и сценарии для быстрых решений и повторяемого роста." },
-        { title: "Безопасность по умолчанию", description: "Каждый поток включает правила модерации, лимиты и guardrails перед масштабированием." },
+        { title: "Creator-first", description: "Убираем трение в пайплайнах персонажей и сцен." },
+        { title: "Операционная ясность", description: "Предсказуемые лимиты для интерактивных стримов." },
+        { title: "Безопасность по умолчанию", description: "Guardrails для live триггеров и чата." },
       ],
     },
     cta: {
