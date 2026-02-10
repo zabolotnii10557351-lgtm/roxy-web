@@ -15,13 +15,13 @@ export default async function MarketingHeader() {
   } = await supabase.auth.getUser();
 
   const links = [
-    { href: "/app", label: t.common.dashboard },
     { href: "/use-cases", label: t.nav.useCases },
     { href: "/pricing", label: t.nav.pricing },
     { href: "/docs", label: t.nav.docs },
     { href: "/blog", label: t.nav.blog },
     { href: "/about", label: t.nav.about },
     { href: "/contact", label: t.nav.contact },
+    { href: user ? "/app" : "/login", label: user ? t.common.dashboard : t.common.signIn },
   ];
 
   return (
@@ -51,15 +51,6 @@ export default async function MarketingHeader() {
         </nav>
         <div className="flex flex-nowrap items-center gap-2 sm:gap-3">
           <div className="hidden items-center gap-3 md:flex">
-            {user ? (
-              <Button variant="ghost" href="/app">
-                {t.common.openDashboard}
-              </Button>
-            ) : (
-              <Button variant="ghost" href="/login">
-                {t.common.signIn}
-              </Button>
-            )}
             <Button href="/download">{t.common.downloadDemo}</Button>
           </div>
 
@@ -86,15 +77,6 @@ export default async function MarketingHeader() {
               </nav>
 
               <div className="mt-3 flex flex-col gap-2">
-                {user ? (
-                  <Button variant="secondary" href="/app" className="w-full px-4 py-2 text-sm">
-                    {t.common.openDashboard}
-                  </Button>
-                ) : (
-                  <Button variant="secondary" href="/login" className="w-full px-4 py-2 text-sm">
-                    {t.common.signIn}
-                  </Button>
-                )}
                 <Button href="/download" className="w-full px-4 py-2 text-sm">
                   {t.common.downloadDemo}
                 </Button>

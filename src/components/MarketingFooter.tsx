@@ -66,15 +66,21 @@ export default async function MarketingFooter() {
                 {group.title}
               </p>
               <div className="flex flex-col gap-2 text-sm text-white/70">
-                {group.links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {group.links.map((link) =>
+                  link.href.startsWith("mailto:") ? (
+                    <a key={link.href} href={link.href} className="hover:text-white">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
           ))}
