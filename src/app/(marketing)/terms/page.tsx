@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import { loadLegalDoc } from "@/lib/legal/loadLegalDoc";
 
 export default async function TermsPage() {
