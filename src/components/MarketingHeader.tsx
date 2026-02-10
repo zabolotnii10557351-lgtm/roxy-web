@@ -50,10 +50,6 @@ export default async function MarketingHeader() {
           ))}
         </nav>
         <div className="flex flex-nowrap items-center gap-2 sm:gap-3">
-          <div className="hidden items-center gap-3 md:flex">
-            <Button href="/download">{t.common.downloadDemo}</Button>
-          </div>
-
           <LanguageSwitcher />
 
           <details className="relative md:hidden">
@@ -76,11 +72,7 @@ export default async function MarketingHeader() {
                 ))}
               </nav>
 
-              <div className="mt-3 flex flex-col gap-2">
-                <Button href="/download" className="w-full px-4 py-2 text-sm">
-                  {t.common.downloadDemo}
-                </Button>
-              </div>
+              <div className="mt-3 flex flex-col gap-2" />
             </div>
           </details>
         </div>
