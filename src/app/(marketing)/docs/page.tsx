@@ -99,9 +99,13 @@ export default async function DocsPage() {
 
       <Container>
         <SectionHeading
-          eyebrow={isRu ? "Дорожная карта" : "Roadmap"}
-          title={isRu ? "Что дальше" : "What is next"}
-          subtitle={isRu ? "Планы и обновления — в одном месте." : "Updates and plans in one place."}
+          eyebrow={isRu ? "F&Q" : "F&Q"}
+          title={isRu ? "F&Q" : "F&Q"}
+          subtitle={
+            isRu
+              ? "Остались вопросы после гайдов? Начните чат с помощником ниже."
+              : "Still have questions after the guides? Start a chat with the assistant below."
+          }
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <Link href="/roadmap" className="glass-card rounded-3xl p-6 transition-all hover:scale-[1.01]">
@@ -118,6 +122,14 @@ export default async function DocsPage() {
             </p>
             <p className="mt-5 text-xs text-cyan-200">{isRu ? "Открыть →" : "Open →"}</p>
           </Link>
+        </div>
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white/70"
+          >
+            {isRu ? "Начать чат" : "Start chat"}
+          </button>
         </div>
       </Container>
     </div>

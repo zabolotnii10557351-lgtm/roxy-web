@@ -9,9 +9,11 @@ export default function SectionHeading({
   title,
   subtitle,
 }: SectionHeadingProps) {
+  const showEyebrow = eyebrow && eyebrow !== title;
+
   return (
     <div className="mx-auto max-w-2xl text-center">
-      {eyebrow ? (
+      {showEyebrow ? (
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
           {eyebrow}
         </p>

@@ -515,8 +515,6 @@ export default function CharacterBuilderByIdPage() {
                   <option value="pt" label="Português" />
                   <option value="it" label="Italiano" />
                   <option value="tr" label="Türkçe" />
-                  <option value="ja" label="日本語" />
-                  <option value="zh" label="中文" />
                   <option value="uk" label="Українська" />
                 </datalist>
               </div>

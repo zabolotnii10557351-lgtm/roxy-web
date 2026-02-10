@@ -46,20 +46,60 @@ export default async function Home() {
           a: "Мы измеряем Active Speech — время, когда AI реально говорит. Сам стрим может идти дольше, чем Active Speech.",
         },
         {
+          q: "Что такое Active Speech?",
+          a: "Это суммарное время речи AI. Именно оно учитывается в лимитах и тарифах.",
+        },
+        {
           q: "Можно использовать свои ключи?",
           a: "Да. Для поддерживаемых провайдеров можно подключить BYOK и переключаться при необходимости.",
         },
         {
-          q: "Нужен ли Unreal Engine?",
-          a: "Нет. Unreal‑workflow опциональны. Можно стримить без Unreal и подключить позже.",
+          q: "Что такое talk ratio?",
+          a: "Это доля времени, когда AI говорит в эфире. Меньший talk ratio даёт больше часов стрима при том же бюджете Active Speech.",
+        },
+        {
+          q: "Можно создать несколько персонажей?",
+          a: "Да. Создавайте несколько персонажей и переключайтесь между ними под разные форматы.",
+        },
+        {
+          q: "Можно переиспользовать персонажей в разных стримах?",
+          a: "Да. Один раз настроенный персонаж можно использовать в разных сценах и сессиях.",
+        },
+        {
+          q: "Могу ли я стримить сам и подключать AI только частично?",
+          a: "Да. AI может работать как co‑host, а основное время вести стрим можете вы.",
+        },
+        {
+          q: "Можно запустить полностью AI‑стримера вместо себя?",
+          a: "Да. Можно настроить полностью автономный формат с сценариями и правилами.",
+        },
+        {
+          q: "Можно менять фоны во время стрима?",
+          a: "Да. Фоны можно менять в рамках вашей сцены и подключенных инструментов.",
+        },
+        {
+          q: "Поддерживаются донат‑триггеры и подарки?",
+          a: "Да. AI может реагировать на подарки и донаты по заданным правилам.",
+        },
+        {
+          q: "Как работают донат‑триггеры?",
+          a: "Вы задаете правила и сценарии, а система запускает реакции в live‑цикле.",
+        },
+        {
+          q: "Какие платформы поддерживаются?",
+          a: "TikTok Live поддерживается сейчас. Другие провайдеры добавляются по мере релиза.",
+        },
+        {
+          q: "Нужен ли Desktop‑компаньон?",
+          a: "Для некоторых функций и интеграций он обязателен. Для базового сценария можно начать с веб‑панели.",
+        },
+        {
+          q: "Можно задать запрещенные слова и правила?",
+          a: "Да. Настраивайте темы, запрещенные слова и guardrails под формат.",
         },
         {
           q: "Насколько это безопасно для live?",
-          a: "Мы поддерживаем guardrails: формат‑скрипты, rate limiting и правила модерации. Вы всегда контролируете поведение.",
-        },
-        {
-          q: "Что такое talk ratio?",
-          a: "Это доля времени, когда AI говорит в эфире. Меньший talk ratio даёт больше часов стрима при том же бюджете Active Speech.",
+          a: "Есть guardrails: формат‑скрипты, rate limiting и правила модерации. Вы всегда контролируете поведение.",
         },
         {
           q: "Можно ли менять тариф позже?",
@@ -72,20 +112,60 @@ export default async function Home() {
           a: "We measure Active Speech time — the time the AI is actually speaking. Your stream can run longer than your Active Speech.",
         },
         {
+          q: "What is Active Speech?",
+          a: "It is the total time the AI is speaking. This is what counts toward usage and plans.",
+        },
+        {
           q: "Can I use my own API keys?",
           a: "Yes. You can bring your own keys for supported providers and switch when needed.",
         },
         {
-          q: "Do I need Unreal Engine?",
-          a: "No. Unreal workflows are optional. You can run the stream without Unreal, or connect later.",
+          q: "What is talk ratio?",
+          a: "Talk ratio is the percentage of time the AI is actively speaking during a stream. Lower talk ratio means more stream hours for the same Active Speech budget.",
+        },
+        {
+          q: "Can I create multiple characters?",
+          a: "Yes. Build multiple personas and switch them based on your format.",
+        },
+        {
+          q: "Can I reuse characters across streams?",
+          a: "Yes. A character can be reused across different scenes and sessions.",
+        },
+        {
+          q: "Can I stream as myself and use AI only sometimes?",
+          a: "Yes. The AI can act as a co-host while you run the primary show.",
+        },
+        {
+          q: "Can I run a fully AI streamer instead of myself?",
+          a: "Yes. You can set up a fully autonomous format with scripts and rules.",
+        },
+        {
+          q: "Can I change backgrounds during a stream?",
+          a: "Yes. Backgrounds can be swapped within your scene and connected tools.",
+        },
+        {
+          q: "Do you support donation triggers or gifts?",
+          a: "Yes. The AI can react to gifts and donations based on your rules.",
+        },
+        {
+          q: "How do donation triggers work?",
+          a: "You define rules and scripts, and the system runs reactions inside the live loop.",
+        },
+        {
+          q: "Which platforms are supported?",
+          a: "TikTok Live is supported today. More providers are coming.",
+        },
+        {
+          q: "Do I need the Desktop companion?",
+          a: "Some features and integrations require it. You can start with the web dashboard for a basic setup.",
+        },
+        {
+          q: "Can I set forbidden words and rules?",
+          a: "Yes. Configure topics, forbidden words, and guardrails for your format.",
         },
         {
           q: "Is this safe for live streams?",
           a: "We support guardrails like scripted formats, rate limiting, and moderation rules. You are always in control.",
-        },
-        {
-          q: "What is talk ratio?",
-          a: "Talk ratio is the percentage of time the AI is actively speaking during a stream. Lower talk ratio means more stream hours for the same Active Speech budget.",
         },
         {
           q: "Can I change plans later?",
@@ -174,7 +254,17 @@ export default async function Home() {
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20">
-                      <Plug className="h-5 w-5 text-cyan-200" />
+                      {it.logo ? (
+                        <img
+                          src={it.logo}
+                          alt={it.label}
+                          className="h-5 w-5"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <Plug className="h-5 w-5 text-cyan-200" />
+                      )}
                     </div>
                     <p className="text-sm font-semibold text-white">{it.label}</p>
                   </div>

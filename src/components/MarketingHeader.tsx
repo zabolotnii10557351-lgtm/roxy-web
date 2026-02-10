@@ -15,6 +15,7 @@ export default async function MarketingHeader() {
   } = await supabase.auth.getUser();
 
   const links = [
+    { href: "/app", label: t.common.dashboard },
     { href: "/use-cases", label: t.nav.useCases },
     { href: "/pricing", label: t.nav.pricing },
     { href: "/docs", label: t.nav.docs },
@@ -33,7 +34,7 @@ export default async function MarketingHeader() {
           <div>
             <p className="text-sm font-semibold text-white">{t.common.brand}</p>
             <p className="hidden whitespace-nowrap text-xs text-white/60 transition-colors group-hover:text-white/80 lg:block">
-              Web dashboard + desktop companion app for Unreal
+              {t.common.dashboard}
             </p>
           </div>
         </Link>

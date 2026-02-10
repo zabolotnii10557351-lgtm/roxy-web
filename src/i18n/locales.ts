@@ -7,8 +7,6 @@ export type Locale =
   | "pt"
   | "ru"
   | "tr"
-  | "ja"
-  | "zh"
   | "uk";
 
 export const defaultLocale: Locale = "en";
@@ -19,12 +17,10 @@ const unsortedLocaleOptions: Array<{ code: Locale; label: string }> = [
   { code: "es", label: "Español" },
   { code: "fr", label: "Français" },
   { code: "it", label: "Italiano" },
-  { code: "ja", label: "日本語" },
   { code: "pt", label: "Português" },
   { code: "ru", label: "Русский" },
   { code: "tr", label: "Türkçe" },
   { code: "uk", label: "Українська" },
-  { code: "zh", label: "中文" },
 ];
 
 export const localeOptions = [...unsortedLocaleOptions].sort((a, b) =>

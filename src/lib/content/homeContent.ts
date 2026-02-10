@@ -9,6 +9,7 @@ export type HomePillar = {
 export type HomeIntegration = {
   label: string;
   note?: string;
+  logo?: string;
 };
 
 export type HomeCard = {
@@ -100,8 +101,8 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
         ? "Запустите AI‑ведущего для стримов за считанные минуты."
         : "Launch AI-hosted streams in minutes.",
       subtitle: isRu
-        ? "Сценарии, правила и лимиты — чтобы эфир был живым, но под контролем."
-        : "Scripts, guardrails, and predictable usage so your stream feels human without losing control.",
+        ? "Создавайте уникальных персонажей под свой формат и выводите стриминг на новый уровень, не теряя контроля."
+        : "Create unique characters for your usage and take streaming to a whole new level without losing control.",
       primaryCtaLabel: isRu ? "Скачать демо" : "Download demo",
       secondaryCtaLabel: isRu ? "Смотреть тарифы" : "See pricing",
       note: isRu
@@ -175,14 +176,34 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
         ? "TikTok Live сегодня, больше провайдеров скоро."
         : "TikTok Live today. More providers soon.",
       items: [
-        { label: "TikTok Live", note: isRu ? "сегодня" : "today" },
-        { label: "OBS WebSocket" },
-        { label: "Unreal Engine", note: isRu ? "workflow" : "workflows" },
-        { label: "OpenAI voice", note: isRu ? "включено" : "included" },
-        { label: "ElevenLabs", note: "BYOK" },
+        {
+          label: "TikTok Live",
+          note: isRu ? "сегодня" : "today",
+          logo: "https://cdn.simpleicons.org/tiktok/ffffff",
+        },
+        {
+          label: "OBS WebSocket",
+          logo: "https://cdn.simpleicons.org/obsstudio/ffffff",
+        },
+        {
+          label: "Unreal Engine",
+          note: isRu ? "workflow" : "workflows",
+          logo: "https://cdn.simpleicons.org/unrealengine/ffffff",
+        },
+        {
+          label: "OpenAI voice",
+          note: isRu ? "включено" : "included",
+          logo: "https://cdn.simpleicons.org/openai/ffffff",
+        },
+        {
+          label: "ElevenLabs",
+          note: "BYOK",
+          logo: "https://cdn.simpleicons.org/elevenlabs/ffffff",
+        },
         {
           label: isRu ? "Другие провайдеры" : "More providers",
           note: isRu ? "скоро" : "soon",
+          logo: "https://cdn.simpleicons.org/simpleicons/ffffff",
         },
       ],
     },
@@ -199,7 +220,7 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
             {
               icon: "sparkles",
               title: "Персона и правила",
-              body: "Тон, стоп‑фразы, темы и формат шоу.",
+              body: "Тон, запрещенные слова, темы и формат шоу.",
               href: "/app/characters",
               cta: "Открыть персонажей",
             },
@@ -222,7 +243,7 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
             {
               icon: "sparkles",
               title: "Persona and rules",
-              body: "Tone, stop phrases, topics, and show format.",
+              body: "Tone, forbidden words, topics, and show format.",
               href: "/app/characters",
               cta: "Open characters",
             },

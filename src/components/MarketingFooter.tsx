@@ -5,6 +5,7 @@ import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 export default async function MarketingFooter() {
   const locale = await getLocaleFromRequest();
   const t = getTranslations(locale);
+  const isRu = locale === "ru";
 
   const groups: Array<{
     title: string;
@@ -30,7 +31,11 @@ export default async function MarketingFooter() {
       links: [
         { href: "/about", label: t.nav.about },
         { href: "/team", label: t.nav.team },
-        { href: "/contact", label: t.nav.contact },
+        { href: "mailto:support@roxstreamai.com", label: t.nav.contact },
+        {
+          href: "mailto:sales@roxstreamai.com",
+          label: isRu ? "Реклама и коллаборации" : "Ads & collabs",
+        },
       ],
     },
     {

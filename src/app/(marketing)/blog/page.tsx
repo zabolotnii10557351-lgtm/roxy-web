@@ -9,12 +9,13 @@ export default async function BlogPage() {
   const locale = await getLocaleFromRequest();
   const content = await getMarketingContent(locale);
   const blogPosts = await getBlogPosts(locale);
+  const eyebrow = content.blog.eyebrow === content.blog.title ? undefined : content.blog.eyebrow;
 
   return (
     <div className="space-y-20 pb-20 pt-16">
       <Container>
         <SectionHeading
-          eyebrow={content.blog.eyebrow}
+          eyebrow={eyebrow}
           title={content.blog.title}
           subtitle={content.blog.subtitle}
         />
