@@ -123,6 +123,7 @@ export type Translations = {
     referralPurchasesTitle: string;
     referralNoSignups: string;
     referralNoPurchases: string;
+    notifications: string;
     notificationsTitle: string;
     notificationsSubtitle: string;
     notificationsMarkAll: string;
@@ -523,6 +524,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -943,6 +945,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -1367,6 +1370,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -1788,6 +1792,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -2209,6 +2214,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -2630,6 +2636,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -3050,6 +3057,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -3472,6 +3480,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -3887,6 +3896,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -4301,6 +4311,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
@@ -4718,6 +4729,7 @@ export const translations: Record<Locale, Translations> = {
       referralPurchasesTitle: "Purchases",
       referralNoSignups: "No signups yet.",
       referralNoPurchases: "No purchases yet.",
+      notifications: "Notifications",
       notificationsTitle: "Notifications",
       notificationsSubtitle: "Usage, bonuses, and billing updates.",
       notificationsMarkAll: "Mark all as read",
