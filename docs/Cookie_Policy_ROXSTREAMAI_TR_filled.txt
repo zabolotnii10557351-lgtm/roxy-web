@@ -1,0 +1,39 @@
+Cookie Politikasi
+Cookie'ler, web sitelerini ziyaret ettiginizde veya kullandiginizda web tarayicilari tarafindan otomatik olarak olusturulan metin dosyalaridir. Site tarafindan gonderilir ve kullanicinin cihazinda saklanir. Veri sorumlusu, web sitesinin dogru calismasini saglamak, guvenligi temin etmek ve performansi iyilestirmek icin bunlari kullanir.
+
+Veri sorumlusu
+Kisisel verilerin sorumlusu FUNDACJA ROZWOJU PRZEDSIEBIORCZOSCI
+"TWOJ STARTUP" adli kurumdur. Merkezi Varşova'da olup (adres: ul. Zurawia 6/12, lok. 766, 00-503 Varşova), Varşova Baskent Bolge Mahkemesi 12. Ticaret Dairesi tarafindan Ulusal Mahkeme Siciline kaydedilmistir. KRS numarasi 0000442857; NIP: 5213641211; REGON: 146433467; iletisim: tel. +48503427781, e-posta support@roxstreamai.com, Veronika Shved tarafindan yurutulen RoxStreamAI isimli isletmenin organize kismi kapsaminda.
+
+Cookie turleri
+Web sitelerimizde asagidaki cookie turlerini kullaniriz:
+Gerekli/Teknik: Bu cookie'ler web sitesinin dogru calismasi icin gereklidir. Ozellikle giris oturumlarini hatirlamak, formlari tamamlamak ve cookie kullanimi konusunda bilgilendirildiginizi hatirlamak icin kurulur.
+Fonksiyonel: Platformu tercihlerinize gore hatirlar ve uyarlar. Ornegin, son giriste kullanilan e-posta adresinin otomatik doldurulmasini saglar.
+Analitik: Ziyaret sayisi ve trafik kaynaklarini kontrol etmemizi saglar. Hangi sayfalarin populer oldugunu belirlemeye yardim eder. Istatistikleri analiz etmek ve sayfalarimizin performansini iyilestirmek icin kullanilir. Web sitelerimiz, Hizmet konfigurasyonuna bagli olarak, Vakif veya StartUp tarafindan uygulanan analiz ve pazarlama araclarini kullanabilir.
+Pazarlama: Gosterilen reklam icerigini kullanicinin ilgilerine gore uyarlamayi saglar; yalnizca portalimiz icinde degil, disinda da. Reklam ortaklari tarafindan kurulabilir. Bu cookie'lerden gelen bilgiler ve diger hizmetlerdeki etkinliklere dayanarak bir ilgi profili olusturulur.
+Sosyal medya cookie'leri: Bu cookie'ler ortaklarimiz tarafindan sosyal medyada gosterilen reklam icerigini uyarlamak icin kurulur. Kullanici ilgilerine dair bir profil olusturarak icerigin bireysel ihtiyaclara gore uyarlanmasini saglar.
+
+Cookie saklama suresi
+Oturum cookie'leri: Web sitesinden ayrilana kadar cihazda saklanir, ornegin tarayiciyi kapatana kadar.
+Kalici cookie'ler: Elle silinene kadar veya tarayicida belirtilen sure dolana kadar saklanir.
+
+Toplanan veri turleri
+Bunlar sunlari icerir:
+- kullanicinin kullandigi cihazin IP adresi
+- cihaz turu
+- web sitesinde gecirilen sure
+- web sitesinde yapilan islemler
+- baglantinin yapildigi konum
+
+Onay nasil geri cekilir
+Bazi cookie'ler web sitesine girdiginizde tarayici tarafindan indirilir. Cookie'leri engellemek icin tarayicinizdaki yontemi kullanin:
+- Firefox
+- Chrome
+- Microsoft Edge
+- Safari
+Cookie'leri engellemek, web sitesinin eksik veya hatali calismasina neden olabilir; ancak web sitesi kullanilmaya devam edilebilir.
+
+Iletisim
+Kisisel verilerin islenmesiyle ilgili sorulariniz varsa veya haklarinizi kullanmak isterseniz, "Veri sorumlusu" bolumunde belirtilen adreslerden bize ulasabilirsiniz.
+Bizim hakkimizda ve haklarinizla ilgili daha fazla bilgi: https://www.roxstreamai.com/privacy
+Kisisel veri koruma mevzuatinin ihlali durumunda, Kisisel Verileri Koruma Kurumu Baskanina sikayet etme hakkiniz vardir: https://uodo.gov.pl/

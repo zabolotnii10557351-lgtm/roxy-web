@@ -1,0 +1,39 @@
+Zasady cookie
+Cookies jsou textove soubory, ktere webove prohlizece automaticky vytvareji pri navsteve nebo pouziti webu. Jsou odesilany webem a ukladany na zarizeni uzivatele. Spravce je pouziva k zajisteni spravne funkce webu, bezpecnosti a zlepseni vykonu.
+
+Spravce udaju
+Spravcem osobnich udaju je FUNDACJA ROZWOJU PRZEDSIEBIORCZOSCI
+"TWOJ STARTUP" se sidlem ve Varšave (adresa sidla: ul. Zurawia 6/12, lok. 766, 00-503 Varšava), zapsana v Narodnim soudnim rejstriku Okresnim soudem pro hlavni mesto Varšavu, 12. hospodarska sekce, KRS cislo 0000442857; NIP: 5213641211; REGON: 146433467, kontakt: tel. +48503427781, e-mail support@roxstreamai.com v souvislosti s organizovanou casti podniku RoxStreamAI, provozovanou Veronikou Shved.
+
+Typy cookie
+Na nasich webech pouzivame nasledujici typy cookie:
+Nutne/Technicke: Tyto cookie jsou nezbytne pro spravne fungovani webu. Ukladaji se zejmena pro zapamatovani prihlasovacich relaci nebo pro vyplneni formularu a pro zapamatovani, ze jste byli informovani o pouziti cookie.
+Funkcni: Pamatuji si a prizpusobuji platformu vasim volbam, napriklad umoznuji automaticke vyplneni naposledy pouzite e-mailove adresy pro prihlaseni.
+Analyticke: UmoznujI nam kontrolovat pocet navstev a zdroje navstevnosti. Pomahaji urcit, ktere stranky jsou popularni a ktere ne. Slouzi k analyzovani statistik a zlepsovani vykonu nasich stranek. Nase weby mohou pouzivat analyticke a marketingove nastroje implementovane Nadaci nebo StartUp (v zavislosti na konfiguraci Sluzby).
+Marketingove: UmoznujI nam prisposobit zobrazovany reklamni obsah zajmum uzivatele, nejen na nasem portalu, ale i mimo nej. Mohou byt instalovany reklamnimi partnery. Na zaklade informaci z techto cookie a aktivity v jinych sluzbach je vytvaren profil zajmu uzivatele.
+Cookie socialnich siti: Tyto cookie jsou instalovany nasimi partnery pro prisposobeni zobrazovaneho reklamniho obsahu na socialnich sitich. Vytvareji profil zajmu uzivatele, aby byl obsah prisposoben individualnim potrebam.
+
+Doba uchovani cookie
+Session cookie jsou ukladany na zarizeni az do opusteni webu, napr. zavrenim prohlizece.
+Trvale cookie zustavaji, dokud nejsou rucne smazany nebo dokud nevyprsi doba nastavena v prohlizeci.
+
+Typy sbiranych dat
+Patri sem:
+- IP adresa zarizeni pouziteho uzivatelem
+- typ zarizeni
+- cas straveny na webu
+- akce provedene na webu
+- misto, odkud je pripojeni navazano
+
+Jak odvolat souhlas
+Nektere cookie se stahujI prohlizecem pri vstupu na web. Pro blokovani cookie pouzijte metodu dostupnou ve vasem prohlizeci:
+- Firefox
+- Chrome
+- Microsoft Edge
+- Safari
+Blokovani cookie muze vest k neuplne nebo nespravne funkci webu, nicmene web zustane pouzitelny.
+
+Kontakt
+Pokud mate dotazy k zpracovani osobnich udaju nebo chcete uplatnit sva prava, muzete nas kontaktovat na adresach uvedenych v casti "Spravce udaju".
+Vice informaci o nas a vasich pravech najdete na: https://www.roxstreamai.com/privacy
+V pripade poruseni predpisu o ochrane osobnich udaju mate pravo podat stiznost Prezidentovi Uradu pro ochranu osobnich udaju: https://uodo.gov.pl/

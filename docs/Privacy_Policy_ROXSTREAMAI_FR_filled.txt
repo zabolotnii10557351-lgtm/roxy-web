@@ -1,0 +1,37 @@
+POLITIQUE DE CONFIDENTIALITE - RoxStreamAI
+1. Qui est le responsable du traitement?
+Le responsable du traitement de vos donnees personnelles est la Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" dont le siege est a Varsovie (adresse du siege: ul. Zurawia 6/12, lok. 766, 00-503 Varsovie).
+La presente Politique de confidentialite s'applique aux services de la Fondation fournis par la partie organisee de l'entreprise RoxStreamAI, contacts: tel. +48503427781, e-mail support@roxstreamai.com, exploitee par Veronika Shved (nom et prenom de la Beneficiaire).
+2. Pourquoi traitons-nous vos donnees?
+A. Dans le cadre des services fournis via RoxStreamAI (https://www.roxstreamai.com) consistant a fournir des services numeriques sur un modele d'abonnement (SaaS), c'est-a-dire pour la conclusion ou l'execution d'un contrat (article 6, paragraphe 1, point b) du RGPD), vos donnees seront conservees jusqu'a l'execution du contrat.
+B. A des fins de marketing et de promotion des produits offerts par la Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" avec siege a Varsovie, ce qui constitue notre interet legitime (article 6, paragraphe 1, point f) du RGPD). Vos donnees seront traitees jusqu'a opposition (si vous n'envoyez pas d'informations commerciales, supprimez ce point).
+C. Pour respecter les obligations legales liees a la cooperation engagee (article 6, paragraphe 1, point c) du RGPD), notamment les obligations de conservation de certains documents pendant la duree prevue par la loi, par exemple:
+- Loi du 29.09.1994 sur la comptabilite (Journal des lois 2017, position 1858)
+- Ordonnance fiscale du 29 aout 1997 (Journal des lois 1997 n 137, position 926);
+- Loi du 1er mars 2018 relative a la lutte contre le blanchiment de capitaux et le financement du terrorisme (Journal des lois 2018 position 723).
+D. Pour l'etablissement, l'exercice ou la defense d'actions en justice, ce qui constitue notre interet legitime (article 6, paragraphe 1, point f) du RGPD). Les donnees seront traitees jusqu'a la presentation des reclamations;
+E. En cas de consentement, vos donnees sont traitees dans la limite et pour la finalite indiquee dans le consentement (base juridique: article 6, paragraphe 1, point a) du RGPD). Les donnees seront traitees jusqu'au retrait du consentement.
+3. Quelles donnees sont traitees?
+Pour conclure le contrat, nous exigeons que vous fournissiez les donnees figurant sur le formulaire de contrat/commande (a defaut, nous ne conclurons pas le contrat/ne traiterons pas la commande). En outre, nous pouvons demander des donnees facultatives qui n'affectent pas la conclusion du contrat (sans celles-ci, nous ne pourrons pas, par exemple, appeler le numero de contact).
+Pendant la duree du contrat, lors de la prestation des services, nous entrons en possession d'autres donnees. L'apparition de vos donnees personnelles chez nous est une consequence du fonctionnement des services que vous utilisez.
+4. A qui les donnees seront-elles communiquees?
+A. Aux autorites publiques, dans la mesure ou elles ne recoivent pas les donnees dans le cadre d'une procedure specifique prevue par la loi, par exemple en lien avec la lutte contre le blanchiment;
+B. Aux entites qui traitent vos donnees personnelles pour le compte de la Fondation sur la base d'un contrat de traitement des donnees (sous-traitants). Il s'agit notamment: des beneficiaires de la Fondation, des specialistes IT, des societes d'archivage, des hebergeurs;
+C. Aux responsables externes (les responsables dits paralleles auxquels les donnees sont mises a disposition), par exemple les conseillers juridiques et avocats, les entites de courier ou postales, les entites achetant des creances - en cas de non-paiement de nos factures;
+D. Aux entites situees hors de l'EEE, mais uniquement si cela est necessaire et avec un niveau de protection adequat, notamment par:
+   a. la cooperation avec des entites traitant des donnees personnelles dans des pays pour lesquels une decision d'adequation de la Commission europeenne a ete rendue;
+   b. l'application des clauses contractuelles types adoptees par la Commission europeenne.
+Le responsable informe toujours, au moment de la collecte, de l'intention de transferer des donnees personnelles hors de l'EEE.
+5. Les donnees sont-elles profilees?
+Vos donnees ne feront pas l'objet de profilage, c'est-a-dire d'une analyse automatisee de vos donnees et d'elaboration de predictions sur les preferences ou le comportement futur (le profilage signifie, par exemple, en marketing, determiner quelle offre pourrait vous interesser le plus sur la base de vos choix precedents).
+6. Quels sont vos droits?
+A. Droit d'acces aux donnees personnelles traitees par nous (article 15 du RGPD);
+B. Droit de rectification des donnees personnelles confiees, y compris leur correction (article 16 du RGPD);
+C. Droit d'effacement des donnees personnelles de nos systemes, dit "droit a l'oubli" - si, a votre avis, il n'existe pas de base pour le traitement, vous pouvez demander l'effacement (article 17 du RGPD);
+D. Droit a la limitation du traitement - vous pouvez demander que nous limitions le traitement a leur conservation ou a l'execution d'operations convenues avec vous, si nous avons des donnees inexactes ou les traitons sans justification; ou si vous ne souhaitez pas les effacer parce qu'elles sont necessaires a l'etablissement, l'exercice ou la defense de droits; ou pendant la duree de l'opposition au traitement (article 18 du RGPD);
+E. Droit a la portabilite des donnees - vous avez le droit de recevoir de notre part, dans un format structure, couramment utilise et lisible par machine (par exemple, ".csv"), les donnees personnelles vous concernant que nous detenons sur la base d'un contrat ou d'un consentement. Ce droit est accorde lorsque les donnees sont au format electronique - si les donnees sont uniquement sur papier, vous ne pourrez pas exercer ce droit. Vous pouvez nous demander de transferer ces donnees directement a une autre entite (article 20 du RGPD);
+F. Droit de retirer votre consentement - vous pouvez a tout moment retirer votre consentement au traitement de donnees personnelles base sur le consentement (article 7, paragraphe 3 du RGPD). Le retrait n'affecte pas la legalite des traitements effectues avant le retrait. Le retrait s'effectue par e-mail a: privacy@roxstreamai.com.
+G. Droit d'opposition - vous pouvez vous opposer au traitement si la base juridique est notre interet legitime (article 21 du RGPD). Dans ce cas, apres examen de votre demande, nous ne pourrons plus traiter les donnees personnelles concernees sur cette base, sauf si nous demontrons l'existence de motifs legitimes imperieux qui prevalaient sur vos interets, droits et libertes;
+H. Si, selon vous, le traitement des donnees personnelles viole le RGPD, vous avez le droit de deposer une plainte aupres de l'autorite de controle, a savoir le President de l'Office de protection des donnees personnelles.
+7. Contact
+Si vous avez besoin d'informations supplementaires liees a la protection des donnees personnelles ou souhaitez exercer vos droits, contactez-nous par e-mail: rodo@twojstartup.pl

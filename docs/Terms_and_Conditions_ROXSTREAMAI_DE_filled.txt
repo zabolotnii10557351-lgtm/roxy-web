@@ -1,0 +1,739 @@
+--- Page 1 ---
+ALLGEMEINE GESCHAEFTSBEDINGUNGEN von RoxStreamAI
+§ 1 Allgemeine Bestimmungen.....................................................................................................................1
+§ 2 Technische Anforderungen zur Nutzung der Website.........................................................................4
+§ 3 Verkauf von Waren - Bedingungen und Bearbeitungszeit von Bestellungen.................................4
+§ 4 Haftung fuer Nichtuebereinstimmung der Waren mit dem Vertrag.................................................6
+§ 5 Erbringung von Dienstleistungen.........................................................................................................8
+§ 6 Haftung fuer Nichtuebereinstimmung der Dienstleistungen mit dem Vertrag...............................9
+§ 7 Vertraege ueber digitale Inhalte oder digitale Dienstleistungen.......................................................9
+§ 8 Haftung fuer Nichtuebereinstimmung digitaler Inhalte oder digitaler Dienstleistungen...............11
+§ 9 Produktpreise und Lieferkosten.........................................................................................................13
+§ 10 Zahlungsarten..................................................................................................................................14
+§ 11 Recht auf Ruecktritt vom Vertrag;..................................................................................................14
+§ 12 Rueckerstattung des vom Kunden gezahlten Betrags.....................................................................17
+§ 13 Newsletter.......................................................................................................................................17
+§ 14 Kontaktinformationen von StartUp.................................................................................................18
+§ 15 Schlussbestimmungen.....................................................................................................................18
+Informationen zur aussergerichtlichen Streitbeilegung..........................................................................20
+MUSTER-WIDERRUFSFORMULAR.........................................................................................................21
+BESCHWERDEVORLAGE.......................................................................................................................22
+1
+§ 1 Allgemeine Bestimmungen
+1. Die RoxStreamAI-Internetseite unter https://www.roxstreamai.com (im Folgenden: Dienst)
+   wird betrieben von: Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" (Fundacja
+   Rozwoju Przedsiebiorczosci "Twoj StartUp"), mit Sitz in Warschau, ul. Zurawia 6/12 lok.
+   766, 00-503 Warschau, Lieferanschrift: Atlas Tower, Al. Jerozolimskie 123a, 18. Etage,
+   02-017 Warschau, eingetragen im Nationalen Gerichtsregister, gefuehrt vom Bezirksgericht
+   fuer die Hauptstadt Warschau in Warschau, 12. Wirtschaftsabteilung des Nationalen
+   Gerichtsregisters (KRS) Nr. 0000442857, Steueridentifikationsnummer (NIP): 521-364-12-11,
+   Unternehmensregister (REGON): 146433467, Abfallregister (BDO): 000460502.
+2. Die Bestimmungen dieser Allgemeinen Geschaeftsbedingungen (AGB) gelten fuer Taetigkeiten,
+   die zugunsten der Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" von dem organisierten
+   Teil des Unternehmens namens RoxStreamAI durchgefuehrt werden, der bei der Zweigstelle der
+   Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" taetig ist und von Veronika Shved
+   vertreten wird (E-Mail: support@roxstreamai.com, Tel.: +48503427781). Die in diesem Absatz
+   genannte Person ist von der Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" fuer die
+   Kontaktaufnahme hinsichtlich der Umsetzung dieser AGB benannt.
+3. Diese AGB regeln insbesondere:
+Page 1 of 23
+
+--- Page 2 ---
+a) Regeln fuer die Nutzung der Website;
+b) Bedingungen fuer die Aufgabe von Bestellungen fuer auf der Website verfuegbare Produkte;
+c) Bearbeitungszeit und Regeln der Bestellabwicklung;
+d) Bedingungen und Formen der Zahlung;
+e) Recht des Kunden auf Ruecktritt vom Vertrag;
+f) Einreichung und Bearbeitung von Beschwerden;
+g) besondere Rechte des Kunden, der Verbraucher ist.
+4. StartUp verkauft und erbringt Dienstleistungen ueber die Website unter Verwendung von
+   Fernkommunikationsmitteln. Vertraege, die der Kunde mit StartUp ueber die Website abschliesst,
+   sind Fernabsatzvertraege im Sinne des Gesetzes vom 30. Mai 2014 ueber Verbraucherrechte.
+5. Der Kunde ist berechtigt und verpflichtet, den Dienst gemaess seinem Zweck und den Regeln des
+   sozialen Miteinanders sowie der guten Sitten zu nutzen.
+6. Das Durchsuchen der Website erfordert keine Registrierung, und eine eigenstaendige Bestellung
+   von Produkten durch den Kunden erfordert keine Registrierung eines Kontos.
+7. Die AGB sind auf der Website unentgeltlich verfuegbar, in einer Form, die deren Erwerb,
+   Vervielfaeltigung und Speicherung ermoeglicht.
+8. Der Kunde ist verpflichtet, den Inhalt der AGB zu lesen. Die Nutzung der Website ist nur nach
+   Lektuere und Annahme der AGB moeglich.
+9. Der Kunde muss eine Person mit voller Geschaeftsfaehigkeit sein.
+10. In diesen AGB verwendete Begriffe haben folgende Bedeutung:
+    a) Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" (Fundacja Rozwoju Przedsiebiorczosci
+       "Twoj StartUp"), mit Sitz in Warschau, ul. Zurawia 6/12 lok. 766, 00-503 Warschau,
+       Lieferanschrift: Atlas Tower, Aleje Jerozolimskie 123A, 18. Etage, 02-017 Warschau,
+       eingetragen im Nationalen Gerichtsregister (KRS) gefuehrt vom Bezirksgericht fuer die
+       Hauptstadt Warschau in Warschau, 12. Wirtschaftsabteilung des Nationalen
+       Gerichtsregisters, KRS Nr. 0000442857, Steueridentifikationsnummer (NIP): 521-364-12-11,
+       Unternehmensregister (REGON): 146-433-467, Abfallregister (BDO): 000460502;
+    b) Kunde - eine Person, die die Website nutzt und Waren oder Dienstleistungen erwirbt,
+       die von StartUp auf der Website angeboten werden;
+    c) Verbraucher - eine natuerliche Person, die ein Rechtsgeschaeft mit einem Unternehmer
+       vornimmt, das nicht unmittelbar ihrer gewerblichen oder beruflichen Taetigkeit dient;
+    d) Dienstleistungen - von StartUp erbrachte Dienstleistungen, die Kunden ueber die Website
+       angeboten werden, mit Ausnahme von Digitalen Dienstleistungen;
+    e) Digitale Dienstleistung - eine digitale Dienstleistung im Sinne von Art. 2(5a) des Gesetzes
+       vom 30. Mai 2014 ueber Verbraucherrechte, die von StartUp erbracht und Kunden ueber die
+       Website angeboten wird;
+    f) Waren - bewegliche Sachen, die von StartUp an Kunden ueber die Website verkauft werden;
+--- Page 3 ---
+    g) Produkte - Waren, Dienstleistungen oder Digitale Dienstleistungen;
+    h) Website - die Internetseite unter https://www.roxstreamai.com., ueber die StartUp
+       elektronische Dienstleistungen fuer den Kunden erbringt, Produkte anbietet und den
+       Abschluss von Vertraegen ermoeglicht;
+    i) Vertrag - ein zwischen StartUp und dem Kunden ueber die Website geschlossener Vertrag;
+    j) Konto - das individuelle Konto des Kunden auf der Website, das nach Anmeldung die
+       Nutzung der Dienstleistungen und Digitalen Dienstleistungen sowie den Abschluss von
+       Vertraegen ermoeglicht;
+    k) Werktage - alle Tage ausser Samstagen, Sonntagen und gesetzlichen Feiertagen;
+    l) Allgemeine Geschaeftsbedingungen - diese Allgemeinen Geschaeftsbedingungen (AGB).
+11. Besteht ein begruendeter Verdacht, dass der Kunde falsche Daten angegeben hat, ist StartUp
+    berechtigt, von der Vertragserfuellung zurueckzutreten und den Kunden hierueber zu informieren.
+12. Gibt der Kunde fehlerhafte oder ungenaue Daten an, insbesondere eine fehlerhafte oder ungenaue
+    Adresse, haftet StartUp nicht fuer Nichtlieferung oder Lieferverzug der Waren bzw. fuer die
+    Nichterbringung oder unsachgemaesse Erbringung der Dienstleistung oder Digitalen Dienstleistung,
+    soweit gesetzlich zulaessig.
+13. Die auf der Website enthaltenen Informationen, insbesondere Werbung, Ankuendigungen und
+    Preislisten, stellen kein Angebot im Sinne von Art. 66 des Gesetzes vom 23. April 1964
+    (Zivilgesetzbuch) dar. Diese Informationen stellen jedoch eine Aufforderung zur Abgabe eines
+    Angebots im Sinne von Art. 71 des Zivilgesetzbuches dar.
+14. StartUp stellt dem Kunden, der Verbraucher ist, in klarer und verstaendlicher Weise unmittelbar
+    vor Abgabe der Bestellung insbesondere folgende Informationen bereit:
+    a) die wesentlichen Merkmale der Leistung unter Beruecksichtigung des Vertragsgegenstands
+       und der Kommunikationsmittel,
+    b) den Gesamtpreis oder die Verguetung einschliesslich Steuern und - falls die Art der Leistung
+       eine vorherige Berechnung nicht vernuenftig erlaubt - die Art der Preisberechnung sowie
+       Versand-, Liefer-, Post- oder sonstige Kosten und, wenn diese nicht feststellbar sind, die
+       Pflicht, sie zu tragen;
+    c) das Recht auf Ruecktritt vom Vertrag oder das Fehlen eines solchen Rechts;
+    d) die Dauer des Vertrags oder die Art und die Gruende der Vertragsbeendigung, wenn der Vertrag
+       auf unbestimmte Zeit geschlossen oder automatisch verlaengert wird;
+    e) die Mindestdauer der Verpflichtungen des Kunden aus dem Vertrag.
+15. Bietet StartUp die Moeglichkeit individueller (kundenspezifischer) Bestellungen, koennen Kunden
+    solche Bestellungen per E-Mail an die auf der Website angegebene Adresse aufgeben. In diesem
+    Fall erstellt StartUp ein Angebot und sendet es an die vom Kunden angegebene E-Mail-Adresse.
+16. Die Bearbeitungszeit fuer eine individuelle (kundenspezifische) Bestellung betraegt 30 Tage ab
+    Vertragsabschluss, es sei denn, StartUp hat den Kunden spaetestens vor Abgabe der Bestellung
+    ueber eine andere Frist informiert.
+17. Die Website bedient Kunden in Polen und weltweit, sofern das Angebot von StartUp auf der Website
+    keine abweichenden Bestimmungen enthaelt.
+§ 2 Technische Anforderungen zur Nutzung der Website
+1. Fuer das Durchsuchen der Website benoetigen Sie:
+    a) ein Endgeraet mit Internetzugang,
+    b) einen Webbrowser, der die Annahme von Cookies ermoeglicht; z. B. Internet Explorer,
+       Microsoft Edge, Google Chrome, Mozilla Firefox, Opera oder Safari in aktueller Version;
+    c) notwendige Cookies sind akzeptiert.
+2. Fuer die Nutzung der Funktionen der Website, insbesondere Registrierung oder Bestellung von
+   Produkten, ist ein aktives E-Mail-Konto erforderlich.
+3. Die Website verwendet Cookies zur ordnungsgemaessen Erbringung der Dienstleistungen und zur
+   Gewaehrleistung der Sicherheit. Das Blockieren von Cookies sowie die Nutzung von Anwendungen
+   Dritter zum Blockieren von Cookies kann zu Fehlfunktionen der Website fuehren und die
+   ordnungsgemaesse Erbringung der Dienstleistung verhindern, wofuer StartUp nicht haftet.
+§ 3 Verkauf von Waren - Bedingungen und Bearbeitungszeit von Bestellungen
+1. StartUp schliesst ueber die Website Vertraege ueber den Verkauf von Waren mit Kunden ab. Nach
+   dem Kaufvertrag uebertraegt StartUp das Eigentum an den Waren und liefert sie an den Kunden,
+   und der Kunde nimmt die Waren entgegen und zahlt den Preis.
+2. Um eine Bestellung aufzugeben, waehlt der Kunde die Waren aus ("In den Warenkorb" oder eine
+   gleichbedeutende Bezeichnung) und gibt anschliessend die Daten, die Lieferart und die
+   Zahlungsart an.
+3. Im Warenkorb kann der Kunde:
+    a) Waren und deren Menge hinzufuegen und entfernen;
+--- Page 5 ---
+    b) die Lieferadresse angeben und die fuer die Rechnungsstellung erforderlichen Daten bereitstellen;
+    c) die Lieferart waehlen;
+    d) die Zahlungsart waehlen;
+    e) einen Rabattcode hinzufuegen (falls zutreffend).
+4. Der Kunde gibt die Bestellung auf, indem er die Bestellung bestaetigt und die Schaltflaeche
+   "Bestellung mit Zahlungsverpflichtung" oder eine andere eindeutige gleichwertige Bezeichnung waehlt.
+5. Die Abgabe und Bestaetigung der Bestellung begruendet die Pflicht des Kunden zur Zahlung des
+   Preises fuer die Waren und der Lieferkosten. Mit der Bestaetigung der Bestellung durch StartUp
+   kommt der Kaufvertrag zwischen StartUp und dem Kunden zustande.
+6. Der Versand der gekauften Waren erfolgt innerhalb von 30 Werktagen ab Bestaetigung der Zahlung
+   auf dem Bankkonto von StartUp, sofern die AGB keine abweichenden Bestimmungen enthalten oder
+   StartUp den Kunden spaetestens vor Abgabe der Bestellung ueber eine andere Frist informiert hat.
+7. Die gekauften Waren werden an die vom Kunden angegebene Adresse versandt.
+8. Bestellungen ueber die Website koennen 24 (in Worten: vierundzwanzig) Stunden am Tag, 7 (in Worten:
+   sieben) Tage die Woche aufgegeben werden. Bestellungen an Samstagen, Sonntagen oder Feiertagen
+   werden am naechsten Werktag bearbeitet.
+9. Sofern eine Bestellung nur teilweise erfuellt werden kann, kann StartUp dem Kunden vor
+   Bestaetigung der Bestellung anbieten:
+    a) die Stornierung der gesamten Bestellung (waehlt der Kunde diese Option, ist StartUp von der
+       Pflicht zur Erfuellung befreit);
+    b) die Stornierung des nicht erfuellbaren Teils (waehlt der Kunde diese Option, wird die Bestellung
+       teilweise erfuellt und StartUp ist vom restlichen Teil befreit);
+    c) eine Ersatzleistung, die mit dem Kunden zu vereinbaren ist; nach Bestaetigung durch den Kunden
+       gilt die Bestellung der Ersatzleistung als endgueltig;
+    d) die Aufteilung der Bestellung und die Festlegung eines neuen Erfuellungsdatums fuer den Teil,
+       der nicht innerhalb der urspruenglichen Frist erfuellt werden kann (waehlt der Kunde diese Option,
+       werden die Waren in mehreren Sendungen versandt und dem Kunden entstehen zusaetzliche Kosten).
+10. Sind die bestellten Waren nicht verfuegbar oder kann die Bestellung aus anderen Gruenden nicht
+    erfuellt werden, informiert StartUp den Kunden per E-Mail innerhalb von 7 (in Worten: sieben)
+    Tagen ab Vertragsabschluss.
+11. Wurde die Zahlung fuer Waren, die nicht ganz oder teilweise geliefert werden koennen, im Voraus
+    geleistet, erstattet StartUp dem Kunden den gezahlten Betrag (oder die Differenz) innerhalb von
+    14 (in Worten: vierzehn) Tagen ab Vertragsabschluss nach den in den AGB beschriebenen Bedingungen.
+--- Page 6 ---
+12. StartUp kann auf der Website fuer eine Ware die Anzahl der Werktage angeben, innerhalb derer
+    die Sendung mit den gekauften Waren versandt wird. Diese Angabe ist die Frist vom Zeitpunkt der
+    Bestellbestaetigung bis zum Versand der Waren. Die Frist wird unter Beruecksichtigung des
+    Zeitraums zur Fertigstellung aller bestellten Waren angegeben.
+§ 4 Haftung fuer Nichtuebereinstimmung der Waren mit dem Vertrag
+1. Die Bestimmungen dieses Absatzes gelten gemaess Kapitel 5a des Gesetzes vom 30. Mai 2014 ueber
+   Verbraucherrechte fuer die Haftung von StartUp fuer die Nichtuebereinstimmung der Waren mit dem
+   Vertrag, der geschlossen wurde mit:
+    a) einem Verbraucher oder
+    b) einer natuerlichen Person, die einen Vertrag unmittelbar im Zusammenhang mit ihrer
+       gewerblichen Taetigkeit schliesst, wenn sich aus dem Vertragsinhalt ergibt, dass der Vertrag
+       fuer diese Person keinen beruflichen Charakter hat, insbesondere aufgrund des Gegenstands
+       ihrer gewerblichen Taetigkeit, wie er im Zentralen Register und in der Information ueber die
+       Wirtschaftstaetigkeit ausgewiesen ist.
+2. StartUp verpflichtet sich, Waren frei von physischen und rechtlichen Maengeln anzubieten.
+3. Der Kunde hat das Recht, eine Beschwerde einzureichen, wenn die Waren nicht mit dem Vertrag
+   uebereinstimmen.
+4. Der Kunde kann die Beschwerde schriftlich oder in Dokumentenform an die E-Mail-Adresse von
+   StartUp uebermitteln.
+5. Eine Beschwerde ueber mangelhafte Waren kann einen der folgenden Antraege enthalten:
+    a) Reparatur der Waren;
+    b) Austausch der Waren.
+6. Wenn die Waren nicht vertragskonform sind, kann der Kunde eine Preisminderung oder den
+   Ruecktritt vom Vertrag erklaeren, wenn:
+    a) StartUp die Waren nicht gemaess Art. 43d(2) des Gesetzes vom 30. Mai 2014 ueber
+       Verbraucherrechte in Einklang mit dem Vertrag gebracht hat;
+    b) StartUp die Waren nicht gemaess Art. 43d Abs. 4-6 des Gesetzes vom 30. Mai 2014 ueber
+       Verbraucherrechte in Einklang mit dem Vertrag gebracht hat;
+    c) die Nichtuebereinstimmung der Waren mit dem Vertrag fortbesteht, obwohl StartUp versucht hat,
+       die Waren in Einklang mit dem Vertrag zu bringen;
+    d) die Nichtuebereinstimmung der Waren mit dem Vertrag so erheblich ist, dass sie eine
+       Preisminderung oder einen Ruecktritt ohne vorherige Inanspruchnahme der in Art. 43d des
+       Gesetzes vom 30. Mai 2014 ueber Verbraucherrechte genannten Schutzmassnahmen rechtfertigt;
+    e) aus der Erklaerung von StartUp oder den Umstaenden klar hervorgeht, dass StartUp die Waren
+       nicht innerhalb angemessener Frist oder ohne unzumutbare Unannehmlichkeiten fuer den
+       Verbraucher in Einklang bringen wird.
+7. Eine Beschwerde wegen Maengeln der Waren wird innerhalb von 14 (in Worten: vierzehn) Tagen
+   nach Eingang bearbeitet.
+8. Wenn StartUp nicht innerhalb der Frist auf die Beschwerde reagiert, gilt die Beschwerde als
+   anerkannt.
+--- Page 7 ---
+9. StartUp informiert den Kunden ueber das Ergebnis der Beschwerde auf Papier oder einem anderen
+   dauerhaften Datentraeger.
+10. Wird eine Beschwerde ueber Waren anerkannt, repariert StartUp je nach Wunsch des Kunden die
+    Waren, tauscht sie aus, mindert den Preis oder erstattet den gesamten vom Kunden gezahlten
+    Betrag nach Ruecktritt vom Vertrag.
+11. StartUp erstattet dem Kunden den geschuldeten Betrag mit derselben Zahlungsmethode, die der
+    Kunde verwendet hat, sofern der Kunde nicht ausdruecklich einer anderen Rueckzahlungsmethode
+    zugestimmt hat, die keine Kosten fuer den Kunden verursacht. StartUp stellt dem Kunden eine
+    entsprechende Korrektur des Kaufbelegs aus (korrigierte MwSt.-Rechnung oder korrigierte
+    Spezifikation).
+12. Die Haftung von StartUp ist auf den Wert der vom Vertrag umfassten Waren begrenzt. Die Haftung
+    von StartUp fuer Schaeden, die durch Nicht- oder Schlechtleistung der Digitalen Dienstleistung
+    oder durch Nichtlieferung digitaler Inhalte verursacht wurden, umfasst keine entgangenen Gewinne.
+13. Soweit in den AGB nicht geregelt, gelten die einschlaegigen allgemein anwendbaren
+    Rechtsvorschriften, insbesondere das Gesetz ueber Verbraucherrechte und das Zivilgesetzbuch,
+    zur Bestimmung der Rechte und Pflichten des Kunden und von StartUp im Falle eines Mangels der
+    Waren / Nicht- oder Schlechtleistung des Vertrags durch StartUp.
+14. Die Haftung von StartUp fuer Maengel an Waren, Dienstleistungen und Digitalen Dienstleistungen
+    ist bei Vertraegen ausgeschlossen, die zugunsten eines Kunden geschlossen werden, der nicht:
+    a) Verbraucher ist;
+    b) eine natuerliche Person ist, die einen Vertrag mit StartUp unmittelbar im Zusammenhang mit
+       ihrer gewerblichen Taetigkeit schliesst, wenn sich aus dem Vertragsinhalt ergibt, dass der
+       Vertrag fuer diese Person keinen beruflichen Charakter hat, insbesondere aufgrund des
+       Gegenstands ihrer gewerblichen Taetigkeit, wie er im Zentralen Register und in der
+       Information ueber die Wirtschaftstaetigkeit ausgewiesen ist.
+15. Von StartUp angebotene Waren koennen durch eine Herstellergarantie gedeckt sein. Die Garantie
+    wird zu den Bedingungen der Garantierklaerung ausgeuebt. StartUp gibt keine eigene Garantie
+    fuer die angebotenen Waren.
+--- Page 8 ---
+§ 5 Erbringung von Dienstleistungen
+1. StartUp stellt Kunden Dienstleistungen bereit, deren Art, Umfang und detaillierte Beschreibung
+   auf der Website angegeben sind. Die Taetigkeiten bestehen insbesondere in der Bereitstellung
+   digitaler Dienstleistungen im Abonnementmodell, die die Konfiguration und Verwaltung von
+   3D-Avataren/Charakteren fuer Streaming, Integrationen mit Text-to-Speech (TTS)-Tools und
+   streaming-unterstuetzenden Funktionalitaeten ermoeglichen.
+2. Dienstleistungen werden in der auf der Website angegebenen Weise erbracht, insbesondere auf
+   der Seite der jeweiligen Dienstleistung.
+3. StartUp veroeffentlicht auf der Website Informationen darueber, wie der Kunde Dienstleistungen
+   bestellen kann. Zur Bestellung waehlt der Kunde die Dienstleistungen aus und gibt anschliessend
+   die fuer den Vertragsabschluss und die Erbringung der Dienstleistung erforderlichen Daten ein,
+   einschliesslich der Art der Leistungserbringung (falls zutreffend) und der Zahlungsart.
+4. Wird fuer die Bestellung auf der Website eine Schaltflaeche oder aehnliche Funktion verwendet,
+   muss diese in gut lesbarer Weise mit "Bestellung mit Zahlungsverpflichtung" oder einer anderen
+   eindeutigen gleichwertigen Bezeichnung gekennzeichnet sein.
+5. Die Abgabe und Bestaetigung der Bestellung begruendet die Pflicht des Kunden zur Zahlung des
+   Preises fuer die Dienstleistungen und etwaiger zusaetzlicher Kosten. Mit der Bestaetigung der
+   Bestellung durch StartUp kommt der Dienstleistungsvertrag zwischen StartUp und dem Kunden
+   zustande.
+6. Der Kunde wird vor Abschluss des Vertrags ueber Beginn und Ende der Dienstleistungen
+   informiert, insbesondere ueber die Website.
+7. Soll auf ausdruecklichen Wunsch des Kunden die Erbringung der Dienstleistung vor Ablauf der
+   Widerrufsfrist beginnen, verlangt StartUp vom Kunden eine Erklaerung:
+   a) mit einem ausdruecklichen Verlangen in einem dauerhaften Datentraeger;
+   b) dass der Kunde die Information zur Kenntnis genommen hat, dass er sein Widerrufsrecht nach
+      vollstaendiger Erbringung der Dienstleistung durch StartUp verliert.
+8. Stimmt der Kunde dem Beginn der Dienstleistung vor Ablauf der Widerrufsfrist nicht zu, wird die
+   Dienstleistung nach Ablauf der Widerrufsfrist erbracht, sofern StartUp auf der Website nicht die
+   Moeglichkeit anbietet, Vertraege ohne eine solche Zustimmung abzuschliessen.
+9. Der Kunde kann den Vertrag ueber die Erbringung von Dienstleistungen schriftlich oder in
+   Dokumentenform mit Wirkung zum Ende des Kalendermonats kuendigen. Eine Kuendigungsfrist ist
+   nicht erforderlich.
+10. StartUp kann einen Vertrag ueber die Erbringung von Dienstleistungen schriftlich oder in
+    Dokumentenform mit einer Frist von 1 Monat zum Ende des Kalendermonats aus wichtigem Grund
+    kuendigen. Als wichtige Gruende gelten insbesondere:
+    a) die Einstellung oder der Entschluss von StartUp, den Betrieb des organisierten Teils des in
+       § 1 genannten Unternehmens einzustellen;
+    b) eine wesentliche Aenderung oder der Entschluss von StartUp, den Taetigkeitsgegenstand des
+       in § 1 genannten organisierten Unternehmensteils wesentlich zu aendern;
+    c) eine wesentliche Reorganisation bei StartUp;
+    d) das Auftreten von Ausfaellen oder Hindernissen (insbesondere technischen), die StartUp nicht
+       zuzurechnen sind und die Erbringung der Dienstleistungen fuer den Kunden verhindern oder
+       wesentlich beeintraechtigen;
+    e) Zahlungsverzug des Kunden gegenueber StartUp;
+    f) eine wesentliche Verletzung des Vertrags oder der AGB durch den Kunden.
+§ 6 Haftung fuer Nichtuebereinstimmung der Dienstleistungen mit dem Vertrag
+1. Eine Beschwerde ueber nicht vertragsgemaess erbrachte Dienstleistungen soll - je nach Art der
+   Dienstleistung - einen Antrag enthalten.
+2. Eine Beschwerde wegen Nichtuebereinstimmung der Dienstleistung mit dem Vertrag wird innerhalb
+   von 14 (in Worten: vierzehn) Tagen nach Eingang bearbeitet.
+3. Reagiert StartUp nicht innerhalb der Frist auf die Beschwerde, gilt sie als anerkannt.
+4. StartUp informiert den Kunden ueber das Ergebnis der Beschwerde auf Papier oder einem anderen
+   dauerhaften Datentraeger.
+5. Wird die Beschwerde ueber die Dienstleistung anerkannt, erbringt StartUp die Dienstleistung
+   ordnungsgemaess, erstattet dem Kunden den Preis ganz oder teilweise oder nimmt andere Zahlungen
+   vor - je nach Art der Dienstleistung und Umstaenden des Falls.
+6. Die Haftung von StartUp ist auf den Wert der nicht erbrachten oder nicht ordnungsgemaess
+   erbrachten Dienstleistung begrenzt. Die Haftung von StartUp fuer Schaeden infolge Nicht- oder
+   Schlechtleistung der Dienstleistung umfasst keine entgangenen Gewinne.
+7. Die Haftung von StartUp fuer Maengel der Dienstleistungen sowie fuer Nicht- oder Schlechtleistung
+   des mit dem Kunden geschlossenen Vertrags ist ausgeschlossen, wenn der Vertrag zugunsten eines
+   Kunden geschlossen wird, der nicht:
+   a) Verbraucher ist;
+   b) eine natuerliche Person ist, die einen Vertrag mit StartUp unmittelbar im Zusammenhang mit
+      ihrer gewerblichen Taetigkeit schliesst, wenn sich aus dem Vertragsinhalt ergibt, dass der
+      Vertrag fuer diese Person keinen beruflichen Charakter hat, insbesondere aufgrund des
+      Gegenstands ihrer gewerblichen Taetigkeit, wie er im Zentralen Register und in der
+      Information ueber die Wirtschaftstaetigkeit ausgewiesen ist.
+Page 9 of 23
+
+--- Page 10 ---
+§ 7 Vertraege ueber digitale Inhalte oder digitale Dienstleistungen
+1. Die Bestimmungen dieses Absatzes und des folgenden Absatzes der AGB gelten gemaess Kapitel 5b
+   des Gesetzes ueber Verbraucherrechte vom 30. Mai 2014 fuer Vertraege ueber digitale Inhalte
+   oder digitale Dienstleistungen, die geschlossen wurden mit:
+   a) einem Verbraucher oder
+   b) einer natuerlichen Person, die einen Vertrag unmittelbar im Zusammenhang mit ihrer
+      gewerblichen Taetigkeit schliesst, wenn sich aus dem Vertragsinhalt ergibt, dass der Vertrag
+      fuer diese Person keinen beruflichen Charakter hat, insbesondere aufgrund des Gegenstands
+      ihrer gewerblichen Taetigkeit, wie er im Zentralen Register und in der Information ueber die
+      Wirtschaftstaetigkeit ausgewiesen ist.
+2. StartUp veroeffentlicht auf der Website Informationen darueber, wie der Kunde digitale
+   Dienstleistungen bestellen kann. Zur Bestellung waehlt der Kunde insbesondere die digitalen
+   Dienstleistungen aus und gibt anschliessend die fuer den Vertragsabschluss und die Erbringung
+   der digitalen Dienstleistung erforderlichen Daten ein, einschliesslich der Art der Leistung
+   (falls zutreffend) und der Zahlungsart.
+3. Wird fuer die Bestellung eine Schaltflaeche oder aehnliche Funktion verwendet, muss diese in gut
+   lesbarer Weise mit "Bestellung mit Zahlungsverpflichtung" oder einer anderen eindeutigen
+   gleichwertigen Bezeichnung gekennzeichnet sein.
+4. Die Abgabe und Bestaetigung der Bestellung begruendet die Pflicht des Kunden zur Zahlung des
+   Preises fuer die digitalen Dienstleistungen und etwaiger zusaetzlicher Kosten. Mit der
+   Bestaetigung der Bestellung durch StartUp kommt der Vertrag ueber die Erbringung digitaler
+   Dienstleistungen zwischen StartUp und dem Kunden zustande.
+5. StartUp liefert digitale Inhalte oder digitale Dienstleistungen unverzueglich nach Abschluss des
+   Vertrags, sofern die Parteien nichts anderes vereinbart haben, insbesondere wenn auf der Website
+   auf der Seite der jeweiligen digitalen Dienstleistung ein anderes Datum angegeben ist. Diese
+   Bestimmung gilt nicht, wenn der Vertrag die Lieferung digitaler Inhalte ueber einen
+   materiellen Traeger vorsieht. Stimmt der Kunde der Leistungserbringung vor Ablauf der
+   Widerrufsfrist nicht zu, erfolgt die Leistungserbringung nach Ablauf der Frist.
+6. StartUp weist darauf hin, dass die in dem vorherigen Absatz genannte Zustimmung zum Verlust des
+   Widerrufsrechts fuehrt.
+7. StartUp kann aus wichtigen Gruenden Aenderungen an digitalen Inhalten oder digitalen
+   Dienstleistungen vornehmen, die nicht zur Vertragserfuellung erforderlich sind. Als wichtige
+   Gruende gelten insbesondere wesentliche Interessen des Kunden oder von StartUp. StartUp
+   informiert den Kunden in klarer und verstaendlicher Weise ueber die vorgenommene Aenderung.
+   Wenn die Aenderung den Zugang des Kunden zu digitalen Inhalten oder digitalen Dienstleistungen
+   oder deren Nutzung wesentlich und nachteilig beeinflusst, ist StartUp verpflichtet, den Kunden
+   vorab in einem dauerhaften Datentraeger ueber die Eigenschaften und den Zeitpunkt der Aenderung
+   sowie ueber das Recht zur fristlosen Kuendigung zu informieren. Der Kunde kann den Vertrag
+   innerhalb von 30 Tagen nach der Aenderung fristlos kuendigen.
+8. Der Kunde kann den Vertrag ueber digitale Inhalte oder digitale Dienstleistungen schriftlich oder
+   in Dokumentenform mit Wirkung zum Ende des Kalendermonats kuendigen. Eine Kuendigungsfrist ist
+   nicht erforderlich.
+9. StartUp kann einen Vertrag ueber digitale Dienstleistungen schriftlich oder in Dokumentenform
+   mit einer Frist von 1 Monat zum Ende des Kalendermonats aus wichtigem Grund kuendigen. Als
+   wichtige Gruende gelten:
+   a) die Einstellung oder der Entschluss von StartUp, den Betrieb des in § 1 genannten organisierten
+      Unternehmensteils einzustellen;
+   b) eine wesentliche Aenderung oder der Entschluss von StartUp, den Taetigkeitsgegenstand des in
+      § 1 genannten organisierten Unternehmensteils wesentlich zu aendern;
+   c) eine wesentliche Reorganisation bei StartUp;
+   d) das Auftreten von Ausfaellen oder wesentlichen Hindernissen (insbesondere technischen) im
+      Betrieb der Website, die StartUp nicht zuzurechnen sind;
+   e) Zahlungsverzug des Kunden gegenueber StartUp;
+   f) eine wesentliche Verletzung des Vertrags oder der AGB durch den Kunden.
+10. Soweit in diesem Absatz nicht geregelt, gelten die Bestimmungen des Kapitels 5b des Gesetzes
+    ueber Verbraucherrechte.
+§ 8 Haftung fuer Nichtuebereinstimmung digitaler Inhalte oder digitaler Dienstleistungen
+1. Hat StartUp digitale Inhalte oder digitale Dienstleistungen nicht bereitgestellt, fordert der Kunde
+   StartUp zur Bereitstellung auf. Liefert StartUp die digitalen Inhalte oder digitalen Dienstleistungen
+   nicht unverzueglich oder innerhalb einer zusaetzlichen, von den Parteien ausdruecklich
+   vereinbarten Frist, kann der Kunde vom Vertrag zuruecktreten. Dies gilt nicht, wenn der Vertrag
+   die Lieferung digitaler Inhalte ueber einen materiellen Traeger vorsieht.
+2. StartUp haftet fuer die Nichtuebereinstimmung der bereitgestellten digitalen Inhalte oder
+   digitalen Dienstleistungen mit dem Vertrag:
+   a) bei einmaliger oder teilweiser Bereitstellung, wenn die Nichtuebereinstimmung zum Zeitpunkt
+      der Bereitstellung bestand und innerhalb von zwei Jahren danach zutage trat;
+   b) bei kontinuierlicher Bereitstellung, wenn die Nichtuebereinstimmung in dem Zeitraum auftrat
+      oder zutage trat, in dem die Bereitstellung gemaess Vertrag erfolgen sollte.
+3. Ist der digitale Inhalt oder die digitale Dienstleistung nicht vertragskonform, kann der Kunde
+   verlangen, dass sie in Einklang mit dem Vertrag gebracht werden.
+4. StartUp kann die Herstellung der Vertragskonformitaet verweigern, wenn dies unmoeglich ist oder
+   fuer StartUp unverhaeltnismaessige Kosten verursacht.
+Page 11 of 23
+
+--- Page 12 ---
+5. Sind digitale Inhalte oder digitale Dienstleistungen nicht vertragskonform, kann der Kunde eine
+   Preisminderung oder den Ruecktritt vom Vertrag erklaeren, wenn:
+   a) die Herstellung der Vertragskonformitaet unmoeglich ist oder unverhaeltnismaessige Kosten
+      gemaess Art. 43m (2) und (3) des Gesetzes ueber Verbraucherrechte verursachen wuerde;
+   b) StartUp die digitalen Inhalte oder digitalen Dienstleistungen nicht gemaess Art. 43m(4) des
+      Gesetzes ueber Verbraucherrechte in Einklang mit dem Vertrag gebracht hat;
+   c) die Nichtuebereinstimmung fortbesteht, obwohl StartUp versucht hat, die digitalen Inhalte oder
+      digitalen Dienstleistungen in Einklang mit dem Vertrag zu bringen;
+   d) die Nichtuebereinstimmung so erheblich ist, dass sie eine Preisminderung oder einen Ruecktritt
+      ohne vorherige Inanspruchnahme der in Art. 43m des Gesetzes ueber Verbraucherrechte genannten
+      Schutzmassnahmen rechtfertigt;
+   e) aus der Erklaerung von StartUp oder den Umstaenden klar hervorgeht, dass StartUp die digitalen
+      Dienstleistungen oder digitalen Inhalte nicht innerhalb angemessener Frist oder ohne
+      unzumutbare Unannehmlichkeiten fuer den Verbraucher in Einklang bringen wird.
+6. Die geminderte Verguetung muss in einem solchen Verhaeltnis zum Vertragspreis stehen, wie der
+   Wert der nicht vertragskonformen digitalen Inhalte oder digitalen Dienstleistungen zum Wert der
+   vertragskonformen digitalen Inhalte oder digitalen Dienstleistungen steht. Wenn der Vertrag
+   vorsieht, dass digitale Inhalte oder digitale Dienstleistungen in Teilen oder kontinuierlich
+   bereitgestellt werden, beruecksichtigt die Preisminderung den Zeitraum, in dem die digitalen
+   Inhalte oder digitalen Dienstleistungen nicht vertragskonform waren.
+7. Der Kunde kann nicht vom Vertrag zuruecktreten, wenn digitale Inhalte oder digitale
+   Dienstleistungen gegen Zahlung eines Preises bereitgestellt werden und die Nichtuebereinstimmung
+   nur unerheblich ist.
+8. Tritt der Kunde vom Vertrag zurueck, kann StartUp die Rueckgabe des materiellen Traegers
+   verlangen, auf dem die digitalen Inhalte bereitgestellt wurden, innerhalb von 14 Tagen ab
+   Eingang der Ruecktrittserklaerung. Der Kunde gibt den Traeger unverzueglich zurueck.
+9. Tritt der Kunde vom Vertrag zurueck, erstattet StartUp den Preis nur fuer den Teil, der den
+   nicht vertragskonformen digitalen Inhalten oder Dienstleistungen entspricht, sowie fuer den
+   Teil, dessen Bereitstellung infolge des Ruecktritts entfaellt.
+10. StartUp erstattet den geschuldeten Betrag mit derselben Zahlungsmethode, die der Kunde
+    verwendet hat, sofern der Kunde nicht ausdruecklich einer anderen Rueckzahlungsmethode
+    zugestimmt hat, die keine Kosten fuer den Kunden verursacht.
+11. Die Haftung von StartUp ist auf den Wert der digitalen Inhalte oder Digitalen Dienstleistungen
+    begrenzt, die bereitgestellt werden sollten. Die Haftung von StartUp fuer Schaeden aufgrund
+    Nicht- oder Schlechtleistung digitaler Dienstleistungen oder Nichtlieferung digitaler Inhalte
+    umfasst keine entgangenen Gewinne.
+12. Eine Beschwerde wegen Nichtuebereinstimmung der digitalen Dienstleistung mit dem Vertrag wird
+    innerhalb von 14 (in Worten: vierzehn) Tagen nach Eingang bearbeitet.
+13. Reagiert StartUp nicht innerhalb der Frist auf die Beschwerde, gilt sie als anerkannt.
+14. StartUp informiert den Kunden ueber das Ergebnis der Beschwerde auf Papier oder einem anderen
+    dauerhaften Datentraeger.
+15. Die Haftung von StartUp fuer Nichtuebereinstimmung digitaler Inhalte oder Digitaler
+    Dienstleistungen sowie fuer Nicht- oder Schlechtleistung des Vertrags mit dem Kunden ist
+    ausgeschlossen fuer Vertraege, die zugunsten eines Kunden geschlossen werden, der nicht:
+    a) Verbraucher ist;
+    b) eine natuerliche Person ist, die einen Vertrag mit StartUp unmittelbar im Zusammenhang mit
+       ihrer gewerblichen Taetigkeit schliesst, wenn sich aus dem Vertragsinhalt ergibt, dass der
+       Vertrag fuer diese Person keinen beruflichen Charakter hat, insbesondere aufgrund des
+       Gegenstands ihrer gewerblichen Taetigkeit, wie er im Zentralen Register und in der
+       Information ueber die Wirtschaftstaetigkeit ausgewiesen ist.
+Page 13 of 23
+--- Page 14 ---
+§ 9 Produktpreise und Lieferkosten
+1. Die neben den auf der Website angebotenen Produkten angegebenen Preise sind Bruttopreise,
+   d. h. sie enthalten die Mehrwertsteuer (MwSt.). Die Preise sind in polnischer Waehrung
+   (Zloty - PLN) angegeben.
+2. Der beim Produkt angegebene Preis enthaelt keine Versandkosten.
+3. Die Versandkosten traegt der Kunde, sofern der Inhalt des Angebots von StartUp auf der
+   Website nichts anderes bestimmt.
+4. Der Gesamtbetrag, den der Kunde im Zusammenhang mit dem Kauf des ausgewaehlten Produkts zu
+   zahlen hat, besteht aus dem Preis des Produkts und den Lieferkosten.
+5. Sofern StartUp auf der Website bei dem jeweiligen Produkt oder im Bestellvorgang nichts
+   anderes angibt, gelten folgende Lieferarten:
+   a) bei Waren - Versand an die vom Kunden angegebene Adresse oder Abholung am Sitz von StartUp;
+   b) bei digitalen Dienstleistungen - an die vom Kunden angegebene E-Mail-Adresse;
+   c) bei sonstigen Dienstleistungen - in der auf der Website bei der jeweiligen Dienstleistung
+      oder im Bestellvorgang angegebenen Weise, insbesondere je nach Art der Dienstleistung.
+6. Auf der Website weist StartUp spaetestens zu Beginn des Bestellvorgangs klar und lesbar auf
+   etwaige Lieferbeschraenkungen hin.
+§ 10 Zahlungsarten
+1. Auf der Website weist StartUp spaetestens zu Beginn des Bestellvorgangs klar und lesbar auf
+   die akzeptierten Zahlungsarten hin.
+2. Sofern StartUp auf der Seite des jeweiligen Produkts oder im Bestellvorgang nichts anderes
+   bestimmt, gelten folgende Zahlungsarten:
+   a) per Ueberweisung ueber eines der von StartUp akzeptierten elektronischen Zahlungssysteme,
+      die schnelle Zahlungen fuer die Bestellung ermoeglichen;
+   b) per klassischer Bankueberweisung auf das von StartUp angegebene Konto.
+3. Um eines der elektronischen Zahlungssysteme zu nutzen, muss der Kunde die Nutzungsbedingungen
+   des jeweiligen Zahlungssystems akzeptieren. Die Liste der verfuegbaren Zahlungssysteme wird
+   waehrend der Bestellabwicklung angezeigt.
+4. Im Falle eines Ruecktritts vom Vertrag erfolgt die Rueckerstattung in derselben Weise, in der
+   die Zahlung durch den Kunden erfolgt ist, sofern der Kunde nicht ausdrucklich einer anderen
+   Rueckerstattungsmethode zugestimmt hat, die keine Kosten fuer ihn verursacht.
+5. StartUp ermoeglicht keine Barzahlungen.
+§ 11 Recht auf Ruecktritt vom Vertrag;
+1. Die Bestimmungen dieses Absatzes gelten fuer den Kunden, der Verbraucher ist, oder fuer eine
+   natuerliche Person, die einen Vertrag mit StartUp unmittelbar im Zusammenhang mit ihrer
+   gewerblichen Taetigkeit schliesst, wenn sich aus dem Vertragsinhalt ergibt, dass der Vertrag
+   fuer diese Person keinen beruflichen Charakter hat, insbesondere aufgrund des Gegenstands
+   ihrer gewerblichen Taetigkeit, wie er im Zentralen Register und in der Information ueber die
+   Wirtschaftstaetigkeit ausgewiesen ist.
+2. Der in Absatz 1 genannte Kunde hat das Recht, ohne Angabe von Gruenden und ohne Kosten vom
+   Vertrag zurueckzutreten, sofern das allgemeine Recht oder diese AGB nichts anderes bestimmen.
+   Der Vertrag, von dem der Kunde zuruecktritt, gilt als nicht geschlossen.
+3. Fuer den Ruecktritt vom Vertrag reicht es aus, eine Ruecktrittserklaerung abzugeben und sie
+   innerhalb von 14 (in Worten: vierzehn) Tagen an StartUp zu senden.
+4. Die Ruecktrittsfrist beginnt:
+--- Page 15 ---
+   a) bei einem Vertrag, dessen Erfuellung die Lieferung von Waren durch StartUp und die
+      Uebertragung ihres Eigentums vorsieht - mit dem Besitz der Waren durch den Kunden oder
+      einen vom Kunden benannten Dritten, der nicht der Befoerderer ist, und bei einem Vertrag,
+      der:
+      - mehrere Waren umfasst, die getrennt, in Partien oder in Teilen geliefert werden - mit dem
+        Besitz der zuletzt gelieferten Ware, Partie oder des letzten Teils,
+      - die regelmaessige Lieferung von Waren ueber einen bestimmten Zeitraum vorsieht - mit dem
+        Besitz der ersten der Waren;
+   b) bei anderen Vertraegen - mit dem Datum des Vertragsabschlusses.
+5. Zur Wahrung der Ruecktrittsfrist reicht es aus:
+   a) eine schriftliche Ruecktrittserklaerung an die in den AGB oder auf der Website angegebene
+      Adresse von StartUp zu senden, oder
+   b) die Erklaerung in Dokumentenform an die in den AGB oder auf der Website angegebene
+      E-Mail-Adresse von StartUp zu senden.
+6. StartUp bestaetigt dem Kunden unverzueglich auf einem dauerhaften Datentraeger den Eingang
+   der elektronisch uebermittelten Ruecktrittserklaerung.
+7. Tritt der Kunde vom Vertrag zurueck, hat er das gekaufte Produkt unverzueglich, spaetestens
+   innerhalb von 14 (in Worten: vierzehn) Tagen nach dem Ruecktritt zurueckzusenden, sofern
+   StartUp nicht anbietet, die Waren selbst abzuholen. Zur Wahrung der Frist reicht die Absendung
+   vor deren Ablauf aus. Die Kosten der Ruecksendung traegt der Kunde.
+8. Tritt der Kunde vom Vertrag zurueck, erstattet StartUp dem Kunden den gezahlten Betrag fuer
+   das Produkt sowie die Versandkosten innerhalb von spaetestens 14 (in Worten: vierzehn) Tagen
+   ab Eingang der Ruecktrittserklaerung. Hat der Kunde eine andere als die guenstigste auf der
+   Website angebotene Lieferart gewaehlt, ist StartUp nicht verpflichtet, die zusaetzlichen
+   Kosten zu erstatten.
+9. StartUp erstattet die Zahlung mit derselben Methode, die der Kunde verwendet hat, sofern der
+   Kunde nicht mit StartUp eine andere Rueckerstattungsmethode vereinbart hat, die keine Kosten
+   fuer ihn verursacht.
+10. StartUp kann die Rueckerstattung der vom Kunden erhaltenen Zahlungen bis zum Erhalt der
+    Ware oder bis der Kunde den Nachweis ueber die Ruecksendung erbringt, zurueckhalten,
+    je nachdem, welches Ereignis zuerst eintritt.
+11. Hat der Kunde die Ruecktrittserklaerung vor Erhalt der Bestellbestaetigung von StartUp
+    abgegeben, wird die Bestellung storniert.
+12. Der Kunde haftet fuer eine Wertminderung der Ware, die auf einen Umgang zurueckzufuehren
+    ist, der ueber die Pruefung von Beschaffenheit, Eigenschaften und Funktionsweise der Ware
+    hinausgeht.
+--- Page 16 ---
+13. Das Ruecktrittsrecht besteht nicht in den Faellen, die im Gesetz vom 30. Mai 2014 ueber
+    Verbraucherrechte genannt sind, insbesondere bei Vertraegen:
+   a) ueber die Erbringung von Dienstleistungen, fuer die der Verbraucher den Preis zu zahlen
+      hat, wenn der Unternehmer die Dienstleistung vollstaendig erbracht hat mit ausdruecklicher
+      und vorheriger Zustimmung des Verbrauchers, der vor Beginn der Leistungserbringung
+      informiert wurde, dass er nach der Erbringung der Leistung sein Ruecktrittsrecht verliert,
+      und dies akzeptiert hat;
+   b) bei denen der Preis oder die Verguetung von Schwankungen auf dem Finanzmarkt abhaengt, die
+      der Unternehmer nicht beeinflussen kann und die vor Ablauf der Ruecktrittsfrist auftreten
+      koennen;
+   c) bei denen der Leistungsgegenstand eine nicht vorgefertigte Ware ist, die nach
+      Spezifikation des Verbrauchers hergestellt wurde oder eindeutig auf seine persoenlichen
+      Beduerfnisse zugeschnitten ist;
+   d) bei denen der Leistungsgegenstand Waren sind, die schnell verderben koennen oder eine
+      kurze Haltbarkeit haben;
+   e) bei denen der Leistungsgegenstand Waren in versiegelter Verpackung sind, die aus Gruenden
+      des Gesundheitsschutzes oder der Hygiene nicht zur Rueckgabe geeignet sind, wenn die
+      Verpackung nach der Lieferung geoeffnet wurde;
+   f) bei denen der Leistungsgegenstand Waren sind, die nach der Lieferung aufgrund ihrer
+      Beschaffenheit untrennbar mit anderen Sachen verbunden werden;
+   g) bei denen der Leistungsgegenstand alkoholische Getraenke sind, deren Preis bei Abschluss
+      des Kaufvertrags vereinbart wurde und deren Lieferung erst nach 30 Tagen erfolgen kann
+      und deren Wert von Marktschwankungen abhaengt, die der Unternehmer nicht beeinflussen
+      kann;
+   h) bei denen der Verbraucher den Unternehmer ausdruecklich aufgefordert hat, zu ihm zu kommen
+      um eine dringende Reparatur oder Wartung durchzufuehren; erbringt der Unternehmer
+      zusaetzliche Dienstleistungen, die ueber die vom Verbraucher angeforderten hinausgehen,
+      oder liefert andere Waren als die fuer die Reparatur oder Wartung notwendigen Ersatzteile,
+      steht dem Verbraucher ein Ruecktrittsrecht hinsichtlich dieser zusaetzlichen Leistungen
+      oder Waren zu;
+   i) bei denen der Leistungsgegenstand Ton- oder Bildaufnahmen oder Computerprogramme in
+      versiegelter Verpackung sind, wenn die Verpackung nach der Lieferung geoeffnet wurde;
+   j) ueber die Lieferung von Tageszeitungen, Zeitschriften oder Magazinen, ausgenommen
+      Abonnementvertraege;
+   k) die im Rahmen einer oeffentlichen Versteigerung geschlossen wurden;
+   l) ueber die Erbringung von Beherbergungsleistungen zu anderen als Wohnzwecken, die
+      Beforderung von Waren, die Anmietung von Kraftfahrzeugen, Gastronomiedienstleistungen,
+      Dienstleistungen im Zusammenhang mit Freizeit, Unterhaltung, Sport- oder Kulturereignissen,
+      wenn im Vertrag der Tag oder der Zeitraum der Leistung angegeben ist;
+   m) ueber die Bereitstellung digitaler Inhalte, die nicht auf einem koerperlichen Traeger
+      geliefert werden und fuer die der Verbraucher den Preis zu zahlen hat, wenn der
+      Unternehmer mit der Leistungserbringung begonnen hat mit ausdruecklicher und vorheriger
+      Zustimmung des Verbrauchers, der vor Beginn der Leistungserbringung informiert wurde, dass
+      er nach der Erbringung der Leistung sein Ruecktrittsrecht verliert, und dies akzeptiert
+      hat, und der Unternehmer dem Verbraucher die Bestaetigung gemaess Art. 15 (1) und (2)
+      oder Art. 21 (1) des Gesetzes ueber Verbraucherrechte bereitgestellt hat.
+   n) ueber die Erbringung von Dienstleistungen, fuer die der Verbraucher den Preis zu zahlen
+      hat, wenn der Verbraucher den Unternehmer ausdruecklich aufgefordert hat, zu ihm zu kommen
+      um eine Reparatur durchzufuehren, und die Dienstleistung bereits vollstaendig erbracht
+      wurde mit ausdruecklicher und vorheriger Zustimmung des Verbrauchers.
+14. StartUp stellt zudem Korrekturen der Kaufbelege (korrigierte MwSt.-Rechnung oder korrigierte
+    Spezifikation) aus, die dem Kunden zuvor uebergeben wurden.
+§ 12 Rueckerstattung des vom Kunden gezahlten Betrags
+StartUp erstattet das Geld innerhalb von 14 (in Worten: vierzehn) Kalendertagen mit demselben
+Zahlungsmittel, das der Kunde bei der Zahlung verwendet hat, sofern der Kunde nicht ausdrucklich
+einer anderen Rueckerstattungsmethode zugestimmt hat, die keine Kosten fuer ihn verursacht, in
+folgenden Faellen:
+   a) Ruecktritt vom Vertrag ganz oder teilweise (in diesem Fall wird der entsprechende Teil des
+      Preises erstattet) bei einer im Voraus bezahlten Bestellung;
+   b) Anerkennung der Beschwerde und Unmoeglichkeit der Reparatur der beschaedigten Ware oder
+      des Austauschs gegen neue Ware oder der vertragsgemaessen Erbringung der Dienstleistung /
+      digitalen Dienstleistung;
+   c) Anerkennung des Rechts auf Preisminderung des Produkts.
+§ 13 Newsletter
+1. Der Kunde kann dem Erhalt kommerzieller Informationen, einschliesslich per E-Mail, zustimmen,
+   indem er die entsprechende Option im Registrierungsformular oder ueber die Website auswaehlt.
+   Bei erteilter Zustimmung erhaelt der Kunde den Newsletter von StartUp an die angegebene
+   E-Mail-Adresse.
+2. Der Kunde kann den Newsletter jederzeit abbestellen, indem er StartUp hierueber informiert.
+§ 14 Kontaktinformationen von StartUp
+Der Kunde kann StartUp kontaktieren:
+1) telefonisch unter: +48503427781
+--- Page 18 ---
+2) per E-Mail an: support@roxstreamai.com
+§ 15 Schlussbestimmungen
+1. StartUp weist darauf hin, dass die Nutzung elektronischer Dienste Risiken birgt, die sich aus
+   dem oeffentlichen Charakter des Internets ergeben, insbesondere die Moeglichkeit, dass von
+   unbefugten Dritten uebertragene Daten des Kunden erlangt oder veraendert werden. Um dieses
+   Risiko zu minimieren, sollte der Kunde geeignete Sicherheitsmassnahmen anwenden, insbesondere
+   aktuelle Antivirenprogramme verwenden, aktuelle Versionen von Internetbrowsern und
+   Betriebssystemen einsetzen und keine offenen Zugangspunkte nutzen.
+2. StartUp haftet im gesetzlich zulaessigen Umfang nicht fuer die Blockierung von Nachrichten an
+   die vom Kunden angegebene E-Mail-Adresse durch Mailserver-Administratoren oder fuer das
+   Loeschen und Blockieren von E-Mail-Nachrichten durch auf dem Computer des Kunden installierte
+   Software.
+3. StartUp haftet nicht fuer die vom Kunden verwendete Ausruestung und Infrastruktur, einschliesslich
+   Stoerungen oeffentlicher Datenkommunikationsnetze, die z. B. zu fehlendem oder gestoertem Zugang
+   zur Website fuehren.
+4. StartUp weist darauf hin, dass die Darstellung der Visualisierung der Produkte im IKT-System des
+   Kunden bei Nutzung der Website von vielen Faktoren abhaengt, einschliesslich Art der Anzeige,
+   Seitenverhaeltnis, Aufloesung, Hintergrundbeleuchtung, verwendete Technologien sowie
+   Leistungsfaehigkeit der Steuerelektronik und Einstellungen. Abweichungen zwischen der im
+   IKT-System des Kunden verfuegbaren Visualisierung und dem tatsaechlichen Erscheinungsbild des
+   Produkts koennen keinen Reklamationsgrund darstellen.
+5. StartUp weist darauf hin, dass alle Marken (Logos, Logotypen, Markennamen usw.), grafischen
+   Materialien oder Fotos auf der Website rechtlich geschuetzt sind und von StartUp nur zu
+   Informationszwecken verwendet werden.
+6. StartUp haftet im gesetzlich zulaessigen Umfang nicht fuer Stoerungen, einschliesslich
+   Unterbrechungen, im Betrieb der Website, die durch hoehere Gewalt, unbefugte Handlungen Dritter
+   oder Unvereinbarkeit der Website mit der technischen Infrastruktur des Kunden verursacht werden.
+7. StartUp behaelt sich das Recht vor, den Betrieb der Website voruebergehend auszusetzen,
+   insbesondere zur Durchfuehrung von Wartungs-, Entwicklungs- oder Modernisierungsarbeiten.
+8. Alle auf der Website angebotenen Produktnamen dienen Identifikationszwecken und koennen nach
+   den Bestimmungen des Gesetzes ueber gewerbliches Eigentum geschuetzt oder reserviert sein.
+9. StartUp weist darauf hin, dass die Website Inhalte enthaelt, die durch Rechte des geistigen
+   Eigentums geschuetzt sind, insbesondere urheberrechtlich geschuetzte Werke (Inhalte der Website,
+   Layout, Grafiken, Fotos usw.). Kunden und Besucher verpflichten sich, die geistigen Eigentumsrechte
+   von StartUp und Dritten (einschliesslich Urheber- und gewerblicher Schutzrechte wie Markenrechte)
+   zu respektieren. Der Kunde oder Besucher haftet allein fuer die Nichtbeachtung dieser Bestimmungen.
+Page 19 of 23
+
+--- Page 19 ---
+10. Der Kunde darf keine Inhalte veroeffentlichen, die rechtswidrig, illegal, unmoralisch sind oder
+    das Wohl Dritter verletzen, und darf keine Links zu pornografischen, obszonen oder die
+    Wuerde anderer verletzenden Inhalten veroeffentlichen.
+11. Der Kunde hat jede Taetigkeit zu unterlassen, die die ordnungsgemaesse Funktion der Website
+    beeintraechtigen koennte, insbesondere Eingriffe in die Funktionsweise des Dienstes oder
+    seine technischen Elemente.
+12. StartUp verpflichtet sich, registrierte Kunden der Website ueber jede Aenderung der AGB zu
+    informieren, indem eine E-Mail an die bei der Registrierung angegebene Adresse gesendet wird.
+    Der Kunde kann nach Erhalt dieser Information das Konto jederzeit loeschen. Aenderungen der AGB
+    beruehren keine Vertraege, die vor dem Inkrafttreten der Aenderungen geschlossen wurden.
+13. In allen Angelegenheiten, die in diesen AGB nicht geregelt sind, gelten die allgemein
+    anwendbaren Vorschriften des polnischen Rechts, insbesondere:
+   1) Gesetz vom 23. April 1964 - Zivilgesetzbuch;
+   2) Gesetz vom 30. Mai 2014 ueber Verbraucherrechte;
+   3) Gesetz vom 18. Juli 2002 ueber die Erbringung elektronischer Dienstleistungen.
+14. Streitigkeiten im Zusammenhang mit auf Grundlage dieser AGB geschlossenen Vertraegen werden
+    von dem fuer StartUp zustaendigen Gericht entschieden. Diese Bestimmung gilt nicht fuer
+    Vertraege mit Verbrauchern.
+15. Die Nutzung eines bestimmten aussergerichtlichen Streitbeilegungsverfahrens ist nur mit
+    gegenseitiger Zustimmung von Kunde und StartUp moeglich. Detaillierte Verfahren zur
+    aussergerichtlichen Streitbeilegung sind auf der Website des Amtes fuer Wettbewerb und
+    Verbraucherschutz (UOKiK) verfuegbar: www.uokik.gov.pl, auf den Websites der
+    Woiwodschaftsinspektorate der Handelsinspektion sowie bei den kommunalen (staedtischen)
+    Verbraucherombudsleuten.
+16. Diese AGB gelten ab dem: 7. Februar 2026
+Page 20 of 23
+
+--- Page 20 ---
+Informationen zur aussergerichtlichen Streitbeilegung
+Gemaess der Verordnung (EU) Nr. 524/2013 des Europaeischen Parlaments und des Rates vom
+21. Mai 2013 ueber die Online-Beilegung verbraucherrechtlicher Streitigkeiten und zur
+Aenderung der Verordnung (EG) Nr. 2006/2004 und der Richtlinie 2009/22/EG (ODR-Verordnung)
+stellt die Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" mit Sitz in Warschau einen
+elektronischen Link zur Online-ODR-Plattform bereit: https://webgate.ec.europa.eu/odr. Die
+ODR-Plattform ermoeglicht die aussergerichtliche Beilegung von Streitigkeiten zwischen
+Unternehmen und Verbrauchern. Die Beilegung von Streitigkeiten auf diesem Weg ist freiwillig.
+Page 21 of 23
+
+--- Page 21 ---
+MUSTER-WIDERRUFSFORMULAR
+(dieses Formular ist nur auszufuellen und zurueckzusenden, wenn Sie vom Vertrag zuruecktreten
+moechten)
+………………………………………………
+(Name des Absenders)
+………………………………………………
+………………………………………………
+(Adresse des Absenders)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+piętro,
+02-017 Warsaw
+Zustelladresse
+…………………………………………………….
+RUECKTRITT VON EINEM VERTRAG
+Ich, der Unterzeichnende, trete hiermit von folgendem Vertrag zurueck:
+1. Vertragsdatum ..........................................................................
+2. Vertrags-/Bestellnummer ……………………………………………………………….
+3. Vertragsgegenstand ............................................................
+……………………………
+Unterschrift des Kunden
+Datum: ………………………….
+Page 22 of 23
+
+--- Page 22 ---
+BESCHWERDEVORLAGE
+(dieses Formular ist nur auszufuellen und zurueckzusenden, wenn Sie eine Beschwerde einreichen
+moechten)
+………………………………………………
+(Name des Absenders)
+………………………………………………
+………………………………………………
+(Adresse des Absenders)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+piętro,
+02-017 Warsaw
+Zustelladresse
+……………………………………………………..
+BESCHWERDE
+Ich, der Unterzeichnende, reiche hiermit eine Beschwerde ein bezueglich des Vertrags/der
+Bestellung vom ............................................... Nr. ..............................................,
+deren Gegenstand war ...
+....................................................................................................................................................................
+Grund der Beschwerde: ......................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+(beschreiben Sie den Grund der Beschwerde)
+In Anbetracht des Vorstehenden beantrage ich ............................................... ..........................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+……………………………
+Unterschrift des Kunden
+
+--- Page 23 ---
+Datum: ………………………….
+Page 23 of 23

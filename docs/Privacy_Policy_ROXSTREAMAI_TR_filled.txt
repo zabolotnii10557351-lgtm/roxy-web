@@ -1,0 +1,37 @@
+GIZLILIK POLITIKASI - RoxStreamAI
+1. Verilerinizin sorumlusu kimdir?
+Kisisel verilerinizin sorumlusu, Varşova'da bulunan Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"tir (merkez adresi: ul. Zurawia 6/12, lok. 766, 00-503 Varşova).
+Bu Gizlilik Politikasi, RoxStreamAI adlı işletmenin organize kismi tarafindan sunulan Vakif hizmetleri icin gecerlidir. Iletisim: tel. +48503427781, e-posta support@roxstreamai.com, Veronika Shved tarafindan yurutulur (lehdarin ad ve soyadi).
+2. Verilerinizi neden isliyoruz?
+A. RoxStreamAI (https://www.roxstreamai.com) uzerinden sunulan dijital hizmetler (SaaS abonelik modeli) kapsaminda, yani sozlesmenin kurulmasi veya ifasi amaciyla (GDPR Madde 6(1)(b)), verileriniz sozlesme tamamlanana kadar saklanir.
+B. Varşova merkezli Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" tarafindan sunulan urunlerin pazarlanmasi ve tanitimi icin, bu bizim mesru menfaatimizdir (GDPR Madde 6(1)(f)). Verileriniz, itiraz edene kadar islenir (ticari bilgi gondermiyorsaniz bu maddeyi kaldirin).
+C. Isbirligi kapsaminda uzerimize dusen yasal yukumluluklerin yerine getirilmesi (GDPR Madde 6(1)(c)), ozellikle belirli belgelerin kanunda belirtilen sure boyunca saklanmasi zorunlulugu, ornegin:
+- 29.09.1994 tarihli Muhasebe Kanunu (Dz. U. 2017, poz. 1858)
+- 29 Agustos 1997 tarihli Vergi Usul Kanunu (Dz. U. 1997 Nr 137, poz. 926);
+- 1 Mart 2018 tarihli Kara Para Aklama ve Terorun Finansmaninin Onlenmesi Kanunu (Dz. U. 2018 poz. 723).
+D. Olası taleplerin tesis edilmesi, kullanilmasi veya savunulmasi icin, bu bizim mesru menfaatimizdir (GDPR Madde 6(1)(f)). Veriler talepler ileri surulene kadar islenir;
+E. Onay verilmesi halinde, veriler onayda belirtilen kapsam ve amacla islenir (hukuki dayanak: GDPR Madde 6(1)(a)). Veriler onay geri cekilene kadar islenir.
+3. Hangi veriler islenir?
+Sozlesmenin kurulmasi icin, sozlesme/siparis formundaki verileri sunmaniz gerekir (sunulmazsa sozlesme kurulmaz/siparis tamamlanmaz). Ayrica, sozlesmenin kurulmasini etkilemeyen istege bagli veriler isteyebiliriz (or. iletisim numarasini arayamayabiliriz).
+Sozlesme suresince hizmet sunarken baska verilerinize de ulasiriz. Kisisel verilerinizin bize gelmesi, kullandiginiz hizmetlerin calismasinin bir sonucudur.
+4. Veriler kimlerle paylasilir?
+A. Kamu otoriteleri ile, veriler belirli bir yasal islem kapsaminda alinmiyorsa, ornegin kara para aklama ile mucadele baglaminda;
+B. Vakif adina kisisel verilerinizi isleyen veri isleyenler (isleyiciler). Bunlara vakif lehdarlari, IT uzmanlari, arsivleme sirketleri, hosting sirketleri dahildir;
+C. Harici veri sorumlulari (verilerin aktarıldigi paralel sorumlular), ornegin hukuk danismanlari ve avukatlar, kurye veya posta hizmeti sunan kuruluslar, alacak satin alan kurumlar - faturalarimizin zamaninda odenmemesi durumunda;
+D. EEA disindaki kurumlar, ancak yalnizca gerekli oldugunda ve yeterli koruma duzeyi saglandiginda, ozellikle:
+   a. Avrupa Komisyonu'nun uygunluk karari verdigi ulkelerdeki isleyicilerle isbirligi;
+   b. Avrupa Komisyonu tarafindan yayimlanan standart sozlesme maddelerinin uygulanmasi.
+Sorumlu, veri toplanirken EEA disina aktarim niyetini her zaman bildirir.
+5. Veriler profillenir mi?
+Verileriniz profillenmez; yani verilerinizin otomatik analizi veya tercihleriniz ya da gelecekteki davranislariniz hakkinda tahminler yapilmaz (profiling, ornegin pazarlamada, onceki secimlere gore en cok ilgilenebileceginiz teklifin belirlenmesidir).
+6. Haklariniz nelerdir?
+A. Isledigimiz kisisel verilere erisim hakki (GDPR Madde 15);
+B. Kisisel verilerin duzeltilmesi hakki (GDPR Madde 16);
+C. Kisisel verilerin silinmesi hakki, yani "unutulma hakki" - isleme icin dayanak olmadigini dusunuyorsaniz silme talep edebilirsiniz (GDPR Madde 17);
+D. Isleme faaliyetinin kisitlanmasi hakki - verilerinizin yalnizca saklanmasini veya sizinle kararlastirilan faaliyetlerin yapilmasini isteyebilirsiniz; veriler hataliysa veya haksiz isleniyorsa; ya da silinmesini istemiyorsaniz cunku hak talebi icin gerekli; veya itiraz suresince (GDPR Madde 18);
+E. Veri tasinabilirligi hakki - sozlesme veya onaya dayali olarak isledigimiz kisisel verilerinizi yapilandirilmis, yaygin kullanilan ve makine ile okunabilir bir formatta (orn. ".csv") alma hakkina sahipsiniz. Bu hak veriler elektronik formatta ise gecerli olur; sadece kagit formatinda ise kullanilamaz. Bu verilerin dogrudan baska bir kuruma aktarilmasini talep edebilirsiniz (GDPR Madde 20);
+F. Onayi geri cekme hakki - onaya dayali islenen kisisel veriler icin onayinizi dilediginiz zaman geri cekebilirsiniz (GDPR Madde 7(3)). Geri cekme, geri cekmeden onceki islemenin hukuka uygunlugunu etkilemez. Geri cekme e-posta ile yapilir: privacy@roxstreamai.com.
+G. Itiraz hakki - isleme dayagi mesru menfaatse itiraz edebilirsiniz (GDPR Madde 21). Bu durumda, talebinizi inceledikten sonra, mesru ve agir basan nedenler gostermedikce ilgili verileri bu dayanakla islemeyiz;
+H. GDPR ihlali oldugunu dusunuyorsaniz, denetim makamına sikayet etme hakkiniz vardir, yani Kisisel Verileri Koruma Kurumu baskanina.
+7. Iletisim
+Kisisel verilerin korunmasi ile ilgili ek bilgiye ihtiyaciniz varsa veya haklarinizi kullanmak istiyorsaniz, bize su e-posta adresinden ulasabilirsiniz: rodo@twojstartup.pl

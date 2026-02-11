@@ -1,0 +1,37 @@
+DATENSCHUTZERKLARUNG - RoxStreamAI
+1. Wer ist Verantwortlicher fur Ihre Daten?
+Verantwortlicher fur Ihre personenbezogenen Daten ist die Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" mit Sitz in Warschau (Sitzadresse: ul. Zurawia 6/12, lok. 766, 00-503 Warschau).
+Diese Datenschutzerklarung gilt fur die Leistungen der Stiftung, die durch den organisatorischen Teil des Unternehmens RoxStreamAI erbracht werden, Kontakt: Tel. +48503427781, E-Mail: support@roxstreamai.com, gefuhrt von Veronika Shved (Name und Nachname der Begunstigten).
+2. Warum verarbeiten wir Ihre Daten?
+A. Im Zusammenhang mit den uber RoxStreamAI (https://www.roxstreamai.com) erbrachten Leistungen, die in der Bereitstellung digitaler Dienste im Abonnementmodell (SaaS) bestehen, also zum Abschluss oder zur Erfullung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO), werden Ihre Daten bis zur Erfullung des Vertrags gespeichert.
+B. Zu Marketingzwecken und zur Bewerbung von Produkten, die von der Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" mit Sitz in Warschau angeboten werden, was unser berechtigtes Interesse ist (Art. 6 Abs. 1 lit. f DSGVO). Ihre Daten werden verarbeitet, bis Sie widersprechen (falls Sie keine kommerziellen Informationen versenden, bitte diesen Punkt entfernen).
+C. Zur Erfullung gesetzlicher Pflichten im Zusammenhang mit der aufgenommenen Zusammenarbeit (Art. 6 Abs. 1 lit. c DSGVO), insbesondere zur Einhaltung von Aufbewahrungsfristen, z. B.:
+- Rechnungslegungsgesetz vom 29.09.1994 (Gesetzblatt 2017, Pos. 1858)
+- Abgabenordnung vom 29. August 1997 (Gesetzblatt 1997 Nr. 137, Pos. 926);
+- Gesetz zur Bekampfung von Geldwasche und Terrorismusfinanzierung vom 1. Marz 2018 (Gesetzblatt 2018 Pos. 723).
+D. Zur moglichen Geltendmachung, Ausubung oder Verteidigung von Anspruchen, was unser berechtigtes Interesse ist (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden verarbeitet, bis Anspruche geltend gemacht werden;
+E. Im Falle einer Einwilligung werden Ihre Daten im Rahmen und zu dem in der Einwilligung angegebenen Zweck verarbeitet (Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO). Die Daten werden verarbeitet, bis die Einwilligung widerrufen wird.
+3. Welche Daten werden verarbeitet?
+Zum Vertragsabschluss verlangen wir die Angabe der Daten im Vertrags-/Bestellformular (ohne diese kommt kein Vertrag zustande bzw. die Bestellung kann nicht ausgefuhrt werden). Daruber hinaus konnen wir um optionale Daten bitten, die den Vertragsabschluss nicht beeinflussen (ohne diese konnen wir z. B. nicht telefonisch Kontakt aufnehmen).
+Wahrend der Vertragslaufzeit und der Leistungserbringung gelangen wir in den Besitz weiterer Daten. Das Auftreten Ihrer personenbezogenen Daten bei uns ist eine Folge der Nutzung unserer Dienste.
+4. An wen werden die Daten weitergegeben?
+A. An offentliche Stellen, soweit sie die Daten nicht im Rahmen eines konkreten Verfahrens nach dem Gesetz erhalten, z. B. im Zusammenhang mit der Bekampfung von Geldwasche;
+B. An Auftragsverarbeiter, die personenbezogene Daten im Auftrag der Stiftung auf Grundlage eines Auftragsverarbeitungsvertrags verarbeiten. Dazu zahlen u. a.: Begunstigte der Stiftung, IT-Spezialisten, Archivierungsunternehmen, Hosting-Anbieter;
+C. An externe Verantwortliche (sog. gemeinsame Verantwortliche), denen Daten bereitgestellt werden, z. B. Rechtsberater und Rechtsanwalte, Kurier- oder Postdienstleister, Forderungskaufer - im Falle der Nichtzahlung unserer Rechnungen;
+D. An Stellen auerhalb des EWR, jedoch nur, wenn dies erforderlich ist und ein angemessenes Schutzniveau besteht, insbesondere durch:
+   a. Zusammenarbeit mit Stellen in Landern, fur die ein Angemessenheitsbeschluss der Europaischen Kommission vorliegt;
+   b. Anwendung der von der Europaischen Kommission erlassenen Standardvertragsklauseln.
+Der Verantwortliche informiert stets bei der Erhebung uber die Absicht, personenbezogene Daten auerhalb des EWR zu ubermitteln.
+5. Werden Daten profiliert?
+Ihre Daten werden nicht profiliert, d. h. es erfolgt keine automatisierte Analyse Ihrer Daten und keine Erstellung von Prognosen uber Vorlieben oder zukunftiges Verhalten (Profiling bedeutet z. B. im Marketing, dass auf Basis fruherer Entscheidungen ermittelt wird, welches Angebot Sie am meisten interessieren konnte).
+6. Welche Rechte haben Sie?
+A. Recht auf Auskunft uber die von uns verarbeiteten personenbezogenen Daten (Art. 15 DSGVO);
+B. Recht auf Berichtigung der anvertrauten personenbezogenen Daten, einschlielich ihrer Korrektur (Art. 16 DSGVO);
+C. Recht auf Loschung personenbezogener Daten aus unseren Systemen, das sog. "Recht auf Vergessenwerden" - wenn nach Ihrer Auffassung keine Grundlage fur die Verarbeitung besteht, konnen Sie die Loschung verlangen (Art. 17 DSGVO);
+D. Recht auf Einschrankung der Verarbeitung - Sie konnen verlangen, dass wir die Verarbeitung auf die Speicherung oder auf von Ihnen vereinbarte Handlungen beschranken, wenn wir unrichtige Daten haben oder sie unberechtigt verarbeiten; oder wenn Sie keine Loschung wollen, weil die Daten zur Geltendmachung, Ausubung oder Verteidigung von Anspruchen erforderlich sind; oder fur die Dauer eines Widerspruchs (Art. 18 DSGVO);
+E. Recht auf Datenubertragbarkeit - Sie haben das Recht, von uns personenbezogene Daten in einem strukturierten, gangigen und maschinenlesbaren Format (z. B. ".csv") zu erhalten, die wir auf Basis eines Vertrags oder einer Einwilligung verarbeiten. Dieses Recht gilt, wenn Daten elektronisch vorliegen (bei Papierform ist es nicht anwendbar). Sie konnen uns beauftragen, diese Daten direkt an eine andere Stelle zu ubermitteln (Art. 20 DSGVO);
+F. Recht auf Widerruf der Einwilligung - Sie konnen jederzeit Ihre Einwilligung widerrufen. Der Widerruf beruhrt nicht die Rechtmaigkeit der Verarbeitung vor dem Widerruf. Der Widerruf erfolgt per E-Mail an: privacy@roxstreamai.com;
+G. Widerspruchsrecht - wenn die Rechtsgrundlage die berechtigten Interessen sind, konnen Sie der Verarbeitung widersprechen (Art. 21 DSGVO). Nach Prufung werden wir die betroffenen Daten nicht mehr auf dieser Grundlage verarbeiten, es sei denn, wir weisen zwingende schutzwurdige Grunde nach, die Ihre Interessen, Rechte und Freiheiten uberwiegen;
+H. Beschwerderecht - wenn Sie der Meinung sind, dass die Verarbeitung gegen die DSGVO verstot, konnen Sie sich an die Aufsichtsbehorde wenden, d. h. den Prasidenten des Amtes fur den Schutz personenbezogener Daten.
+7. Kontakt
+Wenn Sie weitere Informationen zum Schutz personenbezogener Daten benotigen oder Ihre Rechte ausuben mochten, kontaktieren Sie uns bitte per E-Mail: rodo@twojstartup.pl

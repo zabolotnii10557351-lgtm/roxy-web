@@ -1,0 +1,37 @@
+ZASADY OCHRANY OSOBNICH UDAJU - RoxStreamAI
+1. Kdo je spravcem vasich udaju?
+Spravcem vasich osobnich udaju je Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" se sidlem ve Varšave (adresa sidla: ul. Zurawia 6/12, lok. 766, 00-503 Varšava).
+Tato politika se vztahuje na sluzby nadace poskytovane organizovanou casti podniku RoxStreamAI, kontakty: tel. +48503427781, e-mail support@roxstreamai.com, provozovane Veronikou Shved (jmeno a prijmeni Beneficiara).
+2. Proc vase udaje zpracovavame?
+A. V souvislosti se sluzbami poskytovanymi prostrednictvim RoxStreamAI (https://www.roxstreamai.com), ktere spocivaji v poskytovani digitalnich sluzeb v predplatnem modelu (SaaS), tj. pro uzavreni nebo plneni smlouvy (cl. 6 odst. 1 písm. b GDPR), budou vase udaje uchovavany do splneni smlouvy.
+B. Pro marketingove ucely a propagaci produktu nabizenych Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" se sidlem ve Varšave, coz je nas opravneny zajem (cl. 6 odst. 1 písm. f GDPR). Vase udaje budou zpracovavany do okamziku, kdy vzneste namitku (pokud nezasilate obchodni informace, tento bod odstrante).
+C. Pro splneni pravnich povinnosti, ktere se na nas vztahuji v souvislosti se spolupraci (cl. 6 odst. 1 písm. c GDPR), zejmena povinnosti uchovavat urcite dokumenty po dobu stanovenou zakonem, napr.:
+- zakon o ucetnictvi ze dne 29.09.1994 (Dz. U. 2017, polozka 1858)
+- danovy rad ze dne 29. srpna 1997 (Dz. U. 1997 Nr 137, polozka 926);
+- zakon o boji proti prani spinavych penez a financovani terorismu ze dne 1. brezna 2018 (Dz. U. 2018 polozka 723).
+D. Pro pripadne urceni, uplatneni nebo obranu naroku, coz je nas opravneny zajem (cl. 6 odst. 1 písm. f GDPR). Udaje budou zpracovavany do doby podani naroku;
+E. V pripade souhlasu budou vase udaje zpracovavany v rozsahu a pro ucel uvedeny v souhlasu (pravni zaklad: cl. 6 odst. 1 písm. a GDPR). Udaje budou zpracovavany do odvolani souhlasu.
+3. Jake udaje se zpracovavaji?
+Pro uzavreni smlouvy pozadujeme poskytnuti udaju ve smluvnim/objednavkovem formulari (pokud je neposkytnete, smlouvu neuzavreme/neprovedeme objednavku). Dale muzeme pozadovat volitelne udaje, ktere nemaji vliv na uzavreni smlouvy (pokud je neobdrzime, nebudeme moci napr. zavolat na kontaktni cislo).
+Behem trvani smlouvy pri poskytovani sluzeb se dostavame k dalsim vasim udajum. Vyskyt vasich osobnich udaju u nas je dusledkem fungovani sluzeb, ktere pouzivate.
+4. Komu budou udaje sdileny?
+A. Verejnym organum, pokud je neobdrzi v ramci konkretniho rizeni podle prava, napr. v souvislosti s bojem proti prani spinavych penez;
+B. Subjektum, ktere zpracovavaji vase osobni udaje jmenem nadace na zaklade smlouvy o zpracovani osobnich udaju (zpracovatele). Patrit mezi ne budou: beneficienti nadace, IT specialisti, archivacni spolecnosti, hostingove spolecnosti;
+C. Externim spravcum (tzv. paralelnim spravcum, kterym jsou udaje zpřistupneny), napr. pravnim poradcum a advokatum, subjektum provozujicim kuryrni nebo postovni cinnost, subjektum kupujicim pohledavky - v pripade pozdni uhrady nasich faktur;
+D. Subjektum mimo EHP, ale pouze pokud je to nutne a s odpovidajici urovni ochrany, zejmena prostrednictvim:
+   a. spoluprace se subjekty zpracovavajicimi osobni udaje v zemich, pro ktere bylo vydano odpovidajici rozhodnuti Evropske komise;
+   b. pouziti standardnich smluvnich dolozek vydanych Evropskou komisi.
+Spravce vzdy informuje pri sberu o umyslu predat osobni udaje mimo EHP.
+5. Dochazi k profilovani udaju?
+Vase udaje nebudou profilovany, tj. nebude probihat automatizovana analyza vasich udaju a vytvareni predpovedi o preferencich nebo budoucim chovani (profilovani znamena napr. v marketingu urceni, ktera nabidka by vas mohla nejvice zajimat na zaklade vasich predchozich voleb).
+6. Jaka mate prava?
+A. Pravo na pristup k osobnim udajum, ktere zpracovavame (cl. 15 GDPR);
+B. Pravo na opravu osobnich udaju, vcetne jejich korekce (cl. 16 GDPR);
+C. Pravo na vymaz osobnich udaju z nasich systemu, tzv. "pravo byt zapomenut" - pokud dle vaseho nazoru nejsou duvody pro zpracovani, muzete pozadat o vymaz (cl. 17 GDPR);
+D. Pravo na omezeni zpracovani - muzete pozadat o omezeni zpracovani pouze na uchovani nebo na provadeni cinnosti dohodnutych s vami, pokud mame nespravne udaje nebo je zpracovavame neopravnene; nebo pokud je nechcete vymazat, protoze jsou nutne k uplatneni, vykonu nebo obrane naroku; nebo po dobu namitky proti zpracovani (cl. 18 GDPR);
+E. Pravo na prenositelnost udaju - mate pravo obdrzet od nas osobni udaje, ktere se vas tykaji a ktere zpracovavame na zaklade smlouvy nebo souhlasu, ve strukturovanem, bezne pouzivanem a strojove citelnem formatu (napr. ".csv"). Toto pravo se uplatni, pokud jsou udaje v elektronicke podobe - pokud jsou pouze v papirne, nebude mozno toto pravo vyuzit. Muzete nas poverit, abychom tyto udaje primo predali jinemu subjektu (cl. 20 GDPR);
+F. Pravo odvolat souhlas - kdykoli mate pravo odvolat souhlas se zpracovanim osobnich udaju zalozenym na souhlasu (cl. 7 odst. 3 GDPR). Odvolani nema vliv na zakonost zpracovani pred odvolanim. Odvolani se provadi zaslanim e-mailu na: privacy@roxstreamai.com.
+G. Pravo vzneseni namitky - pokud je zakladem opravneny zajem, muzete vznest namitku (cl. 21 GDPR). V takovem pripade po posouzeni vasi zadosti nebudeme osobni udaje dale zpracovavat na tomto zakladu, pokud neprokazeme existenci zavaznych opravnenych duvodu, ktere prevažují nad vasimi zajmy, pravy a svobodami;
+H. Pokud se domnivate, ze zpracovani osobnich udaju porusuje GDPR, mate pravo podat stiznost u dozoroveho organu, tj. u Prezesa Uradu pro ochranu osobnich udaju.
+7. Kontakt
+Pokud potrebujete dalsi informace k ochrane osobnich udaju nebo chcete uplatnit sva prava, kontaktujte nas e-mailem: rodo@twojstartup.pl

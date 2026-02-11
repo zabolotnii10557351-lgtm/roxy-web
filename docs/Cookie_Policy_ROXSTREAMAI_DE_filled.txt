@@ -1,0 +1,39 @@
+Cookie-Richtlinie
+Cookies sind Textdateien, die von Webbrowsern automatisch erstellt werden, wenn Sie Websites besuchen oder nutzen. Sie werden von der Website gesendet und auf dem Geraet des Nutzers gespeichert. Der Verantwortliche nutzt sie, um den ordnungsgemassen Betrieb der Website zu ermoeglichen, die Sicherheit zu gewaehrleisten und die Leistung zu verbessern.
+
+Datenverantwortlicher
+Der Verantwortliche fuer die personenbezogenen Daten ist die FUNDACJA ROZWOJU PRZEDSIEBIORCZOSCI
+"TWOJ STARTUP" mit Sitz in Warschau (Sitzadresse: ul. Zurawia 6/12, lok. 766, 00-503 Warschau), eingetragen im Nationalen Gerichtsregister durch das Bezirksgericht fuer die Hauptstadt Warschau, 12. Wirtschaftsabteilung, KRS-Nummer 0000442857; NIP: 5213641211; REGON: 146433467, Kontaktdaten: Tel. +48503427781, E-Mail support@roxstreamai.com im Zusammenhang mit dem organisierten Teil des Unternehmens RoxStreamAI, gefuehrt von Veronika Shved.
+
+Arten von Cookies
+Wir verwenden die folgenden Arten von Cookies auf unseren Websites:
+Essentiell/Technisch: Diese Cookies sind fuer das ordnungsgemaesse Funktionieren der Website erforderlich. Sie werden u. a. eingesetzt, um Login-Sitzungen oder Formulare zu merken und um zu speichern, ob Sie ueber die Verwendung von Cookies informiert wurden.
+Funktional: Sie merken und passen die Plattform an Ihre Entscheidungen an, z. B. ermoeglichen sie das automatische Ausfuellen der zuletzt verwendeten E-Mail-Adresse.
+Analytisch: Sie ermoeglichen uns, die Anzahl der Besuche und Traffic-Quellen zu pruefen. Sie helfen zu bestimmen, welche Seiten beliebt sind und welche nicht. Sie dienen der Analyse von Statistiken und der Verbesserung der Leistung unserer Seiten. Unsere Websites koennen Analyse- und Marketingtools verwenden, die von der Stiftung oder StartUp implementiert werden (je nach Service-Konfiguration).
+Marketing: Sie ermoeglichen es uns, angezeigte Werbeinhalte an die Interessen des Nutzers anzupassen, nicht nur innerhalb unseres Portals, sondern auch ausserhalb. Sie koennen von Werbepartnern installiert werden. Auf Grundlage von Informationen aus diesen Cookies und Aktivitaeten in anderen Diensten wird ein Interessenprofil erstellt.
+Social-Media-Cookies: Diese Cookies werden von unseren Partnern installiert, um angezeigte Werbeinhalte in sozialen Medien anzupassen. Sie erstellen ein Profil der Interessen des Nutzers, damit Inhalte an individuelle Beduerfnisse angepasst werden.
+
+Aufbewahrungsdauer von Cookies
+Sitzungs-Cookies werden auf dem genutzten Geraet gespeichert, bis die Website verlassen wird, z. B. durch Schliessen des Browsers.
+Persistente Cookies verbleiben, bis sie manuell geloescht werden oder bis die im Browser angegebene Frist ablaeuft.
+
+Arten der erhobenen Daten
+Dazu gehoeren:
+- IP-Adresse des vom Nutzer verwendeten Geraets
+- Geraetetyp
+- auf der Website verbrachte Zeit
+- auf der Website ausgefuehrte Aktionen
+- Standort, von dem die Verbindung hergestellt wird
+
+So widerrufen Sie Ihre Einwilligung
+Einige Cookies werden vom Browser heruntergeladen, wenn Sie die Website aufrufen. Um Cookies zu blockieren, verwenden Sie die fuer Ihren Browser verfuegbare Methode:
+- Firefox
+- Chrome
+- Microsoft Edge
+- Safari
+Das Blockieren von Cookies kann zu einem unvollstaendigen oder fehlerhaften Betrieb der Website fuehren; die Website bleibt jedoch nutzbar.
+
+Kontakt
+Wenn Sie Fragen zur Verarbeitung personenbezogener Daten haben oder Ihre Rechte ausueben moechten, koennen Sie uns unter den im Abschnitt "Datenverantwortlicher" angegebenen Adressen kontaktieren.
+Weitere Informationen ueber uns und Ihre Rechte finden Sie unter: https://www.roxstreamai.com/privacy
+Bei Verstoessen gegen die Vorschriften zum Schutz personenbezogener Daten haben Sie das Recht, eine Beschwerde beim Praesidenten des Amtes fuer den Schutz personenbezogener Daten einzureichen: https://uodo.gov.pl/

@@ -1,0 +1,825 @@
+--- Page 1 ---
+TERMINOS Y CONDICIONES de RoxStreamAI
+§ 1 Disposiciones generales........................................................................................................................1
+§ 2 Requisitos tecnicos necesarios para usar el Sitio...............................................................................4
+§ 3 Venta de Bienes - terminos y condiciones y plazo de tramitacion de pedidos....................................4
+§ 4 Responsabilidad por falta de conformidad de los Bienes con el Contrato ...........................................6
+§ 5 Prestacion de Servicios.......................................................................................................................8
+§ 6 Responsabilidad por falta de conformidad de los Servicios con el Contrato.......................................9
+§ 7 Contratos de prestacion de Contenido Digital o Servicio Digital..........................................................9
+§ 8 Responsabilidad por falta de conformidad del contenido digital o servicio digital con el Contrato..11
+§ 9 Precios de productos y costos de entrega..........................................................................................13
+§ 10 Metodos de pago.............................................................................................................................14
+§ 11 Derecho de desistimiento del contrato;............................................................................................14
+§ 12 Reembolso del importe pagado por el Cliente.................................................................................17
+§ 13 Boletin............................................................................................................................................17
+§ 14 Informacion de contacto de StartUp................................................................................................18
+§ 15 Disposiciones finales........................................................................................................................18
+Comunicacion sobre resolucion extrajudicial de disputas.......................................................................20
+FORMULARIO DE DESISTIMIENTO..........................................................................................................21
+PLANTILLA DE RECLAMACION................................................................................................................22
+1
+§ 1 Disposiciones generales
+1. ……………. .El sitio web RoxStreamAI que opera en https://www.roxstreamai.com..
+(en adelante: Servicio) es administrado por: Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"
+(Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"), con sede en Varsovia en ul. Zurawia 6/12 lok.
+766, 00-503 Varsovia, direccion para entrega: Atlas Tower, Al. Jerozolimskie 123a, piso 18,
+02-017 Varsovia, inscrita en el Registro Nacional Judicial mantenido por el Tribunal de Distrito de
+la Capital de Varsovia en Varsovia, 12a Division Comercial del Registro Nacional Judicial (KRS)
+no. 0000442857, Numero de Identificacion Fiscal (NIP): 521-364-12-11, Numero de Registro de
+Empresas (REGON): 146433467, Numero de Registro (BDO): 000460502.
+2. Las disposiciones de estos Terminos y Condiciones (T&C) se aplican a las actividades realizadas
+para el beneficio de la Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" por la parte organizada
+de la empresa denominada RoxStreamAI que opera en la sucursal Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp", representada por Veronika Shved. (correo electronico: support@roxstreamai.com.
+telefono: +48503427781..). La persona indicada en este parrafo es designada por la Fundacja
+Rozwoju Przedsiebiorczosci "Twoj StartUp" para el contacto relativo a la implementacion de
+las disposiciones de estos T&C.
+3. Estos Terminos y Condiciones especifican en particular:
+Page 1 of 23
+
+--- Page 2 ---
+a) reglas para el uso del Sitio;
+b) terminos y condiciones para realizar pedidos de Productos disponibles en el Sitio;
+c) plazo y reglas de tramitacion de pedidos;
+d) terminos y formas de pago
+e) derecho del Cliente a desistir del contrato;
+f) presentacion y examen de reclamaciones
+g) derechos especiales del Cliente que es consumidor.
+4. StartUp vende y presta Servicios a traves del Sitio usando medios de comunicacion a distancia.
+Los contratos concluidos por el Cliente con StartUp a traves del Sitio son contratos a distancia,
+segun se definen en la Ley de 30 de mayo de 2014 sobre Derechos del Consumidor.
+5. El Cliente tiene derecho y obligacion de usar el Servicio conforme a su finalidad y las reglas de
+convivencia social y las buenas costumbres.
+6. Navegar el Sitio no requiere registro, y el pedido independiente de Productos por el Cliente no
+requiere registro de cuenta.
+7. Los T&C estan disponibles gratuitamente en el Sitio, en una forma que permite su adquisicion,
+reproduccion y registro.
+8. El Cliente esta obligado a leer el contenido de los Terminos y Condiciones. El uso del Sitio es
+posible solo despues de leer y aceptar los Terminos y Condiciones.
+9. El Cliente debe ser una persona con plena capacidad juridica.
+10.Las definiciones utilizadas en estos T&C tienen el siguiente significado:
+a) Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" (Fundacja Rozwoju
+Przedsiebiorczosci "Twoj StartUp"), con sede en Varsovia en ul. Zurawia 6/12 lok.
+766, 00-503 Varsovia, direccion para entrega: Atlas Tower, Aleje Jerozolimskie
+123A, piso 18, 02-017 Varsovia, inscrita en el Registro Nacional Judicial (KRS)
+mantenido por el Tribunal de Distrito de la Capital de Varsovia en Varsovia, 12a
+Division Comercial del Registro Nacional Judicial (KRS) no. 0000442857, con el
+siguiente Numero de Identificacion Fiscal (NIP): 521-364-12-11, Numero de Registro
+de Empresas (REGON): 146-433-467, Numero de Base de Residuos (BDO): 000460502;
+b) Cliente - persona que usa el Sitio, compra Bienes o Servicios proporcionados por
+StartUp en el Sitio;
+c) Consumidor - persona fisica que realiza un acto juridico con un empresario que no
+esta directamente relacionado con su actividad economica o profesional;
+d) Servicios - servicios prestados por StartUp, ofrecidos a los Clientes a traves del
+Sitio, excluidos los Servicios Digitales;
+e) Servicio Digital - servicio digital en el sentido del Articulo 2(5a) de la Ley de
+30 de mayo de 2014 sobre Derechos del Consumidor, prestado por StartUp, ofrecido
+a los Clientes a traves del Sitio;
+f) Bienes - bienes muebles vendidos por StartUp a los Clientes a traves del Sitio;
+Page 2 of 23
+
+--- Page 3 ---
+g) Productos - Bienes, Servicios o Servicios Digitales;
+h) Sitio - el sitio web en la siguiente direccion https://www.roxstreamai.com., mediante
+el cual StartUp presta servicios electronicos al Cliente, asi como ofrece Productos a
+los Clientes y les permite celebrar contratos;
+i) Contrato - un acuerdo celebrado entre StartUp y el Cliente a traves del Sitio;
+j) Cuenta - cuenta individual del Cliente en el Sitio que le permite usar los Servicios
+y Servicios Digitales y celebrar Contratos despues de iniciar sesion;
+k) dias laborables - todos los dias excepto sabados, domingos y dias festivos;
+l) Terminos y Condiciones - estos Terminos y Condiciones (T&C).
+11.En caso de una sospecha razonable de que el Cliente ha proporcionado datos falsos,
+StartUp tiene derecho a retirarse de la ejecucion del Contrato, notificando al Cliente
+de este hecho.
+12.Si el Cliente proporciona datos erroneos o inexactos, incluyendo en particular una
+direccion erronea o inexacta, StartUp no sera responsable por la no entrega o el retraso
+en la entrega de los Bienes o la falta de prestacion del Servicio o Servicio Digital, en la
+maxima medida permitida por la ley.
+13.La informacion contenida en el Servicio, incluyendo en particular anuncios, avisos y
+listas de precios, no constituye una oferta en el sentido del Articulo 66 de la Ley de 23
+de abril de 1964, Codigo Civil. Sin embargo, la informacion contenida en el Servicio
+constituye una invitacion a celebrar un Contrato, descrita en el Articulo 71 del Codigo
+Civil.
+14.StartUp proporcionara al Cliente que es Consumidor, de manera clara y visible,
+inmediatamente antes de que el Cliente realice el pedido, informacion sobre, en
+particular:
+a) las caracteristicas principales del servicio, teniendo en cuenta el objeto del
+servicio y el metodo de comunicacion con el cliente,
+b) el precio total o remuneracion por la ejecucion incluyendo impuestos, y
+cuando la naturaleza del objeto de la prestacion no permita, juzgando
+razonablemente, calcular su importe de antemano - la forma en que se
+calcularan, asi como las tarifas por transporte, entrega, servicios postales y
+otros costos, y cuando el importe de estas tarifas no pueda determinarse -
+sobre la obligacion de pagarlas;
+c) el derecho a desistir del contrato o la ausencia de este derecho,
+d) la duracion del contrato o la forma y fundamentos para su terminacion - si el
+contrato se celebra por tiempo indefinido o si se va a renovar automaticamente;
+e) la duracion minima de las obligaciones del cliente en virtud del contrato.
+15.Cuando StartUp prevea la posibilidad de aceptar pedidos individuales (personalizados)
+de los Clientes, dichos pedidos pueden ser realizados por los Clientes a traves de la
+direccion de correo electronico de StartUp indicada en el Sitio. En tal caso, StartUp
+prepara una cotizacion y la envia a la direccion de correo electronico indicada por el
+Cliente.
+16.El plazo de entrega para un pedido individual (personalizado) es de 30 dias desde la
+celebracion del Contrato, a menos que StartUp haya informado al Cliente, a mas tardar
+antes de realizar el pedido, de un periodo diferente.
+17.El Sitio atiende a Clientes en el territorio de Polonia y en todo el mundo, a menos que
+la oferta de StartUp en el Sitio contenga disposiciones diferentes.
+§ 2 Requisitos tecnicos necesarios para usar el Sitio
+1. Para navegar el Sitio, es necesario tener:
+a) un dispositivo terminal con acceso a Internet,
+b) un navegador web que permita aceptar cookies; por ejemplo, Internet
+Explorer, Microsoft Edge, Google Chrome, Mozilla Firefox, Opera o
+Safari en su version actual;
+c) las cookies necesarias aceptadas.
+2. Para utilizar las funcionalidades del Sitio, en particular registrarse en el Sitio o
+realizar pedidos de Productos, se requiere una cuenta de correo electronico activa
+(e-mail).
+3. El Sitio utiliza cookies para la correcta implementacion de los Servicios, asi como
+para garantizar la seguridad. El bloqueo de cookies, asi como el uso de
+aplicaciones de terceros para bloquear cookies, puede provocar un mal
+funcionamiento del Sitio, asi como impedir la correcta implementacion del Servicio,
+por lo cual StartUp no sera responsable.
+§ 3 Venta de Bienes - terminos y condiciones y plazo de
+tramitacion de pedidos
+1. StartUp, a traves del Sitio, celebra contratos de venta de Bienes con los Clientes. En
+virtud del contrato de venta, StartUp se obliga a transferir la propiedad de los Bienes al
+Cliente y entregar los Bienes, y el Cliente se obliga a recibir los Bienes y pagar a StartUp
+el precio.
+2. El Cliente, para realizar un pedido, indica los Bienes que le interesan, usando el
+comando "Al carrito" u otra redaccion equivalente ubicada en la pagina de los Bienes,
+y luego indica los datos, el metodo de entrega y el pago.
+3. En el carrito de compra, el Cliente puede:
+a) agregar y eliminar Bienes y sus cantidades;
+b) indicar la direccion a la que se deben entregar los Bienes y proporcionar los
+datos necesarios para la facturacion;
+c) elegir el metodo de entrega;
+d) elegir el metodo de pago;
+e) agregar un codigo de descuento (si aplica).
+4. El Cliente realiza un pedido aprobando el pedido, seleccionando el boton marcado
+"pedido con obligacion de pago" u otra redaccion equivalente.
+5. Realizar y aprobar un pedido implica la obligacion del Cliente de pagar el precio de
+los Bienes y los costos de entrega. Una vez que el pedido es confirmado por StartUp,
+se concluye tambien el contrato de venta entre StartUp y el Cliente.
+6. El envio de los Bienes comprados se realiza dentro de los 30 dias laborables desde
+el momento de la confirmacion del pago en la cuenta bancaria de StartUp, a menos que
+los Terminos y Condiciones contengan disposiciones diferentes, o que StartUp haya
+informado al Cliente inmediatamente antes de realizar el pedido, sobre un plazo
+diferente.
+7. Los Bienes comprados en el Sitio se envian a la direccion proporcionada por el
+Cliente.
+8. Los pedidos a traves del Sitio pueden realizarse 24 (en palabras: veinticuatro) horas
+al dia, 7 (en palabras: siete) dias a la semana. Los pedidos realizados en sabados,
+domingos o dias festivos se procesan el siguiente dia laborable.
+9. En caso de que sea posible cumplir solo una parte del pedido, StartUp puede ofrecer
+al Cliente antes de confirmar el pedido:
+a) cancelacion del pedido en su totalidad (si el cliente elige esta opcion, StartUp
+quedara liberado de la obligacion de cumplir el pedido);
+b) cancelacion del pedido en la parte en la que el cumplimiento no es posible
+dentro del plazo prescrito (si el Cliente elige esta opcion, el pedido se cumplira
+parcialmente, quedando StartUp liberado de la obligacion de cumplirlo en el
+resto);
+c) una prestacion sustitutiva a acordar con el cliente. El pedido de prestacion
+sustitutiva, una vez aprobado por el Cliente, se tratara como definitivo;
+d) division del pedido y establecimiento de una nueva fecha de finalizacion para
+esa parte del pedido cuya finalizacion no es posible dentro del plazo
+originalmente establecido (si el Cliente elige esta opcion, los Bienes que
+integran el pedido se enviaran en varios envios separados, y el Cliente incurrira
+en costos adicionales asociados con la division del pedido en varios envios).
+10.Si los Bienes solicitados por el Cliente no estan disponibles o el pedido del Cliente
+no puede cumplirse por otras razones, StartUp informara al Cliente enviando
+informacion a su direccion de correo electronico dentro de 7 (en palabras: siete) dias
+desde la celebracion del Acuerdo.
+11.Si el pago de los Bienes, que no pueden entregarse en su totalidad o en parte, se
+realizo por adelantado, StartUp reembolsara el importe pagado (o la diferencia) al
+Cliente dentro de 14 (en palabras: catorce) dias a partir de la fecha de celebracion
+del Acuerdo, bajo los terminos y condiciones detallados en los Terminos y
+Condiciones.
+12.StartUp puede publicar en el Sitio, con respecto a un Bien determinado, informacion
+sobre el numero de dias laborables dentro de los cuales se enviara el envio con los
+Bienes comprados. La informacion en cuestion es el tiempo contado desde la
+confirmacion del pedido hasta el envio de los Bienes pedidos. El plazo se da teniendo
+en cuenta el plazo para la finalizacion de todos los Bienes pedidos.
+§ 4 Responsabilidad por falta de conformidad de los Bienes
+con el Contrato
+1. Las disposiciones de este parrafo, de conformidad con las disposiciones del Capitulo
+5a de la Ley de 30 de mayo de 2014 sobre Derechos del Consumidor, se aplicaran a la
+responsabilidad de StartUp por la falta de conformidad de los Bienes con el Contrato
+celebrado con:
+a) el Consumidor, o
+b) una persona fisica que celebra un contrato directamente relacionado con su
+actividad empresarial, cuando resulte claro del contenido del contrato que no
+tiene caracter profesional para esa persona, derivado en particular del objeto de
+su actividad empresarial, puesto a disposicion en base a las disposiciones sobre
+el Registro Central e Informacion sobre Actividad Empresarial.
+2. StartUp se compromete a ofrecer Bienes libres de defectos fisicos y legales.
+3. El Cliente tiene derecho a presentar una reclamacion si los Bienes no cumplen con
+el Contrato.
+4. El Cliente puede presentar la reclamacion por escrito o en forma documental a la
+direccion de correo electronico de StartUp.
+5. Una reclamacion sobre Bienes defectuosos puede incluir una de las siguientes
+solicitudes:
+a) reparacion de los Bienes;
+b) sustitucion de los Bienes.
+6. Si los Bienes son incompatibles con el Contrato, el Cliente puede presentar una
+solicitud de reduccion del precio o desistimiento del Contrato cuando:
+a) StartUp se nego a poner los Bienes en conformidad con el contrato de
+conformidad con el Articulo 43d(2) de la Ley de 30 de mayo de 2014 sobre
+Derechos del Consumidor;
+b) StartUp no puso los Bienes en conformidad con el contrato de conformidad con
+el Articulo 43d Parrafos 4-6 de la Ley de Derechos del Consumidor de 30 de
+mayo de 2014;
+c) la falta de conformidad de los Bienes con el contrato persiste, aunque StartUp
+trato de poner los Bienes en conformidad con el contrato;
+d) la falta de conformidad de los Bienes con el contrato es tan significativa que
+justifica una reduccion del precio o el desistimiento del contrato sin recurrir
+previamente a los medios de proteccion establecidos en el Articulo 43d de la Ley
+de Derechos del Consumidor de 30 de mayo de 2014;
+e) resulta claro de la declaracion de StartUp o de las circunstancias que no pondra
+los Bienes en conformidad con el contrato en un plazo razonable o sin
+inconvenientes indebidos para el consumidor.
+7. Una reclamacion relativa a defectos de los Bienes se tramitara dentro de 14 (en
+palabras: catorce) dias de su recepcion.
+8. En caso de que StartUp no responda a la reclamacion dentro del plazo, se entiende
+que la reclamacion ha sido aceptada.
+9. StartUp informara al Cliente del resultado de la reclamacion en papel u otro medio
+duradero.
+10.Si se acepta una reclamacion relativa a los Bienes, StartUp debera, segun la solicitud
+del Cliente, reparar los Bienes, sustituirlos, reducir el precio o reembolsar el importe
+total pagado por el Cliente tras el desistimiento del Contrato.
+11.StartUp devolvera el importe debido al Cliente utilizando el mismo metodo de pago
+usado por el Cliente, a menos que el Cliente haya acordado expresamente un metodo
+de devolucion diferente que no implique ningun costo para el Cliente. StartUp emitira
+al Cliente la correspondiente correccion del comprobante de compra (factura de IVA
+correctiva o especificacion correctiva).
+12.La responsabilidad de StartUp se limita al valor de los Bienes cubiertos por el
+Contrato. La responsabilidad de StartUp por danos causados por la no ejecucion o
+la ejecucion incorrecta del Servicio Digital o la falta de entrega de contenido digital
+no incluye lucro cesante.
+13.En la medida no regulada en los Terminos y Condiciones, se aplicaran las
+correspondientes disposiciones de la ley de aplicacion general, en particular la Ley
+sobre Derechos del Consumidor y el Codigo Civil, para determinar los derechos y
+obligaciones del Cliente y StartUp en caso de defecto en los bienes / no ejecucion /
+ejecucion incorrecta del Contrato por StartUp.
+14.La responsabilidad de StartUp por defectos en los Bienes, Servicios y Servicios
+Digitales queda excluida en el caso de contratos celebrados en beneficio de un
+Cliente que no sea:
+a) un Consumidor;
+b) una persona fisica que celebra un contrato con StartUp directamente relacionado
+con su actividad empresarial, cuando resulte claro del contenido del contrato que
+no tiene caracter profesional para esa persona, derivado en particular del objeto
+de su actividad empresarial, puesto a disposicion en base a las disposiciones sobre
+el Registro Central e Informacion sobre Actividad Empresarial.
+15.Los Bienes ofrecidos por StartUp pueden estar cubiertos por una garantia del
+fabricante. La garantia se ejerce bajo los terminos de la declaracion de garantia.
+StartUp no proporciona su propia garantia para los Bienes ofrecidos.
+Page 7 of 23
+
+--- Page 8 ---
+§ 5 Prestacion de Servicios
+1. StartUp presta a los Clientes Servicios, cuyo tipo, alcance y descripcion detallada se
+indican en el Sitio. Las actividades consisten en particular en proporcionar servicios
+digitales en un modelo de suscripcion que permite la configuracion y gestion de
+avatares/personajes 3D para streaming, integraciones con herramientas de
+texto a voz (TTS) y funcionalidades de soporte para streaming.
+2. Los Servicios se prestan en la forma indicada en el Sitio, en particular en la pagina
+correspondiente al Servicio especifico.
+3. StartUp publica informacion en el Sitio sobre como el Cliente puede realizar un
+pedido de Servicios. Para realizar un pedido, el Cliente indica los Servicios que le
+interesan y luego introduce los datos necesarios para celebrar el Contrato y
+realizar el Servicio, incluyendo el metodo de ejecucion del Servicio (si aplica) y el
+metodo de pago.
+4. Si para realizar un pedido en el Sitio se utiliza un boton o funcion similar, debera
+estar marcado de forma facilmente legible con las palabras "pedido con obligacion
+de pago" u otra redaccion equivalente e inequivoca.
+5. Realizar y aprobar un pedido implica la obligacion del Cliente de pagar el precio de
+los Servicios y cualquier costo adicional. Una vez que el pedido es confirmado por
+StartUp, se concluye tambien el contrato de servicios entre StartUp y el Cliente.
+6. El Cliente sera informado de las fechas de inicio y fin de los Servicios antes de la
+celebracion del Contrato, en particular a traves del Sitio.
+7. Si, a solicitud expresa del Cliente, la prestacion del Servicio debe comenzar antes
+del vencimiento del plazo para desistir de un contrato fuera de establecimiento,
+StartUp requiere que el Cliente haga una declaracion:
+a) que contenga dicha solicitud expresa en un medio duradero;
+b) que el Cliente tomo nota de la informacion sobre la perdida del derecho a
+retirarse del contrato tras su completa ejecucion por StartUp.
+8. Si el Cliente no consiente el comienzo del Servicio antes del vencimiento del plazo
+para desistir del Contrato, el Servicio se prestara despues del vencimiento del
+plazo para el desistimiento del Cliente del Contrato, a menos que StartUp en el
+Sitio no ofrezca a los Clientes la posibilidad de celebrar Contratos sin dicho
+consentimiento.
+9. El Cliente puede rescindir el Contrato para la prestacion de Servicios, ya sea por
+escrito o en forma documental, con efecto al final del mes calendario. No se
+requiere periodo de preaviso.
+10.StartUp puede rescindir un Contrato para la prestacion de Servicios, por escrito o
+en forma documental, con un preaviso de 1 mes con efecto al final del mes
+calendario, por razones validas. Las partes consideran razones validas a:
+a) la discontinuidad o la decision de StartUp de discontinuar la operacion de la
+parte organizada de la empresa de StartUp, indicada en § 1;
+b) cambio significativo o decision de StartUp de cambiar significativamente el
+objeto de actividad de la parte organizada de la empresa de StartUp, indicada
+en § 1;
+c) reorganizacion significativa en StartUp;
+d) ocurrencia de fallos u obstaculos (especialmente tecnicos), no atribuibles a
+StartUp, que impidan o dificulten significativamente la prestacion de Servicios
+al Cliente;
+e) retraso del Cliente en el pago del precio a StartUp;
+f) incumplimiento material del Contrato o de los Terminos y Condiciones por el
+Cliente.
+§ 6 Responsabilidad por falta de conformidad de los Servicios
+con el Contrato
+1. Una reclamacion sobre Servicios prestados no conforme al Contrato debe incluir
+una solicitud, segun la naturaleza del Servicio.
+2. Una reclamacion relativa a la falta de conformidad del Servicio con un Contrato se
+tramitara dentro de 14 (en palabras: catorce) dias de su recepcion.
+3. En caso de que StartUp no responda a la reclamacion dentro del plazo, se entiende
+que la reclamacion ha sido aceptada.
+4. StartUp informara al Cliente del resultado de la reclamacion en papel u otro medio
+duradero.
+5. Si se acepta una reclamacion sobre el Servicio, StartUp ejecutara el Servicio
+correctamente, reembolsara total o parcialmente el precio recibido al Cliente, o
+realizara otros pagos al Cliente, segun el tipo de Servicio y las circunstancias del
+caso.
+6. La responsabilidad de StartUp se limita al valor del Servicio no ejecutado o
+incorrectamente ejecutado. La responsabilidad de StartUp por danos causados por
+la no ejecucion o la ejecucion incorrecta del Servicio no incluye lucro cesante.
+7. La responsabilidad de StartUp por defectos en los Servicios, asi como por la no
+ejecucion / ejecucion incorrecta del contrato celebrado con el Cliente, queda
+excluida en el caso de contratos celebrados en beneficio de un Cliente que no sea:
+a) un Consumidor;
+b) una persona fisica que celebra un contrato con StartUp directamente relacionado
+con su actividad empresarial, cuando resulte claro del contenido del contrato que
+no tiene caracter profesional para esa persona, derivado en particular del objeto
+de su actividad empresarial, puesto a disposicion en base a las disposiciones sobre
+el Registro Central e Informacion sobre Actividad Empresarial.
+Page 9 of 23
+
+--- Page 10 ---
+§ 7 Contratos de prestacion de Contenido Digital o Servicio Digital
+1. Las disposiciones de este parrafo y del parrafo siguiente de los Terminos y
+Condiciones, de conformidad con las disposiciones del Capitulo 5b de la Ley de
+Derechos del Consumidor de 30 de mayo de 2014, se aplicaran al Contrato de
+prestacion de Contenido Digital o Servicio Digital celebrado con:
+a) el Consumidor, o
+b) una persona fisica que celebra un contrato directamente relacionado con su
+actividad empresarial, cuando resulte claro del contenido del contrato que no
+tiene caracter profesional para esa persona, derivado en particular del objeto de
+su actividad empresarial, puesto a disposicion en base a las disposiciones sobre
+el Registro Central e Informacion sobre Actividad Empresarial.
+2. StartUp publica informacion en el Sitio sobre como el Cliente puede realizar un
+pedido de Servicios Digitales. Para realizar un pedido, el Cliente indica en
+particular los Servicios Digitales que le interesan y luego introduce los datos
+necesarios para celebrar el Contrato y ejecutar el Servicio Digital, incluyendo el
+metodo de ejecucion del Servicio (si aplica) y el metodo de pago.
+3. Si para realizar un pedido en el Sitio se utiliza un boton o funcion similar, debera
+estar marcado de forma facilmente legible con las palabras "pedido con obligacion
+de pago" u otra redaccion equivalente e inequivoca.
+4. Realizar y aprobar un pedido implica la obligacion del Cliente de pagar el precio de
+los Servicios Digitales y cualquier costo adicional. Una vez que el pedido es
+confirmado por StartUp, se concluye tambien el contrato de prestacion de servicios
+digitales entre StartUp y el Cliente.
+5. StartUp entregara el contenido digital o servicio digital al Cliente inmediatamente
+despues de la celebracion del Contrato, a menos que las partes acuerden lo
+contrario, en particular si en el Sitio se indica una fecha diferente en la pagina del
+Servicio Digital correspondiente. La disposicion no se aplica si el contrato prevé la
+entrega de contenido digital a traves de un medio tangible. Si el Cliente no acepta
+la ejecucion antes del vencimiento del plazo para desistir del Contrato, el servicio se
+prestara despues del vencimiento del plazo.
+6. StartUp notifica que dar el consentimiento referido en el parrafo anterior resultara
+en la perdida del derecho del Cliente a desistir del contrato.
+7. StartUp puede, por razones validas, realizar un cambio en el contenido digital o
+servicio digital que no sea necesario para cumplir con el Contrato. Se consideran
+razones validas, en particular, los intereses importantes del Cliente o de StartUp.
+StartUp informara al Cliente de manera clara y comprensible sobre el cambio
+realizado. Si el cambio afecta de manera material y adversa el acceso o el uso del
+contenido digital o servicio digital por el Cliente, StartUp esta obligado a informar al
+Cliente con antelacion en un medio duradero sobre las caracteristicas y la fecha del
+cambio y el derecho a rescindir el contrato sin preaviso. El Cliente puede rescindir el
+contrato sin preaviso dentro de los 30 dias del cambio.
+8. El Cliente puede rescindir el Contrato para la prestacion de contenido digital o
+Servicios Digitales por escrito o en forma documental, con efecto al final del mes
+calendario. No se requiere periodo de preaviso.
+9. StartUp puede rescindir un Contrato para la prestacion de Servicios Digitales, por
+escrito o en forma documental, con un preaviso de 1 mes con efecto al final del mes
+calendario, por razones validas. Las partes consideran razones validas a:
+a) la discontinuidad o la decision de StartUp de discontinuar la operacion de la
+parte organizada de la empresa de StartUp, indicada en § 1;
+b) cambio significativo o decision de StartUp de cambiar significativamente el
+objeto de actividad de la parte organizada de la empresa de StartUp, indicada
+en § 1;
+c) reorganizacion significativa en StartUp;
+d) ocurrencia de fallos o impedimentos significativos (especialmente tecnicos) en
+el funcionamiento del Sitio, no atribuibles a StartUp;
+e) retraso del Cliente en el pago del precio a StartUp;
+f) incumplimiento material del Contrato o de los Terminos y Condiciones por el
+Cliente.
+10.En la medida no regulada en este parrafo, se aplicaran las disposiciones del
+Capitulo 5b de la Ley sobre Derechos del Consumidor.
+§ 8 Responsabilidad por falta de conformidad del contenido
+ digital o servicio digital con el Contrato
+1. Si StartUp no ha proporcionado contenido digital o servicio digital, el Cliente debera
+requerir a StartUp que lo proporcione. Si StartUp no entrega el contenido digital o
+servicio digital inmediatamente o dentro de un plazo adicional expresamente acordado
+por las partes, el Cliente puede cancelar el contrato. La disposicion no se aplica si el
+contrato prevé la entrega de contenido digital a traves de un medio tangible.
+2. StartUp sera responsable por la falta de conformidad con el contrato del contenido
+digital o servicio digital proporcionado:
+a) de una sola vez o por partes, que existia en el momento de su entrega y se
+manifesto dentro de los dos anos siguientes a ese momento;
+b) de forma continua que se produjo o se manifesto en el momento en que debia
+ser entregado segun el contrato.
+3. Si el contenido digital o servicio digital no esta en conformidad con el contrato, el
+Cliente puede exigir que se ponga en conformidad con el contrato.
+4. StartUp puede negarse a poner el contenido digital o servicio digital en conformidad
+con el contrato si hacerlo es imposible o requeriria costos excesivos para StartUp.
+Page 11 of 23
+
+--- Page 12 ---
+5. Si el contenido digital o servicio digital no esta en conformidad con el Contrato, el
+Cliente puede presentar una declaracion de reduccion del precio o desistimiento del
+Contrato cuando:
+a) poner el contenido digital o servicio digital en conformidad con el contrato es
+imposible o requiere costos excesivos de conformidad con el Articulo 43m(2)
+y (3) de la Ley sobre Derechos del Consumidor;
+b) StartUp no puso el contenido digital o servicio digital en conformidad con el
+contrato de conformidad con el Articulo 43m(4) de la Ley sobre Derechos del
+Consumidor;
+c) la falta de conformidad del contenido digital o servicio digital con el contrato
+persiste aunque StartUp haya intentado poner el contenido digital o servicio
+digital en conformidad con el contrato;
+d) la falta de conformidad del contrato digital o servicio digital con el contrato es
+tan significativa que justifica una reduccion del precio o el desistimiento del
+contrato sin recurrir primero a los medios de proteccion establecidos en el
+Articulo 43m de la Ley sobre Derechos del Consumidor;
+e) resulta claro de la declaracion de StartUp o de las circunstancias que no pondra
+los servicios digitales o el contenido digital en conformidad con el contrato en
+un plazo razonable o sin inconvenientes indebidos para el consumidor.
+6. El precio reducido debe guardar una proporcion con el precio del contrato en que
+el valor del contenido digital o servicio digital no conforme guarde con el valor del
+contenido digital o servicio digital conforme. Si el contrato estipula que el contenido
+digital o servicio digital se proporciona por partes o de forma continua, la reduccion
+del precio debe tener en cuenta el tiempo durante el cual el contenido digital o
+servicio digital permanecio no conforme con el contrato.
+7. El cliente no puede desistir del contrato si el contenido digital o servicio digital se
+proporciona a cambio del pago de un precio, y la falta de conformidad del contenido
+digital o servicio digital con el contrato es insignificante.
+8. Si el Cliente desiste del contrato, StartUp puede exigir la devolucion del medio
+material en el que se entrego el contenido digital dentro de los 14 dias desde la fecha
+de recepcion de la declaracion de desistimiento del contrato por parte del Cliente.
+El Cliente devolvera el soporte inmediatamente.
+9. Si el Cliente desiste del contrato, StartUp reembolsara el precio solo por la parte
+correspondiente al contenido digital o servicio que no cumple con el contrato, asi
+como el contenido digital o servicio digital cuya obligacion de prestacion haya cesado
+como resultado del desistimiento.
+10.StartUp devolvera el importe debido al Cliente utilizando el mismo metodo de pago
+usado por el Cliente, a menos que el Cliente haya acordado expresamente un metodo
+de devolucion diferente que no implique ningun costo para el Cliente.
+11.La responsabilidad de StartUp se limita al valor del contenido digital o Servicio
+Digital que debia proporcionarse. La responsabilidad de StartUp por danos causados
+por la no ejecucion o la ejecucion incorrecta del Servicio Digital o la falta de entrega
+de contenido digital no incluye lucro cesante.
+12.Una reclamacion relativa a la falta de conformidad del servicio digital con un
+Contrato se tramitara dentro de 14 (en palabras: catorce) dias de su recepcion.
+13.En caso de que StartUp no responda a la reclamacion dentro del plazo, se entiende
+que la reclamacion ha sido aceptada.
+14.StartUp informara al Cliente del resultado de la reclamacion en papel u otro medio
+duradero.
+15.La responsabilidad de StartUp por la falta de conformidad del contenido digital o
+Servicio Digital, asi como por la no ejecucion / ejecucion incorrecta del Contrato
+celebrado con el Cliente, queda excluida para Contratos celebrados con un Cliente
+que no sea:
+a) un Consumidor;
+b) una persona fisica que celebra un contrato con StartUp directamente relacionado
+con su actividad empresarial, cuando resulte claro del contenido del contrato que
+no tiene caracter profesional para esa persona, derivado en particular del objeto
+de su actividad empresarial, puesto a disposicion en base a las disposiciones sobre
+el Registro Central e Informacion sobre Actividad Empresarial.
+§ 9 Precios de productos y costos de entrega
+1. Los precios indicados junto a los Productos ofrecidos en el Sitio son precios brutos,
+es decir, incluyen el Impuesto al Valor Agregado (IVA). Los precios se expresan en
+moneda polaca (zloty - PLN).
+2. El precio indicado junto al Producto no incluye los costos de envio.
+3. Los costos de envio seran soportados por el Cliente, a menos que el contenido de la
+oferta de StartUp en el Servicio indique lo contrario.
+4. El importe total que el Cliente debe pagar en relacion con la compra del Producto
+seleccionado consiste en el precio del Producto y el costo de entrega.
+5. A menos que StartUp haya especificado lo contrario en el Servicio en la pagina del
+Producto en cuestion o en el curso del pedido del Cliente, los metodos de entrega de
+los Productos son los siguientes:
+a) en el caso de Bienes - envio a la direccion proporcionada por el Cliente o
+recogida personal en las instalaciones de StartUp;
+b) en el caso de Servicios digitales - a la direccion de correo electronico
+proporcionada por el Cliente;
+c) en el caso de otros Servicios - de la manera especificada en el Sitio en la
+pagina del Servicio correspondiente o en el curso de realizar un pedido por el
+Cliente, resultante en particular del tipo de Servicio.
+Page 13 of 23
+
+--- Page 14 ---
+6. En el Servicio de StartUp, StartUp indicara claramente, a mas tardar al inicio del
+proceso de pedido del Cliente, informacion clara y legible sobre las restricciones en
+la entrega del Producto.
+§ 10 Metodos de pago
+1. En el Sitio de StartUp, StartUp indicara claramente, a mas tardar al inicio de la
+realizacion del pedido del Cliente, informacion clara y legible sobre los metodos de
+pago aceptados.
+2. A menos que StartUp haya especificado lo contrario en la pagina del Producto en
+cuestion o en el curso del pedido del Cliente, los metodos de entrega de los
+Productos son los siguientes:
+a) por transferencia mediante uno de los sistemas de pago electronico aceptados
+por StartUp que permiten realizar pagos rapidos del pedido;
+b) por transferencia bancaria ordinaria, a la cuenta indicada por StartUp.
+3. Para utilizar uno de los sistemas de pago electronico, el cliente debe aceptar los
+terminos y condiciones de uso del sistema de pago electronico en cuestion. La lista
+de sistemas de pago electronico disponibles en el Sitio esta disponible durante la
+finalizacion del pedido.
+4. En caso de desistimiento del contrato, el reembolso se realizara de la misma forma
+en que se realizo el pago por el Cliente, a menos que el Cliente haya acordado
+expresamente otro modo de devolucion que no implique ningun costo para el Cliente.
+5. StartUp no permite a los clientes realizar pagos en efectivo.
+§ 11 Derecho de desistimiento del contrato;
+1. Las disposiciones de este parrafo se aplicaran al Cliente que es Consumidor, o una
+persona fisica que celebra un contrato con StartUp directamente relacionado con su
+actividad empresarial, cuando resulte claro del contenido del contrato que no tiene
+caracter profesional para esa persona, derivado en particular del objeto de su
+actividad empresarial, puesto a disposicion en base a las disposiciones sobre el
+Registro Central e Informacion sobre Actividad Empresarial.
+2. El Cliente referido en el parrafo 1 tiene derecho a desistir del Contrato sin dar ninguna
+razon ni incurrir en costos, a menos que la ley comun o las disposiciones de estos
+Terminos y Condiciones prevean lo contrario. El contrato del que el cliente indicado
+en el parrafo 1 desiste se considera no celebrado.
+3. Para desistir del contrato, es suficiente presentar una declaracion de desistimiento
+y enviarla a StartUp, dentro de 14 (en palabras: catorce) dias.
+4. El plazo para desistir del contrato comienza:
+Page 14 of 23
+
+--- Page 15 ---
+a) para un Contrato en cuya ejecucion StartUp entrega los Bienes, estando obligado a
+transferir su propiedad - desde la toma de posesion de los Bienes por el Cliente o
+por un tercero distinto del transportista indicado por el Cliente, y en el caso de un
+Contrato que:
+- incluya varios Bienes que se entregan por separado, en lotes o en partes - desde la
+  toma de posesion del ultimo Bien, sus lotes o partes,
+- consista en la entrega regular de Bienes durante un periodo de tiempo fijo - desde la
+  toma de posesion del primero de los Bienes;
+b) para otros Contratos - desde la fecha de celebracion del Contrato.
+5. Para cumplir con el plazo para desistir del contrato es suficiente:
+a) enviar una declaracion escrita a la direccion de StartUp indicada en los Terminos
+y Condiciones o en el Sitio, o
+b) enviar la declaracion en forma documental a la direccion de correo electronico de
+StartUp indicada en los Terminos y Condiciones o en el Sitio.
+6. StartUp enviara inmediatamente al Cliente, en un medio duradero, un acuse de recibo
+de la declaracion de desistimiento presentada electronicamente.
+7. Si el Cliente desiste del contrato, el Cliente debera devolver el Producto comprado
+inmediatamente, a mas tardar dentro de 14 (en palabras: catorce) dias desde el
+retiro, a menos que StartUp ofrezca recoger los Bienes por si misma. Para mantener
+ese plazo, es suficiente enviar la devolucion antes de su vencimiento. El costo de
+devolver los Bienes sera soportado por el Cliente.
+8. Si el Cliente desiste del contrato, StartUp reembolsara al Cliente el importe pagado
+por el Producto y los costos de envio al Cliente, dentro de no mas de 14 (en palabras:
+catorce) dias desde la fecha de recepcion de la declaracion de desistimiento del
+contrato. Sin embargo, si el Cliente ha elegido un metodo de entrega del Producto
+que no sea el metodo mas barato ofrecido en el Sitio para el pedido, StartUp no esta
+obligada a reembolsar los costos adicionales incurridos por el Cliente.
+9. StartUp devolvera el pago utilizando el mismo metodo usado por el Cliente, a menos
+que el Cliente acuerde con StartUp un metodo de devolucion diferente que no
+incurra en costos para el Cliente.
+10.StartUp puede retener el reembolso de los pagos recibidos del Cliente hasta que
+reciba el Producto de vuelta o hasta que el Cliente proporcione prueba de su
+retorno, lo que ocurra primero.
+11.Si el Cliente ha enviado una declaracion de cancelacion antes de recibir una
+confirmacion de pedido de StartUp, el pedido se cancela.
+12.El Cliente sera responsable por cualquier disminucion del valor de los Bienes
+resultante del uso de los Bienes mas alla de lo necesario para determinar la
+naturaleza, caracteristicas y propiedades de los Bienes.
+Page 15 of 23
+
+--- Page 16 ---
+13.El derecho de desistimiento no se aplica al Cliente en los casos indicados en la Ley
+de 30 de mayo de 2014 sobre derechos del consumidor, en particular con respecto a
+contratos:
+a) para la prestacion de servicios por los que el consumidor esta obligado a pagar
+el precio, si el comerciante ha realizado el servicio en su totalidad con el
+consentimiento expreso y previo del consumidor que fue informado antes del
+inicio de la prestacion de que despues de la prestacion por el comerciante perdera
+el derecho a desistir del contrato, y lo acepto;
+b) en los que el precio o remuneracion depende de fluctuaciones en el mercado
+financiero sobre las cuales el comerciante no tiene control y que pueden ocurrir
+antes del vencimiento del plazo de desistimiento;
+c) en los que el objeto de la prestacion es un bien no prefabricado, producido segun
+las especificaciones del consumidor o destinado a satisfacer sus necesidades
+individualizadas;
+d) en los que el objeto de la prestacion son bienes que se deterioran rapidamente o
+que tienen una vida util corta;
+e) en los que el objeto de la prestacion son bienes entregados en embalaje sellado
+que no pueden devolverse despues de abrir el embalaje por razones de proteccion
+de la salud o higiene, si el embalaje se ha abierto despues de la entrega;
+f) en los que el objeto de la prestacion son bienes que, despues de la entrega, por su
+naturaleza, se vuelven inseparables de otras cosas;
+g) en los que el objeto de la prestacion son bebidas alcoholicas, cuyo precio se acuerdo
+en la celebracion del contrato de compraventa, cuya entrega solo puede realizarse
+transcurridos 30 dias y cuyo valor depende de fluctuaciones del mercado sobre las
+cuales el comerciante no tiene control;
+h) en los que el consumidor solicito expresamente que el comerciante acuda a su
+domicilio para una reparacion o mantenimiento urgentes; si el comerciante presta
+servicios adicionales distintos de los solicitados por el consumidor, o suministra
+bienes distintos de las piezas de repuesto necesarias para la reparacion o el
+mantenimiento, el consumidor tiene derecho de desistimiento respecto de esos
+servicios adicionales o bienes;
+i) en los que el objeto de la prestacion son grabaciones sonoras o visuales o programas
+de ordenador entregados en embalaje sellado, si el embalaje se abrio despues de la
+entrega;
+j) para la entrega de diarios, periodicos o revistas, excepto un contrato de
+suscripcion;
+k) celebrados a traves de una subasta publica;
+l) para la prestacion de servicios de alojamiento distintos del residencial, transporte
+de bienes, alquiler de coches, restauracion, servicios relacionados con ocio,
+entretenimiento, eventos deportivos o culturales, si el contrato especifica el dia o
+periodo de prestacion;
+m) para proporcionar contenido digital no entregado en un soporte tangible por el
+que el consumidor esta obligado a pagar el precio, si el comerciante ha iniciado la
+prestacion con el consentimiento expreso y previo del consumidor que fue informado
+antes del inicio de la prestacion de que despues de la prestacion por el comerciante
+perdera el derecho a desistir del contrato, y lo acepto, y el comerciante ha
+proporcionado al consumidor la confirmacion referida en el Articulo 15 (1) y (2)
+o el Articulo 21 (1) de la Ley sobre Derechos del Consumidor.
+n) prestacion de servicios por los que el consumidor esta obligado a pagar el precio,
+cuando el consumidor solicito expresamente que el comerciante acuda a su domicilio
+para una reparacion, y el servicio ya se ha realizado plenamente con el
+consentimiento expreso y previo del consumidor.
+14.StartUp tambien corregira los comprobantes de compra (factura de IVA correctiva o
+especificacion correctiva) previamente entregados al Cliente.
+§ 12 Reembolso del importe pagado por el Cliente
+StartUp reembolsara el dinero, dentro de 14 (en palabras: catorce) dias calendario,
+usando el mismo medio de pago utilizado por el Cliente en el momento del pago,
+a menos que el Cliente haya acordado expresamente otra forma de devolucion que
+no implique costos para el Cliente, en los casos de:
+a) desistimiento del contrato total o parcial (en cuyo caso se reembolsara la parte
+correspondiente del precio) en el caso de un pedido pagado por adelantado antes
+de su ejecucion;
+b) reconocimiento de la reclamacion y la imposibilidad de reparar los Bienes
+averiados o sustituirlos por Bienes nuevos o prestar el Servicio / Servicio Digital
+de conformidad con el contrato;
+c) reconocimiento del derecho a solicitar una reduccion del precio del Producto.
+§ 13 Boletin
+1. El Cliente puede aceptar recibir informacion comercial, incluida informacion
+comercial por correo electronico, seleccionando la opcion correspondiente en el
+formulario de registro o a traves del Sitio. Si se otorga dicho consentimiento, el
+Cliente recibira el boletin (Boletin) de StartUp en la direccion de correo electronico
+proporcionada por el Cliente.
+2. El Cliente puede darse de baja del Boletin en cualquier momento notificando a
+StartUp la cancelacion.
+§ 14 Informacion de contacto de StartUp
+El Cliente puede contactar con StartUp:
+1) por telefono en: +48503427781
+Page 17 of 23
+
+--- Page 18 ---
+2) por correo electronico, a la siguiente direccion: support@roxstreamai.com
+§ 15 Disposiciones finales
+1. StartUp indica que el uso de los servicios proporcionados electronicamente implica
+riesgos derivados del caracter publico de Internet, incluyendo en particular la
+posibilidad de obtener o modificar datos transmitidos del Cliente por terceros no
+autorizados. Para minimizar el riesgo mencionado, el Cliente debe usar medidas de
+seguridad apropiadas, incluyendo en particular el uso de programas antivirus,
+versiones actualizadas de navegadores de Internet y sistemas operativos, y no usar
+puntos de acceso abiertos.
+2. En la maxima medida permitida por la ley, StartUp no es responsable por el bloqueo
+por administradores de servidores de correo de mensajes a la direccion de correo
+indicada por el Cliente, ni por la eliminacion y bloqueo de mensajes de correo
+electronico por software instalado en el ordenador utilizado por el Cliente.
+3. StartUp no es responsable por el equipo e infraestructura utilizados por el Cliente,
+incluyendo fallos de redes publicas de comunicacion de datos que causen, por
+ejemplo, falta de acceso o interferencias con el Sitio.
+4. StartUp indica que la visualizacion de los Productos en el sistema TIC del Cliente,
+al usar el Sitio, depende de numerosos factores, incluyendo el tipo de pantalla,
+relacion de aspecto, resolucion, metodo de retroiluminacion, tecnologias usadas y
+la eficiencia de la electronica de control y ajustes. Las discrepancias entre la
+visualizacion disponible en el sistema TIC del Cliente y la apariencia real del
+Producto no pueden ser base de una reclamacion.
+5. StartUp indica que todas las marcas (logotipos, logotipos, nombres de marca, etc.),
+materiales graficos o fotografias publicadas en el Sitio estan sujetas a proteccion
+legal y son usadas por StartUp solo con fines informativos.
+6. StartUp, en la maxima medida permitida por la ley, no sera responsable por
+interrupciones, incluyendo interrupciones, en la operacion del Sitio causadas por
+fuerza mayor, actos no autorizados de terceros o incompatibilidad del Sitio con la
+infraestructura tecnica del Cliente.
+7. StartUp se reserva el derecho de suspender temporalmente las operaciones del
+Sitio, en particular para realizar trabajos de mantenimiento, desarrollo o
+modernizacion.
+8. Todos los nombres de Productos ofrecidos en el Sitio se utilizan con fines de
+identificacion y pueden estar protegidos o reservados bajo las disposiciones de la
+Ley de Propiedad Industrial.
+9. StartUp observa que el Sitio contiene contenido protegido por leyes de propiedad
+intelectual, en particular obras protegidas por derechos de autor (contenido
+publicado en el Sitio, diseno, graficos, fotos, etc.). Los Clientes y visitantes del Sitio
+se comprometen a respetar los derechos de propiedad intelectual de StartUp y de
+terceros (incluyendo derechos de autor y derechos de propiedad industrial como los
+que surgen del registro de marcas). El Cliente o visitante del Sitio sera el unico
+responsable por el incumplimiento de las disposiciones de esta seccion.
+Page 19 of 23
+
+--- Page 19 ---
+10.El Cliente no publicara en el Sitio contenido que sea ilegal, inmoral o que viole el
+bienestar de terceros, ni publicara enlaces a contenido pornografico, obsceno u
+ofensivo a la dignidad de otros.
+11.El Cliente se abstendra de cualquier actividad que pueda afectar el correcto
+funcionamiento del Sitio, incluyendo en particular cualquier interferencia con la
+forma en que el Servicio opera o sus elementos tecnicos.
+12.StartUp se compromete a informar a los Clientes registrados del Sitio sobre cualquier
+cambio en los Terminos de Servicio enviando un correo electronico a la direccion
+proporcionada durante el registro, y el Cliente, al recibir dicha informacion, podra
+eliminar la Cuenta en cualquier momento. Las modificaciones a estos Terminos y
+Condiciones no afectan los contratos celebrados antes de la fecha de entrada en
+vigor de las modificaciones.
+13.En cualquier asunto no cubierto por estos Terminos y Condiciones, por favor siga
+las normas de aplicacion general del derecho polaco, en particular:
+1) Ley de 23 de abril de 1964 - Codigo Civil;
+2) Ley de 30 de mayo de 2014 sobre derechos del consumidor
+3) Ley de 18 de julio de 2002 sobre la prestacion de servicios electronicos.
+14.Las disputas relacionadas con Contratos celebrados en base a estos Terminos y
+Condiciones se resolveran por un tribunal con jurisdiccion sobre StartUp. Esta
+disposicion no se aplica a Contratos celebrados con un Consumidor.
+15.El uso de un metodo especifico de resolucion extrajudicial de disputas es posible
+solo con el consentimiento mutuo del Cliente y StartUp. Los procedimientos
+detallados para la resolucion extrajudicial de disputas estan disponibles en el sitio
+web de la Oficina de Competencia y Proteccion del Consumidor: www.uokik.gov.pl,
+en los sitios web de las Inspectorias Provinciales de Inspeccion Comercial, asi como
+de los defensores del consumidor de distrito (ciudad).
+16.Estos Terminos y Condiciones entran en vigor el: 7 de febrero de 2026
+Page 20 of 23
+
+--- Page 20 ---
+Comunicacion sobre resolucion extrajudicial de disputas
+De conformidad con el Reglamento (UE) No. 524/2013 del Parlamento Europeo y del
+Consejo de 21 de mayo de 2013 sobre la resolucion en linea de litigios en materia de
+consumo y por el que se modifica el Reglamento (CE) No. 2006/2004 y la Directiva
+2009/22/CE (Reglamento sobre ODR en litigios de consumo), Fundacja Rozwoju
+Przedsiebiorczosci "Twoj StartUp", con sede en Varsovia, proporciona un enlace
+electronico a la plataforma ODR (resolucion de litigios en linea):
+https://webgate.ec.europa.eu/odr. La plataforma ODR permite la resolucion
+extrajudicial de disputas entre empresas y consumidores. La resolucion de disputas
+por este metodo es voluntaria.
+Page 21 of 23
+
+--- Page 21 ---
+FORMULARIO DE DESISTIMIENTO
+(este formulario debe completarse y devolverse solo si desea desistir del Acuerdo)
+………………………………………………
+(nombre del remitente)
+………………………………………………
+………………………………………………
+(direccion del remitente)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+pietro,
+02-017 Varsovia
+Direccion para notificaciones
+…………………………………………………….
+DESISTIMIENTO DE UN CONTRATO
+Yo, el abajo firmante, por la presente desisto del siguiente contrato:
+1. Fecha del contrato ..........................................................................
+2. Numero de contrato / pedido ……………………………………………………………….
+3. Objeto del Contrato ............................................................
+……………………………
+Firma del Cliente
+Fecha: ………………………….
+Page 22 of 23
+
+--- Page 22 ---
+PLANTILLA DE RECLAMACION
+(este formulario debe completarse y devolverse solo si desea presentar una reclamacion)
+………………………………………………
+(nombre del remitente)
+………………………………………………
+………………………………………………
+(direccion del remitente)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+pietro,
+02-017 Varsovia
+Direccion para notificaciones
+……………………………………………………..
+RECLAMACION
+Yo, el abajo firmante, por la presente presento una reclamacion relativa al contrato/pedido
+de fecha ............................................... no. .............................................. cuyo objeto fue ...
+....................................................................................................................................................................
+Motivo de la reclamacion: ......................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+(describa el motivo de la reclamacion)
+En vista de lo anterior, solicito ............................................... ..........................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+……………………………
+Firma del Cliente
+
+--- Page 23 ---
+Fecha: ………………………….
+Page 23 of 23

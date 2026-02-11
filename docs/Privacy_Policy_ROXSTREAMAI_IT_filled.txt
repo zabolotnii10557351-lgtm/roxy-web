@@ -1,0 +1,37 @@
+INFORMATIVA SULLA PRIVACY - RoxStreamAI
+1. Chi e il titolare del trattamento?
+Il titolare del trattamento dei dati personali e la Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" con sede a Varsavia (indirizzo della sede: ul. Zurawia 6/12, lok. 766, 00-503 Varsavia).
+La presente Informativa si applica ai servizi della Fondazione forniti dalla parte organizzata dell'impresa RoxStreamAI, contatti: telefono +48503427781, e-mail support@roxstreamai.com, gestita da Veronika Shved (nome e cognome della Beneficiaria).
+2. Perche trattiamo i tuoi dati?
+A. In relazione ai servizi forniti tramite RoxStreamAI (https://www.roxstreamai.com) consistenti nell'erogazione di servizi digitali in modello di abbonamento (SaaS), ossia per la conclusione o l'esecuzione di un contratto (art. 6, par. 1, lett. b) GDPR), i dati saranno conservati fino all'esecuzione del contratto.
+B. Per finalita di marketing e promozione dei prodotti offerti dalla Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" con sede a Varsavia, che costituisce il nostro legittimo interesse (art. 6, par. 1, lett. f) GDPR). I dati saranno trattati fino a opposizione (se non invii informazioni commerciali, elimina questo punto).
+C. Per adempiere a obblighi legali connessi alla collaborazione intrapresa (art. 6, par. 1, lett. c) GDPR), in particolare obblighi di conservazione di determinati documenti per il periodo previsto dalla legge, ad es.:
+- Legge sulla contabilita del 29.09.1994 (Gazzetta ufficiale 2017, voce 1858)
+- Ordinanza tributaria del 29 agosto 1997 (Gazzetta ufficiale 1997 n. 137, voce 926);
+- Legge sulla prevenzione del riciclaggio e del finanziamento del terrorismo del 1 marzo 2018 (Gazzetta ufficiale 2018, voce 723).
+D. Per l'eventuale instaurazione, esercizio o difesa di pretese, che costituisce il nostro legittimo interesse (art. 6, par. 1, lett. f) GDPR). I dati saranno trattati fino alla presentazione delle pretese;
+E. In caso di consenso, i dati saranno trattati nei limiti e per le finalita indicate nel consenso (base giuridica: art. 6, par. 1, lett. a) GDPR). I dati saranno trattati fino al ritiro del consenso.
+3. Quali dati vengono trattati?
+Per concludere il contratto richiediamo di fornire i dati nel modulo di contratto/ordine (in mancanza non concluderemo il contratto/non evaderemo l'ordine). Inoltre possiamo richiedere dati facoltativi che non incidono sulla conclusione del contratto (se non li riceviamo non potremo, ad esempio, chiamare il numero di contatto).
+Durante la durata del contratto, nell'erogazione dei servizi, entriamo in possesso di altri tuoi dati. La comparsa dei tuoi dati personali presso di noi e conseguenza dell'utilizzo dei nostri servizi.
+4. Con chi saranno condivisi i dati?
+A. Autorita pubbliche, nella misura in cui non ricevano i dati nell'ambito di un procedimento specifico previsto dalla legge, ad es. in relazione alla normativa antiriciclaggio;
+B. Soggetti che trattano i tuoi dati personali per conto della Fondazione sulla base di un accordo di trattamento (responsabili del trattamento). Includono: beneficiari della Fondazione, specialisti IT, societa di archiviazione, provider di hosting;
+C. Titolari esterni (i cosiddetti titolari paralleli cui i dati vengono resi disponibili), ad es. consulenti legali e avvocati, societa di corriere o postali, soggetti acquirenti di crediti - in caso di mancato pagamento delle nostre fatture;
+D. Soggetti fuori dallo SEE, ma solo se necessario e con un livello di protezione adeguato, in particolare tramite:
+   a. cooperazione con soggetti che trattano dati personali in Paesi per i quali la Commissione europea ha adottato una decisione di adeguatezza;
+   b. applicazione delle clausole contrattuali standard emesse dalla Commissione europea.
+Il titolare informa sempre, in fase di raccolta, dell'intenzione di trasferire dati personali fuori dallo SEE.
+5. I dati sono profilati?
+I tuoi dati non saranno oggetto di profilazione, ossia analisi automatizzata dei tuoi dati e sviluppo di previsioni su preferenze o comportamenti futuri (la profilazione significa, ad esempio nel marketing, determinare quale offerta potrebbe interessarti di piu sulla base delle scelte precedenti).
+6. Quali sono i tuoi diritti?
+A. Diritto di accesso ai dati personali trattati (art. 15 GDPR);
+B. Diritto di rettifica dei dati personali, compresa la correzione (art. 16 GDPR);
+C. Diritto alla cancellazione dei dati personali dai nostri sistemi, il cosiddetto "diritto all'oblio" - se, a tuo parere, non vi sono basi per il trattamento, puoi richiedere la cancellazione (art. 17 GDPR);
+D. Diritto alla limitazione del trattamento - puoi richiedere che limitiamo il trattamento alla sola conservazione o allo svolgimento di attivita concordate, se abbiamo dati inesatti o li trattiamo ingiustificatamente; o se non vuoi che li cancelliamo perche necessari per l'accertamento, l'esercizio o la difesa di pretese; o per la durata dell'opposizione al trattamento (art. 18 GDPR);
+E. Diritto alla portabilita dei dati - hai diritto a ricevere da noi, in un formato strutturato, di uso comune e leggibile da macchina (ad es. ".csv"), i dati personali che ti riguardano detenuti da noi sulla base di un contratto o consenso. Questo diritto e concesso quando i dati sono in formato elettronico - se sono solo in forma cartacea, non potrai esercitarlo. Puoi incaricarci di trasferire tali dati direttamente a un'altra entita (art. 20 GDPR);
+F. Diritto di revocare il consenso - in qualsiasi momento hai il diritto di revocare il consenso al trattamento dei dati personali basato sul consenso (art. 7, par. 3 GDPR). La revoca non pregiudica la liceita dei trattamenti effettuati prima della revoca. La revoca avviene inviando un'e-mail a: privacy@roxstreamai.com.
+G. Diritto di opposizione - puoi opporti al trattamento se la base giuridica e il nostro legittimo interesse (art. 21 GDPR). In tal caso, dopo aver esaminato la richiesta, non potremo piu trattare i dati personali oggetto dell'opposizione su tale base, salvo che dimostriamo l'esistenza di motivi legittimi cogenti che prevalgono sui tuoi interessi, diritti e liberta;
+H. Se ritieni che il trattamento dei dati personali violi il GDPR, hai il diritto di presentare un reclamo all'autorita di controllo, ossia al Presidente dell'Ufficio per la Protezione dei Dati Personali.
+7. Contatto
+Se hai bisogno di ulteriori informazioni relative alla protezione dei dati personali o desideri esercitare i tuoi diritti, contattaci via e-mail: rodo@twojstartup.pl

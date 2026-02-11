@@ -1,0 +1,37 @@
+POLITICA DE PRIVACIDADE - RoxStreamAI
+1. Quem e o controlador dos seus dados?
+O controlador dos seus dados pessoais e a Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" com sede em Varsovia (endereco da sede: ul. Zurawia 6/12, lok. 766, 00-503 Varsovia).
+A presente Politica de Privacidade aplica-se aos servicos da Fundacao prestados pela parte organizada da empresa RoxStreamAI, contatos: telefone +48503427781, e-mail support@roxstreamai.com, conduzida por Veronika Shved (nome e sobrenome da Beneficiaria).
+2. Por que tratamos seus dados?
+A. Em conexao com os servicos prestados por meio do RoxStreamAI (https://www.roxstreamai.com) consistentes na prestacao de servicos digitais em modelo de assinatura (SaaS), ou seja, para celebracao ou execucao de contrato (art. 6, n. 1, alinea b do GDPR), seus dados serao armazenados ate a execucao do contrato.
+B. Para fins de marketing e promocao de produtos oferecidos pela Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" com sede em Varsovia, o que constitui nosso interesse legitimo (art. 6, n. 1, alinea f do GDPR). Seus dados serao tratados ate que voce se oponha (se voce nao envia informacoes comerciais, remova este ponto).
+C. Cumprimento de obrigacoes legais relacionadas a cooperacao assumida (art. 6, n. 1, alinea c do GDPR), em especial a obrigacao de manter determinados documentos pelo periodo previsto em lei, por exemplo:
+- Lei de Contabilidade de 29.09.1994 (Diario de Leis de 2017, item 1858)
+- Codigo Tributario de 29 de agosto de 1997 (Diario de Leis de 1997 No. 137, item 926);
+- Lei de 1 de marco de 2018 de Combate a Lavagem de Dinheiro e Financiamento do Terrorismo (Diario de Leis de 2018, item 723).
+D. Para eventual estabelecimento, exercicio ou defesa de reclamacoes, o que constitui nosso interesse legitimo (art. 6, n. 1, alinea f do GDPR). Os dados serao tratados ate a apresentacao das reclamacoes;
+E. Em caso de consentimento, seus dados serao tratados nos limites e para a finalidade indicada no consentimento (base legal: art. 6, n. 1, alinea a do GDPR). Os dados serao tratados ate a retirada do consentimento.
+3. Quais dados sao tratados?
+Para concluir o contrato, solicitamos que voce forneca os dados no formulario de contrato/pedido (se nao os fornecer, nao concluiremos o contrato/nao concluiremos o pedido). Alem disso, podemos solicitar dados opcionais que nao afetam a conclusao do contrato (se nao os recebermos, nao poderemos, por exemplo, ligar para o numero de contato).
+Durante a vigencia do contrato, ao prestar servicos, temos acesso a outros dados seus. O aparecimento dos seus dados pessoais conosco e consequencia do funcionamento dos nossos servicos que voce utiliza.
+4. Com quem os dados serao compartilhados?
+A. Autoridades publicas, na medida em que nao recebam os dados no ambito de um procedimento especifico previsto em lei, por exemplo, em conexao com a prevencao a lavagem de dinheiro;
+B. Entidades que processam seus dados pessoais em nome da Fundacao com base em um contrato de processamento de dados (operadores). Incluem: beneficiarios da Fundacao, especialistas de TI, empresas de arquivamento, empresas de hospedagem;
+C. Controladores externos (os chamados controladores paralelos a quem os dados sao disponibilizados), por exemplo, consultores juridicos e advogados, empresas de courier ou postais, entidades compradoras de dividas - em caso de falta de pagamento de nossas faturas;
+D. Entidades fora do EEE, mas somente se necessario e com nivel de protecao adequado, em especial por:
+   a. cooperacao com entidades que tratam dados pessoais em paises para os quais a Comissao Europeia emitiu decisao de adequacao;
+   b. aplicacao de clausulas contratuais padrao emitidas pela Comissao Europeia.
+O controlador sempre informa, na etapa de coleta, a intencao de transferir dados pessoais para fora do EEE.
+5. Os dados sao perfilados?
+Seus dados nao serao objeto de perfilamento, isto e, analise automatizada de seus dados e elaboracao de previsoes sobre preferencias ou comportamento futuro (o perfilamento significa, por exemplo, no marketing, determinar qual oferta pode ser de maior interesse com base nas escolhas anteriores).
+6. Quais sao seus direitos?
+A. Direito de acesso aos dados pessoais tratados por nos (art. 15 do GDPR);
+B. Direito de retificar dados pessoais confiados, incluindo sua correcao (art. 16 do GDPR);
+C. Direito de apagar dados pessoais dos nossos sistemas, o chamado "direito ao esquecimento" - se, na sua opiniao, nao ha fundamentos para o tratamento, voce pode solicitar a exclusao (art. 17 do GDPR);
+D. Direito de restringir o tratamento - voce pode solicitar que restrinjamos o tratamento apenas ao armazenamento ou a atividades acordadas com voce, se tivermos dados incorretos ou os tratarmos indevidamente; ou se nao quiser que os apaguemos porque sao necessarios para estabelecer, exercer ou defender reclamacoes; ou durante a oposicao ao tratamento (art. 18 do GDPR);
+E. Direito a portabilidade de dados - voce tem o direito de receber de nos, em formato estruturado, de uso comum e legivel por maquina (por exemplo, ".csv"), os dados pessoais relativos a voce que possuimos com base em contrato ou consentimento. Este direito e concedido quando os dados estao em formato eletronico - se estiverem apenas em papel, nao podera exercita-lo. Voce pode nos solicitar que transfiramos esses dados diretamente para outra entidade (art. 20 do GDPR);
+F. Direito de retirar o consentimento - a qualquer momento voce tem o direito de retirar o consentimento para o tratamento de dados pessoais baseado no consentimento (art. 7, n. 3 do GDPR). A retirada nao afeta a legalidade do tratamento realizado antes da retirada. A retirada ocorre enviando um e-mail para: privacy@roxstreamai.com.
+G. Direito de oposicao - voce pode se opor ao tratamento se a base para o uso dos dados for nosso interesse legitimo (art. 21 do GDPR). Nessa situacao, apos analisar sua solicitacao, nao poderemos mais tratar os dados pessoais objeto da oposicao com base nisso, a menos que demonstremos a existencia de motivos legitimos imperiosos que prevalecam sobre seus interesses, direitos e liberdades;
+H. Se, em sua opiniao, o tratamento de dados pessoais viola o GDPR, voce tem o direito de apresentar uma reclamacao a autoridade supervisora, ou seja, ao Presidente do Escritorio de Protecao de Dados Pessoais.
+7. Contato
+Se precisar de informacoes adicionais relacionadas a protecao de dados pessoais ou quiser exercer seus direitos, entre em contato pelo e-mail: rodo@twojstartup.pl

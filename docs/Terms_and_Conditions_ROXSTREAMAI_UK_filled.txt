@@ -1,0 +1,761 @@
+--- Page 1 ---
+UMOVY TA UMOVYNI UMOVY RoxStreamAI
+§ 1 Zahalni polozhennya..........................................................................................................................1
+§ 2 Tekhnichni vymogy dlya vykorystannya Saytu...................................................................................4
+§ 3 Prodazh Tovariv - umovy ta termin obroblennya zamovlen...............................................................4
+§ 4 Vidpovidalnist za nevidpovidnist Tovariv Umovi...............................................................................6
+§ 5 Nadannya Posluh...............................................................................................................................8
+§ 6 Vidpovidalnist za nevidpovidnist Posluh Umovi.................................................................................9
+§ 7 Dogovory pro nadannya Tsyfrovogo kontentu abo Tsyfrovoyi posluhy...........................................9
+§ 8 Vidpovidalnist za nevidpovidnist tsyfrovogo kontentu abo tsyfrovoyi posluhy Umovi.................11
+§ 9 Tsiny Produktiv i vartist dostavky....................................................................................................13
+§ 10 Sposoby oplaty...............................................................................................................................14
+§ 11 Pravo na vidmovu vid dogovoru;...................................................................................................14
+§ 12 Povernennya sumy, splachenoyi Klientom.....................................................................................17
+§ 13 Rozsylka........................................................................................................................................17
+§ 14 Kontaktna informatsiya StartUp....................................................................................................18
+§ 15 Kinsevi polozhennya......................................................................................................................18
+Povidomlennya pro pozasudove vyrishennya sporiv..............................................................................20
+ZRAZOK FORMY VIDMOVY...................................................................................................................21
+ZRAZOK SKARGY.................................................................................................................................22
+1
+§ 1 Zahalni polozhennya
+1. ……………. .Internet-sayt RoxStreamAI, shcho funktsionuye za adresoyu https://www.roxstreamai.com..
+(dali: Servis), upravlyayetsya: Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"
+(Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"), z miscem reyestratsiyi u Varshavi na
+ul. Zurawia 6/12 lok. 766, 00-503 Varshava, adres dlya dostavky: Atlas Tower, Al. Jerozolimskie 123a,
+18 poverkh, 02-017 Varshava, vnesena do Natsionalnoho sudovoho reyestru, vedemoho Okruzhnym
+sudom dlya mista Varshavy u Varshavi, 12-y torhovyy viddil Natsionalnoho sudovoho reyestru (KRS)
+no. 0000442857, podatkovyy identyfikatsiynyy nomer (NIP): 521-364-12-11, reyestratsiinyy nomer
+(REGON): 146433467, nomer BDO: 000460502.
+2. Polozhennya tsykh Umov i Umov (T&C) zastosovuyutsya do diyalnosti, shcho vykonuyetsya na
+koryst Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" orhanizovanoyu chastynoyu
+pidpryyemstva RoxStreamAI, shcho diye v ramkakh filialu Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp", predstavlenoho Veronikoyu Shved. (e-mail: support@roxstreamai.com. tel.: +48503427781..).
+Osoba, vkazana v tsomu punkti, priznachena Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" dlya
+zvyazku shchodo vykonannya polozhen tsykh T&C.
+3. Tsi Umovy i Umovy, zokrema, vyznachayut:
+Page 1 of 23
+
+--- Page 2 ---
+a) pravila korystuvannya Servisom;
+b) umovy rozmishchennya zamovlen na Produkty, dostupni v Servisi;
+c) termin ta pravila obroblennya zamovlen;
+d) umovy ta formy oplaty
+e) pravo Klienta na vidmovu vid dogovoru;
+f) podannya ta rozglyad skarg
+g) osoblyvi prava Klienta, yakyy ye spozhyvachem.
+4. StartUp prodaye ta nadaye Posluhy cherez Servis, vykorystovuyuchy zasoby dystantsiynoyi
+komunikatsiyi. Dogovory, ukladeni Klientom zi StartUp cherez Servis, ye dystantsiynymy
+dogovoramy v rozuminni Zakonu vid 30 travnya 2014 roku pro prava spozhyvachiv.
+5. Klient maye pravo ta obovyazok korystuvatysya Servisom vidpovidno do yoho pryznachennya
+ ta zasad suspilnoyi vzayemodiyi i dobrykh zvychayiv.
+6. Perehlyad Servisu ne vymagaye reyestratsiyi, a samostiynyy zakaz Produktiv ne vymagaye
+reyestratsiyi akaunta.
+7. T&C dostupni bezkoshtovno v Servisi v formi, shcho dozvolyaye yikh otrymaty,
+vidtvoryty ta zberehty.
+8. Klient zobovyazanyy ozнайomитися z zmistom Umov. Korystuvannya Servisom mozhlyve
+lyshe pislya ozнайomlennya ta prynyattya Umov.
+9. Klient povynen buty osoboyu z povnoyu tsyvilnoyu diyezdatnistyu.
+10.Vyznachennya, vykorystani v tsykh T&C, mayut nastupne znachennya:
+a) Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" (Fundacja Rozwoju
+Przedsiebiorczosci "Twoj StartUp"), z miscem reyestratsiyi u Varshavi na
+ul. Zurawia 6/12 lok. 766, 00-503 Varshava, adres dlya dostavky: Atlas Tower, Aleje
+Jerozolimskie 123A, 18 poverkh, 02-017 Varshava, vnesena do Natsionalnoho sudovoho
+reyestru (KRS), vedemoho Okruzhnym sudom dlya mista Varshavy u Varshavi, 12-y
+Torhovyy viddil Natsionalnoho sudovoho reyestru (KRS) no. 0000442857, z prysvoyenym
+NIP: 521-364-12-11, REGON: 146-433-467, nomer BDO: 000460502;
+b) Klient - osoba, shcho korystuyetsya Servisom, kupuye Tovary abo Posluhy,
+ nadani StartUp u Servisi;
+c) Spozhyvach - fizychna osoba, shcho zdiysnyuye pravochyn z pidpryyemcem, yakyy
+ne povyazanyy bezposeredno z yiyi ekonomichnoyu chy profesiynoyu diyalnistyu;
+d) Posluhy - posluhy, nadani StartUp, zaproponovani Klientam cherez Servis, bez
+Tsyfrovykh posluh;
+e) Tsyfrova posluha - tsyfrova posluha u rozuminni statti 2(5a) Zakonu vid
+30 travnya 2014 roku pro prava spozhyvachiv, nadana StartUp, zaproponovana
+Klientam cherez Servis;
+f) Tovary - ruhomi rechei, shcho prodayutsya StartUp Klientam cherez Servis;
+Page 2 of 23
+
+--- Page 3 ---
+g) Produkty - Tovary, Posluhy abo Tsyfrovi posluhy;
+h) Servis - veb-sayt za adresoyu https://www.roxstreamai.com., cherez yakyy StartUp
+nadae elektronni posluhy Klientu, a takozh proponuye Produkty Klientam ta dozvolyaye
+ukladaty dogovory;
+i) Dogovir - ugoda, ukladena mizh StartUp ta Klientom cherez Servis;
+j) Akaunt - indyvidualnyy akaunt Klienta na Sayti, shcho dozvolyaye korystuvatysya
+Posluhamy i Tsyfrovymy posluhamy ta ukladaky Dogovory pislya vkhodu;
+k) robochi dni - vsi dni, krim subot, nedil ta derzhavnykh svyat;
+l) Umovy i Umovy - tsі Umovy i Umovy (T&C).
+11. U razi obgruntovanoyi pidozry, shcho Klient nadav nedostovirni dani, StartUp maye
+pravo vidmovytysya vid vykonannya Dogovoru, povidomyvshy pro tse Klienta.
+12. Yakshcho Klient nadav pomylkovi abo netochni dani, zокрема pomylkovu chy netochну
+adresu, StartUp ne neсе vidpovidalnosti za nedostavku або zatrymku dostavky Tovariv
+або ne naduvannya Posluhy чи Tsyfrovoyi posluhy v maksymalnomu obsyazi, dozvolenomu
+zakonom.
+13. Informatsiya v Servisi, zокрема reklamy, ogoloshennya ta tsinovi lysty, ne ye
+ofertoyu v rozuminni statti 66 Zakonu vid 23 kvitnya 1964 roku, Tsyvilnyy kodeks.
+Odnak informatsiya v Servisi ye zaprosom do ukladennya Dogovoru, opysanym u statti 71
+Tsyvilnoho kodeksu.
+14. StartUp naduvatyme Klientu, yakyy ye Spozhyvachem, yasko ta zrozumilo, bezпосередньо
+pered oформlennyam zamovlennya, informatsiyu, zокрема, pro:
+a) osnovni kharakterystyky posluhy z urakhuvannyam predmetu posluhy ta sposobu
+komunikatsiyi z Klientom,
+b) zahalnu tsinu abo vynahorodu za vykonannya, vklyuchayuchy podatky, a yakshcho
+cherez kharakter predmetu vykonannya ne mozhna rozumno rozrahuvaty yiyi sumu
+napered - sposob rozrakhunku, a takozh vartist transportu, dostavky, poshtovykh
+posluh ta inshykh vytrat, a yakshcho sumy tsykh vytrat ne mozhna vyznachyty -
+pro obovyazok yikh splaty;
+c) pravo na vidmovu vid dogovoru abo vidsutnist takogo prava,
+d) tryvalist dogovoru abo poryadok ta pidstavy yoho prypynennya - yakshcho dogovir
+ukladayetsya na nevyznachenyy strok abo avtomatychno podovzhuetsya;
+e) minimalnyy strok zobovyazan Klienta za dogovorom.
+15. Yakshcho StartUp peredbachaye mozhlyvist pryynyattya indyvidualnykh
+(personalizovanykh) zamovlen, taki zamovlennya mozhut buty zdiysneni Klientom
+cherez e-mail adresu StartUp, vkazanu v Servisi. U tsomu vypadku StartUp gотує
+propozytsiyu ta nadsylae yiyi na e-mail adresu Klienta.
+16. Termin vykonannya indyvidualnoho (personalizovanoho) zamovlennya stanovyty 30 dniv
+vid momentu ukladennya Dogovoru, yakshcho StartUp ne informuvala Klienta ne
+piznishe nizh pered oформlennyam zamovlennya pro inshyy termin.
+17. Servis obslugovuye Klientiv na terytoriyi Polshchi ta v usomu sviti, yakshcho propozytsiya
+StartUp u Servisi ne mistyt inshykh polozhen.
+§ 2 Tekhnichni vymogy dlya vykorystannya Saytu
+1. Dlya perehlyadu Servisu neobkhidno maty:
+a) kintsevyj prystriy z dostupom do Internetu,
+b) veb-brauzer, shcho dozvolyaye pryymaty cookie; napryklad, Internet
+Explorer, Microsoft Edge, Google Chrome, Mozilla Firefox, Opera abo
+Safari v aktualniy versiyi;
+c) pryynyati neobkhidni cookie.
+2. Dlya vykorystannya funktsiy Saytu, zокрема dlya reyestratsiyi na Sayti abo oформlennya
+zamovlen na Produkty, potriben aktyvnyy e-mail.
+3. Sayt vykorystovuye cookie dlya pravilnogo nadannya Posluh, a takozh dlya
+zabezpechennya bezpeky. Blokuvannya cookie ta vykorystannya storonnikh
+zastosunkiv dlya blokuvannya cookie mozhe prizvesty do nepravylnoho funktsionuvannya
+Saytu ta uнемozhlyvyty pravilne nadannya Posluh, za shcho StartUp ne nese
+vidpovidalnosti.
+§ 3 Prodazh Tovariv - umovy ta termin obroblennya
+zamovlen
+1. StartUp cherez Servis ukladae dogovory kupivli-prodazhu Tovariv iz Klientamy. Za
+dogovorom prodazhu StartUp zобovyazuetsya peredaty pravo vlasnosti na Tovar Klientu
+ ta dostavyty Tovar, a Klient zобovyazuetsya otrymaty Tovar ta splatyty tsinu.
+2. Klient, shchob rozmistyty zamovlennya, vkazuje Tovary, yaki yoho tsikavlyat,
+korystuyuchys komandoiu "Do kosyka" abo inshoю rivnoznachnoyu formulyrovkoyu na
+storintsi Tovaru, a potim vvodit dani, sposib dostavky ta oplaty.
+3. V kosyku Klient mozhe:
+a) dodavaty ta vydalyaty Tovary ta yikh kilkist;
+b) vkazaty adresu dostavky Tovariv ta nadaty dani dlya vystavlennya rahunku;
+c) vybraty sposib dostavky;
+d) vybraty sposib oplaty;
+e) dodaty znyzhkovyy kod (yakshcho zastosovno).
+4. Klient rozmishchuє zamovlennya, pidtverdzhuючи yoho ta obираючи knopku
+"zamovlennya z obovyazkom splaty" abo analoḥichne formuluvannya.
+5. Rozmishchennya ta pidtverdzhennya zamovlennya oznachaye obovyazok Klienta
+splatyty tsinu Tovariv ta vytraty na dostavku. Pislja pidtverdzhennya zamovlennya
+StartUp dogovir prodazhu mizh StartUp ta Klientom vvažayetsya ukladennym.
+6. Vidpravka kuplenyh Tovariv zdiysnyuyetsya protyagom 30 robochykh dniv z momentu
+pidtverdzhennya oplaty na bankivskomu rahunku StartUp, yakshcho Umovy ne
+mistyat inshykh polozhen, abo yakshcho StartUp ne povidomyla Klienta pered
+oformlennyam zamovlennya pro inshyy termin.
+7. Kupleni Tovary vidpravlyayutsya na adresu, vkazanu Klientom.
+8. Zamovlennya cherez Servis mozhna rozmishchuvaty 24 (slovamy: dvadtsyat chotyry)
+ hodyny na doбу, 7 (slovamy: sim) dniv na tydzhden. Zamovlennya, rozmishcheni u
+subotu, nedilyu abo derzhavni svyata, obroblyayutsya nastupnoho robochoho dnia.
+9. U razi, yakshcho mozhlyvo vykonaty lyshe chastynu zamovlennya, StartUp mozhe
+zaproponuvaty Klientu pered pidtverdzhennyam zamovlennya:
+a) skasuvannya zamovlennya v povnomu obsiazi (yakshcho Klient obyraye tsiyu
+optsiyu, StartUp zvільnyayetsya vid obovyazku vykonaty zamovlennya);
+b) skasuvannya zamovlennya v chastyni, де vykonannya v termin nemozhlyve
+(yakshcho Klient obyraye tsiyu optsiyu, zamovlennya vykonuetsya chastkovo, a
+StartUp zvільnyayetsya vid vykonannya u reshti);
+c) zaminna vygoda, uzgodzhena z Klientom. Zamovlennya na zaminnu vygodu, pislya
+zatverdzhennya Klientom, vважається ostatochnym;
+d) rozdil zamovlennya ta vstanovlennya novoyi daty zavershennya dlya тієї chastyny
+zamovlennya, vykonannya yakoyi nemozhlyve v pervynnyi termin (yakshcho Klient
+obyraye tsiyu optsiyu, Tovary, shcho vhodyat do zamovlennya, budut vidpravleni
+kilkoma okremymy vidpravlennyamy, a Klient ponese dodatkovi vytraty, povyazani z
+rozdilom zamovlennya na kilka vidpravlen).
+10.Yakshcho zamovleni Tovary ne dostupni abo zamovlennya ne mozhe buty vykonane z
+ inshykh prychyn, StartUp povidomyt Klienta, nadisluvshy informatsiyu na yoho e-mail
+adresu protyagom 7 (slovamy: semi) dniv z dnya ukladennya Dogovoru.
+11.Yakshcho oplata za Tovary, yaki ne mozhut buty dostavleni povністю abo chastkovo,
+ bula zdiysnena napеред, StartUp poverne splachenu sumu (abo riznytsyu) Klientu
+protyagom 14 (slovamy: chotyrnadtsyaty) dniv z dnya ukladennya Dogovoru na umovakh,
+vikladenykh v Umovakh.
+12.StartUp mozhe na Servisi rozmishchuvaty, shchodo pevnoho Tovaru, informatsiyu pro
+kilkist robochykh dniv, protyagom yakykh bude vidpravlena posylka z kuplenyми
+Tovaramy. Taka informatsiya oznachaye chas, shcho obchyslyuetsya z momentu
+pidtverdzhennya zamovlennya do vidpravky Tovariv. Termin vказuetsya z urakhuvannyam
+terminu vykonannya vsikh zamovlenykh Tovariv.
+§ 4 Vidpovidalnist za nevidpovidnist Tovariv Umovi
+1. Polozhennya tsyoho paragrafu, vidpovidno do polozhen Rozdilu 5a Zakonu vid
+30 travnya 2014 roku pro prava spozhyvachiv, zastosovuyutsya do vidpovidalnosti
+StartUp za nevidpovidnist Tovariv Umovi, ukladeniy z:
+a) Spozhyvachem, abo
+b) fizychnoyu osoboyu, shcho ukladae dogovir, bezposeredno povyazanyy z yiyi
+pidpryyemnytskoyu diyalnistyu, koli iz zmistu dogovoru vyplyvaye, shcho vin ne mae
+profesiynoho kharakteru dlya tselієї osoby, zокrema z predmetu yiyi diyalnosti,
+vkazanoho v Centralnomu reyestri ta informatsiyi pro gospodarsku diyalnist.
+2. StartUp zobovyazuyetsya postachaty Tovary bez fizychnyh ta yurydychnyh defektiv.
+3. Klient mae pravo podaty skargu, yakshcho Tovary ne vidpovidayut Umovi.
+4. Klient mozhe podaty skargu v pysmoviy formi abo v dokumentalniy formi na e-mail
+adresu StartUp.
+5. Skarga shchodo defektnykh Tovariv mozhe mistyty odne z nastupnykh vymahan:
+a) remont Tovariv;
+b) zamina Tovariv.
+6. Yakshcho Tovary ne vidpovidayut Umovi, Klient mozhe podaty zayavu pro znizhennya
+ tsiny abo vidmovu vid Umovy, yakshcho:
+a) StartUp vidmovylasya pryvesty Tovary u vidpovidnist z Umovoyu vidpovidno do
+statti 43d(2) Zakonu vid 30 travnya 2014 roku pro prava spozhyvachiv;
+b) StartUp ne pryvela Tovary u vidpovidnist z Umovoyu vidpovidno do statti 43d
+chastyn 4-6 Zakonu pro prava spozhyvachiv vid 30 travnya 2014 roku;
+c) nevidpovidnist Tovariv Umovi tryvaye, khоча StartUp namagalasya pryvesty Tovary
+u vidpovidnist;
+d) nevidpovidnist Tovariv Umovi ye nastільки suttyevoyu, shcho opravdovuye znizhennya
+ tsiny abo vidmovu vid Umovy bez poperednoho zastosuvannya zasobiv zakhystu,
+vstanovlenykh statteyu 43d Zakonu pro prava spozhyvachiv vid 30 travnya 2014 roku;
+e) iz zayavy StartUp abo z obstavyn vyplyvaye, shcho vona ne pryvede Tovary u
+vidpovidnist z Umovoyu v rozumnyy termin abo bez nadmirnykh neznручностей
+dlya spozhyvacha.
+7. Skarga shchodo defektiv Tovariv bude rozglyanuta protyagom 14 (slovamy:
+chotyrnadtsyaty) dniv z dnya otrymannya.
+8. Yakshcho StartUp ne vidpovila na skargu v ustanovlenyy termin, vvazhayetsya, shcho
+skarga pryynyata.
+9. StartUp povidomyt Klienta pro rezultat skargy na paperi abo na inshomu
+tryvalomu nosiyi.
+10.Yakshcho skarga shchodo Tovariv pryynyata, StartUp zalezhno vid vymohy Klienta
+vidremontuye Tovary, zaminit yikh, znizyt tsinu abo poverne povnu sumu, splachenu
+Klientom pislya vidmovy vid Umovy.
+11.StartUp poverne nalezhnu sumu Klientu tym samym sposobom oplaty, yakyym
+korystuvavsya Klient, yakshcho Klient ne dodaye yavnoho sohlasiyu na inshyy sposob
+povernennya, shcho ne vytvoruye dlya n'yoho vytrat. StartUp vydast Klientu
+vidpovidne koryguvannya dokumenta pro kupivlyu (koryguvalnu fakturu VAT abo
+koryguvalnu specifikatsiyu).
+12.Vidpovidalnist StartUp obmezhuetsya vartistyu Tovariv, okhvachenykh Umovoyu.
+Vidpovidalnist StartUp za shkody, sprychyneni nevykonannyam abo nenalezhnym
+vykonannyam Tsyfrovoyi posluhy abo nedostavkoyu tsyfrovogo kontentu, ne
+vklyuchaye vtrachenu vyhodu.
+13.V obsyazi, ne vrегulovanomu Umovamy, zastosovuyutsya vidpovidni normy
+zahalnoho prava, zокrema Zakon pro prava spozhyvachiv i Tsyvilnyy kodeks, dlya
+vyznachennya prav ta obovyazkiv Klienta ta StartUp u vypadku defektu tovaru /
+nevy konannya / nenalezhnoho vykonannya Umovy StartUp.
+14.Vidpovidalnist StartUp za defekty Tovariv, Posluh ta Tsyfrovykh posluh vyklyuchena
+u vypadku dogovoriv, ukladennykh na koryst Klienta, yaki ne ye:
+a) Spozhyvachem;
+b) fizychnoyu osoboyu, shcho ukladae dogovir zi StartUp, bezposeredno povyazanyy
+z yiyi pidpryyemnytskoyu diyalnistyu, koli iz zmistu dogovoru vyplyvaye, shcho vin
+ne mae profesiynoho kharakteru dlya tsiyeyi osoby, zокrema z predmetu yiyi
+pidpryyemnytskoyi diyalnosti, vказanoyi v Centralnomu reyestri ta informatsiyi pro
+pidpryyemnytsku diyalnist.
+15.Tovary, zaproponovani StartUp, mozhut buty pidtrymani harantiyeyu vyrobnyka.
+Harantiya zdiysnyuyetsya vidpovidno do umov harantiynoho zayavu. StartUp ne
+nadaye vласnoyi harantiyi na zaproponovani Tovary.
+Page 7 of 23
+
+--- Page 8 ---
+§ 5 Nadannya Posluh
+1. StartUp nadaye Klientam Posluhy, typ, obsyah ta detalnyy opys yakykh vказani na
+Servisi. Diyi zокrema polyagayut u nadanni cyfrovykh posluh u modely pidpysky, shcho
+dozvolyaye konfiguratsiyu ta upravlinnya 3D avataramy/personazhamy dlya strimingu,
+integratsiyu z instrumentamy text-to-speech (TTS) ta funktsionaly dlya pidtrymky
+strimingu.
+2. Posluhy nadyayutsya u poryadku, vказanomu na Servisi, zокrema na storintsi
+vidpovidnoyi Posluhy.
+3. StartUp rozmishchuye v Servisi informatsiyu pro te, yak Klient mozhe rozmistyty
+zamovlennya na Posluhy. Dlya rozmishchennya zamovlennya Klient vказuye Posluhy,
+ yaki yoho tsikavlyat, a potim vvodit dani, neobkhidni dlya ukladennya Umovy ta
+vykonannya Posluhy, vklyuchayuchy sposob vykonannya Posluhy (za potreby) ta
+sposib oplaty.
+4. Yakshcho dlya rozmishchennya zamovlennya v Servisi vykorystovuetsya knopka abo
+podibna funktsiya, vona povynna buty pozначena legko chytanym sposobom slovamy
+"zamovlennya z obovyazkom splaty" abo inshym odnoznachnym formulyuvannyam.
+5. Rozmishchennya ta pidtverdzhennya zamovlennya oznachaye obovyazok Klienta
+splatyty tsinu za Posluhy ta bud-yaki dodatkovi vytraty. Pislya pidtverdzhennya
+zamovlennya StartUp ukladaetsya dogovir pro nadannya posluh mizh StartUp ta
+Klientom.
+6. Klient bude poinformovanyy pro daty pochatku ta zakinchennya Posluh pered
+ukladennyam Umovy, zокrema cherez Servis.
+7. Yakshcho za vyraznym zapytom Klienta nadannya Posluhy maye rozpochatysya do
+zakінчennya terminu na vidmovu vid dogovoru, StartUp vymahae vid Klienta
+zayavu:
+a) shcho mistyt takie vyrazne prohannya na trvalomu nosiyi;
+b) pro te, shcho Klient usvidomyv vtratu prava na vidmovu vid dogovoru pislja
+povnoho vykonannya Posluhy StartUp.
+8. Yakshcho Klient ne dodaye zгоди na pochatok Posluhy do zakінчennya terminu
+vidmovy vid Umovy, Posluha bude nadana pislja zakінчennya terminu vidmovy, yakshcho
+StartUp ne propонує uklasti Umovu bez takoyi zгоди.
+9. Klient mozhe rozirvaty Umovu pro nadannya Posluh v pysmoviy abo dokumentalniy
+formi z diyaľnistyu naprykintsi kalendarnoho mіsyatsya. Termin povidomlennya ne
+vymahayeťsya.
+10.StartUp mozhe rozirvaty Umovu pro nadannya Posluh v pysmoviy abo dokumentalniy
+formi z odnomisyachnym terminom povidomlennya z diyaľnistyu naprykintsi
+kalendarnoho mіsyatsya, z vazhlyvykh prychyn. Storony vvazhayut vazhlyvymy
+prychynamy:
+a) pryпинennya abo rishennya StartUp prypynyty diyalnist orhanizovanoyi chastyny
+pidpryyemstva StartUp, vказanoyi v § 1;
+b) suttyeva zmina abo rishennya StartUp suttyevo zminyty predmet diyalnosti
+orhanizovanoyi chastyny pidpryyemstva StartUp, vказanoyi v § 1;
+c) suttyeva reorhanizatsiya v StartUp;
+d) vynyknennya zboyiv abo pereshkod (osoblyvo tekhnichnykh), ne zalezhnykh vid
+StartUp, shcho pereshkodzhayut abo suttyevo uскладнюють nadannya Posluh Klientu;
+e) prostrochennya Klientom splaty tsiny StartUp;
+f) suttyeve porushennya Umovy abo Umov Klientom.
+§ 6 Vidpovidalnist za nevidpovidnist Posluh Umovi
+1. Skarga na Posluhy, nadani nevidpovidno do Umovy, povynna mistyty vymohu, zalezhno
+vid kharakteru Posluhy.
+2. Skarga shchodo nevidpovidnosti Posluhy Umovi bude rozglyanuta protyagom 14
+(slovamy: chotyrnadtsyaty) dniv z momentu otrymannya.
+3. Yakshcho StartUp ne vidpovidila na skargu v ustanovlenyy termin, vvazhayetsya, shcho
+skarga pryynyata.
+4. StartUp informuye Klienta pro rezultat skargy na paperyi або na inshomu
+tryvalomu nosiyi.
+5. Yakshcho skarga shchodo Posluhy pryynyata, StartUp vykonuye Posluhu pravilno,
+povertae povністю або chastkovo otrymanu tsinu Klientu, abo zdiysnyuye inshi
+vypalaty Klientu zalezhno vid typu Posluhy ta obstavyn spravy.
+6. Vidpovidalnist StartUp obmezhuetsya vartistyu ne nadanoyi abo nenalezhno nadanoyi
+Posluhy. Vidpovidalnist StartUp za shkody, sprychyneni ne nadannyam abo nenalezhno
+nadannyam Posluhy, ne vklyuchaye vtrachenu vyhodu.
+7. Vidpovidalnist StartUp za defekty Posluh, a takozh za ne vykonannya / nenalezhne
+vykonannya Umovy, ukladenoyi z Klientom, vyklyuchena dlya Umov, ukladennykh na
+koryst Klienta, yakyy ne ye:
+a) Spozhyvachem;
+b) fizychnoyu osoboyu, shcho ukladae dogovir zi StartUp, bezposeredno povyazanyy
+z yiyi pidpryyemnytskoyu diyalnistyu, koly z zmistu dogovoru vyplyvaye, shcho vin
+ne mae profesiynoho kharakteru dlya tsiyeyi osoby, zокrema z predmetu yiyi
+pidpryyemnytskoyi diyalnosti, vказanoyi v Centralnomu reyestri ta informatsiyi pro
+pidpryyemnytsku diyalnist.
+Page 9 of 23
+
+--- Page 10 ---
+§ 7 Dogovory pro nadannya Tsyfrovogo kontentu abo Tsyfrovoyi posluhy
+1. Polozhennya tsykh paragrafiv i nastupnoho paragrafu Umov, vidpovidno do polozhen
+Rozdilu 5b Zakonu pro prava spozhyvachiv vid 30 travnya 2014 roku, zastosovuyutsya
+do Dogovoriv pro nadannya Tsyfrovogo kontentu abo Tsyfrovoyi posluhy, ukladenykh z:
+a) Spozhyvachem, abo
+b) fizychnoyu osoboyu, shcho ukladae dogovir, bezposeredno povyazanyy z yiyi
+pidpryyemnytskoyu diyalnistyu, koly iz zmistu dogovoru vyplyvaye, shcho vin ne mae
+profesiynoho kharakteru dlya tsiyeyi osoby, zокrema z predmetu yiyi
+pidpryyemnytskoyi diyalnosti, vказanoyi v Centralnomu reyestri ta informatsiyi pro
+pidpryyemnytsku diyalnist.
+2. StartUp rozmishchuye v Servisi informatsiyu pro te, yak Klient mozhe rozmistyty
+zamovlennya na Tsyfrovi posluhy. Dlya rozmishchennya zamovlennya Klient vказує
+Tsyfrovi posluhy, yaki yoho tsikavlyat, a potim vvodit dani, neobkhidni dlya
+ukladennya Umovy ta vykonannya Tsyfrovoyi posluhy, vklyuchayuchy sposob vykonannya
+Posluhy (za potreby) ta sposob oplaty.
+3. Yakshcho dlya rozmishchennya zamovlennya v Servisi vykorystovuetsya knopka abo
+podibna funktsiya, vona povynna buty pozначena legko chytanym sposobom slovamy
+"zamovlennya z obovyazkom splaty" abo inshym odnoznachnym formulyuvannyam.
+4. Rozmishchennya ta pidtverdzhennya zamovlennya oznachaye obovyazok Klienta
+splatyty tsinu za Tsyfrovi posluhy ta bud-yaki dodatkovi vytraty. Pislya pidtverdzhennya
+zamovlennya StartUp ukladaetsya dogovir pro nadannya tsyfrovykh posluh mizh StartUp
+ta Klientom.
+5. StartUp nadaye tsyfrovyy kontent abo tsyfrovу posluhu Klientu nehayno pislya
+ukladennya Umovy, yakshcho storony ne domovylysya inakshe, zокrema yakshcho na
+Servisi na storintsi vidpovidnoyi Tsyfrovoyi posluhy vказана інша data. Polozhennya
+ne zastosovuyetsya, yakshcho dogovir peredбачає dostavku tsyfrovoho kontentu na
+materialnomu nosiyi. Yakshcho Klient ne zгоден na vykonannya do zakінчennya terminu
+vidmovy vid Umovy, posluha bude nadana pislja zakінчennya terminu.
+6. StartUp povidomlyaye, shcho nadannya zгоди, pro yakuyu йдеться v poperednomu
+punkte, pryvede do vtraty prava Klienta na vidmovu vid dogovoru.
+7. StartUp mozhe, z vazhlyvykh prychyn, vnesty zminy v tsyfrovyy kontent abo
+tsyfrovу posluhu, yakі ne ye neobkhidnymi dlya dotrymannya Umovy. Do vazhlyvykh
+prychyn vidnosyatsya, zокrema, vazhlyvi interesy Klienta abo StartUp. StartUp
+povidomyt Klienta u zrozumiliy formi pro vnesenu zminu. Yakshcho zmina materialno
+ ta negativno vplyvae na dostup abo vykorystannya tsyfrovoho kontentu або posluhy
+Klientom, StartUp zobovyazana zavчасно povidomyty Klienta na trvalomu nosiyi pro
+kharakterystyky ta datu zminy, а takozh pro pravo rozirvaty dogovir bez povidomlennya.
+Klient mozhe rozirvaty dogovir bez povidomlennya vпродовж 30 dniv vid dня zminy.
+8. Klient mozhe rozirvaty Umovu pro nadannya tsyfrovoho kontentu abo Tsyfrovykh
+posluh v pysmoviy abo dokumentalniy formi z diyaľnistyu naprykintsi kalendarnoho
+mіsyatsya. Termin povidomlennya ne vymahayeťsya.
+9. StartUp mozhe rozirvaty Umovu pro nadannya Tsyfrovykh posluh v pysmoviy abo
+ dokumentalniy formi z odnomisyachnym terminom povidomlennya z diyaľnistyu
+naprykintsi kalendarnoho mіsyatsya, z vazhlyvykh prychyn. Storony vvazhayut
+vazhlyvymy prychynamy:
+a) pryпинennya abo rishennya StartUp prypynyty diyalnist orhanizovanoyi chastyny
+pidpryyemstva StartUp, vказanoyi v § 1;
+b) suttyeva zmina abo rishennya StartUp suttyevo zminyty predmet diyalnosti
+orhanizovanoyi chastyny pidpryyemstva StartUp, vказanoyi v § 1;
+c) suttyeva reorhanizatsiya v StartUp;
+d) vynyknennya zboyiv abo znachnykh pereshkod (osoblyvo tekhnichnykh) u roboti
+Servisu, ne zalezhnykh vid StartUp;
+e) prostrochennya Klientom splaty tsiny StartUp;
+f) suttyeve porushennya Umovy abo Umov Klientom.
+10.U obsyazi, ne vrohulyovanomu tsym paragrafom, zastosovuyutsya polozhennya
+Rozdilu 5b Zakonu pro prava spozhyvachiv.
+§ 8 Vidpovidalnist za nevidpovidnist tsyfrovogo kontentu abo
+ tsyfrovoyi posluhy Umovi
+1. Yakshcho StartUp ne nadala tsyfrovyy kontent abo tsyfrovу posluhu, Klient maye
+vymagaty yikh nadannya. Yakshcho StartUp ne nadaye tsyfrovyy kontent abo tsyfrovу
+posluhu nehayno abo v dodatkovi termin, pryamym chynom uzgodzhenyy storonamy,
+Klient mozhe skasuvaty dogovir. Polozhennya ne zastosovuyetsya, yakshcho dogovir
+peredбачає dostavku tsyfrovoho kontentu na materialnomu nosiyi.
+2. StartUp nesye vidpovidalnist za nevidpovidnist Umovi tsyfrovoho kontentu abo
+tsyfrovoyi posluhy:
+a) nadanoho odnorazovo abo chastynamy, yaka isnuvала na moment nadannya ta
+vyyavylasya protягom dvoh rokiv vid tsyoho momentu;
+b) nadanoho na postійniy osnovi, yaka vynyкla abo vyyavylasya na moment, koly mala
+buty nadana zgodno z Umovoyu.
+3. Yakshcho tsyfrovyy kontent abo tsyfrovа posluga ne vidpovidayut Umovi, Klient
+mozhe vymagaty privedennya u vidpovidnist z Umovoyu.
+4. StartUp mozhe vidmovytysya privedty tsyfrovyy kontent abo tsyfrovу posluhu u
+vidpovidnist z Umovoyu, yakshcho tse nemozhlyvo abo vymahalo b nadmirnykh vytrat
+ dlya StartUp.
+Page 11 of 23
+
+--- Page 12 ---
+5. Yakshcho tsyfrovyy kontent abo tsyfrovа posluga ne vidpovidayut Umovi, Klient mozhe
+podaty zayavu pro znizhennya tsiny abo vidmovu vid Umovy, yakshcho:
+a) privedennya tsyfrovoho kontentu abo tsyfrovoyi posluhy u vidpovidnist z Umovoyu
+nemozhlyve abo vymahae nadmirnykh vytrat vidpovidno do statti 43m(2) i (3) Zakonu
+pro prava spozhyvachiv;
+b) StartUp ne pryvela tsyfrovyy kontent abo tsyfrovу posluhu u vidpovidnist z Umovoyu
+vidpovidno do statti 43m(4) Zakonu pro prava spozhyvachiv;
+c) nevidpovidnist tsyfrovoho kontentu abo tsyfrovoyi posluhy Umovi tryvaye, navit
+yakshcho StartUp namagalasya privedty yikh u vidpovidnist;
+d) nevidpovidnist tsyfrovoyi ugody abo tsyfrovoyi posluhy Umovi ye nastilky
+suttyevoyu, shcho opravdovuye znizhennya tsiny abo vidmovu vid Umovy bez
+poperednoho zastosuvannya zasobiv zakhystu, peredbachenykh statteyu 43m Zakonu
+pro prava spozhyvachiv;
+e) iz zayavy StartUp abo z obstavyn vyplyvaye, shcho vona ne pryvede tsyfrovі posluhy
+ abo tsyfrovyy kontent u vidpovidnist z Umovoyu v rozumnyy termin abo bez nadmirnykh
+nezruchnostey dlya spozhyvacha.
+6. Znyzhena tsina povynna buty v takiy proporciyi do tsiny Umovy, v yakiy vartist
+nevidpovidnoho tsyfrovoho kontentu abo posluhy spoluchayetsya z vartistyu
+vidpovidnoho tsyfrovoho kontentu abo posluhy. Yakshcho Umova peredbachaє, shcho
+tsyfrovyy kontent abo posluga nadyayutsya chastynamy abo na postіyniiy osnovi, znizhennya
+tsiny povynno vrakhuvaty period, protягом yakoho tsyfrovyy kontent abo posluga ne
+vidpovidaly Umovi.
+7. Klient ne mozhe vidmovytysya vid Umovy, yakshcho tsyfrovyy kontent abo tsyfrovа
+posluga nadyayutsya v obмін na splatu tsiny, a nevidpovidnist tsyfrovoho kontentu
+ abo posluhy Umovi ye neістотною.
+8. Yakshcho Klient vidmovyvsya vid Umovy, StartUp mozhe vymagaty povernennya
+materialnoho nosiya, na yakomu bula nadana tsyfrovyy kontent, protyagom 14 dniv z
+ dnya otrymannya zayavy Klienta pro vidmovu. Klient povynen povernuty nosiy
+negayno.
+9. Yakshcho Klient vidmovyvsya vid Umovy, StartUp poverтає tsinu lyshe za chastynu,
+shcho vidpovidaye tsyfrovomu kontentu abo posluhy, ne vidpovidnym Umovi, a takozh
+za tsyfrovyy kontent abo tsyfrovу posluhu, obovyazok nadannya yakykh znyk vnaslidok
+vidmovy.
+10.StartUp poverne nalezhnu sumu Klientu tym samym sposobom oplaty, yakym
+korystuvavsya Klient, yakshcho Klient ne dodaye yavnoho sohlasiyu na inshiй sposob
+povernennya, shcho ne vytvoruye dlya n'yoho vytrat.
+11.Vidpovidalnist StartUp obmezhuetsya vartistyu tsyfrovoho kontentu abo Tsyfrovoyi
+posluhy, yaka mala buty nadana. Vidpovidalnist StartUp za shkody, sprychyneni
+nevykonannyam abo nenalezhnym vykonannyam Tsyfrovoyi posluhy abo nedostavkoyu
+tsyfrovoho kontentu, ne vklyuchaye vtrachenu vyhodu.
+12.Skarga shchodo nevidpovidnosti tsyfrovoyi posluhy Umovi bude rozglyanuta protyagom
+14 (slovamy: chotyrnadtsyaty) dniv z dnya otrymannya.
+13.Yakshcho StartUp ne vidpovidila na skargu v ustanovlenyy termin, vvazhayetsya, shcho
+skarga pryynyata.
+14.StartUp povidomyt Klienta pro rezultat skargy na paperyi abo na inshomu
+tryvalomu nosiyi.
+15.Vidpovidalnist StartUp za nevidpovidnist tsyfrovoho kontentu abo Tsyfrovoyi posluhy,
+a takozh za ne vykonannya / nenalezhnе vykonannya Umovy, ukladenoyi z Klientom,
+vyklyuchena dlya Umov z Klientom, yakyy ne ye:
+a) Spozhyvachem;
+b) fizychnoyu osoboyu, shcho ukladae dogovir zi StartUp, bezposeredno povyazanyy
+z yiyi pidpryyemnytskoyu diyalnistyu, koly z zmistu dogovoru vyplyvaye, shcho vin
+ne mae profesiynoho kharakteru dlya tsiyeyi osoby, zокrema z predmetu yiyi
+pidpryyemnytskoyi diyalnosti, vказanoyi v Centralnomu reyestri ta informatsiyi pro
+pidpryyemnytsku diyalnist.
+§ 9 Tsiny Produktiv i vartist dostavky
+1. Tsiny, vkazani poruch z Produktamy v Servisi, ye bruto tsinamy, тобто vklyuchayut
+PDRV (VAT). Tsiny vkazani u polskiy valiuti (zloty - PLN).
+2. Tsina, vkazana poruch z Produktom, ne vklyuchaye vartist dostavky.
+3. Vartist dostavky neсе Klient, yakshcho u propozitsiyi StartUp u Servisi ne vkazano
+inakshe.
+4. Zahalna suma, yaku Klient povynen splatyty u zv'язку z kupivleyu vybranoho
+Produktu, skladaetsya z tsiny Produktu ta vartosti dostavky.
+5. Yakshcho StartUp ne vказala inakshe v Servisi na storintsi vidpovidnoho Produktu
+abo u procesi oформlennya zamovlennya, sposoby dostavky Produktiv ye nastupni:
+a) dlya Tovariv - vidpravka na adresu, vказanu Klientom, abo samovyviz z ofisu StartUp;
+b) dlya Tsyfrovykh posluh - na e-mail adresu, vказanu Klientom;
+c) dlya inshykh Posluh - sposobom, vказanym u Servisi na storintsi danej Posluhy
+abo u procesi oформlennya zamovlennya, zокrema vidpovidno do typu Posluhy.
+Page 13 of 23
+
+--- Page 14 ---
+6. U Servisi StartUp StartUp chітко і zrozumilo informuye pro obmezhennya dostavky
+Produktu ne piznishe pochatku procesu zamovlennya Klienta.
+§ 10 Sposoby oplaty
+1. U Servisi StartUp StartUp chітко і zrozumilo informuye pro prynyati sposoby oplaty
+ne piznishe pochatku procesu zamovlennya Klienta.
+2. Yakshcho StartUp ne vказala inakshe na storintsi danogo Produktu abo u procesi
+zamovlennya, sposoby oplaty ye nastupni:
+a) perevedennya cherez odnu z elektronnykh platizhnykh system, prynyatykh StartUp,
+shcho dozvolyayut shvydko oplachuvaty zamovlennya;
+b) zvychaynyy bankivskyy pereказ na rahunok, vказanyy StartUp.
+3. Dlya vykorystannya elektronnykh platizhnykh system Klient povynen prynyaty
+umovy vykorystannya vidpovidnoyi platizhnoї systemy. Spysok dostupnykh
+platizhnykh system vidображається pid chas zavершennya zamovlennya.
+4. U razi vidmovy vid dogovoru poverнення zdiysnyuyetsya tym samym sposobom,
+yakym buľo zdiysneno oplatu Klientом, yakshcho Klient ne dodaye yavnoho sohlasiyu
+na inshyy sposob povернення, shcho ne vytvoruye dlya n'yoho vytrat.
+5. StartUp ne pryiymaye gotivkovi platezhi.
+§ 11 Pravo na vidmovu vid dogovoru;
+1. Polozhennya tsyoho paragrafu zastosovuyutsya do Klienta, yakyy ye Spozhyvachem,
+abo do fizychnoyi osoby, shcho ukladae dogovir zi StartUp, bezposeredno
+povyazanyy z yiyi pidpryyemnytskoyu diyalnistyu, koly iz zmistu dogovoru vyplyvaye,
+shcho vin ne mae profesiynoho kharakteru dlya tsiyeyi osoby, zокrema z predmetu
+ yiyi pidpryyemnytskoyi diyalnosti, vказanoyi v Centralnomu reyestri ta informatsiyi
+pro pidpryyemnytsku diyalnist.
+2. Klient, ukazanyy u пункті 1, maye pravo vidмовytysya vid Umovy bez vkazannya
+prychyny i bez ponoshenya vytrat, yakshcho zahalne pravo abo tsena T&C ne peredbachaye
+inakshe. Dogovir, vid yakoho Klient vidмовився, vvazhayetsya ne ukladennym.
+3. Dlya vidmovy vid dogovoru dostatno podaty zayavu pro vidmovu ta nadsylaty yiyi
+StartUp protyagom 14 (slovamy: chotyrnadtsyaty) dniv.
+4. Termin dlya vidmovy vid dogovoru pochynayetsya:
+Page 14 of 23
+
+--- Page 15 ---
+a) dlya Dogovoru, yakyy peredbachaє dostavku Tovariv StartUp ta peredachu
+vlasnosti - z momentu otrymannya Tovariv Klientom abo tret'oyu osoboyu, vказanoyu
+Klientom, yaka ne ye perevoznykom, a v razi Dogovoru, yakyy:
+- vklyuchaye kilka Tovariv, shcho postavlyayutsya okremo, partiyamy abo chastynamy -
+  z momentu otrymannya ostannoho Tovaru, yogo partiyi abo chastyny,
+- peredbachaє reguljarnu dostavku Tovariv protyagom vyznachenoho periodu - z
+  momentu otrymannya pershoho Tovaru;
+b) dlya inshykh Dogovoriv - z daty ukladennya Dogovoru.
+5. Dlya dotrymannya terminu vidmovy vid dogovoru dostatno:
+a) nadislaty pysmovu zayavu na adresu StartUp, vказanu v T&C abo na Servisi, abo
+b) nadislaty zayavu u dokumentarniy formi na e-mail adresu StartUp, vказanu v T&C
+abo na Servisi.
+6. StartUp negayno nadislye Klientu na trvalomu nosiyi pidtверджennya otrymannya
+zayavy pro vidmovu, podanoyi elektronno.
+7. Yakshcho Klient vidmovyvsya vid dogovoru, vin zобovyazanyy negайno poverнути
+kupleny Produkt ne пізніше 14 (slovamy: chotyrnadtsyaty) dniv z daty vidmovy, yakshcho
+StartUp ne propozytsiyuysya otrymaty Tovary sama. Dlya dotrymannya terminu dostatno
+vidpravити povернення do йoго zavershennya. Vartist povернення neсе Klient.
+8. Yakshcho Klient vidmovyvsya vid dogovoru, StartUp poverтає Klientu sumu, splachenu
+za Produkt, ta vartist dostavky do Klienta, ne пізніше 14 (slovamy: chotyrnadtsyaty)
+ dniv z dnya otrymannya zayavy pro vidmovu. Yakshcho Klient obrav sposib dostavky
+inshyy, nizh naidешевshyy sposib, zaproponovanyy na Servisi dlya zamovlennya,
+StartUp ne zобovyazana poverтaty dodatkovi vytraty.
+9. StartUp poverтає platyzh tym samym sposobom, yakym Klient zdiysnyv oplatu,
+yakshcho Klient ne uzgodzhuyetsya na inшyy sposob povернення, shcho ne vytvoruye
+vytrat dlya Klienta.
+10.StartUp mozhe utrymaty povернення platezhiv, otrymanykh vid Klienta, do momentu
+otrymannya Tovariv nazad abo do nadannya Klientom dokaziv yikh povернення,
+zalezhnо vid toho, shcho nastane ranishe.
+11.Yakshcho Klient nadiyslav zayavu pro vidmovu do otrymannya pidtverджennya
+zamovlennya vid StartUp, zamovlennya skasовується.
+12.Klient nese vidpovidalnist za zmenshennya vartosti Tovariv, sprychynene yikh
+vykorystannyam ponad neobkhidne dlya vyznachennya kharakteru, vlastyvostey ta
+funktsionalnosti Tovariv.
+Page 15 of 23
+
+--- Page 16 ---
+13.Pravo na vidmovu ne zastosovuyetsya do Klienta u vypadkakh, peredбачenykh Zakonom
+vid 30 travnya 2014 roku pro prava spozhyvachiv, zокrema shchodo dogovoriv:
+a) pro nadannya posluh, za yaki spozhyvach zobovyazanyy splatyty tsinu, yakshcho
+pidpryyemets povністю vykonav posluhu za yavyam i popередньою zгодою spozhyvacha,
+yakyy buv proinformovanyy pered pochatkom vykonannya, shcho pislya vykonannya
+posluhy vin vтрачає pravo na vidmovu, i prynyav tse;
+b) u yakykh tsina abo vyznachena oplata zalezhyt vid koleban na finansovomu rynku,
+ nad yakym pidpryyemets ne maye kontrolyu, i yaki mozhut nastaty do закінчення
+terminu vidmovy;
+c) u yakykh predmetom vykonannya ye ne po-poperednyo vyroblenyy tovar, vyhotovlenyy
+za specifikatsiyeyu spozhyvacha abo pryznačenyy dlya zadovolennya йoго
+indyvidualnykh potreb;
+d) u yakykh predmetom vykonannya ye tovary, shcho shvydko psuyutsya abo mayut
+korotkyy termin придатності;
+e) u yakykh predmetom vykonannya ye tovary v zapecatanii upakovci, yaki ne mozhe
+buty povernені pislya vidkryttya upakovky z prychyn zahystu zdorovya abo higiyeny,
+yakshcho upakovka bula vidkryta pislya dostavky;
+f) u yakykh predmetom vykonannya ye tovary, yaki pislya dostavky cherez sviy kharakter
+staiut nerazdilno povyazanymy z inshymy rechamy;
+g) u yakykh predmetom vykonannya ye alkoholni napoyi, tsina yakykh bula uzгодzhena
+pry ukladенні dogovoru kupivli-prodazhu, dostavka yakykh mozhliva lyshe pislya 30
+ dniv, ta yikh vartist zalezhyt vid koleban rynku, nad yakym pidpryyemets ne maye
+kontrolyu;
+h) u yakykh spozhyvach yavno poprosyv pidpryyemtsya pryikhaty do n'yoho dlya
+nagálnogo remontu abo obslugovuvannya; yakshcho pidpryyemets naduє dodatkovi
+posluhy, inshi nizh ti, yaki prosyv spozhyvach, abo postachає tovary, inshi nizh
+zapasni chastyny, neobkhidni dlya remontu abo obslugovuvannya, spozhyvach maye
+pravo na vidmovu shchodo цих dodatkovo nadanykh posluh abo tovariv;
+i) u yakykh predmetom vykonannya ye zvukovi abo vizualni zapysy abo komp'uterni
+programy, postavleni v zapecataniy upakovci, yakshcho upakovka bula vidkryta
+pislya dostavky;
+j) na postavku shchodennykh hazet, periodychnykh vydan abo zhurnaliv, krim
+pidpysnykh dogovoriv;
+k) ukladenykh na publichnomu auktsioni;
+l) pro nadannya posluh rozmishchennya, ne povyazanogo z prozhyvannyam, perevezennya
+ tovariv, orenda avtomobiliv, kharchovi posluhy, posluhy, povyazani z dozvillyam,
+rozvagamy, sportovymy abo kulturnymy zahodamy, yakshcho dogovir vyznachaє den
+abo period nadannya posluhy;
+m) pro nadannya tsyfrovogo kontentu, shcho ne postachayetsya na materialnomu nosiyi
+i za yakyy spozhyvach zobovyazanyy splatyty tsinu, yakshcho pidpryyemets rozpochav
+vykonannya za yavyam i popередньою zгодою spozhyvacha, yakyy buv proinformovanyy
+pered pochatkom vykonannya, shcho pislya vykonannya posлуги vin vтрачає pravo na
+vidmovu, i prynyav tse, a pidpryyemets nadav spozhyvachu pidtverджennya vidpovidno
+ do statti 15 (1) i (2) abo statti 21 (1) Zakonu pro prava spozhyvachiv.
+
+n) pro nadannya posluh, za yaki spozhyvach zobovyazanyy splatyty tsinu, yakshcho
+spozhyvach yavno poprosyv pidpryyemtsya pryikhaty do n'yoho dlya remontu, i posлуга
+bula povністю vykonana za yavyam i popередньою zгодою spozhyvacha.
+14.StartUp takozh vykonaye koryguvannya dokaziv pro kupivlyu (koryguvalna faktura
+VAT abo koryguvalna specifikatsiya), yaki buły ranshe peredani Klientu.
+§ 12 Povernennya sumy, splachenoyi Klientom
+StartUp poverne hroshi protyagom 14 (slovamy: chotyrnadtsyaty) kalendarnykh dniv
+tym samym sposobom oplaty, yakym korystuvavsya Klient pid chas oplaty, yakshcho
+Klient ne dodaye yavnoho sohlasiyu na inshyy sposob povернення, shcho ne vytvoruye
+vytrat dlya n'yoho, u vypadku:
+a) vidmovy vid dogovoru povністю abo chastkovo (u tsomu vypadku povertaєtsya
+vidpovidna chastyna tsiny) u razi peredoplachenogo zamovlennya;
+b) vyznannya skargy ta nemozhlyvosti vidremontuvaty poshkodzhennyy Tovar abo
+zaminyty yoho na novyy Tovar, abo nadaty Posluhu / Tsyfrovу posluhu vidpovidno do
+Umovy;
+c) vyznannya prava na znizhennya tsiny Produktu.
+§ 13 Rozsylka
+1. Klient mozhe nadaty zgodu na otrymannya komertsiynoyi informatsiyi, vklyuchayuchy
+komertsiynu informatsiyu e-mailom, obyrayuchy vidpovidnu opciyu v reyestratsiyniy
+formi abo cherez Servis. U razi nadannya zгоди Klient otrymaye rozsylku StartUp
+(Rozsylka) na vказanu e-mail adresu.
+2. Klient mozhe v bud-yakyy chas vidmovytysya vid Rozsylky, povidomyvshy StartUp.
+§ 14 Kontaktna informatsiya StartUp
+Klient mozhe zvyazatysya z StartUp:
+1) telephonom: +48503427781
+Page 17 of 23
+
+--- Page 18 ---
+2) e-mailom: support@roxstreamai.com
+§ 15 Kinsevi polozhennya
+1. StartUp zasterihaye, shcho vykorystannya elektronnykh posluh povyazane z ryzykamy,
+shcho vyplyvayut z publichnoho kharakteru Internetu, zокrema mozhlivist otrymannya
+abo zminy peredavanykh danykh Klienta neupovnovazhenymy tretimy osobamy. Dlya
+minimizatsiyi ryzyku Klient povynen vykorystovuvaty vidpovidni zakhysni zakhody,
+zokrema aktualni antyvirusni programy, aktualni versiyi internet-brauzeriv ta
+operatsiynykh system i ne vykorystovuvaty vidkryti tochky dostupu.
+2. U maksymalnomu obsyazi, dozvolenomu zakonom, StartUp ne nesye vidpovidalnosti za
+blokuvannya administratoryamy pochtovykh serveriv povidomlen na e-mail adresu
+Klienta, abo za vydalennya i blokuvannya e-mail povidomlen softwarem, vstanovlenym
+na kompyuteri Klienta.
+3. StartUp ne nesye vidpovidalnosti za obladnannya ta infrastrukturu, vykorystovuvani
+Klientom, vklyuchayuchy zboi publichnykh merezh peredachi danykh, yaki sprychynyayut,
+napryklad, vidsutnist abo zboi dostupu do Servisu.
+4. StartUp zasterihaye, shcho vidobrazhennya vizualizatsiyi Produktiv v IKT-systemi
+Klienta pid chas vykorystannya Servisu zalezhyt vid bagat'okh faktoriv, v tomu
+chysli typu ekranu, spivvidnoshennya storin, rozdzilnoyi zdatnosti, sposobu
+pidsvichuvannya, vykorystanykh tekhnolohiy, produktyvnosti keruyuchoyi elektroniky
+ta nalashtuvan. Rozbizhnosti mizh vizualizatsiyeyu v IKT-systemi Klienta ta
+faktychnoю zovnishnoyu vidadu Produktu ne mozhut buty pidstavoyu dlya skargy.
+5. StartUp zasterihaye, shcho vsi torgovi marki (logotypy, logotipy, nazvy brendiv тощо),
+ hrafichni materialy abo fotografiyi, rozmishcheni v Servisi, zakhyshcheni zakonom ta
+vykorystovuyutsya StartUp viklyuchno dlya informatsionnykh tsiley.
+6. U maksymalnomu obsyazi, dozvolenomu zakonom, StartUp ne nesye vidpovidalnosti za
+porushennya, vklyuchayuchy perervy v roboti Servisu, sprychyneni nepererbornoю
+syloyu, nesanktsionovanymy diiami tretikh osib abo nesumisnistyu Servisu z tekhnichnoyu
+infrastrukturoyu Klienta.
+7. StartUp zalyshaє za soboyu pravo tymchasovo pryzyupynyty robotu Servisu, zокrema dlya
+provedennya robit z obsluhovuvannya, rozvytku abo modernizatsiyi.
+8. Usi nazvy Produktiv, zaproponovani v Servisi, vykorystovuyutsya dlya identyfikatsiyi
+ta mozhuť buty zakhyshcheni abo zarezervovani vidpovidno do polozhen Zakonu pro
+promyslovoї vlasnosti.
+9. StartUp zasterihaye, shcho Servis mistyt kontent, zakhyshchenyy pravamy
+intelektualnoyi vlasnosti, zокrema avtorsky zakhyshcheni tvory (kontent Servisu,
+maket, hrafika, fotografiyi тощо). Klienty ta vidviduvachi Servisu zobovyazuyutsya
+povazhaty prava intelektualnoyi vlasnosti StartUp ta tretikh osib (vklyuchayuchy
+avtorski prava ta prava promyslovoї vlasnosti, takі yak prava, shcho vyplyvayut z
+reyestratsiyi torgovykh marok). Klient abo vidviduvach Servisu nesye osobystu
+vidpovidalnist za nevykonannya polozhen tsykhoho rozdilu.
+Page 19 of 23
+
+--- Page 19 ---
+10.Klient ne povинен publikuvaty u Servisi kontent, yaki ye nepravomirnym, nelegalnym,
+amoralnym abo porushuye interesy tretikh osib, a takozh ne povинен publikuvaty
+posylannya na pornografichnyy, neprystoynyy abo obrazlyvyy kontent.
+11.Klient povинен utrymuvatysya vid bud-yakoyi diyalnosti, yaka mozhe vplinutysya na
+pravylne funktsionuvannya Servisu, zокrema vid vtruchannya v funktsionuvannya
+Servisu abo yoho tekhnichni elementy.
+12.StartUp zobovyazuyetsya informuvaty zareyestrirovanykh Klientiv Servisu pro bud-yaku
+zminu T&C, nadsylaючи e-mail na adresu, vказanu pid chas reyestratsiyi, i Klient, otrymavshy
+ takу informatsiyu, mozhe u bud-yakyy chas vydalyty Akaunt. Zminy T&C ne vplivayut
+na Dogovory, ukladeni do daty nabrannya zminamy chynnisti.
+13.U vсіkh spraвах, ne врегulovanikh tymy Umovamy, zastosovuyutsya zagalno
+pryynyati normy polskoho prava, zокrema:
+1) Zakon vid 23 kvitnya 1964 roku - Tsyvilnyy kodeks;
+2) Zakon vid 30 travnya 2014 roku pro prava spozhyvachiv;
+3) Zakon vid 18 lypnya 2002 roku pro nadannya elektronnykh posluh.
+14.Spori, povyazani z Dogovoramy, ukladennymy na pidstavi tsykh Umov, vyrishuyutsya
+sudom, kompetentnym dlya StartUp. Tsi polozhennya ne zastosovuyutsya do Dogovoriv
+z Spozhyvachem.
+15.Vykorystannya konkretnoho metodu pozasudovoho vyrishennya sporiv mozhlive lyshe
+za vzayemnoyu zgodoyu Klienta i StartUp. Detalni protsedury pozasudovoho vyrishennya
+sporiv dostupni na sayti Upravlinnya z konkurentsiyi ta zakhystu spozhyvachiv:
+www.uokik.gov.pl, na saytakh voyevodyvskykh inspektoratіv torhovoyi inspektsiyi, a
+takozh u mistsevykh (rayonnykh) spozhyvachykh ombudsmeniv.
+16.Tsi Umovy ta Umovy diють z: 7 lyutoho 2026 roku
+Page 20 of 23
+
+--- Page 20 ---
+Povidomlennya pro pozasudove vyrishennya sporiv
+Vidpovidno do Reglamentu (EU) No. 524/2013 Yevropeyskoho parlamentu ta Rady
+vid 21 travnya 2013 roku pro onlayn vyrishennya spozhyvachykh sporiv ta zminu
+Reglamentu (EC) No. 2006/2004 ta Dyrektyvy 2009/22/EC (Reglament ODR),
+Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" z miscem reyestratsiyi u Varshavi
+nadaye elektronnuy posylannya na platformu ODR: https://webgate.ec.europa.eu/odr.
+Platforma ODR dozvolyaye pozasudove vyrishennya sporiv mizh biznesom ta spozhyvachamy.
+Vyrishennya sporiv takim shlyakhom ye dobrovilnym.
+Page 21 of 23
+
+--- Page 21 ---
+ZRAZOK FORMY VIDMOVY
+(tseyu formu treba zapovnyty i nadislaty lyshe u razi, yakshcho vy bazhayete vidмовytysya
+vid Dogovoru)
+………………………………………………
+(imya ta prizvyshche vidpravnyka)
+………………………………………………
+………………………………………………
+(adresa vidpravnyka)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+poverkh,
+02-017 Varshava
+Adresa dlya povidomlennya
+…………………………………………………….
+VIDMOVA VID DOGOVORU
+YA, nizhe pidpysanyy, tsym vidмовlyayusya vid nastupnoho dogovoru:
+1. Data dogovoru ..........................................................................
+2. Nomer dogovoru / zamovlennya ……………………………………………………………….
+3. Predmet Dogovoru ............................................................
+……………………………
+Pідpis Klienta
+Data: ………………………….
+Page 22 of 23
+
+--- Page 22 ---
+ZRAZOK SKARGY
+(tseyu formu treba zapovnyty i nadislaty lyshe u razi, yakshcho vy bazhayete podaty skargu)
+………………………………………………
+(imya ta prizvyshche vidpravnyka)
+………………………………………………
+………………………………………………
+(adresa vidpravnyka)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+poverkh,
+02-017 Varshava
+Adresa dlya povidomlennya
+……………………………………………………..
+SKARGA
+YA, nizhe pidpysanyy, tsym podayu skargu shchodo dogovoru/zamovlennya
+vid ............................................... no. .............................................., predmetom yakoho bula ...
+....................................................................................................................................................................
+Prychyna skargy: ......................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+(opishit prychynu skargy)
+U zv'язку z navedenym proshu ............................................... ..........................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+……………………………
+Pідpis Klienta
+
+--- Page 23 ---
+Data: ………………………….
+Page 23 of 23

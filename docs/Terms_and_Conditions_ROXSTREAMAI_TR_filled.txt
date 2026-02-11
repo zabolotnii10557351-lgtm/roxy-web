@@ -1,0 +1,696 @@
+--- Page 1 ---
+ROXSTREAMAI HIZMET SARTLARI VE KOSULLARI
+§ 1 Genel hukumler.................................................................................................................................1
+§ 2 Siteyi kullanmak icin gerekli teknik gereksinimler...........................................................................4
+§ 3 Mallarin satisi - sartlar ve siparis isleme suresi...............................................................................4
+§ 4 Mallarin Sozlesmeye uygun olmamasindan dogan sorumluluk..........................................................6
+§ 5 Hizmetlerin Saglanmasi.....................................................................................................................8
+§ 6 Hizmetlerin Sozlesmeye uygun olmamasindan dogan sorumluluk.....................................................9
+§ 7 Dijital Icerik veya Dijital Hizmet Saglama Sozlesmeleri.....................................................................9
+§ 8 Dijital icerigin veya dijital hizmetin Sozlesmeye uygun olmamasindan dogan sorumluluk............11
+§ 9 Urun fiyatlari ve teslimat maliyeti.....................................................................................................13
+§ 10 Odeme yontemleri..........................................................................................................................14
+§ 11 Sozlesmeden cayma hakki;.............................................................................................................14
+§ 12 Musteri tarafindan odenen tutarin iadesi.......................................................................................17
+§ 13 Bulten............................................................................................................................................17
+§ 14 StartUp iletisim bilgileri................................................................................................................18
+§ 15 Son hukumler.................................................................................................................................18
+Mahkeme disi uyusmazlik cozumu hakkinda bilgilendirme.....................................................................20
+CAYMA FORMU ORNEGI......................................................................................................................21
+SIKAYET SABLONU...............................................................................................................................22
+1
+§ 1 Genel hukumler
+1. ……………. .https://www.roxstreamai.com.. adresinde faaliyet gosteren RoxStreamAI Internet sitesi
+(bundan sonra: Hizmet) su kisi tarafindan isletilmektedir: Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp" (Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"), merkez adresi Varshova,
+ul. Zurawia 6/12 lok. 766, 00-503 Varshova, tebligat adresi: Atlas Tower, Al. Jerozolimskie 123a,
+18. kat, 02-017 Varshova, Varshova'daki Bas Sehir Varshova Bolge Mahkemesi tarafindan tutulan
+Ulusal Mahkeme Siciline kayitli, 12. Ticaret Dairesi (KRS) no. 0000442857, Vergi Kimlik Numarasi
+(NIP): 521-364-12-11, Isletme Kayit No (REGON): 146433467, BDO numarasi: 000460502.
+2. Bu Sartlar ve Kosullar (T&C) kapsamindaki hukumler, Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp" yararina, RoxStreamAI adli organize isletme bolumu tarafindan, Fundacja Rozwoju
+Przedsiebiorczosci "Twoj StartUp" Subesi nezdinde, Veronika Shved tarafindan temsil edilerek
+yurutulen faaliyetlere uygulanir. (e-posta adresi: support@roxstreamai.com. tel.: +48503427781..).
+Bu paragrafta belirtilen kisi, T&C hukumlerinin uygulanmasi konusunda iletisim icin Fundacja
+Rozwoju Przedsiebiorczosci "Twoj StartUp" tarafindan atanmistir.
+3. Bu Sartlar ve Kosullar ozellikle sunlari belirler:
+Page 1 of 23
+
+--- Page 2 ---
+a) Siteyi kullanma kurallari;
+b) Sitede sunulan Urunler icin siparis verme sartlari;
+c) siparis isleme suresi ve kurallari;
+d) odeme sartlari ve sekilleri
+e) Musterinin sozlesmeden cayma hakki;
+f) sikayetlerin sunulmasi ve incelenmesi
+g) Tuketici olan Musterinin ozel haklari.
+4. StartUp, Sitede uzaktan iletisim araclarini kullanarak Urun satar ve Hizmet saglar.
+Musterinin StartUp ile Site uzerinden kurdugu sozlesmeler, 30 Mayis 2014 tarihli
+Tuketici Haklari Kanunu anlaminda mesafeli sozlesmelerdir.
+5. Musteri, Hizmeti amacina uygun sekilde ve toplum kurallarina ve iyi niyet ilkelerine
+uygun kullanma hakki ve yukumlulugune sahiptir.
+6. Siteyi gezmek icin kayit gerekmez ve Musterinin Urunleri bagimsiz olarak siparis
+etmesi icin hesap kaydi gerekmez.
+7. T&C, edinilmesine, kopyalanmasina ve kaydedilmesine imkan veren bir formatta
+Sitede ucretsiz olarak sunulur.
+8. Musteri, Sartlar ve Kosullari okumakla yukumludur. Site kullanimi, Sartlar ve
+Kosullarin okunmasi ve kabul edilmesinden sonra mumkundur.
+9. Musteri tam ehliyetli bir kisi olmalidir.
+10.Bu T&C'de kullanilan tanimlar asagidaki anlamlara gelir:
+a) Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" (Fundacja Rozwoju
+Przedsiebiorczosci "Twoj StartUp"), Varshova, ul. Zurawia 6/12 lok. 766, 00-503
+Varshova, tebligat adresi: Atlas Tower, Aleje Jerozolimskie 123A, 18. kat, 02-017
+Varshova, Varshova'daki Bas Sehir Varshova Bolge Mahkemesi tarafindan tutulan
+Ulusal Mahkeme Siciline (KRS) kayitli, 12. Ticaret Dairesi (KRS) no. 0000442857,
+Vergi Kimlik Numarasi (NIP): 521-364-12-11, Isletme Kayit No (REGON): 146-433-467,
+Atik Veri Tabani (BDO) numarasi: 000460502;
+b) Musteri - Siteyi kullanan, Site uzerinden StartUp tarafindan saglanan Mal veya
+Hizmet satin alan kisi;
+c) Tuketici - girisimciyle, ekonomik veya mesleki faaliyetiyle dogrudan ilgili
+olmayan bir hukuki islem yapan gercek kisi;
+d) Hizmetler - Site uzerinden StartUp tarafindan saglanan ve Musterilere sunulan
+hizmetler, Dijital Hizmetler haric;
+e) Dijital Hizmet - 30 Mayis 2014 tarihli Tuketici Haklari Kanunu'nun 2(5a)
+ maddesi anlaminda dijital hizmet, StartUp tarafindan saglanir ve Sitede sunulur;
+f) Mallar - StartUp tarafindan Sitede Musterilere satilan tasinir esyalar;
+Page 2 of 23
+
+--- Page 3 ---
+g) Urunler - Mallar, Hizmetler veya Dijital Hizmetler;
+h) Site - https://www.roxstreamai.com. adresindeki web sitesi; StartUp'nin Musteriye
+ elektronik hizmetler sagladigi, Musterilere Urun sundugu ve sozlesme yapmasina
+ imkan veren site;
+i) Sozlesme - StartUp ile Musteri arasinda Site uzerinden kurulan anlasma;
+j) Hesap - Musterinin Sitedeki bireysel hesabı; Hizmetler ve Dijital Hizmetleri
+kullanmasina ve giris yaptiktan sonra Sozlesme kurmasina imkan verir;
+k) is gunleri - Cumartesi, Pazar ve resmi tatiller disindaki tum gunler;
+l) Sartlar ve Kosullar - bu Sartlar ve Kosullar (T&C).
+11.Musterinin yanlis bilgi verdigine dair makul suphe varsa, StartUp, bu konuda
+Musteriyi bilgilendirerek Sozlesmenin ifasindan cekilme hakkina sahiptir.
+12.Musteri hatali veya eksik bilgi saglarsa, ozellikle hatali veya eksik adres verirse,
+StartUp, Mallarin teslim edilememesinden veya gecikmesinden ya da Hizmet veya
+Dijital Hizmetin saglanamamasindan dolayi, yasal olarak izin verilen en genis
+olcude sorumlu olmaz.
+13.Hizmette yer alan bilgiler, ozellikle reklamlar, duyurular ve fiyat listeleri, 23 Nisan
+1964 tarihli Medeni Kanun'un 66. maddesi anlaminda bir teklif teskil etmez. Bununla
+birlikte, Hizmette yer alan bilgiler Medeni Kanun'un 71. maddesinde belirtilen
+Sozlesme yapma daveti niteligindedir.
+14.StartUp, Tuketici olan Musteriye, Musteri siparis vermeden hemen once, ozellikle
+asagidakiler hakkinda acik ve gorunur sekilde bilgi verir:
+a) hizmetin ana ozellikleri, hizmetin konusu ve musteriyle iletisim yontemi dikkate
+alinarak,
+b) vergiler dahil toplam fiyat veya ifa ucreti ve hizmetin konusunun dogasi geregi
+bedelin makul olarak onceden hesaplanamaması halinde - hesaplama yontemi ile
+nakliye, teslimat, posta hizmetleri ve diger masraflar; bu masraflarin tutari
+belirlenemiyorsa - bunlari odeme yukumlulugu;
+c) sozlesmeden cayma hakki veya bu hakkin olmamasi,
+d) sozlesmenin suresi veya fesih sekli ve gerekceleri - sozlesme belirsiz sureli ise
+veya otomatik yenileniyorsa;
+e) sozlesme kapsaminda musteri yukumluluklerinin asgari suresi.
+15.StartUp, Musterilerden bireysel (ozellestirilmis) siparis kabul etme olasiligini
+ongoruyorsa, bu siparisler StartUp'nin Sitede belirtilen e-posta adresi uzerinden
+verilebilir. Bu durumda StartUp bir teklif hazirlar ve Musterinin belirttigi e-posta
+adresine gonderir.
+16.Bireysel (ozellestirilmis) siparisler icin teslim suresi, Sozlesmenin kurulmasindan
+itibaren 30 gundur, StartUp Musteriyi en gec siparis vermeden once farkli bir sure
+hakkinda bilgilendirmediyse.
+17.Site, StartUp'nin Sitedeki teklifinde farkli bir hukum bulunmadigi surece Polonya
+topraklari ve tum dunya genelindeki Musterilere hizmet verir.
+§ 2 Siteyi kullanmak icin gerekli teknik gereksinimler
+1. Siteyi gezmek icin:
+a) internete erisimi olan bir terminal cihaz,
+b) cerezleri kabul edebilen bir web tarayicisi; ornegin Internet
+Explorer, Microsoft Edge, Google Chrome, Mozilla Firefox, Opera veya
+Safari'nin guncel surumu;
+c) gerekli cerezlerin kabul edilmis olmasi.
+2. Sitenin ozelliklerinden yararlanmak, ozellikle kayit olmak veya Urun siparisi
+vermek icin aktif bir e-posta hesabi gereklidir.
+3. Site, Hizmetlerin dogru sekilde uygulanmasi ve guvenligin saglanmasi icin cerez
+kullanir. Cerezleri engellemek veya ucuncu taraf uygulamalarini kullanmak Sitenin
+arizalanmasina ve Hizmetin dogru sekilde uygulanmasini engellemeye neden olabilir;
+StartUp bundan sorumlu degildir.
+§ 3 Mallarin satisi - sartlar ve siparis
+isleme suresi
+1. StartUp, Site uzerinden Musterilerle Mallarin satisi icin sozlesme yapar. Satis
+sozlesmesi uyarinca StartUp Mallarin mulkiyetini Musteriye devreder ve teslim eder;
+Musteri Mallari teslim alir ve fiyati oder.
+2. Musteri, siparis vermek icin ilgilendigi Mallari, ilgili Mal sayfasinda bulunan
+"Sepete ekle" veya esdeger bir komut ile belirtir ve ardindan gerekli verileri,
+ teslimat ve odeme yontemini girer.
+3. Sepette Musteri:
+a) Mallari ve miktarlarini ekleyip silebilir;
+b) teslimat adresini ve faturalama icin gerekli verileri girebilir;
+c) teslimat yontemini secebilir;
+d) odeme yontemini secebilir;
+e) indirim kodu ekleyebilir (varsa).
+4. Musteri, "odeme yukumlulugu olan siparis" veya benzer ifadeyle isaretlenmis
+butona basarak siparisi onaylar.
+5. Siparisin verilmesi ve onaylanmasi, Musterinin Mallarin fiyatini ve teslimat
+masraflarini odeme yukumlulugunu dogurur. Siparis StartUp tarafindan onaylandiginda
+StartUp ile Musteri arasinda satis sozlesmesi kurulmus olur.
+6. Satin alinmis Mallarin gonderimi, StartUp'nin banka hesabina odemenin
+dogrulanmasindan itibaren 30 is gunu icinde yapilir; Sartlar ve Kosullarda farkli
+hukum yoksa veya StartUp siparis verilmeden hemen once baska bir sure bildirmediyse.
+7. Siteden satin alinmis Mallar, Musterinin belirttigi adrese gonderilir.
+8. Siteden siparisler gunde 24 (yazi ile: yirmi dort) saat, haftada 7 (yazi ile: yedi)
+ gun verilebilir. Cumartesi, Pazar veya resmi tatillerde verilen siparisler, takip eden
+is gunu islenir.
+9. Siparisin sadece bir kismi yerine getirilebiliyorsa, StartUp siparis onaylanmadan
+once Musteriye sunlari teklif edebilir:
+a) siparisin tamamen iptali (Musteri bu secenegi secerse StartUp siparisi yerine
+getirme yukumlulugunden kurtulur);
+b) siparisin yerine getirilemeyen kisminin iptali (Musteri bu secenegi secerse
+siparis kismen yerine getirilir ve StartUp kalan kisimdan kurtulur);
+c) Musteri ile mutabik kalinacak alternatif bir performans. Musteri tarafindan
+onaylandiginda bu siparis kesin kabul edilir;
+d) siparisin bolunmesi ve yerine getirilemeyen kisim icin yeni tamamlanma
+tarihi belirlenmesi (Musteri bu secenegi secerse Mallar birden fazla ayri
+gonderi ile teslim edilir ve Musteri bu bolme nedeniyle ek maliyetler dogurur).
+10.Musterinin siparis ettigi Mallar mevcut degilse veya siparis diger nedenlerle
+karsilanamiyorsa, StartUp, Sozlesmenin kurulmasindan itibaren 7 (yazi ile: yedi)
+ gun icinde Musterinin e-posta adresine bilgi gondererek Musteriyi bilgilendirir.
+11.Tum veya kismi teslim edilemeyen Mallar icin odeme onceden yapilmissa, StartUp,
+Sartlar ve Kosullarda belirtilen kosullar uyarinca, Sozlesmenin kurulmasindan
+itibaren 14 (yazi ile: ondort) gun icinde odenen tutari (veya farki) iade eder.
+12.StartUp, belirli bir Mal icin Sitede, satin alinan Mallarin gonderilecegi is gunu
+sayisini belirtebilir. Bu sure, siparisin onayindan Mallarin gonderimine kadar
+gesirilen sureyi ifade eder. Sure, tum siparis edilen Mallarin tamamlama suresi
+ dikkate alinarak verilir.
+§ 4 Mallarin Sozlesmeye uygun olmamasindan dogan sorumluluk
+1. Bu paragraftaki hukumler, 30 Mayis 2014 tarihli Tuketici Haklari Kanunu'nun
+5a Bolumu uyarinca, StartUp'nin Sozlesmeye uygun olmayan Mallar icin sorumluluguna
+su kapsamda uygulanir:
+a) Tuketici, veya
+b) Sozlesmenin iceriginden, bu kisinin mesleki nitelikte olmayan bir amacla
+ (ozellikle Merkezi Kayit ve Is Faaliyeti Bilgileri kaydindan anlasilan ticari
+faaliyeti konusuna gore) StartUp ile dogrudan baglantili bir sozlesme yaptigi
+ acik olan gercek kisi.
+2. StartUp, Mallarin fiziksel ve hukuki kusurlardan ari olmasini saglamayi taahhut
+eder.
+3. Musteri, Mallarin Sozlesmeye uygun olmamasi durumunda sikayette bulunma hakkina
+sahiptir.
+4. Musteri, sikayeti yazili olarak veya belge seklinde StartUp'nin e-posta adresine
+iletebilir.
+5. Kusurlu Mallar icin sikayet su taleplerden birini icerebilir:
+a) Mallarin onarimi;
+b) Mallarin degistirilmesi.
+6. Mallar Sozlesmeye uygun degilse, Musteri su durumlarda fiyat indirimi veya
+Sozlesmeden cayma beyaninda bulunabilir:
+a) StartUp, 30 Mayis 2014 tarihli Tuketici Haklari Kanunu'nun 43d(2) maddesi
+uyarinca Mallari Sozlesmeye uygun hale getirmeyi reddetmisse;
+b) StartUp, 30 Mayis 2014 tarihli Tuketici Haklari Kanunu'nun 43d 4-6 fikralari
+uyarinca Mallari Sozlesmeye uygun hale getirmemisse;
+c) Mallarin Sozlesmeye aykiriligi, StartUp Mallari uygun hale getirmeye calismis
+olsa bile devam ediyorsa;
+d) Mallarin Sozlesmeye aykiriligi, 30 Mayis 2014 tarihli Tuketici Haklari Kanunu'nun
+43d maddesinde belirtilen koruma yollarina basvurmaksizin fiyat indirimi veya
+Sozlesmeden caymayi hakli kilacak kadar onemliyse;
+e) StartUp'nin beyanindan veya durumlardan, Mallari makul bir sure icinde veya
+tuketici icin asiri zorlugu olmadan uygun hale getirmeyecegi acikca anlasiliyorsa.
+7. Kusurlu Mallara iliskin sikayet, alindigi tarihten itibaren 14 (yazi ile: ondort)
+ gun icinde isleme alinir.
+8. StartUp belirtilen surede sikayete yanit vermezse, sikayetin kabul edildigi
+varsayilir.
+9. StartUp, sikayet sonucunu yazili olarak veya diger kalici bir ortamda Musteriye
+bildirir.
+10.Mallara iliskin sikayet kabul edilirse, StartUp Musterinin talebine gore Mallari
+onarar, degistirir, fiyati dusurur veya Sozlesmeden cayma sonrasinda Musterinin
+odedigi tutari tamamen iade eder.
+11.StartUp, Musteri tarafindan kullanilan ayni odeme yontemini kullanarak iade
+yapar; Musteri acikca baska bir iade yontemine onay vermediyse ve bu yontem
+Musteri icin masraf dogurmuyorsa. StartUp ilgili satın alma belgesine duzeltme
+(düzeltme KDV faturasi veya düzeltme spesifikasyonu) duzenler.
+12.StartUp'nin sorumlulugu, Sozlesme kapsamindaki Mallarin degeri ile sinirlidir.
+Dijital Hizmetin yerine getirilmemesi veya uygunsuz ifasi ya da dijital icerigin
+ teslim edilmemesi nedeniyle dogan zararlar icin StartUp'nin sorumlulugu kardan
+mahrum kalmayi kapsamaz.
+13.Sartlar ve Kosullarda duzenlenmeyen durumlarda, Musteri ve StartUp'nin
+haklarini ve yukumluluklerini belirlemek icin genel hukuk kurallari, ozellikle
+Tuketici Haklari Kanunu ve Medeni Kanun uygulanir.
+14.StartUp'nin Mallar, Hizmetler ve Dijital Hizmetler ile ilgili ayip sorumlulugu,
+asagidaki Musteriler lehine kurulan sozlesmelerde haric tutulur:
+a) Tuketici olmayan;
+b) StartUp ile dogrudan ilgili bir sozlesme yapan ve sozlesmenin iceriginden mesleki
+ nitelikte olmadigi acik olan gercek kisi (ozellikle Merkezi Kayit ve Is Faaliyeti
+Bilgileri kaydinda yer alan faaliyet konusuna gore).
+15.StartUp tarafindan sunulan Mallar uretici garantisi kapsaminda olabilir. Garanti,
+Garanti beyaninin kosullarina gore kullanilir. StartUp kendi garantisini saglamaz.
+Page 7 of 23
+
+--- Page 8 ---
+§ 5 Hizmetlerin Saglanmasi
+1. StartUp, Sitede turu, kapsami ve ayrintili aciklamasi belirtilen Hizmetleri
+Musterilere saglar. Faaliyetler, ozellikle 3D avatar/karakterlerin yapılandirilmasini
+ve yönetimini saglayan abonelik modeli dijital hizmetler, metinden konusmaya (TTS)
+araclariyla entegrasyonlar ve streaming destek fonksiyonlarini kapsar.
+2. Hizmetler, Sitede belirtilen sekilde, ozellikle ilgili Hizmet sayfasinda belirtilen
+sekilde saglanir.
+3. StartUp, Musterinin Hizmetler icin nasil siparis verecegine iliskin bilgileri Sitede
+paylasir. Siparis vermek icin Musteri ilgilendigi Hizmetleri belirtir ve Sozlesmenin
+kurulmasi ve Hizmetin yerine getirilmesi icin gerekli verileri, Hizmetin ifa sekli
+(varsa) ve odeme yontemini girer.
+4. Sitede siparis vermek icin bir buton veya benzeri bir islev kullaniliyorsa, bu
+buton "odeme yukumlulugu olan siparis" veya benzer acik ve net bir ifadeyle
+isaretlenmelidir.
+5. Siparisin verilmesi ve onaylanmasi, Musterinin Hizmet bedelini ve varsa ek
+masraflari odeme yukumlulugunu dogurur. Siparis StartUp tarafindan onaylandiginda
+StartUp ile Musteri arasinda hizmet sozlesmesi de kurulmus olur.
+6. Musteri, Hizmetlerin baslangic ve bitis tarihleri konusunda Sozlesme kurulmadan
+once, ozellikle Siteden bilgilendirilir.
+7. Musterinin acik talebiyle, Hizmetin mesafeli sozlesmeden cayma suresi dolmadan
+baslamasi gerekiyorsa, StartUp Musteriden asagidakileri iceren bir beyan ister:
+a) kalici bir ortamda acik talep;
+b) StartUp tarafindan hizmet tamamen ifa edildiginde cayma hakkini kaybedecegi
+bilgisine sahip olduguna dair beyan.
+8. Musteri, cayma suresi dolmadan Hizmetin baslamasina onay vermezse, Hizmet,
+Musterinin cayma suresi dolduktan sonra saglanir; StartUp Sitede bu onay olmadan
+Sozlesme kurulmasina imkan tanimadigi surece.
+9. Musteri, Hizmetlerin saglanmasina iliskin Sozlesmeyi yazili veya belge seklinde,
+ takvim ayinin sonunda etkili olmak uzere feshedebilir. Ihbar suresi gerekmez.
+10.StartUp, Hizmetlerin saglanmasina iliskin Sozlesmeyi yazili veya belge seklinde,
+ takvim ayinin sonunda etkili olacak sekilde 1 aylik ihbarla hakli nedenlerle
+feshedebilir. Taraflarin hakli neden olarak kabul ettigi durumlar:
+a) StartUp'nin § 1'de belirtilen organizasyonel isletme biriminin faaliyetlerinin
+sonlandirilmasi veya sonlandirma karari;
+b) StartUp'nin § 1'de belirtilen organizasyonel isletme biriminin faaliyet konusunu
+onemli olcude degistirmesi veya degistirme karari;
+c) StartUp'da onemli yeniden yapilanma;
+d) StartUp'ye atfedilemeyen arizalar veya engeller (ozellikle teknik) nedeniyle
+Hizmetlerin saglanmasinin engellenmesi veya ciddi sekilde zorlasmasi;
+e) Musterinin StartUp'ye fiyat odemede gecikmesi;
+f) Musterinin Sozlesmeyi veya Sartlar ve Kosullari esasli ihlali.
+§ 6 Hizmetlerin Sozlesmeye uygun olmamasindan dogan sorumluluk
+1. Sozlesmeye uygun olmayan Hizmetler hakkindaki sikayet, Hizmetin niteligine gore
+bir talep icermelidir.
+2. Hizmetin Sozlesmeye uygun olmamasina iliskin sikayet, alindigi tarihten itibaren
+14 (yazi ile: ondort) gun icinde isleme alinir.
+3. StartUp belirtilen surede sikayete yanit vermezse, sikayetin kabul edildigi
+varsayilir.
+4. StartUp, sikayet sonucunu yazili olarak veya diger kalici bir ortamda Musteriye
+bildirir.
+5. Hizmete iliskin sikayet kabul edilirse, StartUp Hizmeti dogru sekilde sunar,
+Musteriye odedigi bedelin tamami veya bir kismi iade edilir ya da Hizmetin turu ve
+olayin kosullarina gore Musteriye baska odemeler yapilir.
+6. StartUp'nin sorumlulugu, yerine getirilmeyen veya uygunsuz ifa edilen Hizmetin
+değeri ile sinirlidir. StartUp'nin Hizmetin yerine getirilmemesi veya uygunsuz ifasi
+nedeniyle dogan zararlar icin sorumlulugu kardan mahrum kalmayi kapsamaz.
+7. StartUp'nin Hizmetlerdeki ayiplar veya Sozlesmenin ifa edilmemesi / uygunsuz ifasi
+nedeniyle sorumlulugu, asagidaki Musteriler lehine kurulan sozlesmelerde haric
+birakilir:
+a) Tuketici olmayan;
+b) StartUp ile dogrudan ilgili bir sozlesme yapan ve sozlesmenin iceriginden mesleki
+ nitelikte olmadigi acik olan gercek kisi (ozellikle Merkezi Kayit ve Is Faaliyeti
+Bilgileri kaydinda yer alan faaliyet konusuna gore).
+Page 9 of 23
+
+--- Page 10 ---
+§ 7 Dijital Icerik veya Dijital Hizmet Saglama Sozlesmeleri
+1. Bu paragraf ve bir sonraki paragraftaki hukumler, 30 Mayis 2014 tarihli Tuketici
+Haklari Kanunu'nun 5b Bolumu uyarinca, Dijital Icerik veya Dijital Hizmet saglama
+Sozlesmesi icin su kisilerle yapilan sozlesmelere uygulanir:
+a) Tuketici, veya
+b) Sozlesmenin iceriginden, bu kisinin mesleki nitelikte olmayan bir amacla (ozellikle
+Merkezi Kayit ve Is Faaliyeti Bilgileri kaydindan anlasilan faaliyet konusuna gore)
+StartUp ile dogrudan baglantili bir sozlesme yaptigi acik olan gercek kisi.
+2. StartUp, Musterinin Dijital Hizmetler icin nasil siparis verecegine dair bilgileri
+Sitede paylasir. Siparis vermek icin Musteri, ozellikle ilgilendigi Dijital Hizmetleri
+belirtir ve Sozlesmenin kurulmasi ve Dijital Hizmetin yerine getirilmesi icin gerekli
+verileri, Hizmetin ifa sekli (varsa) ve odeme yontemini girer.
+3. Sitede siparis vermek icin bir buton veya benzeri bir islev kullaniliyorsa, bu
+buton "odeme yukumlulugu olan siparis" veya benzer acik ve net bir ifadeyle
+isaretlenmelidir.
+4. Siparisin verilmesi ve onaylanmasi, Musterinin Dijital Hizmet bedelini ve varsa ek
+masraflari odeme yukumlulugunu dogurur. Siparis StartUp tarafindan onaylandiginda
+StartUp ile Musteri arasinda dijital hizmet saglama sozlesmesi kurulmus olur.
+5. StartUp, dijital icerigi veya dijital hizmeti Sozlesmenin kurulmasindan hemen sonra
+Musteriye sunar; taraflarca aksine bir durum kararlastirilmadikca ve ozellikle ilgili
+Dijital Hizmetin Site sayfasinda farkli bir tarih belirtilmedikce. Sozlesme, dijital
+icerigin fiziksel bir tasiyici uzerinden teslimini ongoruyorsa bu hüküm uygulanmaz.
+Musteri cayma suresi dolmadan ifaya onay vermezse, hizmet, cayma suresi dolduktan
+sonra saglanir.
+6. StartUp, onceki paragrafta belirtilen onayin, Musterinin sozlesmeden cayma hakkini
+kaybetmesine neden olacagini bildirir.
+7. StartUp, hakli nedenlerle, Sozlesmeye uygunluk icin gerekli olmayan bir dijital
+icerik veya dijital hizmet degisikligi yapabilir. Hakli nedenler ozellikle Musteri veya
+StartUp'nin onemli menfaatleri olarak kabul edilir. StartUp, degisiklik hakkinda
+Musteriyi acik ve anlasilir sekilde bilgilendirir. Degisiklik, Musterinin dijital icerige
+ veya dijital hizmete erisimi veya kullanimini onemli ve olumsuz etkilerse, StartUp
+Musteriyi kalici bir ortamda degisiklik ozellikleri ve tarihi ile sozlesmeyi bildirimsiz
+feshetme hakki konusunda onceden bilgilendirir. Musteri, degisiklikten itibaren 30
+gun icinde sozlesmeyi bildirimsiz feshedebilir.
+8. Musteri, dijital icerik veya Dijital Hizmet saglama Sozlesmesini yazili veya belge
+seklinde takvim ayinin sonunda etkili olmak uzere feshedebilir. Ihbar suresi gerekmez.
+9. StartUp, dijital hizmet saglama Sozlesmesini yazili veya belge seklinde, takvim
+ayinin sonunda etkili olacak sekilde 1 aylik ihbarla hakli nedenlerle feshedebilir.
+Taraflar hakli neden olarak sunlari kabul eder:
+a) StartUp'nin § 1'de belirtilen organizasyonel isletme biriminin faaliyetlerini
+sonlandirmasi veya sonlandirma karari;
+b) StartUp'nin § 1'de belirtilen organizasyonel isletme biriminin faaliyet konusunu
+onemli olcude degistirmesi veya degistirme karari;
+c) StartUp'da onemli yeniden yapilanma;
+d) Sitede StartUp'ye atfedilemeyen arizalar veya ciddi teknik engeller;
+e) Musterinin StartUp'ye fiyat odemede gecikmesi;
+f) Musterinin Sozlesmeyi veya Sartlar ve Kosullari esasli ihlali.
+10.Bu paragrafta duzenlenmeyen hususlarda Tuketici Haklari Kanunu'nun 5b Bolumu
+hukumleri uygulanir.
+§ 8 Dijital icerigin veya dijital hizmetin Sozlesmeye uygun olmamasindan dogan sorumluluk
+1. StartUp dijital icerigi veya dijital hizmeti saglamazsa, Musteri StartUp'den
+saglanmasini talep eder. StartUp dijital icerigi veya dijital hizmeti hemen ya da
+ taraflarca acikca kararlastirilan ek sure icinde saglamazsa, Musteri sozlesmeyi
+iptal edebilir. Sozlesme dijital icerigin fiziksel bir tasiyici uzerinden teslimini
+ongoruyorsa bu hüküm uygulanmaz.
+2. StartUp, saglanan dijital icerik veya dijital hizmetin Sozlesmeye uygun olmamasindan
+sorumludur:
+a) tek seferde veya parca parca sunulanlarda, teslim aninda var olup iki yil icinde
+ortaya cikan uyumsuzluklar;
+b) surekli sunulanlarda, Sozlesmeye gore saglanmasi gereken anda ortaya cikan veya
+ ortaya cikan uyumsuzluklar.
+3. Dijital icerik veya dijital hizmet Sozlesmeye uygun degilse, Musteri Sozlesmeye
+uygun hale getirilmesini talep edebilir.
+4. StartUp, dijital icerigi veya dijital hizmeti Sozlesmeye uygun hale getirmek
+imkansizsa veya StartUp icin asiri maliyet gerektiriyorsa bunu reddedebilir.
+Page 11 of 23
+
+--- Page 12 ---
+5. Dijital icerik veya dijital hizmet Sozlesmeye uygun degilse, Musteri su hallerde
+fiyat indirimi veya Sozlesmeden cayma beyaninda bulunabilir:
+a) dijital icerigi veya dijital hizmeti Sozlesmeye uygun hale getirmek, Tuketici
+Haklari Kanunu'nun 43m(2) ve (3) maddelerine gore imkansiz veya asiri maliyetli
+ise;
+b) StartUp, dijital icerigi veya dijital hizmeti Tuketici Haklari Kanunu'nun 43m(4)
+maddesine gore Sozlesmeye uygun hale getirmemisse;
+c) dijital icerik veya dijital hizmet Sozlesmeye uygun degilse ve StartUp uyum
+saglamaya calissa bile uygunsuzluk devam ediyorsa;
+d) dijital sozlesme veya dijital hizmetin Sozlesmeye uygun olmamasi, Tuketici Haklari
+Kanunu'nun 43m maddesinde belirtilen koruma yollarina basvurmaksizin fiyat indirimi
+veya Sozlesmeden caymayi hakli kilacak kadar onemliyse;
+e) StartUp'nin beyanindan veya durumlardan, dijital hizmetleri veya dijital icerigi
+ makul bir sure icinde veya tuketici icin asiri zorlugu olmadan uygun hale
+getirmeyecegi anlasiliyorsa.
+6. Indirilen fiyat, Sozlesme fiyatina, uygun olmayan dijital icerik veya dijital hizmetin
+ degerinin uygun olan dijital icerik veya dijital hizmetin degerine oranini yansitacak
+sekilde olmali. Sozlesme, dijital icerik veya dijital hizmetin parcalar halinde veya
+surekli saglandigini ongoruyorsa, fiyat indirimi, uygunsuzlugun devam ettigi sureyi
+ dikkate alir.
+7. Musteri, dijital icerik veya dijital hizmet bir fiyat karsiligi saglaniyorsa ve
+uygunsuzluk onemsiz ise Sozlesmeden cayamaz.
+8. Musteri Sozlesmeden cayarsa, StartUp dijital icerigi sagladigi maddi tasiyicinin
+14 gun icinde iadesini talep edebilir. Musteri tasiyiciyi derhal iade eder.
+9. Musteri Sozlesmeden cayarsa, StartUp sadece Sozlesmeye uygun olmayan dijital icerik
+veya hizmete karsilik gelen kismi ve cayma sonucu saglama yukumlulugu ortadan
+kalkan dijital icerik veya dijital hizmete karsilik gelen kismi iade eder.
+10.StartUp, Musteri farkli bir iade yontemine acikca onay vermedikce, iade tutarini
+Musterinin kullandigi odeme yontemiyle yapar ve bu yontem Musteri icin ek maliyet
+olusturmaz.
+11.StartUp'nin sorumlulugu, saglanmasi gereken dijital icerik veya Dijital Hizmetin
+degerini asilamaz. Dijital Hizmetin yerine getirilmemesi veya uygunsuz ifasi ya da
+dijital icerigin teslim edilmemesi nedeniyle dogan zararlar icin StartUp'nin
+sorumlulugu kardan mahrum kalmayi kapsamaz.
+12.Dijital hizmetin Sozlesmeye uygun olmamasina iliskin sikayet, alindigi tarihten
+itibaren 14 (yazi ile: ondort) gun icinde isleme alinir.
+13.StartUp belirtilen surede sikayete yanit vermezse, sikayetin kabul edildigi
+varsayilir.
+14.StartUp, sikayet sonucunu yazili olarak veya diger kalici bir ortamda Musteriye
+bildirir.
+15.StartUp'nin dijital icerik veya Dijital Hizmetin Sozlesmeye uygun olmamasindan
+kaynaklanan sorumlulugu, ayrica Sozlesmenin ifa edilmemesi / uygunsuz ifasi
+nedeniyle sorumlulugu, asagidaki Musterilerle yapilan sozlesmeler icin haric tutulur:
+a) Tuketici olmayan;
+b) StartUp ile dogrudan ilgili bir sozlesme yapan ve sozlesmenin iceriginden mesleki
+ nitelikte olmadigi acik olan gercek kisi (ozellikle Merkezi Kayit ve Is Faaliyeti
+Bilgileri kaydinda yer alan faaliyet konusuna gore).
+§ 9 Urun fiyatlari ve teslimat maliyeti
+1. Sitede Urunlerin yaninda belirtilen fiyatlar brut fiyatlardir; yani Katma Deger
+Vergisini (KDV) icerir. Fiyatlar Polonya para birimi (zloty - PLN) cinsinden
+belirtilmistir.
+2. Urun yanindaki fiyat teslimat masraflarini icermez.
+3. Teslimat masraflari, StartUp'nin Sitedeki teklifinde aksi belirtilmedikce Musteriye
+aittir.
+4. Musterinin secilen Urunu satin almasi icin odemesi gereken toplam tutar, Urun
+fiyati ve teslimat maliyetinden olusur.
+5. StartUp, ilgili Urun sayfasinda veya siparis surecinde aksi belirtilmedikce, Urunlerin
+teslimat yontemleri asagidaki gibidir:
+a) Mallar icin - Musterinin belirttigi adrese gonderim veya StartUp merkezinden
+sahsen teslim;
+b) Dijital Hizmetler icin - Musterinin belirttigi e-posta adresine;
+c) Diger Hizmetler icin - Sitede ilgili Hizmet sayfasinda veya siparis surecinde
+belirtilen sekilde, ozellikle Hizmetin turune bagli olarak.
+Page 13 of 23
+
+--- Page 14 ---
+6. StartUp, Musterinin siparis surecine en gec baslamadan once, Urun teslimatina
+iliskin herhangi bir kisitlamayi acik ve okunakli sekilde belirtir.
+§ 10 Odeme yontemleri
+1. StartUp, Musterinin siparis surecine en gec baslamadan once, kabul edilen odeme
+ yontemleri hakkinda acik ve okunakli bilgi verir.
+2. StartUp, ilgili Urun sayfasinda veya siparis surecinde aksi belirtilmedikce, odeme
+ yontemleri su sekildedir:
+a) StartUp tarafindan kabul edilen ve siparis icin hizli odemelere imkan veren
+ elektronik odeme sistemlerinden biri araciligiyla havale;
+b) StartUp tarafindan belirtilen hesaba klasik banka havalesi.
+3. Elektronik odeme sistemlerinden birini kullanmak icin Musteri, ilgili odeme
+sisteminin kullanim sartlarini kabul etmelidir. Mevcut odeme sistemlerinin listesi
+siparis tamamlanirken gosterilir.
+4. Sozlesmeden cayma durumunda, iade, Musterinin odeme yaptigi yontemle yapilir;
+Musterinin ek maliyet dogurmayan baska bir iade yontemine acikca onay verdigi
+ durumlar haric.
+5. StartUp nakit odeme kabul etmez.
+§ 11 Sozlesmeden cayma hakki;
+1. Bu paragrafin hukumleri, Tuketici olan Musteri veya StartUp ile dogrudan baglantili
+olup sozlesmenin iceriginden mesleki nitelikte olmadigi acik olan gercek kisi icin
+gecerlidir (ozellikle Merkezi Kayit ve Is Faaliyeti Bilgileri kaydinda belirtilen
+faaliyet konusuna gore).
+2. 1. paragrafta belirtilen Musteri, genel hukuk veya bu T&C baska bir hukum
+getirmedikce, herhangi bir gerekce gostermeden ve masraf odemeden Sozlesmeden
+cayma hakkina sahiptir. Cayilan Sozlesme kurulmamıs sayilir.
+3. Sozlesmeden caymak icin cayma beyaninin verilmesi ve StartUp'ye 14 (yazi ile:
+ondort) gun icinde gonderilmesi yeterlidir.
+4. Sozlesmeden cayma suresi:
+Page 14 of 23
+
+--- Page 15 ---
+a) StartUp'nin Mallari teslim edip mulkiyeti devrettigi sozlesmelerde - Mallarin
+Musteri veya Musterinin belirttigi, tasiyici disinda bir ucuncu kisi tarafindan teslim
+alinmasi ile baslar. Sozlesme:
+- ayri ayri, partiler halinde veya parcalar halinde teslim edilen birden fazla Mal
+iceriyorsa - son Malin, partinin veya parcanin teslim alinmasi ile,
+- belirli bir sure boyunca düzenli Mal teslimi odevini iceriyorsa - ilk Malin teslim
+alinmasi ile baslar;
+b) diger Sozlesmelerde - Sozlesmenin kuruldugu tarihten itibaren baslar.
+5. Cayma suresine uymak icin:
+a) StartUp'nin T&C'de veya Sitede belirtilen adresine yazili bir beyan gondermek, veya
+b) StartUp'nin T&C'de veya Sitede belirtilen e-posta adresine belge seklinde beyan
+ gondermek yeterlidir.
+6. StartUp, elektronik olarak gonderilen cayma beyaninin alindigini kalici bir ortamda
+Musteriye derhal bildirir.
+7. Musteri Sozlesmeden cayarsa, satin aldigi Urunu derhal ve en gec 14 (yazi ile:
+ondort) gun icinde iade etmelidir; StartUp Mallari kendisi almayi teklif etmedikce.
+Sureyi korumak icin, sure dolmadan gonderim yeterlidir. Iade masraflari Musteriye
+aittir.
+8. Musteri Sozlesmeden cayarsa, StartUp, urun bedelini ve teslimat masraflarini
+cayma beyaninin alinmasindan itibaren 14 (yazi ile: ondort) gun icinde iade eder.
+Ancak Musteri, Sitede sunulan en ucuz teslimat yontemi disinda bir yontem secmisse,
+StartUp bu ek masraflari iade etmekle yukumlu degildir.
+9. StartUp, Musterinin kullandigi ayni odeme yontemini kullanarak iade yapar;
+Musteri, kendisi icin masraf dogurmayan baska bir iade yontemine onay vermedikce.
+10.StartUp, Mallar kendisine geri donene veya Musteri iade kaniti sunana kadar,
+ hangisi once gerceklesirse, odeme iadesini bekletebilir.
+11.Musteri, StartUp'den siparis onayi almadan once cayma beyanini gondermisse,
+siparis iptal edilir.
+12.Musteri, Mallarin niteligini, ozelliklerini ve isleyisini belirlemek icin gerekli olanin
+otesinde kullanimi nedeniyle Malin degerinde meydana gelen azalmadan sorumludur.
+Page 15 of 23
+
+--- Page 16 ---
+13.Cayma hakki, 30 Mayis 2014 tarihli Tuketici Haklari Kanunu'nda belirtilen
+hallerde uygulanmaz; ozellikle asagidaki sozlesmeler icin:
+a) Tuketici tarafindan ucret odenmesi gereken hizmetlerin ifasi, hizmet tamamen
+ifa edilmis ve tuketici, ifaya baslamadan once cayma hakkini kaybedecegi
+konusunda bilgilendirilmis ve bunu acikca kabul etmis ise;
+b) fiyat veya ucretin, isletmecinin kontrolu disindaki finansal piyasa dalgalanmalarina
+bagli oldugu ve cayma suresi dolmadan once ortaya cikabilecegi sozlesmeler;
+c) tuketici tarafindan belirlenen ozelliklere gore uretilen veya kisisel ihtiyaclara
+gore ozellestirilen urunlere iliskin sozlesmeler;
+d) cabuk bozulabilen veya kisa raf omrune sahip urunlere iliskin sozlesmeler;
+e) saglik veya hijyen nedenleriyle iadesi uygun olmayan ve teslimattan sonra
+paketi acilmis urunlere iliskin sozlesmeler;
+f) teslimat sonrasinda dogasi geregi diger mallarla ayrilamaz hale gelen urunlere
+iliskin sozlesmeler;
+g) satis sozlesmesi yapildiginda fiyati belirlenen, teslimati ancak 30 gunden sonra
+mümkun olan ve degeri piyasadaki dalgalanmalara bagli olan alkollu icecekler;
+h) tuketicinin acikca talebi uzerine acil onarim veya bakım icin kendisine gelinmesi;\nprofesyonelin tuketici tarafindan talep edilmeyen ek hizmetler saglamasi veya onarim
+veya bakım icin gerekli olmayan mallar saglamasi halinde, tuketici bu ek hizmetler
+veya mallar icin cayma hakkina sahiptir;
+i) teslimattan sonra ambalaji acilan, muhurlu ambalajdaki sesli veya goruntu
+kayitlari ya da bilgisayar yazilimlarina iliskin sozlesmeler;
+j) gunluk gazeteler, dergiler veya magazinlerin tedariki (abonelik sozlesmeleri hariç);
+k) acik arttirma yoluyla kurulan sozlesmeler;
+l) konut amaci disinda konaklama hizmetleri, mallarin tasinmasi, arac kiralama,
+yemek hizmetleri, bos zaman, eglence, spor veya kultur etkinlikleri ile ilgili
+hizmetlere iliskin ve sozlesmede hizmetin gunu veya sureci belirtilen sozlesmeler;
+m) tuketicinin ucret odemekle yukumlu oldugu ve maddi bir tasiyici uzerinden
+sunulmayan dijital icerigin saglanmasina iliskin sozlesmelerde, ifaya tuketicinin
+acik ve onceden verdigi onayla baslanmis, tuketici ifa baslamadan once cayma
+hakkini kaybedecegi konusunda bilgilendirilmis ve bunu kabul etmis ve profesyonel
+tuketiciye Tuketici Haklari Kanunu'nun 15(1)-(2) veya 21(1) maddesine uygun
+onay saglamissa.
+ n) tuketici ucret odemekle yukumlu oldugu hizmetlerde, tuketicinin acik talebiyle
+profesyonel kendisine gelmis ve hizmet tuketicinin acik ve onceden rızasi ile tam
+olarak yerine getirilmis ise.
+14.StartUp, daha once Musteriye verilen satin alma belgelerinde duzeltme yapar
+(duzeltme KDV faturasi veya duzeltme spesifikasyonu).
+§ 12 Musteri tarafindan odenen tutarin iadesi
+StartUp, 14 (yazi ile: ondort) takvim gunu icinde, Musterinin odeme yaptigi ayni
+odeme aracini kullanarak, Musterinin kendisi icin masraf dogurmayan baska bir iade
+yontemine acikca onay vermedigi surece, asagidaki durumlarda odeme iadesi yapar:
+a) onceden odenmis bir sipariste sozlesmeden tamamen veya kismen cayma (bu durumda
+fiyatin ilgili kismi iade edilir);
+b) sikayetin kabul edilmesi ve hasarli Malin onarilamaması veya yenisiyle
+degistirilememesi veya Hizmet / Dijital Hizmetin sozlesmeye uygun saglanamaması;
+c) Urun fiyatinda indirim hakkinin kabul edilmesi.
+§ 13 Bulten
+1. Musteri, kayit formunda veya Sitede uygun secenegi secerek, e-posta dahil olmak
+uzere ticari bilgilendirme almayi kabul edebilir. Bu onay verilirse Musteri, StartUp
+bultenini (Bulten) belirtilen e-posta adresinde alir.
+2. Musteri, StartUp'yi bilgilendirerek Bulten aboneligini istedigi zaman iptal edebilir.
+§ 14 StartUp iletisim bilgileri
+Musteri StartUp ile iletisime gecebilir:
+1) telefon: +48503427781
+Page 17 of 23
+
+--- Page 18 ---
+2) e-posta: support@roxstreamai.com
+§ 15 Son hukumler
+1. StartUp, elektronik olarak saglanan hizmetlerin, Internetin kamusal niteliginden
+kaynaklanan riskleri oldugunu, ozellikle Musterinin ilettigi verilerin yetkisiz ucuncu
+kisiler tarafindan elde edilmesi veya degistirilmesi riskini belirtir. Bu riski azaltmak
+icin Musteri, guncel antivirus programlari kullanmak, guncel web tarayicilari ve
+isletim sistemleri kullanmak ve acik erisim noktalarini kullanmamak gibi uygun
+ guvenlik onlemleri almalıdır.
+2. Yasal olarak izin verilen en genis kapsamda StartUp, Musterinin belirttigi e-posta
+adresine giden mesajlarin posta sunucusu yoneticileri tarafindan engellenmesinden
+veya Musterinin bilgisayarina yuklu yazilimlar tarafindan e-postalarin silinmesi ve
+engellenmesinden sorumlu degildir.
+3. StartUp, Musterinin kullandigi ekipman ve altyapidan, bunlar dahil, kamu veri
+iletisim aglarinin arizalanmasi nedeniyle Siteye erisimin olmamasi veya bozulmasindan
+sorumlu degildir.
+4. StartUp, Sitenin kullanimi sirasinda Musterinin BT sisteminde Urun gorsellestirmesinin
+cok sayida faktore bagli oldugunu belirtir; ekran tipi, en-boy orani, cozum, arka
+ aydinlatma, kullanilan teknolojiler, kontrol elektronigi ve ayarlar bunlara dahildir.
+Musterinin BT sistemindeki gorsellestirme ile Urunun gercek gorunumu arasindaki
+farklar sikayet nedeni olamaz.
+5. StartUp, Sitede yer alan tum markalarin (logo, logotip, marka adlari vb.), grafik
+malzemelerin veya fotograflarin yasal koruma altinda oldugunu ve sadece bilgi amaciyla
+kullanildigini belirtir.
+6. Yasal olarak izin verilen en genis kapsamda StartUp, mucbir sebep, yetkisiz ucuncu
+kisilerin fiilleri veya Sitenin Musterinin teknik altyapisiyla uyumsuzlugu nedeniyle
+Sitenin isleyisinde olusan kesintiler dahil bozulmalardan sorumlu degildir.
+7. StartUp, ozellikle bakim, gelistirme veya modernizasyon calismalari icin Sitenin
+faaliyetlerini gecici olarak durdurma hakkini sakli tutar.
+8. Sitede sunulan tum Urun adlari tanimlama amacli olup, Sanayi Mulkiyeti Kanunu
+hukumleri uyarinca korunabilir veya rezerve edilmis olabilir.
+9. StartUp, Sitenin fikri mulkiyet haklariyla korunan icerikler (Site icerigi, duzen,
+ grafikler, fotograflar vb.) icerdigini belirtir. Musteriler ve ziyaretciler, StartUp ve
+ucuncu taraflarin fikri mulkiyet haklarina (telif haklari ve marka haklari gibi)
+saygi gostermeyi kabul eder. Bu hükümlerin ihlalinden Musteri veya ziyaretci
+tek basina sorumludur.
+Page 19 of 23
+
+--- Page 19 ---
+10.Musteri, Sitede hukuka aykiri, yasa disi, ahlaka aykiri veya ucuncu taraflarin
+menfaatlerini ihlal eden icerik yayimlayamaz; pornografik, mustehcen veya baskalarinin
+onurunu zedeleyen iceriklere baglanti veremez.
+11.Musteri, Sitenin duzgun isleyisini etkileyebilecek her türlü faaliyetten, ozellikle
+Hizmetin isleyisine veya teknik unsurlarina mudahaleden kacinmalidir.
+12.StartUp, Sitenin kayitli Musterilerini Sartlar ve Kosullardaki her degisiklikten
+haberdar edecegini ve kayit sirasinda verilen e-posta adresine bildirim gonderecegini
+taahhut eder. Musteri bu bilgiyi aldiginda hesabini diledigi zaman silebilir. Sartlar ve
+Kosullarda yapilan degisiklikler, degisikliklerin yururluge girmesinden once
+kurulan sozlesmeleri etkilemez.
+13.Bu Sartlar ve Kosullarda duzenlenmeyen tum konularda, ozellikle su kanunlar
+uygulanir:
+1) 23 Nisan 1964 tarihli Medeni Kanun;
+2) 30 Mayis 2014 tarihli Tuketici Haklari Kanunu
+3) 18 Temmuz 2002 tarihli Elektronik Hizmetlerin Sunulmasi Kanunu.
+14.Bu Sartlar ve Kosullar temelinde kurulan Sozlesmelerden kaynaklanan
+uyusmazliklar, StartUp icin yetkili mahkeme tarafindan cozulur. Bu hüküm, Tuketici
+ile yapilan Sozlesmelere uygulanmaz.
+15.Belirli bir mahkeme disi uyusmazlik cozumu yonteminin kullanilmasi, ancak Musteri
+ve StartUp'nin karsilikli rızasi ile mumkundur. Mahkeme disi uyusmazlik cozumuyle
+ilgili ayrintili prosedürler, Rekabet ve Tuketici Koruma Ofisi'nin web sitesinde
+mevcuttur: www.uokik.gov.pl, Il Ticaret Denetim Mufettisliklerinin web sitelerinde
+ve ilce (sehir) tuketici ombudsmanlarinda.
+16.Bu Sartlar ve Kosullar su tarihten itibaren gecerlidir: 7 Subat 2026
+Page 20 of 23
+
+--- Page 20 ---
+Mahkeme disi uyusmazlik cozumu hakkinda bilgilendirme
+21 Mayis 2013 tarihli (AB) 524/2013 sayili Avrupa Parlamentosu ve Konsey
+Tuzugu (tuketici uyusmazliklarinin cevrimici cozumune iliskin ODR Tuzugu)
+uyarinca, Varshova'da merkezli Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp",
+ODR (cevrimici uyusmazlik cozumu) platformuna elektronik bir baglanti saglar:
+https://webgate.ec.europa.eu/odr. ODR platformu, isletmeler ile tuketiciler arasindaki
+uyusmazliklarin mahkeme disi cozumunu saglar. Bu yontemle uyusmazlik cozumu
+istege baglidir.
+Page 21 of 23
+
+--- Page 21 ---
+CAYMA FORMU ORNEGI
+(Bu form sadece sozlesmeden caymak istiyorsaniz doldurulup gonderilmelidir)
+………………………………………………
+(gonderenin adi soyadi)
+………………………………………………
+………………………………………………
+(gonderenin adresi)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+kat,
+02-017 Varshova
+Tebligat adresi
+…………………………………………………….
+SOZLESMEDEN CAYMA
+Ben, asagida imzasi bulunan, asagidaki sozlesmeden cayiyorum:
+1. Sozlesme tarihi ..........................................................................
+2. Sozlesme / siparis numarasi ……………………………………………………………….
+3. Sozlesmenin konusu ............................................................
+……………………………
+Musteri imzasi
+Tarih: ………………………….
+Page 22 of 23
+
+--- Page 22 ---
+SIKAYET SABLONU
+(Bu form sadece sikayette bulunmak istiyorsaniz doldurulup gonderilmelidir)
+………………………………………………
+(gonderenin adi soyadi)
+………………………………………………
+………………………………………………
+(gonderenin adresi)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+kat,
+02-017 Varshova
+Tebligat adresi
+……………………………………………………..
+SIKAYET
+Ben, asagida imzasi bulunan, asagidaki tarihli sozlesme/siparis hakkinda sikayette
+bulunuyorum ............................................... no. .............................................., konusu ...
+....................................................................................................................................................................
+Sikayet nedeni: ......................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+(sikayet nedenini aciklayin)
+Yukarıdakiler dogrultusunda talebim ............................................... ..........................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+……………………………
+Musteri imzasi
+
+--- Page 23 ---
+Tarih: ………………………….
+Page 23 of 23

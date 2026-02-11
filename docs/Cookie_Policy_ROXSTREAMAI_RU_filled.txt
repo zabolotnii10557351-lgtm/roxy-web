@@ -1,0 +1,39 @@
+Politika Cookie
+Cookie - tekstovye fayly, avtomaticheski sozdavaemye brauzerami pri poseshchenii ili ispolzovanii sajtov. Oni otpravlyayutsya sajtom i sokhranyayutsya na ustrojstve polzovatelya. Operator ispolzuet ih, chtoby obespechit pravilnuyu rabotu sajta, bezopasnost i uluchshenie proizvoditelnosti.
+
+Operator dannyh
+Operatorom personalnyh dannyh yavlyaetsya FUNDACJA ROZWOJU PRZEDSIEBIORCZOSCI
+"TWOJ STARTUP" s mestonakhozhdeniem v Varshave (adres: ul. Zurawia 6/12, lok. 766, 00-503 Varshava), vnesena v Nacionalnyj sudebnyj reestr resheniem Okrugnogo suda goroda Varshava, 12-y hozyajstvennyj otdel, KRS 0000442857; NIP: 5213641211; REGON: 146433467, kontakty: tel. +48503427781, e-mail support@roxstreamai.com v svyazi s organizovannoy chast'yu predpriyatiya RoxStreamAI, osushchestvlyaemoy Veronikoy Shved.
+
+Tipy cookie
+My ispolzuem sleduyushchie tipy cookie na nashih saytah:
+Obyazatelnye/Tehnicheskie: Neobhodimy dlya pravilnoy raboty sajta. Ustanavlivayutsya dlya zapominaniya sessiy vhoda, zapolneniya form i fiksacii togo, chto vas proinformirovali ob ispolzovanii cookie.
+Funkcionalnye: Zapominayut i nastaivayut platformu pod vashi vybori, naprimer avtomaticheski podstavlyayut poslednij ispolzovannyy e-mail dlya vhoda.
+Analiticheskie: Pozvolyayut proverit chislo poseshchenij i istochniki trafika. Pomogayut ponimat, kakie stranicy populyarny. Ispolzuyutsya dlya analiza statistiki i uluchsheniya proizvoditelnosti. Nashi sajty mogut ispolzovat analiticheskie i marketingovye instrumenty, vnedrennye Fondaciej ili StartUp (v zavisimosti ot konfiguracii servisa).
+Marketingovye: Позволяют подстраивать reklamnyj kontent pod interesy polzovatelya, ne tolko na nashem portale, no i vne ego. Могut ustanavlivatsya reklamnymi partnerami. Na osnovanii informacii iz etih cookie i aktivnosti v drugih servisah stroitsya profil interesov.
+Cookie socialnyh setej: Ustanavlivayutsya nashimi partnerami dlya nastroyki reklamogo kontenta v socialnyh setyah. Stroiat profil interesov polzovatelya dlya adaptacii kontenta pod individualnye potreby.
+
+Srok hraneniya cookie
+Sessionnye cookie - hranjatsya na ustrojstve do momenta vyhoda s sajta, naprimer pri zakrytii brauzera.
+Postoyannye cookie - ostayutsya do udalenija polzovatelem ili do istecheniya sroka, ukazannogo v brauzere.
+
+Tipy sobiraemyh dannyh
+Vkluchayut:
+- IP-adres ustrojstva polzovatelya
+- tip ustrojstva
+- vremya, provedенное na sajte
+- deystviya na sajte
+- mesto, otkuda осуществляется podklyuchenie
+
+Kak otозvat soglasie
+Nekotorye cookie zagruzhayutsya brauzerom pri vhode na sajt. Dlya blokirovki cookie ispolzujte sposob, dostupnyj v vashem brauzere:
+- Firefox
+- Chrome
+- Microsoft Edge
+- Safari
+Blokirovka cookie mozhet privesti k nepolnoj ili nepravильной rabote sajta, no sajt ostanetsya dostupnym.
+
+Kontakt
+Esli u vas est voprosy po obrabotke personalnyh dannyh ili vy hotite realizovat svoi prava, svyazhites' s nami po adresam, ukazannym v razdele "Operator dannyh".
+Bolshe informacii o nas i vashih pravah: https://www.roxstreamai.com/privacy
+V sluchae narusheniya pravil zashchity personalnyh dannyh vy imeete pravo podать zhalobu Prezidentu Upravleniya po zashchite personalnyh dannyh: https://uodo.gov.pl/

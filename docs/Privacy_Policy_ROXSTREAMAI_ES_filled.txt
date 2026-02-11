@@ -1,0 +1,37 @@
+POLITICA DE PRIVACIDAD - RoxStreamAI
+1. Quien es el responsable de sus datos?
+El responsable de sus datos personales es la Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" con sede en Varsovia (direccion de la sede: ul. Zurawia 6/12, lok. 766, 00-503 Varsovia).
+La presente Politica de Privacidad se aplica a los servicios de la Fundacion prestados por la parte organizada de la empresa RoxStreamAI, datos de contacto: telefono +48503427781, correo electronico support@roxstreamai.com, llevados a cabo por Veronika Shved (nombre y apellido de la Beneficiaria).
+2. Por que tratamos sus datos?
+A. En relacion con los servicios prestados a traves de RoxStreamAI (https://www.roxstreamai.com) consistentes en la prestacion de servicios digitales en un modelo de suscripcion (SaaS), es decir, para la celebracion o ejecucion de un contrato (art. 6.1.b del RGPD), sus datos se conservaran hasta la ejecucion del contrato.
+B. Para fines de marketing y promocion de productos ofrecidos por la Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" con sede en Varsovia, lo cual constituye nuestro interes legitimo (art. 6.1.f del RGPD). Sus datos se trataran hasta que usted se oponga (si no envia informacion comercial, elimine este punto).
+C. Cumplimiento de obligaciones legales derivadas de la cooperacion emprendida (art. 6.1.c del RGPD), relacionadas con la obligacion de conservar determinados documentos durante el plazo legal, por ejemplo:
+- Ley de Contabilidad de 29.09.1994 (Diario de Leyes de 2017, pos. 1858)
+- Ordenanza Tributaria de 29 de agosto de 1997 (Diario de Leyes de 1997 No. 137, pos. 926);
+- Ley de Prevencion del Blanqueo de Capitales y Financiacion del Terrorismo de 1 de marzo de 2018 (Diario de Leyes de 2018 pos. 723).
+D. Para la posible formulacion, ejercicio o defensa de reclamaciones, lo cual constituye nuestro interes legitimo (art. 6.1.f del RGPD). Los datos se trataran hasta la presentacion de reclamaciones;
+E. En caso de consentimiento, sus datos se trataran dentro del alcance y con el fin indicado en el consentimiento (base legal: art. 6.1.a del RGPD). Los datos se trataran hasta que se retire el consentimiento.
+3. Que datos se tratan?
+Para celebrar el contrato, requerimos que proporcione los datos en el formulario de contrato/pedido (si no los proporciona, no celebraremos el contrato ni completaremos el pedido). Ademas, podemos solicitar datos opcionales que no afectan a la celebracion del contrato (si no los recibimos, no podremos, por ejemplo, llamar al numero de contacto).
+Durante la vigencia del contrato, al prestar los servicios, entramos en posesion de otros datos suyos. La aparicion de sus datos personales en nuestros sistemas es consecuencia del funcionamiento de los servicios que utiliza.
+4. Con quien se comparten los datos?
+A. Con autoridades publicas, en la medida en que no reciban los datos en el marco de un procedimiento especifico previsto por la ley, p. ej., en relacion con la prevencion del blanqueo de capitales;
+B. Con entidades que tratan sus datos personales en nombre de la Fundacion sobre la base de un contrato de tratamiento de datos (encargados del tratamiento). Incluyen: beneficiarios de la Fundacion, especialistas de TI, empresas de archivo, empresas de hosting;
+C. Con responsables externos (los llamados responsables conjuntos a quienes se facilitan los datos), p. ej., asesores legales y abogados, empresas de mensajeria o correo, entidades compradoras de deudas, en caso de falta de pago de nuestras facturas;
+D. Con entidades fuera del EEE, pero solo si es necesario y con un nivel de proteccion adecuado, en particular mediante:
+   a. cooperacion con entidades que tratan datos personales en paises para los que la Comision Europea haya emitido una decision de adecuacion;
+   b. aplicacion de las clausulas contractuales tipo emitidas por la Comision Europea.
+El responsable siempre informa, en el momento de la recogida, de la intencion de transferir datos personales fuera del EEE.
+5. Se elaboran perfiles de datos?
+Sus datos no seran objeto de perfilado, es decir, analisis automatizado de sus datos ni elaboracion de predicciones sobre preferencias o comportamiento futuro (el perfilado significa, por ejemplo, en marketing, determinar que oferta puede interesarle mas en base a elecciones anteriores).
+6. Cuales son sus derechos?
+A. Derecho de acceso a los datos personales que tratamos (art. 15 del RGPD);
+B. Derecho a rectificar los datos personales confiados, incluida su correccion (art. 16 del RGPD);
+C. Derecho a suprimir los datos personales de nuestros sistemas, el llamado "derecho al olvido" - si a su juicio no hay fundamento para el tratamiento, puede solicitar su supresion (art. 17 del RGPD);
+D. Derecho a limitar el tratamiento de datos personales: puede solicitar que limitemos el tratamiento solo a su almacenamiento o a las actividades acordadas, si tenemos datos incorrectos o los tratamos indebidamente; o si no desea suprimirlos porque son necesarios para el establecimiento, ejercicio o defensa de reclamaciones; o durante la oposicion al tratamiento (art. 18 del RGPD);
+E. Derecho a la portabilidad de los datos: tiene derecho a recibir de nosotros, en un formato estructurado, de uso comun y lectura mecanica (por ejemplo, ".csv"), los datos personales que le conciernen que tratamos sobre la base de un contrato o consentimiento. Este derecho se concede cuando los datos estan en formato electronico; si solo estan en papel, no podra ejercerlo. Puede encargarnos transferir estos datos directamente a otra entidad (art. 20 del RGPD);
+F. Derecho a retirar el consentimiento: en cualquier momento puede retirar el consentimiento para el tratamiento de datos personales basado en el consentimiento (art. 7.3 del RGPD). La retirada no afecta a la licitud del tratamiento previo. La retirada se realiza enviando un correo electronico a: privacy@roxstreamai.com.
+G. Derecho de oposicion: puede oponerse al tratamiento si la base es nuestro interes legitimo (art. 21 del RGPD). Tras examinar su solicitud, ya no podremos tratar los datos objeto de la oposicion sobre esta base, salvo que demostremos la existencia de motivos legitimos imperiosos que prevalezcan sobre sus intereses, derechos y libertades;
+H. Si considera que el tratamiento vulnera el RGPD, tiene derecho a presentar una reclamacion ante la autoridad de control, es decir, el Presidente de la Oficina de Proteccion de Datos Personales.
+7. Contacto
+Si necesita informacion adicional relacionada con la proteccion de datos personales o desea ejercer sus derechos, contacte con nosotros en: rodo@twojstartup.pl

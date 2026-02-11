@@ -1,0 +1,39 @@
+Polityka Cookie
+Cookie - tse tekstovi fayly, yaki avtomatychno stvoriuiutsia brauzeramy pid chas vidviduvannia abo vykorystannia veb-saitiv. Vony nadsylaiutsia saitom ta zberihaiutsia na prystroi korystuvacha. Volodilets vykorystovuie yikh dlia korektnoi roboty saitu, zabezpechennia bezpeky ta polipshennia produktyvnosti.
+
+Volodilets danykh
+Volodiltsem personalnykh danykh ye FUNDACJA ROZWOJU PRZEDSIEBIORCZOSCI
+"TWOJ STARTUP" z ofisom u Varshavi (adres: ul. Zurawia 6/12, lok. 766, 00-503 Varshava), zareiestrovana u Natsionalnomu sudovomu reiestri Okrugnym sudom m. Varshavy, 12-ta hospodarska palata, KRS 0000442857; NIP: 5213641211; REGON: 146433467; kontakty: tel. +48503427781, e-mail support@roxstreamai.com u zviazku z orhanizovanoiu chastynoiu pidpryiemstva RoxStreamAI, zdiisniuvanoiu Veronikoiu Shved.
+
+Typy cookie
+My vykorystovuiemo nastupni typy cookie na nashykh saitakh:
+Nehidni/Tehnichni: Tsі cookie neobkhidni dlia nalezhnoi roboty saitu. Vony vstanovliuiutsia, shchob zapam'iatuvaty sesiї vhody, zapovnennia form i fakt, shcho vy byli proinformovani pro vykorystannia cookie.
+Funktsionalni: Zapam'iatuvuiut ta adaptuiut platformu do vashykh vyboriv, napr., dozvoliaiut avtomatychne zapovnennia e-mail adresy, yaku vy ostannim razom vykorystovuvaly dlia vhody.
+Analitychni: Dozvoliaiut nam pereviriaty kilkist vidviduvan ta dzherela trafiku. Dopomagaiut vyznachyty, yaki storinky populiarni, a yaki ni. Vykorystovuiutsia dlia analizu statystyky ta polipshennia produktyvnosti storinok. Nashi saity mozhut vykorystovuvaty analytychni ta marketingovi instrumenty, vprovadzhene Fondom abo StartUp (zalezno vid konfiguratsii Servisu).
+Marketynhovi: Dozvoliaiut adaptuvaty reklamnyi kontent do interesiv korystuvacha ne lyshe v mezhakh nashoho portalu, ale й poza nym. Mozhut buty vstanovleni reklamnymy partneramy. Na osnovi informatsii z tsykh cookie ta aktyvnosti v inshykh servisakh formuietsia profil interesiv.
+Cookie sotsialnykh merezh: Vstanovliuiutsia nashymy partneramy dlia adaptatsii reklamnoho kontentu u sotsialnykh merezhakh. Vony formuiut profil interesiv korystuvacha dlia adaptatsii kontentu do indyvidualnykh potreb.
+
+Strik zberihannia cookie
+Session cookie: zberihaiutsia na prystroi do momentu vykhodu z saitu, napryklad zakryttia brauzera.
+Postiini cookie: zalyshaiutsia, poky yikh ne vydalyty v ruchnu abo ne zavershytsia termin, vkazanyi u brauzeri.
+
+Typy zibranykh danykh
+Vkluchaiut:
+- IP-adres prystroiu korystuvacha
+- typ prystroiu
+- chas, provedennyi na saiti
+- dii na saiti
+- mistse, z yakoho vstanovleno ziednannia
+
+Yak vidklykaty zghodu
+Deiaki cookie zavantazhuiutsia brauzerom pid chas vstupu na sait. Shchob zablokuvaty cookie, vykorystovuite metod, dostupnyi u vashomu brauzeri:
+- Firefox
+- Chrome
+- Microsoft Edge
+- Safari
+Blokuvannia cookie mozhe pryzvesty do nepovernoi або nepravylnoi roboty saitu, ale sait vse odno bude dostаupnyj.
+
+Kontakt
+Yakshcho u vas ye pytannia shchodo obrobky personalnykh danykh abo vy khochete realizuvaty svoi prava, vy mozhete zvernutysia za adresamy, vkazanymy v rozdili "Volodilets danykh".
+Bilshе informatsii pro nas ta vashi prava: https://www.roxstreamai.com/privacy
+U razi porushennia pravil zakhystu personalnykh danykh vy maiete pravo podaty skarhu do Prezesa Uradu z zakhystu personalnykh danykh: https://uodo.gov.pl/

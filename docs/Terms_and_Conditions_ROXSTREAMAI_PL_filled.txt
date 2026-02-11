@@ -1,0 +1,791 @@
+--- Page 1 ---
+REGULAMIN RoxStreamAI
+§ 1 Postanowienia ogolne.........................................................................................................................1
+§ 2 Wymagania techniczne niezbedne do korzystania z Serwisu.............................................................4
+§ 3 Sprzedaz Towarow - warunki i termin realizacji zamowien...............................................................4
+§ 4 Odpowiedzialnosc za niezgodnosc Towarow z Umowa........................................................................6
+§ 5 Swiadczenie Uslug..............................................................................................................................8
+§ 6 Odpowiedzialnosc za niezgodnosc Uslug z Umowa............................................................................9
+§ 7 Umowy o dostarczanie Tresci Cyfrowych lub Uslug Cyfrowych..........................................................9
+§ 8 Odpowiedzialnosc za niezgodnosc tresci cyfrowej lub uslugi cyfrowej z Umowa............................11
+§ 9 Ceny Produktow i koszty dostawy.....................................................................................................13
+§ 10 Sposoby platnosci............................................................................................................................14
+§ 11 Prawo odstapienia od umowy;........................................................................................................14
+§ 12 Zwrot kwoty zaplaconej przez Klienta............................................................................................17
+§ 13 Newsletter......................................................................................................................................17
+§ 14 Informacje kontaktowe StartUp......................................................................................................18
+§ 15 Postanowienia koncowe..................................................................................................................18
+Informacja o pozasadowym rozwiazywaniu sporow..............................................................................20
+WZOR FORMULARZA ODSTAPIENIA.....................................................................................................21
+WZOR REKLAMACJI...............................................................................................................................22
+1
+§ 1 Postanowienia ogolne
+1. ……………. .Serwis internetowy RoxStreamAI dzialajacy pod adresem https://www.roxstreamai.com..
+(zwany dalej: Serwis) prowadzony jest przez: Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"
+(Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp"), z siedziba w Warszawie przy ul. Zurawia 6/12
+lok. 766, 00-503 Warszawa, adres do doreczen: Atlas Tower, Al. Jerozolimskie 123a, 18 pietro,
+02-017 Warszawa, wpisana do Krajowego Rejestru Sadowego prowadzonego przez Sąd Rejonowy dla m.st.
+Warszawy w Warszawie, XII Wydzial Gospodarczy Krajowego Rejestru Sadowego (KRS) nr 0000442857,
+NIP: 521-364-12-11, REGON: 146433467, numer BDO: 000460502.
+2. Postanowienia niniejszego Regulaminu (T&C) maja zastosowanie do dzialan wykonywanych na rzecz
+Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" przez zorganizowana czesc przedsiebiorstwa
+RoxStreamAI dzialajaca przy Oddziale Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp",
+reprezentowana przez Veronika Shved. (adres e-mail: support@roxstreamai.com. tel.: +48503427781..).
+Osoba wskazana w niniejszym ustepie jest wyznaczona przez Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp" do kontaktu w zakresie realizacji postanowien niniejszego Regulaminu.
+3. Niniejszy Regulamin okresla w szczegolnosci:
+Page 1 of 23
+
+--- Page 2 ---
+a) zasady korzystania z Serwisu;
+b) warunki skladania zamowien na Produkty dostepne w Serwisie;
+c) termin i zasady realizacji zamowien;
+d) warunki i formy platnosci
+e) prawo Klienta do odstapienia od umowy;
+f) skladanie i rozpatrywanie reklamacji
+g) szczegolne prawa Klienta bedacego konsumentem.
+4. StartUp sprzedaje i swiadczy Uslugi za posrednictwem Serwisu, wykorzystujac
+srodki porozumiewania sie na odleglosc. Umowy zawierane przez Klienta ze
+StartUp za posrednictwem Serwisu sa umowami zawieranymi na odleglosc, w
+rozumieniu ustawy z dnia 30 maja 2014 r. o prawach konsumenta.
+5. Klient jest uprawniony i zobowiazany do korzystania z Serwisu zgodnie z jego
+przeznaczeniem oraz zasadami wspolzycia spolecznego i dobrymi obyczajami.
+6. Przegladanie Serwisu nie wymaga rejestracji, a samodzielne skladanie zamowien
+na Produkty nie wymaga zalozenia konta.
+7. Regulamin jest dostepny nieodplatnie w Serwisie, w formie umozliwiajacej jego
+pozyskanie, odtworzenie i utrwalenie.
+8. Klient jest zobowiazany do zapoznania sie z trescia Regulaminu. Korzystanie z
+Serwisu jest mozliwe tylko po zapoznaniu sie i zaakceptowaniu Regulaminu.
+9. Klient musi byc osoba posiadajaca pelna zdolnosc do czynnosci prawnych.
+10.Definicje uzyte w niniejszym Regulaminie maja nastepujace znaczenie:
+a) Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" (Fundacja Rozwoju
+Przedsiebiorczosci "Twoj StartUp"), z siedziba w Warszawie przy ul. Zurawia
+6/12 lok. 766, 00-503 Warszawa, adres do doreczen: Atlas Tower, Aleje
+Jerozolimskie 123A, 18 pietro, 02-017 Warszawa, wpisana do Krajowego
+Rejestru Sadowego (KRS) prowadzonego przez Sad Rejonowy dla m.st.
+Warszawy w Warszawie, XII Wydzial Gospodarczy Krajowego Rejestru
+Sadowego (KRS) nr 0000442857, posiadajaca NIP: 521-364-12-11, REGON:
+146-433-467, numer BDO: 000460502;
+b) Klient - osoba korzystajaca z Serwisu, kupujaca Towary lub Uslugi oferowane
+przez StartUp w Serwisie;
+c) Konsument - osoba fizyczna dokonujaca czynnosci prawnej z przedsiebiorca,
+ktora nie jest bezposrednio zwiazana z jej dzialalnoscia gospodarcza lub
+zawodowa;
+d) Uslugi - uslugi swiadczone przez StartUp, oferowane Klientom za
+posrednictwem Serwisu, z wykluczeniem Uslug Cyfrowych;
+e) Usluga Cyfrowa - usluga cyfrowa w rozumieniu art. 2 pkt 5a ustawy z dnia
+30 maja 2014 r. o prawach konsumenta, swiadczona przez StartUp, oferowana
+Klientom za posrednictwem Serwisu;
+f) Towary - rzeczy ruchome sprzedawane przez StartUp Klientom za posrednictwem
+Serwisu;
+Page 2 of 23
+
+--- Page 3 ---
+g) Produkty - Towary, Uslugi lub Uslugi Cyfrowe;
+h) Serwis - strona internetowa pod adresem https://www.roxstreamai.com., za
+posrednictwem ktorej StartUp swiadczy uslugi elektroniczne na rzecz Klienta
+oraz oferuje Produkty Klientom i umozliwia zawieranie Umow;
+i) Umowa - umowa zawarta pomiedzy StartUp a Klientem za posrednictwem Serwisu;
+j) Konto - indywidualne konto Klienta w Serwisie, umozliwiajace korzystanie z
+Uslug i Uslug Cyfrowych oraz zawieranie Umow po zalogowaniu;
+k) dni robocze - wszystkie dni z wyjatkiem sobot, niedziel i swiat;
+l) Regulamin - niniejszy Regulamin (T&C).
+11.W przypadku uzasadnionego podejrzenia, ze Klient podal nieprawdziwe dane,
+StartUp ma prawo odstapic od realizacji Umowy, informujac Klienta o tym fakcie.
+12.Jezeli Klient poda bledne lub niedokladne dane, w szczegolnosci bledny lub
+niedokladny adres, StartUp nie ponosi odpowiedzialnosci za brak dostarczenia lub
+opoznienie w dostawie Towarow lub niewykonanie Uslugi lub Uslugi Cyfrowej, w
+najszerszym zakresie dozwolonym przez prawo.
+13.Informacje zawarte w Serwisie, w szczegolnosci reklamy, ogloszenia i cenniki, nie
+stanowia oferty w rozumieniu art. 66 ustawy z dnia 23 kwietnia 1964 r. Kodeks
+cywilny. Jednakze informacje zawarte w Serwisie stanowia zaproszenie do zawarcia
+Umowy, o ktorym mowa w art. 71 Kodeksu cywilnego.
+14.StartUp przekaze Konsumentowi, w sposob jasny i zrozumialy, bezposrednio
+przed zlozeniem zamowienia przez Klienta, informacje w szczegolnosci o:
+a) glownych cechach swiadczenia, z uwzglednieniem przedmiotu swiadczenia i
+sposobu porozumiewania sie z Klientem,
+b) lacznej cenie lub wynagrodzeniu za swiadczenie wraz z podatkami, a gdy
+ze wzgledu na charakter przedmiotu swiadczenia nie mozna, rozsadznie
+oceniajac, wczesniej obliczyc jego wysokosci - o sposobie, w jaki bedzie ona
+obliczana, a takze o oplatach za transport, dostarczenie, uslugi pocztowe i
+innych kosztach, a gdy wysokosci tych oplat nie mozna ustalic - o obowiazku
+ich uiszczenia;
+c) prawie odstapienia od umowy lub braku takiego prawa,
+d) czasie trwania umowy lub sposobie i przeslankach rozwiazania umowy - jezeli
+umowa jest zawierana na czas nieokreslony lub ma ulegac automatycznemu
+przedluzeniu;
+e) minimalnym czasie trwania zobowiazan Klienta wynikajacych z umowy.
+15.Gdy StartUp przewiduje mozliwosc przyjmowania zamowien indywidualnych
+(spersonalizowanych) od Klientow, takie zamowienia moga byc skladane przez
+Klientow za posrednictwem adresu e-mail StartUp wskazanego w Serwisie. W takim
+przypadku StartUp przygotowuje wycene i przesyla ja na adres e-mail wskazany
+przez Klienta.
+16.Termin realizacji zamowienia indywidualnego (spersonalizowanego) wynosi 30 dni
+od dnia zawarcia Umowy, chyba ze StartUp poinformuje Klienta, najpozniej przed
+zlozeniem zamowienia, o innym terminie.
+17.Serwis obsluguje Klientow na terytorium Polski i na calym swiecie, chyba ze oferta
+StartUp w Serwisie zawiera odmienne postanowienia.
+§ 2 Wymagania techniczne niezbedne do korzystania z Serwisu
+1. Do przegladania Serwisu niezbede jest posiadanie:
+a) urzadzenia koncowego z dostepem do Internetu,
+b) przegladarki internetowej umozliwiajacej akceptacje plikow cookies; np.
+Internet Explorer, Microsoft Edge, Google Chrome, Mozilla Firefox, Opera lub
+Safari w aktualnej wersji;
+c) zaakceptowanych niezbednych plikow cookies.
+2. Aby korzystac z funkcjonalnosci Serwisu, w szczegolnosci rejestrowac sie w
+Serwisie lub skladac zamowienia na Produkty, niezbedne jest posiadanie aktywnego
+konta poczty elektronicznej (e-mail).
+3. Serwis wykorzystuje pliki cookies do prawidlowej realizacji Uslug, a takze w
+celu zapewnienia bezpieczenstwa. Blokowanie plikow cookies, jak rowniez
+stosowanie aplikacji zewnetrznych do blokowania plikow cookies, moze powodowac
+nieprawidlowe dzialanie Serwisu, a takze uniemożliwiac prawidlowa realizacje
+Uslugi, za co StartUp nie ponosi odpowiedzialnosci.
+§ 3 Sprzedaz Towarow - warunki i termin realizacji
+zamowien
+1. StartUp, za posrednictwem Serwisu, zawiera umowy sprzedazy Towarow z
+Klientami. Na podstawie umowy sprzedazy StartUp zobowiazuje sie do przeniesienia
+wlasnosci Towarow na Klienta i dostarczenia Towarow, a Klient zobowiazuje sie do
+odebrania Towarow i zaplaty ceny.
+2. Klient, aby zlozyc zamowienie, wskazuje Towary, ktore go interesuja, korzystajac
+z komendy "Do koszyka" lub innego rownowaznego sformulowania znajdujacego sie
+na stronie danego Towaru, a nastepnie wskazuje dane, sposob dostawy i platnosci.
+3. W koszyku Klient moze:
+a) dodawac i usuwac Towary oraz ich ilosci;
+b) wskazac adres, na ktory Towary maja byc dostarczone, oraz podac dane
+niezbedne do wystawienia faktury;
+c) wybrac sposob dostawy;
+d) wybrac sposob platnosci;
+e) dodac kod rabatowy (jezeli ma zastosowanie).
+4. Klient sklada zamowienie poprzez jego zatwierdzenie, wybierajac przycisk
+oznaczony "zamowienie z obowiazkiem zaplaty" lub inne rownowazne
+sformulowanie.
+5. Zlozenie i zatwierdzenie zamowienia rodzi po stronie Klienta obowiazek zaplaty
+ceny Towarow i kosztow dostawy. Z chwila potwierdzenia zamowienia przez StartUp
+dochodzi do zawarcia umowy sprzedazy miedzy StartUp a Klientem.
+6. Wysylka zakupionych Towarow realizowana jest w terminie do 30 dni roboczych od
+chwili potwierdzenia wplaty na rachunek bankowy StartUp, chyba ze Regulamin
+stanowi inaczej albo StartUp poinformowal Klienta, najpozniej przed zlozeniem
+zamowienia, o innym terminie.
+7. Towary zakupione w Serwisie wysylane sa na adres podany przez Klienta.
+8. Zamowienia za posrednictwem Serwisu mozna skladac 24 (slownie: dwadziescia
+cztery) godziny na dobe, 7 (slownie: siedem) dni w tygodniu. Zamowienia zlozone w
+soboty, niedziele lub swieta sa realizowane w nastepnym dniu roboczym.
+9. W przypadku gdy mozliwa jest realizacja jedynie czesci zamowienia, StartUp moze
+zaproponowac Klientowi przed potwierdzeniem zamowienia:
+a) anulowanie zamowienia w calosci (jesli Klient wybierze ta opcje, StartUp zostanie
+zwolniona z obowiazku realizacji zamowienia);
+b) anulowanie zamowienia w tej czesci, w ktorej realizacja w terminie nie jest
+mozliwa (jesli Klient wybierze ta opcje, zamowienie zostanie zrealizowane w
+czesci, a StartUp zostanie zwolniona z obowiazku realizacji w pozostalej czesci);
+c) swiadczenie zastepcze do uzgodnienia z Klientem. Po zatwierdzeniu przez Klienta
+zamowienie na swiadczenie zastepcze jest traktowane jako ostateczne;
+d) podzial zamowienia i wyznaczenie nowego terminu realizacji dla tej czesci
+zamowienia, ktorej wykonanie w pierwotnym terminie nie jest mozliwe (jesli Klient
+wybierze ta opcje, Towary wchodzace w sklad zamowienia beda wysylane w kilku
+oddzielnych przesylkach, a Klient poniesie dodatkowe koszty zwiazane z podzialem
+zamowienia na kilka przesylek).
+10.Jezeli Towary zamowione przez Klienta nie sa dostepne lub zamowienie Klienta nie
+moze byc zrealizowane z innych przyczyn, StartUp poinformuje Klienta, wysylajac
+informacje na adres e-mail w terminie 7 (slownie: siedmiu) dni od dnia zawarcia
+Umowy.
+11.Jezeli platnosc za Towary, ktore nie moga byc dostarczone w calosci lub w czesci,
+byla dokonana z gory, StartUp zwroci uiszczona kwote (lub roznice) Klientowi w
+terminie 14 (slownie: czternastu) dni od dnia zawarcia Umowy, zgodnie z warunkami
+okreslonymi w Regulaminie.
+12.StartUp moze zamieszczac w Serwisie, w odniesieniu do danego Towaru,
+informacje o liczbie dni roboczych, w jakich zostanie wyslana przesylka z
+zamowionymi Towarami. Informacja ta oznacza czas liczony od potwierdzenia
+zamowienia do wysylki zamowionych Towarow. Termin jest podawany z
+uwzglednieniem czasu realizacji wszystkich zamowionych Towarow.
+§ 4 Odpowiedzialnosc za niezgodnosc Towarow z Umowa
+1. Postanowienia niniejszego paragrafu, zgodnie z przepisami rozdzialu 5a ustawy z
+ dnia 30 maja 2014 r. o prawach konsumenta, maja zastosowanie do odpowiedzialnosci
+StartUp za niezgodnosc Towarow z Umowa zawarta z:
+a) Konsumentem, lub
+b) osoba fizyczna zawierajaca umowe bezposrednio zwiazana z jej dzialalnoscia
+ gospodarcza, gdy z tresci umowy wynika, ze nie ma ona dla tej osoby charakteru
+ zawodowego, wynikajacego w szczegolnosci z przedmiotu wykonywanej przez nia
+ dzialalnosci gospodarczej, udostepnionego na podstawie przepisow o Centralnej
+ Ewidencji i Informacji o Dzialalnosci Gospodarczej.
+2. StartUp zobowiazuje sie dostarczac Towary wolne od wad fizycznych i prawnych.
+3. Klient ma prawo zlozyc reklamacje, jesli Towary sa niezgodne z Umowa.
+4. Klient moze zlozyc reklamacje na pismie lub w formie dokumentowej na adres e-mail
+StartUp.
+5. Reklamacja Towarow wadliwych moze obejmowac jedno z nastepujacych zadan:
+a) naprawe Towarow;
+b) wymiane Towarow.
+6. Jezeli Towary sa niezgodne z Umowa, Klient moze zlozyc oswiadczenie o obnizeniu
+ceny lub odstapieniu od Umowy, gdy:
+a) StartUp odmowila doprowadzenia Towarow do zgodnosci z umowa zgodnie z art.
+43d ust. 2 ustawy z dnia 30 maja 2014 r. o prawach konsumenta;
+b) StartUp nie doprowadzila Towarow do zgodnosci z umowa zgodnie z art. 43d
+ust. 4-6 ustawy o prawach konsumenta z dnia 30 maja 2014 r.;
+c) brak zgodnosci Towarow z umowa utrzymuje sie, mimo ze StartUp probowala
+doprowadzic Towary do zgodnosci z umowa;
+d) brak zgodnosci Towarow z umowa jest na tyle istotny, ze uzasadnia obnizenie
+ceny lub odstapienie od umowy bez uprzedniego skorzystania ze srodkow ochrony
+okreslonych w art. 43d ustawy o prawach konsumenta z dnia 30 maja 2014 r.;
+e) z oswiadczenia StartUp lub okolicznosci wynika, ze nie doprowadzi ona Towarow
+do zgodnosci z umowa w rozsadzny czasie lub bez nadmiernych niedogodnosci dla
+konsumenta.
+7. Reklamacja dotyczaca wad Towarow zostanie rozpatrzona w terminie 14 (slownie:
+czternastu) dni od jej otrzymania.
+8. W przypadku braku odpowiedzi StartUp na reklamacje w terminie uznaje sie, ze
+reklamacja zostala uznana.
+9. StartUp poinformuje Klienta o wyniku reklamacji na papierze lub innym trwalym
+nosniku.
+10.Jezeli reklamacja dotyczaca Towarow zostanie uznana, StartUp, w zaleznosci od
+zadania Klienta, naprawi Towary, wymieni Towary, obniży cene lub zwroci pelna
+kwote zaplacona przez Klienta w zwiazku z odstapieniem od Umowy.
+11.StartUp zwroci Klientowi nalezna kwote, stosujac ten sam sposob platnosci, ktory
+zostal uzyty przez Klienta, chyba ze Klient wyrazil zgode na inny sposob zwrotu,
+ktory nie wiaze sie z dodatkowymi kosztami dla Klienta. StartUp wystawi Klientowi
+odpowiednia korekte dowodu zakupu (fakture VAT korygujaca lub specyfikacje
+korygujaca).
+12.Odpowiedzialnosc StartUp jest ograniczona do wartosci Towarow objetych Umowa.
+Odpowiedzialnosc StartUp za szkody spowodowane niewykonaniem lub nienalezytym
+wykonaniem Uslugi Cyfrowej lub niedostarczeniem tresci cyfrowych nie obejmuje
+utraconych korzysci.
+13.W zakresie nieuregulowanym w Regulaminie, do okreslenia praw i obowiazkow
+Klienta i StartUp w przypadku wady towaru / niewykonania / nienalezytego wykonania
+Umowy przez StartUp stosuje sie odpowiednie przepisy prawa powszechnie
+obowiazujacego, w szczegolnosci ustawy o prawach konsumenta i Kodeksu cywilnego.
+14.Odpowiedzialnosc StartUp za wady Towarow, Uslug i Uslug Cyfrowych jest wylaczona
+w przypadku umow zawartych na rzecz Klienta, ktory nie jest:
+a) Konsumentem;
+b) osoba fizyczna zawierajaca umowe z StartUp bezposrednio zwiazana z jej
+ dzialalnoscia gospodarcza, gdy z tresci umowy wynika, ze nie ma ona dla tej osoby
+ charakteru zawodowego, wynikajacego w szczegolnosci z przedmiotu wykonywanej
+ przez nia dzialalnosci gospodarczej, udostepnionego na podstawie przepisow o
+ Centralnej Ewidencji i Informacji o Dzialalnosci Gospodarczej.
+15.Towary oferowane przez StartUp moga byc objete gwarancja producenta. Gwarancja
+jest realizowana na warunkach okreslonych w oswiadczeniu gwarancyjnym. StartUp
+nie udziela wlasnej gwarancji na oferowane Towary.
+Page 7 of 23
+
+--- Page 8 ---
+§ 5 Swiadczenie Uslug
+1. StartUp swiadczy Klientom Uslugi, ktorych rodzaj, zakres i szczegolowy opis
+zamieszczone sa w Serwisie. Dzialania polegaja w szczegolnosci na swiadczeniu uslug
+cyfrowych w modelu subskrypcyjnym umozliwiajacym konfiguracje i zarzadzanie
+awatarami/postaciami 3D do streamingu, integracje z narzedziami do syntezy mowy
+(TTS) oraz funkcjonalnosci wspierajace streaming.
+2. Uslugi sa swiadczone w sposob wskazany w Serwisie, w szczegolnosci na stronie
+poswieconej danej Usludze.
+3. StartUp zamieszcza w Serwisie informacje o tym, jak Klient moze zlozyc zamowienie
+na Uslugi. Aby zlozyc zamowienie, Klient wskazuje Uslugi, ktorymi jest
+zainteresowany, a nastepnie podaje dane niezbedne do zawarcia Umowy i realizacji
+Uslugi, w tym sposob wykonania Uslugi (jezeli dotyczy) oraz sposob platnosci.
+4. Jezeli do zlozenia zamowienia w Serwisie sluzy przycisk lub podobna funkcja, powinny
+one byc oznaczone w sposob czytelny slowami "zamowienie z obowiazkiem zaplaty"
+lub innym jednoznacznym sformulowaniem.
+5. Zlozenie i zatwierdzenie zamowienia rodzi obowiazek zaplaty ceny za Uslugi i
+ewentualnych dodatkowych kosztow. Z chwila potwierdzenia zamowienia przez
+StartUp dochodzi do zawarcia umowy o swiadczenie uslug pomiedzy StartUp a
+Klientem.
+6. Klient zostanie poinformowany o datach rozpoczecia i zakonczenia swiadczenia
+Uslug przed zawarciem Umowy, w szczegolnosci za posrednictwem Serwisu.
+7. Jezeli na wyrazne zadanie Klienta wykonywanie Uslugi ma sie rozpoczac przed
+uplywem terminu do odstapienia od umowy zawartej poza lokalem
+przedsiebiorstwa, StartUp wymaga od Klienta zlozenia oswiadczenia:
+a) zawierajacego takie wyrazne zadanie na trwalym nosniku;
+b) ze Klient zostal poinformowany o utracie prawa do odstapienia od umowy po
+pelnym wykonaniu Uslugi przez StartUp i to zaakceptowal.
+8. Jezeli Klient nie wyraza zgody na rozpoczecie wykonywania Uslugi przed uplywem
+terminu do odstapienia od Umowy, Usluga zostanie wykonana po uplywie terminu
+do odstapienia od Umowy przez Klienta, chyba ze StartUp w Serwisie nie oferuje
+Klientom mozliwosci zawarcia Umow bez takiej zgody.
+9. Klient moze wypowiedziec Umowe o swiadczenie Uslug w formie pisemnej lub
+ dokumentowej, ze skutkiem na koniec miesiaca kalendarzowego. Nie jest wymagany
+okres wypowiedzenia.
+10.StartUp moze wypowiedziec Umowe o swiadczenie Uslug w formie pisemnej lub
+ dokumentowej, z jednomiesiecznym okresem wypowiedzenia ze skutkiem na koniec
+miesiaca kalendarzowego, z waznych przyczyn. Strony uznaja za wazne przyczyny:
+a) zaprzestanie lub decyzje StartUp o zaprzestaniu prowadzenia dzialalnosci
+zorganizowanej czesci przedsiebiorstwa StartUp, wskazanej w § 1;
+b) istotna zmiane lub decyzje StartUp o istotnej zmianie przedmiotu dzialalnosci
+zorganizowanej czesci przedsiebiorstwa StartUp, wskazanej w § 1;
+c) istotna reorganizacje w StartUp;
+d) wystapienie awarii lub utrudnien (w szczegolnosci technicznych), niezawinionych
+przez StartUp, uniemozliwiajacych lub znacznie utrudniajacych swiadczenie Uslug
+na rzecz Klienta;
+e) opoznienie Klienta w zaplacie ceny na rzecz StartUp;
+f) istotne naruszenie Umowy lub Regulaminu przez Klienta.
+§ 6 Odpowiedzialnosc za niezgodnosc Uslug z Umowa
+1. Reklamacja dotyczaca Uslug swiadczonych niezgodnie z Umowa powinna zawierac
+zadanie, w zaleznosci od rodzaju Uslugi.
+2. Reklamacja dotyczaca niezgodnosci Uslugi z Umowa zostanie rozpatrzona w terminie
+14 (slownie: czternastu) dni od jej otrzymania.
+3. W przypadku braku odpowiedzi StartUp na reklamacje w terminie uznaje sie, ze
+reklamacja zostala uznana.
+4. StartUp poinformuje Klienta o wyniku reklamacji na papierze lub innym trwalym
+nosniku.
+5. Jezeli reklamacja dotyczaca Uslugi zostanie uznana, StartUp wykona Usluge
+prawidlowo, zwroci calosc lub czesc otrzymanej ceny Klientowi lub dokona innych
+swiadczen na rzecz Klienta, w zaleznosci od rodzaju Uslugi i okolicznosci sprawy.
+6. Odpowiedzialnosc StartUp jest ograniczona do wartosci niewykonanej lub
+nienalezycie wykonanej Uslugi. Odpowiedzialnosc StartUp za szkody spowodowane
+niewykonaniem lub nienalezytym wykonaniem Uslugi nie obejmuje utraconych
+korzysci.
+7. Odpowiedzialnosc StartUp za wady Uslug, jak rowniez za niewykonanie / nienalezyte
+wykonanie umowy zawartej z Klientem, jest wylaczona w przypadku umow zawartych
+na rzecz Klienta, ktory nie jest:
+a) Konsumentem;
+b) osoba fizyczna zawierajaca umowe z StartUp bezposrednio zwiazana z jej
+ dzialalnoscia gospodarcza, gdy z tresci umowy wynika, ze nie ma ona dla tej osoby
+ charakteru zawodowego, wynikajacego w szczegolnosci z przedmiotu wykonywanej
+ przez nia dzialalnosci gospodarczej, udostepnionego na podstawie przepisow o
+ Centralnej Ewidencji i Informacji o Dzialalnosci Gospodarczej.
+Page 9 of 23
+
+--- Page 10 ---
+§ 7 Umowy o dostarczanie Tresci Cyfrowych lub Uslug Cyfrowych
+1. Postanowienia niniejszego paragrafu oraz paragrafu nastepnego Regulaminu,
+zgodnie z przepisami rozdzialu 5b ustawy z dnia 30 maja 2014 r. o prawach
+konsumenta, maja zastosowanie do Umowy o dostarczanie Tresci Cyfrowych lub
+Uslug Cyfrowych zawartej z:
+a) Konsumentem, lub
+b) osoba fizyczna zawierajaca umowe bezposrednio zwiazana z jej dzialalnoscia
+ gospodarcza, gdy z tresci umowy wynika, ze nie ma ona dla tej osoby charakteru
+ zawodowego, wynikajacego w szczegolnosci z przedmiotu wykonywanej przez nia
+ dzialalnosci gospodarczej, udostepnionego na podstawie przepisow o Centralnej
+ Ewidencji i Informacji o Dzialalnosci Gospodarczej.
+2. StartUp zamieszcza w Serwisie informacje o tym, jak Klient moze zlozyc zamowienie
+na Uslugi Cyfrowe. Aby zlozyc zamowienie, Klient w szczegolnosci wskazuje Uslugi
+Cyfrowe, ktorymi jest zainteresowany, a nastepnie podaje dane niezbedne do
+zawarcia Umowy i wykonania Uslugi Cyfrowej, w tym sposob wykonania Uslugi
+(jezeli dotyczy) oraz sposob platnosci.
+3. Jezeli do zlozenia zamowienia w Serwisie sluzy przycisk lub podobna funkcja,
+powinny one byc oznaczone w sposob czytelny slowami "zamowienie z obowiazkiem
+zaplaty" lub innym jednoznacznym sformulowaniem.
+4. Zlozenie i zatwierdzenie zamowienia rodzi obowiazek zaplaty ceny za Uslugi
+Cyfrowe i ewentualnych dodatkowych kosztow. Z chwila potwierdzenia zamowienia
+przez StartUp dochodzi do zawarcia umowy o swiadczenie uslug cyfrowych pomiedzy
+StartUp a Klientem.
+5. StartUp dostarczy tresc cyfrowa lub usluge cyfrowa Klientowi niezwlocznie po
+zawarciu Umowy, chyba ze strony postanowia inaczej, w szczegolnosci jesli na
+stronie Serwisu dla danej Uslugi Cyfrowej wskazano inna date. Postanowienie nie
+ma zastosowania, jesli umowa przewiduje dostarczenie tresci cyfrowych na
+materialnym nosniku. Jezeli Klient nie wyraza zgody na wykonanie przed uplywem
+terminu do odstapienia od Umowy, usluga zostanie wykonana po uplywie terminu.
+6. StartUp informuje, ze wyrazenie zgody, o ktorej mowa w poprzednim ustepie,
+spowoduje utrate prawa Klienta do odstapienia od umowy.
+7. StartUp moze, z waznych przyczyn, wprowadzic zmiane w tresci cyfrowej lub
+usludze cyfrowej, ktora nie jest niezbedna do zachowania zgodnosci z Umowa.
+Za wazne przyczyny uznaje sie w szczegolnosci istotne interesy Klienta lub StartUp.
+StartUp poinformuje Klienta w sposob jasny i zrozumialy o dokonanej zmianie.
+Jezeli zmiana w istotny i negatywny sposob wplywa na dostep Klienta do tresci
+cyfrowej lub uslugi cyfrowej lub na korzystanie z niej, StartUp ma obowiazek
+poinformowac Klienta z wyprzedzeniem na trwalym nosniku o cechach i dacie
+zmiany oraz o prawie do wypowiedzenia umowy bez zachowania terminu
+wypowiedzenia. Klient moze wypowiedziec umowe bez zachowania terminu
+wypowiedzenia w terminie 30 dni od dokonania zmiany.
+8. Klient moze wypowiedziec Umowe o dostarczanie tresci cyfrowych lub Uslug
+Cyfrowych w formie pisemnej lub dokumentowej, ze skutkiem na koniec miesiaca
+kalendarzowego. Nie jest wymagany okres wypowiedzenia.
+9. StartUp moze wypowiedziec Umowe o swiadczenie Uslug Cyfrowych w formie
+pisemnej lub dokumentowej, z jednomiesiecznym okresem wypowiedzenia ze skutkiem
+na koniec miesiaca kalendarzowego, z waznych przyczyn. Strony uznaja za wazne
+przyczyny:
+a) zaprzestanie lub decyzje StartUp o zaprzestaniu prowadzenia dzialalnosci
+zorganizowanej czesci przedsiebiorstwa StartUp, wskazanej w § 1;
+b) istotna zmiane lub decyzje StartUp o istotnej zmianie przedmiotu dzialalnosci
+zorganizowanej czesci przedsiebiorstwa StartUp, wskazanej w § 1;
+c) istotna reorganizacje w StartUp;
+d) wystapienie awarii lub powaznych utrudnien (w szczegolnosci technicznych) w
+funkcjonowaniu Serwisu, niezawinionych przez StartUp;
+e) opoznienie Klienta w zaplacie ceny na rzecz StartUp;
+f) istotne naruszenie Umowy lub Regulaminu przez Klienta.
+10.W zakresie nieuregulowanym w niniejszym paragrafie stosuje sie przepisy rozdzialu
+5b ustawy o prawach konsumenta.
+§ 8 Odpowiedzialnosc za niezgodnosc tresci cyfrowej lub
+uslugi cyfrowej z Umowa
+1. Jezeli StartUp nie dostarczyla tresci cyfrowej lub uslugi cyfrowej, Klient wzywa
+StartUp do jej dostarczenia. Jezeli StartUp nie dostarczy tresci cyfrowej lub uslugi
+cyfrowej niezwlocznie lub w dodatkowym terminie wyraznie uzgodnionym przez
+strony, Klient moze odstapic od umowy. Postanowienie nie ma zastosowania, gdy
+umowa przewiduje dostarczenie tresci cyfrowej na materialnym nosniku.
+2. StartUp ponosi odpowiedzialnosc za niezgodnosc z Umowa tresci cyfrowej lub
+uslugi cyfrowej dostarczonej:
+a) jednorazowo lub w czesciach, ktora istniala w chwili ich dostarczenia i
+ujawnila sie w ciagu dwoch lat od tej chwili;
+b) w sposob ciagly, ktora wystapila lub ujawnila sie w czasie, w ktorym miala byc
+dostarczona zgodnie z Umowa.
+3. Jezeli tresc cyfrowa lub usluga cyfrowa jest niezgodna z Umowa, Klient moze
+zadac doprowadzenia do zgodnosci z Umowa.
+4. StartUp moze odmowic doprowadzenia tresci cyfrowej lub uslugi cyfrowej do
+zgodnosci z Umowa, jezeli doprowadzenie do zgodnosci jest niemozliwe lub
+wymagaloby nadmiernych kosztow dla StartUp.
+Page 11 of 23
+
+--- Page 12 ---
+5. Jezeli tresc cyfrowa lub usluga cyfrowa sa niezgodne z Umowa, Klient moze zlozyc
+oswiadczenie o obnizeniu ceny lub odstapieniu od Umowy, gdy:
+a) doprowadzenie tresci cyfrowej lub uslugi cyfrowej do zgodnosci z Umowa jest
+niemozliwe lub wymaga nadmiernych kosztow zgodnie z art. 43m ust. 2 i 3 ustawy
+o prawach konsumenta;
+b) StartUp nie doprowadzila tresci cyfrowej lub uslugi cyfrowej do zgodnosci z
+Umowa zgodnie z art. 43m ust. 4 ustawy o prawach konsumenta;
+c) brak zgodnosci tresci cyfrowej lub uslugi cyfrowej z Umowa utrzymuje sie, mimo
+ze StartUp probowala doprowadzic tresc cyfrowa lub usluge cyfrowa do zgodnosci
+z Umowa;
+d) brak zgodnosci umowy cyfrowej lub uslugi cyfrowej z Umowa jest na tyle istotny,
+ze uzasadnia obnizenie ceny lub odstapienie od Umowy bez uprzedniego skorzystania
+ze srodkow ochrony okreslonych w art. 43m ustawy o prawach konsumenta;
+e) z oswiadczenia StartUp lub okolicznosci wynika, ze nie doprowadzi ona uslug
+cyfrowych lub tresci cyfrowych do zgodnosci z Umowa w rozsadzny czasie lub bez
+nadmiernych niedogodnosci dla konsumenta.
+6. Obnizona cena powinna pozostawac w takiej proporcji do ceny Umowy, w jakiej
+wartosc tresci cyfrowej lub uslugi cyfrowej niezgodnej z Umowa pozostaje do
+wartosci tresci cyfrowej lub uslugi cyfrowej zgodnej z Umowa. Jezeli Umowa
+przewiduje, ze tresc cyfrowa lub usluga cyfrowa sa dostarczane w czesciach lub w
+sposob ciagly, obnizenie ceny powinno uwzgledniac czas, w ktorym tresc cyfrowa lub
+usluga cyfrowa pozostawala niezgodna z Umowa.
+7. Klient nie moze odstapic od umowy, jezeli tresc cyfrowa lub usluga cyfrowa
+swiadczone sa w zamian za zaplate ceny, a brak zgodnosci tresci cyfrowej lub uslugi
+cyfrowej z Umowa jest nieistotny.
+8. Jezeli Klient odstapil od umowy, StartUp moze zadac zwrotu materialnego nosnika,
+na ktorym dostarczyla tresc cyfrowa, w terminie 14 dni od dnia otrzymania
+oswiadczenia Klienta o odstapieniu od umowy. Klient zwroci nosnik niezwlocznie.
+9. Jezeli Klient odstapil od umowy, StartUp zwroci cene tylko za czesc odpowiadajaca
+tresci cyfrowej lub usludze niezgodnej z Umowa, a takze za tresc cyfrowa lub usluge
+cyfrowa, ktorej obowiazek dostarczenia odpadl wskutek odstapienia.
+10.StartUp zwroci nalezna kwote Klientowi, stosujac ten sam sposob platnosci, ktory
+zostal uzyty przez Klienta, chyba ze Klient wyrazil zgode na inny sposob zwrotu,
+ktory nie wiaze sie z dodatkowymi kosztami dla Klienta.
+11.Odpowiedzialnosc StartUp jest ograniczona do wartosci tresci cyfrowej lub Uslugi
+Cyfrowej, ktora miala byc dostarczona. Odpowiedzialnosc StartUp za szkody
+spowodowane niewykonaniem lub nienalezytym wykonaniem Uslugi Cyfrowej lub
+niedostarczeniem tresci cyfrowej nie obejmuje utraconych korzysci.
+12.Reklamacja dotyczaca niezgodnosci uslugi cyfrowej z Umowa zostanie rozpatrzona
+w terminie 14 (slownie: czternastu) dni od jej otrzymania.
+13.W przypadku braku odpowiedzi StartUp na reklamacje w terminie uznaje sie, ze
+reklamacja zostala uznana.
+14.StartUp poinformuje Klienta o wyniku reklamacji na papierze lub innym trwalym
+nosniku.
+15.Odpowiedzialnosc StartUp za niezgodnosc tresci cyfrowej lub Uslugi Cyfrowej, jak
+rowniez za niewykonanie / nienalezyte wykonanie Umowy zawartej z Klientem, jest
+wylaczona dla Umow zawartych z Klientem, ktory nie jest:
+a) Konsumentem;
+b) osoba fizyczna zawierajaca umowe z StartUp bezposrednio zwiazana z jej
+ dzialalnoscia gospodarcza, gdy z tresci umowy wynika, ze nie ma ona dla tej osoby
+ charakteru zawodowego, wynikajacego w szczegolnosci z przedmiotu wykonywanej
+ przez nia dzialalnosci gospodarczej, udostepnionego na podstawie przepisow o
+ Centralnej Ewidencji i Informacji o Dzialalnosci Gospodarczej.
+§ 9 Ceny Produktow i koszty dostawy
+1. Ceny podane przy Produktach oferowanych w Serwisie sa cenami brutto, tj. zawieraja
+podatek od towarow i uslug (VAT). Ceny podane sa w walucie polskiej (zloty - PLN).
+2. Cena podana przy Produkcie nie obejmuje kosztow dostawy.
+3. Koszty dostawy ponosi Klient, chyba ze tresc oferty StartUp w Serwisie stanowi
+inaczej.
+4. Laczna kwota, jaka Klient musi zaplacic w zwiazku z zakupem wybranego Produktu,
+sprowadza sie do ceny Produktu oraz kosztu dostawy.
+5. O ile StartUp nie wskazala inaczej w Serwisie na stronie danego Produktu lub w
+trakcie skladania zamowienia przez Klienta, sposoby dostawy Produktow sa
+nastepujace:
+a) w przypadku Towarow - wysylka na adres wskazany przez Klienta lub odbior
+osobisty w siedzibie StartUp;
+b) w przypadku Uslug cyfrowych - na adres e-mail wskazany przez Klienta;
+c) w przypadku innych Uslug - w sposob okreslony w Serwisie na stronie danej
+Uslugi lub w trakcie skladania zamowienia przez Klienta, wynikajacy w
+szczegolnosci z rodzaju Uslugi.
+Page 13 of 23
+
+--- Page 14 ---
+6. W Serwisie StartUp, najpozniej na poczatku procesu skladania zamowienia przez
+Klienta, StartUp w sposob jasny i czytelny informuje o ewentualnych ograniczeniach
+w dostawie Produktu.
+§ 10 Sposoby platnosci
+1. W Serwisie StartUp, najpozniej na poczatku procesu skladania zamowienia przez
+Klienta, StartUp w sposob jasny i czytelny informuje o akceptowanych sposobach
+platnosci.
+2. O ile StartUp nie wskazala inaczej na stronie danego Produktu lub w trakcie
+skladania zamowienia przez Klienta, sposobami platnosci sa:
+a) przelew za posrednictwem jednego z akceptowanych przez StartUp systemow
+platnosci elektronicznych umozliwiajacych szybkie platnosci za zamowienie;
+b) przelew tradycyjny na rachunek wskazany przez StartUp.
+3. Aby skorzystac z jednego z systemow platnosci elektronicznych, Klient musi
+zaakceptowac regulamin korzystania z danego systemu platnosci. Lista dostepnych
+systemow platnosci elektronicznych jest widoczna podczas finalizacji zamowienia.
+4. W przypadku odstapienia od umowy zwrot nastapi w taki sam sposob, w jaki platnosc
+zostala dokonana przez Klienta, chyba ze Klient wyrazil zgode na inny sposob zwrotu,
+ktory nie wiaze sie z dodatkowymi kosztami dla Klienta.
+5. StartUp nie umozliwia dokonywania platnosci gotowka.
+§ 11 Prawo odstapienia od umowy;
+1. Postanowienia niniejszego paragrafu stosuje sie do Klienta bedacego Konsumentem
+lub osoby fizycznej zawierajacej umowe z StartUp bezposrednio zwiazana z jej
+ dzialalnoscia gospodarcza, gdy z tresci umowy wynika, ze nie ma ona dla tej osoby
+ charakteru zawodowego, wynikajacego w szczegolnosci z przedmiotu wykonywanej
+ przez nia dzialalnosci gospodarczej, udostepnionego na podstawie przepisow o
+ Centralnej Ewidencji i Informacji o Dzialalnosci Gospodarczej.
+2. Klient wskazany w ust. 1 ma prawo odstapic od Umowy bez podania przyczyny i bez
+ponoszenia kosztow, chyba ze przepisy prawa powszechnego lub niniejszy Regulamin
+stanowia inaczej. Umowa, od ktorej Klient wskazany w ust. 1 odstapil, uwaza sie za
+niezawarta.
+3. Do odstapienia od umowy wystarczy zlozenie oswiadczenia o odstapieniu i
+przeslanie go do StartUp w terminie 14 (slownie: czternastu) dni.
+4. Bieg terminu do odstapienia od umowy rozpoczyna sie:
+Page 14 of 23
+
+--- Page 15 ---
+a) dla Umowy, w wykonaniu ktorej StartUp dostarcza Towary, bedac zobowiazana do
+przeniesienia ich wlasnosci - od objecia Towarow w posiadanie przez Klienta lub
+wskazana przez Klienta osobe trzecia inna niz przewoznik, a w przypadku Umowy,
+ktora:
+- obejmuje wiele Towarow, ktore sa dostarczane osobno, w partiach lub w
+  czesciach - od objecia w posiadanie ostatniego Towaru, jego partii lub czesci,
+- polega na regularnym dostarczaniu Towarow przez czas oznaczony - od objecia
+  w posiadanie pierwszego z Towarow;
+b) dla pozostalych Umow - od dnia zawarcia Umowy.
+5. Do zachowania terminu odstapienia od umowy wystarczy:
+a) wyslanie pisemnego oswiadczenia na adres StartUp wskazany w Regulaminie lub
+w Serwisie, albo
+b) wyslanie oswiadczenia w formie dokumentowej na adres e-mail StartUp wskazany
+w Regulaminie lub w Serwisie.
+6. StartUp niezwlocznie przesle Klientowi na trwalym nosniku potwierdzenie
+otrzymania oswiadczenia o odstapieniu zlozonego droga elektroniczna.
+7. Jezeli Klient odstapil od umowy, ma obowiazek niezwlocznie zwrocic zakupiony
+Produkt, nie pozniej niz w terminie 14 (slownie: czternastu) dni od odstapienia, chyba
+ze StartUp zaoferuje odebranie Towarow. Dla zachowania terminu wystarczy odeslac
+Produkt przed jego uplywem. Koszt zwrotu Towarow ponosi Klient.
+8. Jezeli Klient odstapil od umowy, StartUp zwroci Klientowi kwote zaplacona za
+Produkt oraz koszty dostawy do Klienta w terminie nie dluzszym niz 14 (slownie:
+czternastu) dni od dnia otrzymania oswiadczenia o odstapieniu od umowy. Jezeli
+jednak Klient wybral sposob dostawy inny niz najtanszy sposob oferowany w Serwisie
+przy zamowieniu, StartUp nie jest zobowiazana do zwrotu Klientowi poniesionych
+kosztow dodatkowych.
+9. StartUp zwroci platnosc przy uzyciu takiego samego sposobu platnosci, jakiego uzyl
+Klient, chyba ze Klient uzgodnil ze StartUp inny sposob zwrotu, niepowodujacy
+kosztow dla Klienta.
+10.StartUp moze wstrzymac zwrot platnosci otrzymanych od Klienta do czasu
+otrzymania Towarow z powrotem lub dostarczenia przez Klienta dowodu ich odeslania,
+w zaleznosci od tego, ktore zdarzenie nastapi wczesniej.
+11.Jezeli Klient zlozyl oswiadczenie o odstapieniu przed otrzymaniem potwierdzenia
+zamowienia od StartUp, zamowienie zostaje anulowane.
+12.Klient odpowiada za zmniejszenie wartosci Towarow wynikajace z korzystania z nich
+w sposob wykraczajacy poza konieczny do stwierdzenia charakteru, cech i
+funkcjonowania Towarow.
+Page 15 of 23
+
+--- Page 16 ---
+13.Prawo odstapienia nie przysluguje Klientowi w przypadkach wskazanych w ustawie
+z dnia 30 maja 2014 r. o prawach konsumenta, w szczegolnosci w odniesieniu do
+umow:
+a) o swiadczenie uslug, za ktore konsument jest zobowiazany do zaplaty ceny, jezeli
+przedsiebiorca wykonal usluge w calosci za wyrazna i uprzednia zgoda konsumenta,
+ktory zostal poinformowany przed rozpoczeciem swiadczenia, ze po spelnieniu
+swiadczenia przez przedsiebiorce utraci prawo odstapienia od umowy, i to
+zaakceptowal;
+b) w ktorych cena lub wynagrodzenie zalezy od wahan na rynku finansowym, nad
+ktorym przedsiebiorca nie sprawuje kontroli i ktore moga wystapic przed uplywem
+terminu do odstapienia;
+c) w ktorych przedmiotem swiadczenia jest rzecz nieprefabrykowana, wyprodukowana
+wedlug specyfikacji konsumenta lub sluzaca zaspokojeniu jego zindywidualizowanych
+potrzeb;
+d) w ktorych przedmiotem swiadczenia sa rzeczy ulegajace szybkiemu zepsuciu lub
+majace krotki termin przydatnosci do uzycia;
+e) w ktorych przedmiotem swiadczenia sa rzeczy dostarczane w zapieczetowanym
+opakowaniu, ktorych po otwarciu opakowania nie mozna zwrocic ze wzgledu na ochrone
+zdrowia lub ze wzgledow higienicznych, jezeli opakowanie zostalo otwarte po
+dostarczeniu;
+f) w ktorych przedmiotem swiadczenia sa rzeczy, ktore po dostarczeniu, ze wzgledu
+na swoj charakter, zostaja nierozlacznie polaczone z innymi rzeczami;
+g) w ktorych przedmiotem swiadczenia sa napoje alkoholowe, ktorych cena zostala
+uzgodniona przy zawarciu umowy sprzedazy, a ich dostarczenie moze nastapic dopiero
+po uplywie 30 dni i ktorych wartosc zalezy od wahan na rynku, nad ktorym
+przedsiebiorca nie ma kontroli;
+h) w ktorych konsument wyraznie zazadal, aby przedsiebiorca przyjechal do niego w
+celu dokonania pilnej naprawy lub konserwacji; jezeli przedsiebiorca swiadczy
+uslugi dodatkowe inne niz te, ktorych zazadal konsument, lub dostarcza towary inne
+niz czesci zamienne niezbedne do wykonania naprawy lub konserwacji, konsument ma
+prawo odstapienia od umowy w odniesieniu do tych dodatkowych uslug lub towarow;
+i) w ktorych przedmiotem swiadczenia sa nagrania dzwiekowe lub wizualne albo
+programy komputerowe dostarczane w zapieczetowanym opakowaniu, jezeli opakowanie
+zostalo otwarte po dostarczeniu;
+j) o dostarczanie dziennikow, periodykow lub czasopism, z wyjatkiem umowy o
+prenumerate;
+k) zawartych w drodze aukcji publicznej;
+l) o swiadczenie uslug zakwaterowania, innych niz do celow mieszkalnych, przewozu
+rzeczy, wynajmu samochodow, gastronomii, uslug zwiazanych z wypoczynkiem,
+rozrywka, wydarzeniami sportowymi lub kulturalnymi, jezeli umowa oznacza dzien lub
+okres swiadczenia uslugi;
+m) o dostarczanie tresci cyfrowych, ktore nie sa zapisane na nosniku materialnym, za
+ktore konsument jest zobowiazany do zaplaty ceny, jezeli przedsiebiorca rozpoczal
+swiadczenie za wyrazna i uprzednia zgoda konsumenta, ktory zostal poinformowany
+przed rozpoczeciem swiadczenia, ze po spelnieniu swiadczenia przez przedsiebiorce
+utraci prawo odstapienia od umowy, i to zaakceptowal, a przedsiebiorca przekazal
+konsumentowi potwierdzenie zgodnie z art. 15 ust. 1 i 2 lub art. 21 ust. 1 ustawy o
+prawach konsumenta.
+n) o swiadczenie uslug, za ktore konsument jest zobowiazany do zaplaty ceny, jezeli
+konsument wyraznie zazadal, aby przedsiebiorca przyjechal do niego w celu
+naprawy, a usluga zostala w pelni wykonana za wyrazna i uprzednia zgoda
+konsumenta.
+14.StartUp dokona rowniez korekty dowodow zakupu (faktura VAT korygujaca lub
+specyfikacja korygujaca) wczesniej przekazanych Klientowi.
+§ 12 Zwrot kwoty zaplaconej przez Klienta
+StartUp zwroci pieniadze w terminie 14 (slownie: czternastu) dni kalendarzowych,
+przy uzyciu takiego samego sposobu platnosci, jaki zostal uzyty przez Klienta przy
+zaplacie, chyba ze Klient wyrazil zgode na inny sposob zwrotu, niepowodujacy
+kosztow po jego stronie, w przypadku:
+a) odstapienia od umowy w calosci lub w czesci (w takim przypadku zwracana jest
+odpowiednia czesc ceny) w przypadku zamowienia oplaconego z gory przed jego
+realizacja;
+b) uznania reklamacji i niemoznosci naprawy uszkodzonego Towaru lub wymiany na
+nowy Towar lub swiadczenia Uslugi / Uslugi Cyfrowej zgodnie z umowa;
+c) uznania prawa do obnizenia ceny Produktu.
+§ 13 Newsletter
+1. Klient moze wyrazic zgode na otrzymywanie informacji handlowych, w tym
+informacji handlowych droga e-mail, wybierajac odpowiednia opcje w formularzu
+rejestracyjnym lub za posrednictwem Serwisu. Po wyrazeniu zgody Klient otrzyma
+newsletter StartUp (Newsletter) na wskazany adres e-mail.
+2. Klient moze w kazdym czasie zrezygnowac z Newslettera, informujac StartUp o
+rezygnacji.
+§ 14 Informacje kontaktowe StartUp
+Klient moze skontaktowac sie ze StartUp:
+1) telefonicznie pod numerem: +48503427781
+Page 17 of 23
+
+--- Page 18 ---
+2) za posrednictwem poczty elektronicznej na adres: support@roxstreamai.com
+§ 15 Postanowienia koncowe
+1. StartUp wskazuje, ze korzystanie z uslug swiadczonych droga elektroniczna
+wiazze sie z ryzykiem wynikajacym z publicznego charakteru Internetu, w
+szczegolnosci mozliwoscia uzyskania lub modyfikacji danych przesylanych przez
+Klienta przez osoby nieuprawnione. W celu minimalizacji ryzyka Klient powinien
+stosowac odpowiednie srodki bezpieczenstwa, w szczegolnosci stosowac aktualne
+programy antywirusowe, korzystac z aktualnych wersji przegladarek internetowych i
+systemow operacyjnych oraz nie korzystac z otwartych punktow dostepu.
+2. StartUp w najszerszym zakresie dozwolonym przez prawo nie odpowiada za
+blokowanie przez administratorow serwerow pocztowych wiadomosci na adres e-mail
+wskazany przez Klienta ani za usuwanie i blokowanie wiadomosci e-mail przez
+oprogramowanie zainstalowane na komputerze, z ktorego korzysta Klient.
+3. StartUp nie ponosi odpowiedzialnosci za urzadzenia i infrastrukture wykorzystywane
+przez Klienta, w tym za awarie publicznych sieci komunikacji danych powodujace
+np. brak lub zaklocenia dostepu do Serwisu.
+4. StartUp wskazuje, ze prezentacja wizualizacji Produktow w systemie ICT Klienta
+podczas korzystania z Serwisu zalezy od wielu czynnikow, w tym rodzaju wyswietlacza,
+proporcji ekranu, rozdzielczosci, sposobu podswietlenia, zastosowanych technologii
+oraz wydajnosci elektroniki sterujacej i ustawien. Rozbieznosci pomiedzy wizualizacja
+w systemie ICT Klienta a rzeczywistym wygladem Produktu nie moga stanowic podstawy
+do reklamacji.
+5. StartUp wskazuje, ze wszystkie znaki towarowe (loga, logotypy, nazwy marek itd.),
+materialy graficzne lub fotografie zamieszczone w Serwisie sa prawnie chronione i
+sa wykorzystywane przez StartUp wylacznie w celach informacyjnych.
+6. StartUp w najszerszym zakresie dozwolonym przez prawo nie ponosi odpowiedzialnosci
+za zaklocenia, w tym przerwy, w funkcjonowaniu Serwisu spowodowane sila wyzsza,
+nieuprawnionymi dzialaniami osob trzecich lub niezgodnoscia Serwisu z infrastruktura
+techniczna Klienta.
+7. StartUp zastrzega sobie prawo do czasowego zawieszenia dzialalnosci Serwisu,
+w szczegolnosci w celu przeprowadzenia prac konserwacyjnych, rozwojowych lub
+modernizacyjnych.
+8. Wszelkie nazwy Produktow oferowanych w Serwisie sa uzywane w celach
+identyfikacyjnych i moga byc chronione lub zastrzezone na podstawie przepisow o
+wlasnosci przemyslowej.
+9. StartUp wskazuje, ze Serwis zawiera tresci chronione prawami wlasnosci
+intelektualnej, w szczegolnosci utwory chronione prawem autorskim (tresci Serwisu,
+uklad, grafika, fotografie itd.). Klienci i odwiedzajacy Serwis zobowiazuja sie do
+poszanowania praw wlasnosci intelektualnej StartUp oraz osob trzecich (w tym praw
+autorskich oraz praw wlasnosci przemyslowej, takich jak prawa wynikajace z
+rejestracji znakow towarowych). Klient lub odwiedzajacy Serwis ponosi wylaczna
+odpowiedzialnosc za nieprzestrzeganie postanowien niniejszego paragrafu.
+Page 19 of 23
+
+--- Page 19 ---
+10.Klient nie moze zamieszczac w Serwisie tresci bezprawnych, nielegalnych, niemoralnych
+lub naruszajacych dobro osob trzecich, jak rowniez nie moze zamieszczac linkow do
+tresci pornograficznych, obscenicznych lub obrazajacych godnosc innych.
+11.Klient jest zobowiazany powstrzymac sie od wszelkich dzialan, ktore moglyby
+zaklocic prawidlowe funkcjonowanie Serwisu, w szczegolnosci ingerencji w sposob
+funkcjonowania Serwisu lub jego elementy techniczne.
+12.StartUp zobowiazuje sie informowac zarejestrowanych Klientow Serwisu o kazdej
+zmianie Regulaminu, wysylajac wiadomosc e-mail na adres podany przy rejestracji, a
+Klient po otrzymaniu takiej informacji moze w kazdym czasie usunac Konto. Zmiany
+Regulaminu nie maja wplywu na umowy zawarte przed dniem wejscia w zycie zmian.
+13.W sprawach nieuregulowanych w niniejszym Regulaminie maja zastosowanie
+powszechnie obowiazujace przepisy prawa polskiego, w szczegolnosci:
+1) ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny;
+2) ustawa z dnia 30 maja 2014 r. o prawach konsumenta;
+3) ustawa z dnia 18 lipca 2002 r. o swiadczeniu uslug droga elektroniczna.
+14.Sporne kwestie zwiazane z umowami zawartymi na podstawie niniejszego Regulaminu
+beda rozstrzygane przez sad wlasciwy dla StartUp. Postanowienie to nie dotyczy
+umow zawartych z Konsumentem.
+15.Korzystanie z okreslonego sposobu pozasadowego rozwiazywania sporow jest mozliwe
+wyylacznie za wzajemna zgoda Klienta i StartUp. Szczegolowe procedury
+pozasadowego rozwiazywania sporow dostepne sa na stronie Urzedu Ochrony
+Konkurencji i Konsumentow: www.uokik.gov.pl, na stronach Wojewodzkich
+Inspektoratow Inspekcji Handlowej oraz u miejskich (powiatowych) rzecznikow
+konsumentow.
+16.Niniejszy Regulamin obowiazuje od dnia: 7 lutego 2026
+Page 20 of 23
+
+--- Page 20 ---
+Informacja o pozasadowym rozwiazywaniu sporow
+Zgodnie z rozporzadzeniem Parlamentu Europejskiego i Rady (UE) nr 524/2013 z dnia
+21 maja 2013 r. w sprawie internetowego rozstrzygania sporow konsumenckich oraz
+zmiany rozporzadzenia (WE) nr 2006/2004 i dyrektywy 2009/22/WE (rozporzadzenie
+ODR), Fundacja Rozwoju Przedsiebiorczosci "Twoj StartUp" z siedziba w Warszawie
+udostepnia link elektroniczny do platformy ODR: https://webgate.ec.europa.eu/odr.
+Platforma ODR umozliwia pozasadowe rozwiazywanie sporow pomiedzy przedsiebiorcami
+a konsumentami. Rozwiazywanie sporow w ten sposob jest dobrowolne.
+Page 21 of 23
+
+--- Page 21 ---
+WZOR FORMULARZA ODSTAPIENIA
+(ten formularz nalezy wypelnic i odeslac tylko jezeli chcesz odstapic od Umowy)
+………………………………………………
+(imie i nazwisko)
+………………………………………………
+………………………………………………
+(adres)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+pietro,
+02-017 Warszawa
+Adres do doreczen
+…………………………………………………….
+ODSTAPIENIE OD UMOWY
+Ja, nizej podpisany, niniejszym odstepuje od nastepujacej umowy:
+1. Data zawarcia umowy ..........................................................................
+2. Numer umowy / zamowienia ……………………………………………………………….
+3. Przedmiot Umowy ............................................................
+……………………………
+Podpis Klienta
+Data: ………………………….
+Page 22 of 23
+
+--- Page 22 ---
+WZOR REKLAMACJI
+(ten formularz nalezy wypelnic i odeslac tylko jezeli chcesz zlozyc reklamacje)
+………………………………………………
+(imie i nazwisko)
+………………………………………………
+………………………………………………
+(adres)
+Fundacja Rozwoju Przedsiebiorczosci
+"Twoj StartUp"
+Atlas Tower, Al. Jerozolimskie 123a, 18
+pietro,
+02-017 Warszawa
+Adres do doreczen
+……………………………………………………..
+REKLAMACJA
+Ja, nizej podpisany, skladam reklamacje dotyczaca umowy/zamowienia z dnia
+............................................... nr .............................................., ktorej przedmiotem bylo ...
+....................................................................................................................................................................
+Przyczyna reklamacji: ......................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+(opisz przyczyne reklamacji)
+W zwiazku z powyzszym wnosze o ............................................... ..........................................................
+....................................................................................................................................................................
+....................................................................................................................................................................
+……………………………
+Podpis Klienta
+
+--- Page 23 ---
+Data: ………………………….
+Page 23 of 23
