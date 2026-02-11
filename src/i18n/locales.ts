@@ -5,12 +5,14 @@ export type Locale =
   | "es"
   | "fr"
   | "it"
+  | "ja"
   | "pl"
   | "pt"
   | "ru"
   | "sk"
   | "tr"
-  | "uk";
+  | "uk"
+  | "zh";
 
 export const defaultLocale: Locale = "en";
 
@@ -21,12 +23,14 @@ const unsortedLocaleOptions: Array<{ code: Locale; label: string }> = [
   { code: "es", label: "Español" },
   { code: "fr", label: "Français" },
   { code: "it", label: "Italiano" },
+  { code: "ja", label: "日本語" },
   { code: "pl", label: "Polski" },
   { code: "pt", label: "Português" },
   { code: "ru", label: "Русский" },
   { code: "sk", label: "Slovenčina" },
   { code: "tr", label: "Türkçe" },
   { code: "uk", label: "Українська" },
+  { code: "zh", label: "简体中文" },
 ];
 
 export const localeOptions = [...unsortedLocaleOptions].sort((a, b) =>
