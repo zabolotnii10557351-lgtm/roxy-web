@@ -802,12 +802,20 @@ const ru: MarketingContent = {
         body: "Вы обязуетесь использовать RoxStreamAI в рамках правил платформ и законодательства. Запрещены злоупотребления, харассмент и незаконные действия.",
       },
       {
+        title: "Провайдеры и BYOK",
+        body: "При встроенных провайдерах RoxStreamAI может передавать запросы третьим сторонам. При BYOK вы отвечаете за ключи и биллинг у провайдера.",
+      },
+      {
         title: "Контент",
         body: "Вы сохраняете права на контент. Мы используем его только для предоставления и улучшения сервиса.",
       },
       {
         title: "Биллинг",
         body: "Платные планы продлеваются автоматически. Возможны доплаты за дополнительные кредиты или аддоны.",
+      },
+      {
+        title: "Доступность",
+        body: "Мы стремимся к высокой доступности, но не гарантируем бесперебойную работу. Возможны обслуживание и сбои.",
       },
       {
         title: "Прекращение",
@@ -827,6 +835,10 @@ const ru: MarketingContent = {
       {
         title: "Как используем",
         body: "Для аутентификации, запуска сессий, поддержки и повышения надежности и безопасности.",
+      },
+      {
+        title: "Безопасность",
+        body: "Мы применяем контроль доступа и редактирование секретов для защиты.",
       },
       {
         title: "Срок хранения",
@@ -868,6 +880,20 @@ const ru: MarketingContent = {
         description:
           "Управляйте множеством аккаунтов и языков из единой панели. Координируйте регионы, аналитику и бренд‑безопасность в одном месте.",
         highlights: ["Планировщик аккаунтов", "Командный доступ", "Централизованная аналитика"],
+      },
+      {
+        id: "unreal-avatar",
+        title: "Стримы с аватаром Unreal",
+        description:
+          "Используйте десктоп‑приложение, чтобы подключить Unreal и стримить персонажа в реальном времени.",
+        highlights: ["Workflow десктоп‑приложения", "Подключение Unreal", "Аватар в реальном времени"],
+      },
+      {
+        id: "team-workflows",
+        title: "Командные процессы",
+        description:
+          "Управляйте персонажами, расходом и доступом в команде. Админ‑инструменты защищают ключи и биллинг.",
+        highlights: ["Админ‑инструменты", "Управление ключами", "Видимость аудита"],
       },
     ],
     outcomes: {
@@ -916,6 +942,16 @@ const ru: MarketingContent = {
           description: "Создайте персону, добавьте пакеты знаний, выберите голос и правила безопасности.",
         },
         {
+          id: "set-limits",
+          title: "Задайте лимиты AI‑речи (опционально)",
+          description: "Держите расход предсказуемым, когда AI co‑host активен.",
+        },
+        {
+          id: "connect-unreal",
+          title: "Подключите Unreal через десктоп‑приложение",
+          description: "Используйте десктоп‑приложение для Unreal‑подключения, экспорта и локальной диагностики.",
+        },
+        {
           id: "go-live",
           title: "Выход в эфир",
           description: "Включите движок Dono + скрипты стрима и протестируйте сессию перед 24/7.",
@@ -932,6 +968,7 @@ const ru: MarketingContent = {
         { id: "scheduler", title: "Планировщик аккаунтов", description: "Ротируйте аккаунты и регионы для 24/7‑покрытия с безопасным темпом." },
         { id: "safety", title: "Safety Guard", description: "Фильтры, запрещенные темы, лимиты скорости и фразы аварийной остановки." },
         { id: "unreal-connector", title: "Unreal Connector", description: "Подключайте реакции к аватар‑сцене через event‑hooks и lip‑sync." },
+        { id: "diagnostics", title: "Диагностика", description: "Индикаторы статуса для backend, audio, токенов и коннекторов." },
       ],
     },
     api: {
@@ -1013,7 +1050,6 @@ const ru: MarketingContent = {
       { name: "Lia Chen", role: "Продукт и рост", focus: "Инструменты для создателей, онбординг и стратегия цен." },
       { name: "Maks Orlov", role: "Лид инженерии", focus: "Realtime‑системы, stream‑scripts и надежность платформы." },
       { name: "Sofia Kim", role: "Лид дизайна", focus: "Бренд‑система, UI‑киты и новые потоки кабинета." },
-      { name: "Artem Volkov", role: "AI и голос", focus: "Тюнинг персоны, TTS‑пайплайны и контроль безопасности." },
     ],
     values: {
       eyebrow: "Ценности",
@@ -1071,6 +1107,7 @@ const ru: MarketingContent = {
         "TikTok: 1 аккаунт",
         "Dono‑правила: до 20",
         "Сценарии: 3 пресета",
+        "Knowledge‑элементы: 3",
         "Логи: 7 дней",
         "Водяной знак всегда включен",
       ],
@@ -1084,12 +1121,14 @@ const ru: MarketingContent = {
       includedHours: "10 часов активной речи",
       cta: "Выбрать",
       features: [
+        "Кредиты + BYOK",
         "Аккаунты: до 5",
         "Dono‑правила: 200",
         "Сценарии: безлимит",
         "Knowledge‑элементы: 20",
         "Водяной знак: переключаемый",
         "Логи: 30 дней",
+        "Экспорт/Импорт",
         "Unreal поддержка",
       ],
     },
@@ -1110,6 +1149,7 @@ const ru: MarketingContent = {
         "Логи: 90 дней",
         "Командные места: 5",
         "Коммерческая лицензия",
+        "Приоритетная поддержка",
         "Unreal поддержка",
       ],
     },
@@ -1119,8 +1159,6 @@ const ru: MarketingContent = {
     { q: "Что такое активные часы речи?", a: "Считается только время, когда RoxStreamAI говорит." },
     { q: "Можно отключить водяной знак?", a: "В Basic/Тесте — нет. В Pro/Studio — да." },
     { q: "Доход гарантирован?", a: "Нет, зависит от контента и аудитории." },
-    { q: "Нужен Unreal?", a: "Нет, это опция." },
-    { q: "Работает 24/7?", a: "Да, Pro/Studio поддерживают расписание." },
   ],
   blogPosts: [
     {
@@ -1134,6 +1172,8 @@ const ru: MarketingContent = {
         "AI‑стримеры позволяют запускать live‑форматы без человека‑хоста.",
         "Начните с главного персонажа и добавьте пакеты знаний, чтобы держать ответы в рамках бренда.",
         "Планировщик мульти‑аккаунтов держит региональные каналы активными 24/7, а модерация и аналитика централизованы.",
+        "Начните с hero‑персонажа и свяжите Dono‑правила с кампаниями.",
+        "Агентства используют планировщик мульти‑аккаунтов для регионального 24/7.",
       ],
     },
     {
@@ -1147,6 +1187,8 @@ const ru: MarketingContent = {
         "RoxStreamAI запускает AI‑стримеров за минуты: подключите аккаунт, настройте персону и выходите в эфир с готовыми сценариями и реакциями.",
         "Платформа для длинных сессий: безопасный темп, встроенная модерация и планировщик, который держит каналы активными без ручного переключения.",
         "Пользователи Pro получают кредиты и готовые процессы. BYOK позволяет подключать собственные модели и голоса.",
+        "Настройте лимиты Active Speech, чтобы расходы были предсказуемыми.",
+        "Экспорт и диагностика в десктоп‑приложении ускоряют запуск.",
       ],
     },
     {
@@ -1160,6 +1202,7 @@ const ru: MarketingContent = {
         "Надежный 24/7‑формат строится на трех слоях: сценарная структура, реактивные моменты и контроль безопасности.",
         "Далее свяжите донаты с реакциями через приоритеты и cooldowns — это создает всплески новизны без перегруза.",
         "И наконец, настройте защитные правила и ручное вмешательство: персонаж остается стабильным даже при высокой нагрузке чата.",
+        "Скрипты и приоритеты держат темп без перегрузки чата.",
       ],
     },
   ],
@@ -1198,8 +1241,10 @@ const uk: MarketingContent = {
     sections: [
       { title: "Акаунти", body: "Ви відповідаєте за безпеку облікових даних і всі дії в акаунті." },
       { title: "Використання", body: "Ви зобовʼязуєтесь використовувати RoxStreamAI відповідно до правил платформ і законодавства. Зловживання та незаконна діяльність заборонені." },
-      { title: "Контент", body: "Ви зберігаєте права на контент. Ми обробляємо його лише для надання та покращення сервісу." },
+      { title: "Провайдери та BYOK", body: "За вбудованих провайдерів RoxStreamAI може передавати запити третім сторонам. За BYOK ви відповідаєте за ключі та білінг у провайдера." },
       { title: "Білінг", body: "Платні плани продовжуються автоматично. Можливі доплати за кредити або аддони." },
+      { title: "Контент", body: "Ви зберігаєте права на контент. Ми обробляємо його лише для надання та покращення сервісу." },
+      { title: "Доступність", body: "Ми прагнемо високої доступності, але не гарантуємо безперервну роботу. Можливі техобслуговування та збої." },
       { title: "Припинення", body: "Ми можемо обмежити доступ при порушеннях. Скасувати підписку можна в кабінеті." },
     ],
   },
@@ -1212,6 +1257,7 @@ const uk: MarketingContent = {
       { title: "Як використовуємо", body: "Для аутентифікації, запуску сесій, підтримки та покращення надійності й безпеки." },
       { title: "Термін зберігання", body: "Залежить від тарифу та керується в кабінеті або через підтримку." },
       { title: "Ваш контроль", body: "Ви можете експортувати або видалити дані. Напишіть нам для видалення акаунта." },
+      { title: "Безпека", body: "Ми застосовуємо контроль доступу та редагування секретів для захисту." },
     ],
   },
   useCases: {
@@ -1245,6 +1291,20 @@ const uk: MarketingContent = {
           "Керуйте кількома акаунтами та мовами з одного кабінету. Ідеально для студій та операторів.",
         highlights: ["Планувальник акаунтів", "Командний доступ", "Централізована аналітика"],
       },
+      {
+        id: "unreal-avatar",
+        title: "Стріми з аватаром Unreal",
+        description:
+          "Використовуйте десктоп‑додаток, щоб підключити Unreal та стрімити персонажа в реальному часі.",
+        highlights: ["Workflow десктоп‑додатка", "Підключення Unreal", "Аватар у реальному часі"],
+      },
+      {
+        id: "team-workflows",
+        title: "Командні процеси",
+        description:
+          "Керуйте персонажами, споживанням і доступом у команді. Адмін‑інструменти захищають ключі та білінг.",
+        highlights: ["Адмін‑інструменти", "Керування ключами", "Видимість аудиту"],
+      },
     ],
     outcomes: {
       eyebrow: "Результати",
@@ -1271,6 +1331,8 @@ const uk: MarketingContent = {
       steps: [
         { id: "connect", title: "Підключення", description: "Підключіть TikTok Live, оберіть регіон і мову за замовчуванням для персонажа." },
         { id: "customize", title: "Налаштування", description: "Створіть персону, додайте пакети знань, оберіть голос і правила безпеки." },
+        { id: "set-limits", title: "Встановіть ліміти AI‑мовлення (опційно)", description: "Тримайте використання передбачуваним, коли AI co‑host активний." },
+        { id: "connect-unreal", title: "Підключіть Unreal через десктоп‑додаток", description: "Використовуйте десктоп‑додаток для підключення Unreal, експорту та локальної діагностики." },
         { id: "go-live", title: "Вихід в ефір", description: "Увімкніть рушій Dono + скрипти стріму і протестуйте сесію перед 24/7." },
       ],
     },
@@ -1284,6 +1346,7 @@ const uk: MarketingContent = {
         { id: "scheduler", title: "Планувальник акаунтів", description: "Ротуйте акаунти й регіони для 24/7‑покриття з безпечним темпом." },
         { id: "safety", title: "Safety Guard", description: "Фільтри, заблоковані теми, ліміти швидкості та фрази аварійної зупинки." },
         { id: "unreal-connector", title: "Unreal Connector", description: "Підключайте реакції до сцени аватара через event‑hooks і lip‑sync." },
+        { id: "diagnostics", title: "Діагностика", description: "Індикатори стану для backend, audio, токенів і конекторів." },
       ],
     },
     api: {
@@ -1362,7 +1425,6 @@ const uk: MarketingContent = {
       { name: "Lia Chen", role: "Продукт і зростання", focus: "Інструменти для творців, онбординг і цінова стратегія." },
       { name: "Maks Orlov", role: "Лід інженерії", focus: "Realtime‑системи, stream‑scripts і надійність платформи." },
       { name: "Sofia Kim", role: "Лід дизайну", focus: "Бренд‑система, UI‑кити та нові потоки кабінету." },
-      { name: "Artem Volkov", role: "AI та голос", focus: "Тюнінг персони, TTS‑пайплайни та контроль безпеки." },
     ],
     values: {
       eyebrow: "Цінності",
@@ -1420,6 +1482,7 @@ const uk: MarketingContent = {
         "TikTok: 1 акаунт",
         "Dono‑правила: до 20",
         "Скрипти: 3 пресети",
+        "Knowledge‑елементи: 3",
         "Логи: 7 днів",
         "Watermark завжди увімкнено",
       ],
@@ -1433,12 +1496,14 @@ const uk: MarketingContent = {
       includedHours: "10 годин активного мовлення",
       cta: "Обрати",
       features: [
+        "Кредити + BYOK",
         "Акаунти: до 5",
         "Dono‑правила: 200",
         "Скрипти: безліміт",
         "Knowledge‑елементи: 20",
         "Watermark: перемикається",
         "Логи: 30 днів",
+        "Експорт/Імпорт",
         "Підтримка Unreal",
       ],
     },
@@ -1459,6 +1524,7 @@ const uk: MarketingContent = {
         "Логи: 90 днів",
         "Командні місця: 5",
         "Комерційна ліцензія",
+        "Пріоритетна підтримка",
         "Підтримка Unreal",
       ],
     },
@@ -1468,8 +1534,6 @@ const uk: MarketingContent = {
     { q: "Що таке активні години мовлення?", a: "Рахується лише час, коли RoxStreamAI говорить." },
     { q: "Чи можна вимкнути watermark?", a: "У Basic/Тесті — ні. У Pro/Studio — так." },
     { q: "Чи гарантується дохід?", a: "Ні, усе залежить від контенту та аудиторії." },
-    { q: "Потрібен Unreal?", a: "Ні, це опція." },
-    { q: "Працює 24/7?", a: "Так, Pro/Studio підтримують розклад." },
   ],
   blogPosts: [
     {
@@ -1483,6 +1547,8 @@ const uk: MarketingContent = {
         "AI‑стримери дозволяють запускати live‑формати без людини‑хоста.",
         "Почніть із головного персонажа та додайте пакети знань, щоб відповіді були в межах бренду.",
         "Планувальник мульти‑акаунтів тримає регіональні канали активними 24/7, а модерація та аналітика централізовані.",
+        "Почніть із hero‑персони та прив'яжіть Dono‑правила до кампаній.",
+        "Агенції використовують мульти‑акаунт планувальник для регіонального 24/7.",
       ],
     },
     {
@@ -1496,6 +1562,8 @@ const uk: MarketingContent = {
         "RoxStreamAI запускає AI‑стримерів за хвилини: підключіть акаунт, налаштуйте персону й виходьте в ефір із готовими сценаріями та реакціями.",
         "Платформа для довгих сесій: безпечний темп, вбудована модерація та планувальник без ручного перемикання.",
         "Користувачі Pro отримують кредити й готові процеси. BYOK дозволяє підключати власні моделі та голоси.",
+        "Налаштуйте ліміти Active Speech, щоб витрати були передбачуваними.",
+        "Експорт і діагностика у десктоп‑додатку пришвидшують запуск.",
       ],
     },
     {
@@ -1509,6 +1577,7 @@ const uk: MarketingContent = {
         "Надійний 24/7‑формат має три шари: сценарну структуру, реактивні моменти й контроль безпеки.",
         "Далі звʼяжіть донати з реакціями через пріоритети та cooldowns — це створює сплески новизни без перевантаження.",
         "Насамкінець налаштуйте запобіжники й ручне перевизначення, щоб персонаж залишався стабільним навіть за великого чату.",
+        "Скрипти й пріоритети тримають темп без перевантаження чату.",
       ],
     },
   ],
@@ -1548,8 +1617,10 @@ const de: MarketingContent = {
     sections: [
       { title: "Konten", body: "Du bist für deine Zugangsdaten und alle Aktivitäten verantwortlich." },
       { title: "Nutzung", body: "Nutzung gemäß Plattform‑Regeln und Gesetzen. Missbrauch ist untersagt." },
-      { title: "Inhalte", body: "Du behältst die Rechte. Wir verarbeiten Inhalte nur zur Bereitstellung." },
+      { title: "Provider‑Nutzung und BYOK", body: "Bei integrierten Providern können Anfragen an Drittanbieter weitergegeben werden. Bei BYOK bist du für eigene Keys und Abrechnung verantwortlich." },
       { title: "Abrechnung", body: "Pläne verlängern sich automatisch. Zusatznutzung kann berechnet werden." },
+      { title: "Inhalte", body: "Du behältst die Rechte. Wir verarbeiten Inhalte nur zur Bereitstellung." },
+      { title: "Verfügbarkeit", body: "Wir streben hohe Verfügbarkeit an, garantieren aber keine unterbrechungsfreie Nutzung. Wartung und Ausfälle können auftreten." },
       { title: "Kündigung", body: "Wir können bei Verstößen sperren. Kündigung jederzeit im Dashboard." },
     ],
   },
@@ -1562,6 +1633,7 @@ const de: MarketingContent = {
       { title: "Verwendung", body: "Authentifizierung, Sessions, Support und Sicherheit." },
       { title: "Speicherung", body: "Abhängig vom Plan und in der Konsole steuerbar." },
       { title: "Kontrolle", body: "Datenexport oder Löschung jederzeit möglich." },
+      { title: "Sicherheit", body: "Wir nutzen Zugriffskontrollen und Redaktion, um Geheimnisse zu schützen." },
     ],
   },
   useCases: {
@@ -1591,6 +1663,20 @@ const de: MarketingContent = {
           "Verwalte mehrere Creator, Logins und Sprachen in einem Control Room.",
         highlights: ["Mehrkonto‑Planer", "Team‑Zugriff", "Analytics"],
       },
+      {
+        id: "unreal-avatar",
+        title: "Unreal‑Avatar‑Streams",
+        description:
+          "Nutze die Desktop‑App, um Unreal zu verbinden und einen Echtzeit‑Charakter zu streamen.",
+        highlights: ["Desktop‑App‑Workflow", "Unreal‑Verbindung", "Echtzeit‑Avatar"],
+      },
+      {
+        id: "team-workflows",
+        title: "Team‑Workflows",
+        description:
+          "Verwalte Charaktere, Nutzung und Zugriffe im Team. Admin‑Tools halten Keys und Billing sicher.",
+        highlights: ["Admin‑Tools", "Key‑Management", "Audit‑Einblick"],
+      },
     ],
     outcomes: {
       eyebrow: "Ergebnisse",
@@ -1617,6 +1703,8 @@ const de: MarketingContent = {
       steps: [
         { id: "connect", title: "Verbinden", description: "TikTok Live verbinden, Region wählen und Standardsprache festlegen." },
         { id: "customize", title: "Anpassen", description: "Persona erstellen, Wissenspakete hinzufügen, Voice wählen und Safety‑Regeln definieren." },
+        { id: "set-limits", title: "Limits für AI Speech setzen (optional)", description: "Halte die Nutzung planbar, wenn der AI Co‑Host aktiviert ist." },
+        { id: "connect-unreal", title: "Unreal mit der Desktop‑App verbinden", description: "Nutze die Desktop‑App für Unreal‑Verbindung, Export und lokale Diagnosen." },
         { id: "go-live", title: "Live gehen", description: "Dono‑Motor + Stream‑Skripte aktivieren und vor 24/7 testen." },
       ],
     },
@@ -1630,6 +1718,7 @@ const de: MarketingContent = {
         { id: "scheduler", title: "Mehrkonto‑Planer", description: "Accounts und Regionen rotieren, um 24/7‑Coverage mit sicherem Pacing zu sichern." },
         { id: "safety", title: "Safety Guard", description: "Profanity‑Filter, gesperrte Topics, Rate‑Limits und Notfall‑Stopp‑Phrasen." },
         { id: "unreal-connector", title: "Unreal Connector", description: "Live‑Reaktionen mit Avatar‑Scenes verbinden – event‑getrieben mit Lip‑Sync." },
+        { id: "diagnostics", title: "Diagnose", description: "Statusanzeigen fur Backend, Audio, Tokens und Connectoren." },
       ],
     },
     api: {
@@ -1708,7 +1797,6 @@ const de: MarketingContent = {
       { name: "Lia Chen", role: "Produkt & Growth", focus: "Creator‑Tooling, Onboarding und Pricing‑Strategie." },
       { name: "Maks Orlov", role: "Engineering Lead", focus: "Realtime‑Systeme, Stream‑Skripte und Plattform‑Reliability." },
       { name: "Sofia Kim", role: "Design Lead", focus: "Brand‑System, UI‑Kits und neue Dashboard‑Abläufe." },
-      { name: "Artem Volkov", role: "AI & Voice", focus: "Persona‑Tuning, TTS‑Pipelines und Sicherheitskontrollen." },
     ],
     values: {
       eyebrow: "Werte",
@@ -1775,8 +1863,6 @@ const de: MarketingContent = {
     { q: "Was sind aktive Sprachstunden?", a: "Nur die Zeit, in der Roxy spricht." },
     { q: "Kann ich das Wasserzeichen deaktivieren?", a: "Basic/Trial: nein. Pro/Studio: ja." },
     { q: "Garantiert das Einnahmen?", a: "Nein, Ergebnisse hängen von Inhalt und Publikum ab." },
-    { q: "Ist Unreal erforderlich?", a: "Nein, optional via Unreal Connector." },
-    { q: "Kann ich 24/7 laufen?", a: "Ja, Pro/Studio unterstützen die Zeitplanung." },
   ],
   blogPosts: [
     {
@@ -1790,6 +1876,8 @@ const de: MarketingContent = {
         "AI‑Streamer ermöglichen Live‑Formate ohne menschlichen Host. Der Charakter bleibt on‑message und reagiert auf Gifts.",
         "Starte mit einem Hero‑Charakter, füge Wissenspakete hinzu und verknüpfe Dono‑Regeln mit Kampagnen‑Events.",
         "Agenturen nutzen Mehrkonto‑Planung für regionale Kanäle rund um die Uhr.",
+        "Verbinde Kampagnen‑Events mit Dono‑Regeln, um wiederkehrende Aktivierungen zu automatisieren.",
+        "Agenturen nutzen die Mehrkonto‑Planung fur regionale 24/7‑Abdeckung.",
       ],
     },
     {
@@ -1803,6 +1891,8 @@ const de: MarketingContent = {
         "RoxStreamAI startet AI‑Streamer in Minuten: Account verbinden, Persona anpassen, live gehen.",
         "Fokus auf lange Sessions: sicheres Pacing, Moderation und Planer.",
         "Pro enthält Credits; BYOK erlaubt eigene Modelle und Voices.",
+        "Plattform fur lange Sessions: sicheres Pacing, Moderation und Planer ohne manuelles Umschalten.",
+        "Setze Active Speech Limits, um Kosten planbar zu halten.",
       ],
     },
     {
@@ -1816,6 +1906,7 @@ const de: MarketingContent = {
         "Ein stabiles 24/7‑Format braucht Struktur, reaktive Momente und Safety‑Kontrollen.",
         "Mappe Donations zu Reaktionen mit Prioritäten und Cooldowns.",
         "Setze Sicherheitsleitplanken und menschliche Overrides.",
+        "Skripte und Prioritaten halten das Tempo ohne Chat‑Overload.",
       ],
     },
   ],
@@ -1852,8 +1943,10 @@ const es: MarketingContent = {
     sections: [
       { title: "Cuentas", body: "Eres responsable de tus credenciales y actividad." },
       { title: "Uso", body: "Cumple reglas y leyes. No se permite abuso." },
-      { title: "Contenido", body: "Conservas la propiedad; procesamos solo para el servicio." },
+      { title: "Uso de proveedores y BYOK", body: "Cuando usas proveedores integrados, RoxStreamAI puede enviar solicitudes a terceros. Con BYOK, tus claves y facturación son tu responsabilidad." },
       { title: "Facturación", body: "Planes se renuevan automáticamente. Pueden aplicarse extras." },
+      { title: "Contenido", body: "Conservas la propiedad; procesamos solo para el servicio." },
+      { title: "Disponibilidad", body: "Buscamos alta disponibilidad, pero no garantizamos servicio ininterrumpido. Puede haber mantenimiento y caídas." },
       { title: "Terminación", body: "Podemos suspender por incumplimiento. Cancelación en el panel." },
     ],
   },
@@ -1865,6 +1958,7 @@ const es: MarketingContent = {
       { title: "Uso de datos", body: "Autenticación, sesiones, soporte y seguridad." },
       { title: "Retención", body: "Depende del plan y se gestiona en el panel." },
       { title: "Control", body: "Puedes exportar o eliminar datos cuando quieras." },
+      { title: "Seguridad", body: "Aplicamos controles de acceso y redacción para proteger secretos." },
     ],
   },
   useCases: {
@@ -1889,6 +1983,19 @@ const es: MarketingContent = {
         title: "Agencias",
         description: "Múltiples cuentas e idiomas desde un solo panel.",
         highlights: ["Planificador multicuenta", "Acceso de equipo", "Analytics"],
+      },
+      {
+        id: "unreal-avatar",
+        title: "Streams con avatar en Unreal",
+        description: "Usa la app de escritorio para conectar Unreal y emitir un personaje en tiempo real.",
+        highlights: ["Flujo con app de escritorio", "Conexión Unreal", "Avatar en tiempo real"],
+      },
+      {
+        id: "team-workflows",
+        title: "Flujos de equipo",
+        description:
+          "Gestiona personajes, uso y accesos en equipo. Las herramientas de admin mantienen claves y facturación seguras.",
+        highlights: ["Herramientas admin", "Gestión de claves", "Visibilidad de auditoría"],
       },
     ],
     outcomes: {
@@ -1916,6 +2023,8 @@ const es: MarketingContent = {
       steps: [
         { id: "connect", title: "Conectar", description: "Vincula tu TikTok Live, elige región y el idioma por defecto del personaje." },
         { id: "customize", title: "Personalizar", description: "Crea la persona, añade paquetes de conocimiento, elige voz y define reglas de seguridad." },
+        { id: "set-limits", title: "Define límites de habla IA (opcional)", description: "Mantén el uso predecible cuando el co‑host IA esté activo." },
+        { id: "connect-unreal", title: "Conecta Unreal con la app de escritorio", description: "Usa la app de escritorio para conexión Unreal, exportación y diagnósticos locales." },
         { id: "go-live", title: "Ir en vivo", description: "Activa Motor Dono + scripts de stream y prueba antes del 24/7." },
       ],
     },
@@ -1929,6 +2038,7 @@ const es: MarketingContent = {
         { id: "scheduler", title: "Planificador multicuenta", description: "Rota cuentas y regiones para mantener cobertura continua con pacing seguro." },
         { id: "safety", title: "Safety Guard", description: "Filtros de lenguaje, temas bloqueados, límites de ritmo y frases de stop de emergencia." },
         { id: "unreal-connector", title: "Unreal Connector", description: "Conecta reacciones al avatar con hooks event‑driven y lip‑sync." },
+        { id: "diagnostics", title: "Diagnosticos", description: "Indicadores de estado para backend, audio, tokens y conectores." },
       ],
     },
     api: {
@@ -2007,7 +2117,6 @@ const es: MarketingContent = {
       { name: "Lia Chen", role: "Producto y Growth", focus: "Herramientas para creadores, onboarding y estrategia de precios." },
       { name: "Maks Orlov", role: "Líder de ingeniería", focus: "Sistemas en tiempo real, scripts de stream y confiabilidad de plataforma." },
       { name: "Sofia Kim", role: "Líder de diseño", focus: "Sistema de marca, kits UI y nuevos flujos del dashboard." },
-      { name: "Artem Volkov", role: "AI y Voz", focus: "Ajuste de persona, pipelines TTS y controles de seguridad." },
     ],
     values: {
       eyebrow: "Valores",
@@ -2059,8 +2168,6 @@ const es: MarketingContent = {
     { q: "¿Qué son horas activas?", a: "Solo cuando Roxy habla." },
     { q: "¿Puedo quitar watermark?", a: "Basic/Trial: no. Pro/Studio: sí." },
     { q: "¿Garantiza ingresos?", a: "No, depende del contenido y audiencia." },
-    { q: "¿Unreal es requerido?", a: "No, es opcional." },
-    { q: "¿24/7?", a: "Sí, Pro/Studio soportan programación." },
   ],
   blogPosts: [
     {
@@ -2074,6 +2181,8 @@ const es: MarketingContent = {
         "Los streamers IA permiten formatos live sin host humano. El personaje mantiene el mensaje y reacciona a regalos.",
         "Empieza con un personaje principal y añade paquetes de conocimiento para alinear respuestas.",
         "Para agencias, el planificador multi‑cuenta mantiene canales regionales activos 24/7.",
+        "Empieza con un personaje hero y conecta reglas Dono a eventos de campaña.",
+        "Las agencias usan el planificador multicuenta para cobertura regional 24/7.",
       ],
     },
     {
@@ -2087,6 +2196,8 @@ const es: MarketingContent = {
         "RoxStreamAI permite lanzar streamers IA en minutos.",
         "Enfocado en sesiones largas con pacing seguro y moderación.",
         "Pro incluye créditos; BYOK permite tus propios modelos y voces.",
+        "Plataforma para sesiones largas: pacing seguro, moderacion y planificador sin cambios manuales.",
+        "Configura limites de Active Speech para mantener costos predecibles.",
       ],
     },
     {
@@ -2100,6 +2211,7 @@ const es: MarketingContent = {
         "Un formato 24/7 necesita estructura, reacciones y controles de seguridad.",
         "Mapea donaciones a reacciones con prioridades y cooldowns.",
         "Configura barreras de seguridad y un override humano.",
+        "Scripts y prioridades mantienen el ritmo sin saturar el chat.",
       ],
     },
   ],
@@ -2134,8 +2246,10 @@ const fr: MarketingContent = {
     sections: [
       { title: "Comptes", body: "Vous êtes responsable de vos identifiants." },
       { title: "Usage", body: "Respect des règles et lois. Abus interdit." },
-      { title: "Contenu", body: "Vous gardez la propriété; traitement pour le service." },
+      { title: "Fournisseurs et BYOK", body: "Avec les fournisseurs intégrés, RoxStreamAI peut transmettre vos requêtes à des tiers. Avec BYOK, vous gérez vos clés et votre facturation." },
       { title: "Facturation", body: "Renouvellement automatique. Extras possibles." },
+      { title: "Contenu", body: "Vous gardez la propriété; traitement pour le service." },
+      { title: "Disponibilité", body: "Nous visons une haute disponibilité sans garantir un service ininterrompu. Des maintenances et interruptions peuvent survenir." },
       { title: "Résiliation", body: "Suspension possible en cas d’abus. Annulation dans le dashboard." },
     ],
   },
@@ -2147,6 +2261,7 @@ const fr: MarketingContent = {
       { title: "Utilisation", body: "Auth, sessions, support, fiabilité." },
       { title: "Rétention", body: "Selon le plan, gérable dans le dashboard." },
       { title: "Contrôle", body: "Export/suppression possibles." },
+      { title: "Sécurité", body: "Nous appliquons des contrôles d'accès et une rédaction pour protéger les secrets." },
     ],
   },
   useCases: {
@@ -2157,6 +2272,8 @@ const fr: MarketingContent = {
       { id: "creators", title: "Créateurs", description: "Scaler sans burnout.", highlights: ["Pacing 24/7", "Réactions rapides", "Moments clips"] },
       { id: "faceless", title: "Faceless", description: "Chaînes avec personnage sans caméra.", highlights: ["Persona + pack de connaissances", "Voix", "Modération"] },
       { id: "agencies", title: "Agences", description: "Multi‑comptes et langues.", highlights: ["Planificateur", "Accès équipe", "Analytics"] },
+      { id: "unreal-avatar", title: "Streams d'avatar Unreal", description: "Utilisez l'application desktop pour connecter Unreal et diffuser un personnage en temps réel.", highlights: ["Workflow desktop", "Connexion Unreal", "Avatar en temps réel"] },
+      { id: "team-workflows", title: "Flux d’équipe", description: "Gérez personnages, usage et accès en équipe. Les outils admin sécurisent clés et facturation.", highlights: ["Outils admin", "Gestion des clés", "Visibilité audit"] },
     ],
     outcomes: {
       eyebrow: "Résultats",
@@ -2178,6 +2295,8 @@ const fr: MarketingContent = {
       steps: [
         { id: "connect", title: "Connecter", description: "Liez TikTok Live, choisissez région et langue par défaut." },
         { id: "customize", title: "Personnaliser", description: "Créez la persona, ajoutez des packs de connaissances, choisissez la voix et les règles de sécurité." },
+        { id: "set-limits", title: "Définir des limites d'AI speech (optionnel)", description: "Gardez l'usage prévisible quand le co‑host IA est activé." },
+        { id: "connect-unreal", title: "Connecter Unreal via l'application desktop", description: "Utilisez l'app desktop pour la connexion Unreal, l'export et les diagnostics locaux." },
         { id: "go-live", title: "Passer live", description: "Activez le Moteur Dono + scripts de stream et testez avant le 24/7." },
       ],
     },
@@ -2191,6 +2310,7 @@ const fr: MarketingContent = {
         { id: "scheduler", title: "Planificateur multi‑compte", description: "Faites tourner comptes et régions pour une couverture 24/7 avec pacing sûr." },
         { id: "safety", title: "Safety Guard", description: "Filtres de langage, sujets bloqués, rate limits et phrases d’arrêt d’urgence." },
         { id: "unreal-connector", title: "Unreal Connector", description: "Connectez les réactions live à l’avatar via hooks event‑driven et lip‑sync." },
+        { id: "diagnostics", title: "Diagnostics", description: "Indicateurs d'etat pour backend, audio, tokens et connecteurs." },
       ],
     },
     api: {
@@ -2269,7 +2389,6 @@ const fr: MarketingContent = {
       { name: "Lia Chen", role: "Produit & Growth", focus: "Outils creators, onboarding et stratégie pricing." },
       { name: "Maks Orlov", role: "Lead Engineering", focus: "Systèmes realtime, scripts live et fiabilité plateforme." },
       { name: "Sofia Kim", role: "Lead Design", focus: "Brand system, UI kits et nouveaux flows dashboard." },
-      { name: "Artem Volkov", role: "IA & Voice", focus: "Tuning persona, pipelines TTS et contrôles de sécurité." },
     ],
     values: {
       eyebrow: "Valeurs",
@@ -2334,8 +2453,6 @@ const fr: MarketingContent = {
     { q: "Que sont les heures actives ?", a: "Uniquement le temps où Roxy parle." },
     { q: "Puis‑je désactiver le filigrane ?", a: "Basic/Essai : non. Pro/Studio : oui." },
     { q: "Revenus garantis ?", a: "Non, cela dépend du contenu et de l’audience." },
-    { q: "Unreal est‑il requis ?", a: "Non, optionnel via l’Unreal Connector." },
-    { q: "24/7 ?", a: "Oui, Pro/Studio supportent la planification." },
   ],
   blogPosts: [
     {
@@ -2349,6 +2466,8 @@ const fr: MarketingContent = {
         "Les streamers IA permettent des formats live sans host humain.",
         "Commencez par un personnage principal et ajoutez des packs de connaissances.",
         "Le planificateur multi‑compte garde les chaînes régionales actives 24/7.",
+        "Commencez avec un personnage hero et reliez les regles Dono aux evenements de campagne.",
+        "Les agences utilisent la planification multi‑compte pour la couverture regionale 24/7.",
       ],
     },
     {
@@ -2362,6 +2481,8 @@ const fr: MarketingContent = {
         "RoxStreamAI lance des streamers IA en quelques minutes.",
         "Sessions longues avec pacing sûr, modération et planificateur.",
         "Pro inclut des crédits; BYOK permet vos propres modèles et voix.",
+        "Plateforme pour sessions longues: pacing sur, moderation et planificateur sans bascule manuelle.",
+        "Reglez des limites Active Speech pour garder les couts previsibles.",
       ],
     },
     {
@@ -2375,6 +2496,7 @@ const fr: MarketingContent = {
         "Un format 24/7 exige structure, réactions et sécurité.",
         "Mappez les dons à des réactions avec priorités et cooldowns.",
         "Ajoutez des garde‑fous et un override humain.",
+        "Scripts et priorites gardent le rythme sans surcharge du chat.",
       ],
     },
   ],
@@ -2592,7 +2714,6 @@ const pl: MarketingContent = {
       { name: "Lia Chen", role: "Produkt i Growth", focus: "Narzędzia dla tworcow, onboarding i strategia cen." },
       { name: "Maks Orlov", role: "Engineering Lead", focus: "Systemy realtime, skrypty streamu i niezawodnosc platformy." },
       { name: "Sofia Kim", role: "Design Lead", focus: "System marki, UI kit i nowe procesy w dashboardzie." },
-      { name: "Artem Volkov", role: "AI i Voice", focus: "Strojenie person, procesy TTS i zabezpieczenia." },
     ],
     values: {
       eyebrow: "Wartosci",
@@ -2660,8 +2781,6 @@ const pl: MarketingContent = {
     { q: "Co to sa godziny aktywnej mowy?", a: "Tylko czas, gdy Roxy mowi." },
     { q: "Czy moge wylaczyc watermark?", a: "Basic/Test: nie. Pro/Studio: tak." },
     { q: "Czy to gwarantuje przychody?", a: "Nie, zalezy od tresci i publicznosci." },
-    { q: "Czy Unreal jest wymagany?", a: "Nie, to opcjonalne." },
-    { q: "Czy dziala 24/7?", a: "Tak, Pro/Studio wspieraja harmonogram." },
   ],
   blogPosts: [
     {
@@ -2675,6 +2794,8 @@ const pl: MarketingContent = {
         "AI streamerzy pozwalaja uruchamiac formaty live bez ludzkiego hosta.",
         "Zacznij od glownej postaci i dodaj pakiety wiedzy, by utrzymac odpowiedzi zgodne z marka.",
         "Harmonogram wielokontowy utrzymuje regionalne kanaly aktywne 24/7.",
+        "Zacznij od postaci hero i powiaz reguly Dono z wydarzeniami kampanii.",
+        "Agencje korzystaja z harmonogramu wielokontowego, by utrzymac regiony 24/7.",
       ],
     },
     {
@@ -2688,6 +2809,8 @@ const pl: MarketingContent = {
         "RoxStreamAI uruchamia streamerow AI w kilka minut: polacz konto, ustaw personę i idz na live.",
         "Dlugie sesje z bezpiecznym tempem, moderacja i harmonogram.",
         "Pro zawiera kredyty; BYOK pozwala uzywac wlasnych modeli i glosow.",
+        "Ustaw limity Active Speech, aby koszty byly przewidywalne.",
+        "Workflow desktop pomaga w eksporcie i diagnostyce.",
       ],
     },
     {
@@ -2701,6 +2824,7 @@ const pl: MarketingContent = {
         "Format 24/7 potrzebuje struktury, reakcji i zabezpieczen.",
         "Mapuj donacje na reakcje z priorytetami i cooldownami.",
         "Ustaw zabezpieczenia i reczny override.",
+        "Skrypty i priorytety utrzymuja tempo bez przeciazenia chatu.",
       ],
     },
   ],
@@ -2918,7 +3042,6 @@ const cs: MarketingContent = {
       { name: "Lia Chen", role: "Produkt a Growth", focus: "Nastroje pro tvurce, onboarding a cenova strategie." },
       { name: "Maks Orlov", role: "Engineering Lead", focus: "Realtime systemy, skripty streamu a spolehlivost platformy." },
       { name: "Sofia Kim", role: "Design Lead", focus: "System znacky, UI kity a nove postupy v dashboardu." },
-      { name: "Artem Volkov", role: "AI & Voice", focus: "Ladeni persony, TTS procesy a bezpecnostni kontroly." },
     ],
     values: {
       eyebrow: "Hodnoty",
@@ -2986,8 +3109,6 @@ const cs: MarketingContent = {
     { q: "Co jsou hodiny aktivni reci?", a: "Pouze cas, kdy Roxy mluvi." },
     { q: "Lze vypnout watermark?", a: "Basic/Trial: ne. Pro/Studio: ano." },
     { q: "Zarucuje to prijmy?", a: "Ne, zalezi na obsahu a publiku." },
-    { q: "Je Unreal nutny?", a: "Ne, je volitelny." },
-    { q: "Funguje 24/7?", a: "Ano, Pro/Studio podporuje planovani." },
   ],
   blogPosts: [
     {
@@ -3001,6 +3122,8 @@ const cs: MarketingContent = {
         "AI streameri umoznuji live formaty bez lidskeho hosta.",
         "Zacnete hlavni postavou a pridejte balicky znalosti pro konzistenci odpovedi.",
         "Planovac vice uctu udrzuje regionalni kanaly aktivni 24/7.",
+        "Zacnete s hero postavou a napojte Dono pravidla na kampanove udalosti.",
+        "Agentury vyuzivaji planovani vice uctu pro regionalni 24/7 pokryti.",
       ],
     },
     {
@@ -3014,6 +3137,8 @@ const cs: MarketingContent = {
         "RoxStreamAI spusti AI streamery behem minut: pripojte ucet, nastavte personu a jdete live.",
         "Zamereno na dlouhe relace: bezpecne tempo, moderace a planovac.",
         "Pro obsahuje kredity; BYOK umozni vlastni modely a hlasy.",
+        "Nastavte limity Active Speech, aby byly naklady predvidatelne.",
+        "Workflow pro desktop pomaha s exportem a diagnostikou.",
       ],
     },
     {
@@ -3027,6 +3152,7 @@ const cs: MarketingContent = {
         "Format 24/7 potrebuje strukturu, reakce a bezpecnostni kontroly.",
         "Mapujte donace na reakce s prioritami a cooldowny.",
         "Nastavte bezpecnostni ochrany a rucni override.",
+        "Skripty a priority drzi tempo bez pretizeni chatu.",
       ],
     },
   ],
@@ -3244,7 +3370,6 @@ const sk: MarketingContent = {
       { name: "Lia Chen", role: "Produkt a Growth", focus: "Nastroje pre tvorcov, onboarding a cenova strategia." },
       { name: "Maks Orlov", role: "Engineering Lead", focus: "Realtime systemy, skripty streamu a spolahlivost platformy." },
       { name: "Sofia Kim", role: "Design Lead", focus: "System znacky, UI kity a nove postupy v dashboarde." },
-      { name: "Artem Volkov", role: "AI a Voice", focus: "Ladenie persony, TTS procesy a bezpecnostne kontroly." },
     ],
     values: {
       eyebrow: "Hodnoty",
@@ -3312,8 +3437,6 @@ const sk: MarketingContent = {
     { q: "Co su hodiny aktivnej reci?", a: "Iba cas, ked Roxy hovori." },
     { q: "Dá sa vypnut watermark?", a: "Basic/Trial: nie. Pro/Studio: ano." },
     { q: "Zarucuje to prijmy?", a: "Nie, zalezi na obsahu a publiku." },
-    { q: "Je Unreal potrebny?", a: "Nie, je volitelny." },
-    { q: "Funguje 24/7?", a: "Ano, Pro/Studio podporuje planovanie." },
   ],
   blogPosts: [
     {
@@ -3327,6 +3450,8 @@ const sk: MarketingContent = {
         "AI streameri umoznuju live formaty bez ludskeho hosta.",
         "Zacnite hlavnou postavou a pridajte baliky znalosti pre konzistentne odpovede.",
         "Planovac viacerych uctov udrziava regionalne kanaly aktivne 24/7.",
+        "Zacnite s hero postavou a prepojte Dono pravidla s kampanovymi eventmi.",
+        "Agentury vyuzivaju planovanie viacerych uctov pre regionalne 24/7 pokrytie.",
       ],
     },
     {
@@ -3340,6 +3465,8 @@ const sk: MarketingContent = {
         "RoxStreamAI spusti AI streamerov za par minut: pripojte ucet, nastavte personu a jdete live.",
         "Zamerane na dlhe relacie s bezpecnym tempom, moderaciou a planovacom.",
         "Pro obsahuje kredity; BYOK umoznuje vlastne modely a hlasy.",
+        "Nastavte limity Active Speech, aby boli naklady predvidatelne.",
+        "Workflow desktop pomaha s exportom a diagnostikou.",
       ],
     },
     {
@@ -3353,6 +3480,7 @@ const sk: MarketingContent = {
         "Format 24/7 potrebuje strukturu, reakcie a bezpecnostne kontroly.",
         "Mapujte donacie na reakcie s prioritami a cooldownmi.",
         "Nastavte bezpecnostne ochrany a rucny override.",
+        "Skripty a priority drzia tempo bez pretazenia chatu.",
       ],
     },
   ],
@@ -3387,8 +3515,10 @@ const it: MarketingContent = {
     sections: [
       { title: "Account", body: "Responsabile delle credenziali." },
       { title: "Uso", body: "Rispetta regole e leggi. Abusi vietati." },
-      { title: "Contenuti", body: "Proprietà tua; elaboriamo solo per il servizio." },
+      { title: "Uso provider e BYOK", body: "Con i provider integrati RoxStreamAI può inoltrare le richieste a terzi. Con BYOK gestisci tu chiavi e fatturazione." },
       { title: "Fatturazione", body: "Rinnovo automatico. Extra possibili." },
+      { title: "Contenuti", body: "Proprietà tua; elaboriamo solo per il servizio." },
+      { title: "Disponibilità", body: "Puntiamo a un'alta disponibilità ma non garantiamo un servizio ininterrotto. Manutenzioni e interruzioni possono verificarsi." },
       { title: "Risoluzione", body: "Sospensione in caso di violazioni." },
     ],
   },
@@ -3400,6 +3530,7 @@ const it: MarketingContent = {
       { title: "Uso dei dati", body: "Auth, sessioni, supporto, sicurezza." },
       { title: "Conservazione", body: "Dipende dal piano." },
       { title: "Controllo", body: "Export/eliminazione disponibili." },
+      { title: "Sicurezza", body: "Applichiamo controlli di accesso e redazione per proteggere i segreti." },
     ],
   },
   useCases: {
@@ -3427,6 +3558,20 @@ const it: MarketingContent = {
         description:
           "Gestisci più creator, login e lingue da un’unica regia. Ideale per studi e operatori multi‑conto.",
         highlights: ["Pianificatore multi‑conto", "Accesso team + log attività", "Analytics centralizzate"],
+      },
+      {
+        id: "unreal-avatar",
+        title: "Stream con avatar Unreal",
+        description:
+          "Usa l'app desktop per connettere Unreal e trasmettere un personaggio in tempo reale.",
+        highlights: ["Workflow app desktop", "Connessione Unreal", "Avatar in tempo reale"],
+      },
+      {
+        id: "team-workflows",
+        title: "Workflow di team",
+        description:
+          "Gestisci personaggi, consumo e accessi nel team. Gli strumenti admin proteggono chiavi e billing.",
+        highlights: ["Strumenti admin", "Gestione chiavi", "Visibilità audit"],
       },
     ],
     outcomes: {
@@ -3472,6 +3617,16 @@ const it: MarketingContent = {
           description: "Crea la persona, aggiungi pacchetti di conoscenze, scegli la voce e le regole di sicurezza.",
         },
         {
+          id: "set-limits",
+          title: "Imposta limiti di AI speech (opzionale)",
+          description: "Mantieni l'uso prevedibile quando il co‑host IA è attivo.",
+        },
+        {
+          id: "connect-unreal",
+          title: "Connetti Unreal con l'app desktop",
+          description: "Usa l'app desktop per connessione Unreal, export e diagnostica locale.",
+        },
+        {
           id: "go-live",
           title: "Vai live",
           description: "Abilita Motore Dono e script di streaming e fai una sessione di test prima del 24/7.",
@@ -3507,6 +3662,11 @@ const it: MarketingContent = {
           id: "unreal-connector",
           title: "Unreal Connector",
           description: "Collega reazioni live alla scena avatar con hook event‑driven e lip‑sync.",
+        },
+        {
+          id: "diagnostics",
+          title: "Diagnostica",
+          description: "Indicatori di stato per backend, audio, token e connettori.",
         },
       ],
     },
@@ -3638,7 +3798,6 @@ const it: MarketingContent = {
       { name: "Lia Chen", role: "Prodotto & Growth", focus: "Tool per creator, onboarding e strategia prezzi." },
       { name: "Maks Orlov", role: "Engineering Lead", focus: "Sistemi realtime, script di streaming e affidabilità piattaforma." },
       { name: "Sofia Kim", role: "Design Lead", focus: "Brand system, UI kit e nuovi flow dashboard." },
-      { name: "Artem Volkov", role: "AI & Voice", focus: "Tuning persona, pipeline TTS e controlli di sicurezza." },
     ],
     values: {
       eyebrow: "Valori",
@@ -3712,8 +3871,6 @@ const it: MarketingContent = {
     { q: "Cosa sono le ore attive?", a: "Solo il tempo in cui Roxy parla." },
     { q: "Posso disattivare il watermark?", a: "Basic/Prova: no. Pro/Studio: sì." },
     { q: "Guadagni garantiti?", a: "No, dipende da contenuto e pubblico." },
-    { q: "Serve Unreal?", a: "No, è opzionale." },
-    { q: "24/7?", a: "Sì, Pro/Studio supportano la pianificazione." },
   ],
   blogPosts: [
     {
@@ -3727,6 +3884,8 @@ const it: MarketingContent = {
         "Gli streamer IA permettono formati live senza host umano.",
         "Inizia con un personaggio principale e aggiungi pacchetti di conoscenze.",
         "Il pianificatore multi‑conto mantiene canali regionali attivi 24/7.",
+        "Inizia con un personaggio hero e collega le regole Dono agli eventi di campagna.",
+        "Le agenzie usano il pianificatore multi‑conto per copertura regionale 24/7.",
       ],
     },
     {
@@ -3740,6 +3899,8 @@ const it: MarketingContent = {
         "RoxStreamAI lancia streamers IA in minuti.",
         "Sessioni lunghe con pacing sicuro e moderazione.",
         "Pro include crediti; BYOK consente modelli e voci propri.",
+        "Piattaforma per sessioni lunghe: pacing sicuro, moderazione e pianificatore senza switch manuali.",
+        "Imposta limiti Active Speech per mantenere i costi prevedibili.",
       ],
     },
     {
@@ -3753,6 +3914,7 @@ const it: MarketingContent = {
         "Un formato 24/7 richiede struttura, reazioni e sicurezza.",
         "Mappa donazioni a reazioni con priorità e cooldown.",
         "Imposta barriere di sicurezza e override umano.",
+        "Script e priorita mantengono il ritmo senza sovraccaricare la chat.",
       ],
     },
   ],
@@ -3762,13 +3924,13 @@ const pt: MarketingContent = {
   ...en,
   about: { eyebrow: "Sobre", title: "Roxy para creators 24/7", subtitle: "Automação premium, segura e controlável.", missionTitle: "Nossa missão", missionBody: "Um co‑host IA que conduz shows, reage a presentes e mantém o público engajado.", beliefTitle: "No que acreditamos", beliefBody: "A criatividade humana vem primeiro. A Roxy cuida da repetição, do agendamento e dos loops de reação." },
   contact: { eyebrow: "Contato", title: "Vamos planejar seu próximo live", subtitle: "Conte seus objetivos e montamos o rollout.", firstName: "Nome", lastName: "Sobrenome", email: "Email de trabalho", message: "O que você quer automatizar?", sendRequest: "Enviar", directLines: "Contato direto", responseTime: "Respondemos em 1 dia útil." },
-  terms: { title: "Termos", intro: "Estes termos regem o uso do RoxStreamAI.", sections: [ { title: "Contas", body: "Você é responsável por suas credenciais." }, { title: "Uso", body: "Siga regras e leis. Abusos proibidos." }, { title: "Conteúdo", body: "Você mantém a propriedade." }, { title: "Cobrança", body: "Renovação automática, extras possíveis." }, { title: "Encerramento", body: "Podemos suspender por violação." } ] },
-  privacy: { title: "Privacidade", intro: "Coletamos apenas dados necessários.", sections: [ { title: "Dados coletados", body: "Detalhes da conta, métricas e configs." }, { title: "Uso", body: "Auth, sessões, suporte, segurança." }, { title: "Retenção", body: "Depende do plano." }, { title: "Controle", body: "Exportar/excluir dados." } ] },
-  useCases: { eyebrow: "Casos de uso", title: "Resultados reais para lives modernas", subtitle: "Criadores, canais sem rosto e agências com Roxy.", items: [ { id: "creators", title: "Criadores", description: "Amplie horas de live sem burnout. Automatize saudações, reações a presentes e intervalos mantendo sua voz consistente.", highlights: ["Ritmo 24/7 com pausas seguras", "Reações instantâneas a presentes", "Momentos de clipe com scripts"] }, { id: "faceless", title: "Sem rosto", description: "Lance um canal guiado por personagem sem aparecer em câmera. Crie lore e mantenha o engajamento alto.", highlights: ["Persona + pacote de conhecimento", "Controle de estilo de voz", "Barreiras de segurança de moderação"] }, { id: "agencies", title: "Agências", description: "Gerencie vários creators, logins e idiomas em uma única central. Ideal para estúdios e operações multi‑conta.", highlights: ["Agendador multi‑conta", "Acesso em equipe + logs", "Análises centralizadas"] } ], outcomes: { eyebrow: "Resultados", title: "O que as equipes desbloqueiam", subtitle: "Ciclos curtos, métricas claras e controle de marca.", items: [ { title: "Mais retenção", description: "Scripts e gatilhos de presentes mantêm o público engajado em sessões longas." }, { title: "Menor custo operacional", description: "Reduza moderação manual e tempo de câmera mantendo a produção diária." }, { title: "Experimentos mais rápidos", description: "Itere ganchos e formatos com testes rápidos e scripts A/B." } ] }, cta: { title: "Pronto para mapear seu caso de uso?", subtitle: "Diga o que automatizar e montamos o rollout.", primary: "Falar com a gente", secondary: "Ver preços" } },
-  docs: { quickstart: { eyebrow: "Documentação", title: "Guia rápido", subtitle: "Tudo o que você precisa para iniciar sua primeira sessão de AI streamer.", steps: [ { id: "connect", title: "Conectar", description: "Vincule sua conta TikTok Live, selecione região e idioma padrão do personagem." }, { id: "customize", title: "Personalizar", description: "Crie a persona, adicione pacotes de conhecimento, escolha a voz e defina regras de segurança." }, { id: "go-live", title: "Entrar ao vivo", description: "Ative Motor Dono + scripts de stream e faça uma sessão de teste antes do 24/7." } ] }, product: { eyebrow: "Produto", title: "Documentação de funcionalidades", subtitle: "Aprofunde nos sistemas que alimentam a Roxy.", items: [ { id: "dono-engine", title: "Motor Dono", description: "Mapeie presentes para ações, emoções e falas com prioridades, cooldowns e fallback de segurança." }, { id: "stream-scripts", title: "Scripts de stream", description: "Programe intros, loops, mini‑jogos e modo batalha com gatilhos temporizados." }, { id: "scheduler", title: "Agendador multi‑conta", description: "Alterne contas e regiões para manter cobertura contínua com ritmo seguro." }, { id: "safety", title: "Safety Guard", description: "Filtros de linguagem, tópicos bloqueados, rate limits e frases de parada emergencial." }, { id: "unreal-connector", title: "Unreal Connector", description: "Conecte reações ao avatar com hooks event‑driven e lip‑sync." } ] }, api: { eyebrow: "API", title: "Visão geral de referência", subtitle: "Endpoints estruturados para integrações e análises.", sections: [ { title: "Autenticação", description: "Use as chaves de projeto do dashboard. As requisições são autorizadas via bearer token.", items: [ "POST /auth/token — trocar API key por session token", "POST /auth/refresh — atualizar session token" ] }, { title: "Personagens", description: "Crie, atualize e versione perfis de personagem usados em lives.", items: [ "GET /characters — listar personagens", "POST /characters — criar personagem", "PATCH /characters/{id} — atualizar persona" ] }, { title: "Sessões", description: "Inicie ou pare sessões ao vivo, inspecione métricas e obtenha transcrições.", items: [ "POST /sessions/start — iniciar sessão", "POST /sessions/stop — parar sessão", "GET /sessions/{id} — detalhes da sessão" ] }, { title: "Eventos", description: "Assine reações a presentes, eventos de script e sinais de moderação.", items: [ "GET /events/stream — server‑sent events", "POST /webhooks — registrar webhook" ] } ] }, glossary: { eyebrow: "Glossário", title: "Termos‑chave", subtitle: "Definições curtas usadas no dashboard.", items: [ { term: "Horas de fala ativa", description: "Minutos em que a Roxy gera e reproduz TTS. Silêncio não conta." }, { term: "Motor Dono", description: "Regras que mapeiam presentes para emoções, falas, ações, cooldowns e prioridades." }, { term: "Scripts de stream", description: "Cenários como intros, loops, mini‑jogos e modo batalha." }, { term: "Pacote de conhecimento", description: "Fatos personalizados para manter a persona consistente e alinhada à marca." }, { term: "Marca d’água", description: "Marca visual que pode ser desativada nos planos Pro e Studio." }, { term: "Fila multi‑conta", description: "Rotação programada de várias contas TikTok para streaming 24/7." } ] } },
+  terms: { title: "Termos", intro: "Estes termos regem o uso do RoxStreamAI.", sections: [ { title: "Contas", body: "Você é responsável por suas credenciais." }, { title: "Uso", body: "Siga regras e leis. Abusos proibidos." }, { title: "Uso de provedores e BYOK", body: "Com provedores integrados, o RoxStreamAI pode encaminhar solicitações a terceiros. Com BYOK, você é responsável por suas chaves e cobrança." }, { title: "Cobrança", body: "Renovação automática, extras possíveis." }, { title: "Conteúdo", body: "Você mantém a propriedade." }, { title: "Disponibilidade", body: "Buscamos alta disponibilidade, mas não garantimos serviço ininterrupto. Pode haver manutenção e quedas." }, { title: "Encerramento", body: "Podemos suspender por violação." } ] },
+  privacy: { title: "Privacidade", intro: "Coletamos apenas dados necessários.", sections: [ { title: "Dados coletados", body: "Detalhes da conta, métricas e configs." }, { title: "Uso", body: "Auth, sessões, suporte, segurança." }, { title: "Retenção", body: "Depende do plano." }, { title: "Controle", body: "Exportar/excluir dados." }, { title: "Segurança", body: "Aplicamos controles de acesso e redação para proteger segredos." } ] },
+  useCases: { eyebrow: "Casos de uso", title: "Resultados reais para lives modernas", subtitle: "Criadores, canais sem rosto e agências com Roxy.", items: [ { id: "creators", title: "Criadores", description: "Amplie horas de live sem burnout. Automatize saudações, reações a presentes e intervalos mantendo sua voz consistente.", highlights: ["Ritmo 24/7 com pausas seguras", "Reações instantâneas a presentes", "Momentos de clipe com scripts"] }, { id: "faceless", title: "Sem rosto", description: "Lance um canal guiado por personagem sem aparecer em câmera. Crie lore e mantenha o engajamento alto.", highlights: ["Persona + pacote de conhecimento", "Controle de estilo de voz", "Barreiras de segurança de moderação"] }, { id: "agencies", title: "Agências", description: "Gerencie vários creators, logins e idiomas em uma única central. Ideal para estúdios e operações multi‑conta.", highlights: ["Agendador multi‑conta", "Acesso em equipe + logs", "Análises centralizadas"] }, { id: "unreal-avatar", title: "Streams com avatar Unreal", description: "Use o app desktop para conectar o Unreal e transmitir um personagem em tempo real.", highlights: ["Fluxo do app desktop", "Conexão Unreal", "Avatar em tempo real"] }, { id: "team-workflows", title: "Fluxos de equipe", description: "Gerencie personagens, uso e acesso em equipe. Ferramentas admin mantêm chaves e cobrança seguras.", highlights: ["Ferramentas admin", "Gestão de chaves", "Visibilidade de auditoria"] } ], outcomes: { eyebrow: "Resultados", title: "O que as equipes desbloqueiam", subtitle: "Ciclos curtos, métricas claras e controle de marca.", items: [ { title: "Mais retenção", description: "Scripts e gatilhos de presentes mantêm o público engajado em sessões longas." }, { title: "Menor custo operacional", description: "Reduza moderação manual e tempo de câmera mantendo a produção diária." }, { title: "Experimentos mais rápidos", description: "Itere ganchos e formatos com testes rápidos e scripts A/B." } ] }, cta: { title: "Pronto para mapear seu caso de uso?", subtitle: "Diga o que automatizar e montamos o rollout.", primary: "Falar com a gente", secondary: "Ver preços" } },
+  docs: { quickstart: { eyebrow: "Documentação", title: "Guia rápido", subtitle: "Tudo o que você precisa para iniciar sua primeira sessão de AI streamer.", steps: [ { id: "connect", title: "Conectar", description: "Vincule sua conta TikTok Live, selecione região e idioma padrão do personagem." }, { id: "customize", title: "Personalizar", description: "Crie a persona, adicione pacotes de conhecimento, escolha a voz e defina regras de segurança." }, { id: "set-limits", title: "Defina limites de fala IA (opcional)", description: "Mantenha o uso previsível quando o co‑host IA estiver ativo." }, { id: "connect-unreal", title: "Conecte Unreal com o app desktop", description: "Use o app desktop para conexão Unreal, exportação e diagnósticos locais." }, { id: "go-live", title: "Entrar ao vivo", description: "Ative Motor Dono + scripts de stream e faça uma sessão de teste antes do 24/7." } ] }, product: { eyebrow: "Produto", title: "Documentação de funcionalidades", subtitle: "Aprofunde nos sistemas que alimentam a Roxy.", items: [ { id: "dono-engine", title: "Motor Dono", description: "Mapeie presentes para ações, emoções e falas com prioridades, cooldowns e fallback de segurança." }, { id: "stream-scripts", title: "Scripts de stream", description: "Programe intros, loops, mini‑jogos e modo batalha com gatilhos temporizados." }, { id: "scheduler", title: "Agendador multi‑conta", description: "Alterne contas e regiões para manter cobertura contínua com ritmo seguro." }, { id: "safety", title: "Safety Guard", description: "Filtros de linguagem, tópicos bloqueados, rate limits e frases de parada emergencial." }, { id: "unreal-connector", title: "Unreal Connector", description: "Conecte reações ao avatar com hooks event‑driven e lip‑sync." }, { id: "diagnostics", title: "Diagnosticos", description: "Indicadores de status para backend, audio, tokens e conectores." } ] }, api: { eyebrow: "API", title: "Visão geral de referência", subtitle: "Endpoints estruturados para integrações e análises.", sections: [ { title: "Autenticação", description: "Use as chaves de projeto do dashboard. As requisições são autorizadas via bearer token.", items: [ "POST /auth/token — trocar API key por session token", "POST /auth/refresh — atualizar session token" ] }, { title: "Personagens", description: "Crie, atualize e versione perfis de personagem usados em lives.", items: [ "GET /characters — listar personagens", "POST /characters — criar personagem", "PATCH /characters/{id} — atualizar persona" ] }, { title: "Sessões", description: "Inicie ou pare sessões ao vivo, inspecione métricas e obtenha transcrições.", items: [ "POST /sessions/start — iniciar sessão", "POST /sessions/stop — parar sessão", "GET /sessions/{id} — detalhes da sessão" ] }, { title: "Eventos", description: "Assine reações a presentes, eventos de script e sinais de moderação.", items: [ "GET /events/stream — server‑sent events", "POST /webhooks — registrar webhook" ] } ] }, glossary: { eyebrow: "Glossário", title: "Termos‑chave", subtitle: "Definições curtas usadas no dashboard.", items: [ { term: "Horas de fala ativa", description: "Minutos em que a Roxy gera e reproduz TTS. Silêncio não conta." }, { term: "Motor Dono", description: "Regras que mapeiam presentes para emoções, falas, ações, cooldowns e prioridades." }, { term: "Scripts de stream", description: "Cenários como intros, loops, mini‑jogos e modo batalha." }, { term: "Pacote de conhecimento", description: "Fatos personalizados para manter a persona consistente e alinhada à marca." }, { term: "Marca d’água", description: "Marca visual que pode ser desativada nos planos Pro e Studio." }, { term: "Fila multi‑conta", description: "Rotação programada de várias contas TikTok para streaming 24/7." } ] } },
   pricing: { eyebrow: "Preços", title: "Preços que escalam com seu streaming", subtitle: "Escolha BYOK para máximo controle ou créditos Pro para plug‑and‑play.", comparisonTitle: "Comparação de planos", comparisonHeaders: ["Recurso", "Teste", "Basic", "Pro", "Studio"], comparisonRows: [ { label: "Horas ativas incluídas", values: ["60 min", "Ilimitado (BYOK)", "10 horas", "40 horas"] }, { label: "Marca d’água", values: ["On", "On", "Toggle", "Toggle"] }, { label: "Contas", values: ["1", "1", "Até 5", "Até 20"] }, { label: "Regras Dono", values: ["10", "20", "200", "1000"] }, { label: "Scripts", values: ["2", "3", "Ilimitados", "Ilimitados + avançados"] }, { label: "Itens de conhecimento", values: ["-", "3", "20", "200"] }, { label: "Retenção de logs", values: ["3 dias", "7 dias", "30 dias", "90 dias"] }, { label: "Assentos de equipe", values: ["-", "-", "-", "5"] }, { label: "Licença comercial", values: ["-", "-", "-", "Sim"] }, { label: "Unreal Connector", values: ["-", "Pro+", "Pro+", "Pro+"] } ], extraCreditsTitle: "Créditos extras", extraCreditsSubtitle: "Compre mais horas ativas quando atingir o limite.", extraCredits: [ { label: "+10 horas", price: "€25" }, { label: "+50 horas", price: "€99" }, { label: "+200 horas", price: "€299" } ], addonTitle: "Pacote Unreal Connector", addonBadge: "Add‑on", addonDescription: "Conector Unreal Live, gatilhos de lip‑sync, cenas UE de exemplo e mapeamento de ações para o Motor Dono.", addonPrices: [ { label: "Mensal", price: "€49 / mês" }, { label: "Vitalício", price: "€299" } ], addonCta: "Gerenciar add‑ons", faqEyebrow: "FAQ", faqTitle: "Precisa de respostas rápidas?", faqSubtitle: "Dúvidas sobre planos, simplificadas." },
   blog: { eyebrow: "Blog", title: "Atualizações, casos de uso e notas de lançamento", subtitle: "Novidades do produto, playbooks de crescimento e formatos reais de streaming.", backToBlog: "Voltar ao blog" },
-  team: { eyebrow: "Equipe", title: "Quem constrói a RoxStreamAI", subtitle: "Um time pequeno e focado que combina operações de streaming, IA e design de produto.", members: [ { name: "Lia Chen", role: "Produto & Growth", focus: "Ferramentas para creators, onboarding e estratégia de preços." }, { name: "Maks Orlov", role: "Líder de Engenharia", focus: "Sistemas em tempo real, scripts de stream e confiabilidade." }, { name: "Sofia Kim", role: "Líder de Design", focus: "Sistema de marca, kits de UI e novos fluxos do dashboard." }, { name: "Artem Volkov", role: "IA & Voz", focus: "Ajuste de persona, pipelines de TTS e controles de segurança." } ], values: { eyebrow: "Valores", title: "Como trabalhamos", subtitle: "Princípios que moldam cada decisão de produto.", items: [ { title: "Creator‑first", description: "Criamos ferramentas que removem atrito para foco em formatos e storytelling." }, { title: "Clareza operacional", description: "Analytics, fluxos e scripts pensados para decisões rápidas e crescimento repetível." }, { title: "Segurança por padrão", description: "Cada fluxo inclui regras de moderação, limites e barreiras de segurança antes de escalar." } ] }, cta: { title: "Quer colaborar?", subtitle: "Parcerias, integrações ou acesso antecipado—vamos conversar.", primary: "Contato", secondary: "Ler atualizações" } },
+  team: { eyebrow: "Equipe", title: "Quem constrói a RoxStreamAI", subtitle: "Um time pequeno e focado que combina operações de streaming, IA e design de produto.", members: [ { name: "Lia Chen", role: "Produto & Growth", focus: "Ferramentas para creators, onboarding e estratégia de preços." }, { name: "Maks Orlov", role: "Líder de Engenharia", focus: "Sistemas em tempo real, scripts de stream e confiabilidade." }, { name: "Sofia Kim", role: "Líder de Design", focus: "Sistema de marca, kits de UI e novos fluxos do dashboard." } ], values: { eyebrow: "Valores", title: "Como trabalhamos", subtitle: "Princípios que moldam cada decisão de produto.", items: [ { title: "Creator‑first", description: "Criamos ferramentas que removem atrito para foco em formatos e storytelling." }, { title: "Clareza operacional", description: "Analytics, fluxos e scripts pensados para decisões rápidas e crescimento repetível." }, { title: "Segurança por padrão", description: "Cada fluxo inclui regras de moderação, limites e barreiras de segurança antes de escalar." } ] }, cta: { title: "Quer colaborar?", subtitle: "Parcerias, integrações ou acesso antecipado—vamos conversar.", primary: "Contato", secondary: "Ler atualizações" } },
   download: { eyebrow: "Downloads", title: "Baixe a versão desktop mais recente", subtitle: "Escolha sua plataforma. As releases são gerenciadas pela equipe admin.", latestLabel: "Mais recente", noReleases: "Ainda não há releases. Peça para um admin adicionar o primeiro build Windows/macOS no painel admin.", openAdmin: "Abrir releases admin", releaseHistory: "Histórico de releases", download: "Baixar" },
   planCards: en.planCards.map((card) => ({
     ...card,
@@ -3804,8 +3966,6 @@ const pt: MarketingContent = {
     { q: "O que são horas ativas?", a: "Somente quando Roxy fala." },
     { q: "Posso desativar o watermark?", a: "Basic/Teste: não. Pro/Studio: sim." },
     { q: "Renda garantida?", a: "Não, depende do conteúdo e audiência." },
-    { q: "Unreal é obrigatório?", a: "Não, é opcional." },
-    { q: "24/7?", a: "Sim, Pro/Studio suportam agendamento." },
   ],
   blogPosts: [
     {
@@ -3819,6 +3979,8 @@ const pt: MarketingContent = {
         "Streamers IA permitem formatos live sem host humano.",
         "Comece com um personagem principal e adicione pacotes de conhecimento.",
         "O agendador multi‑conta mantém canais regionais ativos 24/7.",
+        "Comece com um personagem hero e conecte regras Dono a eventos de campanha.",
+        "Agencias usam o agendador multi‑conta para cobertura regional 24/7.",
       ],
     },
     {
@@ -3832,6 +3994,8 @@ const pt: MarketingContent = {
         "RoxStreamAI lança streamers IA em minutos.",
         "Sessões longas com pacing seguro e moderação.",
         "Pro inclui créditos; BYOK permite modelos e vozes próprias.",
+        "Plataforma para sessoes longas: pacing seguro, moderacao e agendador sem troca manual.",
+        "Defina limites de Active Speech para manter custos previsiveis.",
       ],
     },
     {
@@ -3845,6 +4009,7 @@ const pt: MarketingContent = {
         "Um formato 24/7 precisa de estrutura, reações e segurança.",
         "Mapeie doações para reações com prioridades e cooldowns.",
         "Configure barreiras de segurança e override humano.",
+        "Scripts e prioridades mantem o ritmo sem sobrecarregar o chat.",
       ],
     },
   ],
@@ -3854,13 +4019,13 @@ const tr: MarketingContent = {
   ...en,
   about: { eyebrow: "Hakkında", title: "Roxy 24/7 creator’lar için", subtitle: "Premium, güvenli ve kontrol edilebilir otomasyon.", missionTitle: "Misyonumuz", missionBody: "Show’ları yöneten, bağışlara tepki veren ve izleyiciyi bağlı tutan AI co‑host.", beliefTitle: "İnandıklarımız", beliefBody: "İnsan yaratıcılığı önde. Roxy tekrarları, planlamayı ve reaksiyon döngülerini yönetir." },
   contact: { eyebrow: "İletişim", title: "Bir sonraki live formatını planlayalım", subtitle: "Hedeflerini anlat, rollout hazırlayalım.", firstName: "Ad", lastName: "Soyad", email: "İş e‑posta", message: "Neyi otomatikleştirmek istiyorsun?", sendRequest: "Gönder", directLines: "Doğrudan hatlar", responseTime: "1 iş günü içinde yanıt." },
-  terms: { title: "Şartlar", intro: "RoxStreamAI kullanım şartları.", sections: [ { title: "Hesaplar", body: "Kimlik bilgileri sana aittir." }, { title: "Kullanım", body: "Kurallara uy. İstismar yasak." }, { title: "İçerik", body: "Sahiplik sende kalır." }, { title: "Faturalandırma", body: "Otomatik yenileme." }, { title: "Fesih", body: "İhlalde erişim durdurulabilir." } ] },
-  privacy: { title: "Gizlilik", intro: "Sadece gerekli veriler toplanır.", sections: [ { title: "Toplanan veriler", body: "Hesap detayları, metrikler, ayarlar." }, { title: "Kullanım", body: "Auth, oturum, destek, güvenlik." }, { title: "Saklama", body: "Plana bağlı." }, { title: "Kontrol", body: "İhracat/silme." } ] },
-  useCases: { eyebrow: "Kullanım alanları", title: "Modern canlı yayınlar için gerçek sonuçlar", subtitle: "Creator, faceless ve ajanslar için.", items: [ { id: "creators", title: "Creator’lar", description: "Burnout olmadan yayın saatlerini büyütün. Karşılama, bağış tepkileri ve araları otomatikleştirirken sesinizi tutarlı tutun.", highlights: ["24/7 güvenli pacing", "Bağışlara anında reaksiyon", "Script ile klip anları"] }, { id: "faceless", title: "Faceless", description: "Kameraya çıkmadan karakter odaklı kanal başlatın. Lore oluşturun ve etkileşimi yüksek tutun.", highlights: ["Persona + bilgi paketi", "Ses stili kontrolü", "Moderasyon koruma kuralları"] }, { id: "agencies", title: "Ajanslar", description: "Tek bir merkezden birden çok creator, giriş ve dil yönetin. Stüdyo ve çoklu hesap operasyonları için ideal.", highlights: ["Çoklu hesap zamanlayıcı", "Ekip erişimi + aktivite logları", "Merkezi analitik"] } ], outcomes: { eyebrow: "Sonuçlar", title: "Takımların kazancı", subtitle: "Kısa döngüler, net metrikler ve marka kontrolü.", items: [ { title: "Daha yüksek tutma", description: "Script ve hediye trigger’ları uzun oturumlarda etkileşimi artırır." }, { title: "Daha düşük operasyon maliyeti", description: "Manuel moderasyonu ve kamera süresini azaltırken günlük çıktıyı koruyun." }, { title: "Daha hızlı denemeler", description: "Hızlı senaryo testleri ve A/B scriptlerle formatları iterasyonlayın." } ] }, cta: { title: "Kullanım alanınızı haritalamaya hazır mısınız?", subtitle: "Neyi otomatikleştirmek istediğinizi söyleyin, rollout planı çıkaralım.", primary: "İletişim", secondary: "Fiyatları gör" } },
-  docs: { quickstart: { eyebrow: "Dokümanlar", title: "Hızlı başlangıç", subtitle: "İlk AI streamer oturumunu başlatmak için gereken her şey.", steps: [ { id: "connect", title: "Bağla", description: "TikTok Live hesabını bağla, bölge seç ve karakter için varsayılan dil ayarla." }, { id: "customize", title: "Özelleştir", description: "Persona oluştur, bilgi paketleri ekle, ses seç ve güvenlik kuralları tanımla." }, { id: "go-live", title: "Yayına çık", description: "Dono motoru + yayin skriptlerini etkinleştir ve 24/7’den önce test yayını yap." } ] }, product: { eyebrow: "Ürün", title: "Özellik dokümantasyonu", subtitle: "Roxy’yi güçlendiren sistemlere derin dalış.", items: [ { id: "dono-engine", title: "Dono motoru", description: "Bağışları aksiyonlara, duygulara ve repliklere eşleştir; öncelik, cooldown ve güvenlik fallback’leriyle." }, { id: "stream-scripts", title: "Yayin skriptleri", description: "Intro, loop, mini‑oyun ve battle modlarını zamanlı tetikleyicilerle planla." }, { id: "scheduler", title: "Çoklu hesap zamanlayıcı", description: "24/7 canlı kapsama için hesap ve bölgeleri güvenli pacing ile döndür." }, { id: "safety", title: "Safety Guard", description: "Küfür filtresi, bloklu konular, hız limitleri ve acil durdurma ifadeleri." }, { id: "unreal-connector", title: "Unreal Connector", description: "Canlı reaksiyonları avatar sahnesine event‑driven hook ve lip‑sync ile bağla." } ] }, api: { eyebrow: "API", title: "Referans özeti", subtitle: "Entegrasyon ve analitik için yapılandırılmış uç noktalar.", sections: [ { title: "Kimlik doğrulama", description: "Dashboard’daki proje anahtarlarını kullan. İstekler bearer token ile yetkilendirilir.", items: [ "POST /auth/token — API anahtarını session token’a çevir", "POST /auth/refresh — session token yenile" ] }, { title: "Karakterler", description: "Canlı oturumlarda kullanılan karakter profillerini oluştur, güncelle ve versiyonla.", items: [ "GET /characters — karakter listele", "POST /characters — karakter oluştur", "PATCH /characters/{id} — persona güncelle" ] }, { title: "Oturumlar", description: "Canlı oturum başlat/durdur, metrikleri incele ve transkript çek.", items: [ "POST /sessions/start — oturum başlat", "POST /sessions/stop — oturum durdur", "GET /sessions/{id} — oturum detayları" ] }, { title: "Etkinlikler", description: "Bağış tepkileri, script olayları ve moderasyon sinyallerini izle.", items: [ "GET /events/stream — server‑sent events", "POST /webhooks — webhook kaydet" ] } ] }, glossary: { eyebrow: "Sözlük", title: "Temel terimler", subtitle: "Dashboard’da kullanılan kısa tanımlar.", items: [ { term: "Aktif konuşma saatleri", description: "Roxy’nin TTS ürettiği ve çaldığı süre. Sessizlik sayılmaz." }, { term: "Dono motoru", description: "Bağışları duygu, replik, aksiyon, cooldown ve önceliklerle eşleyen kurallar." }, { term: "Yayin skriptleri", description: "Intro, loop, mini‑oyun ve battle mod akışları." }, { term: "Bilgi paketi", description: "Persona’yı tutarlı ve markaya uygun yapan özel bilgiler." }, { term: "Filigran", description: "Pro ve Studio planlarında kapatılabilen görsel marka işareti." }, { term: "Çoklu hesap kuyruğu", description: "Birden fazla TikTok hesabı için 24/7 rotasyon planı." } ] } },
+  terms: { title: "Şartlar", intro: "RoxStreamAI kullanım şartları.", sections: [ { title: "Hesaplar", body: "Kimlik bilgileri sana aittir." }, { title: "Kullanım", body: "Kurallara uy. İstismar yasak." }, { title: "Saglayici kullanimi ve BYOK", body: "Dahili saglayicilari kullandiginizda RoxStreamAI istekleri ucuncu taraflara iletebilir. BYOK kullaniminda anahtarlar ve faturalandirma sizdedir." }, { title: "Faturalandırma", body: "Otomatik yenileme." }, { title: "İçerik", body: "Sahiplik sende kalır." }, { title: "Kullanilabilirlik", body: "Yuksek kullanilabilirlik hedefleriz, ancak kesintisiz hizmet garanti etmeyiz. Bakim ve kesintiler olabilir." }, { title: "Fesih", body: "İhlalde erişim durdurulabilir." } ] },
+  privacy: { title: "Gizlilik", intro: "Sadece gerekli veriler toplanır.", sections: [ { title: "Toplanan veriler", body: "Hesap detayları, metrikler, ayarlar." }, { title: "Kullanım", body: "Auth, oturum, destek, güvenlik." }, { title: "Saklama", body: "Plana bağlı." }, { title: "Kontrol", body: "İhracat/silme." }, { title: "Guvenlik", body: "Sirlarin korunmasi icin erisim kontrolleri ve redaksiyon uygulariz." } ] },
+  useCases: { eyebrow: "Kullanım alanları", title: "Modern canlı yayınlar için gerçek sonuçlar", subtitle: "Creator, faceless ve ajanslar için.", items: [ { id: "creators", title: "Creator’lar", description: "Burnout olmadan yayın saatlerini büyütün. Karşılama, bağış tepkileri ve araları otomatikleştirirken sesinizi tutarlı tutun.", highlights: ["24/7 güvenli pacing", "Bağışlara anında reaksiyon", "Script ile klip anları"] }, { id: "faceless", title: "Faceless", description: "Kameraya çıkmadan karakter odaklı kanal başlatın. Lore oluşturun ve etkileşimi yüksek tutun.", highlights: ["Persona + bilgi paketi", "Ses stili kontrolü", "Moderasyon koruma kuralları"] }, { id: "agencies", title: "Ajanslar", description: "Tek bir merkezden birden çok creator, giriş ve dil yönetin. Stüdyo ve çoklu hesap operasyonları için ideal.", highlights: ["Çoklu hesap zamanlayıcı", "Ekip erişimi + aktivite logları", "Merkezi analitik"] }, { id: "unreal-avatar", title: "Unreal avatar yayini", description: "Desktop uygulamasini kullanarak Unreal baglantisi kurun ve gercek zamanli avatar yayinlayin.", highlights: ["Desktop uygulama is akisi", "Unreal baglantisi", "Gercek zamanli avatar"] }, { id: "team-workflows", title: "Ekip iş akışları", description: "Ekipte karakterleri, kullanım ve erişimi yönetin. Admin araçları anahtarları ve faturalandırmayı güvenli tutar.", highlights: ["Admin araçları", "Anahtar yönetimi", "Denetim görünürlüğü"] } ], outcomes: { eyebrow: "Sonuçlar", title: "Takımların kazancı", subtitle: "Kısa döngüler, net metrikler ve marka kontrolü.", items: [ { title: "Daha yüksek tutma", description: "Script ve hediye trigger’ları uzun oturumlarda etkileşimi artırır." }, { title: "Daha düşük operasyon maliyeti", description: "Manuel moderasyonu ve kamera süresini azaltırken günlük çıktıyı koruyun." }, { title: "Daha hızlı denemeler", description: "Hızlı senaryo testleri ve A/B scriptlerle formatları iterasyonlayın." } ] }, cta: { title: "Kullanım alanınızı haritalamaya hazır mısınız?", subtitle: "Neyi otomatikleştirmek istediğinizi söyleyin, rollout planı çıkaralım.", primary: "İletişim", secondary: "Fiyatları gör" } },
+  docs: { quickstart: { eyebrow: "Dokümanlar", title: "Hızlı başlangıç", subtitle: "İlk AI streamer oturumunu başlatmak için gereken her şey.", steps: [ { id: "connect", title: "Bağla", description: "TikTok Live hesabını bağla, bölge seç ve karakter için varsayılan dil ayarla." }, { id: "customize", title: "Özelleştir", description: "Persona oluştur, bilgi paketleri ekle, ses seç ve güvenlik kuralları tanımla." }, { id: "set-limits", title: "AI konuşma limitlerini belirle (opsiyonel)", description: "AI co‑host aktifken kullanımı öngörülebilir tut." }, { id: "connect-unreal", title: "Unreal'i desktop uygulama ile bağla", description: "Unreal bağlantısı, export ve yerel tanılama için desktop uygulamayı kullan." }, { id: "go-live", title: "Yayına çık", description: "Dono motoru + yayin skriptlerini etkinleştir ve 24/7’den önce test yayını yap." } ] }, product: { eyebrow: "Ürün", title: "Özellik dokümantasyonu", subtitle: "Roxy’yi güçlendiren sistemlere derin dalış.", items: [ { id: "dono-engine", title: "Dono motoru", description: "Bağışları aksiyonlara, duygulara ve repliklere eşleştir; öncelik, cooldown ve güvenlik fallback’leriyle." }, { id: "stream-scripts", title: "Yayin skriptleri", description: "Intro, loop, mini‑oyun ve battle modlarını zamanlı tetikleyicilerle planla." }, { id: "scheduler", title: "Çoklu hesap zamanlayıcı", description: "24/7 canlı kapsama için hesap ve bölgeleri güvenli pacing ile döndür." }, { id: "safety", title: "Safety Guard", description: "Küfür filtresi, bloklu konular, hız limitleri ve acil durdurma ifadeleri." }, { id: "unreal-connector", title: "Unreal Connector", description: "Canlı reaksiyonları avatar sahnesine event‑driven hook ve lip‑sync ile bağla." }, { id: "diagnostics", title: "Teşhis", description: "Backend, audio, token ve connector durum gostergeleri." } ] }, api: { eyebrow: "API", title: "Referans özeti", subtitle: "Entegrasyon ve analitik için yapılandırılmış uç noktalar.", sections: [ { title: "Kimlik doğrulama", description: "Dashboard’daki proje anahtarlarını kullan. İstekler bearer token ile yetkilendirilir.", items: [ "POST /auth/token — API anahtarını session token’a çevir", "POST /auth/refresh — session token yenile" ] }, { title: "Karakterler", description: "Canlı oturumlarda kullanılan karakter profillerini oluştur, güncelle ve versiyonla.", items: [ "GET /characters — karakter listele", "POST /characters — karakter oluştur", "PATCH /characters/{id} — persona güncelle" ] }, { title: "Oturumlar", description: "Canlı oturum başlat/durdur, metrikleri incele ve transkript çek.", items: [ "POST /sessions/start — oturum başlat", "POST /sessions/stop — oturum durdur", "GET /sessions/{id} — oturum detayları" ] }, { title: "Etkinlikler", description: "Bağış tepkileri, script olayları ve moderasyon sinyallerini izle.", items: [ "GET /events/stream — server‑sent events", "POST /webhooks — webhook kaydet" ] } ] }, glossary: { eyebrow: "Sözlük", title: "Temel terimler", subtitle: "Dashboard’da kullanılan kısa tanımlar.", items: [ { term: "Aktif konuşma saatleri", description: "Roxy’nin TTS ürettiği ve çaldığı süre. Sessizlik sayılmaz." }, { term: "Dono motoru", description: "Bağışları duygu, replik, aksiyon, cooldown ve önceliklerle eşleyen kurallar." }, { term: "Yayin skriptleri", description: "Intro, loop, mini‑oyun ve battle mod akışları." }, { term: "Bilgi paketi", description: "Persona’yı tutarlı ve markaya uygun yapan özel bilgiler." }, { term: "Filigran", description: "Pro ve Studio planlarında kapatılabilen görsel marka işareti." }, { term: "Çoklu hesap kuyruğu", description: "Birden fazla TikTok hesabı için 24/7 rotasyon planı." } ] } },
   pricing: { eyebrow: "Fiyatlandırma", title: "Yayınınızla ölçeklenen fiyatlar", subtitle: "Maksimum kontrol için BYOK veya Pro kredi ile hızlı başlangıç.", comparisonTitle: "Plan karşılaştırması", comparisonHeaders: ["Özellik", "Deneme", "Basic", "Pro", "Studio"], comparisonRows: [ { label: "Dahil aktif konuşma süresi", values: ["60 dk", "Sınırsız (BYOK)", "10 saat", "40 saat"] }, { label: "Filigran", values: ["Açık", "Açık", "Aç/Kapa", "Aç/Kapa"] }, { label: "Hesaplar", values: ["1", "1", "En fazla 5", "En fazla 20"] }, { label: "Dono kuralları", values: ["10", "20", "200", "1000"] }, { label: "Scriptler", values: ["2", "3", "Sınırsız", "Sınırsız + gelişmiş"] }, { label: "Knowledge öğeleri", values: ["-", "3", "20", "200"] }, { label: "Log saklama", values: ["3 gün", "7 gün", "30 gün", "90 gün"] }, { label: "Ekip koltukları", values: ["-", "-", "-", "5"] }, { label: "Ticari lisans", values: ["-", "-", "-", "Evet"] }, { label: "Unreal Connector", values: ["-", "Pro+", "Pro+", "Pro+"] } ], extraCreditsTitle: "Ek krediler", extraCreditsSubtitle: "Limit dolunca daha fazla aktif konuşma saati satın alın.", extraCredits: [ { label: "+10 saat", price: "€25" }, { label: "+50 saat", price: "€99" }, { label: "+200 saat", price: "€299" } ], addonTitle: "Unreal Connector Paketi", addonBadge: "Eklenti", addonDescription: "Unreal Live connector, lip‑sync tetikleri, örnek UE sahneleri ve Dono motoru aksiyon eşlemesi.", addonPrices: [ { label: "Aylık", price: "€49 / ay" }, { label: "Ömür boyu", price: "€299" } ], addonCta: "Eklentileri yönet", faqEyebrow: "SSS", faqTitle: "Hızlı cevap mı lazım?", faqSubtitle: "Plan soruları, kısaca." },
   blog: { eyebrow: "Blog", title: "Güncellemeler, kullanım alanları ve sürüm notları", subtitle: "Ürün haberleri, büyüme playbook’ları ve gerçek yayın formatları.", backToBlog: "Bloga dön" },
-  team: { eyebrow: "Ekip", title: "RoxStreamAI’i geliştirenler", subtitle: "Yayın operasyonları, AI sistemleri ve ürün tasarımını birleştiren küçük bir ekip.", members: [ { name: "Lia Chen", role: "Ürün & Growth", focus: "Creator araçları, onboarding ve fiyatlama stratejisi." }, { name: "Maks Orlov", role: "Mühendislik Lideri", focus: "Gerçek zamanlı sistemler, stream scriptleri ve platform güvenilirliği." }, { name: "Sofia Kim", role: "Tasarım Lideri", focus: "Marka sistemi, UI kitleri ve yeni dashboard akışları." }, { name: "Artem Volkov", role: "AI & Ses", focus: "Persona ayarı, TTS hatları ve güvenlik kontrolleri." } ], values: { eyebrow: "Değerler", title: "Nasıl çalışıyoruz", subtitle: "Her ürün kararını şekillendiren ilkeler.", items: [ { title: "Creator‑first", description: "Creator’ların format ve hikayeye odaklanması için sürtünmeyi azaltırız." }, { title: "Operasyonel netlik", description: "Analitik, iş akışları ve scriptler hızlı karar ve tekrarlanabilir büyüme için tasarlandı." }, { title: "Varsayılan güvenlik", description: "Her akış, ölçeklemeden önce moderasyon kuralları ve koruma kuralları içerir." } ] }, cta: { title: "İş birliği yapmak ister misiniz?", subtitle: "Partnerlik, entegrasyon veya erken erişim talepleri—konuşalım.", primary: "İletişim", secondary: "Güncellemeleri oku" } },
+  team: { eyebrow: "Ekip", title: "RoxStreamAI’i geliştirenler", subtitle: "Yayın operasyonları, AI sistemleri ve ürün tasarımını birleştiren küçük bir ekip.", members: [ { name: "Lia Chen", role: "Ürün & Growth", focus: "Creator araçları, onboarding ve fiyatlama stratejisi." }, { name: "Maks Orlov", role: "Mühendislik Lideri", focus: "Gerçek zamanlı sistemler, stream scriptleri ve platform güvenilirliği." }, { name: "Sofia Kim", role: "Tasarım Lideri", focus: "Marka sistemi, UI kitleri ve yeni dashboard akışları." } ], values: { eyebrow: "Değerler", title: "Nasıl çalışıyoruz", subtitle: "Her ürün kararını şekillendiren ilkeler.", items: [ { title: "Creator‑first", description: "Creator’ların format ve hikayeye odaklanması için sürtünmeyi azaltırız." }, { title: "Operasyonel netlik", description: "Analitik, iş akışları ve scriptler hızlı karar ve tekrarlanabilir büyüme için tasarlandı." }, { title: "Varsayılan güvenlik", description: "Her akış, ölçeklemeden önce moderasyon kuralları ve koruma kuralları içerir." } ] }, cta: { title: "İş birliği yapmak ister misiniz?", subtitle: "Partnerlik, entegrasyon veya erken erişim talepleri—konuşalım.", primary: "İletişim", secondary: "Güncellemeleri oku" } },
   download: { eyebrow: "İndir", title: "En yeni masaüstü sürümü indir", subtitle: "Platformunu seç. Release’ler admin ekip tarafından yönetilir.", latestLabel: "En yeni", noReleases: "Henüz release yok. Admin panelinden ilk Windows/macOS build’ini ekleyin.", openAdmin: "Admin release’lerini aç", releaseHistory: "Release geçmişi", download: "İndir" },
   planCards: en.planCards.map((card) => ({
     ...card,
@@ -3896,8 +4061,6 @@ const tr: MarketingContent = {
     { q: "Aktif konuşma saatleri nedir?", a: "Sadece Roxy konuşurken geçen süre." },
     { q: "Filigran kapanır mı?", a: "Basic/Deneme: hayır. Pro/Studio: evet." },
     { q: "Gelir garanti mi?", a: "Hayır, içerik ve kitleye bağlıdır." },
-    { q: "Unreal gerekli mi?", a: "Hayır, opsiyonel." },
-    { q: "24/7 çalışır mı?", a: "Evet, Pro/Studio planlama destekler." },
   ],
   blogPosts: [
     {
@@ -3911,6 +4074,8 @@ const tr: MarketingContent = {
         "AI streamer’lar insan host olmadan live formatlar sağlar.",
         "Ana karakterle başlayın ve bilgi paketi ekleyin.",
         "Çoklu hesap zamanlayıcı bölgesel kanalları 24/7 açık tutar.",
+        "Hero bir karakterle baslayin ve Dono kurallarini kampanya etkinliklerine baglayin.",
+        "Ajanslar bolgesel 24/7 kapsama icin coklu hesap zamanlayiciyi kullanir.",
       ],
     },
     {
@@ -3924,6 +4089,8 @@ const tr: MarketingContent = {
         "RoxStreamAI dakikalar içinde AI streamer başlatır.",
         "Uzun oturumlar için güvenli pacing ve moderasyon.",
         "Pro kredi içerir; BYOK kendi model/voice sağlar.",
+        "Uzun oturumlar icin platform: guvenli pacing, moderasyon ve manuel gecis olmadan zamanlayici.",
+        "Active Speech limitleri belirleyin, maliyetler ongorulebilir olsun.",
       ],
     },
     {
@@ -3937,6 +4104,7 @@ const tr: MarketingContent = {
         "24/7 format için yapı, reaksiyon ve güvenlik gerekir.",
         "Bağışları öncelik ve cooldown ile reaksiyona bağlayın.",
         "Koruma kuralları ve insan müdahalesi ekleyin.",
+        "Scriptler ve oncelikler chat'i yormadan tempoyu korur.",
       ],
     },
   ],
