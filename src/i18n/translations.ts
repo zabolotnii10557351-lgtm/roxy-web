@@ -395,8 +395,7 @@ export type Translations = {
   };
 };
 
-export const translations: Record<Locale, Translations> = {
-  en: {
+const en: Translations = {
     common: {
       brand: "RoxStreamAI",
       dashboard: "Dashboard",
@@ -812,7 +811,13 @@ export const translations: Record<Locale, Translations> = {
       releasesPlaceholderUrl: "https://...",
       releasesPlaceholderNotes: "What's new...",
     },
-  },
+  };
+
+export const translations: Record<Locale, Translations> = {
+  en,
+  cs: en,
+  pl: en,
+  sk: en,
   de: {
     common: {
       brand: "RoxStreamAI",
