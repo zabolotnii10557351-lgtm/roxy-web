@@ -18,20 +18,29 @@ export default async function AppLayout({
     redirect("/login");
   }
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select(
-      "display_name, role, plan_id, trial_ends_at, plan_expires_at, active_hours_used",
-    )
-    .eq("id", user.id)
-    .maybeSingle();
+  const [{ data: profile }, { data: entitlement }] = await Promise.all([
+    supabase
+      .from("profiles")
+      .select(
+        "display_name, role, plan_id, trial_ends_at, plan_expires_at, active_hours_used",
+      )
+      .eq("id", user.id)
+      .maybeSingle(),
+    supabase
+      .from("v_my_entitlement")
+      .select(
+        "plan_id, status, trial_end, current_period_end, cancel_at_period_end, active_until, is_active",
+      )
+      .maybeSingle(),
+  ]);
 
   const displayName = profile?.display_name ?? "User";
 
-  const planId = (profile?.plan_id ?? "trial") as PlanId;
-  const trialEndsAt = profile?.trial_ends_at ?? null;
-  const planExpiresAt = profile?.plan_expires_at ?? null;
+  const planId = (entitlement?.plan_id ?? profile?.plan_id ?? "trial") as PlanId;
+  const trialEndsAt = entitlement?.trial_end ?? profile?.trial_ends_at ?? null;
+  const planExpiresAt = entitlement?.active_until ?? profile?.plan_expires_at ?? null;
   const activeHoursUsed = profile?.active_hours_used ?? 0;
+  const isActive = entitlement?.is_active ?? null;
 
   const adminEmails = getAdminEmails();
   const isAdmin =
@@ -56,6 +65,7 @@ export default async function AppLayout({
         trialEndsAt: trialEndsAt ?? undefined,
         planExpiresAt: planExpiresAt ?? undefined,
         activeHoursUsed,
+        isActive,
       }}
     >
       {children}

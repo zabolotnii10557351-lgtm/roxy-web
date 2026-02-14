@@ -110,6 +110,9 @@ export default function OverviewPage() {
           <Badge>
             {t.app.currentPlan}: {planId.toUpperCase()}
           </Badge>
+          <Button variant="secondary" href="/app/billing">
+            {t.app.managePlan}
+          </Button>
           <Button variant="secondary" disabled={isAccessBlocked}>
             {isTrialExpired ? t.app.upgradeRequired : t.app.startSession}
           </Button>

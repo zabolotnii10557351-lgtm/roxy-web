@@ -8,6 +8,7 @@ export interface PlanProfile {
   trialEndsAt?: string | null;
   planExpiresAt?: string | null;
   activeHoursUsed?: number | null;
+  isActive?: boolean | null;
 }
 
 export interface PlanContextValue {
@@ -21,6 +22,7 @@ export interface PlanContextValue {
   isTrialExpired: boolean;
   isOverLimit: boolean;
   isAccessBlocked: boolean;
+  isActive: boolean | null;
 }
 
 const PlanContext = createContext<PlanContextValue | null>(null);
@@ -41,6 +43,7 @@ export function PlanProvider({
     const trialEndsAt = toDate(profile.trialEndsAt);
     const planExpiresAt = toDate(profile.planExpiresAt);
     const activeHoursUsed = profile.activeHoursUsed ?? 0;
+    const isActive = profile.isActive ?? null;
     const hoursLimit = getPlanHours(planId);
     const hoursRemaining =
       hoursLimit === null ? null : Math.max(0, hoursLimit - activeHoursUsed);
@@ -48,7 +51,7 @@ export function PlanProvider({
     const now = new Date();
     const isTrialExpired = Boolean(isTrial && trialEndsAt && trialEndsAt < now);
     const isOverLimit = Boolean(hoursLimit !== null && hoursRemaining !== null && hoursRemaining <= 0);
-    const isAccessBlocked = isTrialExpired || isOverLimit;
+    const isAccessBlocked = isTrialExpired || isOverLimit || isActive === false;
 
     return {
       planId,
@@ -61,6 +64,7 @@ export function PlanProvider({
       isTrialExpired,
       isOverLimit,
       isAccessBlocked,
+      isActive,
     };
   }, [profile]);
 
