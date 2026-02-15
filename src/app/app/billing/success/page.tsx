@@ -11,8 +11,7 @@ type BillingStatusResponse = {
     workspace_id: string;
     plan_id: string;
     status: string;
-    lemon_customer_id: string | null;
-    lemon_subscription_id: string | null;
+    stripe_subscription_id: string | null;
   };
   error?: string;
 };
@@ -43,7 +42,7 @@ export default function BillingSuccessPage() {
       }
 
       const billing = json.billing;
-      if (billing?.lemon_subscription_id) {
+      if (billing?.stripe_subscription_id) {
         setStatus(t.app.billingSuccessConfirmedRedirecting);
         router.push("/app/billing");
         return;
