@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import CaptchaField from "@/app/(auth)/_components/CaptchaField";
+import OAuthButtons from "@/app/(auth)/_components/OAuthButtons";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 
@@ -117,6 +118,7 @@ export default async function RegisterPage(props: {
             },
           ]}
           extraContent={<CaptchaField />}
+          afterForm={<OAuthButtons />}
           footer={
             <span>
               Already have an account?{" "}

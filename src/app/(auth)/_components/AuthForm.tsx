@@ -22,6 +22,7 @@ interface AuthFormProps {
   hiddenFields?: Record<string, string>;
   footer?: React.ReactNode;
   extraContent?: React.ReactNode;
+  afterForm?: React.ReactNode;
 }
 
 function SubmitButton({ label }: { label: string }) {
@@ -43,6 +44,7 @@ export default function AuthForm({
   hiddenFields,
   footer,
   extraContent,
+  afterForm,
 }: AuthFormProps) {
   const [state, formAction] = useActionState(action, {});
 
@@ -86,6 +88,7 @@ export default function AuthForm({
         ) : null}
         <SubmitButton label={submitLabel} />
       </form>
+      {afterForm}
       {footer ? <div className="mt-6 text-sm text-white/60">{footer}</div> : null}
     </div>
   );

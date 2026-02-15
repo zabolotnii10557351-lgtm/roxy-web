@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import AuthForm from "@/app/(auth)/_components/AuthForm";
 import CaptchaField from "@/app/(auth)/_components/CaptchaField";
+import OAuthButtons from "@/app/(auth)/_components/OAuthButtons";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 
@@ -89,6 +90,7 @@ export default async function LoginPage(props: {
             },
           ]}
           extraContent={<CaptchaField />}
+          afterForm={<OAuthButtons />}
           footer={
             <div className="flex flex-col gap-2">
               <Link className="text-white hover:text-white" href="/reset">
