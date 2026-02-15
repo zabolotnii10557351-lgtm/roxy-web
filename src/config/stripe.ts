@@ -3,11 +3,11 @@ import type { PricingPlanId } from "@/config/pricingPlans";
 export type StripeBillingInterval = "month" | "year";
 
 const DEFAULT_PRODUCT_IDS: Record<Exclude<PricingPlanId, "enterprise">, string> = {
-  starter: "prod_TvdHlqGULAHGbB",
-  creator: "prod_TwQuv6Y4IsQAC5",
-  pro: "prod_TwQvRO0ffKwMyI",
-  studio: "prod_TwQwJmZSUF1I16",
-  scale: "prod_TwQx23QIXA6pnh",
+  starter: "prod_Tz4Q5XeCdMZSMG",
+  creator: "prod_Tz4QVYPcVGT7Du",
+  pro: "prod_Tz4QsmjLd5ApKd",
+  studio: "prod_Tz4RQ1FEnxr0SK",
+  scale: "prod_Tz4ReT1xy7icim",
 };
 
 const ENV_PRODUCT_KEYS: Record<Exclude<PricingPlanId, "enterprise">, string> = {
