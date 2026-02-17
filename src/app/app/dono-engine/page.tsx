@@ -175,30 +175,130 @@ const TIKTOK_GIFTS: GiftItem[] = [
   { id: "rainbow", name: "Rainbow", emoji: "\uD83C\uDF08", regions: ["global", "us", "eu", "uk"] },
 ];
 
-const ROXY_ANIMATIONS: Array<{ id: string; label: string }> = [
-  { id: "heart_hands", label: "\u0421\u0435\u0440\u0434\u0435\u0447\u043a\u043e \u0440\u0443\u043a\u0430\u043c\u0438 (Heart Hands)" },
-  { id: "blow_kiss", label: "\u041f\u043e\u0446\u0435\u043b\u0443\u0439 \u0432 \u043a\u0430\u043c\u0435\u0440\u0443 (Blow a Kiss)" },
-  { id: "big_wave", label: "\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0430\u0445 \u0440\u0443\u043a\u043e\u0439 (Big Wave)" },
-  { id: "cheer_clap", label: "\u0410\u043f\u043b\u043e\u0434\u0438\u0441\u043c\u0435\u043d\u0442\u044b / \u0443\u0440\u0430 (Cheer Clap)" },
-  { id: "victory_pose", label: "\u041f\u043e\u0437\u0430 \u043f\u043e\u0431\u0435\u0434\u044b (Victory Pose)" },
-  { id: "dance_bounce", label: "\u0422\u0430\u043d\u0435\u0446 \u043d\u0430 \u043c\u0435\u0441\u0442\u0435 (Dance Bounce)" },
-  { id: "point_to_cam", label: "\u0423\u043a\u0430\u0437\u0430\u0442\u044c \u043d\u0430 \u043a\u0430\u043c\u0435\u0440\u0443 (Point to Camera)" },
-  { id: "thank_you_bow", label: "\u041f\u043e\u043a\u043b\u043e\u043d \u0441\u043f\u0430\u0441\u0438\u0431\u043e (Thank-you Bow)" },
-  { id: "laugh", label: "\u0421\u043c\u0435\u0445 (Laugh)" },
-  { id: "nod_approve", label: "\u041e\u0434\u043e\u0431\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043a\u0438\u0432\u043e\u043a (Nod / Approve)" },
+// \u2500\u2500 Real Animations from DA_RoxAnimCatalog (96 entries) \u2500\u2500
+const ROXY_ANIMATIONS: Array<{ id: string; label: string; tags: string }> = [
+  // Happy / Excited
+  { id: "AD_Bouncy_Happy_Dramatic", label: "Bouncy Happy Dramatic", tags: "happy" },
+  { id: "AD_Bouncy_Happy_Stand", label: "Bouncy Happy Stand", tags: "happy,idle" },
+  { id: "AD_Jump_About_Excited", label: "Jump About Excited", tags: "excited" },
+  { id: "AD_Jumps_For_Joy", label: "Jumps For Joy", tags: "excited" },
+  { id: "AD_Urika_Moment", label: "Eureka Moment", tags: "excited" },
+  { id: "AD_Check_Me_Out_Im_Cool_", label: "Check Me Out I'm Cool", tags: "confident" },
+  { id: "AD_Excitable_Fidgeting", label: "Excitable Fidgeting", tags: "excited" },
+  // Love / Heart
+  { id: "AD_Hand_Heart_1", label: "Hand Heart 1", tags: "love" },
+  { id: "AD_Hand_Heart_1_EXTENDED", label: "Hand Heart 1 (Extended)", tags: "love" },
+  { id: "AD_Hand_Heart_2", label: "Hand Heart 2", tags: "love" },
+  { id: "AD_Hand_Heart_2_EXTENDED", label: "Hand Heart 2 (Extended)", tags: "love" },
+  { id: "AD_Enamoured", label: "Enamoured", tags: "love" },
+  // Laugh
+  { id: "AD_Giggle_Dramatic", label: "Giggle Dramatic", tags: "laugh" },
+  { id: "AD_Giggle_Stand", label: "Giggle Stand", tags: "laugh,idle" },
+  { id: "AD_Fall_About_Laugh", label: "Fall About Laugh", tags: "laugh" },
+  { id: "AD_Hysterical_Laugh", label: "Hysterical Laugh", tags: "laugh" },
+  { id: "AD_Hysterical_Laugh_LOOP", label: "Hysterical Laugh (Loop)", tags: "laugh" },
+  // Shy / Bashful
+  { id: "AD_Bashful_Stand", label: "Bashful Stand", tags: "shy,idle" },
+  { id: "AD_Timid_Stand", label: "Timid Stand", tags: "shy,idle" },
+  { id: "AD_Ashamed", label: "Ashamed", tags: "shy" },
+  { id: "AD_Awkward_Stand", label: "Awkward Stand", tags: "shy,idle" },
+  { id: "AD_Awkward_Turtle_Hand_Gesture", label: "Awkward Turtle", tags: "shy" },
+  // Sad / Cry
+  { id: "AD_Cry_Dramatic", label: "Cry Dramatic", tags: "sad" },
+  { id: "AD_Cry_Emote", label: "Cry Emote", tags: "sad" },
+  { id: "AD_Crying", label: "Crying", tags: "sad" },
+  { id: "AD_Crying_Contained", label: "Crying Contained", tags: "sad" },
+  { id: "AD_Sad_Crying", label: "Sad Crying", tags: "sad" },
+  { id: "AD_Sad_Stand", label: "Sad Stand", tags: "sad,idle" },
+  { id: "AD_Depressed", label: "Depressed", tags: "sad" },
+  // Confused / Thinking
+  { id: "AD_Confused", label: "Confused", tags: "confused" },
+  { id: "AD_Confused_Rocking", label: "Confused Rocking", tags: "confused" },
+  { id: "AD_Puzzled_Scratch_Head", label: "Puzzled Scratch Head", tags: "confused" },
+  { id: "AD_Thinking", label: "Thinking", tags: "thinking" },
+  { id: "AD_Cross_Fingers", label: "Cross Fingers", tags: "thinking" },
+  // Bored / Disappointed
+  { id: "AD_Bored_Dramatic", label: "Bored Dramatic", tags: "bored" },
+  { id: "AD_Bored_Stand", label: "Bored Stand", tags: "bored,idle" },
+  { id: "AD_Disappointed_Dramatic", label: "Disappointed Dramatic", tags: "disappointed" },
+  { id: "AD_Disappointed_Emote", label: "Disappointed Emote", tags: "disappointed" },
+  { id: "AD_Disappointed_Stand", label: "Disappointed Stand", tags: "disappointed,idle" },
+  { id: "AD_Stroppy_Stand", label: "Stroppy Stand", tags: "angry,idle" },
+  // Calm / Relief
+  { id: "AD_Relief", label: "Relief", tags: "calm" },
+  { id: "AD_Relief_Dramatic", label: "Relief Dramatic", tags: "calm" },
+  { id: "AD_Serenity_Stand", label: "Serenity Stand", tags: "calm,idle" },
+  { id: "AD_Behold_the_Sky", label: "Behold the Sky", tags: "calm" },
+  // Misc
+  { id: "AD_Oh_Wow", label: "Oh Wow", tags: "wow" },
+  { id: "AD_Worried", label: "Worried", tags: "worried" },
+  { id: "AD_Ashamed_Walk_Around", label: "Ashamed Walk Around", tags: "locomotion" },
+  { id: "AD_Confused_Jog_LOOPED", label: "Confused Jog (Loop)", tags: "locomotion" },
+];
+
+const ANIM_GROUPS = [
+  { label: "\u2764\uFE0F Happy / Excited", filter: (a: typeof ROXY_ANIMATIONS[0]) => /happy|excited|confident/.test(a.tags) },
+  { label: "\uD83D\uDC97 Love / Heart", filter: (a: typeof ROXY_ANIMATIONS[0]) => a.tags.includes("love") },
+  { label: "\uD83D\uDE02 Laugh", filter: (a: typeof ROXY_ANIMATIONS[0]) => a.tags.includes("laugh") },
+  { label: "\uD83D\uDE33 Shy / Bashful", filter: (a: typeof ROXY_ANIMATIONS[0]) => a.tags.includes("shy") },
+  { label: "\uD83D\uDE22 Sad / Cry", filter: (a: typeof ROXY_ANIMATIONS[0]) => a.tags.includes("sad") },
+  { label: "\uD83E\uDD14 Confused / Thinking", filter: (a: typeof ROXY_ANIMATIONS[0]) => /confused|thinking/.test(a.tags) },
+  { label: "\uD83D\uDE12 Bored / Disappointed", filter: (a: typeof ROXY_ANIMATIONS[0]) => /bored|disappointed|angry/.test(a.tags) },
+  { label: "\uD83D\uDE0C Calm / Relief", filter: (a: typeof ROXY_ANIMATIONS[0]) => a.tags.includes("calm") },
+  { label: "\uD83C\uDFAD Other", filter: (a: typeof ROXY_ANIMATIONS[0]) => /wow|worried|locomotion/.test(a.tags) },
 ];
 
 const UNREAL_TRIGGER_PRESETS = [
-  "Snow",
-  "Confetti",
-  "Fireworks",
-  "Teleport_A",
-  "Teleport_B",
-  "ChangeLocation_City",
-  "ChangeLocation_Studio",
-  "CameraZoom_In",
-  "CameraZoom_Out",
-  "LightBurst",
+  // Scene / Background changes (via setBackground command)
+  "BG_Studio",
+  "BG_Outdoor",
+  // VFX states for sphere effects
+  "NS_Snow_Attract",
+  "NS_Snow_Idle",
+  "NS_Holy_Attract",
+  "NS_Basic_Attract",
+  // Misc
+  "NS_Torch",
+  "NS_leaf",
+];
+
+// \u2500\u2500 VFX Donation Effects Registry \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+// Thumbnails served from Supabase Storage: /storage/v1/object/public/vfx-previews/
+const VFX_THUMB_BASE = "/vfx-thumbs"; // TODO: replace with Supabase storage URL
+
+type VfxEntry = { name: string; category: "wings" | "sphere"; thumb: string; states?: string[] };
+
+const VFX_REGISTRY: Record<string, VfxEntry> = {
+  // \u2500\u2500 Wings (NS_Wing_1..13) \u2500\u2500
+  NS_Wing_1:  { name: "Golden Phoenix",    category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing.webp` },
+  NS_Wing_2:  { name: "Crystal Butterfly",  category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing2.webp` },
+  NS_Wing_3:  { name: "Prism Wings",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing3.webp` },
+  NS_Wing_4:  { name: "Fairy Fire",         category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing4.webp` },
+  NS_Wing_5:  { name: "Demon Shadow",       category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing5.webp` },
+  NS_Wing_6:  { name: "Spirit Glow",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing6.webp` },
+  NS_Wing_7:  { name: "Cyber Grid",         category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing7.webp` },
+  NS_Wing_8:  { name: "Arcane Sigil",       category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing8.webp` },
+  NS_Wing_9:  { name: "Inferno",            category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing9.webp` },
+  NS_Wing_10: { name: "Wing 10",            category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing.webp` }, // no GIF, placeholder
+  NS_Wing_11: { name: "Aqua Splash",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing11.webp` },
+  NS_Wing_12: { name: "Void Ribbon",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing12.webp` },
+  NS_Wing_13: { name: "Lightning Storm",    category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing13.webp` },
+  // \u2500\u2500 Spheres (AttractionVFX) \u2013 each has _Attract, _Get, _Idle states \u2500\u2500
+  NS_Basic:   { name: "Sparkle Burst",      category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore.webp`,         states: ["Attract","Get","Idle"] },
+  NS_Book:    { name: "Crystal Shatter",    category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Child.webp`,   states: ["Attract","Get","Idle"] },
+  NS_Coin:    { name: "Gold Coin",          category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Coin.webp`,    states: ["Attract","Get","Idle"] },
+  NS_Eye:     { name: "Dark Magic",         category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_DarkMagic.webp`, states: ["Attract","Get","Idle"] },
+  NS_Holy:    { name: "Holy Light",         category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Holy.webp`,    states: ["Attract","Get","Idle"] },
+  NS_Music:   { name: "Music Note",         category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Music.webp`,   states: ["Attract","Get","Idle"] },
+  NS_Nature:  { name: "Nature Bloom",       category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Nature.webp`,  states: ["Attract","Get","Idle"] },
+  NS_Rock:    { name: "Cosmic Ring",        category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Cosmic.webp`,  states: ["Attract","Get","Idle"] },
+  NS_Scifi:   { name: "Plasma Core",        category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Scifi.webp`,   states: ["Attract","Get","Idle"] },
+  NS_Snow:    { name: "Snowfall",           category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Snow.webp`,    states: ["Attract","Get","Idle"] },
+};
+
+const VFX_CATEGORIES = [
+  { key: "wings" as const,  label: "\uD83E\uDD86 Wings (13)",   count: 13 },
+  { key: "sphere" as const, label: "\u26A1 Sphere (10)",  count: 10 },
 ];
 
 function normalizeGiftKey(input: string) {
@@ -308,7 +408,7 @@ function GiftPickerModal(props: {
           </div>
 
           {props.loading ? (
-            <p className="mt-3 text-xs text-white/50">Loading catalog…</p>
+            <p className="mt-3 text-xs text-white/50">Loading catalog\u2026</p>
           ) : null}
           {props.error ? (
             <p className="mt-3 text-xs text-rose-200/80">{props.error}</p>
@@ -346,7 +446,7 @@ function GiftPickerModal(props: {
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-xs font-medium text-white">{g.name}</p>
                       <p className="mt-0.5 text-[11px] text-white/55">
-                        {g.cost} coins · id: {g.id}
+                        {g.cost} coins \u00B7 id: {g.id}
                       </p>
                     </div>
                   </button>
@@ -357,7 +457,7 @@ function GiftPickerModal(props: {
 
           <p className="mt-4 text-[11px] text-white/40">
             Catalog source: streamtoearn.io (external). If your connector uses numeric gift IDs,
-            you can still paste them into “Gift ID (advanced)”. Selecting a gift stores its name
+            you can still paste them into \u201CGift ID (advanced)\u201D. Selecting a gift stores its name
             by default.
           </p>
         </div>
@@ -370,317 +470,385 @@ function actionSummary(actions: DonoAction[]) {
   const first = actions[0];
   if (!first) return "No action";
   if (first.type === "play_animation") return `Animation: ${first.label}`;
-  if (first.type === "unreal_trigger") return `Unreal: ${first.triggerName}`;
+  if (first.type === "unreal_trigger") {
+    const vfx = VFX_REGISTRY[first.triggerName as keyof typeof VFX_REGISTRY];
+    return vfx ? `VFX: ${vfx.name}` : `Unreal: ${first.triggerName}`;
+  }
   return "Action";
+}
+
+function VfxPickerModal(props: {
+  open: boolean;
+  selectedId: string;
+  onPick: (bpName: string) => void;
+  onClose: () => void;
+}) {
+  const [tab, setTab] = useState<"wings" | "sphere">("wings");
+  const [q, setQ] = useState("");
+
+  useEffect(() => {
+    if (!props.open) setQ("");
+  }, [props.open]);
+
+  if (!props.open) return null;
+
+  const query = q.trim().toLowerCase();
+  const entries = Object.entries(VFX_REGISTRY).filter(([, v]) => {
+    if (v.category !== tab) return false;
+    if (query.length === 0) return true;
+    return v.name.toLowerCase().includes(query);
+  });
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+      <div className="w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-[#0A0F1A] shadow-2xl">
+        <div className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
+          <div className="min-w-0">
+            <p className="text-sm font-semibold text-white">Pick VFX Effect</p>
+            <p className="mt-0.5 text-xs text-white/55">
+              Unreal Blueprint name will be sent as trigger
+            </p>
+          </div>
+          <Button variant="ghost" onClick={props.onClose}>
+            Close
+          </Button>
+        </div>
+
+        <div className="p-5">
+          {/* Category tabs */}
+          <div className="flex gap-2">
+            {VFX_CATEGORIES.map((cat) => (
+              <button
+                key={cat.key}
+                type="button"
+                onClick={() => setTab(cat.key)}
+                className={
+                  "rounded-2xl px-4 py-2 text-xs font-medium transition " +
+                  (tab === cat.key
+                    ? "bg-white/15 text-white"
+                    : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white/80")
+                }
+              >
+                {cat.label} ({cat.count})
+              </button>
+            ))}
+          </div>
+
+          {/* Search */}
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            className="mt-3 w-full rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
+            placeholder="Search VFX effects..."
+          />
+
+          {/* Grid */}
+          <div className="mt-4 max-h-[55vh] overflow-y-auto pr-2">
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {entries.map(([bpName, vfx]) => {
+                const selected = bpName === props.selectedId;
+                return (
+                  <button
+                    key={bpName}
+                    type="button"
+                    onClick={() => props.onPick(bpName)}
+                    className={
+                      "group relative overflow-hidden rounded-2xl border text-left transition " +
+                      (selected
+                        ? "border-cyan-400/60 bg-cyan-500/10 ring-1 ring-cyan-400/30"
+                        : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10")
+                    }
+                  >
+                    {/* Thumbnail */}
+                    <div className="flex aspect-square items-center justify-center overflow-hidden bg-black/30">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={vfx.thumb}
+                        alt={vfx.name}
+                        className="h-full w-full object-cover transition group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    </div>
+                    {/* Label */}
+                    <div className="px-3 py-2">
+                      <p className="truncate text-xs font-medium text-white">
+                        {vfx.name}
+                      </p>
+                      <p className="mt-0.5 text-[10px] text-white/45">{bpName}</p>
+                    </div>
+                    {selected ? (
+                      <div className="absolute right-2 top-2 flex h-5 w-5 items-center justify-center rounded-full bg-cyan-500 text-[10px] text-white">
+                        \u2713
+                      </div>
+                    ) : null}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 const STARTER_TEMPLATES: Array<{ name: string; config: DonoRuleConfig }> = [
   {
-    name: "Rose x1 \u2192 Animation: Heart Hands",
+    name: "Rose x1 \u2192 Hand Heart",
     config: {
       trigger: { type: "gift", region: "global", giftId: "rose", minAmount: 1 },
       cooldownSeconds: 10,
       reaction: {
         text: "\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u0440\u043e\u0437\u0443!",
         emotionTag: "happy",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "female",
-            animationId: "heart_hands",
-            label: "\u0421\u0435\u0440\u0434\u0435\u0447\u043a\u043e \u0440\u0443\u043a\u0430\u043c\u0438",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Hand_Heart_1", label: "Hand Heart 1" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Rose x10 \u2192 Unreal: Confetti",
+    name: "Rose x10 \u2192 VFX: Snow Attract",
     config: {
       trigger: { type: "gift", region: "global", giftId: "rose", minAmount: 10 },
       cooldownSeconds: 20,
       reaction: {
         text: "\u0412\u0430\u0443! \u042d\u0442\u043e \u043c\u043d\u043e\u0433\u043e \u0440\u043e\u0437!",
         emotionTag: "excited",
-        actions: [{ type: "unreal_trigger", triggerName: "Confetti" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Snow_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Hand Hearts x1 \u2192 Animation: Blow a Kiss",
+    name: "Hand Hearts x1 \u2192 Enamoured",
     config: {
       trigger: { type: "gift", region: "us", giftId: "hand_hearts", minAmount: 1 },
       cooldownSeconds: 12,
       reaction: {
         text: "\u041c\u0438\u043b\u043e! \u041b\u043e\u0432\u043b\u044e \u0445\u0430\u0440\u0442\u044b!",
         emotionTag: "cute",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "female",
-            animationId: "blow_kiss",
-            label: "\u041f\u043e\u0446\u0435\u043b\u0443\u0439 \u0432 \u043a\u0430\u043c\u0435\u0440\u0443",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Enamoured", label: "Enamoured" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Ice Cream x1 \u2192 Animation: Dance Bounce",
+    name: "Ice Cream x1 \u2192 Bouncy Happy",
     config: {
       trigger: { type: "gift", region: "global", giftId: "ice_cream", minAmount: 1 },
       cooldownSeconds: 10,
       reaction: {
         text: "\u041c\u043c\u043c, \u043c\u043e\u0440\u043e\u0436\u0435\u043d\u043e\u0435!",
         emotionTag: "happy",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "female",
-            animationId: "dance_bounce",
-            label: "\u0422\u0430\u043d\u0435\u0446 \u043d\u0430 \u043c\u0435\u0441\u0442\u0435",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Bouncy_Happy_Dramatic", label: "Bouncy Happy Dramatic" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Perfume x1 \u2192 Unreal: LightBurst",
+    name: "Perfume x1 \u2192 VFX: Holy Light",
     config: {
       trigger: { type: "gift", region: "eu", giftId: "perfume", minAmount: 1 },
       cooldownSeconds: 15,
       reaction: {
         text: "\u041e\u0445, \u043a\u0430\u043a\u043e\u0439 \u0430\u0440\u043e\u043c\u0430\u0442!",
         emotionTag: "wow",
-        actions: [{ type: "unreal_trigger", triggerName: "LightBurst" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Holy_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Fireworks x1 \u2192 Unreal: Fireworks",
+    name: "Fireworks x1 \u2192 VFX: Sparkle Burst",
     config: {
       trigger: { type: "gift", region: "jp", giftId: "fireworks", minAmount: 1 },
       cooldownSeconds: 25,
       reaction: {
         text: "\u0424\u0435\u0439\u0435\u0440\u0432\u0435\u0440\u043a!",
         emotionTag: "excited",
-        actions: [{ type: "unreal_trigger", triggerName: "Fireworks" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Basic_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Galaxy x1 \u2192 Unreal: ChangeLocation_Studio",
+    name: "Galaxy x1 \u2192 VFX: Wings 5 (Demon Shadow)",
     config: {
       trigger: { type: "gift", region: "global", giftId: "galaxy", minAmount: 1 },
       cooldownSeconds: 40,
       reaction: {
         text: "\u041a\u043e\u0441\u043c\u043e\u0441! \u041f\u0435\u0440\u0435\u043d\u043e\u0441\u0438\u043c\u0441\u044f!",
         emotionTag: "wow",
-        actions: [{ type: "unreal_trigger", triggerName: "ChangeLocation_Studio" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Wing_5" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Universe x1 \u2192 Unreal: ChangeLocation_City",
+    name: "Universe x1 \u2192 VFX: Wings 1 (Golden Phoenix)",
     config: {
       trigger: { type: "gift", region: "global", giftId: "universe", minAmount: 1 },
       cooldownSeconds: 60,
       reaction: {
-        text: "\u042d\u0442\u043e \u0442\u043e\u043f! \u041c\u0435\u043d\u044f\u0435\u043c \u043b\u043e\u043a\u0430\u0446\u0438\u044e!",
+        text: "\u042d\u0442\u043e \u0442\u043e\u043f! \u041a\u0440\u044b\u043b\u044c\u044f!",
         emotionTag: "excited",
-        actions: [{ type: "unreal_trigger", triggerName: "ChangeLocation_City" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Wing_1" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Money Gun x1 \u2192 Animation: Victory Pose",
+    name: "Money Gun x1 \u2192 Check Me Out I'm Cool",
     config: {
       trigger: { type: "gift", region: "us", giftId: "money_gun", minAmount: 1 },
       cooldownSeconds: 20,
       reaction: {
         text: "\u0421\u043f\u0430\u0441\u0438\u0431\u043e! \u041f\u043e\u0431\u0435\u0434\u0430!",
         emotionTag: "confident",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "male",
-            animationId: "victory_pose",
-            label: "\u041f\u043e\u0437\u0430 \u043f\u043e\u0431\u0435\u0434\u044b",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "male", animationId: "AD_Check_Me_Out_Im_Cool_", label: "Check Me Out I'm Cool" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Likes x50 \u2192 Animation: Big Wave",
+    name: "Likes x50 \u2192 Jumps For Joy",
     config: {
       trigger: { type: "likes", minLikes: 50 },
       cooldownSeconds: 8,
       reaction: {
         text: "\u0412\u0438\u0436\u0443 \u043b\u0430\u0439\u043a\u0438! \u041f\u0440\u0438\u0432\u0435\u0442!",
         emotionTag: "happy",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "female",
-            animationId: "big_wave",
-            label: "\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0430\u0445 \u0440\u0443\u043a\u043e\u0439",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Jumps_For_Joy", label: "Jumps For Joy" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Likes x200 \u2192 Unreal: CameraZoom_In",
+    name: "Likes x200 \u2192 VFX: Plasma Core",
     config: {
       trigger: { type: "likes", minLikes: 200 },
       cooldownSeconds: 20,
       reaction: {
-        text: "\u041c\u043e\u0449\u043d\u043e! \u0417\u0443\u043c!",
+        text: "\u041c\u043e\u0449\u043d\u043e! \u042d\u043d\u0435\u0440\u0433\u0438\u044f!",
         emotionTag: "excited",
-        actions: [{ type: "unreal_trigger", triggerName: "CameraZoom_In" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Scifi_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Repost x1 \u2192 Animation: Thank-you Bow",
+    name: "Repost x1 \u2192 Relief Dramatic",
     config: {
       trigger: { type: "reposts", minReposts: 1 },
       cooldownSeconds: 15,
       reaction: {
         text: "\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u0440\u0435\u043f\u043e\u0441\u0442!",
         emotionTag: "grateful",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "female",
-            animationId: "thank_you_bow",
-            label: "\u041f\u043e\u043a\u043b\u043e\u043d \u0441\u043f\u0430\u0441\u0438\u0431\u043e",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Relief_Dramatic", label: "Relief Dramatic" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Subscribe \u2192 Unreal: Confetti",
+    name: "Subscribe \u2192 VFX: Music Attract",
     config: {
       trigger: { type: "subscribe", minCount: 1 },
       cooldownSeconds: 30,
       reaction: {
         text: "\u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c \u0432 \u0441\u0435\u043c\u044c\u044e!",
         emotionTag: "excited",
-        actions: [{ type: "unreal_trigger", triggerName: "Confetti" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Music_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Follow \u2192 Animation: Point to Camera",
+    name: "Follow \u2192 Oh Wow",
     config: {
       trigger: { type: "follow", minCount: 1 },
       cooldownSeconds: 10,
       reaction: {
         text: "\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u0443!",
         emotionTag: "happy",
-        actions: [
-          {
-            type: "play_animation",
-            gender: "male",
-            animationId: "point_to_cam",
-            label: "\u0423\u043a\u0430\u0437\u0430\u0442\u044c \u043d\u0430 \u043a\u0430\u043c\u0435\u0440\u0443",
-          },
-        ],
+        actions: [{ type: "play_animation", gender: "male", animationId: "AD_Oh_Wow", label: "Oh Wow" }],
       },
       enabled: true,
     },
   },
-  // Fill up to 20 templates by repeating varied gifts/actions with different thresholds.
   {
-    name: "Teddy Bear x1 \u2192 Animation: Laugh",
+    name: "Teddy Bear x1 \u2192 Hysterical Laugh",
     config: {
       trigger: { type: "gift", region: "global", giftId: "teddy", minAmount: 1 },
       cooldownSeconds: 12,
       reaction: {
         text: "\u041e\u0443\u0443\u0443, \u043c\u0438\u0448\u043a\u0430!",
         emotionTag: "cute",
-        actions: [{ type: "play_animation", gender: "female", animationId: "laugh", label: "\u0421\u043c\u0435\u0445" }],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Hysterical_Laugh", label: "Hysterical Laugh" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Coffee x1 \u2192 Animation: Nod / Approve",
+    name: "Coffee x1 \u2192 Serenity Stand",
     config: {
       trigger: { type: "gift", region: "global", giftId: "coffee", minAmount: 1 },
       cooldownSeconds: 10,
       reaction: {
         text: "\u041a\u043e\u0444\u0435\u0439\u043e\u0447\u0435\u043a! \u0421\u043f\u0430\u0441\u0438\u0431\u043e!",
         emotionTag: "relaxed",
-        actions: [{ type: "play_animation", gender: "male", animationId: "nod_approve", label: "\u041e\u0434\u043e\u0431\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u043a\u0438\u0432\u043e\u043a" }],
+        actions: [{ type: "play_animation", gender: "male", animationId: "AD_Serenity_Stand", label: "Serenity Stand" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Diamond x1 \u2192 Unreal: LightBurst",
+    name: "Diamond x1 \u2192 VFX: Gold Coin",
     config: {
       trigger: { type: "gift", region: "global", giftId: "diamond", minAmount: 1 },
       cooldownSeconds: 20,
       reaction: {
         text: "\u0411\u043b\u0435\u0441\u043a!",
         emotionTag: "wow",
-        actions: [{ type: "unreal_trigger", triggerName: "LightBurst" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Coin_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Sports Car x1 \u2192 Unreal: CameraZoom_Out",
+    name: "Sports Car x1 \u2192 VFX: Nature Bloom",
     config: {
       trigger: { type: "gift", region: "global", giftId: "sports_car", minAmount: 1 },
       cooldownSeconds: 25,
       reaction: {
         text: "\u041d\u0438\u0447\u0435\u0433\u043e \u0441\u0435\u0431\u0435 \u0442\u0430\u0447\u043a\u0430!",
         emotionTag: "excited",
-        actions: [{ type: "unreal_trigger", triggerName: "CameraZoom_Out" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Nature_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Lion x1 \u2192 Unreal: Teleport_A",
+    name: "Lion x1 \u2192 VFX: Dark Magic (Eye)",
     config: {
       trigger: { type: "gift", region: "global", giftId: "lion", minAmount: 1 },
       cooldownSeconds: 60,
       reaction: {
         text: "\u041b\u0415\u0412! \u041f\u043e\u0435\u0445\u0430\u043b\u0438!",
         emotionTag: "wow",
-        actions: [{ type: "unreal_trigger", triggerName: "Teleport_A" }],
+        actions: [{ type: "unreal_trigger", triggerName: "NS_Eye_Attract" }],
       },
       enabled: true,
     },
   },
   {
-    name: "Crown x1 \u2192 Animation: Cheer Clap",
+    name: "Crown x1 \u2192 Excitable Fidgeting",
     config: {
       trigger: { type: "gift", region: "global", giftId: "crown", minAmount: 1 },
       cooldownSeconds: 18,
       reaction: {
         text: "\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0438!",
         emotionTag: "happy",
-        actions: [{ type: "play_animation", gender: "female", animationId: "cheer_clap", label: "\u0410\u043f\u043b\u043e\u0434\u0438\u0441\u043c\u0435\u043d\u0442\u044b" }],
+        actions: [{ type: "play_animation", gender: "female", animationId: "AD_Excitable_Fidgeting", label: "Excitable Fidgeting" }],
       },
       enabled: true,
     },
@@ -743,6 +911,7 @@ function DonoRuleCard(props: {
   const [catalogLoading, setCatalogLoading] = useState(false);
   const [catalogError, setCatalogError] = useState<string | null>(null);
   const [giftPickerOpen, setGiftPickerOpen] = useState(false);
+  const [vfxPickerOpen, setVfxPickerOpen] = useState(false);
   const [threshold, setThreshold] = useState(() => {
     const t = initialConfig.trigger;
     if (t.type === "gift") return t.minAmount;
@@ -761,12 +930,12 @@ function DonoRuleCard(props: {
   const [animationId, setAnimationId] = useState(
     existingAction && existingAction.type === "play_animation"
       ? existingAction.animationId
-      : ROXY_ANIMATIONS[0]?.id ?? "heart_hands",
+      : ROXY_ANIMATIONS[0]?.id ?? "AD_Bouncy_Happy_Dramatic",
   );
   const [unrealTriggerName, setUnrealTriggerName] = useState(
     existingAction && existingAction.type === "unreal_trigger"
       ? existingAction.triggerName
-      : UNREAL_TRIGGER_PRESETS[0] ?? "Snow",
+      : UNREAL_TRIGGER_PRESETS[0] ?? "NS_Basic_Attract",
   );
 
   const thresholdLabel =
@@ -849,7 +1018,7 @@ function DonoRuleCard(props: {
                 ROXY_ANIMATIONS.find((a) => a.id === animationId)?.label ?? animationId,
             },
           ]
-        : [{ type: "unreal_trigger", triggerName: unrealTriggerName.trim() || "Snow" }];
+        : [{ type: "unreal_trigger", triggerName: unrealTriggerName.trim() || "NS_Basic_Attract" }];
 
     return {
       trigger: nextTrigger,
@@ -884,8 +1053,8 @@ function DonoRuleCard(props: {
           </div>
           <p className="mt-2 text-xs text-white/60">
             {triggerType === "gift"
-              ? `Gift: ${giftDisplayLabel({ giftId, resolved: resolvedGift })} · min ${threshold}`
-              : `Event: ${triggerType} · min ${threshold}`} · {actionSummary(buildConfig().reaction.actions)}
+              ? `Gift: ${giftDisplayLabel({ giftId, resolved: resolvedGift })} \u00B7 min ${threshold}`
+              : `Event: ${triggerType} \u00B7 min ${threshold}`} \u00B7 {actionSummary(buildConfig().reaction.actions)}
           </p>
         </div>
 
@@ -944,7 +1113,7 @@ function DonoRuleCard(props: {
                   <option value="global">Global (default)</option>
                   {catalogRegions.map((r) => (
                     <option key={r.code} value={r.code}>
-                      {r.code} — {r.name}
+                      {r.code} \u2014 {r.name}
                     </option>
                   ))}
                   {giftRegion !== "global" &&
@@ -955,7 +1124,7 @@ function DonoRuleCard(props: {
                 </select>
                 <p className="mt-1 text-[11px] text-white/45">
                   {catalogLoading
-                    ? "Loading regions…"
+                    ? "Loading regions\u2026"
                     : catalogRegions.length > 0
                       ? "Gifts can differ by region."
                       : "Regions will load when you open the picker."}
@@ -1009,7 +1178,7 @@ function DonoRuleCard(props: {
                     )}
                     <p className="mt-0.5 text-[11px] text-white/45">
                       Match key: {giftId || "(not set)"}
-                      {resolvedCatalogId ? ` · catalog id: ${resolvedCatalogId}` : ""}
+                      {resolvedCatalogId ? ` \u00B7 catalog id: ${resolvedCatalogId}` : ""}
                     </p>
                   </div>
                   <Button
@@ -1017,7 +1186,7 @@ function DonoRuleCard(props: {
                     onClick={() => setGiftPickerOpen(true)}
                     disabled={props.busy}
                   >
-                    Choose…
+                    Choose\u2026
                   </Button>
                 </div>
                 <div className="mt-2">
@@ -1121,14 +1290,22 @@ function DonoRuleCard(props: {
                     onChange={(e) => setAnimationId(e.target.value)}
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
                   >
-                    {ROXY_ANIMATIONS.map((a) => (
-                      <option key={a.id} value={a.id}>
-                        {a.label}
-                      </option>
-                    ))}
+                    {ANIM_GROUPS.map((group) => {
+                      const items = ROXY_ANIMATIONS.filter(group.filter);
+                      if (items.length === 0) return null;
+                      return (
+                        <optgroup key={group.label} label={group.label}>
+                          {items.map((a) => (
+                            <option key={a.id} value={a.id}>
+                              {a.label}
+                            </option>
+                          ))}
+                        </optgroup>
+                      );
+                    })}
                   </select>
                   <p className="mt-1 text-[11px] text-white/45">
-                    Placeholder list (10) for Rokoko capture.
+                    {ROXY_ANIMATIONS.length} mocap animations from DA_RoxAnimCatalog.
                   </p>
                 </div>
               </>
@@ -1136,18 +1313,63 @@ function DonoRuleCard(props: {
               <>
                 <div className="md:col-span-2">
                   <p className="mb-1 text-[11px] font-medium text-white/70">Unreal trigger</p>
+
+                  {/* VFX preview if a VFX is selected */}
+                  {VFX_REGISTRY[unrealTriggerName as keyof typeof VFX_REGISTRY] ? (
+                    <div className="mb-3 flex items-center gap-3 rounded-2xl border border-cyan-400/30 bg-cyan-500/5 px-3 py-2">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={VFX_REGISTRY[unrealTriggerName as keyof typeof VFX_REGISTRY].thumb}
+                        alt={VFX_REGISTRY[unrealTriggerName as keyof typeof VFX_REGISTRY].name}
+                        className="h-12 w-12 rounded-xl object-cover"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <p className="text-xs font-medium text-white">
+                          {VFX_REGISTRY[unrealTriggerName as keyof typeof VFX_REGISTRY].name}
+                        </p>
+                        <p className="mt-0.5 text-[11px] text-white/55">
+                          {unrealTriggerName} \u00B7 {VFX_REGISTRY[unrealTriggerName as keyof typeof VFX_REGISTRY].category === "wings" ? "\uD83E\uDD86 Wings" : "\u26A1 Sphere"}
+                        </p>
+                      </div>
+                      <Button variant="ghost" onClick={() => setVfxPickerOpen(true)}>
+                        Change
+                      </Button>
+                    </div>
+                  ) : null}
+
                   <div className="grid gap-2 md:grid-cols-2">
-                    <select
-                      value={unrealTriggerName}
-                      onChange={(e) => setUnrealTriggerName(e.target.value)}
-                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
-                    >
-                      {UNREAL_TRIGGER_PRESETS.map((p) => (
-                        <option key={p} value={p}>
-                          {p}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="flex gap-2">
+                      <select
+                        value={unrealTriggerName}
+                        onChange={(e) => setUnrealTriggerName(e.target.value)}
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
+                      >
+                        <optgroup label="Scene Presets">
+                          {UNREAL_TRIGGER_PRESETS.map((p) => (
+                            <option key={p} value={p}>
+                              {p}
+                            </option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="\uD83E\uDD86 VFX Wings">
+                          {Object.entries(VFX_REGISTRY).filter(([,v]) => v.category === "wings").map(([bp, v]) => (
+                            <option key={bp} value={bp}>{v.name} ({bp})</option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="\u26A1 VFX Sphere">
+                          {Object.entries(VFX_REGISTRY).filter(([,v]) => v.category === "sphere").map(([bp, v]) => (
+                            <option key={bp} value={bp}>{v.name} ({bp})</option>
+                          ))}
+                        </optgroup>
+                      </select>
+                      <Button
+                        variant="secondary"
+                        onClick={() => setVfxPickerOpen(true)}
+                        disabled={props.busy}
+                      >
+                        VFX\u2026
+                      </Button>
+                    </div>
                     <input
                       value={unrealTriggerName}
                       onChange={(e) => setUnrealTriggerName(e.target.value)}
@@ -1158,6 +1380,16 @@ function DonoRuleCard(props: {
                   <p className="mt-1 text-[11px] text-white/45">
                     This name is sent inside the event payload for your Unreal Blueprint to route.
                   </p>
+
+                  <VfxPickerModal
+                    open={vfxPickerOpen}
+                    selectedId={unrealTriggerName}
+                    onPick={(bpName) => {
+                      setUnrealTriggerName(bpName);
+                      setVfxPickerOpen(false);
+                    }}
+                    onClose={() => setVfxPickerOpen(false)}
+                  />
                 </div>
               </>
             )}
@@ -1309,6 +1541,13 @@ export default function DonoEnginePage() {
 
   return (
     <div className="space-y-6">
+      {/* Dark mode fix for native select/option elements */}
+      <style>{`
+        select option, select optgroup {
+          background: #0A0F1A;
+          color: #fff;
+        }
+      `}</style>
       <div>
         <h2 className="text-2xl font-semibold text-white">{t.app.donoEngine}</h2>
         <p className="text-sm text-white/60">{t.app.donoEngineSubtitle}</p>
@@ -1342,7 +1581,7 @@ export default function DonoEnginePage() {
                       const trig = tpl.config.trigger as DonoTriggerGift;
                       const regionLabel =
                         trig.region === "global" ? "Global" : normalizeRegionForApi(String(trig.region));
-                      return `Trigger: ${giftLabel(trig.giftId)} · min ${trig.minAmount} · ${regionLabel}`;
+                      return `Trigger: ${giftLabel(trig.giftId)} \u00B7 min ${trig.minAmount} \u00B7 ${regionLabel}`;
                     })()
                   : `Trigger: ${tpl.config.trigger.type}`}
               </p>

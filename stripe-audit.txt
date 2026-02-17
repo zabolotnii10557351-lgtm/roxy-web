@@ -1,0 +1,1745 @@
+=== src/config/stripe.ts ===
+import type { PricingPlanId } from "@/config/pricingPlans";
+
+export type StripeBillingInterval = "month" | "year";
+
+const DEFAULT_PRODUCT_IDS: Record<Exclude<PricingPlanId, "enterprise">, string> = {
+  starter: "prod_TvdHlqGULAHGbB",
+  creator: "prod_TwQuv6Y4IsQAC5",
+  pro: "prod_TwQvRO0ffKwMyI",
+  studio: "prod_TwQwJmZSUF1I16",
+  scale: "prod_TwQx23QIXA6pnh",
+};
+
+const ENV_PRODUCT_KEYS: Record<Exclude<PricingPlanId, "enterprise">, string> = {
+  starter: "STRIPE_PRODUCT_STARTER",
+  creator: "STRIPE_PRODUCT_CREATOR",
+  pro: "STRIPE_PRODUCT_PRO",
+  studio: "STRIPE_PRODUCT_STUDIO",
+  scale: "STRIPE_PRODUCT_SCALE",
+};
+
+export function getStripeProductId(planId: PricingPlanId): string | null {
+  if (planId === "enterprise") return null;
+  const envKey = ENV_PRODUCT_KEYS[planId];
+  const envValue = process.env[envKey];
+  return envValue && envValue.length > 0 ? envValue : DEFAULT_PRODUCT_IDS[planId];
+}
+
+export function mapStripeProductIdToPlan(productId: string): PricingPlanId | null {
+  const pairs = Object.entries(DEFAULT_PRODUCT_IDS) as Array<
+    [Exclude<PricingPlanId, "enterprise">, string]
+  >;
+
+  for (const [planId, defaultId] of pairs) {
+    const envKey = ENV_PRODUCT_KEYS[planId];
+    const envId = process.env[envKey];
+    if ((envId && envId === productId) || defaultId === productId) {
+      return planId;
+    }
+  }
+
+  return null;
+}
+
+=== src/config/lemon.ts ===
+export type LemonBillingInterval = "month" | "year";
+
+export type BillingPlanId =
+  | "starter"
+  | "creator"
+  | "pro"
+  | "studio"
+  | "scale"
+  | "enterprise";
+
+export type AddonPackId = "as_2h" | "as_10h" | "as_25h";
+
+export type LemonVariantMapping = {
+  variantId: string;
+  planId: BillingPlanId;
+  interval: LemonBillingInterval;
+  isYearly: boolean;
+};
+
+export type LemonAddonMapping = {
+  variantId: string;
+  packId: AddonPackId;
+  amountSeconds: number;
+  priceEur: number;
+};
+
+function requiredEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing env var: ${name}`);
+  }
+  return value;
+}
+
+// Plan variant IDs must be configured from LemonSqueezy.
+export function getPlanVariantMapping(planId: BillingPlanId, interval: LemonBillingInterval): LemonVariantMapping {
+  const key = `LEMON_VARIANT_${planId.toUpperCase()}_${interval.toUpperCase()}`;
+  const variantId = requiredEnv(key);
+
+  return {
+    variantId,
+    planId,
+    interval,
+    isYearly: interval === "year",
+  };
+}
+
+export function mapVariantIdToPlan(variantId: string): LemonVariantMapping | null {
+  const env = process.env;
+
+  const pairs: Array<{ planId: BillingPlanId; interval: LemonBillingInterval; envKey: string }> = [
+    { planId: "starter", interval: "month", envKey: "LEMON_VARIANT_STARTER_MONTH" },
+    { planId: "starter", interval: "year", envKey: "LEMON_VARIANT_STARTER_YEAR" },
+    { planId: "creator", interval: "month", envKey: "LEMON_VARIANT_CREATOR_MONTH" },
+    { planId: "creator", interval: "year", envKey: "LEMON_VARIANT_CREATOR_YEAR" },
+    { planId: "pro", interval: "month", envKey: "LEMON_VARIANT_PRO_MONTH" },
+    { planId: "pro", interval: "year", envKey: "LEMON_VARIANT_PRO_YEAR" },
+    { planId: "studio", interval: "month", envKey: "LEMON_VARIANT_STUDIO_MONTH" },
+    { planId: "studio", interval: "year", envKey: "LEMON_VARIANT_STUDIO_YEAR" },
+    { planId: "scale", interval: "month", envKey: "LEMON_VARIANT_SCALE_MONTH" },
+    { planId: "scale", interval: "year", envKey: "LEMON_VARIANT_SCALE_YEAR" },
+  ];
+
+  for (const p of pairs) {
+    const id = env[p.envKey];
+    if (id && id === variantId) {
+      return {
+        variantId,
+        planId: p.planId,
+        interval: p.interval,
+        isYearly: p.interval === "year",
+      };
+    }
+  }
+
+  return null;
+}
+
+export function getAddonPackMapping(packId: AddonPackId): LemonAddonMapping {
+  // Prices per spec. Actual Lemon prices must match.
+  if (packId === "as_2h") {
+    return {
+      packId,
+      variantId: requiredEnv("LEMON_ADDON_AS_2H_VARIANT"),
+      amountSeconds: 2 * 3600,
+      priceEur: 19,
+    };
+  }
+  if (packId === "as_10h") {
+    return {
+      packId,
+      variantId: requiredEnv("LEMON_ADDON_AS_10H_VARIANT"),
+      amountSeconds: 10 * 3600,
+      priceEur: 79,
+    };
+  }
+  if (packId === "as_25h") {
+    return {
+      packId,
+      variantId: requiredEnv("LEMON_ADDON_AS_25H_VARIANT"),
+      amountSeconds: 25 * 3600,
+      priceEur: 169,
+    };
+  }
+
+  const exhaustive: never = packId;
+  throw new Error(`Unsupported packId: ${exhaustive}`);
+}
+
+export function mapVariantIdToAddon(variantId: string): LemonAddonMapping | null {
+  const candidates: Array<{ envKey: string; packId: AddonPackId; amountSeconds: number; priceEur: number }> = [
+    { envKey: "LEMON_ADDON_AS_2H_VARIANT", packId: "as_2h", amountSeconds: 2 * 3600, priceEur: 19 },
+    { envKey: "LEMON_ADDON_AS_10H_VARIANT", packId: "as_10h", amountSeconds: 10 * 3600, priceEur: 79 },
+    { envKey: "LEMON_ADDON_AS_25H_VARIANT", packId: "as_25h", amountSeconds: 25 * 3600, priceEur: 169 },
+  ];
+
+  for (const c of candidates) {
+    const id = process.env[c.envKey];
+    if (id && id === variantId) {
+      return {
+        variantId,
+        packId: c.packId,
+        amountSeconds: c.amountSeconds,
+        priceEur: c.priceEur,
+      };
+    }
+  }
+
+  return null;
+}
+
+=== src/server/stripe/client.ts ===
+import Stripe from "stripe";
+
+let cachedStripe: Stripe | null = null;
+
+function requiredEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing env var: ${name}`);
+  }
+  return value;
+}
+
+export function getStripe(): Stripe {
+  if (!cachedStripe) {
+    cachedStripe = new Stripe(requiredEnv("STRIPE_SECRET_KEY"), {
+      apiVersion: "2025-02-24.acacia",
+    });
+  }
+  return cachedStripe;
+}
+
+export function getStripeWebhookSecret(): string {
+  return requiredEnv("STRIPE_WEBHOOK_SECRET");
+}
+
+=== src/server/stripe/handler.ts ===
+import { NextResponse } from "next/server";
+import type Stripe from "stripe";
+import { getStripe, getStripeWebhookSecret } from "@/server/stripe/client";
+import { mapStripeProductIdToPlan } from "@/config/stripe";
+import { supabaseAdmin } from "@/lib/supabase/admin";
+import { sendOrderConfirmationEmail } from "@/server/email/resend";
+import { applyReferralBonusFromStripe } from "@/server/referrals/bonus";
+import {
+  findWorkspaceIdByStripeCustomerId,
+  upsertBillingState,
+  type BillingStatus,
+} from "@/server/billing/helpers";
+
+function normalizeBillingStatus(status: Stripe.Subscription.Status): BillingStatus {
+  if (status === "trialing") return "trialing";
+  if (status === "past_due" || status === "unpaid") return "past_due";
+  if (status === "paused") return "paused";
+  if (status === "canceled" || status === "incomplete_expired") return "canceled";
+  return "active";
+}
+
+function asIsoFromUnix(seconds: number | null | undefined): string | null {
+  if (!seconds || !Number.isFinite(seconds)) return null;
+  return new Date(seconds * 1000).toISOString();
+}
+
+function resolvePlanId(subscription: Stripe.Subscription): string {
+  const metaPlan = subscription.metadata?.planId;
+  if (metaPlan && typeof metaPlan === "string") return metaPlan;
+
+  const item = subscription.items.data[0];
+  const productId =
+    typeof item?.price?.product === "string" ? item.price.product : null;
+  if (productId) {
+    const mapped = mapStripeProductIdToPlan(productId);
+    if (mapped) return mapped;
+  }
+
+  return "starter";
+}
+
+async function hasBillingEmailEvent(eventId: string): Promise<boolean> {
+  const { data, error } = await supabaseAdmin
+    .from("billing_email_events")
+    .select("event_id")
+    .eq("event_id", eventId)
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return Boolean(data?.event_id);
+}
+
+async function recordBillingEmailEvent(params: {
+  eventId: string;
+  sessionId?: string | null;
+  email?: string | null;
+}) {
+  const { error } = await supabaseAdmin.from("billing_email_events").insert({
+    event_id: params.eventId,
+    provider: "stripe",
+    session_id: params.sessionId ?? null,
+    email: params.email ?? null,
+  });
+
+  if (error) {
+    throw new Error(error.message);
+  }
+}
+
+async function applySubscriptionUpdate(subscription: Stripe.Subscription) {
+  const workspaceId =
+    subscription.metadata?.workspaceId ||
+    subscription.metadata?.workspace_id ||
+    (subscription.customer
+      ? await findWorkspaceIdByStripeCustomerId(String(subscription.customer))
+      : null);
+
+  if (!workspaceId) {
+    throw new Error("workspaceId missing in Stripe metadata.");
+  }
+
+  const planId = resolvePlanId(subscription);
+  const item = subscription.items.data[0];
+  const priceId = item?.price?.id ?? null;
+  const productId =
+    typeof item?.price?.product === "string" ? item.price.product : null;
+
+  await upsertBillingState({
+    workspaceId,
+    patch: {
+      plan_id: planId,
+      status: normalizeBillingStatus(subscription.status),
+      trial_end: asIsoFromUnix(subscription.trial_end),
+      current_period_start: asIsoFromUnix(subscription.current_period_start),
+      current_period_end: asIsoFromUnix(subscription.current_period_end),
+      stripe_customer_id: String(subscription.customer ?? "") || null,
+      stripe_subscription_id: subscription.id ?? null,
+      stripe_price_id: priceId,
+      stripe_product_id: productId,
+      cancel_at_period_end: Boolean(subscription.cancel_at_period_end),
+    },
+  });
+}
+
+export async function handleStripeWebhook(req: Request) {
+  const stripe = getStripe();
+  const rawBody = await req.text();
+  const signature = req.headers.get("stripe-signature") ?? "";
+
+  let event: Stripe.Event;
+  try {
+    event = stripe.webhooks.constructEvent(
+      rawBody,
+      signature,
+      getStripeWebhookSecret()
+    );
+  } catch (e) {
+    const message = e instanceof Error ? e.message : "Invalid signature";
+    return NextResponse.json({ error: message }, { status: 401 });
+  }
+
+  try {
+    if (event.type === "checkout.session.completed") {
+      const session = event.data.object as Stripe.Checkout.Session;
+      if (session.mode === "subscription" && session.subscription) {
+        const subscription = await stripe.subscriptions.retrieve(
+          String(session.subscription)
+        );
+        await applySubscriptionUpdate(subscription);
+      }
+
+      const email =
+        session.customer_details?.email ?? session.customer_email ?? null;
+      const planId = session.metadata?.planId ?? "starter";
+      const interval = session.metadata?.interval ?? "month";
+
+      if (email) {
+        const alreadySent = await hasBillingEmailEvent(event.id);
+        if (!alreadySent) {
+          await sendOrderConfirmationEmail({
+            to: email,
+            planId,
+            interval,
+          });
+          await recordBillingEmailEvent({
+            eventId: event.id,
+            sessionId: session.id,
+            email,
+          });
+        }
+      }
+
+      await applyReferralBonusFromStripe({
+        eventId: event.id,
+        session,
+      });
+
+      return NextResponse.json({ ok: true });
+    }
+
+    if (event.type === "customer.subscription.created") {
+      const subscription = event.data.object as Stripe.Subscription;
+      await applySubscriptionUpdate(subscription);
+      return NextResponse.json({ ok: true });
+    }
+
+    if (event.type === "customer.subscription.updated") {
+      const subscription = event.data.object as Stripe.Subscription;
+      await applySubscriptionUpdate(subscription);
+      return NextResponse.json({ ok: true });
+    }
+
+    if (event.type === "customer.subscription.deleted") {
+      const subscription = event.data.object as Stripe.Subscription;
+      await applySubscriptionUpdate({
+        ...subscription,
+        status: "canceled",
+      });
+      return NextResponse.json({ ok: true });
+    }
+
+    return NextResponse.json({ ok: true, ignored: true });
+  } catch (e) {
+    const message = e instanceof Error ? e.message : "Webhook processing failed";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
+=== src/server/lemon/client.ts ===
+type LemonApiMode = "test" | "live";
+
+function getMode(): LemonApiMode {
+  const mode = (process.env.LEMON_MODE ?? "test").toLowerCase();
+  return mode === "live" ? "live" : "test";
+}
+
+function getBaseUrl() {
+  // Lemon API base is the same; mode affects which credentials/store are used.
+  return "https://api.lemonsqueezy.com/v1";
+}
+
+function requiredEnvAny(names: string[]): string {
+  for (const name of names) {
+    const value = process.env[name];
+    if (value) return value;
+  }
+  throw new Error(`Missing env var: ${names.join(" or ")}`);
+}
+
+export function getLemonApiHeaders() {
+  const apiKey = requiredEnvAny(["LEMON_API_KEY", "LEMONSQUEEZY_API_KEY"]);
+  return {
+    Authorization: `Bearer ${apiKey}`,
+    Accept: "application/vnd.api+json",
+    "Content-Type": "application/vnd.api+json",
+    "X-Api-Version": "2023-10-16",
+    "User-Agent": `roxy-web/${getMode()}`,
+  } as const;
+}
+
+export async function lemonFetch(path: string, init: RequestInit): Promise<unknown> {
+  const url = `${getBaseUrl()}${path}`;
+  const res = await fetch(url, {
+    ...init,
+    headers: {
+      ...getLemonApiHeaders(),
+      ...(init.headers ?? {}),
+    },
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Lemon API error (${res.status}): ${text.slice(0, 800)}`);
+  }
+
+  return (await res.json()) as unknown;
+}
+
+export async function createLemonCheckout(params: {
+  variantId: string;
+  successUrl: string;
+  cancelUrl: string;
+  customData: Record<string, unknown>;
+  customerId?: string | null;
+  email?: string | null;
+}): Promise<{ url: string; raw: unknown }> {
+  const storeId = requiredEnvAny(["LEMON_STORE_ID", "LEMONSQUEEZY_STORE_ID"]);
+
+  // Creates a checkout for a variant. Lemon will handle price/interval per variant.
+  const payload = {
+    data: {
+      type: "checkouts",
+      attributes: {
+        checkout_data: {
+          custom: {
+            ...params.customData,
+            cancelUrl: params.cancelUrl,
+          },
+          email: params.email ?? undefined,
+        },
+        product_options: {
+          redirect_url: params.successUrl,
+          receipt_thank_you_note: "Thanks! Your purchase will sync shortly.",
+        },
+        checkout_options: {
+          embed: false,
+          media: false,
+        },
+        preview: false,
+      },
+      relationships: {
+        store: {
+          data: {
+            type: "stores",
+            id: String(storeId),
+          },
+        },
+        variant: {
+          data: {
+            type: "variants",
+            id: String(params.variantId),
+          },
+        },
+        ...(params.customerId
+          ? {
+              customer: {
+                data: {
+                  type: "customers",
+                  id: String(params.customerId),
+                },
+              },
+            }
+          : {}),
+      },
+    },
+  };
+
+  const jsonUnknown = await lemonFetch("/checkouts", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+
+  const json = jsonUnknown as Record<string, unknown>;
+  const data = (json.data ?? {}) as Record<string, unknown>;
+  const attributes = (data.attributes ?? {}) as Record<string, unknown>;
+  const url = attributes.url;
+
+  if (typeof url !== "string" || !url) {
+    throw new Error("Lemon checkout URL missing in response.");
+  }
+
+  return { url, raw: jsonUnknown };
+}
+
+=== src/server/billing/helpers.ts ===
+import { supabaseAdmin } from "@/lib/supabase/admin";
+
+export type BillingStatus =
+  | "trialing"
+  | "active"
+  | "past_due"
+  | "canceled"
+  | "paused";
+
+export type BillingStateRow = {
+  workspace_id: string;
+  plan_id: string;
+  status: BillingStatus;
+  trial_end: string | null;
+  current_period_start: string | null;
+  current_period_end: string | null;
+  lemon_customer_id: string | null;
+  lemon_subscription_id: string | null;
+  lemon_variant_id: string | null;
+  stripe_customer_id: string | null;
+  stripe_subscription_id: string | null;
+  stripe_price_id: string | null;
+  stripe_product_id: string | null;
+  cancel_at_period_end: boolean;
+};
+
+export async function upsertBillingState(params: {
+  workspaceId: string;
+  patch: Partial<BillingStateRow>;
+}) {
+  const payload: Partial<BillingStateRow> & { workspace_id: string } = {
+    workspace_id: params.workspaceId,
+    ...params.patch,
+  };
+
+  const { data, error } = await supabaseAdmin
+    .from("billing_state")
+    .upsert(payload)
+    .select(
+      "workspace_id, plan_id, status, trial_end, current_period_start, current_period_end, lemon_customer_id, lemon_subscription_id, lemon_variant_id, stripe_customer_id, stripe_subscription_id, stripe_price_id, stripe_product_id, cancel_at_period_end"
+    )
+    .single();
+
+  if (error) throw new Error(error.message);
+  return data as BillingStateRow;
+}
+
+export async function findWorkspaceIdByLemonCustomerId(customerId: string): Promise<string | null> {
+  const { data, error } = await supabaseAdmin
+    .from("billing_state")
+    .select("workspace_id")
+    .eq("lemon_customer_id", customerId)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+  return data?.workspace_id ?? null;
+}
+
+export async function findWorkspaceIdByStripeCustomerId(customerId: string): Promise<string | null> {
+  const { data, error } = await supabaseAdmin
+    .from("billing_state")
+    .select("workspace_id")
+    .eq("stripe_customer_id", customerId)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+  return data?.workspace_id ?? null;
+}
+
+export async function ensureQuotaLedgerForPeriod(params: {
+  workspaceId: string;
+  periodStart: string;
+  periodEnd: string;
+  quotaType: "openai_active_speech_seconds";
+}) {
+  const { workspaceId, periodStart, periodEnd, quotaType } = params;
+
+  const { data, error } = await supabaseAdmin
+    .from("quota_ledger")
+    .select("id")
+    .eq("workspace_id", workspaceId)
+    .eq("period_start", periodStart)
+    .eq("quota_type", quotaType)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+  if (data) return;
+
+  const { error: insertError } = await supabaseAdmin.from("quota_ledger").insert({
+    workspace_id: workspaceId,
+    period_start: periodStart,
+    period_end: periodEnd,
+    quota_type: quotaType,
+    included_seconds: 0,
+    purchased_seconds: 0,
+    used_seconds: 0,
+  });
+
+  if (insertError) throw new Error(insertError.message);
+}
+
+export function getCurrentMonthPeriod(now = new Date()): { start: Date; end: Date } {
+  const start = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1, 0, 0, 0));
+  const end = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 1, 0, 0, 0));
+  return { start, end };
+}
+
+export async function addPurchasedSeconds(params: {
+  workspaceId: string;
+  amountSeconds: number;
+  externalOrderId?: string | null;
+}) {
+  const { start, end } = getCurrentMonthPeriod();
+  const periodStart = start.toISOString();
+  const periodEnd = end.toISOString();
+
+  await ensureQuotaLedgerForPeriod({
+    workspaceId: params.workspaceId,
+    periodStart,
+    periodEnd,
+    quotaType: "openai_active_speech_seconds",
+  });
+
+  // Supabase JS doesn't support arithmetic update; do a select+update.
+  const { data, error: selErr } = await supabaseAdmin
+    .from("quota_ledger")
+    .select("purchased_seconds")
+    .eq("workspace_id", params.workspaceId)
+    .eq("period_start", periodStart)
+    .eq("quota_type", "openai_active_speech_seconds")
+    .single();
+
+  if (selErr) throw new Error(selErr.message);
+
+  const next = Number(data?.purchased_seconds ?? 0) + params.amountSeconds;
+
+  const { error: updErr } = await supabaseAdmin
+    .from("quota_ledger")
+    .update({ purchased_seconds: next })
+    .eq("workspace_id", params.workspaceId)
+    .eq("period_start", periodStart)
+    .eq("quota_type", "openai_active_speech_seconds");
+
+  if (updErr) throw new Error(updErr.message);
+}
+
+=== src/lib/billing/effectiveEntitlements.ts ===
+import { ENTITLEMENTS } from "@/lib/billing/variants";
+import { z } from "zod";
+
+export type Entitlements = {
+  flags: Record<string, boolean>;
+  limits: Record<string, number>;
+};
+
+const EntitlementsSchema = z.object({
+  flags: z.record(z.boolean()),
+  limits: z.record(z.number()),
+});
+
+const ProfileSchema = z
+  .object({
+    trial_ends_at: z.string().nullable().optional(),
+    status: z.string().optional(),
+    entitlements: EntitlementsSchema.optional(),
+    addons: z
+      .object({
+        unreal_connector: z.boolean().optional(),
+      })
+      .optional(),
+  })
+  .passthrough();
+
+export function computeEffective(profile: unknown): Entitlements {
+  const parsed = ProfileSchema.safeParse(profile);
+  const p = parsed.success ? parsed.data : null;
+
+  const now = new Date().getTime();
+  const trialEnds = p?.trial_ends_at ? new Date(p.trial_ends_at).getTime() : 0;
+  let base: Entitlements = (p?.entitlements ?? (ENTITLEMENTS.trial as unknown)) as Entitlements;
+
+  if (p?.status === "trialing" && trialEnds && now > trialEnds) {
+    base = ENTITLEMENTS.trial;
+  }
+
+  const out = structuredClone(base) as Entitlements;
+  if (p?.addons?.unreal_connector) {
+    out.flags.unreal_connector = true;
+  }
+
+  return out;
+}
+
+=== src/lib/billing/variants.ts ===
+export const VARIANTS = {
+  basic: { monthly: "1263099", yearly: "1263083" },
+  pro: { monthly: "1263109", yearly: "1263108" },
+  studio: { monthly: "1263113", yearly: "1263112" },
+  extraCredits: {
+    h10: "1263117",
+    h50: "1263124",
+    h200: "1263126",
+  },
+  unrealConnector: {
+    monthly: "1263131",
+    lifetime: "1263159",
+  },
+} as const;
+
+export const CREDIT_PACK_MINUTES: Record<string, number> = {
+  "1263117": 10 * 60,
+  "1263124": 50 * 60,
+  "1263126": 200 * 60,
+};
+
+export const ENTITLEMENTS = {
+  trial: {
+    flags: {
+      export_import: false,
+      watermark_toggle: false,
+      auto_language: false,
+      advanced_scripts: false,
+      unreal_connector: false,
+    },
+    limits: {
+      tiktok_accounts: 1,
+      dono_rules: 10,
+      scripts: 2,
+      knowledge_items: 0,
+      logs_days: 3,
+    },
+  },
+  basic: {
+    flags: {
+      export_import: false,
+      watermark_toggle: false,
+      auto_language: false,
+      advanced_scripts: false,
+      unreal_connector: false,
+    },
+    limits: {
+      tiktok_accounts: 1,
+      dono_rules: 20,
+      scripts: 3,
+      knowledge_items: 3,
+      logs_days: 7,
+    },
+  },
+  pro: {
+    flags: {
+      export_import: true,
+      watermark_toggle: true,
+      auto_language: true,
+      advanced_scripts: true,
+      unreal_connector: false,
+    },
+    limits: {
+      tiktok_accounts: 5,
+      dono_rules: 200,
+      scripts: 999,
+      knowledge_items: 20,
+      logs_days: 30,
+    },
+  },
+  studio: {
+    flags: {
+      export_import: true,
+      watermark_toggle: true,
+      auto_language: true,
+      advanced_scripts: true,
+      unreal_connector: false,
+    },
+    limits: {
+      tiktok_accounts: 20,
+      dono_rules: 1000,
+      scripts: 999,
+      knowledge_items: 200,
+      logs_days: 90,
+    },
+  },
+} as const;
+
+=== src/app/api/billing/checkout/route.ts ===
+export const runtime = "nodejs";
+
+import { NextResponse } from "next/server";
+import { requireUserAndWorkspace } from "@/lib/workspace/server";
+import { supabaseAdmin } from "@/lib/supabase/admin";
+import { getStripe } from "@/server/stripe/client";
+import { getStripeProductId, type StripeBillingInterval } from "@/config/stripe";
+import {
+  calcYearlyTotal,
+  getPricingPlan,
+  type PricingPlanId,
+} from "@/config/pricingPlans";
+
+function getBaseUrl(req: Request): string {
+  const envBase = process.env.NEXT_PUBLIC_APP_URL;
+  if (envBase) return envBase;
+  const origin = req.headers.get("origin");
+  if (origin) return origin;
+  return "http://localhost:3000";
+}
+
+function normalizeInterval(value: unknown): StripeBillingInterval | null {
+  const v = String(value ?? "").toLowerCase();
+  if (v === "month" || v === "monthly") return "month";
+  if (v === "year" || v === "yearly") return "year";
+  return null;
+}
+
+function safeSameOriginUrl(params: { baseUrl: string; input: unknown; fallbackPath: string }): string {
+  const base = new URL(params.baseUrl);
+  const raw = String(params.input ?? "").trim();
+
+  try {
+    if (raw.startsWith("/")) {
+      return new URL(raw, base).toString();
+    }
+
+    const u = new URL(raw);
+    if (u.origin === base.origin) {
+      return u.toString();
+    }
+  } catch {
+    // ignore
+  }
+
+  return new URL(params.fallbackPath, base).toString();
+}
+
+function getErrorMessage(e: unknown): string {
+  if (e && typeof e === "object" && "message" in e) {
+    const msg = (e as { message?: unknown }).message;
+    if (typeof msg === "string") return msg;
+  }
+  return "Checkout failed.";
+}
+
+export async function POST(req: Request) {
+  const { supabase, user, workspaceId } = await requireUserAndWorkspace();
+
+  const bodyUnknown = (await req.json().catch(() => null)) as unknown;
+  if (!bodyUnknown || typeof bodyUnknown !== "object") {
+    return NextResponse.json({ error: "Invalid JSON." }, { status: 400 });
+  }
+
+  const body = bodyUnknown as Record<string, unknown>;
+
+  const planId = String(body.planId ?? "") as PricingPlanId;
+  const interval = normalizeInterval(body.interval);
+  const consents = (body.consents ?? {}) as Record<string, unknown>;
+  const promoCodeRaw = String(body.promoCode ?? "").trim();
+  const acceptImmediate = consents.acceptImmediate === true;
+  const acceptTerms = consents.acceptTerms === true;
+  const acceptMarketing = consents.acceptMarketing === true;
+
+  if (!(planId === "starter" || planId === "creator" || planId === "pro" || planId === "studio" || planId === "scale")) {
+    return NextResponse.json({ error: "Unsupported planId." }, { status: 400 });
+  }
+  if (!interval) {
+    return NextResponse.json({ error: "interval must be month|year." }, { status: 400 });
+  }
+  if (!acceptImmediate || !acceptTerms) {
+    return NextResponse.json(
+      { error: "Required consents are missing." },
+      { status: 400 }
+    );
+  }
+
+  let promoCode: string | null = null;
+  if (promoCodeRaw) {
+    const normalized = promoCodeRaw.toLowerCase();
+    const { data: codeRow, error: codeErr } = await supabaseAdmin
+      .from("promo_codes")
+      .select("id, code, is_active")
+      .ilike("code", normalized)
+      .maybeSingle();
+
+    if (codeErr || !codeRow?.id || !codeRow.is_active) {
+      return NextResponse.json({ error: "Invalid promo code." }, { status: 400 });
+    }
+
+    promoCode = codeRow.code;
+  }
+
+  const baseUrl = getBaseUrl(req);
+  const successUrl = safeSameOriginUrl({ baseUrl, input: body["successUrl"], fallbackPath: "/app/billing/success" });
+  const cancelUrl = safeSameOriginUrl({ baseUrl, input: body["cancelUrl"], fallbackPath: "/app/billing/cancel" });
+
+  // Ensure billing_state exists.
+  await supabaseAdmin
+    .from("billing_state")
+    .upsert({ workspace_id: workspaceId, plan_id: "starter", status: "trialing" });
+
+  const { data: billingRow, error: billingErr } = await supabase
+    .from("billing_state")
+    .select("stripe_customer_id")
+    .eq("workspace_id", workspaceId)
+    .maybeSingle();
+
+  if (billingErr) {
+    return NextResponse.json({ error: billingErr.message }, { status: 400 });
+  }
+
+  const plan = getPricingPlan(planId);
+  if (!plan.monthly_price_eur) {
+    return NextResponse.json({ error: "Plan not purchasable." }, { status: 400 });
+  }
+
+  const productId = getStripeProductId(planId);
+  if (!productId) {
+    return NextResponse.json({ error: "Stripe product not configured." }, { status: 400 });
+  }
+
+  const monthlyPrice = plan.monthly_price_eur;
+  const yearlyTotal = calcYearlyTotal(monthlyPrice);
+  const unitAmountEur = interval === "year" ? yearlyTotal : monthlyPrice;
+  const unitAmount = Math.round(unitAmountEur * 100);
+
+  try {
+    const stripe = getStripe();
+    const customerId = billingRow?.stripe_customer_id ?? undefined;
+    const customerEmail = customerId ? undefined : user.email ?? undefined;
+    const session = await stripe.checkout.sessions.create({
+      mode: "subscription",
+      success_url: successUrl,
+      cancel_url: cancelUrl,
+      customer: customerId,
+      customer_email: customerEmail,
+      client_reference_id: workspaceId,
+      metadata: {
+        workspaceId,
+        planId,
+        interval,
+        userId: user.id,
+        promoCode: promoCode ?? "",
+        acceptImmediate: String(acceptImmediate),
+        acceptTerms: String(acceptTerms),
+        acceptMarketing: String(acceptMarketing),
+      },
+      subscription_data: {
+        trial_period_days: plan.entitlements?.trial_days ?? undefined,
+        metadata: {
+          workspaceId,
+          planId,
+          interval,
+          promoCode: promoCode ?? "",
+          acceptImmediate: String(acceptImmediate),
+          acceptTerms: String(acceptTerms),
+          acceptMarketing: String(acceptMarketing),
+        },
+      },
+      line_items: [
+        {
+          quantity: 1,
+          price_data: {
+            currency: "eur",
+            unit_amount: unitAmount,
+            product: productId,
+            recurring: {
+              interval,
+            },
+          },
+        },
+      ],
+    });
+
+    if (!session.url) {
+      return NextResponse.json({ error: "Checkout URL missing." }, { status: 400 });
+    }
+
+    return NextResponse.json({ url: session.url });
+  } catch (e: unknown) {
+    return NextResponse.json(
+      { error: getErrorMessage(e) },
+      { status: 400 }
+    );
+  }
+}
+
+=== src/app/api/billing/webhook/stripe/route.ts ===
+import { handleStripeWebhook } from "@/server/stripe/handler";
+
+export async function POST(req: Request) {
+  return handleStripeWebhook(req);
+}
+
+=== src/app/api/billing/status/route.ts ===
+import { NextResponse } from "next/server";
+import { requireUserAndWorkspace } from "@/lib/workspace/server";
+import { supabaseAdmin } from "@/lib/supabase/admin";
+
+export async function GET() {
+  const { supabase, workspaceId } = await requireUserAndWorkspace();
+
+  // Ensure there's a billing_state row.
+  const { data: existing, error: readErr } = await supabase
+    .from("billing_state")
+    .select(
+      "workspace_id, plan_id, status, trial_end, current_period_start, current_period_end, lemon_customer_id, lemon_subscription_id, lemon_variant_id, stripe_customer_id, stripe_subscription_id, stripe_price_id, stripe_product_id, cancel_at_period_end"
+    )
+    .eq("workspace_id", workspaceId)
+    .maybeSingle();
+
+  if (readErr) {
+    return NextResponse.json({ error: readErr.message }, { status: 400 });
+  }
+
+  if (existing) {
+    return NextResponse.json({ billing: existing });
+  }
+
+  // Insert defaults using service role so it works even if insert policy changes.
+  const { data: inserted, error: insErr } = await supabaseAdmin
+    .from("billing_state")
+    .insert({ workspace_id: workspaceId, plan_id: "starter", status: "trialing" })
+    .select(
+      "workspace_id, plan_id, status, trial_end, current_period_start, current_period_end, lemon_customer_id, lemon_subscription_id, lemon_variant_id, stripe_customer_id, stripe_subscription_id, stripe_price_id, stripe_product_id, cancel_at_period_end"
+    )
+    .single();
+
+  if (insErr) {
+    return NextResponse.json({ error: insErr.message }, { status: 400 });
+  }
+
+  return NextResponse.json({ billing: inserted });
+}
+
+=== src/components/PricingPlans.tsx ===
+"use client";
+
+import { useMemo, useState } from "react";
+import Button from "@/components/Button";
+import Badge from "@/components/Badge";
+import InfoTooltip from "@/components/InfoTooltip";
+import { useRouter } from "next/navigation";
+import {
+  calcEstimatedStreamHours,
+  type PricingInterval,
+} from "@/config/pricing";
+import { usePricingConfig } from "@/lib/pricing/usePricingConfig";
+
+function formatEur(amount: number) {
+  return `EUR ${amount.toFixed(2)}`;
+}
+
+function formatHours(amount: number) {
+  const fixed = amount.toFixed(1);
+  return fixed.endsWith(".0") ? fixed.slice(0, -2) : fixed;
+}
+
+export default function PricingPlans() {
+  const router = useRouter();
+  const [billing, setBilling] = useState<PricingInterval>("monthly");
+  const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const pricing = usePricingConfig();
+  const discountPct = pricing.config?.yearly_discount_pct ?? 20;
+  const tooltipText = pricing.config?.tooltip_text ?? "";
+  const defaultTalkRatio = pricing.config?.default_talk_ratio ?? 0.2;
+
+  const plans = useMemo(() => pricing.config?.plans ?? [], [pricing.config]);
+
+  const calcYearlyTotal = (monthlyPrice: number) =>
+    monthlyPrice * 12 * (1 - discountPct / 100);
+
+  const calcYearlyMonthlyEquivalent = (monthlyPrice: number) =>
+    calcYearlyTotal(monthlyPrice) / 12;
+
+  const startCheckout = async (planId: string) => {
+    setError(null);
+    setLoadingPlanId(planId);
+
+    const interval = billing === "yearly" ? "year" : "month";
+    const successUrl = `${window.location.origin}/app/billing/success`;
+    const cancelUrl = `${window.location.origin}/app/billing/cancel`;
+
+    try {
+      const response = await fetch("/api/billing/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ planId, interval, successUrl, cancelUrl }),
+      });
+
+      const contentType = response.headers.get("content-type") ?? "";
+      if (!contentType.includes("application/json")) {
+        router.push("/login");
+        return;
+      }
+
+      const json = await response.json();
+      if (!response.ok || !json?.url) {
+        setError(json?.error ?? "Checkout failed");
+        setLoadingPlanId(null);
+        return;
+      }
+
+      window.location.assign(String(json.url));
+    } catch (e: unknown) {
+      const msg =
+        e && typeof e === "object" && "message" in e
+          ? (e as { message?: unknown }).message
+          : null;
+      setError(typeof msg === "string" ? msg : "Checkout failed");
+      setLoadingPlanId(null);
+    }
+  };
+
+  return (
+    <>
+      <div className="space-y-10">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 text-xs text-white/70">
+            <button
+              type="button"
+              onClick={() => setBilling("monthly")}
+              className={`rounded-full px-4 py-2 transition-colors ${
+                billing === "monthly"
+                  ? "bg-white/15 text-white"
+                  : "text-white/60 hover:text-white"
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              type="button"
+              onClick={() => setBilling("yearly")}
+              className={`rounded-full px-4 py-2 transition-colors ${
+                billing === "yearly"
+                  ? "bg-white/15 text-white"
+                  : "text-white/60 hover:text-white"
+              }`}
+            >
+              Yearly
+            </button>
+          </div>
+          <p className="text-xs text-white/60">Billed yearly. Save up to {discountPct}%.</p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          {plans.map((plan) => {
+            const includedActiveSpeech =
+              plan.entitlements?.included_active_speech_hours_openai ?? null;
+
+            const estimatedStreamHours =
+              includedActiveSpeech === null
+                ? null
+                : calcEstimatedStreamHours(
+                    includedActiveSpeech,
+                    defaultTalkRatio
+                  );
+
+            const isStarter = plan.id === "starter";
+            const isEnterprise = plan.id === "enterprise";
+
+            const monthlyPrice = plan.monthly_price_eur;
+            const yearlyMonthlyEquivalent =
+              monthlyPrice === null
+                ? null
+                : calcYearlyMonthlyEquivalent(monthlyPrice);
+            const yearlyTotal =
+              monthlyPrice === null ? null : calcYearlyTotal(monthlyPrice);
+
+            return (
+              <div key={plan.id} className="glass-card rounded-3xl p-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-white">
+                    {plan.name}
+                  </h3>
+                  {isStarter ? <Badge>7-day trial</Badge> : null}
+                </div>
+
+                <div className="mt-6">
+                  {isEnterprise ? (
+                    <p className="text-2xl font-semibold text-white">
+                      Contact sales
+                    </p>
+                  ) : billing === "monthly" && monthlyPrice !== null ? (
+                    <p className="text-2xl font-semibold text-white">
+                      {formatEur(monthlyPrice)} / month
+                    </p>
+                  ) : yearlyMonthlyEquivalent !== null && yearlyTotal !== null ? (
+                    <div className="space-y-1">
+                      <p className="text-2xl font-semibold text-white">
+                        {formatEur(yearlyMonthlyEquivalent)} / month
+                        <span className="ml-2 text-sm font-normal text-white/70">
+                          billed yearly
+                        </span>
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <p className="text-xs text-white/60">
+                          billed yearly {formatEur(yearlyTotal)}
+                        </p>
+                        <Badge>Save {discountPct}%</Badge>
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+
+                {isStarter ? (
+                  <p className="mt-3 text-xs text-white/60">
+                    7-day trial included. No separate trial plan.
+                  </p>
+                ) : null}
+
+                {includedActiveSpeech !== null ? (
+                  <div className="mt-5 space-y-2 text-sm text-white/70">
+                    {estimatedStreamHours !== null ? (
+                      <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="inline-flex items-center gap-2">
+                            Estimated stream hours
+                            <InfoTooltip text={tooltipText} />
+                          </span>
+                          <span className="font-semibold text-white">
+                            {formatHours(estimatedStreamHours)}h
+                          </span>
+                        </div>
+                        <p className="mt-1 text-xs text-white/60">
+                          Estimated {formatHours(estimatedStreamHours)}h stream at {Math.round(defaultTalkRatio * 100)}% talk ratio
+                        </p>
+                      </div>
+                    ) : null}
+
+                    <p className="text-xs text-white/60">
+                      Includes {formatHours(includedActiveSpeech)}h active speech (OpenAI)
+                    </p>
+                  </div>
+                ) : null}
+
+                <div className="mt-6">
+                  {isEnterprise ? (
+                    <Button className="w-full" href="/contact">
+                      Contact sales
+                    </Button>
+                  ) : (
+                    <Button
+                      className="w-full"
+                      onClick={() => startCheckout(plan.id)}
+                      disabled={loadingPlanId === plan.id}
+                    >
+                      {loadingPlanId === plan.id ? "Redirecting..." : "Subscribe"}
+                    </Button>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {error ? (
+          <p className="text-center text-sm text-rose-200">{error}</p>
+        ) : null}
+      </div>
+    </>
+  );
+}
+
+=== src/components/pricing/PricingPageClient.tsx ===
+"use client";
+
+import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
+import Button from "@/components/Button";
+import Badge from "@/components/Badge";
+import TalkRatioControl from "@/components/pricing/TalkRatioControl";
+import PricingComparisonTable from "@/components/pricing/PricingComparisonTable";
+import PricingFAQ from "@/components/pricing/PricingFAQ";
+import {
+  PRICING_DEFAULT_TALK_RATIO,
+  PRICING_PLANS,
+  PRICING_TOOLTIP_TEXT,
+  PRICING_YEARLY_DISCOUNT_PCT,
+  calcEstimatedStreamHours,
+  calcYearlyMonthlyEquivalent,
+  calcYearlyTotal,
+  type PricingInterval,
+  type PricingPlan,
+} from "@/config/pricingPlans";
+import { formatEur, formatHours } from "@/components/pricing/format";
+
+function buildEnterprisePrefill(isRu: boolean) {
+  const lines = isRu
+    ? [
+        "Привет, команда RoxStreamAI,",
+        "",
+        "Интересует Enterprise тарификация.",
+        "",
+        "Контекст:",
+        "- План: Enterprise",
+        "- Сколько персонажей нужно: ",
+        "- Сколько одновременных стримов: ",
+        "- Провайдер (OpenAI included vs BYOK): ",
+        "- Дата запуска: ",
+        "",
+        "Спасибо!",
+      ]
+    : [
+        "Hi RoxStreamAI team,",
+        "",
+        "We're interested in Enterprise pricing.",
+        "",
+        "Context:",
+        "- Plan: Enterprise",
+        "- Expected characters: ",
+        "- Expected concurrent streams: ",
+        "- Provider preference (OpenAI included vs BYOK): ",
+        "- Target launch date: ",
+        "",
+        "Thanks!",
+      ];
+  return lines.join("\n");
+}
+
+function formatPct(value: number) {
+  return `${Math.round(value * 100)}%`;
+}
+
+function InfoTip(props: { text: string; label: string }) {
+  return (
+    <span
+      className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[11px] font-semibold text-white/70"
+      title={props.text}
+      aria-label={props.label}
+      role="img"
+    >
+      ?
+    </span>
+  );
+}
+
+function whatsIncluded(params: {
+  plan: PricingPlan;
+  talkRatio: number;
+  isRu: boolean;
+}): string[] {
+  const { plan, talkRatio, isRu } = params;
+  if (!plan.entitlements) {
+    return isRu
+      ? [
+          "Кастомные лимиты и онбординг",
+          "Инвойсинг и поддержка закупок",
+          "Security/compliance review",
+          "SLA опции",
+        ]
+      : [
+          "Custom limits and onboarding",
+          "Invoicing and procurement support",
+          "Security and compliance review",
+          "SLA options",
+        ];
+  }
+
+  const includedActiveSpeech = plan.entitlements.included_active_speech_hours_openai;
+  const est = calcEstimatedStreamHours(includedActiveSpeech, talkRatio);
+
+  const base = isRu
+    ? [
+        `${plan.entitlements.max_characters} персонаж(а)`,
+        `${plan.entitlements.max_concurrent_streams} одновременный(х) стрим(а)`,
+        `${plan.entitlements.max_accounts_linked} подключённый(х) аккаунт(а)`,
+        `Включено ${formatHours(includedActiveSpeech)}ч Active Speech (OpenAI)`,
+        `≈ ${formatHours(est)}ч стрима при ${formatPct(talkRatio)} talk ratio`,
+      ]
+    : [
+        `${plan.entitlements.max_characters} character${plan.entitlements.max_characters === 1 ? "" : "s"}`,
+        `${plan.entitlements.max_concurrent_streams} concurrent stream${plan.entitlements.max_concurrent_streams === 1 ? "" : "s"}`,
+        `${plan.entitlements.max_accounts_linked} linked account${plan.entitlements.max_accounts_linked === 1 ? "" : "s"}`,
+        `Includes ${formatHours(includedActiveSpeech)}h Active Speech (OpenAI)`,
+        `≈ ${formatHours(est)}h stream at ${formatPct(talkRatio)} talk ratio`,
+      ];
+
+  const extras = isRu
+    ? [
+        "Desktop companion app (локальные интеграции)",
+        "TikTok Live + OBS WebSocket интеграции",
+        "BYOK поддержка для совместимых провайдеров",
+      ]
+    : [
+        "Desktop companion app (local integrations)",
+        "TikTok Live + OBS WebSocket integrations",
+        "BYOK support for compatible providers",
+      ];
+
+  return [...base, ...extras];
+}
+
+export default function PricingPageClient(props: { locale?: string }) {
+  const router = useRouter();
+  const isRu = props.locale === "ru";
+  const [billing, setBilling] = useState<PricingInterval>("yearly");
+  const [talkRatio, setTalkRatio] = useState<number>(PRICING_DEFAULT_TALK_RATIO);
+  const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const plans = useMemo(() => PRICING_PLANS.slice(), []);
+
+  const startCheckout = async (planId: string) => {
+    setError(null);
+
+    if (!planId) return;
+
+    // If they aren't authenticated, the API will return 401 JSON.
+    setLoadingPlanId(planId);
+
+    const interval = billing === "yearly" ? "year" : "month";
+    const successUrl = `${window.location.origin}/app/billing/success`;
+    const cancelUrl = `${window.location.origin}/app/billing/cancel`;
+
+    try {
+      const response = await fetch("/api/billing/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ planId, interval, successUrl, cancelUrl }),
+      });
+
+      const contentType = response.headers.get("content-type") ?? "";
+      const isJson = contentType.includes("application/json");
+
+      if (response.status === 401) {
+        router.push(`/login?returnTo=${encodeURIComponent("/pricing")}`);
+        return;
+      }
+
+      if (!isJson) {
+        setError("Checkout failed");
+        setLoadingPlanId(null);
+        return;
+      }
+
+      const json = await response.json();
+      if (!response.ok || !json?.url) {
+        setError(json?.error ?? "Checkout failed");
+        setLoadingPlanId(null);
+        return;
+      }
+
+      window.location.assign(String(json.url));
+    } catch (e: unknown) {
+      const msg =
+        e && typeof e === "object" && "message" in e
+          ? (e as { message?: unknown }).message
+          : null;
+      setError(typeof msg === "string" ? msg : "Checkout failed");
+      setLoadingPlanId(null);
+    }
+  };
+
+  return (
+    <div className="space-y-10">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 text-xs text-white/70">
+          <button
+            type="button"
+            onClick={() => setBilling("monthly")}
+            className={`rounded-full px-4 py-2 transition-colors ${
+              billing === "monthly"
+                ? "bg-white/15 text-white"
+                : "text-white/60 hover:text-white"
+            }`}
+          >
+            {isRu ? "Ежемесячно" : "Monthly"}
+          </button>
+          <button
+            type="button"
+            onClick={() => setBilling("yearly")}
+            className={`rounded-full px-4 py-2 transition-colors ${
+              billing === "yearly"
+                ? "bg-white/15 text-white"
+                : "text-white/60 hover:text-white"
+            }`}
+          >
+            {isRu ? "Ежегодно" : "Yearly"}
+          </button>
+        </div>
+        <p className="text-xs text-white/60">
+          {isRu
+            ? `Оплата раз в год. Экономия до ${PRICING_YEARLY_DISCOUNT_PCT}%.`
+            : `Billed yearly. Save up to ${PRICING_YEARLY_DISCOUNT_PCT}%.`}
+        </p>
+      </div>
+
+      <TalkRatioControl
+        value={talkRatio}
+        onChange={(v) => setTalkRatio(v)}
+        tooltipText={PRICING_TOOLTIP_TEXT}
+      />
+
+      <div className="grid gap-6 lg:grid-cols-3">
+        {plans.map((plan) => {
+          const isEnterprise = plan.id === "enterprise";
+          const monthlyPrice = plan.monthly_price_eur;
+          const yearlyMonthlyEquivalent =
+            monthlyPrice === null ? null : calcYearlyMonthlyEquivalent(monthlyPrice);
+          const yearlyTotal = monthlyPrice === null ? null : calcYearlyTotal(monthlyPrice);
+
+          return (
+            <div key={plan.id} className="glass-card rounded-3xl p-6">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
+                  {plan.marketing?.blurb ? (
+                    <p className="mt-1 text-xs text-white/60">{plan.marketing.blurb}</p>
+                  ) : null}
+                </div>
+                {plan.marketing?.badge ? <Badge>{plan.marketing.badge}</Badge> : null}
+              </div>
+
+              <div className="mt-6">
+                {isEnterprise ? (
+                  <p className="text-2xl font-semibold text-white">
+                    {isRu ? "Связаться с sales" : "Contact sales"}
+                  </p>
+                ) : billing === "monthly" && monthlyPrice !== null ? (
+                  <p className="text-2xl font-semibold text-white">
+                    {formatEur(monthlyPrice)} / {isRu ? "мес" : "month"}
+                  </p>
+                ) : yearlyMonthlyEquivalent !== null && yearlyTotal !== null ? (
+                  <div className="space-y-1">
+                    <p className="text-2xl font-semibold text-white">
+                      {formatEur(yearlyMonthlyEquivalent)} / {isRu ? "мес" : "month"}
+                      <span className="ml-2 text-sm font-normal text-white/70">
+                        {isRu ? "оплата раз в год" : "billed yearly"}
+                      </span>
+                    </p>
+                    <p className="text-xs text-white/60">
+                      {isRu
+                        ? `оплата раз в год ${formatEur(yearlyTotal)}`
+                        : `billed yearly ${formatEur(yearlyTotal)}`}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+
+              <div className="mt-5">
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/60">
+                  {isRu ? "Что включено" : "What's included"}
+                  <InfoTip
+                    label={isRu ? "Что считается Active Speech" : "What counts as Active Speech"}
+                    text={
+                      isRu
+                        ? "Active Speech — это время, когда AI реально говорит. Тишина/ожидание не считаются."
+                        : "Active Speech is the time the AI is actually speaking. Silence/idle time doesn't count."
+                    }
+                  />
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-white/70">
+                  {whatsIncluded({ plan, talkRatio, isRu }).map((line) => (
+                    <li key={line} className="flex gap-2">
+                      <span className="text-white/50">•</span>
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6">
+                {isEnterprise ? (
+                  <Button
+                    className="w-full"
+                    href={`/contact?topic=${encodeURIComponent("Sales")}&message=${encodeURIComponent(
+                      buildEnterprisePrefill(isRu)
+                    )}`}
+                  >
+                    {isRu ? "Связаться с sales" : "Contact sales"}
+                  </Button>
+                ) : (
+                  <Button
+                    className="w-full"
+                    onClick={() => startCheckout(plan.id)}
+                    disabled={loadingPlanId === plan.id}
+                  >
+                    {loadingPlanId === plan.id
+                      ? isRu
+                        ? "Переходим..."
+                        : "Redirecting..."
+                      : isRu
+                        ? "Подписаться"
+                        : "Subscribe"}
+                  </Button>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {error ? <p className="text-center text-sm text-rose-200">{error}</p> : null}
+
+      <div className="space-y-4 pt-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold text-white">
+            {isRu ? "Сравнение тарифов" : "Compare plans"}
+          </h2>
+          <p className="mt-2 text-sm text-white/60">
+            {isRu
+              ? "Часы стрима — оценка. Реальная тарификация идёт по Active Speech."
+              : "Stream hours are estimates. We always meter real usage by Active Speech."}
+          </p>
+        </div>
+        <PricingComparisonTable plans={plans} talkRatio={talkRatio} />
+      </div>
+
+      <div className="space-y-4 pt-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold text-white">
+            {isRu ? "FAQ по тарифам" : "Pricing FAQ"}
+          </h2>
+          <p className="mt-2 text-sm text-white/60">
+            {isRu ? "Коротко и по делу — про usage и лимиты." : "Common questions, answered."}
+          </p>
+        </div>
+        <PricingFAQ
+          items={[
+            {
+              q: isRu ? "Что такое Active Speech?" : "What is Active Speech?",
+              a: isRu
+                ? "Active Speech — это время, когда AI реально говорит в эфире. Тишина и простой не считаются."
+                : "Active Speech is the time the AI is actually speaking on stream. Silence and idle time don't count.",
+            },
+            {
+              q: isRu
+                ? "Чем отличаются included providers и BYOK?"
+                : "What's the difference between included providers and BYOK?",
+              a: isRu
+                ? "Included providers покрываются в рамках квоты Active Speech. В режиме BYOK вы используете свои ключи и оплачиваете провайдера напрямую; RoxStreamAI при этом отслеживает Active Speech для лимитов."
+                : "Included providers are covered up to your plan's Active Speech quota. With BYOK, you bring your own provider keys and you pay that provider directly; RoxStreamAI still tracks Active Speech for your limits.",
+            },
+            {
+              q: isRu
+                ? "Почему вы показываете оценку часов стрима?"
+                : "Why do you show estimated stream hours?",
+              a: isRu
+                ? "Часы стрима зависят от того, насколько «разговорный» ваш формат. Слайдер talk ratio переводит Active Speech в реалистичную оценку часов стрима."
+                : "Stream hours depend on how talk-heavy your stream is. The talk ratio slider helps you translate Active Speech into a realistic stream-hour estimate.",
+            },
+            {
+              q: isRu ? "Можно сменить тариф позже?" : "Can I change plans later?",
+              a: isRu
+                ? "Да. Апгрейд — в любой момент. Даунгрейд применяется со следующего периода."
+                : "Yes. You can upgrade at any time. Downgrades take effect on the next billing cycle.",
+            },
+            {
+              q: isRu ? "Есть годовая оплата?" : "Do you offer yearly billing?",
+              a: isRu
+                ? `Да. Годовая оплата экономит до ${PRICING_YEARLY_DISCOUNT_PCT}% по сравнению с ежемесячной.`
+                : `Yes. Yearly billing saves up to ${PRICING_YEARLY_DISCOUNT_PCT}% compared to monthly.`,
+            },
+            {
+              q: isRu
+                ? "Нужны больше лимиты или инвойсинг?"
+                : "Need higher limits or invoicing?",
+              a: isRu
+                ? "Выберите Enterprise: кастомные лимиты, онбординг и поддержка инвойсинга."
+                : "Choose Enterprise to get custom limits, onboarding, and invoicing support.",
+            },
+          ]}
+        />
+      </div>
+
+      <div className="glass-card rounded-3xl p-8 md:p-10">
+        <h2 className="text-2xl font-semibold text-white">
+          {isRu ? "Как считается usage" : "How usage works"}
+        </h2>
+        <p className="mt-3 text-sm text-white/70">
+          {isRu
+            ? "Active Speech — это время, когда AI реально говорит в эфире. Дашборд переводит настройки в оценку часов стрима на основе talk ratio. Если вы используете built-in провайдеров, расходы покрываются в рамках квоты тарифа. Если вы используете BYOK, вы оплачиваете провайдера напрямую, а RoxStreamAI отслеживает Active Speech для лимитов."
+            : "Active Speech is the time the AI actually talks on stream. The dashboard converts your settings into estimated stream hours based on your talk ratio. If you use built-in providers, RoxStreamAI covers provider costs up to your plan quota. If you use BYOK, you pay the provider directly and RoxStreamAI tracks usage."}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+=== .env.example ===
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+NEXT_PUBLIC_SITE_URL=https://roxstreamai.com
+NEXT_PUBLIC_APP_URL=
+ADMIN_EMAILS=
+LEMONSQUEEZY_API_KEY=
+LEMONSQUEEZY_STORE_ID=
+LEMONSQUEEZY_WEBHOOK_SECRET=
+NEXT_PUBLIC_HCAPTCHA_SITE_KEY=
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=
+RUNTIME_USAGE_TOKEN=
+
+=== supabase/migrations/20260214120000_add_entitlement_view_and_stripe_columns.sql ===
+-- Add Stripe columns and entitlement view for desktop/web
+
+alter table public.billing_state
+  add column if not exists stripe_customer_id text null,
+  add column if not exists stripe_subscription_id text null,
+  add column if not exists stripe_price_id text null,
+  add column if not exists stripe_product_id text null;
+
+create or replace view public.v_my_entitlement as
+select
+  bs.workspace_id,
+  bs.plan_id,
+  bs.status,
+  bs.trial_end,
+  bs.current_period_end,
+  bs.cancel_at_period_end,
+  coalesce(bs.current_period_end, bs.trial_end) as active_until,
+  (
+    bs.status in ('active', 'trialing')
+    and (
+      coalesce(bs.current_period_end, bs.trial_end) is null
+      or coalesce(bs.current_period_end, bs.trial_end) >= now()
+    )
+  ) as is_active
+from public.billing_state bs
+join public.user_settings us
+  on us.default_workspace_id = bs.workspace_id
+where us.user_id = auth.uid();
+
+grant select on public.v_my_entitlement to authenticated;
