@@ -63,7 +63,7 @@ export async function GET(req: NextRequest) {
 /** Fallback: old cursor-based poll (in case RPC is not yet deployed) */
 async function fallbackPoll(
   req: NextRequest,
-  supabase: ReturnType<typeof import("@supabase/supabase-js").createClient>,
+  supabase: Awaited<ReturnType<typeof requireUserAndWorkspace>>["supabase"],
   workspaceId: string,
   limit: number
 ) {
