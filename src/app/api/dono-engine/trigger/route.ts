@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { createClient } from "@supabase/supabase-js";
 import { requireUserAndWorkspace } from "@/lib/workspace/server";
 import { DonoRuleConfigSchema, DonoRuleRowSchema } from "@/lib/schemas/workspace";
 
@@ -29,7 +30,7 @@ function normalizeGiftKey(input: string) {
 }
 
 async function isWithinCooldown(params: {
-  supabase: Awaited<ReturnType<typeof requireUserAndWorkspace>>["supabase"];
+  supabase: Awaited<ReturnType<typeof authenticateRequest>>["supabase"];
   workspaceId: string;
   ruleId: string;
   cooldownSeconds: number;
@@ -51,8 +52,24 @@ async function isWithinCooldown(params: {
   return Date.now() - lastAt < params.cooldownSeconds * 1000;
 }
 
+async function authenticateRequest(req: Request) {
+  const apiKey = req.headers.get("x-api-key");
+  const envApiKey = process.env.TRIGGER_API_KEY;
+  const envWorkspaceId = process.env.TRIGGER_WORKSPACE_ID;
+
+  if (apiKey && envApiKey && apiKey === envApiKey && envWorkspaceId) {
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    );
+    return { supabase, workspaceId: envWorkspaceId };
+  }
+
+  return requireUserAndWorkspace();
+}
+
 export async function POST(req: Request) {
-  const { supabase, workspaceId } = await requireUserAndWorkspace();
+  const { supabase, workspaceId } = await authenticateRequest(req);
 
   const json = (await req.json().catch(() => null)) as unknown;
   const parsed = BodySchema.safeParse(json ?? {});
