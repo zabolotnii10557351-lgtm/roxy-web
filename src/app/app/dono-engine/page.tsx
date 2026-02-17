@@ -37,6 +37,7 @@ type DonoActionAnimation = {
 type DonoActionUnrealTrigger = {
   type: "unreal_trigger";
   triggerName: string;
+  duration?: number;
 };
 
 type DonoAction = DonoActionAnimation | DonoActionUnrealTrigger;
@@ -937,6 +938,11 @@ function DonoRuleCard(props: {
       ? existingAction.triggerName
       : UNREAL_TRIGGER_PRESETS[0] ?? "NS_Basic_Attract",
   );
+  const [vfxDuration, setVfxDuration] = useState(
+    existingAction && existingAction.type === "unreal_trigger"
+      ? (existingAction as any).duration ?? 10
+      : 10,
+  );
 
   const thresholdLabel =
     triggerType === "gift"
@@ -1018,7 +1024,7 @@ function DonoRuleCard(props: {
                 ROXY_ANIMATIONS.find((a) => a.id === animationId)?.label ?? animationId,
             },
           ]
-        : [{ type: "unreal_trigger", triggerName: unrealTriggerName.trim() || "NS_Basic_Attract" }];
+        : [{ type: "unreal_trigger", triggerName: unrealTriggerName.trim() || "NS_Basic_Attract", duration: vfxDuration }];
 
     return {
       trigger: nextTrigger,
@@ -1390,6 +1396,18 @@ function DonoRuleCard(props: {
                     }}
                     onClose={() => setVfxPickerOpen(false)}
                   />
+                  <div className="mt-3">
+                    <p className="mb-1 text-[11px] font-medium text-white/70">Duration: {vfxDuration}s</p>
+                    <input
+                      type="range"
+                      min={1}
+                      max={60}
+                      value={vfxDuration}
+                      onChange={(e) => setVfxDuration(Number(e.target.value))}
+                      className="w-full accent-cyan-400"
+                    />
+                    <p className="mt-1 text-[11px] text-white/45">How long the VFX stays (1-60 seconds).</p>
+                  </div>
                 </div>
               </>
             )}
