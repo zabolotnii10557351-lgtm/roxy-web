@@ -271,19 +271,19 @@ type VfxEntry = { name: string; category: "wings" | "sphere"; thumb: string; sta
 
 const VFX_REGISTRY: Record<string, VfxEntry> = {
   // \u2500\u2500 Wings (NS_Wing_1..13) \u2500\u2500
-  NS_Wing_1:  { name: "Golden Phoenix",    category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing.webp` },
-  NS_Wing_2:  { name: "Crystal Butterfly",  category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing2.webp` },
-  NS_Wing_3:  { name: "Prism Wings",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing3.webp` },
-  NS_Wing_4:  { name: "Fairy Fire",         category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing4.webp` },
-  NS_Wing_5:  { name: "Demon Shadow",       category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing5.webp` },
-  NS_Wing_6:  { name: "Spirit Glow",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing6.webp` },
-  NS_Wing_7:  { name: "Cyber Grid",         category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing7.webp` },
-  NS_Wing_8:  { name: "Arcane Sigil",       category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing8.webp` },
-  NS_Wing_9:  { name: "Inferno",            category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing9.webp` },
-  NS_Wing_10: { name: "Wing 10",            category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing.webp` }, // no GIF, placeholder
-  NS_Wing_11: { name: "Aqua Splash",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing11.webp` },
-  NS_Wing_12: { name: "Void Ribbon",        category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing12.webp` },
-  NS_Wing_13: { name: "Lightning Storm",    category: "wings",  thumb: `${VFX_THUMB_BASE}/BP_Wing13.webp` },
+  NS_Wing_1:  { name: "Golden Phoenix",    category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_2.webp` }, // no NS_Wing_1.webp, placeholder
+  NS_Wing_2:  { name: "Crystal Butterfly",  category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_2.webp` },
+  NS_Wing_3:  { name: "Prism Wings",        category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_3.webp` },
+  NS_Wing_4:  { name: "Fairy Fire",         category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_4.webp` },
+  NS_Wing_5:  { name: "Demon Shadow",       category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_5.webp` },
+  NS_Wing_6:  { name: "Spirit Glow",        category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_6.webp` },
+  NS_Wing_7:  { name: "Cyber Grid",         category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_7.webp` },
+  NS_Wing_8:  { name: "Arcane Sigil",       category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_8.webp` },
+  NS_Wing_9:  { name: "Inferno",            category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_9.webp` },
+  NS_Wing_10: { name: "Wing 10",            category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_10.webp` },
+  NS_Wing_11: { name: "Aqua Splash",        category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_11.webp` },
+  NS_Wing_12: { name: "Void Ribbon",        category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_12.webp` },
+  NS_Wing_13: { name: "Lightning Storm",    category: "wings",  thumb: `${VFX_THUMB_BASE}/NS_Wing_13.webp` },
   // \u2500\u2500 Spheres (AttractionVFX) \u2013 each has _Attract, _Get, _Idle states \u2500\u2500
   NS_Basic:   { name: "Sparkle Burst",      category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore.webp`,         states: ["Attract","Get","Idle"] },
   NS_Book:    { name: "Crystal Shatter",    category: "sphere", thumb: `${VFX_THUMB_BASE}/BP_EnergyCore_Child.webp`,   states: ["Attract","Get","Idle"] },
