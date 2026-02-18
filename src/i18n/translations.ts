@@ -398,7 +398,7 @@ export type Translations = {
 const en: Translations = {
     common: {
       brand: "RoxStreamAI",
-      dashboard: "Übersicht",
+      dashboard: "Dashboard",
       openDashboard: "Open Dashboard",
       signIn: "Sign in",
       signOut: "Sign out",
@@ -2126,7 +2126,7 @@ export const translations: Record<Locale, Translations> = {
   de: {
     common: {
       brand: "RoxStreamAI",
-      dashboard: "Dashboard",
+      dashboard: "Übersicht",
       openDashboard: "Dashboard öffnen",
       signIn: "Anmelden",
       signOut: "Abmelden",
