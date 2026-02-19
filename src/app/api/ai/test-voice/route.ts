@@ -127,14 +127,26 @@ export async function POST(req: Request) {
 
       return res;
     } catch (e: unknown) {
-      return NextResponse.json(
-        { error: e instanceof Error ? e.message : "Provider call failed." },
-        { status: 502 }
+      const status = (e as { status?: number }).status;
+      const isRetryable =
+        status === 401 || status === 402 || status === 429 || (typeof status === "number" && status >= 500);
+      if (!isRetryable) {
+        return NextResponse.json(
+          { error: e instanceof Error ? e.message : "Provider call failed." },
+          { status: 502 }
+        );
+      }
+      console.warn(
+        `[test-voice] ElevenLabs failed (${status}), falling back to OpenAI:`,
+        e instanceof Error ? e.message : e
       );
+      // fall through to OpenAI below
     }
   }
 
-  // openai (included) - uses BYOK if present, else server env key
+  const voiceFallback = voiceProvider === "elevenlabs";
+
+  // openai (included / fallback) - uses BYOK if present, else server env key
   const openAiKey = secrets.openaiApiKey ?? process.env.OPENAI_API_KEY ?? null;
   if (!openAiKey) {
     return NextResponse.json(
@@ -175,6 +187,10 @@ export async function POST(req: Request) {
 
     if (out.durationSeconds != null) {
       res.headers.set("X-Duration-Seconds", String(out.durationSeconds));
+    }
+
+    if (voiceFallback) {
+      res.headers.set("X-Voice-Fallback", "openai");
     }
 
     return res;

@@ -62,12 +62,5 @@ export async function getMarketingContent(locale: Locale): Promise<MarketingCont
     return mergeDeep(fallback, override);
   }
 
-  if (locale !== DEFAULT_LOCALE) {
-    const defaultOverride = await fetchMarketingOverride(DEFAULT_LOCALE as Locale);
-    if (defaultOverride && isPlainObject(defaultOverride)) {
-      return mergeDeep(fallback, defaultOverride);
-    }
-  }
-
   return fallback;
 }
