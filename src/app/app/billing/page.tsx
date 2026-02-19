@@ -36,6 +36,9 @@ function mapBackendPlanToPricingPlan(planId: string): PricingPlanId {
   return "starter";
 }
 
+const PLAN_ORDER: PricingPlanId[] = ["starter", "creator", "pro", "studio", "scale", "enterprise"];
+function planRank(id: PricingPlanId) { return PLAN_ORDER.indexOf(id); }
+
 export default function BillingPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -473,13 +476,38 @@ export default function BillingPage() {
                       Yearly
                     </button>
                   </div>
-                  <Button
-                    className="w-full"
-                    onClick={startCheckout}
-                    disabled={checkoutLoading || !acceptImmediate || !acceptTerms}
-                  >
-                    {checkoutLoading ? "Redirecting..." : "Subscribe"}
-                  </Button>
+                  {(() => {
+                    const isTrial = planId === "trial";
+                    const isSamePlan = !isTrial && selectedPlanId === currentPricingPlanId;
+                    const isUpgrade = !isTrial && planRank(selectedPlanId) > planRank(currentPricingPlanId);
+                    const isDowngrade = !isTrial && planRank(selectedPlanId) < planRank(currentPricingPlanId);
+
+                    if (isSamePlan) {
+                      return (
+                        <Button className="w-full" disabled>
+                          {t.app.billingCurrentPlanCheck}
+                        </Button>
+                      );
+                    }
+
+                    let label = t.app.billingSubscribe;
+                    let note: string | null = null;
+                    if (isUpgrade) { label = t.app.billingUpgrade; note = t.app.billingUpgradeNote; }
+                    if (isDowngrade) { label = t.app.billingDowngrade; note = t.app.billingDowngradeNote; }
+
+                    return (
+                      <>
+                        <Button
+                          className="w-full"
+                          onClick={startCheckout}
+                          disabled={checkoutLoading || !acceptImmediate || !acceptTerms}
+                        >
+                          {checkoutLoading ? "Redirecting..." : label}
+                        </Button>
+                        {note ? <p className="text-xs text-white/60">{note}</p> : null}
+                      </>
+                    );
+                  })()}
                   {checkoutError ? (
                     <p className="text-xs text-rose-200">{checkoutError}</p>
                   ) : null}

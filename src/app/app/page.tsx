@@ -113,9 +113,15 @@ export default function OverviewPage() {
           <Button variant="secondary" href="/app/billing">
             {t.app.managePlan}
           </Button>
-          <Button variant="secondary" disabled={isAccessBlocked}>
-            {isTrialExpired ? t.app.upgradeRequired : t.app.startSession}
-          </Button>
+          {isAccessBlocked ? (
+            <Button variant="secondary" href="/app/billing">
+              {t.app.upgradeRequired}
+            </Button>
+          ) : (
+            <Button variant="secondary">
+              {t.app.startSession}
+            </Button>
+          )}
         </div>
       </div>
 

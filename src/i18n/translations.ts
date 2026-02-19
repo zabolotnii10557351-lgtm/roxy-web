@@ -192,6 +192,13 @@ export type Translations = {
     unrealBackToHubButton: string;
     unrealOpenDocsButton: string;
 
+    billingCurrentPlanCheck: string;
+    billingUpgrade: string;
+    billingUpgradeNote: string;
+    billingDowngrade: string;
+    billingDowngradeNote: string;
+    billingSubscribe: string;
+
     billingSuccessTitle: string;
     billingSuccessVerifying: string;
     billingSuccessProcessing: string;
@@ -603,6 +610,13 @@ const en: Translations = {
         "Open Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Back to Unreal hub",
       unrealOpenDocsButton: "Open Unreal docs",
+
+      billingCurrentPlanCheck: "Current plan \u2713",
+      billingUpgrade: "Upgrade",
+      billingUpgradeNote: "No refund for current period",
+      billingDowngrade: "Downgrade",
+      billingDowngradeNote: "Takes effect next billing period",
+      billingSubscribe: "Subscribe",
 
       billingSuccessTitle: "Payment received",
       billingSuccessVerifying: "Verifying payment...",
@@ -1033,6 +1047,13 @@ export const translations: Record<Locale, Translations> = {
         "Otevrit Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Zpet do Unreal hubu",
       unrealOpenDocsButton: "Otevrit Unreal docs",
+
+      billingCurrentPlanCheck: "Aktuální plán \u2713",
+      billingUpgrade: "Přejít na vyšší",
+      billingUpgradeNote: "Bez vrácení za aktuální období",
+      billingDowngrade: "Přejít na nižší",
+      billingDowngradeNote: "Platí od dalšího fakturačního období",
+      billingSubscribe: "Předplatit",
 
       billingSuccessTitle: "Platba prijata",
       billingSuccessVerifying: "Overujeme platbu...",
@@ -1470,6 +1491,13 @@ export const translations: Record<Locale, Translations> = {
       unrealBackToHubButton: "Powrot do Unreal hub",
       unrealOpenDocsButton: "Otworz dokumentacje Unreal",
 
+      billingCurrentPlanCheck: "Obecny plan \u2713",
+      billingUpgrade: "Uaktualnij",
+      billingUpgradeNote: "Bez zwrotu za bieżący okres",
+      billingDowngrade: "Przejdź na niższy",
+      billingDowngradeNote: "Obowiązuje od następnego okresu rozliczeniowego",
+      billingSubscribe: "Subskrybuj",
+
       billingSuccessTitle: "Platnosc otrzymana",
       billingSuccessVerifying: "Weryfikacja platnosci...",
       billingSuccessProcessing:
@@ -1905,6 +1933,13 @@ export const translations: Record<Locale, Translations> = {
         "Otvorit Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Spat do Unreal hubu",
       unrealOpenDocsButton: "Otvorit Unreal docs",
+
+      billingCurrentPlanCheck: "Aktuálny plán \u2713",
+      billingUpgrade: "Prejsť na vyšší",
+      billingUpgradeNote: "Bez vrátenia za aktuálne obdobie",
+      billingDowngrade: "Prejsť na nižší",
+      billingDowngradeNote: "Platí od nasledujúceho fakturačného obdobia",
+      billingSubscribe: "Predplatiť",
 
       billingSuccessTitle: "Platba prijata",
       billingSuccessVerifying: "Overujeme platbu...",
@@ -2350,6 +2385,13 @@ export const translations: Record<Locale, Translations> = {
       unrealBackToHubButton: "Zurück zum Unreal-Hub",
       unrealOpenDocsButton: "Unreal-Dokumentation öffnen",
 
+      billingCurrentPlanCheck: "Aktueller Plan \u2713",
+      billingUpgrade: "Upgrade",
+      billingUpgradeNote: "Keine Rückerstattung für den aktuellen Zeitraum",
+      billingDowngrade: "Downgrade",
+      billingDowngradeNote: "Wird ab dem nächsten Abrechnungszeitraum wirksam",
+      billingSubscribe: "Abonnieren",
+
       billingSuccessTitle: "Zahlung erhalten",
       billingSuccessVerifying: "Zahlung wird verifiziert...",
       billingSuccessProcessing:
@@ -2791,6 +2833,13 @@ export const translations: Record<Locale, Translations> = {
         "Abrir Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Volver al hub de Unreal",
       unrealOpenDocsButton: "Abrir docs de Unreal",
+
+      billingCurrentPlanCheck: "Plan actual \u2713",
+      billingUpgrade: "Mejorar plan",
+      billingUpgradeNote: "Sin reembolso del período actual",
+      billingDowngrade: "Reducir plan",
+      billingDowngradeNote: "Efectivo en el próximo período de facturación",
+      billingSubscribe: "Suscribirse",
 
       billingSuccessTitle: "Pago recibido",
       billingSuccessVerifying: "Verificando pago...",
@@ -3234,6 +3283,13 @@ export const translations: Record<Locale, Translations> = {
       unrealBackToHubButton: "Retour au hub Unreal",
       unrealOpenDocsButton: "Ouvrir la documentation Unreal",
 
+      billingCurrentPlanCheck: "Plan actuel \u2713",
+      billingUpgrade: "Passer au supérieur",
+      billingUpgradeNote: "Pas de remboursement pour la période en cours",
+      billingDowngrade: "Passer à l\u2019inférieur",
+      billingDowngradeNote: "Prend effet à la prochaine période de facturation",
+      billingSubscribe: "S\u2019abonner",
+
       billingSuccessTitle: "Paiement reçu",
       billingSuccessVerifying: "Vérification du paiement...",
       billingSuccessProcessing:
@@ -3675,6 +3731,13 @@ export const translations: Record<Locale, Translations> = {
         "Apri Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Torna all'hub Unreal",
       unrealOpenDocsButton: "Apri docs Unreal",
+
+      billingCurrentPlanCheck: "Piano attuale \u2713",
+      billingUpgrade: "Aggiorna",
+      billingUpgradeNote: "Nessun rimborso per il periodo corrente",
+      billingDowngrade: "Declassa",
+      billingDowngradeNote: "Effetto dal prossimo periodo di fatturazione",
+      billingSubscribe: "Abbonati",
 
       billingSuccessTitle: "Pagamento ricevuto",
       billingSuccessVerifying: "Verifica del pagamento...",
@@ -4118,6 +4181,13 @@ export const translations: Record<Locale, Translations> = {
       unrealBackToHubButton: "Voltar ao hub do Unreal",
       unrealOpenDocsButton: "Abrir docs do Unreal",
 
+      billingCurrentPlanCheck: "Plano atual \u2713",
+      billingUpgrade: "Atualizar",
+      billingUpgradeNote: "Sem reembolso do período atual",
+      billingDowngrade: "Reduzir",
+      billingDowngradeNote: "Efetivo no próximo período de faturamento",
+      billingSubscribe: "Assinar",
+
       billingSuccessTitle: "Pagamento recebido",
       billingSuccessVerifying: "Verificando pagamento...",
       billingSuccessProcessing:
@@ -4551,6 +4621,13 @@ export const translations: Record<Locale, Translations> = {
       unrealOpenRuntimeConnectorButton: "Открыть Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Назад в Unreal-хаб",
       unrealOpenDocsButton: "Открыть документацию Unreal",
+
+      billingCurrentPlanCheck: "Текущий план \u2713",
+      billingUpgrade: "Повысить",
+      billingUpgradeNote: "Без возврата за текущий период",
+      billingDowngrade: "Понизить",
+      billingDowngradeNote: "Вступит в силу в следующем расчётном периоде",
+      billingSubscribe: "Подписаться",
 
       billingSuccessTitle: "Платеж получен",
       billingSuccessVerifying: "Проверяем платеж…",
@@ -4988,6 +5065,13 @@ export const translations: Record<Locale, Translations> = {
         "Runtime Connector'u ac ({comingSoon})",
       unrealBackToHubButton: "Unreal hub'a don",
       unrealOpenDocsButton: "Unreal dokumanlarini ac",
+
+      billingCurrentPlanCheck: "Mevcut plan \u2713",
+      billingUpgrade: "Yükselt",
+      billingUpgradeNote: "Mevcut dönem için iade yapılmaz",
+      billingDowngrade: "Düşür",
+      billingDowngradeNote: "Bir sonraki fatura döneminde geçerli olur",
+      billingSubscribe: "Abone ol",
 
       billingSuccessTitle: "Odeme alindi",
       billingSuccessVerifying: "Odeme dogrulaniyor...",
@@ -5428,6 +5512,13 @@ export const translations: Record<Locale, Translations> = {
         "Відкрити Runtime Connector ({comingSoon})",
       unrealBackToHubButton: "Назад до Unreal-хабу",
       unrealOpenDocsButton: "Відкрити документацію Unreal",
+
+      billingCurrentPlanCheck: "Поточний план \u2713",
+      billingUpgrade: "Підвищити",
+      billingUpgradeNote: "Без повернення за поточний період",
+      billingDowngrade: "Понизити",
+      billingDowngradeNote: "Набуде чинності в наступному розрахунковому періоді",
+      billingSubscribe: "Підписатися",
 
       billingSuccessTitle: "Платіж отримано",
       billingSuccessVerifying: "Перевіряємо платіж...",
