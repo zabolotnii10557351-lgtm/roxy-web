@@ -1,3 +1,4 @@
+// TODO: Add video tutorials to documentation pages (Miro V-6)
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { getLocaleFromRequest } from "@/i18n/server";

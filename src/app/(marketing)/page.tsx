@@ -322,6 +322,7 @@ export default async function Home() {
         </Container>
       </section>
 
+      {/* TODO: Add referral program section (Miro V-3) */}
       <section>
         <Container>
           <SectionHeading

@@ -1,3 +1,4 @@
+// TODO: Add hours calculator to scripts page (Miro V-7)
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
