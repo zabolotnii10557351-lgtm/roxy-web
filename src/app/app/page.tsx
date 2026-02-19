@@ -151,16 +151,10 @@ export default function OverviewPage() {
         <div className="glass-card rounded-3xl p-6">
           <h3 className="text-lg font-semibold text-white">{t.app.quickActions}</h3>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
-            <Button variant="secondary" href="/app/characters/new" disabled={isAccessBlocked}>
-              {t.app.createCharacter}
-            </Button>
             <Button variant="secondary" href="/app/dono-engine" disabled={isAccessBlocked}>
               {t.app.setupDonoRules}
             </Button>
-            <Button variant="secondary" href="/app/deploy" disabled={isAccessBlocked}>
-              {t.app.deploy}
-            </Button>
-            <Button variant="secondary" href="/app/deploy" disabled={isAccessBlocked}>
+            <Button variant="secondary" href="/app/referrals" disabled={isAccessBlocked}>
               {t.app.generateShareLink}
             </Button>
           </div>

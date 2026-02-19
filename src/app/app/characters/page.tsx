@@ -225,8 +225,8 @@ export default function CharactersPage() {
           >
             {editMode ? "Done" : "Edit"}
           </Button>
-          <Button variant="secondary" onClick={() => setPolyphoriaOpen(true)}>
-            3D Editor
+          <Button variant="secondary" href="/download">
+            Download App
           </Button>
           <Button href="/app/characters/new">{t.app.createCharacter}</Button>
         </div>

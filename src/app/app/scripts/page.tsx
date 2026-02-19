@@ -459,9 +459,6 @@ function SegmentEditor(props: {
       />
 
       <div className="mt-3 flex flex-wrap gap-3">
-        <Button variant="secondary" onClick={props.onDuplicate} disabled={props.busy}>
-          Duplicate
-        </Button>
         <Button variant="secondary" onClick={props.onInsertAfter} disabled={props.busy}>
           Insert after
         </Button>

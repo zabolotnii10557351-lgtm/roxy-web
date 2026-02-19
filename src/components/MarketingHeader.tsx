@@ -33,9 +33,11 @@ export default async function MarketingHeader() {
           </span>
           <div>
             <p className="text-sm font-semibold text-white">{t.common.brand}</p>
-            <p className="hidden whitespace-nowrap text-xs text-white/60 transition-colors group-hover:text-white/80 lg:block">
-              {t.common.dashboard}
-            </p>
+            {user ? (
+              <p className="hidden whitespace-nowrap text-xs text-white/60 transition-colors group-hover:text-white/80 lg:block">
+                {t.common.dashboard}
+              </p>
+            ) : null}
           </div>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
