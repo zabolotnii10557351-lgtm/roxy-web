@@ -35,6 +35,8 @@ export interface MarketingContent {
     missionBody: string;
     beliefTitle: string;
     beliefBody: string;
+    roxyTitle: string;
+    roxyBody: string;
   };
   contact: {
     eyebrow: string;
@@ -176,6 +178,9 @@ const en: MarketingContent = {
     beliefTitle: "What it is",
     beliefBody:
       "A web dashboard plus a desktop companion app. The dashboard manages characters, scenes, triggers, providers, and usage. The desktop app connects to Unreal, runs diagnostics, and enables real-time avatar workflows.",
+    roxyTitle: "What RoxStreamAI stands for",
+    roxyBody:
+      "RoxStreamAI stands for Roxy AI Streamer. Roxy is our first created character, which led to the appearance of RoxStreamAI. She was the beginning of our long story.",
   },
 
   contact: {
@@ -773,6 +778,9 @@ const ru: MarketingContent = {
     beliefTitle: "Что это",
     beliefBody:
       "Это веб панель и десктопное приложение компаньон. Панель управляет персонажами, сценами, триггерами, провайдерами и использованием. Десктопное приложение подключается к Unreal, запускает диагностику и включает процесс работы аватара в реальном времени.",
+    roxyTitle: "Что значит RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI расшифровывается как Roxy AI Streamer. Рокси — наш первый персонаж, который привёл к появлению RoxStreamAI. Она стала началом нашей долгой истории.",
   },
 
   contact: {
@@ -1221,6 +1229,9 @@ const uk: MarketingContent = {
     beliefTitle: "У що ми віримо",
     beliefBody:
       "Людська креативність — головна. RoxStreamAI бере на себе рутину, розклад і реакційні цикли, щоб ви фокусувалися на стратегії контенту.",
+    roxyTitle: "Що означає RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI означає Roxy AI Streamer. Роксі — наш перший персонаж, який призвів до появи RoxStreamAI. Вона стала початком нашої довгої історії.",
   },
   contact: {
     eyebrow: "Контакти",
@@ -1596,6 +1607,9 @@ const de: MarketingContent = {
     beliefTitle: "Woran wir glauben",
     beliefBody:
       "Kreativität führt. Roxy übernimmt Wiederholung, Planung und Reaktions‑Loops, damit du dich auf Strategie fokussierst.",
+    roxyTitle: "Wofür RoxStreamAI steht",
+    roxyBody:
+      "RoxStreamAI steht für Roxy AI Streamer. Roxy ist unser erster Charakter, der zur Entstehung von RoxStreamAI führte. Sie war der Beginn unserer langen Geschichte.",
   },
   contact: {
     eyebrow: "Kontakt",
@@ -1924,6 +1938,9 @@ const es: MarketingContent = {
     beliefTitle: "Lo que creemos",
     beliefBody:
       "La creatividad manda. Roxy se encarga de repetición, agenda y loops de reacción.",
+    roxyTitle: "Qué significa RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI significa Roxy AI Streamer. Roxy es nuestro primer personaje, que dio origen a RoxStreamAI. Ella fue el comienzo de nuestra larga historia.",
   },
   contact: {
     eyebrow: "Contacto",
@@ -2226,7 +2243,10 @@ const fr: MarketingContent = {
     missionTitle: "Notre mission",
     missionBody: "Un co‑host IA qui anime, réagit aux cadeaux et retient l’audience.",
     beliefTitle: "Nos convictions",
-    beliefBody: "La créativité humaine d’abord. Roxy gère répétition, planning, réactions.",
+    beliefBody: "La créativité humaine d'abord. Roxy gère répétition, planning, réactions.",
+    roxyTitle: "Ce que RoxStreamAI signifie",
+    roxyBody:
+      "RoxStreamAI signifie Roxy AI Streamer. Roxy est notre premier personnage, qui a donné naissance à RoxStreamAI. Elle a été le début de notre longue histoire.",
   },
   contact: {
     eyebrow: "Contact",
@@ -2514,6 +2534,9 @@ const pl: MarketingContent = {
     beliefTitle: "W co wierzymy",
     beliefBody:
       "Kreatywnosc czlowieka jest najwazniejsza. Roxy przejmuje powtarzalne zadania, harmonogramy i petle reakcji, aby zespoly mogly skupic sie na strategii.",
+    roxyTitle: "Co oznacza RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI oznacza Roxy AI Streamer. Roxy to nasz pierwszy stworzony charakter, ktory doprowadzil do powstania RoxStreamAI. Byla poczatkiem naszej dlugiej historii.",
   },
   contact: {
     eyebrow: "Kontakt",
@@ -2842,6 +2865,9 @@ const cs: MarketingContent = {
     beliefTitle: "V co verime",
     beliefBody:
       "Lidska kreativita je na prvnim miste. Roxy se stara o rutinu, planovani a reakce, aby se tymy soustredily na strategii.",
+    roxyTitle: "Co znamena RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI znamena Roxy AI Streamer. Roxy je nas prvni vytvoreny charakter, ktery vedl ke vzniku RoxStreamAI. Byla zacatkem naseho dlouheho pribehu.",
   },
   contact: {
     eyebrow: "Kontakt",
@@ -3170,6 +3196,9 @@ const sk: MarketingContent = {
     beliefTitle: "V com verime",
     beliefBody:
       "Ludska kreativita je prva. Roxy prebera rutinu, planovanie a reakcie, aby sa timy sustredili na strategiu.",
+    roxyTitle: "Co znamena RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI znamena Roxy AI Streamer. Roxy je nas prvy vytvoreny charakter, ktory viedol ku vzniku RoxStreamAI. Bola zaciatkom nasho dlheho pribehu.",
   },
   contact: {
     eyebrow: "Kontakt",
@@ -3496,6 +3525,9 @@ const it: MarketingContent = {
     missionBody: "Un co‑host IA che gestisce gli show, reagisce ai regali e mantiene l’engagement.",
     beliefTitle: "In cosa crediamo",
     beliefBody: "La creatività umana viene prima. Roxy gestisce ripetizioni, pianificazione e loop di reazione.",
+    roxyTitle: "Cosa significa RoxStreamAI",
+    roxyBody:
+      "RoxStreamAI sta per Roxy AI Streamer. Roxy è il nostro primo personaggio creato, che ha portato alla nascita di RoxStreamAI. È stata l'inizio della nostra lunga storia.",
   },
   contact: {
     eyebrow: "Contatto",
@@ -3922,7 +3954,7 @@ const it: MarketingContent = {
 
 const pt: MarketingContent = {
   ...en,
-  about: { eyebrow: "Sobre", title: "Roxy para creators 24/7", subtitle: "Automação premium, segura e controlável.", missionTitle: "Nossa missão", missionBody: "Um co‑host IA que conduz shows, reage a presentes e mantém o público engajado.", beliefTitle: "No que acreditamos", beliefBody: "A criatividade humana vem primeiro. A Roxy cuida da repetição, do agendamento e dos loops de reação." },
+  about: { eyebrow: "Sobre", title: "Roxy para creators 24/7", subtitle: "Automação premium, segura e controlável.", missionTitle: "Nossa missão", missionBody: "Um co‑host IA que conduz shows, reage a presentes e mantém o público engajado.", beliefTitle: "No que acreditamos", beliefBody: "A criatividade humana vem primeiro. A Roxy cuida da repetição, do agendamento e dos loops de reação.", roxyTitle: "O que significa RoxStreamAI", roxyBody: "RoxStreamAI significa Roxy AI Streamer. Roxy é nosso primeiro personagem criado, que levou ao surgimento do RoxStreamAI. Ela foi o começo da nossa longa história." },
   contact: { eyebrow: "Contato", title: "Vamos planejar seu próximo live", subtitle: "Conte seus objetivos e montamos o rollout.", firstName: "Nome", lastName: "Sobrenome", email: "Email de trabalho", message: "O que você quer automatizar?", sendRequest: "Enviar", directLines: "Contato direto", responseTime: "Respondemos em 1 dia útil." },
   terms: { title: "Termos", intro: "Estes termos regem o uso do RoxStreamAI.", sections: [ { title: "Contas", body: "Você é responsável por suas credenciais." }, { title: "Uso", body: "Siga regras e leis. Abusos proibidos." }, { title: "Uso de provedores e BYOK", body: "Com provedores integrados, o RoxStreamAI pode encaminhar solicitações a terceiros. Com BYOK, você é responsável por suas chaves e cobrança." }, { title: "Cobrança", body: "Renovação automática, extras possíveis." }, { title: "Conteúdo", body: "Você mantém a propriedade." }, { title: "Disponibilidade", body: "Buscamos alta disponibilidade, mas não garantimos serviço ininterrupto. Pode haver manutenção e quedas." }, { title: "Encerramento", body: "Podemos suspender por violação." } ] },
   privacy: { title: "Privacidade", intro: "Coletamos apenas dados necessários.", sections: [ { title: "Dados coletados", body: "Detalhes da conta, métricas e configs." }, { title: "Uso", body: "Auth, sessões, suporte, segurança." }, { title: "Retenção", body: "Depende do plano." }, { title: "Controle", body: "Exportar/excluir dados." }, { title: "Segurança", body: "Aplicamos controles de acesso e redação para proteger segredos." } ] },
@@ -4017,7 +4049,7 @@ const pt: MarketingContent = {
 
 const tr: MarketingContent = {
   ...en,
-  about: { eyebrow: "Hakkında", title: "Roxy 24/7 creator’lar için", subtitle: "Premium, güvenli ve kontrol edilebilir otomasyon.", missionTitle: "Misyonumuz", missionBody: "Show’ları yöneten, bağışlara tepki veren ve izleyiciyi bağlı tutan AI co‑host.", beliefTitle: "İnandıklarımız", beliefBody: "İnsan yaratıcılığı önde. Roxy tekrarları, planlamayı ve reaksiyon döngülerini yönetir." },
+  about: { eyebrow: "Hakkında", title: "Roxy 24/7 creator'lar için", subtitle: "Premium, güvenli ve kontrol edilebilir otomasyon.", missionTitle: "Misyonumuz", missionBody: "Show'ları yöneten, bağışlara tepki veren ve izleyiciyi bağlı tutan AI co‑host.", beliefTitle: "İnandıklarımız", beliefBody: "İnsan yaratıcılığı önde. Roxy tekrarları, planlamayı ve reaksiyon döngülerini yönetir.", roxyTitle: "RoxStreamAI ne anlama geliyor", roxyBody: "RoxStreamAI, Roxy AI Streamer anlamına gelir. Roxy, RoxStreamAI'nin ortaya çıkmasına yol açan ilk oluşturduğumuz karakterdir. Uzun hikayemizin başlangıcı oldu." },
   contact: { eyebrow: "İletişim", title: "Bir sonraki live formatını planlayalım", subtitle: "Hedeflerini anlat, rollout hazırlayalım.", firstName: "Ad", lastName: "Soyad", email: "İş e‑posta", message: "Neyi otomatikleştirmek istiyorsun?", sendRequest: "Gönder", directLines: "Doğrudan hatlar", responseTime: "1 iş günü içinde yanıt." },
   terms: { title: "Şartlar", intro: "RoxStreamAI kullanım şartları.", sections: [ { title: "Hesaplar", body: "Kimlik bilgileri sana aittir." }, { title: "Kullanım", body: "Kurallara uy. İstismar yasak." }, { title: "Saglayici kullanimi ve BYOK", body: "Dahili saglayicilari kullandiginizda RoxStreamAI istekleri ucuncu taraflara iletebilir. BYOK kullaniminda anahtarlar ve faturalandirma sizdedir." }, { title: "Faturalandırma", body: "Otomatik yenileme." }, { title: "İçerik", body: "Sahiplik sende kalır." }, { title: "Kullanilabilirlik", body: "Yuksek kullanilabilirlik hedefleriz, ancak kesintisiz hizmet garanti etmeyiz. Bakim ve kesintiler olabilir." }, { title: "Fesih", body: "İhlalde erişim durdurulabilir." } ] },
   privacy: { title: "Gizlilik", intro: "Sadece gerekli veriler toplanır.", sections: [ { title: "Toplanan veriler", body: "Hesap detayları, metrikler, ayarlar." }, { title: "Kullanım", body: "Auth, oturum, destek, güvenlik." }, { title: "Saklama", body: "Plana bağlı." }, { title: "Kontrol", body: "İhracat/silme." }, { title: "Guvenlik", body: "Sirlarin korunmasi icin erisim kontrolleri ve redaksiyon uygulariz." } ] },

@@ -37,6 +37,14 @@ export default async function AboutPage() {
             </p>
           </div>
         </div>
+        <div className="mt-6 glass-card rounded-2xl p-6">
+          <h3 className="text-lg font-semibold text-white">
+            {content.about.roxyTitle}
+          </h3>
+          <p className="mt-3 text-sm text-white/70">
+            {content.about.roxyBody}
+          </p>
+        </div>
       </Container>
     </div>
   );
