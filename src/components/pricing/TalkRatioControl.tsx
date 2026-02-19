@@ -8,21 +8,29 @@ export default function TalkRatioControl(props: {
   value: number;
   onChange: (value: number) => void;
   tooltipText: string;
+  labels?: {
+    talkRatio: string;
+    description: string;
+    howWeEstimate: string;
+    current: string;
+    tip: string;
+  };
 }) {
   const pct = Math.round(props.value * 100);
+  const l = props.labels;
 
   return (
     <div className="glass-card rounded-3xl p-6 md:p-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold text-white">Talk ratio</p>
+          <p className="text-sm font-semibold text-white">{l?.talkRatio ?? "Talk ratio"}</p>
           <p className="mt-1 text-xs text-white/60">
-            Choose how much of your stream time is active speech.
+            {l?.description ?? "Choose how much of your stream time is active speech."}
           </p>
         </div>
         <div className="inline-flex items-center gap-2 text-xs text-white/70">
           <span className="inline-flex items-center gap-2">
-            How we estimate
+            {l?.howWeEstimate ?? "How we estimate"}
             <InfoTooltip text={props.tooltipText} />
           </span>
         </div>
@@ -41,7 +49,7 @@ export default function TalkRatioControl(props: {
             aria-label="Talk ratio"
           />
           <p className="text-xs text-white/60">
-            Current: <span className="font-semibold text-white">{pct}%</span>
+            {l?.current ?? "Current"}: <span className="font-semibold text-white">{pct}%</span>
           </p>
         </div>
 
@@ -67,7 +75,7 @@ export default function TalkRatioControl(props: {
       </div>
 
       <div className="mt-4 text-xs text-white/60">
-        Tip: 20% is a good starting point for most talk-heavy streams.
+        {l?.tip ?? "Tip: 20% is a good starting point for most talk-heavy streams."}
       </div>
     </div>
   );

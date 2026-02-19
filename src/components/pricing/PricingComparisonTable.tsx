@@ -5,6 +5,30 @@ import type { PricingPlan } from "@/config/pricingPlans";
 import { calcEstimatedStreamHours } from "@/config/pricingPlans";
 import { formatHours } from "@/components/pricing/format";
 
+type ComparisonLabels = {
+  featureLabel: string;
+  usageGroup: string;
+  limitsGroup: string;
+  automationGroup: string;
+  brandingGroup: string;
+  activeSpeechIncluded: string;
+  estimatedStreamHoursAtRatio: string;
+  byokElevenLabs: string;
+  characters: string;
+  concurrentStreams: string;
+  linkedAccounts: string;
+  scenes: string;
+  scheduler: string;
+  donoRules: string;
+  streamScripts: string;
+  removeWatermark: string;
+  yes: string;
+  no: string;
+  custom: string;
+  show: string;
+  hide: string;
+};
+
 type ComparisonGroup = {
   id: string;
   title: string;
@@ -14,33 +38,35 @@ type ComparisonGroup = {
   }>;
 };
 
-function yesNo(v: boolean) {
-  return v ? "Yes" : "No";
-}
-
 export default function PricingComparisonTable(props: {
   plans: PricingPlan[];
   talkRatio: number;
+  labels?: ComparisonLabels;
 }) {
   const [openGroupId, setOpenGroupId] = useState<string>("usage");
+  const l = props.labels;
+
+  function yesNo(v: boolean) {
+    return v ? (l?.yes ?? "Yes") : (l?.no ?? "No");
+  }
 
   const groups: ComparisonGroup[] = useMemo(
     () => [
       {
         id: "usage",
-        title: "Usage",
+        title: l?.usageGroup ?? "Usage",
         rows: [
           {
-            label: "Active Speech included (OpenAI)",
+            label: l?.activeSpeechIncluded ?? "Active Speech included (OpenAI)",
             getValue: (plan) =>
               plan.entitlements
                 ? `${formatHours(plan.entitlements.included_active_speech_hours_openai)}h`
-                : "Custom",
+                : l?.custom ?? "Custom",
           },
           {
-            label: "Estimated stream hours (at talk ratio)",
+            label: l?.estimatedStreamHoursAtRatio ?? "Estimated stream hours (at talk ratio)",
             getValue: (plan, talkRatio) => {
-              if (!plan.entitlements) return "Custom";
+              if (!plan.entitlements) return l?.custom ?? "Custom";
               const est = calcEstimatedStreamHours(
                 plan.entitlements.included_active_speech_hours_openai,
                 talkRatio
@@ -49,74 +75,74 @@ export default function PricingComparisonTable(props: {
             },
           },
           {
-            label: "BYOK (ElevenLabs)",
+            label: l?.byokElevenLabs ?? "BYOK (ElevenLabs)",
             getValue: (plan) =>
-              plan.entitlements ? yesNo(plan.entitlements.allow_byok_elevenlabs) : "Custom",
+              plan.entitlements ? yesNo(plan.entitlements.allow_byok_elevenlabs) : l?.custom ?? "Custom",
           },
         ],
       },
       {
         id: "limits",
-        title: "Limits",
+        title: l?.limitsGroup ?? "Limits",
         rows: [
           {
-            label: "Characters",
+            label: l?.characters ?? "Characters",
             getValue: (plan) =>
-              plan.entitlements ? String(plan.entitlements.max_characters) : "Custom",
+              plan.entitlements ? String(plan.entitlements.max_characters) : l?.custom ?? "Custom",
           },
           {
-            label: "Concurrent streams",
+            label: l?.concurrentStreams ?? "Concurrent streams",
             getValue: (plan) =>
-              plan.entitlements ? String(plan.entitlements.max_concurrent_streams) : "Custom",
+              plan.entitlements ? String(plan.entitlements.max_concurrent_streams) : l?.custom ?? "Custom",
           },
           {
-            label: "Linked accounts",
+            label: l?.linkedAccounts ?? "Linked accounts",
             getValue: (plan) =>
-              plan.entitlements ? String(plan.entitlements.max_accounts_linked) : "Custom",
+              plan.entitlements ? String(plan.entitlements.max_accounts_linked) : l?.custom ?? "Custom",
           },
           {
-            label: "Scenes",
+            label: l?.scenes ?? "Scenes",
             getValue: (plan) =>
-              plan.entitlements ? String(plan.entitlements.scenes_limit) : "Custom",
+              plan.entitlements ? String(plan.entitlements.scenes_limit) : l?.custom ?? "Custom",
           },
         ],
       },
       {
         id: "automation",
-        title: "Automation",
+        title: l?.automationGroup ?? "Automation",
         rows: [
           {
-            label: "Scheduler",
+            label: l?.scheduler ?? "Scheduler",
             getValue: (plan) =>
-              plan.entitlements ? yesNo(plan.entitlements.scheduler_enabled) : "Custom",
+              plan.entitlements ? yesNo(plan.entitlements.scheduler_enabled) : l?.custom ?? "Custom",
           },
           {
-            label: "Dono rules",
+            label: l?.donoRules ?? "Dono rules",
             getValue: (plan) =>
-              plan.entitlements ? String(plan.entitlements.dono_rules_limit) : "Custom",
+              plan.entitlements ? String(plan.entitlements.dono_rules_limit) : l?.custom ?? "Custom",
           },
           {
-            label: "Stream scripts",
+            label: l?.streamScripts ?? "Stream scripts",
             getValue: (plan) =>
-              plan.entitlements ? String(plan.entitlements.stream_scripts_limit) : "Custom",
+              plan.entitlements ? String(plan.entitlements.stream_scripts_limit) : l?.custom ?? "Custom",
           },
         ],
       },
       {
         id: "branding",
-        title: "Branding",
+        title: l?.brandingGroup ?? "Branding",
         rows: [
           {
-            label: "Remove watermark",
+            label: l?.removeWatermark ?? "Remove watermark",
             getValue: (plan) => {
-              if (!plan.entitlements) return "Custom";
+              if (!plan.entitlements) return l?.custom ?? "Custom";
               return yesNo(!plan.entitlements.watermark_branding);
             },
           },
         ],
       },
     ],
-    []
+    [l]
   );
 
   const plans = props.plans;
@@ -129,7 +155,7 @@ export default function PricingComparisonTable(props: {
             <thead className="bg-white/5">
               <tr>
                 <th className="px-4 py-4 text-left text-xs font-semibold uppercase tracking-widest text-white/60">
-                  Feature
+                  {l?.featureLabel ?? "Feature"}
                 </th>
                 {plans.map((plan) => (
                   <th
@@ -184,7 +210,7 @@ export default function PricingComparisonTable(props: {
                   className="flex w-full items-center justify-between gap-3"
                 >
                   <span className="text-sm font-semibold text-white">{group.title}</span>
-                  <span className="text-xs text-white/60">{open ? "Hide" : "Show"}</span>
+                  <span className="text-xs text-white/60">{open ? (l?.hide ?? "Hide") : (l?.show ?? "Show")}</span>
                 </button>
 
                 {open ? (

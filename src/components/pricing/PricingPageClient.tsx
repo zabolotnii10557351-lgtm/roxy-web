@@ -19,6 +19,9 @@ import {
   type PricingPlan,
 } from "@/config/pricingPlans";
 import { formatEur, formatHours } from "@/components/pricing/format";
+import { useLocale } from "@/i18n/client";
+import { getPricingText, type PricingText } from "@/i18n/pricingText";
+import type { Locale } from "@/i18n/locales";
 
 function buildEnterprisePrefill(isRu: boolean) {
   const lines = isRu
@@ -73,62 +76,44 @@ function InfoTip(props: { text: string; label: string }) {
 function whatsIncluded(params: {
   plan: PricingPlan;
   talkRatio: number;
-  isRu: boolean;
+  pt: PricingText;
 }): string[] {
-  const { plan, talkRatio, isRu } = params;
+  const { plan, talkRatio, pt } = params;
   if (!plan.entitlements) {
-    return isRu
-      ? [
-          "Кастомные лимиты и онбординг",
-          "Инвойсинг и поддержка закупок",
-          "Security/compliance review",
-          "SLA опции",
-        ]
-      : [
-          "Custom limits and onboarding",
-          "Invoicing and procurement support",
-          "Security and compliance review",
-          "SLA options",
-        ];
+    return [
+      pt.enterpriseCustomLimits,
+      pt.enterpriseInvoicing,
+      pt.enterpriseCompliance,
+      pt.enterpriseSla,
+    ];
   }
 
   const includedActiveSpeech = plan.entitlements.included_active_speech_hours_openai;
   const est = calcEstimatedStreamHours(includedActiveSpeech, talkRatio);
 
-  const base = isRu
-    ? [
-        `${plan.entitlements.max_characters} персонаж(а)`,
-        `${plan.entitlements.max_concurrent_streams} одновременный(х) стрим(а)`,
-        `${plan.entitlements.max_accounts_linked} подключённый(х) аккаунт(а)`,
-        `Включено ${formatHours(includedActiveSpeech)}ч Active Speech (OpenAI)`,
-        `≈ ${formatHours(est)}ч стрима при ${formatPct(talkRatio)} talk ratio`,
-      ]
-    : [
-        `${plan.entitlements.max_characters} character${plan.entitlements.max_characters === 1 ? "" : "s"}`,
-        `${plan.entitlements.max_concurrent_streams} concurrent stream${plan.entitlements.max_concurrent_streams === 1 ? "" : "s"}`,
-        `${plan.entitlements.max_accounts_linked} linked account${plan.entitlements.max_accounts_linked === 1 ? "" : "s"}`,
-        `Includes ${formatHours(includedActiveSpeech)}h Active Speech (OpenAI)`,
-        `≈ ${formatHours(est)}h stream at ${formatPct(talkRatio)} talk ratio`,
-      ];
+  const base = [
+    pt.characterCount.replace("{0}", String(plan.entitlements.max_characters)),
+    pt.concurrentStreamCount.replace("{0}", String(plan.entitlements.max_concurrent_streams)),
+    pt.linkedAccountCount.replace("{0}", String(plan.entitlements.max_accounts_linked)),
+    pt.includedSpeechHours.replace("{0}", formatHours(includedActiveSpeech)),
+    pt.streamEstimate.replace("{0}", formatHours(est)).replace("{1}", String(Math.round(talkRatio * 100))),
+  ];
 
-  const extras = isRu
-    ? [
-        "Desktop companion app (локальные интеграции)",
-        "TikTok Live + OBS WebSocket интеграции",
-        "BYOK поддержка для совместимых провайдеров",
-      ]
-    : [
-        "Desktop companion app (local integrations)",
-        "TikTok Live + OBS WebSocket integrations",
-        "BYOK support for compatible providers",
-      ];
+  const extras = [
+    pt.desktopApp,
+    pt.tiktokIntegrations,
+    pt.byokSupport,
+  ];
 
   return [...base, ...extras];
 }
 
 export default function PricingPageClient(props: { locale?: string }) {
   const router = useRouter();
-  const isRu = props.locale === "ru";
+  const { locale: ctxLocale } = useLocale();
+  const locale = (props.locale ?? ctxLocale) as Locale;
+  const pt = getPricingText(locale);
+  const isRu = locale === "ru";
   const [billing, setBilling] = useState<PricingInterval>("yearly");
   const [talkRatio, setTalkRatio] = useState<number>(PRICING_DEFAULT_TALK_RATIO);
   const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
@@ -141,7 +126,6 @@ export default function PricingPageClient(props: { locale?: string }) {
 
     if (!planId) return;
 
-    // If they aren't authenticated, the API will return 401 JSON.
     setLoadingPlanId(planId);
 
     const interval = billing === "yearly" ? "year" : "month";
@@ -164,14 +148,14 @@ export default function PricingPageClient(props: { locale?: string }) {
       }
 
       if (!isJson) {
-        setError("Checkout failed");
+        setError(pt.checkoutFailed);
         setLoadingPlanId(null);
         return;
       }
 
       const json = await response.json();
       if (!response.ok || !json?.url) {
-        setError(json?.error ?? "Checkout failed");
+        setError(json?.error ?? pt.checkoutFailed);
         setLoadingPlanId(null);
         return;
       }
@@ -182,7 +166,7 @@ export default function PricingPageClient(props: { locale?: string }) {
         e && typeof e === "object" && "message" in e
           ? (e as { message?: unknown }).message
           : null;
-      setError(typeof msg === "string" ? msg : "Checkout failed");
+      setError(typeof msg === "string" ? msg : pt.checkoutFailed);
       setLoadingPlanId(null);
     }
   };
@@ -200,7 +184,7 @@ export default function PricingPageClient(props: { locale?: string }) {
                 : "text-white/60 hover:text-white"
             }`}
           >
-            {isRu ? "Ежемесячно" : "Monthly"}
+            {pt.monthly}
           </button>
           <button
             type="button"
@@ -211,13 +195,11 @@ export default function PricingPageClient(props: { locale?: string }) {
                 : "text-white/60 hover:text-white"
             }`}
           >
-            {isRu ? "Ежегодно" : "Yearly"}
+            {pt.yearly}
           </button>
         </div>
         <p className="text-xs text-white/60">
-          {isRu
-            ? `Оплата раз в год. Экономия до ${PRICING_YEARLY_DISCOUNT_PCT}%.`
-            : `Billed yearly. Save up to ${PRICING_YEARLY_DISCOUNT_PCT}%.`}
+          {pt.billedYearlySave.replace("{0}", String(PRICING_YEARLY_DISCOUNT_PCT))}
         </p>
       </div>
 
@@ -225,6 +207,13 @@ export default function PricingPageClient(props: { locale?: string }) {
         value={talkRatio}
         onChange={(v) => setTalkRatio(v)}
         tooltipText={PRICING_TOOLTIP_TEXT}
+        labels={{
+          talkRatio: pt.talkRatio,
+          description: pt.talkRatioDescription,
+          howWeEstimate: pt.howWeEstimate,
+          current: pt.current,
+          tip: pt.talkRatioTip,
+        }}
       />
 
       <div className="grid gap-6 lg:grid-cols-3">
@@ -250,24 +239,22 @@ export default function PricingPageClient(props: { locale?: string }) {
               <div className="mt-6">
                 {isEnterprise ? (
                   <p className="text-2xl font-semibold text-white">
-                    {isRu ? "Связаться с sales" : "Contact sales"}
+                    {pt.contactSales}
                   </p>
                 ) : billing === "monthly" && monthlyPrice !== null ? (
                   <p className="text-2xl font-semibold text-white">
-                    {formatEur(monthlyPrice)} / {isRu ? "мес" : "month"}
+                    {formatEur(monthlyPrice)} {pt.perMonth}
                   </p>
                 ) : yearlyMonthlyEquivalent !== null && yearlyTotal !== null ? (
                   <div className="space-y-1">
                     <p className="text-2xl font-semibold text-white">
-                      {formatEur(yearlyMonthlyEquivalent)} / {isRu ? "мес" : "month"}
+                      {formatEur(yearlyMonthlyEquivalent)} {pt.perMonth}
                       <span className="ml-2 text-sm font-normal text-white/70">
-                        {isRu ? "оплата раз в год" : "billed yearly"}
+                        {pt.billedYearly}
                       </span>
                     </p>
                     <p className="text-xs text-white/60">
-                      {isRu
-                        ? `оплата раз в год ${formatEur(yearlyTotal)}`
-                        : `billed yearly ${formatEur(yearlyTotal)}`}
+                      {pt.billedYearly} {formatEur(yearlyTotal)}
                     </p>
                   </div>
                 ) : null}
@@ -275,18 +262,14 @@ export default function PricingPageClient(props: { locale?: string }) {
 
               <div className="mt-5">
                 <p className="text-xs font-semibold uppercase tracking-widest text-white/60">
-                  {isRu ? "Что включено" : "What’s included"}
+                  {pt.whatsIncluded}
                   <InfoTip
-                    label={isRu ? "Что считается Active Speech" : "What counts as Active Speech"}
-                    text={
-                      isRu
-                        ? "Active Speech — это время, когда AI реально говорит. Тишина/ожидание не считаются."
-                        : "Active Speech is the time the AI is actually speaking. Silence/idle time doesn’t count."
-                    }
+                    label={pt.activeSpeechLabel}
+                    text={pt.activeSpeechDescription}
                   />
                 </p>
                 <ul className="mt-3 space-y-2 text-sm text-white/70">
-                  {whatsIncluded({ plan, talkRatio, isRu }).map((line) => (
+                  {whatsIncluded({ plan, talkRatio, pt }).map((line) => (
                     <li key={line} className="flex gap-2">
                       <span className="text-white/50">•</span>
                       <span>{line}</span>
@@ -303,7 +286,7 @@ export default function PricingPageClient(props: { locale?: string }) {
                       buildEnterprisePrefill(isRu)
                     )}`}
                   >
-                    {isRu ? "Связаться с sales" : "Contact sales"}
+                    {pt.contactSales}
                   </Button>
                 ) : (
                   <Button
@@ -311,13 +294,7 @@ export default function PricingPageClient(props: { locale?: string }) {
                     onClick={() => startCheckout(plan.id)}
                     disabled={loadingPlanId === plan.id}
                   >
-                    {loadingPlanId === plan.id
-                      ? isRu
-                        ? "Переходим..."
-                        : "Redirecting..."
-                      : isRu
-                        ? "Подписаться"
-                        : "Subscribe"}
+                    {loadingPlanId === plan.id ? pt.redirecting : pt.subscribe}
                   </Button>
                 )}
               </div>
@@ -331,82 +308,71 @@ export default function PricingPageClient(props: { locale?: string }) {
       <div className="space-y-4 pt-8">
         <div className="text-center">
           <h2 className="text-2xl font-semibold text-white">
-            {isRu ? "Сравнение тарифов" : "Compare plans"}
+            {pt.comparePlans}
           </h2>
           <p className="mt-2 text-sm text-white/60">
-            {isRu
-              ? "Часы стрима — оценка. Реальная тарификация идёт по Active Speech."
-              : "Stream hours are estimates. We always meter real usage by Active Speech."}
+            {pt.comparePlansSubtitle}
           </p>
         </div>
-        <PricingComparisonTable plans={plans} talkRatio={talkRatio} />
+        <PricingComparisonTable
+          plans={plans}
+          talkRatio={talkRatio}
+          labels={{
+            featureLabel: pt.featureLabel,
+            usageGroup: pt.usageGroup,
+            limitsGroup: pt.limitsGroup,
+            automationGroup: pt.automationGroup,
+            brandingGroup: pt.brandingGroup,
+            activeSpeechIncluded: pt.activeSpeechIncluded,
+            estimatedStreamHoursAtRatio: pt.estimatedStreamHoursAtRatio,
+            byokElevenLabs: pt.byokElevenLabs,
+            characters: pt.characters,
+            concurrentStreams: pt.concurrentStreams,
+            linkedAccounts: pt.linkedAccounts,
+            scenes: pt.scenes,
+            scheduler: pt.scheduler,
+            donoRules: pt.donoRules,
+            streamScripts: pt.streamScripts,
+            removeWatermark: pt.removeWatermark,
+            yes: pt.yes,
+            no: pt.no,
+            custom: pt.custom,
+            show: pt.show,
+            hide: pt.hide,
+          }}
+        />
       </div>
 
       <div className="space-y-4 pt-8">
         <div className="text-center">
           <h2 className="text-2xl font-semibold text-white">
-            {isRu ? "FAQ по тарифам" : "Pricing FAQ"}
+            {pt.faqTitle}
           </h2>
           <p className="mt-2 text-sm text-white/60">
-            {isRu ? "Коротко и по делу — про usage и лимиты." : "Common questions, answered."}
+            {pt.faqSubtitle}
           </p>
         </div>
         <PricingFAQ
           items={[
+            { q: pt.faqActiveSpeechQ, a: pt.faqActiveSpeechA },
+            { q: pt.faqByokQ, a: pt.faqByokA },
+            { q: pt.faqEstimateQ, a: pt.faqEstimateA },
+            { q: pt.faqChangePlanQ, a: pt.faqChangePlanA },
             {
-              q: isRu ? "Что такое Active Speech?" : "What is Active Speech?",
-              a: isRu
-                ? "Active Speech — это время, когда AI реально говорит в эфире. Тишина и простой не считаются."
-                : "Active Speech is the time the AI is actually speaking on stream. Silence and idle time don’t count.",
+              q: pt.faqYearlyQ,
+              a: pt.faqYearlyA.replace("{0}", String(PRICING_YEARLY_DISCOUNT_PCT)),
             },
-            {
-              q: isRu
-                ? "Чем отличаются included providers и BYOK?"
-                : "What’s the difference between included providers and BYOK?",
-              a: isRu
-                ? "Included providers покрываются в рамках квоты Active Speech. В режиме BYOK вы используете свои ключи и оплачиваете провайдера напрямую; RoxStreamAI при этом отслеживает Active Speech для лимитов."
-                : "Included providers are covered up to your plan’s Active Speech quota. With BYOK, you bring your own provider keys and you pay that provider directly; RoxStreamAI still tracks Active Speech for your limits.",
-            },
-            {
-              q: isRu
-                ? "Почему вы показываете оценку часов стрима?"
-                : "Why do you show estimated stream hours?",
-              a: isRu
-                ? "Часы стрима зависят от того, насколько «разговорный» ваш формат. Слайдер talk ratio переводит Active Speech в реалистичную оценку часов стрима."
-                : "Stream hours depend on how talk-heavy your stream is. The talk ratio slider helps you translate Active Speech into a realistic stream-hour estimate.",
-            },
-            {
-              q: isRu ? "Можно сменить тариф позже?" : "Can I change plans later?",
-              a: isRu
-                ? "Да. Апгрейд — в любой момент. Даунгрейд применяется со следующего периода."
-                : "Yes. You can upgrade at any time. Downgrades take effect on the next billing cycle.",
-            },
-            {
-              q: isRu ? "Есть годовая оплата?" : "Do you offer yearly billing?",
-              a: isRu
-                ? `Да. Годовая оплата экономит до ${PRICING_YEARLY_DISCOUNT_PCT}% по сравнению с ежемесячной.`
-                : `Yes. Yearly billing saves up to ${PRICING_YEARLY_DISCOUNT_PCT}% compared to monthly.`,
-            },
-            {
-              q: isRu
-                ? "Нужны больше лимиты или инвойсинг?"
-                : "Need higher limits or invoicing?",
-              a: isRu
-                ? "Выберите Enterprise: кастомные лимиты, онбординг и поддержка инвойсинга."
-                : "Choose Enterprise to get custom limits, onboarding, and invoicing support.",
-            },
+            { q: pt.faqHigherLimitsQ, a: pt.faqHigherLimitsA },
           ]}
         />
       </div>
 
       <div className="glass-card rounded-3xl p-8 md:p-10">
         <h2 className="text-2xl font-semibold text-white">
-          {isRu ? "Как считается usage" : "How usage works"}
+          {pt.howUsageWorks}
         </h2>
         <p className="mt-3 text-sm text-white/70">
-          {isRu
-            ? "Active Speech — это время, когда AI реально говорит в эфире. Дашборд переводит настройки в оценку часов стрима на основе talk ratio. Если вы используете built-in провайдеров, расходы покрываются в рамках квоты тарифа. Если вы используете BYOK, вы оплачиваете провайдера напрямую, а RoxStreamAI отслеживает Active Speech для лимитов."
-            : "Active Speech is the time the AI actually talks on stream. The dashboard converts your settings into estimated stream hours based on your talk ratio. If you use built-in providers, RoxStreamAI covers provider costs up to your plan quota. If you use BYOK, you pay the provider directly and RoxStreamAI tracks usage."}
+          {pt.howUsageWorksBody}
         </p>
       </div>
     </div>

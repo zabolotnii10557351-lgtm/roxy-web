@@ -10,6 +10,8 @@ import {
   type PricingInterval,
 } from "@/config/pricing";
 import { usePricingConfig } from "@/lib/pricing/usePricingConfig";
+import { useLocale } from "@/i18n/client";
+import { getPricingText } from "@/i18n/pricingText";
 
 function formatEur(amount: number) {
   return `EUR ${amount.toFixed(2)}`;
@@ -22,6 +24,8 @@ function formatHours(amount: number) {
 
 export default function PricingPlans() {
   const router = useRouter();
+  const { locale } = useLocale();
+  const pt = getPricingText(locale);
   const [billing, setBilling] = useState<PricingInterval>("monthly");
   const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -62,7 +66,7 @@ export default function PricingPlans() {
 
       const json = await response.json();
       if (!response.ok || !json?.url) {
-        setError(json?.error ?? "Checkout failed");
+        setError(json?.error ?? pt.checkoutFailed);
         setLoadingPlanId(null);
         return;
       }
@@ -73,7 +77,7 @@ export default function PricingPlans() {
         e && typeof e === "object" && "message" in e
           ? (e as { message?: unknown }).message
           : null;
-      setError(typeof msg === "string" ? msg : "Checkout failed");
+      setError(typeof msg === "string" ? msg : pt.checkoutFailed);
       setLoadingPlanId(null);
     }
   };
@@ -92,7 +96,7 @@ export default function PricingPlans() {
                   : "text-white/60 hover:text-white"
               }`}
             >
-              Monthly
+              {pt.monthly}
             </button>
             <button
               type="button"
@@ -103,10 +107,12 @@ export default function PricingPlans() {
                   : "text-white/60 hover:text-white"
               }`}
             >
-              Yearly
+              {pt.yearly}
             </button>
           </div>
-          <p className="text-xs text-white/60">Billed yearly. Save up to {discountPct}%.</p>
+          <p className="text-xs text-white/60">
+            {pt.billedYearlySave.replace("{0}", String(discountPct))}
+          </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -139,31 +145,31 @@ export default function PricingPlans() {
                   <h3 className="text-lg font-semibold text-white">
                     {plan.name}
                   </h3>
-                  {isStarter ? <Badge>7-day trial</Badge> : null}
+                  {isStarter ? <Badge>{pt.trialBadge}</Badge> : null}
                 </div>
 
                 <div className="mt-6">
                   {isEnterprise ? (
                     <p className="text-2xl font-semibold text-white">
-                      Contact sales
+                      {pt.contactSales}
                     </p>
                   ) : billing === "monthly" && monthlyPrice !== null ? (
                     <p className="text-2xl font-semibold text-white">
-                      {formatEur(monthlyPrice)} / month
+                      {formatEur(monthlyPrice)} {pt.perMonth}
                     </p>
                   ) : yearlyMonthlyEquivalent !== null && yearlyTotal !== null ? (
                     <div className="space-y-1">
                       <p className="text-2xl font-semibold text-white">
-                        {formatEur(yearlyMonthlyEquivalent)} / month
+                        {formatEur(yearlyMonthlyEquivalent)} {pt.perMonth}
                         <span className="ml-2 text-sm font-normal text-white/70">
-                          billed yearly
+                          {pt.billedYearly}
                         </span>
                       </p>
                       <div className="flex items-center justify-between">
                         <p className="text-xs text-white/60">
-                          billed yearly {formatEur(yearlyTotal)}
+                          {pt.billedYearly} {formatEur(yearlyTotal)}
                         </p>
-                        <Badge>Save {discountPct}%</Badge>
+                        <Badge>{pt.saveBadge.replace("{0}", String(discountPct))}</Badge>
                       </div>
                     </div>
                   ) : null}
@@ -171,7 +177,7 @@ export default function PricingPlans() {
 
                 {isStarter ? (
                   <p className="mt-3 text-xs text-white/60">
-                    7-day trial included. No separate trial plan.
+                    {pt.trialNote}
                   </p>
                 ) : null}
 
@@ -181,7 +187,7 @@ export default function PricingPlans() {
                       <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
                         <div className="flex items-center justify-between gap-3">
                           <span className="inline-flex items-center gap-2">
-                            Estimated stream hours
+                            {pt.estimatedStreamHours}
                             <InfoTooltip text={tooltipText} />
                           </span>
                           <span className="font-semibold text-white">
@@ -189,13 +195,15 @@ export default function PricingPlans() {
                           </span>
                         </div>
                         <p className="mt-1 text-xs text-white/60">
-                          Estimated {formatHours(estimatedStreamHours)}h stream at {Math.round(defaultTalkRatio * 100)}% talk ratio
+                          {pt.streamEstimate
+                            .replace("{0}", formatHours(estimatedStreamHours))
+                            .replace("{1}", String(Math.round(defaultTalkRatio * 100)))}
                         </p>
                       </div>
                     ) : null}
 
                     <p className="text-xs text-white/60">
-                      Includes {formatHours(includedActiveSpeech)}h active speech (OpenAI)
+                      {pt.includesActiveSpeech.replace("{0}", formatHours(includedActiveSpeech))}
                     </p>
                   </div>
                 ) : null}
@@ -203,7 +211,7 @@ export default function PricingPlans() {
                 <div className="mt-6">
                   {isEnterprise ? (
                     <Button className="w-full" href="/contact">
-                      Contact sales
+                      {pt.contactSales}
                     </Button>
                   ) : (
                     <Button
@@ -211,7 +219,7 @@ export default function PricingPlans() {
                       onClick={() => startCheckout(plan.id)}
                       disabled={loadingPlanId === plan.id}
                     >
-                      {loadingPlanId === plan.id ? "Redirecting..." : "Subscribe"}
+                      {loadingPlanId === plan.id ? pt.redirecting : pt.subscribe}
                     </Button>
                   )}
                 </div>

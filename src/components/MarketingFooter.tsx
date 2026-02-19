@@ -5,41 +5,39 @@ import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 export default async function MarketingFooter() {
   const locale = await getLocaleFromRequest();
   const t = getTranslations(locale);
-  const isRu = locale === "ru";
-
   const groups: Array<{
     title: string;
     links: Array<{ href: string; label: string }>;
   }> = [
     {
-      title: "Product",
+      title: t.nav.footerProduct,
       links: [
         { href: "/use-cases", label: t.nav.useCases },
         { href: "/pricing", label: t.nav.pricing },
-        { href: "/download", label: "Download" },
+        { href: "/download", label: t.nav.footerDownload },
       ],
     },
     {
-      title: "Resources",
+      title: t.nav.footerResources,
       links: [
         { href: "/docs", label: t.nav.docs },
         { href: "/blog", label: t.nav.blog },
       ],
     },
     {
-      title: "Company",
+      title: t.nav.footerCompany,
       links: [
         { href: "/about", label: t.nav.about },
         { href: "/team", label: t.nav.team },
         { href: "mailto:support@roxstreamai.com", label: t.nav.contact },
         {
           href: "mailto:sales@roxstreamai.com",
-          label: isRu ? "Реклама и коллаборации" : "Ads & collabs",
+          label: t.nav.footerAdsCollabs,
         },
       ],
     },
     {
-      title: "Legal",
+      title: t.nav.footerLegal,
       links: [
         { href: "/terms", label: t.nav.terms },
         { href: "/privacy", label: t.nav.privacy },
@@ -54,9 +52,9 @@ export default async function MarketingFooter() {
         <div className="space-y-3">
           <p className="text-sm font-semibold text-white">{t.common.brand}</p>
           <p className="text-sm text-white/70">
-            RoxStreamAI helps creators run AI-hosted streams with clear usage limits and Unreal-ready workflows.
+            {t.nav.footerDescription}
           </p>
-          <p className="text-xs text-white/50">© {new Date().getFullYear()} RoxStreamAI. All rights reserved.</p>
+          <p className="text-xs text-white/50">© {new Date().getFullYear()} RoxStreamAI. {t.nav.footerCopyright}</p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { getMarketingContent } from "@/server/content/getMarketingContent";
-import { getLocaleFromRequest } from "@/i18n/server";
+import { getLocaleFromRequest, getTranslations } from "@/i18n/server";
 import { getContentBlock } from "@/server/content/getContentBlock";
 import ContactForm from "@/app/(marketing)/contact/contact-form";
 
@@ -19,12 +19,11 @@ export default async function ContactPage(props: {
   const initialEmail = getQueryFirst(searchParams.email);
 
   const locale = await getLocaleFromRequest();
+  const t = getTranslations(locale);
   const content = await getMarketingContent(locale);
 
   const cmsTitle = await getContentBlock({ key: "contact.title", locale });
   const cmsSubtitle = await getContentBlock({ key: "contact.subtitle", locale });
-
-  const isRu = locale === "ru";
 
   return (
     <div className="space-y-20 pb-20 pt-16">
@@ -37,18 +36,19 @@ export default async function ContactPage(props: {
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <ContactForm
             labels={{
-              name: isRu ? "Имя" : "Name",
-              topic: isRu ? "Тема" : "Topic",
-              topicOptions: isRu
-                ? ["Поддержка", "Партнёрство", "Sales", "Security"]
-                : ["Support", "Partnership", "Sales", "Security"],
+              name: t.marketing.contactFormName,
+              topic: t.marketing.contactFormTopic,
+              topicOptions: [
+                t.marketing.contactTopicSupport,
+                t.marketing.contactTopicPartnership,
+                t.marketing.contactTopicSales,
+                t.marketing.contactTopicSecurity,
+              ],
               email: content.contact.email,
               message: content.contact.message,
               sendRequest: content.contact.sendRequest,
-              sending: isRu ? "Отправляем..." : "Sending...",
-              success: isRu
-                ? "Спасибо! Мы получили сообщение и ответим по email."
-                : "Thanks. We received your message and will reply by email.",
+              sending: t.marketing.contactFormSending,
+              success: t.marketing.contactFormSuccess,
             }}
             initialTopic={initialTopic}
             initialMessage={initialMessage}
@@ -59,11 +59,9 @@ export default async function ContactPage(props: {
               {content.contact.directLines}
             </p>
             <p className="mt-4">hello@roxy.stream</p>
-            <p className="mt-2">Partnerships: partners@roxy.stream</p>
+            <p className="mt-2">{t.marketing.contactPartnerships}: partners@roxy.stream</p>
             <p className="mt-4 text-xs text-white/60">
-              {isRu
-                ? "Для техподдержки приложите скриншот Diagnostics и путь к логам Desktop приложения."
-                : "For technical issues, include your Diagnostics screenshot and Desktop logs path."}
+              {t.marketing.contactTechNote}
             </p>
             <p className="mt-6 text-xs text-white/50">
               {content.contact.responseTime}
