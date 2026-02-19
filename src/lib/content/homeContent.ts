@@ -496,7 +496,7 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
             },
             {
               icon: "badgeCheck",
-              title: "Rate Limiting",
+              title: "Ratenbegrenzung",
               body: "Wir begrenzen auffällige Anfragen und schützen sensible Endpunkte.",
               ctaLabel: "Mehr erfahren",
               ctaHref: "/security",
@@ -520,7 +520,7 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
               },
               {
                 icon: "badgeCheck",
-                title: "Rate limiting",
+                title: "Limitation de débit",
                 body: "Nous limitons les requêtes sensibles pour réduire les abus.",
                 ctaLabel: "En savoir plus",
                 ctaHref: "/security",
@@ -544,7 +544,7 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
                 },
                 {
                   icon: "badgeCheck",
-                  title: "Rate limiting",
+                  title: "Ограничение нагрузки",
                   body: "Мы ограничиваем шумные запросы и защищаем ключевые эндпоинты.",
                   ctaLabel: "Подробнее",
                   ctaHref: "/security",
@@ -611,7 +611,7 @@ export function getHomeContentFallback(locale: Locale): HomeContent {
     },
     faq: {
       eyebrow: "FAQ",
-      title: "FAQ",
+      title: pick("FAQ", "Частые вопросы", "Häufige Fragen", "Questions fréquentes"),
       subtitle: pick(
         "Quick answers about Desktop Mode, usage, and BYOK.",
         "Все о тарифах и лимитах.",

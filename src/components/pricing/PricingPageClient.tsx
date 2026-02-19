@@ -23,6 +23,24 @@ import { useLocale } from "@/i18n/client";
 import { getPricingText, type PricingText } from "@/i18n/pricingText";
 import type { Locale } from "@/i18n/locales";
 
+function getPlanBlurb(planId: string, pt: PricingText): string | undefined {
+  const map: Record<string, string> = {
+    starter: pt.planStarterBlurb,
+    creator: pt.planCreatorBlurb,
+    pro: pt.planProBlurb,
+    studio: pt.planStudioBlurb,
+    scale: pt.planScaleBlurb,
+    enterprise: pt.planEnterpriseBlurb,
+  };
+  return map[planId];
+}
+
+function getPlanBadge(planId: string, pt: PricingText): string | undefined {
+  if (planId === "starter") return pt.trialBadge;
+  if (planId === "pro") return pt.badgeBestValue;
+  return undefined;
+}
+
 function buildEnterprisePrefill(isRu: boolean) {
   const lines = isRu
     ? [
@@ -229,11 +247,11 @@ export default function PricingPageClient(props: { locale?: string }) {
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
-                  {plan.marketing?.blurb ? (
-                    <p className="mt-1 text-xs text-white/60">{plan.marketing.blurb}</p>
+                  {getPlanBlurb(plan.id, pt) ? (
+                    <p className="mt-1 text-xs text-white/60">{getPlanBlurb(plan.id, pt)}</p>
                   ) : null}
                 </div>
-                {plan.marketing?.badge ? <Badge>{plan.marketing.badge}</Badge> : null}
+                {getPlanBadge(plan.id, pt) ? <Badge>{getPlanBadge(plan.id, pt)}</Badge> : null}
               </div>
 
               <div className="mt-6">

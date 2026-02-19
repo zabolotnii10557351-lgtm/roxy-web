@@ -186,8 +186,7 @@ const en: MarketingContent = {
   contact: {
     eyebrow: "Contact",
     title: "Contact",
-    subtitle:
-      "Tell us what you're building - characters, Unreal scenes, interactive dono formats, or AI co-hosting.",
+    subtitle: "Tell us what you're building and how we can help.",
     firstName: "First name",
     lastName: "Last name",
     email: "Email",
@@ -511,10 +510,8 @@ const en: MarketingContent = {
   },
   pricing: {
     eyebrow: "Pricing",
-    title:
-      "Pick a plan, scale characters, scenes, and Dono Engine limits when you're ready.",
-    subtitle:
-      "Plans are built around characters, scenes, and Dono Engine limits. AI speech usage stays predictable with Active Speech tracking.",
+    title: "Pricing",
+    subtitle: "Pick a plan, scale when you're ready.",
     comparisonTitle: "Plan comparison",
     comparisonHeaders: ["Feature", "Trial", "Basic", "Pro", "Studio"],
     comparisonRows: [
@@ -771,7 +768,7 @@ const ru: MarketingContent = {
   about: {
     eyebrow: "За кулисами RoxStreamAI",
     title: "О нас",
-    subtitle: "Что мы строим и почему.",
+    subtitle: "Что мы создаём и зачем.",
     missionTitle: "Миссия",
     missionBody:
       "Помогать создателям запускать качественные аватар стримы с меньшим тех оверхедом и меньшим выгоранием. RoxStreamAI делает персонажей, сцены и триггеры повторяемыми и добавляет AI хостинг, когда он нужен.",
@@ -785,9 +782,8 @@ const ru: MarketingContent = {
 
   contact: {
     eyebrow: "Контакты",
-    title: "Спланируем ваш следующий live‑формат",
-    subtitle:
-      "Расскажите, что вы строите - персонажи, сцены Unreal, интерактивные dono форматы или AI co-hosting.",
+    title: "Контакты",
+    subtitle: "Расскажите, что вы создаёте, и как мы можем помочь.",
     firstName: "Имя",
     lastName: "Фамилия",
     email: "Рабочий email",
@@ -1006,10 +1002,8 @@ const ru: MarketingContent = {
   },
   pricing: {
     eyebrow: "Тарифы",
-    title:
-      "Выберите план и масштабируйте персонажей, сцены и лимиты движка Dono, когда будете готовы.",
-    subtitle:
-      "Планы строятся вокруг персонажей, сцен и лимитов движка Dono. Использование AI речи остается предсказуемым благодаря Active Speech.",
+    title: "Тарифы",
+    subtitle: "Выберите план и масштабируйтесь, когда будете готовы.",
     comparisonTitle: "Сравнение тарифов",
     comparisonHeaders: ["Функция", "Тест", "Basic", "Pro", "Studio"],
     comparisonRows: [
@@ -1598,9 +1592,8 @@ const de: MarketingContent = {
   ...en,
   about: {
     eyebrow: "Über uns",
-    title: "Roxy ist für 24/7‑Creator gebaut",
-    subtitle:
-      "Wir entwickeln Streaming‑Automatisierung, die premium, sicher und vollständig steuerbar ist.",
+    title: "Über uns",
+    subtitle: "Was wir entwickeln und warum.",
     missionTitle: "Unsere Mission",
     missionBody:
       "Creator bekommen einen polierten KI‑Co‑Host, der Shows fährt, auf Geschenke reagiert und Zuschauer über Zeitzonen hinweg hält.",
@@ -1613,9 +1606,8 @@ const de: MarketingContent = {
   },
   contact: {
     eyebrow: "Kontakt",
-    title: "Lass uns dein nächstes Live‑Format planen",
-    subtitle:
-      "Erzähl uns von deinen Streaming‑Zielen – wir erstellen einen Rollout‑Plan.",
+    title: "Kontakt",
+    subtitle: "Erzähl uns, was du entwickelst und wie wir helfen können.",
     firstName: "Vorname",
     lastName: "Nachname",
     email: "Geschäftliche E‑Mail",
@@ -1762,8 +1754,8 @@ const de: MarketingContent = {
   },
   pricing: {
     eyebrow: "Preise",
-    title: "Preise, die mit deinem Streaming skalieren",
-    subtitle: "BYOK für maximale Kontrolle oder Pro‑Credits für Plug‑and‑Play.",
+    title: "Preise",
+    subtitle: "Wähle einen Plan und skaliere, wenn du bereit bist.",
     comparisonTitle: "Planvergleich",
     comparisonHeaders: ["Feature", "Test", "Basic", "Pro", "Studio"],
     comparisonRows: [
@@ -2238,8 +2230,8 @@ const fr: MarketingContent = {
   ...en,
   about: {
     eyebrow: "À propos",
-    title: "Roxy pour les créateurs 24/7",
-    subtitle: "Automatisation premium, sûre et contrôlable.",
+    title: "À propos",
+    subtitle: "Ce que nous construisons et pourquoi.",
     missionTitle: "Notre mission",
     missionBody: "Un co‑host IA qui anime, réagit aux cadeaux et retient l’audience.",
     beliefTitle: "Nos convictions",
@@ -2250,8 +2242,8 @@ const fr: MarketingContent = {
   },
   contact: {
     eyebrow: "Contact",
-    title: "Planifions votre prochain format live",
-    subtitle: "Parlez‑nous de vos objectifs, on prépare un rollout.",
+    title: "Contact",
+    subtitle: "Dites-nous ce que vous construisez et comment nous pouvons aider.",
     firstName: "Prénom",
     lastName: "Nom",
     email: "Email pro",
@@ -2360,8 +2352,8 @@ const fr: MarketingContent = {
   },
   pricing: {
     eyebrow: "Tarifs",
-    title: "Des tarifs qui évoluent avec votre streaming",
-    subtitle: "BYOK pour contrôle total ou crédits Pro plug‑and‑play.",
+    title: "Tarifs",
+    subtitle: "Choisissez un plan et évoluez quand vous êtes prêt.",
     comparisonTitle: "Comparatif des plans",
     comparisonHeaders: ["Fonction", "Essai", "Basic", "Pro", "Studio"],
     comparisonRows: [

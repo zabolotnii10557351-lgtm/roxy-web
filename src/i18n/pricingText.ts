@@ -74,6 +74,13 @@ export type PricingText = {
   faqYearlyA: string;
   faqHigherLimitsQ: string;
   faqHigherLimitsA: string;
+  planStarterBlurb: string;
+  planCreatorBlurb: string;
+  planProBlurb: string;
+  planStudioBlurb: string;
+  planScaleBlurb: string;
+  planEnterpriseBlurb: string;
+  badgeBestValue: string;
 };
 
 const en: PricingText = {
@@ -161,6 +168,13 @@ const en: PricingText = {
   faqHigherLimitsQ: "Need higher limits or invoicing?",
   faqHigherLimitsA:
     "Choose Enterprise to get custom limits, onboarding, and invoicing support.",
+  planStarterBlurb: "One character plus core scenes and basic triggers.",
+  planCreatorBlurb: "More characters, more scenes, higher trigger throughput.",
+  planProBlurb: "More concurrency, watermark control, automation-ready.",
+  planStudioBlurb: "Team-ready limits, higher quotas for interactive formats.",
+  planScaleBlurb: "Multi-account and always-on operations.",
+  planEnterpriseBlurb: "Custom limits, invoicing, onboarding.",
+  badgeBestValue: "Best value",
 };
 
 const cs: PricingText = {
@@ -248,6 +262,13 @@ const cs: PricingText = {
   faqHigherLimitsQ: "Potřebujete vyšší limity nebo fakturaci?",
   faqHigherLimitsA:
     "Zvolte Enterprise pro vlastní limity, onboarding a fakturační podporu.",
+  planStarterBlurb: "Jedna postava plus základní scény a triggery.",
+  planCreatorBlurb: "Více postav, scén a vyšší propustnost triggerů.",
+  planProBlurb: "Více souběžnosti, kontrola vodoznaku, připraveno na automatizaci.",
+  planStudioBlurb: "Limity pro týmy, vyšší kvóty pro interaktivní formáty.",
+  planScaleBlurb: "Multi-účet a nepřetržitý provoz.",
+  planEnterpriseBlurb: "Individuální limity, fakturace, onboarding.",
+  badgeBestValue: "Nejlepší nabídka",
 };
 
 const de: PricingText = {
@@ -337,6 +358,13 @@ const de: PricingText = {
   faqHigherLimitsQ: "Höhere Limits oder Rechnungsstellung nötig?",
   faqHigherLimitsA:
     "Wähle Enterprise für individuelle Limits, Onboarding und Rechnungsunterstützung.",
+  planStarterBlurb: "Ein Charakter plus Kernszenen und einfache Trigger.",
+  planCreatorBlurb: "Mehr Charaktere, mehr Szenen, höherer Trigger-Durchsatz.",
+  planProBlurb: "Mehr Gleichzeitigkeit, Wasserzeichen-Kontrolle, automatisierungsbereit.",
+  planStudioBlurb: "Team-fähige Limits, höhere Kontingente für interaktive Formate.",
+  planScaleBlurb: "Multi-Account und Dauerbetrieb.",
+  planEnterpriseBlurb: "Individuelle Limits, Rechnungsstellung, Onboarding.",
+  badgeBestValue: "Bestes Angebot",
 };
 
 const es: PricingText = {
@@ -427,6 +455,13 @@ const es: PricingText = {
   faqHigherLimitsQ: "¿Necesitas más límites o facturación?",
   faqHigherLimitsA:
     "Elige Enterprise para límites personalizados, onboarding y soporte de facturación.",
+  planStarterBlurb: "Un personaje más escenas básicas y disparadores simples.",
+  planCreatorBlurb: "Más personajes, escenas y mayor rendimiento de disparadores.",
+  planProBlurb: "Más concurrencia, control de marca de agua, listo para automatización.",
+  planStudioBlurb: "Límites para equipos, cuotas más altas para formatos interactivos.",
+  planScaleBlurb: "Multi-cuenta y operaciones continuas.",
+  planEnterpriseBlurb: "Límites personalizados, facturación, incorporación.",
+  badgeBestValue: "Mejor oferta",
 };
 
 const fr: PricingText = {
@@ -517,6 +552,13 @@ const fr: PricingText = {
   faqHigherLimitsQ: "Besoin de limites plus élevées ou de facturation ?",
   faqHigherLimitsA:
     "Choisissez Enterprise pour des limites personnalisées, un onboarding et un support de facturation.",
+  planStarterBlurb: "Un personnage plus les scènes de base et les déclencheurs simples.",
+  planCreatorBlurb: "Plus de personnages, de scènes et un débit de déclencheurs plus élevé.",
+  planProBlurb: "Plus de concurrence, contrôle du filigrane, prêt pour l'automatisation.",
+  planStudioBlurb: "Limites adaptées aux équipes, quotas plus élevés pour les formats interactifs.",
+  planScaleBlurb: "Multi-compte et opérations en continu.",
+  planEnterpriseBlurb: "Limites personnalisées, facturation, intégration.",
+  badgeBestValue: "Meilleure offre",
 };
 
 const it: PricingText = {
@@ -606,6 +648,13 @@ const it: PricingText = {
   faqHigherLimitsQ: "Servono limiti più alti o fatturazione?",
   faqHigherLimitsA:
     "Scegli Enterprise per limiti personalizzati, onboarding e supporto alla fatturazione.",
+  planStarterBlurb: "Un personaggio più scene base e trigger semplici.",
+  planCreatorBlurb: "Più personaggi, scene e throughput di trigger più elevato.",
+  planProBlurb: "Più concorrenza, controllo watermark, pronto per l'automazione.",
+  planStudioBlurb: "Limiti per team, quote più alte per formati interattivi.",
+  planScaleBlurb: "Multi-account e operazioni continue.",
+  planEnterpriseBlurb: "Limiti personalizzati, fatturazione, onboarding.",
+  badgeBestValue: "Miglior offerta",
 };
 
 const pl: PricingText = {
@@ -696,6 +745,13 @@ const pl: PricingText = {
   faqHigherLimitsQ: "Potrzebujesz wyższych limitów lub fakturowania?",
   faqHigherLimitsA:
     "Wybierz Enterprise, aby uzyskać niestandardowe limity, onboarding i obsługę fakturowania.",
+  planStarterBlurb: "Jedna postać plus podstawowe sceny i wyzwalacze.",
+  planCreatorBlurb: "Więcej postaci, scen i wyższa przepustowość wyzwalaczy.",
+  planProBlurb: "Więcej równoległości, kontrola znaku wodnego, gotowy do automatyzacji.",
+  planStudioBlurb: "Limity dla zespołów, wyższe kwoty dla formatów interaktywnych.",
+  planScaleBlurb: "Multi-konto i operacje ciągłe.",
+  planEnterpriseBlurb: "Indywidualne limity, fakturowanie, onboarding.",
+  badgeBestValue: "Najlepsza oferta",
 };
 
 const pt: PricingText = {
@@ -786,6 +842,13 @@ const pt: PricingText = {
   faqHigherLimitsQ: "Precisa de limites maiores ou faturamento?",
   faqHigherLimitsA:
     "Escolha Enterprise para limites personalizados, onboarding e suporte de faturamento.",
+  planStarterBlurb: "Um personagem mais cenas básicas e gatilhos simples.",
+  planCreatorBlurb: "Mais personagens, cenas e maior throughput de gatilhos.",
+  planProBlurb: "Mais concorrência, controle de marca d'água, pronto para automação.",
+  planStudioBlurb: "Limites para equipes, cotas mais altas para formatos interativos.",
+  planScaleBlurb: "Multi-conta e operações contínuas.",
+  planEnterpriseBlurb: "Limites personalizados, faturamento, onboarding.",
+  badgeBestValue: "Melhor oferta",
 };
 
 const ru: PricingText = {
@@ -873,6 +936,13 @@ const ru: PricingText = {
   faqHigherLimitsQ: "Нужны больше лимиты или инвойсинг?",
   faqHigherLimitsA:
     "Выберите Enterprise: кастомные лимиты, онбординг и поддержка инвойсинга.",
+  planStarterBlurb: "Один персонаж, базовые сцены и триггеры.",
+  planCreatorBlurb: "Больше персонажей, сцен и пропускная способность триггеров.",
+  planProBlurb: "Больше concurrency, контроль водяного знака, готовность к автоматизации.",
+  planStudioBlurb: "Лимиты для команд, увеличенные квоты для интерактивных форматов.",
+  planScaleBlurb: "Мульти-аккаунт и работа 24/7.",
+  planEnterpriseBlurb: "Индивидуальные лимиты, инвойсинг, онбординг.",
+  badgeBestValue: "Лучшее предложение",
 };
 
 const sk: PricingText = {
@@ -963,6 +1033,13 @@ const sk: PricingText = {
   faqHigherLimitsQ: "Potrebujete vyššie limity alebo fakturáciu?",
   faqHigherLimitsA:
     "Zvoľte Enterprise pre vlastné limity, onboarding a fakturačnú podporu.",
+  planStarterBlurb: "Jedna postava plus základné scény a triggery.",
+  planCreatorBlurb: "Viac postáv, scén a vyššia priepustnosť triggerov.",
+  planProBlurb: "Viac súbežnosti, kontrola vodoznaku, pripravené na automatizáciu.",
+  planStudioBlurb: "Limity pre tímy, vyššie kvóty pre interaktívne formáty.",
+  planScaleBlurb: "Multi-účet a nepretržitá prevádzka.",
+  planEnterpriseBlurb: "Individuálne limity, fakturácia, onboarding.",
+  badgeBestValue: "Najlepšia ponuka",
 };
 
 const tr: PricingText = {
@@ -1053,6 +1130,13 @@ const tr: PricingText = {
   faqHigherLimitsQ: "Daha yüksek limitler veya faturalama mı gerekiyor?",
   faqHigherLimitsA:
     "Özel limitler, onboarding ve faturalama desteği için Enterprise'ı seçin.",
+  planStarterBlurb: "Bir karakter artı temel sahneler ve basit tetikleyiciler.",
+  planCreatorBlurb: "Daha fazla karakter, sahne ve daha yüksek tetikleyici verimi.",
+  planProBlurb: "Daha fazla eşzamanlılık, filigran kontrolü, otomasyona hazır.",
+  planStudioBlurb: "Ekip uyumlu limitler, interaktif formatlar için daha yüksek kotalar.",
+  planScaleBlurb: "Çoklu hesap ve kesintisiz operasyonlar.",
+  planEnterpriseBlurb: "Özel limitler, faturalandırma, onboarding.",
+  badgeBestValue: "En iyi teklif",
 };
 
 const uk: PricingText = {
@@ -1143,6 +1227,13 @@ const uk: PricingText = {
   faqHigherLimitsQ: "Потрібні вищі ліміти або інвойсинг?",
   faqHigherLimitsA:
     "Оберіть Enterprise: індивідуальні ліміти, онбординг та підтримка інвойсингу.",
+  planStarterBlurb: "Один персонаж плюс базові сцени та тригери.",
+  planCreatorBlurb: "Більше персонажів, сцен і вища пропускна здатність тригерів.",
+  planProBlurb: "Більше паралельності, контроль водяного знаку, готовність до автоматизації.",
+  planStudioBlurb: "Ліміти для команд, збільшені квоти для інтерактивних форматів.",
+  planScaleBlurb: "Мульти-акаунт і безперервна робота.",
+  planEnterpriseBlurb: "Індивідуальні ліміти, інвойсинг, онбординг.",
+  badgeBestValue: "Найкраща пропозиція",
 };
 
 const pricingTexts: Record<Locale, PricingText> = {
