@@ -7,6 +7,7 @@ import { getLocaleFromRequest } from "@/i18n/server";
 import { getSiteUrl } from "@/lib/site/url";
 
 const GTM_ID = "GTM-5MH7PSM2";
+const COOKIEBOT_ID = "a7da215d-404e-49d5-b7e0-e7df76ac72b1";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +57,26 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="dark">
       <head>
+        <Script id="consent-mode-defaults" strategy="beforeInteractive">
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+`}
+        </Script>
+        <Script
+          id="Cookiebot"
+          src={`https://consent.cookiebot.com/uc.js`}
+          data-cbid={COOKIEBOT_ID}
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        />
         <Script
           id="gtm-script"
           strategy="afterInteractive"
